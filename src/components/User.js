@@ -5,7 +5,7 @@ function User(props) {
     <div className="user">
       <i>{props.name},</i>
       <p>{props.address}</p>
-      <a href="mailto:">{props.email}</a>
+      <a href={"mailto:" + props.email}>{props.email}</a>
     </div>
   );
 }

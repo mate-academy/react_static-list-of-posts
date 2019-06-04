@@ -6,7 +6,7 @@ function Comment(props) {
     <div key={props.name} className="comment">
       <h4>{props.name}</h4>
       <p>{props.body}</p>
-      <a href="mailto:">{props.email}</a>
+      <a href={"mailto:" + props.email}>{props.email}</a>
     </div>
   );
 }
