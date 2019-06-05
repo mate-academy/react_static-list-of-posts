@@ -9,7 +9,7 @@ users.forEach(item => {
 function User(props) {
 
   return (
-   <a href={'mailto:' + userMap[props.id].email}>{userMap[props.id].name}</a>
+   <a href={`mailto:${userMap[props.id].email}`}>{userMap[props.id].name}</a>
  )
 }
 
