@@ -1,7 +1,7 @@
 import React from 'react';
-import './CommentList.css'
-import { comments } from '../comments'
-import Comment from './Comment'
+import './CommentList.css';
+import { comments } from '../comments';
+import Comment from './Comment';
 
 function CommentList(props) {
   const postsComments = comments.filter(comment => comment.postId === props.id);

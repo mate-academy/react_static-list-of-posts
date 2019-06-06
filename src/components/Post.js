@@ -1,6 +1,6 @@
 import React from 'react';
-import './Post.css'
-import { users } from '../users'
+import './Post.css';
+import { users } from '../users';
 import User from './User';
 import CommentList from './CommentList';
 
