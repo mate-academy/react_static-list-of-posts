@@ -1,0 +1,11 @@
+.comment {
+  width: 70%;
+}
+
+.comment > p:first-child {
+  font-family: Georgia;
+  color: rgba(69,54,37,0.6);
+  font-size: 0.85em;
+  font-style: italic;
+  letter-spacing: 0.10em;
+}

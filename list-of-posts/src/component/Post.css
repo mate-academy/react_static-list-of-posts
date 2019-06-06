@@ -1,0 +1,39 @@
+article {
+  margin: 20px;
+  border: 2px solid rgba(69,54,37,0.8);
+  border-radius: 15px;
+  padding: 25px;
+  background: lightgoldenrodyellow;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-family: Georgia;
+  letter-spacing: 0.1em;
+  color: rgb(142,11,0);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+
+strong {
+  font-size: 1.45em;
+  font-family: Georgia;
+  color: rgb(142,11,0);
+}
+
+.text {
+  font-size: 1.25em;
+  font-family: Georgia;
+  line-height: 1.5em;
+  color: rgb(69,54,37);
+}
+
+.post > p:last-child {
+  font-family: Georgia;
+  color: rgba(69,54,37,0.6);
+  font-size: 1em;
+  font-style: italic;
+  letter-spacing: 0.25em;
+  border-bottom: 1px solid rgba(69,54,37,0.2);
+  display: block;
+  padding-bottom: 0.5em;
+}
