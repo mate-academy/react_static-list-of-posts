@@ -5,7 +5,7 @@ import {posts} from '../posts';
 import {users} from '../users';
 
 function PostList() {
-  return posts.map(postsItem => {
+  return posts.map((postsItem) => {
     const user = users.find(usersItem => postsItem.userId === usersItem.id);
     return (
       <article key={postsItem.title}>
