@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.todo-item {
+  margin: 5px;
+  padding: 2px;
+  background-color: #bbb;
+  border-radius: 5px;
+}
+
+.completed {
+  background-color: #2f9;
+}
+
+.mustBeDone {
+  background-color: #f66;
+}
