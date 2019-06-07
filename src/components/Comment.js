@@ -8,7 +8,7 @@ function Comment(props) {
       <h4><i>{comment.name}</i></h4>
       <p>{comment.body}</p>
     </>
-  )
+  );
 }
 
 export default Comment;

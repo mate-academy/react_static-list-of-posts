@@ -13,7 +13,7 @@ function Post(props) {
       <User user={post.user}/>
       {post.comments.map(comment => <Comment comment={comment} key={comment.id}/>)}
     </section>
-  )
+  );
 }
 
 export default Post;
