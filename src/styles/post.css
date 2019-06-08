@@ -1,0 +1,10 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fefefe;
+  width: 800px;
+  border: 3px solid blue;
+  margin: 10px auto;
+  padding: 10px;
+}
