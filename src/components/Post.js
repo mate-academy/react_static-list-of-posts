@@ -5,15 +5,15 @@ import CommentsList from './CommentList';
 
 
 function Post(props) {
-
+    const {user, title, body, id, comments} = props;
     return (
         <div className='post'>
-            <User user = {props.user}/>
+            <User user = {user}/>
             <div className='post-body'>
-                <div className='title'>{props.title}</div>
-                <div className='body'>{props.body}</div>
+                <div className='title'>{title}</div>
+                <div className='body'>{body}</div>
             </div>
-            <CommentsList postId = {props.postId}/>
+            <CommentsList postId={id} comments={comments}/>
         </div>
     );
 }
