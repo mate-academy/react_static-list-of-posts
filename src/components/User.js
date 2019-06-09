@@ -1,17 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-function User(props) {
-  let adress = '';
-  if (props.adress) {
-    adress = <p className='post-author__adress'>Adress:{props.adress}</p>;
-  }
+export default function User(props) {
+  const { name, email, address } = props.info;
   return (
-    <article>
-      <p className='post-author__name'>Name: {props.name}</p>
-      <p className='post-author__email'>Email: {props.email}</p>
-      <p className='post-author__adress'>{adress}</p>
-    </article>
+    <div>
+      <p>Name: {name}</p>
+      <p>Email: {email}</p>
+      <p>{address ? `Address: ${address.city}` : ''}</p>
+    </div>
   );
 }
-
-export default User;
