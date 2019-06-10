@@ -7,8 +7,5 @@ import comments from './comments';
 import './index.css';
 
 ReactDOM.render(
-  <App
-    posts={posts}
-    users={users}
-    comments={comments}
-  />, document.getElementById('root'));
+  <App posts={posts} users={users} comments={comments} />,
+  document.getElementById('root'));

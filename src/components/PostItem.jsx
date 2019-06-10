@@ -4,7 +4,6 @@ import Comment from './Comment';
 export default class TodoItem extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
   }
 
   render() {
@@ -15,9 +14,7 @@ export default class TodoItem extends Component {
         <p>{post.body}</p>
         {user}
         <div className="comments">
-          {comments.map(item => (
-            <Comment item={item} />
-          ))}
+          {comments.map(item => <Comment item={item} />)}
         </div>
       </div>
     );

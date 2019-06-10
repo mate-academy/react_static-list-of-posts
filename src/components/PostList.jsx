@@ -29,15 +29,10 @@ export default class PostList extends Component {
   render() {
     return (
       <div>
-        {this.state.posts.map((item, index) => (
-          <PostItem
-            key={index}
-            post={item}
-            name={this.state.users[item.userId.name]}
-            user={<User info={this.state.users[item.userId] || {}} />}
-            comments={this.getComments(item.id)}
-          />
-        ))}
+        {this.state.posts.map(item => <PostItem key={item.id} post={item}
+            name={this.state.users[item.userId].name}
+            user={<User info={this.state.users[item.userId]} />}
+            comments={this.getComments(item.id)} />)}
       </div>
     );
   }

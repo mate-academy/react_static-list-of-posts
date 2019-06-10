@@ -14,10 +14,8 @@ export default class App extends Component {
   render() {
     return (
       this.state.posts.length
-      ? <PostList
-        posts={this.state.posts}
-        users={this.state.users}
-        comments={this.state.comments} />
+      ? <PostList posts={this.state.posts} users={this.state.users}
+          comments={this.state.comments} />
       : 'no posts'
     );
   }
