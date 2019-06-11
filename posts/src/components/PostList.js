@@ -1,18 +1,14 @@
-import React, {Component} from 'react';
-import {posts} from '../posts';
+import React from 'react';
 import Post from './Post';
 
-class PostList extends Component {
-
-  render() {
-    const postItems = posts.map((post, i) => <Post id={post.id} key={i}/>);
-    return (
-      <div>
-        <h1>Post List</h1>
-        <div>{postItems}</div>
-      </div>
-    );
-  }
+function PostList(props) {
+  const postItems = props.postList.map(post => <Post {...post} key={post.id} />);
+  return (
+    <div>
+      <h1>Post List</h1>
+      <div>{postItems}</div>
+    </div>
+  );
 }
 
 export default PostList;

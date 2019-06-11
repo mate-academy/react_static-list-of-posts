@@ -1,22 +1,14 @@
-import React, {Component} from 'react';
-import {users} from '../users';
+import React from 'react';
+import './User.css';
 
-class User extends Component {
-  constructor(props) {
-    super(props);
-    this.user = users.find(user => user.id === this.props.id);
-  }
-
-  render() {
-
-      return (
-        <div>
-          <h3>{this.user.name}</h3>
-          <h3>{this.user.email}</h3>
-          <h6>{this.user.address.suite} {this.user.address.street} {this.user.address.city} {this.user.address.zipcode}</h6>
-        </div>
-      );
-  }
+function User(props) {
+  return (
+    <div>
+      <span className="user-name">{props.name}</span>
+      <span className="user-email">{props.email}</span>
+      <span className="user-info">{props.address.suite} {props.address.street} {props.address.city} {props.address.zipcode}</span>
+    </div>
+  );
 }
 
 export default User;

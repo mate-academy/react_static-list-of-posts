@@ -1,20 +1,11 @@
-import React, {Component} from 'react';
-import {comments} from '../comments';
+import React from 'react';
 import Comment from './Comment';
 
-class CommentList extends Component {
-  constructor(props) {
-    super(props);
-    this.postComments = comments.filter(comment => comment.postId === this.props.id);
-  }
-
-  render() {
-    const postCommentsDiv = this.postComments.map((comment, i) => <Comment id={comment.id} key={i}/>);
-
-    return (
-      <div>{postCommentsDiv}</div>
-    );
-  }
+function CommentList(props) {
+  const postCommentsList = props.postComments.map(comment => <Comment {...comment} key={comment.id} />);
+  return (
+    <div>{postCommentsList}</div>
+  );
 }
 
 export default CommentList;

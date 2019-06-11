@@ -1,21 +1,12 @@
-import React, {Component} from 'react';
-import {comments} from '../comments';
+import React from 'react';
 
-class Comment extends Component {
-  constructor(props) {
-    super(props);
-    this.comment = comments.find(comment => comment.id === this.props.id);
-  }
-
-  render() {
-
-      return (
-        <div>
-          <h4>{this.comment.title}</h4>
-          <h6>{this.comment.body}</h6>
-        </div>
-      );
-  }
+function Comment(props) {
+  return (
+    <div>
+      <h4>{props.title}</h4>
+      <h6>{props.body}</h6>
+    </div>
+  );
 }
 
 export default Comment;
