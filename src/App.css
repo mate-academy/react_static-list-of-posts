@@ -1,0 +1,12 @@
+.App {
+    margin: 0 auto;
+    width: 60%;
+}
+
+span {
+    margin-right: 10px;
+}
+
+article {
+    background: #eee;
+}
