@@ -2,7 +2,7 @@ import React from 'react';
 import Post from './Post';
 
 export default function PostList(props) {
-  const posts = props.postsInfo.map(post => {
+  return props.postsInfo.map(post => {
     return <Post
         title={post.title}
         body={post.body}
@@ -11,5 +11,5 @@ export default function PostList(props) {
         key={post.id}
       />
   });
-  return posts;
+  
 }
