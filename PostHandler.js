@@ -18,7 +18,7 @@ function PostHandler(props) {
       <ul className="post-author-info">
         <li>{postAuthorName}</li>
         <li>
-          <a href="mailto:{props.userEmail}">{postAuthorEmail}</a>
+          <a href="mailto:{postAuthorEmail}">{postAuthorEmail}</a>
         </li>
         <li>{postAuthorAddress}</li>
       </ul>
