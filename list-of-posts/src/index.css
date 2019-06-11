@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+}
+
+.author-email {
+  display: flex;
+  justify-content: space-around;
+}
+
