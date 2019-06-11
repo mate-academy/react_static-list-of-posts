@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { comments } from './comments.js';
-import CommentHandler from './CommentHandler.js'
+import CommentHandler from './CommentHandler.js';
 
 function CommentsListHandler(props){
   const currentPostComments = comments.filter(comment => comment.postId === props.postId);
@@ -8,7 +8,7 @@ function CommentsListHandler(props){
   currentPostComments.map(item => {
     const commentator = item.email;
     commentsList.push(
-      <CommentHandler commentAuthor={commentator} commentBody={item.body} key={props.key}/>
+      <CommentHandler commentAuthor={commentator} commentBody={item.body} key={props.key} />
     )
   })
   return commentsList;
