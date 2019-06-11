@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function User(props) {
-  const { name, email, address } = props.info;
+  const { name, email, address } = props;
   return (
     <div>
       <p>Name: {name}</p>

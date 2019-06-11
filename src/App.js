@@ -10,10 +10,13 @@ function App() {
     return {
       title: post.title,
       body: post.body,
+      id: post.id,
       userInfo: users.find(user => {
+
         return user.id === post.userId;
       }),
       comments: comments.filter(comment => {
+        
         return comment.postId === post.id;
       })
     };
