@@ -11,7 +11,7 @@ function PostHandler(props) {
         <li><a href="mailto:{props.userEmail}">{props.userEmail}</a></li>
         <li>{props.userAddress}</li>
       </ul>
-      <CommentHandler postId={props.postId} key={props.id}/>
+      <CommentsListHandler postId={props.postId} key={props.id}/>
     </div>
   );
 }
