@@ -30,3 +30,4 @@ function PostsListHandler() {
 }
 
 export default PostsListHandler;
+
