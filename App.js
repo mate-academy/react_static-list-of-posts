@@ -3,11 +3,7 @@ import './App.css';
 import PostsListHandler from './PostsListHandler';
 
 function App() {
-  return (
-    <div className="App">
-      <PostsListHandler />
-    </div>
-  );
+  return <PostsListHandler />
 }
 
 export default App;
