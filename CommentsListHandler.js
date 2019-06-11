@@ -9,8 +9,8 @@ function CommentsListHandler(props){
     const commentator = item.email;
     commentsList.push(
       <CommentHandler commentAuthor={commentator} commentBody={item.body} key={props.key} />
-    )
-  })
+    );
+  });
   return commentsList;
 }
 
