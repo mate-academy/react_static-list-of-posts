@@ -2,17 +2,23 @@ import React from 'react';
 import { posts } from './posts.js';
 import { users } from './users.js';
 import PostHandler from './PostHandler.js';
- 
+
 function PostsListHandler() {
   const postsList = [];
-  posts.map(post => {
-    const postTitle = post.title;
-    const postBody = post.body;
+  posts.map(post => { 
+    const {
+      title: postTitle,
+      body: postBody,
+      id: postId
+    } = post;
+
     const postUser = users.find(user => user.id === post.userId);
-    const userName = postUser.name;
-    const userAddress = postUser.address.city;
-    const userEmail = postUser.email;
-    const postId = post.id;
+    const {
+      name: userName,
+      address: {street, suite, city},
+      email: userEmail
+    } = postUser;
+ 
     postsList.push(
       <PostHandler 
         key={postId}
@@ -21,7 +27,7 @@ function PostsListHandler() {
         body={postBody}
         userName={userName}
         userEmail={userEmail}
-        userAddress={userAddress}
+        userAddress={city}
       />
     );
   });
