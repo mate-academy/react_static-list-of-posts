@@ -1,5 +1,5 @@
 import React from 'react'; 
-import CommentHandler from './CommentHandler.js';
+import CommentsListHandler from './CommentsListHandler.js';
 
 function PostHandler(props) {
   return (
