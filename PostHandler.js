@@ -2,18 +2,27 @@ import React from 'react';
 import CommentsListHandler from './CommentsListHandler.js';
 
 function PostHandler(props) {
+  const {
+    title: postTitle,
+    body: postBody,
+    userName: postAuthorName,
+    userEmail: postAuthorEmail,
+    userAddress: postAuthorAddress,
+    postId: postId,
+    id: id
+  } = props;
   return (
     <div className="post-item">
-      <h2 className="post-title">{props.title}</h2>
-      <p className="post-body">{props.body}</p>
+      <h2 className="post-title">{postTitle}</h2>
+      <p className="post-body">{postBody}</p>
       <ul className="post-author-info">
-        <li>{props.userName}</li>
+        <li>{postAuthorName}</li>
         <li>
-          <a href="mailto:{props.userEmail}">{props.userEmail}</a>
+          <a href="mailto:{props.userEmail}">{postAuthorEmail}</a>
         </li>
-        <li>{props.userAddress}</li>
+        <li>{postAuthorAddress}</li>
       </ul>
-      <CommentsListHandler postId={props.postId} key={props.id} />
+      <CommentsListHandler postId={postId} key={id} />
     </div>
   );
 }
