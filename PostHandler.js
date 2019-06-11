@@ -8,7 +8,9 @@ function PostHandler(props) {
       <p className="post-body">{props.body}</p>
       <ul className="post-author-info">
         <li>{props.userName}</li>
-        <li><a href="mailto:{props.userEmail}">{props.userEmail}</a></li>
+        <li>
+          <a href="mailto:{props.userEmail}">{props.userEmail}</a>
+        </li>
         <li>{props.userAddress}</li>
       </ul>
       <CommentsListHandler postId={props.postId} key={props.id} />
