@@ -25,7 +25,6 @@ function PostsListHandler() {
       />
     );
   });
-  
   return postsList;
 }
 
