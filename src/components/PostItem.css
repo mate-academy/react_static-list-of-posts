@@ -1,0 +1,14 @@
+.post-item {
+  border: 2px solid black;
+  margin: 20px auto;
+  width: 900px;
+  padding: 20px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.user {
+  font-style: italic;
+}
