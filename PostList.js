@@ -1,11 +1,11 @@
 import React from 'react'; 
 import { posts } from './posts.js';
 import { users } from './users.js';
-import PostHandler from './PostHandler.js';
+import Post from './Post.js';
 
-function PostsListHandler() {
-  const postsList = [];
-  posts.map(post => { 
+function PostsList() {
+  const allPosts = [];
+  posts.forEach(post => { 
     const {
       title: postTitle,
       body: postBody,
@@ -19,8 +19,8 @@ function PostsListHandler() {
       email: userEmail
     } = postUser;
  
-    postsList.push(
-      <PostHandler 
+    allPosts.push(
+      <Post 
         key={postId}
         postId={postId}
         title={postTitle}
@@ -31,8 +31,8 @@ function PostsListHandler() {
       />
     );
   });
-  return postsList;
+  return allPosts;
 }
 
-export default PostsListHandler;
+export default PostsList;
 
