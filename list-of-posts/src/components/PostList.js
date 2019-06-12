@@ -13,10 +13,10 @@ function PostList() {
         });
 
         return (
-        <li className="style" key={item.body}>
-            <Post key={user.id} title={item.title} body={item.body}/>
-            <User key={item.id.toString}  name={user.name} email={user.email} address={user.address}/>
-            <CommentList key={user.name} id={item.id} name={user.name}/>
+        <li className="style" key={item.id}>
+            <Post title={item.title} body={item.body}/>
+            <User name={user.name} email={user.email} address={user.address}/>
+            <CommentList id={item.id}/>
         </li>
         )
     });
