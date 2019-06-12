@@ -7,7 +7,7 @@ class Comments extends React.Component {
     super(props);
     this.filtredComments = comments.filter(c => c.postId === this.props.id);
     this.commentsList = this.filtredComments.map(
-      c => (c = <Comment name={c.name} body={c.body} email={c.email} id={c.postId}/>)
+      c => (c = <Comment name={c.name} body={c.body} email={c.email} key={c.name}/>)
     );
   }
 

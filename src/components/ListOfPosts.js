@@ -8,7 +8,7 @@ export default class ListOfPosts extends React.Component {
     this.postList = [];
     posts.forEach(p =>
       this.postList.push(
-        <Post userId={p.userId} title={p.title} body={p.body} key={p.id} />
+        <Post userId={p.userId} title={p.title} body={p.body} key={p.title} id={p.id}/>
       )
     );
   }

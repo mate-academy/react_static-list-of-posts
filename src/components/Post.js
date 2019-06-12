@@ -13,8 +13,9 @@ class Post extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
-      <div className="post" key={this.props.key}>
+      <div className="post">
         <h3>{this.props.title}</h3>
         <p>{this.props.body}</p>
         <User
@@ -22,7 +23,7 @@ class Post extends React.Component {
           address={this.author.address}
           email={this.author.email}
         />
-        <Comments id={this.props.userId} />
+        <Comments id={this.props.id} />
       </div>
     );
   }
