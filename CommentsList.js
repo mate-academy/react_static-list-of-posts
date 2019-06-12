@@ -1,8 +1,8 @@
 import React from 'react'; 
 import { comments } from './comments.js';
-import CommentHandler from './CommentHandler.js';
+import Comment from './Comment.js';
 
-function CommentsListHandler(props){
+function CommentsList(props){
   const {
     postId: currentPostId,
     key: currentPostKey
@@ -10,20 +10,20 @@ function CommentsListHandler(props){
 
   const currentPostComments = comments.filter(comment => comment.postId === currentPostId);
 
-  const commentsList = [];
+  const postComments = [];
 
-  currentPostComments.map(item => {
+  currentPostComments.forEach(item => {
     const {
       email: commentator,
       body: commentBody
     } = item;
 
-    commentsList.push(
-      <CommentHandler commentAuthor={commentator} commentBody={commentBody} key={currentPostKey} />
+    postComments.push(
+      <Comment commentAuthor={commentator} commentBody={commentBody} key={currentPostKey} />
     );
   });
-  return commentsList;
+  return postComments;
 }
 
-export default CommentsListHandler;
+export default CommentsList;
 
