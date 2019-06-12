@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-function CommentHandler(props) {
+function Comment(props) {
   const {
     commentBody: commentBody,
     commentAuthor: commentAuthor
@@ -13,5 +13,5 @@ function CommentHandler(props) {
   );
 }
 
-export default CommentHandler;
+export default Comment;
 
