@@ -1,7 +1,7 @@
 import React from 'react'; 
-import CommentsListHandler from './CommentsListHandler.js';
+import CommentsList from './CommentsList.js';
 
-function PostHandler(props) {
+function Post(props) {
   const {
     title: postTitle,
     body: postBody,
@@ -18,14 +18,14 @@ function PostHandler(props) {
       <ul className="post-author-info">
         <li>{postAuthorName}</li>
         <li>
-          <a href="mailto:{postAuthorEmail}">{postAuthorEmail}</a>
+          <a href="mailto:{props.userEmail}">{postAuthorEmail}</a>
         </li>
         <li>{postAuthorAddress}</li>
       </ul>
-      <CommentsListHandler postId={postId} key={id} />
+      <CommentsList postId={postId} key={id} />
     </div>
   );
 }
 
-export default PostHandler;
+export default Post;
 
