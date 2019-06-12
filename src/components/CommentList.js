@@ -3,7 +3,7 @@ import { Comment } from './Comment';
 
 export function CommentList(props) {
   const { comments } = props;
-  const commetsList = comments.map(comment => <Comment {...comment} key={comment.postId} />)
+  const commetsList = comments.map(comment => <Comment {...comment} key={comment.email} />)
 
   return (
     <div className="comments" >
