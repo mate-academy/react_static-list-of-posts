@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
-import PostsListHandler from './PostsListHandler';
+import PostsList from './PostsListHandler';
 
 function App() {
-  return <PostsListHandler />
+  return (
+    <div className="content">
+      <PostsList />
+    </div>
+  );
 }
 
 export default App;
