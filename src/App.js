@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
-import PostList from "./components/PostList";
-import users from 'users.js';
+import { PostList } from "./components/PostList";
+import {posts} from './data/posts';
+import {users} from './data/users';
 
 function App() {
   return (
-    <div className="App">
-      <PostList />
-      
-    </div>
+    <PostList posts={posts} users={users} />
   );
 }
 
-export default App;
+export default App; 
