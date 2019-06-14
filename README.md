@@ -8,3 +8,7 @@ By using [posts.js](todos.js), [users.js](src/Data/users.js), and [comments.js](
 4) sublist of the post comments, including the name and email of the author of each comment as well as the comment itself.
 
 Create and use five components: `PostList`, `Post`, `User`, `CommentList`, and `Comment`. You can use the `User` component from both `Post` (with address) and `Comment` (without providing any address).
+
+## Result
+
+[Link to gh-pages](https://yojikyo.github.io/react_static-list-of-posts/)
