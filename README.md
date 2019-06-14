@@ -1,6 +1,6 @@
 # React static list of posts
 
-By using [posts.js](todos.js), [users.js](users.js), and [comments.js](comments.js) as modules to your React application, create and display a list of posts with the following data on each:
+By using [posts.js](todos.js), [users.js](src/Data/users.js), and [comments.js](src/Data/comments.js) as modules to your React application, create and display a list of posts with the following data on each:
 
 1) the title of the post;
 2) the text (body) of the post;

@@ -1,0 +1,11 @@
+.App {
+  padding: 30px;
+  font-size: calc(4px + 2vmin);
+  background-color: #282c34;
+  color: #61dafb;
+  text-shadow: 0 0 0.2em lightgoldenrodyellow;
+}
+
+h1 {
+  margin: 0 0 15px 20%;
+}
