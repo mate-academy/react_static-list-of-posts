@@ -13,32 +13,32 @@ export const User = props => {
      <strong>Name of auhtor:</strong>
     </p>
     <p>       
-    {name}
+    { name }
     </p>
     <p>
      <strong>Email:</strong>
     </p>
     <p>
-    {email}
+    { email }
     </p>
     <p>
      <strong>Address:</strong>
     </p>
     <p>
-    {address.street}
+    { address.street }
     </p>
     <p>
-    {address.suite}
+    { address.suite }
     </p>
     <p>
-    {address.sity}
+    { address.sity }
     </p>
     <p>
-    {address.zipcode}
+    { address.zipcode }
     </p>
     <p>
-    <p>{address.geo.lat}</p>
-    {address.geo.lng}
+    { address.geo.lat }
+    { address.geo.lng }
     </p>
 </div>
    );
