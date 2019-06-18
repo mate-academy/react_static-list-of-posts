@@ -9,28 +9,28 @@ export const Post = props => {
     title,
     user,
     body,
-    } = props;
+  } = props;
 
-    return (
-      <div class = "post">   
-        <p>
-        <strong>Title of post:</strong>
-        </p>
-        <p>       
-        { title }
-        </p>
-        <p>
-        <strong>Post content:</strong>
-        </p>
-        <p>
-        { body }
-        </p>
-        <p>
-        <User key={ props.id } { ...user }/>
-        </p>
-        <p>
-        <CommentList id={ id } comments = { comments } />
-        </p>
-      </div>
-    );
+  return (
+    <div class = "post">   
+      <p>
+      <strong>Title of post:</strong>
+      </p>
+      <p>       
+      { title }
+      </p>
+      <p>
+      <strong>Post content:</strong>
+      </p>
+      <p>
+      { body }
+      </p>
+      <p>
+      <User key={ props.id } { ...user }/>
+      </p>
+      <p>
+      <CommentList id={ id } comments = { comments } />
+      </p>
+    </div>
+  );
 };

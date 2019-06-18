@@ -6,16 +6,17 @@ export const CommentList = props => {
     comments,
     id
     } = props;
-    const arrForId = comments.filter(comment => {
-      return comment.postId === id;
-      });
-      return (
-        <div >
-          { arrForId.map((comment) => {
-            return (
-              <Comment body={ comment.body } name={ comment.name } email={ comment.email }/>
-        );
-    })}
-        </div>
+  const arrForId = comments.filter(comment => {
+    return comment.postId === id;
+  });
+  return (
+    <div >
+      { arrForId.map((comment) => {
+          return (
+            <Comment body={ comment.body } name={ comment.name } email={ comment.email }/>
+          );
+        })
+      }
+    </div>
   );
 };

@@ -7,25 +7,26 @@ export const Comment = props => {
     email,
     body,
     } = props;
+    
   return (
     <div class = "comment">
       <p>
-        <strong>Comments name:</strong>
+      <strong>Comments name:</strong>
       </p>
       <p>   
-        { name }
+      { name }
       </p>
       <p>
-        <strong>Email:</strong>
+      <strong>Email:</strong>
       </p>
       <p>
-        { email }
+      { email }
       </p>
       <p>
-        <strong>Content of comment:</strong>
+      <strong>Content of comment:</strong>
       </p>
       <p>
-        { body }
+      { body }
       </p>
     </div>
   );
