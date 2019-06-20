@@ -1,6 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PostItem from './PostItem';
-import User from './User'
 
 export default class PostList extends Component {
   constructor(props) {
@@ -22,16 +21,16 @@ export default class PostList extends Component {
 
   getComments(id) {
     const filteredComments = this.state.comments
-    .filter(item => item.postId === id);
+      .filter(item => item.postId === id);
     return filteredComments;
   }
 
   render() {
     return (
       <div>
-        {this.state.posts.map(item => <PostItem key={item.id} post={item}
-            name={this.state.users[item.userId].name}
-            user={<User info={this.state.users[item.userId]} />}
+        {this.state.posts.map(item =>
+          <PostItem key={item.id} post={item}
+            user={this.state.users[item.userId]}
             comments={this.getComments(item.id)} />)}
       </div>
     );

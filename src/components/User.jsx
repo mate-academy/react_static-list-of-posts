@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class User extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    const { name } = this.props.info;
-    return (
-      <div className="user">
-        <p>{name}</p>
-      </div>
-    );
-  }
+export default function User(props) {
+  const { name } = props.info;
+  return (
+    <div className="user">
+      <p>{name}</p>
+    </div>
+  );
 }
