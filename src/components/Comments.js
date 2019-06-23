@@ -5,9 +5,9 @@ import { comments } from "../data/comments";
 class Comments extends React.Component {
   constructor(props) {
     super(props);
-    this.filtredComments = comments.filter(c => c.postId === this.props.id);
+    this.filtredComments = comments.filter(comment => comment.postId === this.props.id);
     this.commentsList = this.filtredComments.map(
-      c => (c = <Comment name={c.name} body={c.body} email={c.email} key={c.name}/>)
+      comment => (<Comment name={comment.name} body={comment.body} email={comment.email} key={comment.name}/>)
     );
   }
 

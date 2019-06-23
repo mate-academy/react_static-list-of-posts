@@ -13,7 +13,6 @@ class Post extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="post">
         <h3>{this.props.title}</h3>
