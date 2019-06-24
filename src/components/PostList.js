@@ -16,7 +16,6 @@ function PostList() {
   for (let user of users) {
     usersObjEmail[user.email] = user.name;
   }
-  console.log(usersObjEmail);
 
   for(let post of posts) {
     const name = usersObj[post.userId].name;

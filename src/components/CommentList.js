@@ -8,10 +8,11 @@ function CommentList(props) {
   for (let comment of comments) {
     if (props.id === comment.postId) {
       const mailto = 'mailto:' + comment.email;
-      commentsList.push(<Comment text = {comment.body}
-                                 author = {comment.name}
-                                 email = {comment.email}
-                                 mailto = {mailto}/>
+      commentsList.push(
+        <Comment text = {comment.body}
+                 author = {comment.name}
+                 email = {comment.email}
+                 mailto = {mailto}/>
       );    
     }
   }
