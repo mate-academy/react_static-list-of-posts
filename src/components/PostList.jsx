@@ -20,9 +20,7 @@ export default class PostList extends Component {
   }
 
   getComments(id) {
-    const filteredComments = this.state.comments
-      .filter(item => item.postId === id);
-    return filteredComments;
+    return this.state.comments.filter(item => item.postId === id);
   }
 
   render() {
@@ -31,7 +29,8 @@ export default class PostList extends Component {
         {this.state.posts.map(item =>
           <PostItem key={item.id} post={item}
             user={this.state.users[item.userId]}
-            comments={this.getComments(item.id)} />)}
+            comments={this.getComments(item.id)} />
+        )}
       </div>
     );
   }
