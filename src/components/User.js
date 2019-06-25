@@ -1,16 +1,14 @@
 import React from "react";
 
-class User extends React.Component {
-  render() {
-    return (
-      <div className="user" key={this.props.name}>
-        <h4>{this.props.name}</h4>
-        <p>{this.props.address["city"]}</p>
-        <a href={"mailto: " + this.props.email}>{this.props.email}</a>
-        <div>~~~~~~~~~~~~~Comments~~~~~~~~~~~~~~~~</div>
-      </div>
-    );
-  }
+function User(props) {
+  return (
+    <div className="user" key={props.name}>
+      <h4>{props.name}</h4>
+      <p>{props.address["city"]}</p>
+      <a href={"mailto: " + props.email}>{props.email}</a>
+      <div>~~~~~~~~~~~~~Comments~~~~~~~~~~~~~~~~</div>
+    </div>
+  );
 }
 
 export default User;
