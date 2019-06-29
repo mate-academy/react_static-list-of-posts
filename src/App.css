@@ -57,6 +57,7 @@
 }
 
 .comment-btn {
+  cursor: pointer;
   background: none;
   border: none;
   color: #606770;

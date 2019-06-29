@@ -26,6 +26,9 @@ function PostList(props) {
           <CommentList
             numberComments={post.comments.length}
             comments={post.comments}
+            showComments={props.showComments}
+            postId={post.id}
+            postItems={props.postItems}
           />
         </div>
       ))}

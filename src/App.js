@@ -10,13 +10,14 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      posts: []
+      posts: [],
+      postItems: []
     };
   }
 
   componentDidMount() {
     this.setState({
-      posts: this.getPostsWithUsersAndComments(posts, users, comments),
+      posts: this.getPostsWithUsersAndComments(posts, users, comments)
     });
   }
 
@@ -30,11 +31,25 @@ class App extends React.Component {
     }))
   }
 
+  showComments = (postId) => {
+    this.setState(prevState => {
+      const post = !prevState.postItems[postId] || false;
+      const copy = {...prevState.postItems};
+      copy[postId] = post;
+
+      return { postItems:copy };
+    })
+  }
+
   render() {
     return (
       <section className="section-wrap">
         <h1>React static list of posts</h1>
-        <PostList posts={this.state.posts} />
+        <PostList
+          posts={this.state.posts}
+          postItems={this.state.postItems}
+          showComments={this.showComments}
+        />
       </section>
     );
   }

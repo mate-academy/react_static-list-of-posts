@@ -5,10 +5,13 @@ import Comment from './Comment'
 function CommentList(props) {
   return (
     <div className="comment-list">
-      <button className="comment-btn">
+      <button
+        className="comment-btn"
+        onClick={() => props.showComments(props.postId)}
+      >
         {props.numberComments} comments
       </button>
-      <div>
+      <div className={props.postItems[props.postId] ? "" : "show-comments"}>
         {props.comments.map(comment => (
           <Comment
             comment={comment}
