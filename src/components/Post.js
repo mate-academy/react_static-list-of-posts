@@ -1,13 +1,22 @@
 import React from 'react';
 import '../App.css';
+import User from "./User";
+import CommentList from "./CommentList";
 
-function Post(props) {
-  return (
-    <div>
-      <h2 className="post-title">{props.title}</h2>
-      <div className="post-body">{props.body}</div>
-    </div>
-  )
-}
+const Post = ({post, showComments, postItems}) => (
+  <div>
+    <User
+      post={post}
+      user={post.user}
+    />
+
+    <CommentList
+      comments={post.comments}
+      showComments={showComments}
+      postId={post.id}
+      postItems={postItems}
+    />
+  </div>
+)
 
 export default Post;

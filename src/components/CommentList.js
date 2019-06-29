@@ -2,26 +2,22 @@ import React from "react";
 import '../App.css';
 import Comment from './Comment'
 
-function CommentList(props) {
-  return (
-    <div className="comment-list">
-      <button
-        className="comment-btn"
-        onClick={() => props.showComments(props.postId)}
-      >
-        {props.numberComments} comments
-      </button>
-      <div className={props.postItems[props.postId] ? "" : "show-comments"}>
-        {props.comments.map(comment => (
-          <Comment
-            comment={comment}
-            key={comment.id}
-          />
-        ))}
-      </div>
-
+const CommentList = ({postId, comments, showComments, postItems}) => (
+  <div className="comment-list">
+    <button
+      className="comment-btn"
+      onClick={() => showComments(postId)}
+    >
+      {comments.length} comments
+    </button>
+    <div className={postItems[postId] ? "show-comments" : ""}>
+      {comments.map(comment => (
+        <Comment
+          comment={comment}
+        />
+      ))}
     </div>
-  )
-}
+  </div>
+)
 
 export default CommentList;

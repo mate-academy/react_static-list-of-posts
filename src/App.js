@@ -17,8 +17,15 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({
-      posts: this.getPostsWithUsersAndComments(posts, users, comments)
+      posts: this.getPostsWithUsersAndComments(posts, users, comments),
+      postItems: this.getPostsId(posts)
     });
+  }
+
+  getPostsId(posts) {
+    return posts.map(post => ({
+      'post[id]': false
+    }))
   }
 
   getPostsWithUsersAndComments(posts, users, comments) {
@@ -33,11 +40,10 @@ class App extends React.Component {
 
   showComments = (postId) => {
     this.setState(prevState => {
-      const post = !prevState.postItems[postId] || false;
-      const copy = {...prevState.postItems};
-      copy[postId] = post;
+      const copyPostItems = {...prevState.postItems};
+      copyPostItems[postId] = !copyPostItems[postId];
 
-      return { postItems:copy };
+      return { postItems:copyPostItems };
     })
   }
 
