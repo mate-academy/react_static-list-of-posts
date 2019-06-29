@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+}
+
+section {
+  border: 1px solid grey;
+  margin: 0;
+}
+
+.item {
+  background-color: #282c34;
+  border: 1px solid white;
+  padding: 0 30px;
+}
+
+.item__title {
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.item__text {
+  font-size: 20px;
+  text-align: left;
+}
+
+.author {
+  font-size: 14px;
+  text-align: right;
+}
+
+.author > span {
+  color: grey;
+}
+
+.comments {
+  border: 1px solid white;
+  margin: 0;
+  background-color: darkslategray;
+}
+
+.comments_title {
+  color: lightblue;
+  font-size: 12px;
+  text-align: left;
+}
+
+.comment {
+  border: 1px solid white;
+  font-size: 17px;
+}
