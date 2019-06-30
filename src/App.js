@@ -17,25 +17,22 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({
-      posts: this.getPostsWithUsersAndComments(posts, users, comments),
-      postItems: this.getPostsId(posts)
+      posts: this.getPostsWithUsersAndComments(posts, users, comments)
     });
-  }
-
-  getPostsId(posts) {
-    return posts.map(post => ({
-      'post[id]': false
-    }))
   }
 
   getPostsWithUsersAndComments(posts, users, comments) {
     return posts.map(post => ({
       ...post,
-      title: post.title[0].toUpperCase() + post.title.slice(1),
-      body: post.body[0].toUpperCase() + post.body.slice(1),
+      title: this.convertFirstLetterToUpperCase(post.title),
+      body: this.convertFirstLetterToUpperCase(post.body),
       user: users.find(user => user.id === post.userId),
       comments: comments.filter(comment => comment.postId === post.id)
     }))
+  }
+
+  convertFirstLetterToUpperCase(str) {
+    return str[0].toUpperCase() + str.slice(1);
   }
 
   showComments = (postId) => {

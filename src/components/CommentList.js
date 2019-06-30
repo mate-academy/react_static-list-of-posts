@@ -10,9 +10,10 @@ const CommentList = ({postId, comments, showComments, postItems}) => (
     >
       {comments.length} comments
     </button>
-    <div className={postItems[postId] ? "show-comments" : ""}>
+    <div className={postItems[postId] ? "" : "hide-comments"}>
       {comments.map(comment => (
         <Comment
+          key={comment.id}
           comment={comment}
         />
       ))}
