@@ -47,7 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <section className="section-wrap">
-        <h1>React static list of posts</h1>
+        <h1>React dynamic list of posts</h1>
         <PostList
           posts={this.state.posts}
           postItems={this.state.postItems}
