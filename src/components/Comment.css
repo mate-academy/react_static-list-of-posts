@@ -1,0 +1,12 @@
+.comment_wrapper {
+    background: darkgrey;
+    width: 450px;
+}
+
+.comment_author {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 200px;
+    font-size: xx-small;
+}

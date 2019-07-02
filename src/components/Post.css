@@ -1,0 +1,27 @@
+.title {
+    margin-left: 5px;
+    color: #D0F8FF;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+    0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+    0 0 40px #A5F1FF;
+}
+
+.title::first-letter {
+    text-transform: capitalize;
+    font-size: 200%;
+}
+
+.body {
+    margin-left: 5px;
+    width: 550px;
+    margin-top: 25px;
+
+}
+
+.post_container {
+    margin-left: 20px;
+    background: grey;
+    width: 600px;
+    border-radius: 5px;
+
+}
