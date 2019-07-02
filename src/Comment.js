@@ -3,8 +3,11 @@ import React from "react";
 const Comment = props => {
   return (
     <li>
-      ({props.comment.name}, {props.comment.email})
+      (<span className="highlitedText">Name: </span>
+      {props.comment.name}, <span className="highlitedText">Email: </span>
+      {props.comment.email})
       <br />
+      <span className="highlitedText">Comment: </span>
       {props.comment.body}
     </li>
   );
