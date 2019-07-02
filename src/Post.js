@@ -1,8 +1,6 @@
 import React from 'react';
 import User from './User';
-import CommentList from './CommentList'
-
-
+import Comment from './Comment'
 
 function Post(props) {
   return (
@@ -10,12 +8,12 @@ function Post(props) {
       <div className="item">
         <p className="item__title">{props.post.title}</p>
         <p className="item__text">{props.post.body}</p>
-        <User key={props.post.author.id} authorData={props.post.author} />
+        <User authorData={props.post.author} />
       </div>
       <div className="comments">
         <p className="comments_title">Comments:</p>
         {props.post.commentData.map(item => (
-          <CommentList key={item.id} cmnt={item} />)
+          <Comment key={item.id} cmnt={item} />)
         )}
       </div>
     </section>

@@ -3,11 +3,14 @@ import React from 'react';
 function User(props) {
   return (
     <div className="author">
-      <span>Name: </span> {props.authorData.name}, 
-      <span> e-mail: </span> {props.authorData.email}, 
-      <span> Address: </span> {props.authorData.address.street}, 
-      {props.authorData.address.suite},
-      {props.authorData.address.city}
+      <span className="itemTitle">Name: </span>
+      <span> {props.authorData.name}, </span>
+      <span className="itemTitle"> e-mail: </span> 
+      <span>{props.authorData.email}, </span>
+      <span className="itemTitle"> Address: </span> 
+      <span>{props.authorData.address.street}, </span>
+      <span>{props.authorData.address.suite}, </span>
+      <span>{props.authorData.address.city}</span>
     </div>
   );
 }

@@ -4,10 +4,8 @@ import users from './users';
 import posts from './posts';
 import comments from './comments';
 
-
 function PostList() {
-
-  const data = posts.map(item => {
+  const postData = posts.map(item => {
     return {
       ...item,
       author: users.find(user => item.userId === user.id),
@@ -17,7 +15,7 @@ function PostList() {
 
   return (
     <div >
-      {data.map(item => (
+      {postData.map(item => (
         <Post key={item.id} post={item} />)
       )};
     </div>
