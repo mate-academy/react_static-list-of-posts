@@ -1,10 +1,18 @@
 import React from 'react';
-
 import './App.css';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+
+import PostList from './components/PostList';
+
+const postsWithUsers = posts.map((item) => {
+  return {
+    ...item,
+    user: users.find(user => user.id === posts.userId),
+  };
+});
 
 const App = () => (
   <div className="App">
@@ -13,6 +21,10 @@ const App = () => (
     <p>
       <span>posts: </span>
       {posts.length}
+
+      <PostList
+        items={postsWithUsers}
+      />
     </p>
 
     <p>
