@@ -1,11 +1,11 @@
 import React from 'react'
 import Comment from './Comment'
 
-function CommentList(props) {
+function CommentList({currentComments}) {
   return (
     <>
-    {props.comments.map(comment => (
-      <Comment comment={comment}/>
+    {currentComments.map(comment => (
+      <Comment currentComment={comment}/>
       ))
     }
     </>

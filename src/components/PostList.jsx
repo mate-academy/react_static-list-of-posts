@@ -2,11 +2,11 @@ import React from 'react'
 import Post from './Post'
 
 
-function PostList(props) {
+function PostList({currentPosts}) {
   return (
     <>
-      {props.posts.map(post => (
-        <Post post={post}/>
+      {currentPosts.map(post => (
+        <Post currentPost={post}/>
       ))}
     </>
   )

@@ -2,16 +2,14 @@ import React from 'react'
 import User from './User'
 import CommentList from './CommentList'
 
-function Post(props) {
+function Post({currentPost}) {
   return (
     <article className='article'>
-      <h2 className='article__title'>{props.post.title}</h2>
-      <section className="article__body">{props.post.body}</section><br />
-      <User user={props.post.user}/> <br />
+      <h2 className='article__title'>{currentPost.title}</h2>
+      <section className="article__body">{currentPost.body}</section><br />
+      <User user={currentPost.user}/> <br />
       <div>Comments:</div>
-      <CommentList comments={props.post.comments}/>
-
-      {/* <div>{props.post.comment[0].name}</div> //работает */}
+      <CommentList currentComments={currentPost.comments}/>
     </article>
   )
 }

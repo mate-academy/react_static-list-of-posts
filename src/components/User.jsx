@@ -1,8 +1,12 @@
 import React from 'react'
 
-function User(props) {
+function User({user}) {
   return (
-    <div className='article-author'>author: {props.user.name} email: {props.user.email} from:{props.user.address.city}</div>
+    <div className='article__author'>
+      author: {user.name} 
+      email: {user.email} 
+      from:{user.address.city}
+    </div>
     )
 }
 

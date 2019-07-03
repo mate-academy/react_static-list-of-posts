@@ -21,7 +21,7 @@ const App = () => (
     <h1 className='site__title'>Static list of posts</h1>
 
     <PostList 
-      posts={postsWithUsers}
+      currentPosts={postsWithUsers}
     />
 
   </div>
