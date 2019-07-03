@@ -2,7 +2,7 @@
 
 ## Demo link
 
-`[DEMO LINK](https://ravenvol.github.io/react_static-list-of-posts/)`
+[DEMO LINK](https://ravenvol.github.io/react_static-list-of-posts/)
 
 
 ## Task
