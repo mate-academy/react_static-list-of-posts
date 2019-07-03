@@ -24,6 +24,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
   </div>
 );
 
