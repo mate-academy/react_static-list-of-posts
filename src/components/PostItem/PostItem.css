@@ -1,0 +1,15 @@
+.post + .post {
+  margin-top: 50px;
+}
+
+.post__headline {
+  margin-bottom: 15px;
+}
+
+.post__text {
+  margin-bottom: 10px;
+}
+
+.comments h4 {
+  margin-bottom: 10px;
+}

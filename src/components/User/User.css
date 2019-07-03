@@ -1,0 +1,17 @@
+.user-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.user-bar__name {
+  margin-right: 10px;
+}
+
+.user-bar__email {
+  font-size: 13px;
+  color: #ccc;
+}
