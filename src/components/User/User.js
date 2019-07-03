@@ -1,27 +1,29 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const User = (props) => {
-  const userVar = props.user;
+function User(props) {
   return (
     <>
-      <p>{userVar.name}</p>
-      <p>{userVar.email}</p>
+      <p>{props.user.name}</p>
+      <p>{props.user.email}</p>
       <p>
-        {`${userVar.address.city
-        } ${userVar.address.street
-        } ${userVar.address.suite}`}
+        {`${props.user.address.city
+        } ${props.user.address.street
+        } ${props.user.address.suite}`}
       </p>
-      {console.log(userVar)}
     </>
   );
-};
+}
+
 User.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  user: propTypes.object.isRequired,
-  name: propTypes.string.isRequired,
-  email: propTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  address: propTypes.object.isRequired,
+  user: propTypes.shape({
+    name: propTypes.string,
+    email: propTypes.string,
+    address: ({
+      city: propTypes.string,
+      street: propTypes.string,
+      suite: propTypes.string,
+    }).isRequired,
+  }).isRequired,
 };
 export default User;
