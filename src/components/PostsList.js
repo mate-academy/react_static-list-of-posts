@@ -10,22 +10,18 @@ import comments from '../api/comments';
 
 import PostContent from './postContent/PostContent';
 
-let currentPosts = posts.map(post => ({
+const currentPosts = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.id),
 }));
 
-const PostsList = () => {
-  currentPosts = currentPosts.map(post => <PostContent post={post} />);
-
-  return (
-    <Grid centered columns={2}>
-      <Grid.Column>
-        {currentPosts}
-      </Grid.Column>
-    </Grid>
-  );
-};
+const PostsList = () => (
+  <Grid centered columns={2}>
+    <Grid.Column>
+      {currentPosts.map(post => <PostContent key={post.id} post={post} />)}
+    </Grid.Column>
+  </Grid>
+);
 
 export default PostsList;

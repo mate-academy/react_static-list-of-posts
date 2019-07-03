@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header } from 'semantic-ui-react';
+import { Segment, Header, Label } from 'semantic-ui-react';
 
 import PropTypes from 'prop-types';
 import PostComments from './PostComments';
@@ -7,6 +7,7 @@ import PostComments from './PostComments';
 const PostContent = ({ post }) => (
   <Segment.Group>
     <Segment>
+      <Label attached="top">{post.user.email}</Label>
       <Header size="small">{post.user.name}</Header>
       <div>{post.title}</div>
     </Segment>

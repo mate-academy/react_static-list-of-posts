@@ -6,16 +6,10 @@ const PostComments = ({ comments }) => (
   <Segment>
     <Comment.Group>
       {comments.map(comment => (
-        <Comment>
+        <Comment key={comment.id}>
           <Comment.Content>
-            <Comment.Author as="a">{comment.email}</Comment.Author>
-            <Comment.Metadata>
-              <div>
-                {Math.floor(Math.random() * Math.floor(10)) + 1}
-                {' '}
-                days ago
-              </div>
-            </Comment.Metadata>
+            <Comment.Author as="a">{comment.name}</Comment.Author>
+            <Comment.Metadata>{comment.email}</Comment.Metadata>
             <Comment.Text>{comment.body}</Comment.Text>
           </Comment.Content>
         </Comment>
@@ -25,6 +19,8 @@ const PostComments = ({ comments }) => (
 );
 
 const commentsTypes = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 });
