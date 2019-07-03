@@ -7,8 +7,8 @@ const Post = ({ data }) => (
   <article className="post">
     <h2 className="title">{data.title}</h2>
     <p>{data.body}</p>
-    <User data={data.user} />
-    <CommentList data={data.comments} />
+    <User {...data.user} />
+    <CommentList comments={data.comments} />
   </article>
 );
 

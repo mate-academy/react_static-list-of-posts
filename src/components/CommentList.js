@@ -1,14 +1,10 @@
 import React from 'react';
 import Comment from './Comment';
 
-const CommentList = ({ data }) => {
-  const comments = data.map(comment => <Comment data={comment} />);
-
-  return (
-    <div>
-      {comments}
-    </div>
-  );
-};
+const CommentList = ({ comments }) => (
+  <div>
+    {comments.map(comment => <Comment data={comment} />)}
+  </div>
+);
 
 export default CommentList;
