@@ -6,10 +6,16 @@ body {
   color: white;
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
+  font-size: 2.5em;
+  text-transform: uppercase;
 }
 
 .post-list-wrapper {
-  padding: 40px 50px;
+  padding: 10px 50px 40px;
+
+  .post {
+    font-size: 1.3em;
+  }
 
   .post__title {
     color: #3494c4;
@@ -25,7 +31,7 @@ body {
 }
 
 .comment-list {
-  height: 300px;
+  height: 200px;
   overflow: auto;
 
   background-color: #b3e6ff;
@@ -34,6 +40,7 @@ body {
 .comment {
   margin: 10px 10px 0 10px;
   border-bottom: 2px solid #00334d;
+  font-size: 0.65em;
 
   &__email {
     font-style: italic;

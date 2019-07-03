@@ -3,9 +3,7 @@ import React from 'react';
 import './App.css';
 
 import PostList from './components/PostList';
-import CommentList from './components/CommentList';
 import posts from './api/posts';
-import comments from './api/comments';
 import users from './api/users';
 
 const postsWithUsers = posts.map(post => (
@@ -23,9 +21,6 @@ const App = () => (
       posts={postsWithUsers}
     />
 
-    <CommentList
-      comments={comments}
-    />
   </div>
 );
 

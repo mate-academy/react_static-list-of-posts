@@ -1,20 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const CommentList = ({ comments }) => (
+const CommentList = params => (
   <div className="comment-list">
-    {comments.map(comment => (
-      <div className="comment">
-        <div className="comment__email">{ comment.email }</div>
-        <h2 className="comment__name">{ comment.name }</h2>
-        <p className="comment__text">{ comment.body }</p>
-      </div>
-    ))}
+    {params.comments.map((comment) => {
+      if (comment.postId === params.post.id) {
+        return (
+          <div className="comment">
+            <div className="comment__email">{ comment.email }</div>
+            <h2 className="comment__name">{ comment.name }</h2>
+            <p className="comment__text">{ comment.body }</p>
+          </div>
+        );
+      }
+
+      return null;
+    })}
   </div>
 );
-
-CommentList.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
 
 export default CommentList;
