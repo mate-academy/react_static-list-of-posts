@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import User from './User';
 
-const Comment = ({ item }) => (
+const Comment = ({ oneComment }) => (
   <div className="comment-list__comment">
-    <User email={item.email} />
+    <User email={oneComment.email} />
     <div>
-      <h4>{item.name || null}</h4>
-      <p>{item.body}</p>
+      <h4>{oneComment.name}</h4>
+      <p>{oneComment.body}</p>
     </div>
   </div>
 );
 
 Comment.propTypes = {
-  item: PropTypes.shape({
+  oneComment: PropTypes.shape({
     email: PropTypes.string.isRequired,
     name: PropTypes.string,
     body: PropTypes.string.isRequired,

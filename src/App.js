@@ -5,7 +5,7 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import PostList from './components/PostList/PostList';
+import PostList from './components/PostList';
 
 const PostsWhithUser = posts.map(post => (
   {
@@ -18,16 +18,7 @@ const PostsWhithUser = posts.map(post => (
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    {
-      PostsWhithUser.map(post => (
-        <PostList
-          title={post.title}
-          body={post.body}
-          user={post.user}
-          comments={post.comments}
-        />
-      ))
-    }
+    <PostList posts={PostsWhithUser} />
   </div>
 );
 

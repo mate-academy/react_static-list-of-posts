@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const User = ({ name = null, username = null, email, address = null }) => (
-  <div className="post-list__user">
+const User = ({ name, username, email, city, street }) => (
+  <div className="post-page__user">
     {name}
     {username && `(${username})`}
     <br />
     {email}
     <br />
-    {address && `${address.city}, ${address.street} Street`}
+    {city && `City: ${city}`}
+    <br />
+    {street && `Street: ${street}`}
   </div>
 );
 
@@ -16,16 +18,15 @@ User.propTypes = {
   name: PropTypes.string,
   username: PropTypes.string,
   email: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    city: PropTypes.string,
-    street: PropTypes.string,
-  }),
+  city: PropTypes.string,
+  street: PropTypes.string,
 };
 
 User.defaultProps = {
   name: null,
   username: null,
-  address: null,
+  city: null,
+  street: null,
 };
 
 export default User;

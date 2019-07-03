@@ -3,17 +3,25 @@ import PropTypes from 'prop-types';
 import Comment from '../Comment';
 import './commentlist.css';
 
-const CommentList = ({ comments = null }) => (
+const CommentList = ({ comments }) => (
   <div className="comment-list">
     <h3>Comments</h3>
     <div className="comment-list__body">
-      {comments && comments.map(item => <Comment item={item} />)}
+      {comments && comments.map(oneComment => (
+        <Comment oneComment={oneComment} />))
+      }
     </div>
   </div>
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.object),
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      email: PropTypes.string,
+      name: PropTypes.string,
+      body: PropTypes.string,
+    })
+  ),
 };
 
 CommentList.defaultProps = {
