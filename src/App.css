@@ -1,3 +1,49 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
+
+.App h1 {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.post-list-wrapper {
+  padding: 10px 50px 40px;
+}
+.post-list-wrapper .post {
+  font-size: 1.3em;
+}
+.post-list-wrapper .post__title {
+  color: #3494c4;
+  text-align: center;
+  text-shadow: 5px 2px 5px #0a0a169f;
+  text-transform: uppercase;
+}
+.post-list-wrapper .user-info {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.comment-list {
+  height: 200px;
+  overflow: auto;
+  background-color: #b3e6ff;
+}
+
+.comment {
+  margin: 10px 10px 0 10px;
+  border-bottom: 2px solid #00334d;
+  font-size: 0.65em;
+}
+.comment__email {
+  font-style: italic;
+}
+.comment__name {
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=App.css.map */
