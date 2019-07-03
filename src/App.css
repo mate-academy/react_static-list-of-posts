@@ -1,3 +1,42 @@
 .App {
   text-align: center;
+  font-family: Arial, serif;
+}
+
+h1 {
+  color: #007439;
+  text-transform: uppercase;
+}
+
+.post-list {
+  list-style: none;
+}
+
+.post-list__post {
+  text-align: left;
+  border: 1px solid darkgreen;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.post-list__post-title {
+  color: lightgreen;
+}
+
+.post-list__post-text {
+  font-size: 18px;
+  font-family: Arial, serif;
+}
+
+.post-list__post-author-info {
+  text-align: left;
+}
+
+.post-list__post-author-info span {
+  font-weight: bold;
+}
+
+.comment-list__comment span {
+  font-weight: bold;
+  font-style: italic;
 }
