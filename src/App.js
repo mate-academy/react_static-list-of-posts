@@ -11,13 +11,14 @@ import PostList from "./components/PostList"
 const postsWithUsers = posts.map(post => {
   return {
     ...post,
-    user: users.find(user => user.id === post.userId)
+    user: users.find(user => user.id === post.userId),
+    comments: comments.filter(comment => post.id === comment.postId)
   }
 })
 
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 className='site__title'>Static list of posts</h1>
 
     <PostList 
       posts={postsWithUsers}

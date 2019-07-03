@@ -7,8 +7,7 @@ function PostList(props) {
     <>
       {props.posts.map(post => (
         <Post post={post}/>
-      )
-    )}
+      ))}
     </>
   )
 }
