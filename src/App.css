@@ -1,3 +1,29 @@
-.App {
-  text-align: center;
+.post {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user {
+  font-size: 12px;
+  color: grey;
+}
+
+.user span {
+  margin-right: 50px;
+}
+
+.comment {
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.comment span {
+  font-size: 12px;
+  color: #CCCCCC;
+  margin-right: 50px;
 }
