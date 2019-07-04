@@ -1,3 +1,61 @@
+body {
+  background-color: #c5c9c3;
+}
+
 .App {
   text-align: center;
+}
+
+.post-list {
+  padding-top: 25px;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #e4dde4;
+  border-radius: 25px;
+}
+
+.post {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.post-name {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.post-text {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.posts {
+  list-style: none;
+  padding: 0 0 25px;
+}
+
+.comments {
+  padding: 0;
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.comment {
+  margin-bottom: 10px;
+  background-color: #c8a6b5;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.comment label {
+  font-weight: bold;
+}
+
+.comment u {
+  display: block;
+  font-size: 0.7em;
 }
