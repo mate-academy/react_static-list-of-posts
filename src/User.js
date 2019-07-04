@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import users from './api/users';
 
-const User = ({ userId }) => {
-  const user = users.find(persone => persone.id === userId);
-  return (
-    <div>
-      <p>{user.name}</p>
-      <p>{user.username}</p>
-    </div>
-  );
-};
+const User = ({ userId }) => (
+  <div>
+    <p>{userId.name}</p>
+    <p>{userId.username}</p>
+  </div>
+);
 
 User.propTypes = {
   userId: PropTypes.shape({
