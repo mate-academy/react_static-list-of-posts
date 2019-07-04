@@ -5,8 +5,8 @@ import User from './User';
 function PostList() {
   return (
     <div className="post-list">
-      {users.map(user => (
-        <User user={user} />
+      {users.map(userData => (
+        <User user={userData} />
       ))}
     </div>
   );
