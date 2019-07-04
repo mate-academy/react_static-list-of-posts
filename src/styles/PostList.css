@@ -5,16 +5,16 @@
   background-color: rgba(136, 252, 214, 0.33);
 }
 
-.post {
+.post-content {
   border-bottom: 1px solid #0000002e;
 }
 
-.post__title {
+.post-content__title {
   text-align: center;
   padding: 10px 0;
 }
 
-.post__body {
+.post-content__body {
   margin: 0 0 4px;
 }
 

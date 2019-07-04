@@ -6,8 +6,6 @@ import users from './api/users';
 import './styles/PostList.css';
 
 import Post from './Post';
-import User from './User';
-import CommentList from './CommentList';
 
 const PostList = () => {
   const postContainer = posts.map(post => ({
@@ -18,25 +16,17 @@ const PostList = () => {
 
   const postItem = postContainer.map((item) => {
     return (
-      <div className="post-list__item">
-        <Post
-          key={item.post.id}
-          post={item.post}
-        />
-        <User
-          key={item.user.id}
-          user={item.user}
-        />
-        <CommentList
-          key={item.commentsList.postId}
-          commentsList={item.commentsList}
-        />
-      </div>
+      <Post
+        key={item.post.id}
+        post={item.post}
+        user={item.user}
+        commentsList={item.commentsList}
+      />
     );
   });
 
   return (
-    <div className="post-list__container">
+    <div className="post-list">
       {postItem}
     </div>
   );
