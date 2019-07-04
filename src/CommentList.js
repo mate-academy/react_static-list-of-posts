@@ -1,17 +1,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import Comment from './Comment'
 
 const CommentList = ({ comments }) => (
   <div className="CommentList__items">
     {comments.map(comment => (
-      <div>
-        <div className="title-group">
-          <span className="CommentList__user">{comment.email}:</span>
-          <span className="title"> {comment.name}</span>
-        </div>
-        <span>{comment.body} </span>
-      </div>
+      <Comment comment ={comment}/>
     ))}
   </div>
 );

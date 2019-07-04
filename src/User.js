@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import users from './api/users';
 
 const User = ({ userId }) => {
-  const user = users.find(i => i.id === userId);
+  const user = users.find(user => user.id === userId);
   return (
     <span>{user.name}</span>
   );
