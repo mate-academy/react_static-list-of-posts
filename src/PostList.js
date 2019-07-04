@@ -5,12 +5,12 @@ import User from './User';
 import CommentList from './CommentList';
 
 const PostList = ({ post }) => (
-  <section className="cardTitle">
-    <h1> List of posts </h1>
+  <section>
+    <h1 className ="PostList__title"> List of posts </h1>
     {post.map(post => (
-      <article className="items">
+      <article className ="PostList__items">
         <div className="title-group">
-          <span className="name_User">
+          <span className="PostList__user">
             <User userId={post.userId} />
             :
             </span>

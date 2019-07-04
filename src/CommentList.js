@@ -3,11 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CommentList = ({ comments }) => (
-  <div className="comment-list">
+  <div className="CommentList__items">
     {comments.map(comment => (
       <div>
         <div className="title-group">
-          <span className="name_User-comm">{comment.email}:</span>
+          <span className="CommentList__user">{comment.email}:</span>
           <span className="title"> {comment.name}</span>
         </div>
         <span>{comment.body} </span>
