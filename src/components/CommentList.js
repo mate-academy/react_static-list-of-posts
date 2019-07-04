@@ -4,7 +4,7 @@ import Comment from './Comment';
 function CommentList( {comment} ) {
   return (
     <>
-      <Comment comment={comment} />
+      <Comment commentData={comment} />
     </>
   );
 }
