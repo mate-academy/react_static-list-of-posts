@@ -4,7 +4,7 @@ import './App.css';
 import comments from './api/comments';
 import users from './api/users';
 import posts from './api/posts';
-import NewPost from './components/NewPost';
+import PostList from './components/PostList';
 
 const prePost = posts.map(post => ({
   post,
@@ -14,7 +14,7 @@ const prePost = posts.map(post => ({
 
 const App = () => (
   <main className="main">
-    <NewPost postsList={prePost} />
+    <PostList post={prePost} />
   </main>
 );
 

@@ -1,10 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const UserData = props => (
+const UserData = ({ user }) => (
   <div>
-    <p>{props.user.name}</p>
-    <p>{props.user.email}</p>
+    <p>{user.name}</p>
+    <p>{user.email}</p>
   </div>
 );
 
+UserData.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+  }).isRequired,
+};
 export default UserData;
