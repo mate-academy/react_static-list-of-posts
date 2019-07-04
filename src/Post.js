@@ -2,18 +2,18 @@ import React from 'react';
 import User from './User';
 import Comment from './Comment'
 
-function Post(props) {
+function Post({ post }) {
   return (
     <section>
       <div className="item">
-        <p className="item__title">{props.post.title}</p>
-        <p className="item__text">{props.post.body}</p>
-        <User authorData={props.post.author} />
+        <p className="item__title">{post.title}</p>
+        <p className="item__text">{post.body}</p>
+        <User authorData={post.author} />
       </div>
       <div className="comments">
         <p className="comments_title">Comments:</p>
-        {props.post.commentData.map(item => (
-          <Comment key={item.id} cmnt={item} />)
+        {post.commentsArray.map(item => (
+          <Comment key={item.id} comment={item} />)
         )}
       </div>
     </section>

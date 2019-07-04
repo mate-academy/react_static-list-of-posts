@@ -9,7 +9,7 @@ function PostList() {
     return {
       ...item,
       author: users.find(user => item.userId === user.id),
-      commentData: comments.filter(comnt => item.id === comnt.postId)
+      commentsArray: comments.filter(comnt => item.id === comnt.postId)
     };
   });
 
