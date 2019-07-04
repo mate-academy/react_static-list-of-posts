@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comments = props => (
+const Comments = ({cmnt}) => (
   <>
-    {props.cmnt.map(comment => (
+    {cmnt.map(comment => (
       <div className="comment">
         {comment.body}
         <div className="cmntAuthor">

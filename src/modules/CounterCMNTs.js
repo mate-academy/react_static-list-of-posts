@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CounterCMNTs = props => (
+const CounterCMNTs = ({counter}) => (
   <div className="cmtsN">
-    ----- {props.counter} comments:
+    ----- {counter} comments:
   </div>
 );
 
