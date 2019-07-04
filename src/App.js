@@ -10,7 +10,7 @@ import PostList from "./components/PostList"
 
 const postsWithUsers = posts.map(post => {
   return {
-    ...post,
+    ...post, 
     user: users.find(user => user.id === post.userId),
     comments: comments.filter(comment => post.id === comment.postId)
   }

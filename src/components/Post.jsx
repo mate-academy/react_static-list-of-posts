@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+
 import User from './User'
 import CommentList from './CommentList'
 
-function Post({currentPost}) {
-  return (
+const Post = ({currentPost}) => (
     <article className='article'>
       <h2 className='article__title'>{currentPost.title}</h2>
       <section className="article__body">{currentPost.body}</section><br />
@@ -12,6 +13,9 @@ function Post({currentPost}) {
       <CommentList currentComments={currentPost.comments}/>
     </article>
   )
-}
+
+Post.propTypes = {
+  currentPost: PropTypes.object.isRequired,
+};
 
 export default Post

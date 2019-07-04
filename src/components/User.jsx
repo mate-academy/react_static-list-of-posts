@@ -1,13 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-function User({user}) {
-  return (
-    <div className='article__author'>
-      author: {user.name} 
-      email: {user.email} 
-      from:{user.address.city}
-    </div>
-    )
+const User = ({user}) => (
+  <div className='article__author'>
+    author: {user.name} 
+    email: {user.email} 
+    from:{user.address.city}
+  </div>
+)
+
+User.propTypes = {
+  user: PropTypes.object.isRequired,
 }
 
 export default User
