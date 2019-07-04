@@ -1,0 +1,18 @@
+.user {
+  text-align: left;
+
+  &__name {
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__photo {
+    display: inline-block;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: lightgreen;
+  }
+}
