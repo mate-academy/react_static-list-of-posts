@@ -3,46 +3,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import User from './User';
-import Comment from './Comment';
+import CommentList from './CommentList';
 
-const Post = props => (
+const Post = ({ question }) => (
   <div className="post-item">
+
     <div className="question-block">
-      <User user={props.question.user} />
+      <User user={question.user} key={question.user.id} />
       <div className="question">
         <h3>
-          <p>
-            <u> Question: </u>
-          </p>
-          {props.question.post.title}
+          <p>Question:</p>
+          {question.title}
         </h3>
-        <article>
-          {props.question.post.body}
-        </article>
+        <article>{question.body}</article>
       </div>
     </div>
 
     <div className="comments">
-      <h3>
-        <u> Answers:</u>
-      </h3>
+      <h3>Answers:</h3>
       <div className="comment-item">
         <hr />
-        {props.question.comments.map(comment => (
-          <Comment comment={comment} />
-        ))}
+        <CommentList comments={question.comments} />
         <hr />
       </div>
     </div>
+
   </div>
 );
 
 Post.propTypes = {
-  post: PropTypes.shape({
+  question: PropTypes.shape({
     title: PropTypes.string,
     body: PropTypes.string,
     userId: PropTypes.number,
-    id: PropTypes.number,
+    user: PropTypes.object,
   }).isRequired,
 };
 

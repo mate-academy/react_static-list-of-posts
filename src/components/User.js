@@ -2,17 +2,17 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-const User = props => (
+const User = ({ user }) => (
   <>
     <div className="user">
-      <h2>{props.user.name}</h2>
-      <h3>{props.user.email}</h3>
+      <h2>{user.name}</h2>
+      <h3>{user.email}</h3>
       <p>
-        {props.user.address.city}
-        {props.user.address.street}
+        {user.address.city}
+        {user.address.street}
         <p>
           zipcode:
-          {props.user.address.suite}
+          {user.address.suite}
         </p>
       </p>
     </div>

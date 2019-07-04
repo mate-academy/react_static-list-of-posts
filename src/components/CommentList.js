@@ -1,25 +1,18 @@
-// import React from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-// import posts from "../api/posts";
-// import comments from "../api/comments";
-// import users from "../api/users";
+import Comment from './Comment';
 
-// import PropTypes from 'prop-types';
-// import Comment from './Comment';
+const CommentList = ({ comments }) => (
+  <>
+    {comments.map(comment => (
+      <Comment comment={comment} key={comment.id} />
+    ))}
+  </>
+);
 
+CommentList.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
-// const CommentList = () => {
-//   const commentComponent = comments.map(comment => (
-//     <Comment key={comment.postId} comment={comment} />
-//   ));
-
-
-
-//   return (
-//     <div>
-//     {commentComponent}
-//     </div>
-//   );
-// };
-
-// export default CommentList;
+export default CommentList;

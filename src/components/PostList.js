@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import Post from './Post';
 
-const PostList = props => (
+const PostList = ({ postsList }) => (
   <main className="posts-box">
-    {props.postsList.map(post => (
-      <Post question={post} />
+    {postsList.map(post => (
+      <Post question={post} key={post.id} />
     ))}
   </main>
 );
