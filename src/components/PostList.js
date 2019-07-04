@@ -7,10 +7,9 @@ import Post from './Post';
 
 const PostList = ({ items }) => (
   <ul>
-    {items.map(item => (
+    {items.map(post => (
       <li>
-        <Post data={item} />
-
+        <Post post={post} key={post.id} />
       </li>
     ))}
   </ul>
@@ -21,4 +20,3 @@ PostList.propTypes = {
 };
 
 export default PostList;
-
