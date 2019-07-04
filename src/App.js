@@ -16,14 +16,14 @@ const postsWithUsers = posts.map(post => {
   }
 })
 
+console.log(postsWithUsers);
+
 const App = () => (
   <div className="App">
     <h1 className='site__title'>Static list of posts</h1>
-
     <PostList 
       currentPosts={postsWithUsers}
     />
-
   </div>
 );
 
