@@ -3,19 +3,19 @@ import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './CommentList';
 
-const Post = props => (
+const Post = ({ post, user, commentsList }) => (
   <div className="post-list__item">
     <div className="post-content">
-      <h2 className="post-content__title">{props.post.title}</h2>
-      <p className="post-content__body">{props.post.body}</p>
+      <h2 className="post-content__title">{post.title}</h2>
+      <p className="post-content__body">{post.body}</p>
     </div>
     <User
-      key={props.user.id}
-      user={props.user}
+      key={user.id}
+      user={user}
     />
     <CommentList
-      key={props.commentsList.id}
-      commentsList={props.commentsList}
+      key={commentsList.id}
+      commentsList={commentsList}
     />
   </div>
 );
