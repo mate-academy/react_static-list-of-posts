@@ -3,18 +3,9 @@ import React from 'react';
 import './App.css';
 
 import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
-
 import PostList from './components/PostList';
 
-const getUser = userId => (
-  users.find(user => user.id === userId)
-);
-
-const getComment = postId => (
-  comments.filter(comment => comment.postId === postId)
-);
+import { getUser, getComment } from './utils';
 
 const currentPosts = posts.map(post => ({
   ...post,

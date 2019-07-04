@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 
 const CommentList = ({ allComments }) => (
-  allComments.map(item => (
-    <Comment commentItem={item} />
+  allComments.map(comment => (
+    <Comment commentItem={comment} key={comment.id} />
   ))
 );
 

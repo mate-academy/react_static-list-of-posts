@@ -5,7 +5,7 @@ import User from './User';
 import CommentList from './CommentList';
 
 const Post = ({ post }) => (
-  <li>
+  <div>
     <div className="post">
       <div className="post__title">{post.title}</div>
       <p className="post__body">
@@ -14,7 +14,7 @@ const Post = ({ post }) => (
       <User user={post.user} />
     </div>
     <CommentList allComments={post.comment} />
-  </li>
+  </div>
 );
 
 Post.propTypes = {
