@@ -1,13 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User(props) {
+function User({ user }) {
   return (
     <>
       <div className="post-list__post-author-info">
-        <div><span>Author:</span> {props.user.name}</div>
-        <div><span>Address:</span> {props.user.address.city}, {props.user.address.street}, {props.user.address.suite}</div>
-        <div><span>email:</span> {props.user.email}</div>
+        <div>
+          <span>Author:</span>
+          {` ${user.name}`}
+        </div>
+        <div>
+          <span>Address:</span>
+          {` ${user.address.city}`}
+,
+          {` ${user.address.street}`}
+,
+          {` ${user.address.suite}`}
+        </div>
+        <div>
+          <span>email:</span>
+          {` ${user.email}`}
+        </div>
       </div>
     </>
   );

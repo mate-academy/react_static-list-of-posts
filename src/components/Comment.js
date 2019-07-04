@@ -1,18 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Comment(props) {
+function Comment({ commentData }) {
   return (
     <div className="comment-list__comment">
-      <p><span>Comment {props.comment.id}: </span> {props.comment.name}</p>
-      <div>{props.comment.body}</div>
-      <p>{props.comment.email}</p>
+      <p>
+        <span>
+Comment
+          {commentData.id}
+:
+          {' '}
+        </span>
+        {' '}
+        {commentData.name}
+      </p>
+      <div>{commentData.body}</div>
+      <p>{commentData.email}</p>
     </div>
   );
 }
 
 Comment.propTypes = {
-  comment: PropTypes.shape({
+  commentData: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
     email: PropTypes.string,

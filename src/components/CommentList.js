@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import Comment from './Comment';
 
-function CommentList(props) {
+function CommentList({ comments }) {
   return (
     <ul className="comment-list">
-      {props.comments.map(comment => (
+      {comments.map(comment => (
         <Comment
-          comment={comment}
+          commentData={comment}
         />
       ))}
     </ul>

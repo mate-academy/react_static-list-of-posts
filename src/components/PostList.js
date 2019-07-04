@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import Post from './Post';
 
-function PostList(props) {
+function PostList({ posts }) {
   return (
     <ul className="post-list">
-      {props.posts.map(post => (
+      {posts.map(post => (
         <Post
-          post={post}
+          currentPost={post}
         />
       ))}
     </ul>
