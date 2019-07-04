@@ -1,12 +1,6 @@
 .user {
   text-align: left;
 
-  &__name {
-    padding-bottom: 10px;
-    font-size: 16px;
-    font-weight: 600;
-  }
-
   &__photo {
     display: inline-block;
     margin-right: 10px;
@@ -14,5 +8,18 @@
     height: 30px;
     border-radius: 25px;
     background-color: lightgreen;
+  }
+
+  &__name {
+    padding-bottom: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__address {
+    display: block;
+    float: right;
+    font-size: 12px;
   }
 }
