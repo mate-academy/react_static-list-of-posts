@@ -1,0 +1,22 @@
+p {
+  text-align: justify;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.app {
+  width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+.app__name {
+  margin: 15px 0;
+  text-align: center;
+  color: #5a5a5a;
+}
