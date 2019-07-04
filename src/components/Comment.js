@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = ({ commentItem }) => (
+const Comment = ({ commentItem: comment }) => (
   <div className="comment_box">
     <div>
-      <span className="comment_author">{commentItem.name}</span>
-      <span>{commentItem.email}</span>
+      <span className="comment_author">{comment.name}</span>
+      <span>{comment.email}</span>
     </div>
-    <p>{commentItem.body}</p>
+    <p>{comment.body}</p>
   </div>
 );
 
