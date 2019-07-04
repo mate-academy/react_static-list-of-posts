@@ -1,3 +1,46 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.post__container {
+  display: grid;
+  grid-gap: 10px;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.post {
+  display: grid;
+  border: 1px solid #000;
+  background-color: lightgrey;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.comments {
+  display: grid;
+  border: 1px solid #000;
+  background-color: white;
+  justify-content: flex-start;
+}
+
+.comment {
+  margin-top: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.comemnts-title {
+  font-weight: bold;
+  color: blue;
   text-align: center;
 }
