@@ -1,18 +1,15 @@
 import React from "react"
-import PropTypes from 'prop-types';
 
 import User from './User'
+import Post from './Post'
 import CommentList from './CommentList'
 
-const Post = ({ items }) => (
+const PostList = ({ items }) => (
   <ul>
     {items.map(item => (
       <li className="post_section">
         <div className="user-post">
-          <div className="post">
-            <h2 className="title_post">{item.title}</h2>
-            <p>{item.body}</p>
-          </div>
+          <Post postItem={item} />
           <User userItem={item} />
         </div>
         <p className="comment_tab">Comment:</p>
@@ -22,11 +19,4 @@ const Post = ({ items }) => (
   </ul>
 );
 
-Post.propTypes = {
-  item: PropTypes.shape({
-    title: PropTypes.string,
-    body: PropTypes.string,
-  }).isRequired,
-};
-
-export default Post;
+export default PostList;

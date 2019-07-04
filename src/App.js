@@ -6,7 +6,7 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-import Post from './components/PostList'
+import PostList from './components/PostList'
 
 const postWidthUser = posts.map(item => ({
   ...item,
@@ -17,7 +17,7 @@ const postWidthUser = posts.map(item => ({
 const App = () => (
   <div className="App">
     <h1 className="title_page">Static list of posts</h1>
-    <Post items={postWidthUser} />
+    <PostList items={postWidthUser} />
   </div>
 );
 
