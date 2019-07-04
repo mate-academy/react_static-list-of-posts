@@ -1,0 +1,27 @@
+.post-list__item {
+  padding: 0 20px 20px;
+  margin-bottom: 15px;
+  border-left: 2px solid #91bfad;
+  background-color: rgba(136, 252, 214, 0.33);
+}
+
+.post {
+  border-bottom: 1px solid #0000002e;
+}
+
+.post__title {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.post__body {
+  margin: 0 0 4px;
+}
+
+.user {
+  padding-top: 6px;
+  text-align: right;
+  font-size: 15px;
+  color: #687a8a;
+  font-style: italic;
+}
