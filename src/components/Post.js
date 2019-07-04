@@ -2,18 +2,18 @@ import React from 'react';
 import comments from '../api/comments';
 import CommentList from './CommentList';
 
-function Post(props) {
+function Post( {post} ) {
   return (
     <li className="post">
       <label className="post-name">
-        {props.post.title}
+        {post.title}
       </label>
       <p className="post-text">
-        {props.post.body}
+        {post.body}
       </p>
       <ul className="comments">
         {comments
-          .filter(comment => comment.postId === props.post.id)
+          .filter(comment => comment.postId === post.id)
           .map(commentData => (
             <CommentList comment={commentData} />
           ))}

@@ -1,10 +1,10 @@
 import React from 'react';
 import Comment from './Comment';
 
-function CommentList(props) {
+function CommentList( {comment} ) {
   return (
     <>
-      <Comment comment={props.comment} />
+      <Comment comment={comment} />
     </>
   );
 }

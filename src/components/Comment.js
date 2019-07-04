@@ -1,16 +1,16 @@
 import React from 'react';
 
-function Comment(props) {
+function Comment( {comment} ) {
   return (
     <li className="comment">
       <label>
-        {props.comment.name}
+        {comment.name}
       </label>
       <u>
-        {props.comment.email}
+        {comment.email}
       </u>
       <p>
-        {props.comment.body}
+        {comment.body}
       </p>
     </li>
   );
