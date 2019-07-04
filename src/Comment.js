@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = props => (
+const Comment = ({ commentData }) => (
   <p>
     <b>Comment</b>
     {' '}
-    {props.comments.body}
+    {commentData.body}
   </p>
 );
 
 Comment.propTypes = {
-  comments: PropTypes.shape({
+  commentData: PropTypes.shape({
     body: PropTypes.string,
   }).isRequired,
 };

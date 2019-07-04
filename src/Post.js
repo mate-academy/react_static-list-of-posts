@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './CommentList';
 
-const Post = ({ post }) => (
+const Post = ({ postData }) => (
   <li className="post_list">
-    <User user={post.user} />
+    <User user={postData.user} />
     <p className="post_title">
       <b>Title</b>
       {' '}
-      {post.title}
+      {postData.title}
     </p>
-    <p className="post_body">{post.body}</p>
-    <CommentList comments={post.comments} />
+    <p className="post_body">{postData.body}</p>
+    <CommentList comments={postData.comments} />
   </li>
 );
 

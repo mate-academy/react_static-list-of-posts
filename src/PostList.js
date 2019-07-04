@@ -4,7 +4,7 @@ import Post from './Post';
 
 const PostList = ({ post }) => (
   <ul>
-    {post.map(posts => <Post post={posts} />)}
+    {post.map(posts => <Post postData={posts} />)}
   </ul>
 );
 

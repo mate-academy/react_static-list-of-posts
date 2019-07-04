@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-const CommentList = props => (
+const CommentList = ({ comments }) => (
   <p>
-    {props.comments.map(comment => <Comment comments={comment} />)}
+    {comments.map(comment => <Comment commentData={comment} />)}
   </p>
 );
 

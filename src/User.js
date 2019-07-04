@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const User = props => (
+const User = ({ user }) => (
   <div className="user_information">
     <p>
       <b>Name</b>
       {' '}
-      {props.user.name}
+      {user.name}
     </p>
     <p>
       <b>Nick name</b>
       {' '}
-      {props.user.username}
+      {user.username}
     </p>
     <p>
       <b>Email</b>
       {' '}
-      {props.user.email}
+      {user.email}
     </p>
   </div>
 );
