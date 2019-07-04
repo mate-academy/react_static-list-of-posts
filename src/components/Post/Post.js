@@ -6,13 +6,7 @@ import './post.css';
 
 const Post = ({ title, body, comments, user, key }) => (
   <div key={key} className="post-page">
-    <User
-      name={user.name}
-      username={user.username}
-      email={user.email}
-      city={user.address.city}
-      street={user.address.street}
-    />
+    <User {...user} />
 
     <div className="post-page__post">
       <h2>{title}</h2>

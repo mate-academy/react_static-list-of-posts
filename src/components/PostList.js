@@ -7,10 +7,7 @@ const PostList = ({ posts }) => (
     {
       posts.map(post => (
         <Post
-          title={post.title}
-          body={post.body}
-          comments={post.comments}
-          user={post.user}
+          {...post}
           key={`post${post.id}`}
         />
       ))
