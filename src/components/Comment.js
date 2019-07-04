@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Comment = props => (
+const Comment = ({currentComment}) => (
   <div className="comment">
-    <p>{props.comment.body}</p>
-    <span>{props.comment.name}</span>
-    <span>{props.comment.email}</span>
+    <p>{currentComment.body}</p>
+    <span>{currentComment.name}</span>
+    <span>{currentComment.email}</span>
   </div>
 );
 

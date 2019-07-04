@@ -2,14 +2,14 @@ import React from 'react';
 import User from './User';
 import Comment from './Comment';
 
-const PostItem = props => (
+const PostItem = ({postItem}) => (
   <div className="post">
-    <h2>{props.postItem.post.title}</h2>
-    <p>{props.postItem.post.body}</p>
-    <User user={props.postItem.user} />
+    <h2>{postItem.post.title}</h2>
+    <p>{postItem.post.body}</p>
+    <User user={postItem.user} />
     <div>
       <h3>Comments:</h3>
-      {props.postItem.comments.map(comment => <Comment comment={comment} />)}
+      {postItem.comments.map(comment => <Comment currentComment = {comment} />)}
     </div>
   </div>
 );

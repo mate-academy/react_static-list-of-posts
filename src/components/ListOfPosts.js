@@ -1,9 +1,9 @@
 import React from 'react';
 import PostItem from './PostItem';
 
-const ListOfPosts = props => (
+const ListOfPosts = ({postsList}) => (
   <div>
-    {props.postsList.map(post => <PostItem postItem={post} />)}
+    {postsList.map(post => <PostItem postItem={post} />)}
   </div>
 );
 
