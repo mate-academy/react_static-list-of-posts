@@ -6,16 +6,17 @@ function Comment({ commentData }) {
     <div className="comment-list__comment">
       <p>
         <span>
-Comment
-          {commentData.id}
-:
-          {' '}
+          Comment
+          {` ${commentData.id}` }
         </span>
-        {' '}
-        {commentData.name}
+        {` ${commentData.name}`}
       </p>
-      <div>{commentData.body}</div>
-      <p>{commentData.email}</p>
+      <div>
+        {commentData.body}
+      </div>
+      <p>
+        {commentData.email}
+      </p>
     </div>
   );
 }
