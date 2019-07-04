@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 const posts = [
   {
     "userId": 1,
