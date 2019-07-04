@@ -14,8 +14,8 @@ function Post(props) {
       <ul className="comments">
         {comments
           .filter(comment => comment.postId === props.post.id)
-          .map(comment => (
-            <CommentList comment={comment} />
+          .map(commentData => (
+            <CommentList comment={commentData} />
           ))}
       </ul>
     </li>

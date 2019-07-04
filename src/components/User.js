@@ -9,8 +9,8 @@ const User = ( {user} ) => (
       <u>{user.email}</u>
     </div>
     <ul className="posts">
-      {posts.filter(post => post.userId === user.id).map(post => (
-        <Post post={post} />
+      {posts.filter(post => post.userId === user.id).map(postData => (
+        <Post post={postData} />
       ))}
     </ul>
   </div>
