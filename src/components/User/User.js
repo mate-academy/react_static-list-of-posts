@@ -1,15 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-function User(props) {
+function User({ user }) {
   return (
     <>
-      <p>{props.user.name}</p>
-      <p>{props.user.email}</p>
+      <p>{user.name}</p>
+      <p>{user.email}</p>
       <p>
-        {`${props.user.address.city
-        } ${props.user.address.street
-        } ${props.user.address.suite}`}
+        {`${user.address.city
+        } ${user.address.street
+        } ${user.address.suite}`}
       </p>
     </>
   );

@@ -3,16 +3,16 @@ import propTypes from 'prop-types';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 
-const Post = props => (
+const Post = ({ postData }) => (
   <li>
-    <h3>{props.post.title}</h3>
-    <p>{props.post.body}</p>
-    <User user={props.post.user} />
-    <CommentList comment={props.post.commentsList} />
+    <h3>{postData.title}</h3>
+    <p>{postData.body}</p>
+    <User user={postData.user} />
+    <CommentList comment={postData.commentsList} />
   </li>
 );
 Post.propTypes = {
-  post: propTypes.shape({
+  postData: propTypes.shape({
     title: propTypes.string,
     body: propTypes.string,
     user: propTypes.shape({}),

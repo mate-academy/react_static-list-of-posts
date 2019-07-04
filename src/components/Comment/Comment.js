@@ -1,15 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const CommentComponent = props => (
-  <li key={props.comment.id}>
-    <h3>{props.comment.name}</h3>
-    <p>{props.comment.body}</p>
-    <p>{props.comment.email}</p>
+const CommentComponent = ({ commentData }) => (
+  <li key={commentData.id}>
+    <h3>{commentData.name}</h3>
+    <p>{commentData.body}</p>
+    <p>{commentData.email}</p>
   </li>
 );
 CommentComponent.propTypes = {
-  comment: propTypes.shape({
+  commentData: propTypes.shape({
     id: propTypes.number,
     name: propTypes.string,
     body: propTypes.string,

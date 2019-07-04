@@ -3,12 +3,7 @@ import PostList from './components/PostList/PostList';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-
-const style = {
-  textAlign: 'center',
-  margin: 'auto',
-  width: '500px',
-};
+import './AppStyle.css';
 
 const PostsWithUser = posts.map(post => ({
   ...post,
@@ -16,7 +11,7 @@ const PostsWithUser = posts.map(post => ({
   commentsList: comments.filter(comment => comment.postId === post.userId),
 }));
 const App = () => (
-  <div className="App" style={style}>
+  <div className="App">
     <h1>Static list of posts</h1>
     <PostList posts={PostsWithUser} />
   </div>

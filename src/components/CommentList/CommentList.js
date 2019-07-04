@@ -4,8 +4,8 @@ import Comment from '../Comment/Comment';
 
 const CommentList = props => (
   <ul>
-    {props.comment.map(comment => (
-      <Comment comment={comment} />
+    {props.comment.map(commentItem => (
+      <Comment commentData={commentItem} />
     ))}
   </ul>
 );
