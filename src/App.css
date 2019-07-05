@@ -1,3 +1,55 @@
 .App {
   text-align: center;
 }
+
+.post {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.post_title:first-letter,
+.post_text:first-letter {
+  text-transform: uppercase;
+}
+
+.post_text {
+  font-size: 18px;
+}
+
+.post_author {
+  display: flex;
+  justify-content: space-evenly;
+  color: #a4a4a4;
+}
+
+.comment {
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.comment:last-child {
+  border: none;
+}
+
+.comment_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment_header h4:first-letter,
+.comment p:first-letter {
+  text-transform: uppercase;
+}
+
+.comment_header p {
+  color: #a4a4a4;
+  font-size: 12px;
+}
+
+.comment p {
+  text-align: left;
+}
+
