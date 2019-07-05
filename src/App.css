@@ -1,3 +1,29 @@
-.App {
+body {
+  margin: 0;
+}
+.info-card {
+  border: 10px solid red;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr)
+}
+
+.posts-info div {
+  border: 10px solid skyblue;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.all-comments {
+  background: #eeeeee;
+}
+
+.comment-info {
+  border: 1px dotted #ced8ff;
+}
+
+.user-info div {
+  border: dashed green 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
