@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Comment from './Comment';
 
-const CommentList = (props) => (
+const CommentList = ({ items }) => (
   <ul>
-    {props.items.map(item => (
+    {items.map(item => (
       <li key={item.id}>
         <Comment item={item} />
       </li>

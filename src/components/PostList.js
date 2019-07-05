@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import Post from './Post';
 
-const PostList = (props) => (
+const PostList = ({ items }) => (
   <ul>
-    {props.items.map(item => (
+    {items.map(item => (
       <li key={item.id}>
         <Post item={item} />
       </li>
