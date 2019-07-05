@@ -3,9 +3,9 @@ import React from 'react';
 import SingleUser from './User';
 import CommentList from './CommentList';
 
-const SinglePost = ({ post }) => (
+const Post = ({ post }) => (
   <div className="post">
-    <SingleUser userId={post.userId} />
+    <SingleUser user={post.userId} />
     <h2>{post.title}</h2>
     <p>{post.body}</p>
     <div className="comments">
@@ -15,4 +15,4 @@ const SinglePost = ({ post }) => (
   </div>
 );
 
-export default SinglePost;
+export default Post;

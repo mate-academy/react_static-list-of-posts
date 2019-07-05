@@ -9,7 +9,7 @@ import PostList from './components/PostList';
 const publishedPosts = posts.map(post => (
   {
     ...post,
-    user: users.filter(user => user.id === post.userId),
+    user: users.find(user => user.id === post.userId),
     comments: comments.filter(comment => post.id === comment.postId),
   }
 ));
