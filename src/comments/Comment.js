@@ -5,7 +5,8 @@ const Comment = ({ comment }) => {
   return (
     <div className="comment">
       (<span className="highlitedText">{comment.name}</span>, {comment.email})
-      <br />"{comment.body}"
+      <br />
+      {comment.body}
     </div>
   );
 };
