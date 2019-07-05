@@ -7,18 +7,24 @@ function User({ user }) {
       <div>
         <h2>User Name:</h2>
         <p>{user.name}</p>
-      </div>
-      <div>
+        <hr/>
         <h2>User City:</h2>
         <p>{user.address.city}</p>
-      </div>
-      <div>
+        <hr/>
         <h2>User Phone:</h2>
         <p>{user.phone}</p>
-      </div>
-      <div>
-        <h2>User E-mail::</h2>
+        <hr/>
+        <h2>User E-mail:</h2>
         <p>{user.email}</p>
+        <hr/>
+        <h2>User website:</h2>
+        <p>{user.website}</p>
+        <hr/>
+        <h2>User website:</h2>
+        <p>{user.company.name}</p>
+        <hr/>
+        <h2>User catchPhrase:</h2>
+        <p>{user.company.catchPhrase}</p>
       </div>
 
     </div>

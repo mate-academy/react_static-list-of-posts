@@ -11,19 +11,16 @@ function Post({ post }) {
         <div>
           <h2>ID of the post</h2>
           <span>{post.userId}</span>
-        </div>
-        <div>
+          <hr/>
           <h2>Title of the post</h2>
           <p>{post.title}</p>
-        </div>
-        <div>
+          <hr/>
           <h2>Body of the post</h2>
           <p>{post.body}</p>
-        </div>
-        <div>
+          <hr/>
           <h2>Post Number</h2>
           <p>№ {post.id}</p>
-        </div>
+          </div>
       </div>
       <User user={post.user} />
       <CommentList comments={post.comments} />

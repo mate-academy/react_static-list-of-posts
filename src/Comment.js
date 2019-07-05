@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function Comment({ comment }) {
   return (
     <div className="comment-info">
+      {comment.email}
       <blockquote>
         {comment.body}
-        {comment.email}
       </blockquote>
     </div>
   );
