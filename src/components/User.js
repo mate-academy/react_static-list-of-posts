@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const User = props => (
+const User = ({ user }) => (
   <>
     <div>
       author:
-      {props.user.name}
+      {user.name}
     </div>
     <div>
       write me:
-      {props.user.email}
+      {user.email}
     </div>
     <div>
       best regards from:
-      {props.user.address.city}
+      {user.address.city}
       ,  street:
-      {props.user.address.street}
+      {user.address.street}
       ,  flat:
-      {props.user.address.suite}
+      {user.address.suite}
       ,  zipcode:
-      {props.user.address.zipcode}
+      {user.address.zipcode}
     </div>
   </>
 );

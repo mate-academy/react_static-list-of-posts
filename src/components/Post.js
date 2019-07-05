@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './Commentlist';
 
-const Post = props => (
+const Post = ({ post }) => (
   <section>
     <h2>
-      {props.post.title}
+      {post.title}
     </h2>
     <p>
-      {props.post.body}
+      {post.body}
     </p>
-    <User user={props.post.user} />
-    <CommentList comments={props.post.comments} />
+    <User user={post.user} />
+    <CommentList comments={post.comments} />
   </section>
 );
 

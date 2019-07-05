@@ -4,8 +4,8 @@ import Post from './Post';
 
 const PostList = props => (
   <>
-    {props.posts.map(post => (
-      <Post post={post} />
+    {props.posts.map(currentPost => (
+      <Post post={currentPost} />
     ))}
   </>
 );

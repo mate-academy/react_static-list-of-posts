@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-const CommentList = props => (
+const CommentList = ({ comments }) => (
   <>
     <h5> comments:</h5>
-    {props.comments.map(comment => (
-      <Comment comment={comment} />
+    {comments.map(currentComment => (
+      <Comment comment={currentComment} />
     ))}
   </>
 );
