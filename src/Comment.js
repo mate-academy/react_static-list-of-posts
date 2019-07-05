@@ -4,18 +4,15 @@ import PropTypes from 'prop-types';
 function Comment({ comm }) {
   return (
     <div>
+      <p>Comment:</p>
       <p>{comm.body}</p>
-      <p>{comm.email}</p>
-      <p>{comm.name}</p>
     </div>
   );
 }
 
 Comment.propTypes = {
   comm: PropTypes.shape({
-    email: PropTypes.string,
-    body: PropTypes.string,
-    name: PropTypes.string,
+    body: PropTypes.string.isRequired,
   }).isRequired,
 };
 

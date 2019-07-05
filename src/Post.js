@@ -6,10 +6,10 @@ import CommentList from './CommentList';
 function Post({ postsUser }) {
   return (
     <div>
+      <User userData={postsUser.userPost} />
       <p>{postsUser.title}</p>
       <p>{postsUser.body}</p>
-      <User user={postsUser.user} />
-      <CommentList comment={postsUser.comments} />
+      <CommentList commentsData={postsUser.userComments} />
     </div>
   );
 }
@@ -18,8 +18,8 @@ Post.propTypes = {
   postsUser: PropTypes.shape({
     title: PropTypes.string,
     body: PropTypes.string,
-    user: PropTypes.string,
-    comments: PropTypes.string,
+    userPost: PropTypes.object,
+    userComments: PropTypes.object,
   }).isRequired,
 };
 

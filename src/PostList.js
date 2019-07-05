@@ -4,18 +4,17 @@ import Post from './Post';
 
 function PostList({ posts }) {
   return (
-    <div>
-      {posts.map(post => (
-        <Post postsUser={post} />
-      ))}
+    <div className="App__container">
+      {posts.map(currentPosts => <Post postsUser={currentPosts} />)}
     </div>
   );
 }
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOff({
-    post: PropTypes.string.isRequired,
-  }).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.object])).isRequired,
 };
 
 export default PostList;

@@ -1,10 +1,9 @@
 import React from 'react';
-import PostList from './PostList';
-
 import users from './api/users';
 import comments from './api/comments';
 import posts from './api/posts';
 import './App.css';
+import PostList from './PostList';
 
 const userWhitpostAndComments = posts.map(post => ({
   ...post,
