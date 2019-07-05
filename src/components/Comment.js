@@ -1,23 +1,21 @@
 import React from 'react';
-
 import './comment.scss';
 
-
-const Comment = ( {comment} ) => (
+const Comment = ({ commentData }) => (
   <div className="comment">
-    <p>Comment ID:{comment.id}</p>
+    <p>Comment ID:{commentData.id}</p>
     <p>
-      {comment.body}
+      {commentData.body}
     </p>
     <div className="comment__author">
       <span className="comment__author-name">
-        Name: {comment.name}
+        Name: {commentData.name}
       </span>
       <span className="comment__author-email">
-        Email: {comment.email}
+        Email: {commentData.email}
       </span>
     </div>
-    <hr/>
+    <hr />
   </div>
 )
 

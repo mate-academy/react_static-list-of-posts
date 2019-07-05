@@ -1,18 +1,16 @@
 import React from 'react';
-
 import './post.scss';
-
 import User from "./User";
 
-const Post = ( {post} ) => (
+const Post = ({ postData }) => (
   <article className="post">
-    <User user={post.user}/>
+    <User user={postData.user}/>
     <hr/>
     <h4>
-      {post.title}
+      {postData.title}
     </h4>
     <div className="post__content">
-      {post.body}
+      {postData.body}
     </div>
     <hr/>
   </article>

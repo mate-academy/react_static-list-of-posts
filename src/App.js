@@ -1,12 +1,9 @@
 import React from 'react';
-
-import './App.scss';
-
-import PostList from './components/PostList';
-
-import posts from './api/posts';
 import comments from './api/comments';
+import posts from './api/posts';
 import users from './api/users';
+import PostList from './components/PostList';
+import './App.scss';
 
 const publishedPosts = posts.map(post => (
   {
