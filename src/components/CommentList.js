@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-function CommentList(props) {
-  const { comments } = props;
+function CommentList({ comments }) {
   return (
     <div className="comments_list">
       {comments.map(comment => (

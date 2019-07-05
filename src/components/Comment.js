@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Comment(props) {
-  const { comment } = props;
+function Comment({ comment }) {
   return (
     <div className="comment">
       <div className="comment_header">

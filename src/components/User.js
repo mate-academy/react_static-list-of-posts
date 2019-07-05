@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function User(props) {
-  const { user } = props;
+function User({ user }) {
   return (
     <div className="post_author">
       <p>{user.name}</p>

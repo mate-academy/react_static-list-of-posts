@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './Post';
 
-function PostList(props) {
-  const { items } = props;
+function PostList({ items }) {
   return (
     <div className="post-wrap">
-      <Post posts={items} />
+      {items.map(post => (
+        <Post post={post} />
+      ))}
     </div>
   );
 }

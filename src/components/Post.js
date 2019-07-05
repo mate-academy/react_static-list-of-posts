@@ -1,24 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './CommentList';
 
-function Post(props) {
-  // eslint-disable-next-line react/prop-types
-  const { posts } = props;
+function Post({ post }) {
   return (
-    <>
-      {/* eslint-disable-next-line react/prop-types */}
-      {posts.map(item => (
-        <div className="post">
-          <h2 className="post_title">{item.title}</h2>
-          <p className="post_text">{item.body}</p>
-          <User user={item.user} />
-          <h4>Comments</h4>
-          <CommentList comments={item.comments} />
-        </div>
-      ))}
-    </>
+    <div className="post">
+      <h2 className="post_title">{post.title}</h2>
+      <p className="post_text">{post.body}</p>
+      <User user={post.user} />
+      <h4>Comments</h4>
+      <CommentList comments={post.comments} />
+    </div>
   );
 }
+
+Post.propTypes = {
+  post: PropTypes.objectOf(PropTypes.object).isRequired,
+};
 
 export default Post;
