@@ -8,26 +8,42 @@ import Post from "../posts/Post";
 import User from "../user/User";
 import "../posts/Post.css";
 
-const PostList = props => {
-  const findUser = userId => {
-    return users.find(user => user.id === userId);
-  };
-
-  const findComments = postId => {
-    return comments.filter(comment => comment.postId === postId);
-  };
-
-  return (
-    <div className="postlist">
-      {posts.map(post => (
-        <div className="post" key={post.id}>
-          <Post post={post} />
-          <User user={findUser(post.userId)} />
-          <CommentList comments={findComments(post.id)} />
-        </div>
-      ))}
-    </div>
-  );
+const prepareData = (posts, users, comments) => {
+  return posts.map(currentPost => ({
+    ...currentPost,
+    user: users.find(user => user.id === currentPost.userId),
+    comments: comments.filter(comment => comment.postId === currentPost.id)
+  }));
 };
+
+class PostList extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      posts: []
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      posts: prepareData(posts, users, comments)
+    });
+  }
+
+  render() {
+    return (
+      <div className="postlist">
+        {this.state.posts.map(post => (
+          <div className="post" key={post.id}>
+            <Post post={post} />
+            <User user={post.user} />
+            <CommentList comments={post.comments} />
+          </div>
+        ))}
+      </div>
+    );
+  }
+}
 
 export default PostList;

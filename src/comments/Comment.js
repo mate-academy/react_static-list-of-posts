@@ -3,7 +3,7 @@ import "../comments/Comment.css";
 
 const Comment = ({ comment }) => {
   return (
-    <div className="comment" key={`comment-id-${comment.id}`}>
+    <div className="comment">
       (<span className="highlitedText">{comment.name}</span>, {comment.email})
       <br />"{comment.body}"
     </div>

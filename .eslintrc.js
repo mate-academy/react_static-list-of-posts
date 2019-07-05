@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', '@mate-academy/eslint-config'],
+  extends: ["airbnb", "@mate-academy/eslint-config"],
   env: {
     es6: true,
     browser: true
@@ -7,20 +7,18 @@ module.exports = {
   parser: "babel-eslint",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module"
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ["react"],
   rules: {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    'no-console': 'off',
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "no-console": "off",
     "no-param-reassign": 0,
 
-    "no-shadow": ["error", { "builtinGlobals": false }],
-    "react/destructuring-assignment": 0,
+    "no-shadow": ["error", { builtinGlobals: false }],
+    "react/destructuring-assignment": 0
   }
 };
