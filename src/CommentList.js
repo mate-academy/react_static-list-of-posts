@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 
 const CommentList = ({ currentComment }) => (
-  <div>
+  <div className="App__comment_list">
     {currentComment.map(comment => (
       <Comment dataComment={comment} />
     ))}
