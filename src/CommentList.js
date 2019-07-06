@@ -2,20 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-function CommentList({ commentsData }) {
-  return (
-    <div>
-      {commentsData.map(comment => (
-        <Comment comm={comment} />
-      ))}
-    </div>
-  );
-}
+const CommentList = ({ currentComment }) => (
+  <div>
+    {currentComment.map(comment => (
+      <Comment dataComment={comment} />
+    ))}
+  </div>
+);
 
 CommentList.propTypes = {
-  commentsData: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.number,
+  currentComment: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.string,
+    PropTypes.number,
     PropTypes.object])).isRequired,
 };
 

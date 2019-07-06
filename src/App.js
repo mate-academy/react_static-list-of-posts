@@ -1,19 +1,19 @@
 import React from 'react';
+import PostList from './PostList';
 import users from './api/users';
 import comments from './api/comments';
 import posts from './api/posts';
 import './App.css';
-import PostList from './PostList';
 
 const userWhitpostAndComments = posts.map(post => ({
   ...post,
-  userPost: users.find(user => user.id === post.userId),
-  userComments: comments.filter(comment => comment.postId === post.id),
+  user: users.find(user => user.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App = () => (
   <div className="App">
-    <PostList posts={userWhitpostAndComments} />
+    <PostList postsCurrent={userWhitpostAndComments} />
   </div>
 );
 

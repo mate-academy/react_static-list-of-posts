@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './Post';
 
-function PostList({ posts }) {
-  return (
-    <div className="App__container">
-      {posts.map(currentPosts => <Post postsUser={currentPosts} />)}
-    </div>
-  );
-}
+const PostList = ({ postsCurrent }) => (
+  <div className="App__container">
+    {postsCurrent.map(post => (
+      <Post dataPost={post} />
+    ))}
+  </div>
+);
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.number,
+  postsCurrent: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.string,
+    PropTypes.number,
     PropTypes.object])).isRequired,
 };
 
