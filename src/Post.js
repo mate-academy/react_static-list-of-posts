@@ -1,6 +1,6 @@
 import React from 'react';
 import User from './User';
-import Comment from './Comment'
+import CommentList from './CommentList'
 
 function Post({ post }) {
   return (
@@ -12,9 +12,7 @@ function Post({ post }) {
       </div>
       <div className="comments">
         <p className="comments_title">Comments:</p>
-        {post.commentsArray.map(item => (
-          <Comment key={item.id} comment={item} />)
-        )}
+        <CommentList commentL={post.commentsArray} />)
       </div>
     </section>
   );
