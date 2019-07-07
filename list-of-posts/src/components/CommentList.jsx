@@ -5,7 +5,7 @@ export default class CommentList extends Component {
   render() {
     return (
       <div>
-          <Comment comments={this.props.comments}/>
+        <Comment comments={this.props.comments}/>
       </div>
     )
   }
