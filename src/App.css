@@ -1,3 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: round;
+}
+
 .App {
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+
+}
+
+/* -----------------Post------------------ */
+
+.postWrapper {
+  background: floralwhite;
+  border: 1px solid white;
+}
+
+.post__title {
+  max-width: 400px;
+  margin: 20px auto;
+}
+.post__text {
+  max-width: 900px;
+  margin: 20px auto;
+
+}
+
+.line {
+  background: white;
+  height: 40px;
+ }
+
+/*------------------Comment-list-------------  */
+
+.comment {
+  background: snow;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  border: 1px solid rgb(218, 218, 211);
+  border-radius: 20px;
+}
+
+.comment__autorEmail {
+  background: floralwhite;;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 10px;
+}
+/* -----------------User------------------------- */
+
+.user-post {
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 10px;
 }
