@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 
-export default class User extends Component {
-  render() {
-    return (
-      <div className="author-email">
-        <span> - <strong>{this.props.users.name}</strong></span>
-        <span> {this.props.users.email}</span>
-      </div>
-    )
-  }
+export default function User(props) {
+  return (
+    <div className="author-email">
+      <span> - <strong>{props.users.name}</strong></span>
+      <span>{props.users.email}</span>
+    </div>
+  )
 }
