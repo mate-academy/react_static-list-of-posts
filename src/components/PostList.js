@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 import Post from './Post';
 
-const PostList = ({ post }) => (
+const PostList = ({ items }) => (
   <div className="post">
-    {post.map(posts => <Post postOfList={posts} />)}
+    {items.map(post => <Post post={post} />)}
   </div>
 );
 
 PostList.propTypes = {
-  post: PropTypes.arrayOf(PropTypes.object).isRequired,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default PostList;

@@ -14,7 +14,7 @@ const prePost = posts.map(post => ({
 
 const App = () => (
   <main className="main">
-    <PostList post={prePost} />
+    <PostList items={prePost} />
   </main>
 );
 

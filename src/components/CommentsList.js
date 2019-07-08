@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Comment from './Comment';
 
-const CommentList = ({ comment }) => (
+const CommentList = ({ comments }) => (
 
   <div className="comment-list">
     <div>
-      <p>{comment.name}</p>
-      <p>{comment.email}</p>
-      <p>{comment.body}</p>
+      {comments.map(comment => <Comment comment={comment} />)}
     </div>
   </div>
 );
 
 CommentList.propTypes = {
-  comment: PropTypes.shape({
-    name: PropTypes.string,
-    email: PropTypes.string,
-    body: PropTypes.string,
-  }).isRequired,
+  comments: PropTypes.arrayOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.object])).isRequired,
 };
+
 export default CommentList;

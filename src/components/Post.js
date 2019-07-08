@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import UserData from './UserData';
 import CommentList from './CommentsList';
 
-const Post = ({ postOfList }) => (
+const Post = ({ post }) => (
   <div className="post-list">
-    <h2>{postOfList.post.title}</h2>
-    <p>{postOfList.post.body}</p>
-    <UserData user={postOfList.user} />
+    <h2>{post.post.title}</h2>
+    <p>{post.post.body}</p>
+    <UserData user={post.user} />
     <div>
       <h3>Comments:</h3>
-      {postOfList.comments.map(comment => <CommentList comment={comment} />)}
+      <CommentList comments={post.comments} />
     </div>
   </div>
 );
 
 Post.propTypes = {
-  postOfList: PropTypes.shape({
+  post: PropTypes.shape({
     post: PropTypes.object,
     title: PropTypes.string,
     body: PropTypes.string,
@@ -25,14 +25,4 @@ Post.propTypes = {
   }).isRequired,
 };
 
-/*Post.propTypes = {
-  postOfList: PropTypes.shape({
-    post: PropTypes.shape({
-      title: PropTypes.string,
-      body: PropTypes.string,
-    }),
-    user: PropTypes.objectOf(),
-    comments: PropTypes.arrayOf(PropTypes.object),
-  }).isRequired,
-};*/
 export default Post;
