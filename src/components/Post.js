@@ -8,13 +8,13 @@ import CommentList from './CommentList';
 const Post = ({ post }) => {
   const filteredUsers = users.filter(user => user.id === post.userId);
   const Users = filteredUsers.map(user => <User key={user.id} user={user} />);
-  const Comments = CommentList({ post });
+
   return (
     <div className="Post">
       <h2>{post.title}</h2>
       <p>{post.body}</p>
       <p>{Users}</p>
-      <p>{Comments}</p>
+      <p><CommentList post={post} /></p>
     </div>
   );
 };
