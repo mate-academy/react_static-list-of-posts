@@ -2,10 +2,10 @@
 
 ## Demo link
 
-Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`
+Add link here: `[DEMO LINK](https://artem-meleshko.io/react_static-list-of-posts)`
 
 
-## Task 
+### Task 
 
 By using [posts.js](./src/api/posts.js), [users.js](./src/api/users.js), and [comments.js](./src/api/comments.js) as modules to your React application, create and display a list of posts with the following data on each:
 
