@@ -1,3 +1,33 @@
-.App {
+body {
+  margin: 0;
+}
+.info-card {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  letter-spacing: 1px;
+  border-bottom: 10px dashed #bad8ce;
+  padding: 20px 0 20px 0;
+}
+
+.posts-info div {
+  border: 10px solid #b0fb9e;
+  margin: 5px 5px;
+  border-radius: 5px;
+}
+
+.all-comments {
+  border: 10px solid #f5a2e3;
+  margin: 5px 5px;
+  border-radius: 5px;
+}
+
+.comment-info {
+  border: 1px dotted #ced8ff;
+}
+
+.user-info div {
+  border: 10px solid #8fdeff;
+  margin: 5px 5px;
+  border-radius: 5px;
 }
