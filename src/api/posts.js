@@ -1,3 +1,4 @@
+/* eslint-disable */
 const posts = [
   {
     "userId": 1,

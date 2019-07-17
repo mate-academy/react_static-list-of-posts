@@ -1,3 +1,4 @@
+/* eslint-disable */
 const comments = [
   {
     "postId": 1,

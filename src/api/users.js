@@ -1,3 +1,4 @@
+/* eslint-disable */
 const users = [
     {
         "id": 1,

@@ -1,3 +1,26 @@
 .App {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+.userBox {
+  display: flex;
+  align-items: baseline;
+}
+
+.post {
+  margin-bottom: 80px;
+  padding: 20px;
+  background-color: #5c8ddb;
+}
+
+.title {
   text-align: center;
+}
+
+.comment {
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #e5bb47;
 }

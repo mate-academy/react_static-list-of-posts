@@ -3,28 +3,16 @@ import React from 'react';
 import './App.css';
 
 import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
+import Post from './Post';
 
-const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
+function App() {
+  const thePost = posts.map(post => <Post key={post.id} post={post} />);
 
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
-  </div>
-);
-
+  return (
+    <div className="App">
+      <h1 className="title">Static list of posts</h1>
+      {thePost}
+    </div>
+  );
+}
 export default App;
