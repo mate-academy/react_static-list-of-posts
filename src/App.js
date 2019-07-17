@@ -6,24 +6,24 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
+import PostList from "./components/PostList"
+
+const postsWithUsers = posts.map(post => {
+  return {
+    ...post, 
+    user: users.find(user => user.id === post.userId),
+    comments: comments.filter(comment => post.id === comment.postId)
+  }
+})
+
+console.log(postsWithUsers);
+
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
-
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+    <h1 className='site__title'>Static list of posts</h1>
+    <PostList 
+      currentPosts={postsWithUsers}
+    />
   </div>
 );
 
