@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.post-list {
+  border: 5px solid rgb(167, 170, 11);
+  text-align: center;
+}
+
+.comment-list {
+  border: 1px solid blue;
+  text-align: center;
+}
