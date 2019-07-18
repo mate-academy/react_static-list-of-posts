@@ -6,7 +6,7 @@ import users from './api/users';
 import comments from './api/comments';
 
 function Post({ post }) {
-  const filteredUsers = users.filter(user => user.id === post.userId);
+  const filteredUsers = users.find(user => user.id === post.userId);
   const Users = filteredUsers.map(user => <User key={user.id} user={user} />);
 
   const filterCom = comments.filter(com => com.postId === post.id);
