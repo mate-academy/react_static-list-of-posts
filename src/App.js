@@ -5,10 +5,20 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import PostList from './components/PostList';
+
+const postWithUserAndComments = posts.map(post => ({
+  ...post,
+  user: users.filter(user => post.userId === user.id),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
+
+// console.log(postWithUserAndComments);
 
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <PostList posts={postWithUserAndComments} />
+    {/* <h1>Static list of posts</h1>
 
     <p>
       <span>posts: </span>
@@ -23,7 +33,7 @@ const App = () => (
     <p>
       <span>Users: </span>
       {users.length}
-    </p>
+    </p> */}
   </div>
 );
 
