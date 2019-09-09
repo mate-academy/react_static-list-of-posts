@@ -5,11 +5,9 @@ import './User.scss';
 import users from '../../api/users';
 
 const User = ({ userId, userEmail }) => {
-  const user = userId
+  const { name, email, address } = userId
     ? users.find(item => item.id === userId)
     : { name: '', email: userEmail, address: '' };
-
-  const { name, email, address } = user;
 
   return (
     <div className="user">

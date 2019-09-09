@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './Comment.scss';
 import User from '../User/User';
 
-const Comment = ({ comment, key }) => {
-  const { name, body, email } = comment;
-
+function Comment({
+  key, name, body, email,
+}) {
   return (
     <div className="comment" key={key}>
       <div>
@@ -17,15 +17,13 @@ const Comment = ({ comment, key }) => {
       </div>
     </div>
   );
-};
+}
 
 Comment.propTypes = {
-  comment: PropTypes.shape({
-    name: PropTypes.string,
-    body: PropTypes.string,
-    email: PropTypes.string,
-  }).isRequired,
   key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
 };
 
 export default Comment;
