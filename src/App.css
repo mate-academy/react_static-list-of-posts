@@ -1,3 +1,8 @@
 .App {
   text-align: center;
+  text-transform: capitalize;
+}
+
+div {
+  box-sizing: border-box;
 }

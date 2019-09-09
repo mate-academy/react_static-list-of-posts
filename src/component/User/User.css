@@ -1,0 +1,17 @@
+.author__info {
+  padding-top: 40px;
+  text-align: end;
+}
+
+.span__block {
+  display: block;
+  margin-right: 5px;
+}
+
+.color__text {
+  display: inline-block;
+  color: darkblue;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
