@@ -1,38 +1,36 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './User.scss';
 
-import users from '../../api/users';
+import { UserProps } from '../../constants/proptypes';
 
-const User = ({ userId, userEmail }) => {
-  const { name, email, address } = userId
-    ? users.find(item => item.id === userId)
-    : { name: '', email: userEmail, address: '' };
+const User = ({ user }) => {
+  const { name, email, address } = user;
 
   return (
     <div className="user">
       <p className="user--text">
         <span className="user__text">By</span>
-        <span className="user__name">{name}</span>
+        {name && (
+          <span className="user__name">{name}</span>
+        )}
       </p>
       <p className="user__email user--text">{email}</p>
-      <p className="user__address user--text">
-        {`${address.city}, ${address.street}`}
-        <br />
-        {address.zipcode}
-      </p>
+      {address && (
+        <p className="user__address user--text">
+          {`${address.city}, ${address.street}`}
+          <br />
+          {address.zipcode}
+        </p>
+      )}
     </div>
   );
 };
 
-User.propTypes = {
-  userId: PropTypes.string,
-  userEmail: PropTypes.string,
-};
+User.propTypes = UserProps;
 
 User.defaultProps = {
-  userId: false,
-  userEmail: '',
+  name: null,
+  address: null,
 };
 
 export default User;

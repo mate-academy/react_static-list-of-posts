@@ -1,38 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Post.scss';
+import { PostProps } from '../../constants/proptypes';
 
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 
-import comments from '../../api/comments';
-
-const Post = ({ post }) => {
-  const {
-    id, title, body, userId,
-  } = post;
-  const commentList = comments.filter(comment => comment.postId === id);
+const Post = ({
+  key, post, user, comments,
+}) => {
+  const { title, body } = post;
 
   return (
-    <div className="post">
+    <div className="post" key={key}>
       <div className="post__author">
-        <User userId={userId} />
+        <User user={user} />
       </div>
       <h2 className="post__title">{title}</h2>
       <p className="post__body">{body}</p>
       <div className="post__comments">
-        <CommentList comments={commentList} />
+        <CommentList comments={comments} />
       </div>
     </div>
   );
 };
 
-Post.propTypes = {
-  post: PropTypes.shape({
-    title: PropTypes.string,
-    body: PropTypes.string,
-    userId: PropTypes.string,
-  }).isRequired,
-};
+Post.propTypes = PostProps;
 
 export default Post;
