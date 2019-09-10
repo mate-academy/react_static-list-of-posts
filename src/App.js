@@ -2,29 +2,28 @@ import React from 'react';
 
 import './App.css';
 
-import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
+import ApiPosts from './api/ApiPosts';
+import ApiComments from './api/ApiComments';
+import ApiUsers from './api/ApiUsers';
+import PostList from './Components/PostList/PostList';
+import Header from './Components/Header/Header';
+
+const addUsers = (postList, usersList) => postList.map(post => (
+  {
+    ...post,
+    user: usersList.find(user => (
+      user.id === post.userId
+    )),
+  }
+));
+
+const postsWithUsers = addUsers(ApiPosts, ApiUsers);
 
 const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
-
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
-  </div>
+  <>
+    <Header posts={ApiPosts} users={ApiUsers} comments={ApiComments} />
+    <PostList posts={postsWithUsers} commentList={ApiComments} />
+  </>
 );
 
 export default App;
