@@ -54,4 +54,5 @@ Create and use five components: `PostList`, `Post`, `User`, `CommentList`, and `
 
 You should be writing code in `src/` directory.
 
--[DEMO](https://igaryok.github.io/react_static-list-of-posts/)
+- [DEMO](https://igaryok.github.io/react_static-list-of-posts/)
+- [PR](https://github.com/mate-academy/react_static-list-of-posts/pull/81)
