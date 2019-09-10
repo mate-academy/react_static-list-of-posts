@@ -10,7 +10,6 @@ const Comment = ({ comment, email }) => (
     <p className="comment__text">
       {comment}
     </p>
-
   </div>
 );
 

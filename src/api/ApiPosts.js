@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const ApiPosts = [
+const apiPosts = [
   {
     userId: 1,
     id: 1,
@@ -603,4 +603,4 @@ const ApiPosts = [
   },
 ];
 
-export default ApiPosts;
+export default apiPosts;

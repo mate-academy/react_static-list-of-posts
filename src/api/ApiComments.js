@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const ApiComments = [
+const apiComments = [
   {
     postId: 1,
     id: 1,
@@ -3503,4 +3503,4 @@ const ApiComments = [
   },
 ];
 
-export default ApiComments;
+export default apiComments;

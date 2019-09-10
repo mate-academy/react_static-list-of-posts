@@ -2,13 +2,13 @@ import React from 'react';
 
 import './App.css';
 
-import ApiPosts from './api/ApiPosts';
-import ApiComments from './api/ApiComments';
-import ApiUsers from './api/ApiUsers';
+import apiPosts from './api/ApiPosts';
+import apiComments from './api/ApiComments';
+import apiUsers from './api/ApiUsers';
 import PostList from './Components/PostList/PostList';
 import Header from './Components/Header/Header';
 
-const addUsers = (postList, usersList) => postList.map(post => (
+const addingUsers = (postList, usersList) => postList.map(post => (
   {
     ...post,
     user: usersList.find(user => (
@@ -17,12 +17,16 @@ const addUsers = (postList, usersList) => postList.map(post => (
   }
 ));
 
-const postsWithUsers = addUsers(ApiPosts, ApiUsers);
+const postsWithUsers = addingUsers(apiPosts, apiUsers);
 
 const App = () => (
   <>
-    <Header posts={ApiPosts} users={ApiUsers} comments={ApiComments} />
-    <PostList posts={postsWithUsers} commentList={ApiComments} />
+    <Header
+      posts={apiPosts}
+      users={apiUsers}
+      comments={apiComments}
+    />
+    <PostList posts={postsWithUsers} commentList={apiComments} />
   </>
 );
 

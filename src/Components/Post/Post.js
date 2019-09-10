@@ -9,7 +9,11 @@ const Post = ({
   title, text, user, id, commentList,
 }) => (
   <div className="post">
-    <User name={user.name} email={user.email} address={user.address} />
+    <User
+      name={user.name}
+      email={user.email}
+      address={user.address}
+    />
     <h1 className="post__title">
       {title}
     </h1>

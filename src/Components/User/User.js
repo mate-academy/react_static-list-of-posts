@@ -7,11 +7,7 @@ const User = ({ name, email, address }) => (
     <h2 className="user__name">{name}</h2>
     <p className="user__email">{email}</p>
     <p className="user__address">
-      {address.street}
-,
-      {address.suite}
-,
-      {address.city}
+      {`${address.street}, ${address.street}, ${address.city}`}
     </p>
   </div>
 );
