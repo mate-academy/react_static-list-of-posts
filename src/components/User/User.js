@@ -3,10 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function User({ user }) {
+  const { name, email } = user;
+
   return (
     <div>
-      <div>{user.name}</div>
-      <div>{user.email}</div>
+      <div>{name}</div>
+      <div>{email}</div>
       <div>
         {`
           ${user.address.city},
