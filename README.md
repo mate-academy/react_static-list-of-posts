@@ -2,7 +2,7 @@
 
 ## Demo link
 
-Add link here: `[LINK](https://viktoriiatsykun.github.io/<repo_name>/)`
+Add link here: `[LINK](https://viktoriiatsykun.github.io/react_static-list-of-posts/)`
 
 
 ## Task
