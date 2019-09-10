@@ -8,19 +8,20 @@ const User = ({ user }) => {
 
   return (
     <div className="user">
-      <p className="user--text">
-        <span className="user__text">By</span>
-        {name && (
+      {name && (
+        <p className="user--text">
+          <span className="user__text">By</span>
           <span className="user__name">{name}</span>
-        )}
-      </p>
+        </p>
+      )}
       <p className="user__email user--text">{email}</p>
       {address && (
-        <p className="user__address user--text">
+        <div className="user__address user--text">
           {`${address.city}, ${address.street}`}
-          <br />
-          {address.zipcode}
-        </p>
+          <p className="user--text">
+            {`${address.zipcode}`}
+          </p>
+        </div>
       )}
     </div>
   );
