@@ -11,7 +11,6 @@ const Comment = ({ comment }) => {
       <p>
         {body}
       </p>
-
       <User name={name} email={email} />
     </div>
   );

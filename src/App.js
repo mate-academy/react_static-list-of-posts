@@ -5,13 +5,13 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import Postlist from './PostList/PostList';
+import PostList from './PostList/PostList';
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
-    <Postlist posts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 

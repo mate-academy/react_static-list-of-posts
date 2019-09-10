@@ -11,7 +11,11 @@ const Post = ({ post }) => {
     <div className="post">
       <h2 className="post__title">{post.title}</h2>
       <p>{post.body}</p>
-      <User name={user.name} email={user.email} address={user.address} />
+      <User
+        name={user.name}
+        email={user.email}
+        address={user.address}
+      />
       <CommentList comments={comments} />
     </div>
   );

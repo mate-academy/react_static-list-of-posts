@@ -5,7 +5,9 @@ import './CommentList.css';
 
 const CommentList = ({ comments }) => (
   <div className="comments">
-    {comments.map(item => <Comment comment={item} key={item.id} />)}
+    {comments.map(item => (
+      <Comment comment={item} key={item.id} />
+    ))}
   </div>
 );
 
