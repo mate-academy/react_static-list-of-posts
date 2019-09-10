@@ -16,8 +16,10 @@ const User = ({ user }) => {
       )}
       <p className="user__email user--text">{email}</p>
       {address && (
-        <div className="user__address user--text">
-          {`${address.city}, ${address.street}`}
+        <div className="user__address">
+          <p className="user--text">
+            {`${address.city}, ${address.street}`}
+          </p>
           <p className="user--text">
             {`${address.zipcode}`}
           </p>
