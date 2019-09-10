@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Comment.css';
 
 const Comment = ({ comment }) => {
   const { name, email, body } = comment;
@@ -9,7 +10,7 @@ const Comment = ({ comment }) => {
       <h5>{name}</h5>
       <p>{body}</p>
       <p>{email}</p>
-      <hr style={{ width: '30%' }} />
+      <hr className="comment__bottom-line" />
     </div>
   );
 };

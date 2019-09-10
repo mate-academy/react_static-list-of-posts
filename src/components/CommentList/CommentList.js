@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
 
-const CommentList = ({ comments }) => comments.map(comment => <Comment comment={comment} key={comment.id} />);
+const CommentList = ({ comments }) => comments.map(comment => (
+  <Comment comment={comment} key={comment.id} />
+));
 
 const shape = PropTypes.shape({
   id: PropTypes.number.isRequired,

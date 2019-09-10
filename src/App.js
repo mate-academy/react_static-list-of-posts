@@ -9,7 +9,7 @@ import PostList from './components/PostList/PostList';
 
 const postWithUserAndComments = posts.map(post => ({
   ...post,
-  user: users.filter(user => post.userId === user.id),
+  user: users.find(user => post.userId === user.id),
   comments: comments.filter(comment => comment.postId === post.id),
 }));
 

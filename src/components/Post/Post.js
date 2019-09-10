@@ -12,15 +12,9 @@ const Post = ({ post }) => (
     </h1>
     <h2 className="post__title">{post.title}</h2>
     <p className="post__body">{post.body}</p>
-    <>
-      {post.user.map(user => (
-        <User user={user} key={user.id} />
-      ))}
-    </>
-    <>
-      <span className="post__footer">Coments:</span>
-      <CommentList comments={post.comments} />
-    </>
+    <User user={post.user} />
+    <span className="post__footer">Comments:</span>
+    <CommentList comments={post.comments} />
   </div>
 );
 

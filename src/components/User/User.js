@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './User.css';
 
 function User({ user }) {
   const { name, email } = user;
@@ -19,7 +20,7 @@ function User({ user }) {
           {street}
         </span>
       </p>
-      <hr style={{ width: '90%' }} />
+      <hr className="user__bottom-line" />
     </div>
   );
 }
