@@ -1,3 +1,11 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.app__title {
+  font-family: Arial;
+  font-size: 50px;
+  color: #58554b;
 }
