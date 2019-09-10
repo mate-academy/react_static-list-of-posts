@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const users = [
+const apiUsers = [
   {
     id: 1,
     name: 'Leanne Graham',
@@ -233,4 +233,4 @@ const users = [
   },
 ];
 
-export default users;
+export default apiUsers;
