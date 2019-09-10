@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import User from '../User/User';
 
 function Comment({ comment }) {
-  const { name, email, body } = comment;
+  const { body } = comment;
 
   return (
     <>
-      <h2>{name}</h2>
-      <a href={`mailto:{email}`}>{email}</a>
+      <User user={comment} />
       <p>{body}</p>
     </>
   );

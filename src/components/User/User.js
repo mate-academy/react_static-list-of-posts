@@ -2,13 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function User({ user }) {
-  const { name, username, email } = user;
+  const {
+    name, email, address = {}, test,
+  } = user;
+
+  const {
+    street, suite, city, zipcode,
+  } = address;
 
   return (
     <>
       <h2>{name}</h2>
-      <p>{username}</p>
       <a href={`mailto:${email}`}>{email}</a>
+      <div>
+        <p>{street}</p>
+        <p>{suite}</p>
+        <p>{city}</p>
+        <p>{zipcode}</p>
+      </div>
+      <p>Ниже тестовое свойство не отображается</p>
+      <p>{test}</p>
     </>
   );
 }
@@ -16,8 +29,8 @@ function User({ user }) {
 User.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string,
-    username: PropTypes.string,
     email: PropTypes.string,
+    test: PropTypes.string,
   }).isRequired,
 };
 

@@ -12,10 +12,13 @@ const App = () => (
     <h1>Static list of posts</h1>
     <div>
       <hr />
+      user
       <User user={users[0]} />
       <hr />
+      comment
       <Comment comment={comments[0]} />
       <hr />
+      post
       <Post post={posts[0]} />
       <hr />
 
