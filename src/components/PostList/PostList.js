@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './PostList.scss';
+import { PostListProps } from '../../constants/proptypes';
 import Post from '../Post/Post';
 
 import users from '../../api/users';
@@ -21,8 +21,6 @@ function PostList({ posts }) {
   );
 }
 
-PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+PostList.propTypes = PostListProps;
 
 export default PostList;

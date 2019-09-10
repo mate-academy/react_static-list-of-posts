@@ -1,6 +1,5 @@
 import React from 'react';
 import './User.scss';
-
 import { UserProps } from '../../constants/proptypes';
 
 const User = ({ user }) => {
