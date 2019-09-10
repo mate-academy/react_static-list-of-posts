@@ -7,7 +7,7 @@ function Comment({ comment }) {
       <h3 className="comment__title">{comment.name}</h3>
       <p className="comment__text">{comment.body}</p>
       <p className="comment__author">
-        <span className="color__text">{comment.email}</span>
+        <span className="comment__revisor">{comment.email}</span>
       </p>
     </div>
   );

@@ -3,12 +3,12 @@
   text-align: end;
 }
 
-.span__block {
+.personal-info {
   display: block;
   margin-right: 5px;
 }
 
-.color__text {
+.personal-info span {
   display: inline-block;
   color: darkblue;
   font-weight: bold;

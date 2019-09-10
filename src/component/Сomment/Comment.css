@@ -10,3 +10,8 @@
   transform: scale(1.05);
   border: 3px solid green;
 }
+
+.comment__revisor {
+  color: darkblue;
+  font-weight: bold;
+}

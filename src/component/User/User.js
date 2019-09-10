@@ -3,23 +3,23 @@ import './User.css';
 
 function User({ user }) {
   return (
-    <div className="post__author">
+    <div className="post__author author">
       <address className="author__info">
-        <span className="span__block">
-          <span className="color__text">Name:</span>
+        <span className="personal-info">
+          <span>Name:</span>
           {user.name}
         </span>
-        <span className="span__block">
-          <span className="color__text">Address:</span>
+        <span className="personal-info">
+          <span>Address:</span>
           {user.address.city}
           , {user.address.street}
         </span>
-        <span className="span__block">
-          <span className="color__text">Email:</span>
+        <span className="personal-info">
+          <span>Email:</span>
           {user.email}
         </span>
-        <span className="span__block">
-          <span className="color__text">Phone:</span>
+        <span className="personal-info">
+          <span>Phone:</span>
           {user.phone}
         </span>
       </address>
