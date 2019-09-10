@@ -6,6 +6,7 @@ import users from './api/users';
 import User from './components/User/User';
 import Comment from './components/Comment/Comment';
 import Post from './components/Post/Post';
+import Postlist from './components/PostList/PostList';
 
 const App = () => (
   <div className="App">
@@ -20,6 +21,9 @@ const App = () => (
       <hr />
       post
       <Post post={posts[0]} />
+      <hr />
+      comments
+      <Postlist posts={posts} />
       <hr />
 
     </div>
