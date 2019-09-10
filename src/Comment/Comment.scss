@@ -1,0 +1,27 @@
+.comment {
+  border: 2px solid gray;
+  width: 45%;
+  padding: 25px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: khaki;
+
+  &__title {
+    font-size: 1.25em;
+    font-style: italic;
+    color: maroon;
+  }
+
+  &__text {
+    color: dimgray;
+  }
+
+  &__email {
+    color: darkolivegreen;
+
+    & span {
+      font-weight: bold;
+    }
+  }
+}
