@@ -1,6 +1,7 @@
 .post {
   border: 1px solid rgb(233, 233, 233);
   width: 48%;
+  min-width: 700px;
   margin: auto;
   margin-top: 40px;
   background: #f7f7f7;
@@ -21,6 +22,7 @@ border: 1px solid rgb(218, 218, 218);
   width: 80%;
   margin: auto;
   letter-spacing: 0.5px;
+  border-bottom: 1px solid rgb(148, 148, 148);
 }
 .post__title {
   font-family: cursive;
