@@ -13,20 +13,22 @@ export const UserProps = {
   user: userShape,
 };
 
+const common = {
+  body: PropTypes.string,
+  email: PropTypes.string,
+  name: PropTypes.string,
+};
+
 export const CommentProps = {
   comment: PropTypes.shape({
-    body: PropTypes.string,
-    email: PropTypes.string,
-    name: PropTypes.string,
+    common,
   }).isRequired,
 };
 
 export const CommentsListProps = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
-      body: PropTypes.string,
-      email: PropTypes.string,
-      name: PropTypes.string,
+      common,
     }).isRequired,
   ).isRequired,
 };
@@ -35,9 +37,7 @@ export const PostItemProps = {
   post: PropTypes.shape({
     comments: PropTypes.arrayOf(
       PropTypes.shape({
-        body: PropTypes.string,
-        email: PropTypes.string,
-        name: PropTypes.string,
+        common,
       }).isRequired,
     ).isRequired,
     user: PropTypes.shape({
