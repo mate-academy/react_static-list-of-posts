@@ -1,0 +1,23 @@
+.post {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 2em;
+    font-style: italic;
+    color: maroon;
+  }
+
+  &__comments {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: darkolivegreen;
+    text-decoration: underline;
+  }
+
+  & hr {
+    background-color: #fff;
+  }
+}
