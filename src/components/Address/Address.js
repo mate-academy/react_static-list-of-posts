@@ -3,21 +3,20 @@ import PropTypes from 'prop-types';
 import './Address.css';
 
 function Address({ address }) {
-  if (!address) {
-    return null;
-  }
-
   const {
     street, suite, city, zipcode,
   } = address;
 
   return (
-    <div className="address">
-      <span>{street}</span>
-      <span>{suite}</span>
-      <span>{city}</span>
-      <span>{zipcode}</span>
-    </div>
+    Object.keys(address).length !== 0 ? (
+      <div className="address">
+        <span>{street}</span>
+        <span>{suite}</span>
+        <span>{city}</span>
+        <span>{zipcode}</span>
+      </div>
+    )
+      : null
   );
 }
 
@@ -31,7 +30,7 @@ Address.propTypes = {
 };
 
 Address.defaultProps = {
-  address: undefined,
+  address: {},
 };
 
 export default Address;
