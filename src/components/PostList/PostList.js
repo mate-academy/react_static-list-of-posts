@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 
 const PostList = ({ preparedArray }) => (
-  <>
-    {preparedArray.map(item => (
-      <Post post={item} key={item.id} />
-    ))}
-  </>
+  preparedArray.map(item => (
+    <Post post={item} key={item.id} />
+  ))
 );
 
 PostList.propTypes = {

@@ -7,14 +7,12 @@ function User({ user }) {
   const { street, suite, city } = user.address;
 
   return (
-    <>
-      <p className="list-group-item list-group-item-primary user-info">
-        {
-          `User: ${name}, email: ${email} |
-          Adress: ${street}, ${suite}, ${city}`
-        }
-      </p>
-    </>
+    <p className="list-group-item list-group-item-primary user-info">
+      {
+        `User: ${name}, email: ${email} |
+        Adress: ${street}, ${suite}, ${city}`
+      }
+    </p>
   );
 }
 

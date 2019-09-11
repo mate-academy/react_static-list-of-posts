@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
 
 const CommentsList = ({ comments }) => (
-  <>
-    {comments.map(item => <Comment comment={item} key={item.id} />)}
-  </>
+  comments.map(
+    item => <Comment comment={item} user={item.user} key={item.id} />
+  )
 );
 
 CommentsList.propTypes = {

@@ -13,11 +13,10 @@ const createPreparedList = (postsList, commentsList, usersList) => (
       ...post,
       user: usersList.find(person => person.id === post.userId),
       comments: commentsList.filter(comment => comment.postId === post.id)
-        .map(item => (
-          {
-            ...item,
-            user: usersList.find(person => person.email === item.email),
-          })),
+        .map(item => ({
+          ...item,
+          user: usersList.find(person => person.email === item.email),
+        })),
     }
   ))
 );
@@ -42,9 +41,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-
     <PostList preparedArray={preparedArray} />
-
   </div>
 );
 

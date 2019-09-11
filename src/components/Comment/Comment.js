@@ -2,9 +2,9 @@ import React from 'react';
 import './Comment.css';
 import PropTypes from 'prop-types';
 
-function Comment({ comment }) {
+function Comment({ comment, user }) {
   const { name, body, email } = comment;
-  const user = comment.user ? comment.user.name : 'Guest';
+  const userName = user.name;
 
   return (
     <ul className="list-group-item list-group-item-info comment">
@@ -15,11 +15,17 @@ function Comment({ comment }) {
         {body}
       </p>
       <p className="list-group-item list-group-item-info comment__user-info">
-        {`user: ${user} (${email})`}
+        {`user: ${userName} (${email})`}
       </p>
     </ul>
   );
 }
+
+Comment.defaultProps = {
+  user: {
+    name: 'Guest',
+  },
+};
 
 Comment.propTypes = {
   comment: PropTypes.shape({
@@ -30,6 +36,9 @@ Comment.propTypes = {
       name: PropTypes.string,
     }),
   }).isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string,
+  }),
 };
 
 export default Comment;
