@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
+import './CommentList.css';
 
 function CommentList({ comments }) {
-  return comments.map(
+  const commentList = comments.map(
     comment => <Comment key={comment.id} comment={comment} />
   );
+
+  return <div className="comment-list">{commentList}</div>;
 }
 
 CommentList.propTypes = {
