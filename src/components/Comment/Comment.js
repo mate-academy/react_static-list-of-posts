@@ -1,13 +1,12 @@
 import React from 'react';
-
-import { CommentProps } from '../PropTypes/PropTypes';
 import './Comment.css';
+import { CommentProps } from '../PropTypes/PropTypes';
 
-const Comment = (comment, email) => (
+const Comment = ({ comment, email }) => (
   <div className="comment-content">
-    <h3 className="comment__email">
+    <h4 className="comment__email">
       {email}
-    </h3>
+    </h4>
     <p className="comment__text">
       {comment}
     </p>

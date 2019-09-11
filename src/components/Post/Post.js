@@ -6,7 +6,7 @@ import CommentList from '../CommentList/CommentList';
 
 const Post = ({ post, commentList }) => {
   const {
-    id, title, body, email, user,
+    id, title, body, user,
   } = post;
 
   return (
@@ -29,7 +29,7 @@ const Post = ({ post, commentList }) => {
             {user.name}
           </h1>
           <p className="user__email">
-            {email}
+            {user.email}
           </p>
 
           <div className="user__address">
@@ -42,9 +42,8 @@ const Post = ({ post, commentList }) => {
             </p>
           </div>
 
-          <CommentList commentList={commentList.filter(comment => (
-            comment.postId === id
-          ))}
+          <CommentList filteredComments={commentList
+            .filter(comment => comment.postId === id)}
           />
         </div>
       </div>

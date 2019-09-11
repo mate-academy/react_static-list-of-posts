@@ -1,0 +1,8 @@
+.comment-list {
+  margin-top: 20px;
+}
+
+.comment-list__title {
+  margin-bottom: 10px;
+  color: orangered;
+}
