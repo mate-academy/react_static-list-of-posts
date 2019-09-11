@@ -1,3 +1,15 @@
 .App {
+  font-family: sans-serif;
+  color: #555;
+  width: 80%;
+  margin: 1em auto;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px #555;
+}
+
+.header {
   text-align: center;
+  border-bottom: 2px solid #aaa;
 }
