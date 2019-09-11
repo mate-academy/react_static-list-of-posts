@@ -19,10 +19,16 @@ const User = ({ name, email, address }) => {
         <span>email: </span>
         {email}
       </p>
-      <div className="meta meta__address">
-        <p className="meta__address--city">{`city: ${city}`}</p>
-        <p className="meta__address--street">{`street: ${street}`}</p>
-      </div>
+      {address && (
+        <div className="meta meta__address">
+          {city && (
+            <p className="meta__address--city">{`city: ${city}`}</p>
+          )}
+          {city && (
+            <p className="meta__address--street">{`street: ${street}`}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };
