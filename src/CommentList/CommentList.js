@@ -6,9 +6,9 @@ import Comment from '../Comment/Comment';
 
 const CommentList = ({ comments }) => (
   <div className="comment-list">
-    {
-      comments.map(comment => <Comment comment={comment} key={comment.id} />)
-    }
+    {comments.map(comment => (
+      <Comment comment={comment} key={comment.id} />
+    ))}
   </div>
 );
 
