@@ -7,7 +7,7 @@ import './CommentList.css';
 const CommentList = ({ comments }) => (
   <ul className="extra content comment-list">
     {comments.map(comment => (
-      <li className="comment-list__item ui card" key={comment.id}>
+      <li className="comment-list__item" key={comment.id}>
         <Comment comment={comment} />
       </li>
     ))}
