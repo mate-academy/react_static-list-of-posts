@@ -45,7 +45,7 @@ Post.propTypes = {
       id: PropTypes.number,
       name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
-      body: PropTypes.stirng.isRequired,
+      body: PropTypes.string,
     })
   ),
 };
