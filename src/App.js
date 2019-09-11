@@ -1,24 +1,21 @@
-/* eslint-disable arrow-body-style */
+
 import React from 'react';
 import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-// import User from './components/User/User';
-// import Comment from './components/Comment/Comment';
-// import Post from './components/Post/Post';
-// import Postlist from './components/PostList/PostList';
-// import CommentList from './components/CommentList/CommentList';
-// import getPostsWithUsers from './getPostsWithUsers';
-// import getPostWithComments from './getPostWithComments';
+import PostList from './components/PostList/PostList';
+import getPostsWithUsers from './getPostsWithUsers';
+import getPostWithComments from './getPostWithComments';
 
 const App = () => {
-  // const postsWithUsers = getPostsWithUsers(posts, users);
-  // const postList = getPostWithComments(postsWithUsers, comments);
+  const postsWithUsers = getPostsWithUsers(posts, users);
+  const postList = getPostWithComments(postsWithUsers, comments);
 
   return (
     <div className="App">
       <Header />
+      <PostList posts={postList} />
     </div>
   );
 };

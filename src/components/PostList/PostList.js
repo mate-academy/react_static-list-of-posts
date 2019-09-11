@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 
-function Postlist({ posts }) {
+function PostList({ posts }) {
   return posts.map(post => <Post key={post.id} post={post} />);
 }
 
-Postlist.propTypes = {
+PostList.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       userId: PropTypes.number,
@@ -16,4 +16,4 @@ Postlist.propTypes = {
   ).isRequired,
 };
 
-export default Postlist;
+export default PostList;

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './User.css';
 
 function User({ user }) {
   const {
-    name, email, address = {}, test,
+    name, email, address = {},
   } = user;
 
   const {
@@ -11,18 +12,16 @@ function User({ user }) {
   } = address;
 
   return (
-    <>
-      <h2>{name}</h2>
+    <div className="user">
+      <h3>{name}</h3>
       <a href={`mailto:${email}`}>{email}</a>
-      <div>
-        <p>{street}</p>
-        <p>{suite}</p>
-        <p>{city}</p>
-        <p>{zipcode}</p>
+      <div className="user__address">
+        <span>{street}</span>
+        <span>{suite}</span>
+        <span>{city}</span>
+        <span>{zipcode}</span>
       </div>
-      <p>Ниже тестовое свойство не отображается</p>
-      <p>{test}</p>
-    </>
+    </div>
   );
 }
 
@@ -30,7 +29,6 @@ User.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string,
     email: PropTypes.string,
-    test: PropTypes.string,
   }).isRequired,
 };
 
