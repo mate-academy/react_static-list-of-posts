@@ -4,11 +4,15 @@ import Comment from '../Comment/Comment';
 import './CommentList.css';
 
 function CommentList({ comments }) {
-  const commentList = comments.map(
-    comment => <Comment key={comment.id} comment={comment} />
+  return (
+    <div className="comment-list">
+      {
+        comments.map(comment => (
+          <Comment key={comment.id} comment={comment} />
+        ))
+      }
+    </div>
   );
-
-  return <div className="comment-list">{commentList}</div>;
 }
 
 CommentList.propTypes = {

@@ -8,10 +8,6 @@ function User({ user }) {
     name, email, address,
   } = user;
 
-  // const {
-  //   street, suite, city, zipcode,
-  // } = address;
-
   return (
     <div className="user">
       <h3>{name}</h3>
