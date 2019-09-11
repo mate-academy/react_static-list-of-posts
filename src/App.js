@@ -1,30 +1,28 @@
 import React from 'react';
 
+import PostList from './components/PostList/PostList';
 import './App.css';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
+const getPostUsers = (postList, usersList) => postList.map(post => (
+  {
+    ...post,
+    user: usersList.find(user => (user.id === post.userId)),
+  }
+));
+
+const usersPosts = getPostUsers(posts, users);
+
 const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
-
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
-  </div>
+  <>
+    <h1 className="static-list__title">Static List of Posts</h1>
+    <div className="container">
+      <PostList posts={usersPosts} commentList={comments} />
+    </div>
+  </>
 );
 
 export default App;

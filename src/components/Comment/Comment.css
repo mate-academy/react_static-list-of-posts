@@ -1,0 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+.comment-content {
+  border: 1px solid red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.comment-content:last-child {
+  margin-bottom: 0;
+}

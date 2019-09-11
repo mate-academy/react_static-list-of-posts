@@ -1,0 +1,8 @@
+.post-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ui.card:first-child {
+  margin-top: 1em;
+}
