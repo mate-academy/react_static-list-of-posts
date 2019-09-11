@@ -11,11 +11,13 @@ const getPostsWithUserAndComments = (
   postList,
   userList,
   commentList
-) => postList.map(post => ({
-  ...post,
-  user: userList.find(user => user.id === post.userId),
-  comments: commentList.filter(comment => comment.postId === post.id),
-}));
+) => postList.map(
+  post => ({
+    ...post,
+    user: userList.find(user => user.id === post.userId),
+    comments: commentList.filter(comment => comment.postId === post.id),
+  })
+);
 
 const preparedPosts = getPostsWithUserAndComments(posts, users, comments);
 
