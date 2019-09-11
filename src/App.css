@@ -1,3 +1,8 @@
-.App {
+.static-list__title {
   text-align: center;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
 }
