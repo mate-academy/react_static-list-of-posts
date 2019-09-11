@@ -1,15 +1,3 @@
 .App {
   text-align: center;
 }
-
-.wrapp {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
-}
-
-@media screen and (max-width: 1500px) {
-  .wrapp {
-    grid-template-columns: auto;
-  }
-}
