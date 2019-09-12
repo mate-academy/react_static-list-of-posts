@@ -9,9 +9,9 @@ function getPostWithProps(postsArr, usersArr, commentsArr) {
   return postsArr.map(post => ({
     ...post,
     user: usersArr.find(user => user.id === post.userId),
-    comment: commentsArr.filter(comment => {
+    comments: commentsArr.filter(comments => {
 
-      return comment.postId === post.id
+      return comments.postId === post.id
     }
       ),
   }));
