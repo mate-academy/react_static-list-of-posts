@@ -3,6 +3,7 @@ import './Comment.scss';
 
 const Comment = ({ comm }) => {
   const {name,email,body}  = comm;
+
   return (
     <div className = 'comment'>
      <div className = 'comment__name'>{ name.charAt(0).toUpperCase() + name.slice(1) }</div>

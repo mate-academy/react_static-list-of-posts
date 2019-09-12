@@ -4,6 +4,7 @@ import CommentList from '../CommentList/CommentList';
 import './Post.scss';
 const Post = ({ post }) => {
   let {user,comment}  = post;
+
   return (
     <div className="post">
        <User user = { user } />
