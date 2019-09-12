@@ -12,12 +12,4 @@ function PostsList({ posts }) {
     </div>
   );
 }
-
-
-
-
-
-
-
-
 export default PostsList;

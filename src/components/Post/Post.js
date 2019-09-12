@@ -5,7 +5,6 @@ import './Post.scss';
 const Post = ({ post }) => {
   let {user,comment}  = post;
   return (
-
     <div className="post">
        <User user = { user } />
       <h2 className="post__title">
@@ -16,12 +15,6 @@ const Post = ({ post }) => {
       </div>
       <CommentList comment = {comment} />
     </div>
-
   );
 }
-
-
-
-
-
 export default Post;
