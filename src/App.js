@@ -9,14 +9,11 @@ function getPostWithProps(postsArr, usersArr, commentsArr) {
   return postsArr.map(post => ({
     ...post,
     user: usersArr.find(user => user.id === post.userId),
-    comments: commentsArr.filter(comments => {
-
-      return comments.postId === post.id
-    }
-      ),
+    comments: commentsArr.filter(comments => comments.postId === post.id),
   }));
 }
-const preparedProps  = getPostWithProps(posts, users, comments);
+
+const preparedProps = getPostWithProps(posts, users, comments);
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
