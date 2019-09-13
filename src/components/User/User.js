@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './User.css';
 
 function User({ user }) {
@@ -19,8 +20,10 @@ function User({ user }) {
   );
 }
 
-
-
-
+User.propTypes = {
+  user: PropTypes.arrayOf({
+    name: PropTypes.string,
+    email: PropTypes.string,
+  }).isRequired,
+};
 export default User;
-

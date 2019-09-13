@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
 import './CommentList.css';
 
 function CommentList(props) {
-  const {comments} = props;
+  const { comments } = props;
+
   return (
     <div>
       {comments
@@ -12,5 +14,15 @@ function CommentList(props) {
     </div>
   );
 }
+
+CommentList.propTypes = {
+  comments: PropTypes.arrayOf({
+    comment: PropTypes.shape({
+      body: PropTypes.string,
+      email: PropTypes.string,
+      name: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default CommentList;

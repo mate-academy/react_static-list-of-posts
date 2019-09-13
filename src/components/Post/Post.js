@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Post.css';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
@@ -19,5 +20,12 @@ function Post({ post }) {
   );
 }
 
-export default Post;
+Post.propTypes = {
+  post: PropTypes.arrayOf({
+    title: PropTypes.string,
+    body: PropTypes.string,
+    comments: PropTypes.string,
+  }).isRequired,
+};
 
+export default Post;
