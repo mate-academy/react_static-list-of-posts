@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
 import './CommentList.css';
 
-function CommentList(props) {
-  const { comments } = props;
-
+function CommentList({ comments }) {
   return (
     <div>
       {comments
