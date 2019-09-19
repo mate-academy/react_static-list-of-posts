@@ -1,3 +1,25 @@
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.header-items {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.header__item {
+  border: 1px solid #e3e3e3;
+  padding: 7px;
+  border-radius: 7px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.07);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
 }

@@ -1,0 +1,12 @@
+.post-card {
+  border: 1px solid #cecece;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.09);
+  background-color: whitesmoke;
+  transition: transform 0.3s;
+}
+
+.post-card:hover {
+  transform: scale(1.01, 1.01);
+}
