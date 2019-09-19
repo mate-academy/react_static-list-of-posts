@@ -1,0 +1,12 @@
+.post-card__author {
+  font-size: 13px;
+  text-align: left;
+}
+
+.author-title__item {
+  font-weight: bold;
+}
+
+.author-title {
+  margin-bottom: 4px;
+}
