@@ -5,7 +5,7 @@ import Comment from './Comment';
 function CommentList({ comments }) {
   return (
     <ul>
-      <h1>Comments</h1>
+      <h2>Comments</h2>
       {comments.map(comment => (
         <Comment comment={comment} key={comment.id} />
       ))}

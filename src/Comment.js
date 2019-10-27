@@ -3,15 +3,11 @@ import PropTypes from 'prop-types';
 
 function Comment({ comment }) {
   return (
-    <li>
-      {comment.body}
-      <br />
-      Author:
-      {comment.name}
-      <br />
+    <li className="nestedUl">
+      <div>{comment.body}</div>
+      <div>{`Author: ${comment.name}`}</div>
       <a href={`mailto: ${comment.email}`}>
-        Email
-        {comment.name}
+        {`Email ${comment.name}`}
       </a>
     </li>
   );
