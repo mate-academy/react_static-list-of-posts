@@ -2,7 +2,7 @@
 
 ## Demo link
 
-Add link here: `[DEMO LINK](https://<your_account>.github.io/<repo_name>/)`
+Add link here: [LINK](https://dsrtf0x-git.github.io/react_static-list-of-posts/)
 
 
 ## Task 
@@ -53,3 +53,5 @@ Create and use five components: `PostList`, `Post`, `User`, `CommentList`, and `
 - `build/` - directory for built pages
 
 You should be writing code in `src/` directory.
+
+Add link here: [LINK](https://dsrtf0x-git.github.io/react_static-list-of-posts/)
