@@ -26,8 +26,9 @@ export default class CommentList extends Component {
         Show Comments
         </Accordion.Title>
         <Accordion.Content active={activeIndex === 0}>
-          {this.props.comment.map( comment => (<Comment comment={comment} key={comment.id} />))}
-      </Accordion.Content>
+          {this.props.comment.map( comment => 
+            (<Comment comment={comment} key={comment.id} />))}
+        </Accordion.Content>
     </Accordion>
   );
 }}
