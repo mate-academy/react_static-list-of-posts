@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function User({ user }) {
   return (
-    <>
+    <div>
       <div>{`Author: ${user.name}`}</div>
       <div>
         {`
@@ -17,7 +17,7 @@ function User({ user }) {
           {`Email ${user.name}`}
         </a>
       </div>
-    </>
+    </div>
   );
 }
 

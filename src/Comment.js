@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Comment({ comment }) {
+function Comment({ comment: { name, email, body } }) {
   return (
     <li className="nestedUl">
-      <div>{comment.body}</div>
-      <div>{`Author: ${comment.name}`}</div>
-      <a href={`mailto: ${comment.email}`}>
-        {`Email ${comment.name}`}
+      <div>{body}</div>
+      <div>{`Author: ${name}`}</div>
+      <a href={`mailto: ${email}`}>
+        {`Email ${name}`}
       </a>
     </li>
   );

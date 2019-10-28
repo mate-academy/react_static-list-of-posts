@@ -21,9 +21,7 @@ const App = () => {
   const preparedPosts = getPostsWithDependencies(posts, comments, users);
 
   return (
-    <>
-      <PostList posts={preparedPosts} />
-    </>
+    <PostList posts={preparedPosts} />
   );
 };
 
