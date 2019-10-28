@@ -5,7 +5,10 @@ import Comment from '../comment/Comment';
 
 const CommentList = ({ comments }) => (
   <List>
-    {comments.map(comment => (<Comment comment={comment} key={comment.id} />))}
+    {comments.map(comment => (
+      <Comment comment={comment} key={comment.id} />
+    ))
+    }
   </List>
 );
 

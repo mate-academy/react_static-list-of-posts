@@ -6,12 +6,12 @@ import CommentList from '../commentList/CommentList';
 
 const Post = ({ post }) => (
   <div>
-    <User user={post.user} key={post.user.id} />
+    <User user={post.user} />
     <Message>
       <Message.Header>{post.title}</Message.Header>
       <p>{post.body}</p>
     </Message>
-    <CommentList comments={post.comments} key={post.comments.id} />
+    <CommentList comments={post.comments} />
   </div>
 );
 

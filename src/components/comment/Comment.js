@@ -2,10 +2,10 @@ import React from 'react';
 import { Message } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-const Comment = ({ comment }) => (
+const Comment = ({ comment: { name, body } }) => (
   <Message>
-    <Message.Header>{comment.name}</Message.Header>
-    <p>{comment.body}</p>
+    <Message.Header>{name}</Message.Header>
+    <p>{body}</p>
   </Message>
 );
 

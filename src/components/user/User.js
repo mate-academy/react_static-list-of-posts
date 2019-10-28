@@ -4,7 +4,9 @@ import { Header } from 'semantic-ui-react';
 
 const User = ({ user }) => (
   <div>
-    <Header as="h2"><a href={`mailto:${user.email}`}>{user.name}</a></Header>
+    <Header as="h2">
+      <a href={`mailto:${user.email}`}>{user.name}</a>
+    </Header>
   </div>
 );
 
