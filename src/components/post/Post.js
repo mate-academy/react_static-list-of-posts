@@ -17,6 +17,13 @@ class Post extends React.Component {
 
   render() {
     const {id, title, body, comments, user: {name}} = this.props.post;
+    const showComments = () => {
+      if (this.state.commentsVisibble === "comments-main-div disable") {
+        this.setState({commentsVisibble: "comments-main-div active"})
+      } else {
+        this.setState({commentsVisibble: "comments-main-div disable"})
+      }
+    }
 
     return (
       <div className="post">
@@ -24,14 +31,7 @@ class Post extends React.Component {
       <div className="photo"><img src={this.state.photoUrl} className="main-image" alt='post' /></div>
       <div className="title"><strong>{title}</strong></div>
       <div className="bodyText">{body}</div>
-      <div className="commentsVisible"
-        onClick={() => {
-          if (this.state.commentsVisibble === "comments-main-div disable") {
-            this.setState({commentsVisibble: "comments-main-div active"})
-          } else {
-            this.setState({commentsVisibble: "comments-main-div disable"})
-          }
-        }}>
+      <div className="commentsVisible"onClick={showComments}>
         <strong>Watch comments ({comments.length})</strong></div>
       <div className={this.state.commentsVisibble} key={id}>
       {
