@@ -19,7 +19,7 @@ function Post({ post }) {
             <p>{post.body}</p>
           </div>
         </div>
-        <CommentList comment={post.comment} key={post.comment.id} />
+        <CommentList comment={post.comment} />
       </div>
     </div>
   );
