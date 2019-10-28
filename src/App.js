@@ -5,6 +5,22 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import PostList from './components/PostList/PostList';
+
+function getPostsWithUsersAndComments(postList, usersList, commentList) {
+  postList.forEach((post) => {
+    // eslint-disable-next-line no-param-reassign
+    post.user = usersList.find(user => user.id === post.userId);
+    // eslint-disable-next-line no-param-reassign
+    post.comments = commentList.filter(comment => comment.postId === post.id);
+  });
+
+  return postList;
+}
+
+const PostsWithUsersAndComments = getPostsWithUsersAndComments(
+  posts, users, comments
+);
 
 const App = () => (
   <div className="App">
@@ -24,6 +40,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+    <PostList posts={PostsWithUsersAndComments} />
   </div>
 );
 
