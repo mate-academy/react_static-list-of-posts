@@ -1,0 +1,11 @@
+.comment__header {
+  margin-bottom: 0;
+}
+
+.mail__link {
+  color: black;
+}
+
+.comment__body {
+  margin-bottom: 20px !important;
+}
