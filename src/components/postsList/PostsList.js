@@ -4,19 +4,22 @@ import posts from '../../api/posts';
 import comments from '../../api/comments';
 import users from '../../api/users';
 
-const modifiedPosts = []; // Posts with User and CommentList
-
-posts.forEach((post) => {
-  const modifiedPost = { ...post };
-
-  modifiedPost.user = { ...users.find(user => user.id === modifiedPost.userId) };
-  modifiedPost.commentList = comments.filter(comment => comment.postId === modifiedPost.id);
-  modifiedPosts.push(modifiedPost);
-});
+const modifiedPosts = posts.map((post) => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  commentList: comments.filter(comment => comment.postId === post.id),
+}));
 
 const PostsList = () => (
   <section>
-    {modifiedPosts.map(post => <Post postText={post.body} postTitle={post.title} postComments={post.commentList} userName={post.user.name} />)}
+    {modifiedPosts.map(post => (
+      <Post
+        postText={post.body}
+        postTitle={post.title}
+        postComments={post.commentList}
+        userName={post.user.name}
+      />
+    ))}
   </section>
 );
 

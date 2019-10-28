@@ -20,7 +20,12 @@ const Post = ({ postTitle, postText, userName, postComments }) => (
           <Header as="h3" dividing>
             Comments
           </Header>
-          {postComments.map(comment => <PostComment commentText={comment.body} userName={comment.email} />)}
+          {postComments.map(comment => (
+            <PostComment
+              commentText={comment.body}
+              userName={comment.email}
+            />
+          ))}
         </Comment.Group>
       </Card.Content>
     </Card>
