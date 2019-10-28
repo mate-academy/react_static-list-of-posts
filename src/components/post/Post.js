@@ -8,35 +8,32 @@ class Post extends React.Component {
 
     this.state = {
       commentsVisibble: "comments-main-div disable",
+      photoUrl: `https://source.unsplash.com/collection/190727/"
+      ${Math.round(Math.random() * (500 - 450) + 450)}x
+      ${Math.round(Math.random() * (450 - 400) + 400)}
+      /?food,game,car,nature,animal`
     };
   }
 
   render() {
-    const {title, body, comments, user: {name}} = this.props.post;
-
-    const photoUrl = `https://source.unsplash.com/collection/190727/"
-      ${Math.round(Math.random() * (500 - 450) + 450)}x
-      ${Math.round(Math.random() * (450 - 400) + 400)}
-      /?food,game,car,nature,animal`;
+    const {id, title, body, comments, user: {name}} = this.props.post;
 
     return (
       <div className="post">
       <div className="authorName"><strong>{name}</strong></div>
-      <div className="photo"><img src={photoUrl} className="main-image" alt='post' /></div>
+      <div className="photo"><img src={this.state.photoUrl} className="main-image" alt='post' /></div>
       <div className="title"><strong>{title}</strong></div>
       <div className="bodyText">{body}</div>
       <div className="commentsVisible"
         onClick={() => {
           if (this.state.commentsVisibble === "comments-main-div disable") {
             this.setState({commentsVisibble: "comments-main-div active"})
-            console.log(this.state.commentsVisibble);
           } else {
             this.setState({commentsVisibble: "comments-main-div disable"})
-            console.log(this.state.commentsVisibble);
           }
         }}>
         <strong>Watch comments ({comments.length})</strong></div>
-      <div className={this.state.commentsVisibble}>
+      <div className={this.state.commentsVisibble} key={id}>
       {
         comments.map(comment => (
           <Comment
