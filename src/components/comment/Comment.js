@@ -1,12 +1,12 @@
 import React from 'react';
 import './comment.css';
 
-function Comment ({ comment }) {
+function Comment ({ comment: { name, email, body } }) {
   return (
     <div>
-      <h4 className="comment__header">{comment.name}</h4>
-      <a href="#" className="mail__link">{comment.email}</a>
-      <p className="comment__body">{comment.body}</p>
+      <h4 className="comment__header">{name}</h4>
+      <a href="#" className="mail__link">{email}</a>
+      <p className="comment__body">{body}</p>
     </div>
   );
 }
