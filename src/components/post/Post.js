@@ -4,11 +4,13 @@ import CommentList from '../commentList/CommentList';
 import './post.css';
 
 function Post({ post }) {
+  const wide = Math.round(Math.random() * (410 - 390) + 390);
+  const height = Math.round(Math.random() * (410 - 390) + 390);
   return (
     <div className="ui grid centered">
       <div className="ui card five wide column">
         <div className="image">
-          <img src={`https://source.unsplash.com/${Math.round(Math.random() * (410 - 390) + 390)}x${Math.round(Math.random() * (410 - 390) + 390)}/?man,girl,blog,posts,notes,fashion`} />
+          <img src={`https://source.unsplash.com/${wide}x${height}/?man,girl,blog,posts,notes,fashion`} />
         </div>
         <div className="content">
           <div className="header">{post.title}</div>
