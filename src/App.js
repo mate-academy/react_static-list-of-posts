@@ -17,9 +17,9 @@ function gettingFullInfo(postsList, commentsList, usersList) {
 
 
 const App = () => (
-  <div className="container">
+  <>
     <PostList postInfo = {gettingFullInfo(posts, comments, users)}/>
-  </div>
+  </>
 );
 
 export default App;
