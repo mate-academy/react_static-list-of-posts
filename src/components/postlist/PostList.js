@@ -1,13 +1,20 @@
 import React from 'react';
 import Post from '../post/Post';
 
-function PostList(props) {
+
+function PostList({posts}) {
   return (
     <div className="postsEnvironment">
-      {props.posts.map(post => <Post name={post.user.name} title={post.title} body={post.body} comments={post.comments} />)}
+      {
+        posts.map(post => (
+          <Post
+            post={post}
+            key={post.id}
+          />
+        ))
+      }
     </div>
   )
 }
-
 
 export default PostList;

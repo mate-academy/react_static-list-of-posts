@@ -9,20 +9,13 @@ import users from './api/users';
 import PostList from './components/postlist/PostList';
 
 function getPostsWithUsers(posts, comments, users) {
-  for (let i = 0; i < posts.length; i++) {
-    posts[i].user = users.find(user => posts[i].userId === user.id);
-    posts[i].comments = [];
-    comments.forEach(comment => {
-      if (comment.postId === posts[i].id) {
-        const comentData = {};
-        comentData.name = comment.name;
-        comentData.body = comment.body;
-        posts[i].comments.push(comentData);
-      }
-    })
-  }
 
-  return posts;
+  return [...posts].map(post => {
+    post.user = users.find(user => post.userId === user.id);
+    post.comments = comments.filter(currentComments => currentComments.postId === post.id);
+
+    return post;
+  });
 }
 
 const App = () => {
