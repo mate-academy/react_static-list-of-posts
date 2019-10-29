@@ -83,10 +83,10 @@ ul, li {
   list-style: none;
 }
 
-.true {
+.active {
   display: block;
 }
 
-.false {
+.disable {
   display: none;
 }

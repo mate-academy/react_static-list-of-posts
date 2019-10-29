@@ -7,7 +7,7 @@ class Post extends React.Component {
     super(props);
 
     this.state = {
-      commentsVisibble: "comments-main-div false",
+      commentsVisibble: true,
     };
 
     this.photoUrl = `https://source.unsplash.com/collection/190727/"
@@ -16,17 +16,16 @@ class Post extends React.Component {
       /?food,game,car,nature,animal`;
   }
 
+  showComments = () => this.setState((prevState) => ({commentsVisibble: !prevState.commentsVisibble}));
+
 
 
   render() {
     const {id, title, body, comments, user: {name}} = this.props.post;
-    const showComments = () => {
-      if (this.state.commentsVisibble === "comments-main-div false") {
-        this.setState({commentsVisibble: "comments-main-div true"})
-      } else {
-        this.setState({commentsVisibble: "comments-main-div false"})
-      }
-    }
+    const showCommentsStyle = this.state.commentsVisibble === true
+      ? "comments-main-div active"
+      : "comments-main-div disable";
+    console.log(this.state.commentsVisibble);
 
     return (
       <div className="post">
@@ -34,9 +33,9 @@ class Post extends React.Component {
       <div className="photo"><img src={this.photoUrl} className="main-image" alt='post' /></div>
       <div className="title"><strong>{title}</strong></div>
       <div className="bodyText">{body}</div>
-      <div className="commentsVisible"onClick={showComments}>
+      <div className={"commentsVisible"} onClick={this.showComments}>
         <strong>Watch comments ({comments.length})</strong></div>
-      <div className={this.state.commentsVisibble} key={id}>
+      <div className={showCommentsStyle} key={id}>
       {
         comments.map(comment => (
           <Comment
