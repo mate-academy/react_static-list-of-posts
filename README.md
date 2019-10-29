@@ -2,7 +2,7 @@
 
 ## Demo link
 
-- [DEMO LINK](https://volodymyr-roiuk.github.io/react_static-list-of-posts/)
+- [DEMO LINK](https://volodymyr-roiuk.github.io/react_carousel/)
 
 
 ## Task 

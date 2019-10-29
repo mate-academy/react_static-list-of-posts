@@ -3,7 +3,7 @@ import { Card, Comment, Header, Image, Icon } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import PostComment from '../comment/Comment';
 
-const Post = ({ postTitle, postText, userName, postComments }) => (
+const Post = ({ post: postTitle, postText, user: userName, commentList }) => (
   <div className="post">
     <Card>
       <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" wrapped ui={false} />
@@ -20,7 +20,7 @@ const Post = ({ postTitle, postText, userName, postComments }) => (
           <Header as="h3" dividing>
             Comments
           </Header>
-          {postComments.map(comment => (
+          {commentList.map(comment => (
             <PostComment
               commentText={comment.body}
               userName={comment.email}

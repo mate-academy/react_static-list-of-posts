@@ -14,10 +14,7 @@ const PostsList = () => (
   <section>
     {modifiedPosts.map(post => (
       <Post
-        postText={post.body}
-        postTitle={post.title}
-        postComments={post.commentList}
-        userName={post.user.name}
+        post={post}
       />
     ))}
   </section>
