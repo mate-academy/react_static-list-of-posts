@@ -3,23 +3,19 @@ import './User.css';
 
 function User(props) {
   // eslint-disable-next-line react/prop-types
-  const { user } = props;
+  const { name, email, address } = props.user;
+  // eslint-disable-next-line react/prop-types
+  const { showAddress } = props;
 
   return (
     <div className="user-info">
-      <p className="user-name">{user.name}</p>
-      <p className="user-email">{user.email}</p>
-      {/* eslint-disable-next-line react/prop-types */}
-      {props.showAddress
-        ? (
-          <p className="user-address">
-            {`
-            ${user.address.city}, ${user.address.street}, ${user.address.suite}
-            `}
-          </p>
-        )
-        : ''
-      }
+      <p className="user-name">{name}</p>
+      <p className="user-email">{email}</p>
+      {showAddress && (
+        <p className="user-address">
+          {`${address.city}, ${address.street}, ${address.suite}`}
+        </p>
+      )}
     </div>
   );
 }

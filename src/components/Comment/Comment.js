@@ -1,9 +1,7 @@
 import React from 'react';
 
-function Comment(props) {
-  // eslint-disable-next-line react/prop-types
-  const { comment } = props;
-
+// eslint-disable-next-line react/prop-types
+function Comment({ comment }) {
   return (
     <li className="comment">
       <p className="comment-body">{comment.body}</p>

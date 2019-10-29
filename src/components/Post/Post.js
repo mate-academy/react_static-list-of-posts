@@ -3,20 +3,22 @@ import './Post.css';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 
-function Post(props) {
-  // eslint-disable-next-line react/prop-types
-  const { post } = props;
+// eslint-disable-next-line react/prop-types
+function Post({ post }) {
+  const {
+    title, body, user, comments,
+  } = post;
 
   return (
     <li className="post">
       <header className="post-header">
-        {post.title}
+        {title}
       </header>
       <p className="post-body">
-        {post.body}
+        {body}
       </p>
-      <User user={post.user} showAddress />
-      <CommentList commentList={post.comments} />
+      <User user={user} showAddress />
+      <CommentList commentList={comments} />
     </li>
   );
 }

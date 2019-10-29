@@ -1,10 +1,8 @@
 import React from 'react';
 import Comment from '../Comment/Comment';
 
-function CommentList(props) {
-  // eslint-disable-next-line react/prop-types
-  const { commentList } = props;
-
+// eslint-disable-next-line react/prop-types
+function CommentList({ commentList }) {
   return (
     <ul className="comment-list">
        Comments:
