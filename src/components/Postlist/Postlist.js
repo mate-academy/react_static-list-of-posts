@@ -2,11 +2,12 @@ import React from 'react';
 import Post from '../Post/Post';
 import './postlist.css';
 
-function Postlist( {posts, comments, users} ) {
+function Postlist(props) {
+  const {posts, comments, users} = props;
   return (
     <div className="post_list">
       {posts.map((post) => {
-        const comment = comments.find(com => com.id === post.userId);
+        const comment = comments.filter(com => com.id === post.userId);
         const user = users.find(u => u.id === post.userId);
         return (
           <Post post={post} user={user} comment={comment} />
