@@ -7,28 +7,31 @@ class Post extends React.Component {
     super(props);
 
     this.state = {
-      commentsVisibble: "comments-main-div disable",
-      photoUrl: `https://source.unsplash.com/collection/190727/"
+      commentsVisibble: "comments-main-div false",
+    };
+
+    this.photoUrl = `https://source.unsplash.com/collection/190727/"
       ${Math.round(Math.random() * (500 - 450) + 450)}x
       ${Math.round(Math.random() * (450 - 400) + 400)}
-      /?food,game,car,nature,animal`
-    };
+      /?food,game,car,nature,animal`;
   }
+
+
 
   render() {
     const {id, title, body, comments, user: {name}} = this.props.post;
     const showComments = () => {
-      if (this.state.commentsVisibble === "comments-main-div disable") {
-        this.setState({commentsVisibble: "comments-main-div active"})
+      if (this.state.commentsVisibble === "comments-main-div false") {
+        this.setState({commentsVisibble: "comments-main-div true"})
       } else {
-        this.setState({commentsVisibble: "comments-main-div disable"})
+        this.setState({commentsVisibble: "comments-main-div false"})
       }
     }
 
     return (
       <div className="post">
       <div className="authorName"><strong>{name}</strong></div>
-      <div className="photo"><img src={this.state.photoUrl} className="main-image" alt='post' /></div>
+      <div className="photo"><img src={this.photoUrl} className="main-image" alt='post' /></div>
       <div className="title"><strong>{title}</strong></div>
       <div className="bodyText">{body}</div>
       <div className="commentsVisible"onClick={showComments}>
