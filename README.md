@@ -53,3 +53,4 @@ Create and use five components: `PostList`, `Post`, `User`, `CommentList`, and `
 - `build/` - directory for built pages
 
 You should be writing code in `src/` directory.
+[DEMO LINK](https://dmitriymush.github.io/react_static-list-of-posts/)
