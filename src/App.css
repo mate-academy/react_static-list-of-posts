@@ -1,3 +1,25 @@
 .App {
   text-align: center;
 }
+
+#wrapper {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: start;
+}
+
+.ui.card:first-child {
+  margin: 1em 0;
+}
+
+.ui.feed:first-child {
+  margin: 1em 0;
+}
+
+.author {
+  font-weight: bold;
+  color: black;
+}
