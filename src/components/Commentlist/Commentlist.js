@@ -1,8 +1,7 @@
 import React from 'react';
 import Comment from '../Comment/Comment';
 
-function Commentlist(props) {
-  const {comment} = props;
+function Commentlist( {comment} ) {
   return (
     <div className="comments">
       <Comment comment={comment} />

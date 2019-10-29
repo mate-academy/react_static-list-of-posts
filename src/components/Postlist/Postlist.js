@@ -2,8 +2,7 @@ import React from 'react';
 import Post from '../Post/Post';
 import './postlist.css';
 
-function Postlist(props) {
-  const {posts, comments, users} = props;
+function Postlist( {posts, comments, users} ) {
   return (
     <div className="post_list">
       {posts.map((post) => {

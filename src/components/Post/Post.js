@@ -3,8 +3,7 @@ import Commentlist from '../Commentlist/Commentlist';
 import User from '../User/User';
 import './post.css';
 
-function Post(props) {
-  const {post, user, comment} = props;
+function Post( {post, user, comment} ) {
   return (
     <div className="post">
       <h3>{post.title}</h3>

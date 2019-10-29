@@ -1,7 +1,6 @@
 import React from 'react';
 
-function Comment(props) {
-  const {comment} = props;
+function Comment( {comment} ) {
   return (
     <p>{comment.body}</p>
   );
