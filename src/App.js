@@ -20,15 +20,3 @@ const App = () => (
 );
 
 export default App;
-
-// return postList.map((post) => {
-//   const currentUser = userList.find(user => user.id === post.userId);
-//   const currentComment = commentList.filter(comment => (
-//     comment.postId === post.Id
-//   ))
-
-//   post.user = currentUser;
-//   post.comment = currentComment;
-
-//   return post;
-// });
