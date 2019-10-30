@@ -1,3 +1,17 @@
 .App {
   text-align: center;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.ui.card {
+  width: 50%;
+  padding: 20px;
+}
+
+.postCard {
+  margin-bottom: 50px;
+}
