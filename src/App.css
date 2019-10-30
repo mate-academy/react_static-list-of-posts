@@ -10,5 +10,8 @@
 .ui.card {
   width: 50%;
   padding: 20px;
-  background-color: rgb(236, 234, 234);
+}
+
+.postCard {
+  margin-bottom: 50px;
 }
