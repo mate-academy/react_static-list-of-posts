@@ -8,12 +8,11 @@ import users from './api/users';
 
 import PostList from './components/postlist/PostList';
 
-function getPostsWithUsers(posts, comments, users) {
+function getPostsWithUsers() {
 
   return [...posts].map(post => {
     post.user = users.find(user => post.userId === user.id);
     post.comments = comments.filter(currentComments => currentComments.postId === post.id);
-
     return post;
   });
 }

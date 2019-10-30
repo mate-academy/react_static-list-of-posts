@@ -7,7 +7,7 @@ class Post extends React.Component {
     super(props);
 
     this.state = {
-      commentsVisibble: true,
+      hidden: true,
     };
 
     this.photoUrl = `https://source.unsplash.com/collection/190727/"
@@ -16,16 +16,13 @@ class Post extends React.Component {
       /?food,game,car,nature,animal`;
   }
 
-  showComments = () => this.setState((prevState) => ({commentsVisibble: !prevState.commentsVisibble}));
+  showComments = () =>
+    this.setState((prevState) => ({hidden: !prevState.hidden}));
 
 
 
   render() {
     const {id, title, body, comments, user: {name}} = this.props.post;
-    const showCommentsStyle = this.state.commentsVisibble === true
-      ? "comments-main-div active"
-      : "comments-main-div disable";
-    console.log(this.state.commentsVisibble);
 
     return (
       <div className="post">
@@ -35,7 +32,7 @@ class Post extends React.Component {
       <div className="bodyText">{body}</div>
       <div className={"commentsVisible"} onClick={this.showComments}>
         <strong>Watch comments ({comments.length})</strong></div>
-      <div className={showCommentsStyle} key={id}>
+      <div hidden={this.state.hidden} key={id}>
       {
         comments.map(comment => (
           <Comment
