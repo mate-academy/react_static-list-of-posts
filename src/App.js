@@ -17,9 +17,7 @@ function getPostsWithComments(postList, userList, commentsList) {
 
 function App() {
   return (
-    <>
-      <PostList posts={getPostsWithComments(posts, users, comments)} />
-    </>
+    <PostList posts={getPostsWithComments(posts, users, comments)} />
   );
 }
 
