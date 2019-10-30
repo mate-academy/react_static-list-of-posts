@@ -5,7 +5,7 @@ import Post from '../post/Post';
 function PostList(props) {
   return (
     <>
-      {props.posts.map(post => <Post post={post} />)}
+      {props.posts.map(post => <Post post={post} key={post.id} />)}
     </>
   );
 }
