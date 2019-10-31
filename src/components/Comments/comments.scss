@@ -1,0 +1,27 @@
+.post {
+ &__comments-button {
+  width: 220px;
+  height: 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 1px solid black;
+ }
+
+ &__comment {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 0;
+ }
+
+ &__comment_author {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 12px;
+ }
+}
