@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 function Comment({comment:{name, body}}) {
   return (
-    <p><strong>{name}</strong>: {body}</p>
+    <p>
+      <strong>{name}</strong>: {body}
+    </p>
   )
 }
 

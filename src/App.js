@@ -19,7 +19,7 @@ function getPostsWithUsers() {
 
 const App = () => {
  return (
-  <PostList posts={getPostsWithUsers(posts, comments, users)} />
+  <PostList posts={getPostsWithUsers()} />
  )
 };
 
