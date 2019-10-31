@@ -31,14 +31,11 @@ function getPostsWithUsersAndComments() {
     }
   });
 
-  return posts.map((post) => {
-    const postsWithUsersAndComments = Object.create(post);
-
-    postsWithUsersAndComments.user = usersMap.get(post.userId);
-    postsWithUsersAndComments.comments = commentsMap.get(post.id);
-
-    return postsWithUsersAndComments;
-  });
+  return posts.map(post => ({
+    ...post,
+    user: usersMap.get(post.userId),
+    comments: commentsMap.get(post.id),
+  }));
 }
 
 const App = () => (
