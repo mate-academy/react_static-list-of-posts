@@ -3,10 +3,10 @@ import './App.css';
 
 import GetListComments from './GetListComments';
 
-export default function GetUL (posts) {
-  return posts.props.map( post => {
+export default function GetUL (props) {
+  return props.posts.map( post => {
     return (
-      <ul key={post.id}>
+      <ul>
         <li>
           <p>{post.title}</p>
           <p>{post.body}</p>

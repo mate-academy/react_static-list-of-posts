@@ -15,7 +15,7 @@ const App = () => (
     <p><span>comments: </span>{comments.length}</p>
     <p><span>Users: </span>{users.length}</p>
     <ul>
-    <GetUL props={getTogether(posts, users, comments)} />
+    <GetUL posts={getTogether(posts, users, comments)} />
     </ul>
   </div>
 );
