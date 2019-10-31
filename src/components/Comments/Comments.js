@@ -21,7 +21,7 @@ const Comments = ({ commentsList }) => (
 );
 
 Comments.propTypes = {
-  commentsList: PropTypes.func.isRequired,
+  commentsList: PropTypes.arrayOf(PropTypes.string.isRequired,).isRequired,
 };
 
 export default Comments;
