@@ -4,19 +4,15 @@ export function generatorAvatar() {
 
   switch (num) {
     case 1:
-
       num = 'kristy.png';
       break;
     case 2:
-
       num = 'matthew.png';
       break;
     case 3:
-
       num = 'molly.png';
       break;
     default:
-
       num = 'elyse.png';
       break;
   }

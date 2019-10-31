@@ -3,30 +3,30 @@ import PropTypes from 'prop-types';
 import Comment from '../comment/Comment';
 import { generatorAvatar } from '../generatorAvatar';
 
-function CommentList(props) {
+function CommentList({ comment }) {
   return (
-    <>
-      <div className="ui comments">
-        <div className="comment">
-          <div className="avatar">
-            <img src={generatorAvatar()} alt="avatar" />
-          </div>
-          <div className="content">
-            <div>
-              <div className="text">
-                <Comment body={props.comment.body} />
-              </div>
-              <Comment email={props.comment.email} />
-            </div>
+    <section className="ui comments">
+      <article className="comment">
+        <div className="avatar">
+          <img src={generatorAvatar()} alt="avatar" />
+        </div>
+        <div className="content">
+          <div>
+            <p className="text">
+              <Comment body={comment.body} email={comment.email} />
+            </p>
           </div>
         </div>
-      </div>
-    </>
+      </article>
+    </section>
   );
 }
 
 CommentList.propTypes = {
-  comment: PropTypes.isRequired,
+  comment: PropTypes.arrayOf(PropTypes.shape({
+    body: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default CommentList;

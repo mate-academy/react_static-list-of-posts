@@ -5,6 +5,7 @@ function Comment(props) {
   return (
     <>
       {props.body}
+      <br />
       {props.email}
     </>
   );
