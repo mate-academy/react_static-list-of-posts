@@ -7,24 +7,25 @@ import comments from '../../api/comments';
 import Post from '../Post/Post';
 import Comments from '../Comments/Comments';
 
-function getPostsWithUsers(posts, users, comments) {
+function getPostsWithUsers() {
   return (
-    posts.map(post =>
-    <Post post={post} user={users.find(user => post.userId === user.id)}>
-    <Comments
-      commentsArr={comments.filter((comment) => (
-        comment.postId === post.id
-      ))}
-    ></Comments>
-    </Post>
-    )
+    posts.map(post => (
+      <Post
+        post={post}
+        user={users.find(user => (post.userId === user.id))}
+      >
+        <Comments commentsList={comments
+          .filter(comment => comment.postId === post.id)}
+        />
+      </Post>
+    ))
   );
-};
+}
 
 const PostsList = () => (
   <section className="posts">
     {getPostsWithUsers(posts, users, comments)}
   </section>
-)
+);
 
 export default PostsList;

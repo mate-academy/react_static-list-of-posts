@@ -2,10 +2,10 @@ import React from 'react';
 
 import './App.css';
 
-import PostsList from './components/PostsList/PostsList'
+import PostsList from './components/PostsList/PostsList';
 
 const App = () => (
-  <PostsList/>
+  <PostsList />
 );
 
 export default App;
