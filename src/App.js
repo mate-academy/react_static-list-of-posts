@@ -10,10 +10,12 @@ import PostList from './components/postlist/PostList';
 
 function getPostsWithUsers() {
 
-  return [...posts].map(post => {
-    post.user = users.find(user => post.userId === user.id);
-    post.comments = comments.filter(currentComments => currentComments.postId === post.id);
-    return post;
+  return posts.map((post) => {
+    return {
+      ...post,
+      user: users.find(user => post.userId === user.id),
+      comments: comments.filter(currentComments => currentComments.postId === post.id)
+    }
   });
 }
 
