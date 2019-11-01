@@ -6,25 +6,24 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
+import PostList from './components/postlist/PostList';
 
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
+function getPostsWithUsers() {
 
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
+  return posts.map((post) => {
+    return {
+      ...post,
+      user: users.find(user => post.userId === user.id),
+      comments: comments.filter(currentComments => currentComments.postId === post.id)
+    }
+  });
+}
 
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
-  </div>
-);
+const App = () => {
+ return (
+  <PostList posts={getPostsWithUsers()} />
+ )
+};
+
 
 export default App;
