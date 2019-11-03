@@ -8,15 +8,21 @@ import Post from '../Post/Post';
 import Comments from '../Comments/Comments';
 
 function getPostsWithUsers() {
+  return posts.map(post => ({
+    post,
+    user: users.find(user => (post.userId === user.id)),
+    commentList: comments.filter(comment => comment.postId === post.id),
+  }));
+}
+
+function createComponents() {
   return (
-    posts.map(post => (
+    getPostsWithUsers().map(post => (
       <Post
-        post={post}
-        user={users.find(user => (post.userId === user.id))}
+        post={post.post}
+        user={post.user}
       >
-        <Comments commentsList={comments
-          .filter(comment => comment.postId === post.id)}
-        />
+        <Comments commentsList={post.commentList} />
       </Post>
     ))
   );
@@ -24,7 +30,7 @@ function getPostsWithUsers() {
 
 const PostsList = () => (
   <section className="posts">
-    {getPostsWithUsers(posts, users, comments)}
+    {createComponents(posts, users, comments)}
   </section>
 );
 
