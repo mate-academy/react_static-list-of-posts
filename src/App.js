@@ -14,9 +14,7 @@ const App = () => (
     <p><span>posts: </span>{posts.length}</p>
     <p><span>comments: </span>{comments.length}</p>
     <p><span>Users: </span>{users.length}</p>
-    <ul>
     <GetUL posts={getTogether(posts, users, comments)} />
-    </ul>
   </div>
 );
 
