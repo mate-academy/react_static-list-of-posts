@@ -11,19 +11,25 @@ export default function GetUL (props) {
     const {lat, lng} = post.user.address.geo;
     return (
       <ul>
-        <li>
-          <p>{title}</p>
-          <p>{body}</p>
-          <p>{name}</p>
-          <p>{email}</p>
-          <p>{`${street} ${suite} ${city}
-          ${zipcode}
-          ${lat}
-          ${lng}`}</p>
-          <ul>
+        <li className='info'>
+          <div className='titel'>
+            <p>{title}</p>
+            <p>{body}</p>
+          </div>
+          <div className='user'>
+            <p>{name}</p>
+            <p>{email}</p>
+          </div>
+          <div className='data'>
+            <p>
+              {`${street} ${suite} ${city}
+              ${zipcode} ${lat} ${lng}`}
+            </p>
+          </div>
+        </li>
+        <ul className='comments'>
             <GetListComments props={post.comments} />
           </ul>
-        </li>
       </ul>
     )
   });
