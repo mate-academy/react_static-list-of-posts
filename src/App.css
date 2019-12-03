@@ -1,3 +1,42 @@
 .App {
-  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.post {
+  border-top: 5px solid lightcoral;
+  background-color: aliceblue;
+  padding: 20px 40px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin-bottom: 30px;
+  color: midnightblue;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.description {
+  margin: 20px 0 0;
+}
+
+.user-info {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.comment {
+  color: ghostwhite;
+  background-color: lightblue;
+  padding: 25px;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.comment:hover {
+  background-color: lightyellow;
+  color: darkslateblue;
 }
