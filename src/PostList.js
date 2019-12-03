@@ -4,8 +4,8 @@ import Post from './Post';
 
 const PostList = props => (
   <dl>
-    {props.posts.map(post => (
-      <Post post={post} key={post.id} />
+    {props.posts.map(currentPost => (
+      <Post post={currentPost} key={currentPost.id} />
     ))}
   </dl>
 );
