@@ -1,6 +1,8 @@
 import React from 'react';
 import PostList from './PostList';
 
+import './App.css';
+
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
