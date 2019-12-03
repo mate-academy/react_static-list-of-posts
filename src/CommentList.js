@@ -3,7 +3,7 @@ import React from 'react';
 import Comment from './Comment';
 
 const CommentList = props => (
-  <dl style={{ fontStyle: 'italic' }}>
+  <dl className="comment">
     {props.commentList.map(comment => (
       <Comment comment={comment} key={comment.id} />
     ))}

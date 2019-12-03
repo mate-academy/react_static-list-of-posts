@@ -5,15 +5,15 @@ import CommentList from './CommentList';
 
 const Post = ({ post: { id, user, title, body, commentList } }) => (
   <>
-    <dt style={{ fontWeight: 'bold' }}>
+    <dt className="title">
       {`Post ${id}: ${title}`}
     </dt>
-    <dd style={{ marginBottom: '20px' }}>
-      <span style={{ color: 'blue' }}>
+    <dd className="description">
+      <span className="post-body">
         {body}
       </span>
       <br />
-      <span style={{ color: 'green' }}>
+      <span className="user-info">
         <User user={user} />
       </span>
       <CommentList commentList={commentList} />

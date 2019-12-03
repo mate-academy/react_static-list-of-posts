@@ -6,7 +6,7 @@ const Comment = ({ comment: { name, body, email, id } }) => (
     <dt>
       {`Comment ${id}: ${body}`}
     </dt>
-    <dd style={{ marginBottom: '20px', color: 'green' }}>
+    <dd className="description user-info">
       {`Name: ${name}`}
       <br />
       {`Email: ${email}`}
