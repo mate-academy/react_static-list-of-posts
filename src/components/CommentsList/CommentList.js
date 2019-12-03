@@ -2,15 +2,16 @@ import React from 'react';
 import comments from '../../api/comments';
 import Comment from "../Comment";
 
+const commentsFilter = post => (
+  comments.filter(comment => comment.postId === post.id)
+);
 
 const CommentList = ({post}) => {
-  const postComments = comments.filter(comment => comment.postId === post.id)
-
   return (
     <div>
       <h3>Comments:</h3>
-        {postComments.map(
-          comment => <Comment comment={comment} key={comment.id} />)
+        {commentsFilter(post).map(
+          singleComment => <Comment comment={singleComment} key={singleComment.id} />)
         }
     </div>
 

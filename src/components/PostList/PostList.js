@@ -3,7 +3,7 @@ import Post from '../Post';
 
 const PostList = ({posts}) => (
   <div>
-    {posts.map(post => <Post post={post} key={post.id} />)}
+    {posts.map(onePost => <Post post={onePost} key={onePost.id} />)}
   </div>
 );
 
