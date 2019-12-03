@@ -3,9 +3,9 @@ import React from 'react';
 import Comment from './Comment';
 
 const CommentList = props => (
-  <dl className="comment">
-    {props.commentList.map(comment => (
-      <Comment comment={comment} key={comment.id} />
+  <dl>
+    {props.commentList.map(currentComment => (
+      <Comment comment={currentComment} key={currentComment.id} />
     ))}
   </dl>
 );

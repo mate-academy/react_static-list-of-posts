@@ -4,21 +4,21 @@ import User from './User';
 import CommentList from './CommentList';
 
 const Post = ({ post: { id, user, title, body, commentList } }) => (
-  <>
+  <div className="post">
     <dt className="title">
       {`Post ${id}: ${title}`}
     </dt>
     <dd className="description">
       <span className="post-body">
-        {body}
+        { `"${body}"`}
       </span>
       <br />
       <span className="user-info">
-        <User user={user} />
+        <User userObj={user} />
       </span>
       <CommentList commentList={commentList} />
     </dd>
-  </>
+  </div>
 );
 
 Post.propTypes
