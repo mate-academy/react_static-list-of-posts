@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './CommentList';
 
-const Post = ({ post: { title, body, user, comments } }) => (
+const Post = ({ post: { title, body, userData, comments } }) => (
   <article className="post">
     <h2>{title}</h2>
 
@@ -12,7 +12,7 @@ const Post = ({ post: { title, body, user, comments } }) => (
         {body}
       </p>
 
-      <User user={user} />
+      <User user={userData} />
     </section>
 
     <CommentList comments={comments} />

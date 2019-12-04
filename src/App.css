@@ -32,6 +32,7 @@
 
 .comment__body {
   width: 70%;
+  margin-left: 10px;
   padding: 10px;
   border: 3px solid grey;
   background-color: lightgrey;
