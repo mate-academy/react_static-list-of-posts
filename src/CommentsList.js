@@ -6,7 +6,7 @@ const CommentsList = ({ comments }) => (
   <div className="post__comments comments">
     <p>Comments:</p>
     <ul className="comments__list">
-      {comments.map(comment => <Comment comment={comment} />)}
+      {comments.map(singleComment => <Comment comment={singleComment} />)}
     </ul>
   </div>
 );
