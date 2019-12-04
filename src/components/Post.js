@@ -12,9 +12,11 @@ const Post = ({ post: { id, user, title, body, commentList } }) => (
     <div className="ui raised segment">
       <div className="ui text container">
         <b className="first">{`Post ${id}: ${title}`}</b>
+        <div className="ui hidden divider" />
         <p>
           { `"${body}"`}
         </p>
+        <div className="ui hidden divider" />
       </div>
     </div>
     <div className="ui hidden divider" />
