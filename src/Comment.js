@@ -12,7 +12,6 @@ const Comment = ({ comment }) => (
   </div>
 );
 
-Comment.propTypes = { comment: PropTypes.objectOf(PropTypes.any) };
-Comment.defaultProps = { comment: {} };
+Comment.propTypes = { comment: PropTypes.objectOf(PropTypes.any).isRequired };
 
 export default Comment;
