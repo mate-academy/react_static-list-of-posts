@@ -1,3 +1,38 @@
-.App {
+.post {
+  width: 800px;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightblue;
+}
+
+.post__main-part {
+  display: flex;
+}
+
+.post__body {
+  width: 70%;
+  margin-right: 20px;
+  padding: 10px;
+  border: 3px solid grey;
+  background-color: lightgrey;
+}
+
+.comment {
+  margin-top: 20px;
+}
+
+.comment__title {
   text-align: center;
+}
+
+.comment__main-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment__body {
+  width: 70%;
+  padding: 10px;
+  border: 3px solid grey;
+  background-color: lightgrey;
 }
