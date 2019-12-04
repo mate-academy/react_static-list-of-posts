@@ -3,28 +3,28 @@ import PropTypes from 'prop-types';
 import User from './User';
 import Comments from './Comments';
 
-const Post = ({ post }) => (
+const Post = ({ postElems }) => (
   <>
     <h1 className="post__title title">
-      {post.title}
+      {postElems.title}
     </h1>
     <article className="post__body text">
-      {post.body}
+      {postElems.body}
     </article>
     <section className="post__user author">
-      <User user={post.user} />
+      <User user={postElems.user} />
     </section>
-    <Comments comments={post.postComments} />
+    <Comments comments={postElems.postComments} />
   </>
 );
 
 Post.propTypes = {
-  post: PropTypes.objectOf(PropTypes.oneOfType([
+  postElems: PropTypes.objectOf(PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
     PropTypes.object,
     PropTypes.array,
   ])),
 };
-Post.defaultProps = { post: [] };
+Post.defaultProps = { postElems: [] };
 export default Post;

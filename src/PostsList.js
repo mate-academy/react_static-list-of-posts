@@ -9,7 +9,7 @@ const PostsList = ({ posts }) => (
         className="post-list__post"
         key={post.id}
       >
-        <Post post={post} />
+        <Post postElems={post} />
       </section>
     ))}
   </article>
