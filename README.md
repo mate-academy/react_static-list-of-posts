@@ -2,7 +2,7 @@
 
 ## Demo link
 
-Add link here: `[DEMO LINK](https://YulliaChupryna.github.io/react_static-list-of-posts/)`
+Add link here: `[DEMO LINK](https://YuliiaChupryna.github.io/react_static-list-of-posts/)`
 
 
 ## Task 
