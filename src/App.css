@@ -1,3 +1,69 @@
+body,
+h2,
+hr {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+}
+
+.post {
+  padding-top: 30px;
+}
+
+.post__content {
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.post__user {
+  text-align: right;
+}
+
+.post__user p {
+  margin: 0;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.commentList {
+  margin: auto;
+  width: 60%;
+  padding-bottom: 30px;
+}
+
+.comment__name {
+  font-weight: bold;
+  text-align: left;
+  font-style: italic;
+}
+
+.comment__body {
+  text-align: left;
+  font-style: italic;
+}
+
+.comment__email {
+  text-align: right;
+}
+
+.post:nth-child(even) {
+  background-color: rgba(247, 188, 222, 0.5);
+}
+
+.post:nth-child(even) .post__content {
+  background-color: #fdecf5;
+}
+
+.post:nth-child(odd) {
+  background-color: rgba(247, 188, 222, 0.3);
+}
+
+.post:nth-child(odd) .post__content {
+  background-color: #fbdeef;
 }
