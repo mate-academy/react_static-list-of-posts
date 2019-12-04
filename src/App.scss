@@ -16,6 +16,9 @@
   &__title {
     font-size: 24px;
     font-weight: bold;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    text-align: center;
   }
 
   &__body {
@@ -32,6 +35,11 @@
 }
 
 .comments {
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
   &__name {
     font-weight: bold;
   }
@@ -40,5 +48,14 @@
     font-style: italic;
     font-size: 14px;
     margin: 5px 0;
+  }
+
+  &__item {
+    padding: 5px;
+    transition: 0.5s;
+  }
+
+  &__item:hover {
+    background-color: lightskyblue;
   }
 }

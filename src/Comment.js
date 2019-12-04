@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Comment = ({ comment }) => (
-  <>
+  <div className="comments__item">
     <li className="comments__name">{comment.name}</li>
     <p className="comments__email">
       By
@@ -10,7 +10,7 @@ const Comment = ({ comment }) => (
       {comment.email}
     </p>
     <p className="comments__text">{comment.body}</p>
-  </>
+  </div>
 );
 
 Comment.propTypes = {
