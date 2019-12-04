@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post {
+  padding: 10px;
+  width: 30%;
+  background-color: #308dc0;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.comment {
+  background-color: gainsboro;
+  border-radius: 5px;
+}
