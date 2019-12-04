@@ -40,6 +40,11 @@
   text-align: left;
 }
 
+.author__name,
+.author__address {
+  padding-right: 10px;
+}
+
 .post__title {
   border-bottom: 2px;
   margin: 0;
