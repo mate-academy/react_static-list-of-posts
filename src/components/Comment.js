@@ -12,6 +12,7 @@ const Comment = ({ comment: { name, body, email, id } }) => (
       {`Email: ${email}`}
     </dd>
   </div>
+
 );
 
 Comment.propTypes

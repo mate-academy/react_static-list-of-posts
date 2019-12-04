@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const User = ({ userObj: { name, email, address } }) => (
-  <p className="ui circular segment">
-    <i className="user icon" />
+  <p>
     <h4 className="ui brown header">
       {`By ${name}`}
     </h4>

@@ -3,7 +3,7 @@ import React from 'react';
 import Comment from './Comment';
 
 const CommentList = props => (
-  <dl>
+  <dl className="ui container">
     <i className="comments icon" />
     {props.commentList.map(currentComment => (
       <Comment comment={currentComment} key={currentComment.id} />

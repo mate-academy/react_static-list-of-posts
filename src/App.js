@@ -9,7 +9,9 @@ import PostList from './components/PostList';
 
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 className="ui center aligned header">
+      Static list of posts
+    </h1>
     <PostList posts={preparedPosts} />
   </div>
 );
