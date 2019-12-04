@@ -1,0 +1,76 @@
+$paddingSize: 15px;
+
+body {
+  background: #fdfdfd;
+  padding: $paddingSize;
+  transition: 1s all;
+  font-family: Lato, Arial, sans-serif;
+}
+
+body:first-letter {
+  text-transform: uppercase;
+}
+
+.App {
+  text-align: center;
+}
+
+.post {
+  &__list {
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #eee;
+    border-radius: 5px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: $paddingSize;
+  }
+
+  &__block {
+    width: 400px;
+    text-align: left;
+    padding: $paddingSize;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.02);
+    border: 1px solid #eee;
+    border-radius: 5px;
+
+    &-author {
+      color: #646464;
+      font-size: 14px;
+    }
+
+    &-comments-counter {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  }
+
+  &__comments {
+    &-block {
+      padding-left: $paddingSize;
+    }
+
+    &-subblock {
+      border-top: 1px solid #eee;
+      margin-top: 15px;
+    }
+
+    &-title,
+    &-body,
+    &-email {
+      font-size: 14px;
+      margin: 10px;
+    }
+
+    &-email {
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
+}
