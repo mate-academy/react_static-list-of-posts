@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const User = ({ address }) => (
   <>
     <address>
-      Author address:
       {address.city}
     </address>
     <address>{address.street}</address>

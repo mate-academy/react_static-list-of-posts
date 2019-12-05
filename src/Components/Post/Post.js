@@ -6,8 +6,8 @@ import './post.css';
 import '../Comments/comments.css';
 
 const Post = ({ post }) => (
-  <section className="post">
-    <h1>{post.title}</h1>
+  <section className="post container">
+    <h1 className="post__header">{post.title}</h1>
     <article>{post.body}</article>
     <div>
       {post.user.map(person => <UserList info={person} />)}

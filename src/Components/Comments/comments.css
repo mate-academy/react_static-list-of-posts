@@ -36,3 +36,7 @@
 .post__comments--name:first-child:before {
   content: none;
 }
+
+.comments__text {
+  font-style: italic;
+}
