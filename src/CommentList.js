@@ -22,7 +22,7 @@ const CommentList = ({ findcommet }) => (
 );
 
 CommentList.propTypes = (
-  { findcommet: PropTypes.objectOf(PropTypes.any).isRequired }
+  { findcommet: PropTypes.arrayOf(PropTypes.any).isRequired }
 );
 
 export default CommentList;
