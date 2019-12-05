@@ -2,15 +2,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Comment = ({ comment: { name, body, email, id } }) => (
-  <div>
+  <div className="comment_card">
+    <dd className="ui center aligned olive header">
+      {name}
+      <br />
+    </dd>
     <dt>
       {`Comment ${id}: ${body}`}
     </dt>
-    <dd>
-      {`Name: ${name}`}
-      <br />
-      {`Email: ${email}`}
-    </dd>
+    <h5 className="ui right aligned header">
+      {email}
+    </h5>
   </div>
 
 );

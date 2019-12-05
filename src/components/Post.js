@@ -10,7 +10,7 @@ const Post = ({ post: { id, user, title, body, commentList } }) => (
     </div>
     <div className="ui hidden divider" />
     <div className="ui raised segment">
-      <div className="ui text container">
+      <div>
         <b className="first">{`Post ${id}: ${title}`}</b>
         <div className="ui hidden divider" />
         <p>
@@ -20,9 +20,10 @@ const Post = ({ post: { id, user, title, body, commentList } }) => (
       </div>
     </div>
     <div className="ui hidden divider" />
-    <CommentList commentList={commentList} />
+    <div className="ui segment">
+      <CommentList commentList={commentList} />
+    </div>
   </div>
-
 );
 
 Post.propTypes
