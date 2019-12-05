@@ -19,6 +19,7 @@
 
 @media screen and (max-width: 420px) {
   .post {
-    width: 350px;
+    width: 100vw;
+    border-radius: 0;
   }
 }
