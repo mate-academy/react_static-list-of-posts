@@ -1,3 +1,48 @@
 .App {
   text-align: center;
 }
+
+.h1 {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  background: grey;
+  color: white;
+  width: 600px;
+  padding-left: 20px;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 21px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 580px;
+}
+
+.comment:hover {
+  background: rgb(230, 228, 224);
+  color: black;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.comment {
+  border: 1px solid blue;
+  border-radius: 10px;
+  background: rgb(158, 155, 145);
+  color: white;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
