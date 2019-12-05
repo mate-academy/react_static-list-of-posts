@@ -5,12 +5,14 @@ import Comment from './Comment';
 const CommentsList = ({ commentsData }) => (
   <article className="comments">
     <dl>
-      <Comment commentsData={commentsData} />
+      { commentsData.map(({ name, email, body, id }) => (
+        <Comment name={name} email={email} body={body} key={id} />
+      ))}
     </dl>
   </article>
 );
 
 CommentsList.propTypes
-= { commentsData: PropTypes.oneOfType([PropTypes.object]).isRequired };
+= { commentsData: PropTypes.oneOfType([PropTypes.array]).isRequired };
 
 export default CommentsList;
