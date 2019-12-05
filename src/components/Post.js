@@ -20,7 +20,7 @@ const Post = ({ post: { id, user, title, body, commentList } }) => (
       </div>
     </div>
     <div className="ui hidden divider" />
-    <div className="ui segment">
+    <div>
       <CommentList commentList={commentList} />
     </div>
   </div>
