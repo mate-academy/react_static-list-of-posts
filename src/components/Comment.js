@@ -7,8 +7,8 @@ const Comment = ({ comment: { name, body, email, id } }) => (
       {name}
       <br />
     </h4>
-    <dt>
-      {`Comment ${id}: ${body}`}
+    <dt className="comment_text">
+      {body}
     </dt>
     <h5 className="ui right aligned header">
       {email}
