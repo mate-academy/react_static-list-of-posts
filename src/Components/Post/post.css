@@ -3,6 +3,7 @@
 }
 
 .post {
+  box-sizing: border-box;
   text-align: left;
   border-radius: 15px;
   width: 800px;
@@ -17,7 +18,7 @@
   background-color: #05c8ea;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 800px) {
   .post {
     width: 100vw;
     border-radius: 0;
