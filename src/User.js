@@ -6,6 +6,13 @@ const User = ({ user }) => (
     <b>Post by:</b>
     <div className="user--name">{user.name}</div>
     <div className="user--email">{user.email}</div>
+    <div className="user--address">
+      {user.address.street}
+      <br />
+      {user.address.suite}
+      <br />
+      {user.address.city}
+    </div>
   </div>
 );
 
