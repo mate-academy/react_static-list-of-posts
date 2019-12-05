@@ -112,7 +112,7 @@ const users = [
     website: 'demarco.info',
     company: {
       name: 'Keebler LLC',
-      catchPhrase: 'User-centric fault-tolerant solution',
+      catchPhrase: 'UserList-centric fault-tolerant solution',
       bs: 'revolutionize end-to-end systems',
     },
   },
