@@ -1,3 +1,44 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  background-color: lightgray;
+  margin: 0;
+}
+
+.block {
+
+  width: 800px;
+  border: 1px solid grey;
+  text-align: left;
+  margin: 10px auto;
+  background-color: lightyellow;
+}
+
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: darkslategrey;
+  margin-top: 10px;
+}
+
+.comment {
+  margin-top: 10px;
+}
+
+.comment__part {
+  margin-top: 5px;
+}
+
+.comment__part--name {
+  font-weight: 600;
 }

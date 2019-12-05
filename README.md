@@ -1,7 +1,7 @@
 # React static list of posts
 
 ## Demo link
-Add link here: `[DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)`
+Add link here: `[DEMO LINK](https://aleksandra04.github.io/react_static-list-of-posts/)`
 
 ## Task
 - Implement an application with 5 components `PostList`, `Post`, `User`, `CommentList` and `Comment`
