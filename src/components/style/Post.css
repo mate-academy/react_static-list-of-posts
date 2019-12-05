@@ -1,0 +1,35 @@
+.title {
+  color: saddlebrown;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 20px;
+  display: flex;
+  width: 700px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border: 1px solid lightgray;
+  border-radius: 10%;
+}
+
+.bodyContent {
+  flex-wrap: wrap;
+}
+
+.user {
+  color: grey;
+  flex-wrap: wrap;
+  width: 700px;
+  text-align: justify;
+}
+
+.comments {
+  flex-wrap: wrap;
+  width: 700px;
+  text-align: center;
+}
