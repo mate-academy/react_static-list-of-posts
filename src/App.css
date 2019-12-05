@@ -1,3 +1,66 @@
 .App {
   text-align: center;
 }
+
+.postList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.onePost {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(233, 220, 203);
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  width: 600px;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.body_title {
+  padding: 20px;
+}
+
+.user_inform {
+  border: 1px dashed black;
+  border-radius: 50%;
+  background-color: rgb(236, 217, 217);
+  width: 200px;
+  height: 200px;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.user_inform:hover {
+  background-color: rgb(218, 194, 194);
+  transform: scale(1.1);
+}
+
+.commentList {
+  margin: 20px;
+}
+
+.comment {
+  background-color: rgb(207, 134, 171);
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment_email {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: oblique;
+}
+
+.comment_name {
+  font-weight: bold;
+}
