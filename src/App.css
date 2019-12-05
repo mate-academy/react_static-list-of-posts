@@ -1,3 +1,71 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.maintitle {
+  position: absolute;
+  top: 0;
+  left: 39%;
+  font-size: 40px;
+}
+
+.post1 {
+  width: 700px;
+  border: 1px solid #c5c0c0;
+  margin: 20px auto;
+  padding: 0 20px;
+  border-radius: 8px;
+  background: #fcfcfd;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: rgb(97, 97, 185);
+}
+
+.city {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.pcomment {
+  border: 1px solid gray;
+  border-radius: 4px;
+  background: #eee;
+  padding: 10px;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.commentname {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.author {
+  text-align: right;
+  padding-top: 20px;
 }
