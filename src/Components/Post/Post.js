@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comments from '../Comments/Comments';
+import CommentsList from '../Comments/CommentsList';
 import UserList from '../UserList/UserList';
 import './post.css';
 import '../Comments/comments.css';
@@ -10,11 +10,11 @@ const Post = ({ post }) => (
     <h1 className="post__header">{post.title}</h1>
     <article>{post.body}</article>
     <div>
-      {post.user.map(person => <UserList info={person} />)}
+      <UserList list={post} />
     </div>
     <h3 className="post__comments comments">Comments</h3>
     <div>
-      {post.comments.map(item => <Comments comments={item} key={item.id} />)}
+      <CommentsList list={post.comments} />
     </div>
   </section>
 );

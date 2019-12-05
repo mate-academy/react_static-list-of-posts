@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './user.css';
 
-const User = ({ address }) => (
+const User = ({ info }) => (
   <>
-    <address>
-      {address.city}
-    </address>
-    <address>{address.street}</address>
-    <address>{address.suite}</address>
+    <h4>{info.name}</h4>
+    <address>{info.address.city}</address>
+    <address>{info.address.street}</address>
+    <address>{info.address.suite}</address>
+    <a href={info.email} className="link link--user">{info.email}</a>
   </>
 );
 
 User.propTypes
   = {
-    address: PropTypes.oneOfType([PropTypes.object])
+    info: PropTypes.oneOfType([PropTypes.object])
       .isRequired,
   };
 
