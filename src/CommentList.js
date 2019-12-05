@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Comment from './Comment';
 
 const CommentList = ({ findcommet }) => (
   <section className="commentSection">
     {
       findcommet.map(comment => (
         <div key={Math.random()}>
-          <h3 className="headers">
-            {comment.name}
-          </h3>
+          <Comment />
           <p>
             {comment.email}
           </p>
