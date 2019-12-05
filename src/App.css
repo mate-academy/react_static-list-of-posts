@@ -1,3 +1,48 @@
-.App {
+.App h1 {
   text-align: center;
+}
+
+.post {
+  margin: 10px 20px;
+  padding: 5px 25px;
+  border: 1px solid black;
+  background-color: palegoldenrod;
+}
+
+.post--header {
+  text-align: center;
+}
+
+.post--body {
+  font-size: 120%;
+}
+
+.user {
+  color: navy;
+  text-align: right;
+}
+
+.user--name {
+  font-size: 110%;
+}
+
+.user--email {
+  color: blue;
+  font-style: italic;
+}
+
+.comment {
+  background-color: rgb(255, 254, 241);
+  margin: 5px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.comment--email {
+  font-style: italic;
+  color: blue;
+}
+
+.comment--body {
+  font-style: italic;
 }
