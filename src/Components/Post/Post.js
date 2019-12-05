@@ -14,7 +14,7 @@ const Post = ({ post }) => (
     </div>
     <h3 className="post__comments comments">Comments</h3>
     <div>
-      {post.comments.map(item => <Comments comments={item} />)}
+      {post.comments.map(item => <Comments comments={item} key={item.id} />)}
     </div>
   </section>
 );

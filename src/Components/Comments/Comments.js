@@ -7,8 +7,7 @@ const Comments = ({ comments }) => (
     <p>{comments.body}</p>
     <p className="comments__text">
       Comments by&nbsp;
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a href="#" className="link">
+      <a href={comments.email} className="link">
         {comments.email}
       </a>
     </p>
