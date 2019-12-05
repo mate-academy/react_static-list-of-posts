@@ -3,10 +3,10 @@ import React from 'react';
 
 const Comment = ({ comment: { name, body, email, id } }) => (
   <div className="comment_card">
-    <dd className="ui center aligned olive header">
+    <h4 className="ui center aligned olive header">
       {name}
       <br />
-    </dd>
+    </h4>
     <dt>
       {`Comment ${id}: ${body}`}
     </dt>

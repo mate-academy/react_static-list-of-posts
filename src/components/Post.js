@@ -11,7 +11,7 @@ const Post = ({ post: { id, user, title, body, commentList } }) => (
     <div className="ui hidden divider" />
     <div className="ui raised segment">
       <div>
-        <b className="first">{`Post ${id}: ${title}`}</b>
+        <h3>{title}</h3>
         <div className="ui hidden divider" />
         <p>
           { `"${body}"`}
