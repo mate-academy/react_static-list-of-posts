@@ -13,8 +13,8 @@ const Post = ({ ownpost }) => (
         {ownpost.body}
       </p>
     </section>
-    <User user={ownpost} />
-    <CommentList comment={ownpost} />
+    <User user={ownpost.user} />
+    <CommentList findcommet={ownpost.comments} />
   </>
 );
 

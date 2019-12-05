@@ -1,32 +1,28 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import comments from './api/comments';
 
-const CommentList = ({ comment }) => {
-  const findcommet = comments.find(commentId => (
-    commentId.postId === comment.id
-  ));
-
-  return (
-    <section className="commentSection">
-      <h2 className="headers">
-        comments
-      </h2>
-      <h3 className="headers">
-        {findcommet.name}
-      </h3>
-      <p>
-        {findcommet.email}
-      </p>
-      <p>
-        {findcommet.body}
-      </p>
-    </section>
-  );
-};
+const CommentList = ({ findcommet }) => (
+  <section className="commentSection">
+    {
+      findcommet.map(comment => (
+        <div key={Math.random()}>
+          <h3 className="headers">
+            {comment.name}
+          </h3>
+          <p>
+            {comment.email}
+          </p>
+          <p>
+            {comment.body}
+          </p>
+        </div>
+      ))
+    }
+  </section>
+);
 
 CommentList.propTypes = (
-  { comment: PropTypes.objectOf(PropTypes.any).isRequired }
+  { findcommet: PropTypes.objectOf(PropTypes.any).isRequired }
 );
 
 export default CommentList;
