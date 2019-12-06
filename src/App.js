@@ -5,19 +5,12 @@ import comments from './api/comments';
 import users from './api/users';
 import PostList from './Components/PostList/PostList';
 
-const getCommentPostUsers = (comment, post, user) => {
-  const newPost = post.map(item => (
-    {
-      ...item,
-      user: user.filter(a => a.id === item.userId),
-    }));
-
-  return (newPost.map(item => (
-    {
-      ...item,
-      comments: comment.filter(pos => pos.postId === item.id),
-    })));
-};
+const getCommentPostUsers = (comment, post, user) => post.map(item => (
+  {
+    ...item,
+    comments: comment.filter(pos => pos.postId === item.id),
+    user: user.find(a => a.id === item.userId),
+  }));
 
 const App = () => (
   <div className="App">
