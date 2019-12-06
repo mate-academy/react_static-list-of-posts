@@ -1,3 +1,14 @@
 .App {
   text-align: center;
+  border: 1px solid lightsteelblue;
+  width: 90vw;
+}
+
+body {
+  background: lightgoldenrodyellow;
+  padding: 2%;
+}
+
+b {
+  border: 1px solid lightgreen;
 }
