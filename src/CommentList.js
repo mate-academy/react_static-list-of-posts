@@ -6,16 +6,7 @@ const CommentList = ({ findcommet }) => (
   <section className="commentSection">
     {
       findcommet.map(comment => (
-        <div key={Math.random()}>
-          <Comment />
-          <p>
-            {comment.email}
-          </p>
-          <p>
-            {comment.body}
-          </p>
-        </div>
-      ))
+        <Comment key={Math.random() * 1000} comment={comment} />))
     }
   </section>
 );
