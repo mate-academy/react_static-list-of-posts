@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const User = ({ user }) => {
-  const { name, email, address } = user;
+const User = ({ userData }) => {
+  const { name, email, address } = userData;
 
   return (
     <div className="user__info">
@@ -23,9 +23,9 @@ CITY:
   );
 };
 
-User.propTypes = { user: PropTypes.objectOf(PropTypes) };
+User.propTypes = { userData: PropTypes.objectOf(PropTypes) };
 User.defaultProps = {
-  user: {
+  userData: {
     address: 'no address',
     email: 'no email',
     name: 'no name',

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './CommentList';
 
-const Post = ({ post }) => {
-  const { id, title, body, user, comment } = post;
+const Post = ({ postData }) => {
+  const { id, title, body, user, comments } = postData;
 
   return (
 
@@ -21,16 +21,16 @@ TITLE:
 POST:
         {body}
       </h4>
-      <User user={user} />
-      <CommentList comment={comment} />
+      <User userData={user} />
+      <CommentList comments={comments} />
     </div>
 
   );
 };
 
-Post.propTypes = { post: PropTypes.objectOf(PropTypes) };
+Post.propTypes = { postData: PropTypes.objectOf(PropTypes) };
 Post.defaultProps = {
-  post: {
+  postData: {
     id: 'no id',
     email: 'no email',
     body: 'no content',

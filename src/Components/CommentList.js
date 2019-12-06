@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-const CommentList = ({ comment }) => (
+const CommentList = ({ comments }) => (
   <div>
     {' '}
 COMMENTS
-    {comment
-      .map(curCom => <Comment curCom={curCom} key={curCom.id} />)}
+    {comments
+      .map(singleComment => <Comment singleComment={singleComment} key={singleComment.id} />)} { /*eslint-disable-line*/}
   </div>
 
 );
 
-CommentList.propTypes = { comment: PropTypes.objectOf(PropTypes) };
-CommentList.defaultProps = { comment: 'no comment' };
+CommentList.propTypes = { comments: PropTypes.objectOf(PropTypes) };
+CommentList.defaultProps = { comments: 'no comment' };
 export default CommentList;

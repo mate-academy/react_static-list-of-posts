@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = ({ curCom }) => {
-  const { email, body } = curCom;
+const Comment = ({ singleComment }) => {
+  const { email, body } = singleComment;
 
   return (
     <div className="comment">
@@ -13,9 +13,9 @@ const Comment = ({ curCom }) => {
   );
 };
 
-Comment.propTypes = { curCom: PropTypes.objectOf(PropTypes) };
+Comment.propTypes = { singleComment: PropTypes.objectOf(PropTypes) };
 Comment.defaultProps = {
-  curCom: {
+  singleComment: {
     email: 'no email',
     body: 'no content',
   },
