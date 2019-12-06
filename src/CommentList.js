@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 
 const CommentList = ({ comments }) => (
-  <div className="comments">
-    <ul className="list">
+  <div>
+    <ul>
       {comments.map(
         oneComment => <Comment comment={oneComment} key={oneComment.id} />
       )}

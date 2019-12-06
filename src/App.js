@@ -11,8 +11,8 @@ function getPostsWithUsers() {
   return (posts.map(post => (
     {
       ...post,
-      user: users.find(user => user.id === post.userId),
-      comments: comments.filter(comment => comment.id === post.userId),
+      user: users.find(user => post.userId === user.id),
+      comments: comments.filter(comment => comment.postId === post.id),
     }
   )));
 }
