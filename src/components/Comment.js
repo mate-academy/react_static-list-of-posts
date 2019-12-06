@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Comments({ comment }) {
+function Comment({ comment }) {
   return (
     <div className="post__comments-subblock">
       <h5 className="post__comments-title">{comment.name}</h5>
@@ -11,7 +11,7 @@ function Comments({ comment }) {
   );
 }
 
-Comments.propTypes = {
+Comment.propTypes = {
   comment: PropTypes.shape({
     name: PropTypes.string,
     body: PropTypes.string,
@@ -19,4 +19,4 @@ Comments.propTypes = {
   }).isRequired,
 };
 
-export default Comments;
+export default Comment;

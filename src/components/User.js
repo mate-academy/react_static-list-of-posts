@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Users({ author }) {
+function User({ author }) {
   return (
     <div className="post__block-author">
       <span className="post__title-author ">{author.name}</span>
@@ -11,11 +11,11 @@ function Users({ author }) {
   );
 }
 
-Users.propTypes = {
+User.propTypes = {
   author: PropTypes.shape({
     name: PropTypes.string,
     email: PropTypes.string,
   }).isRequired,
 };
 
-export default Users;
+export default User;

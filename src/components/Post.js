@@ -1,23 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Users from './User';
+import User from './User';
 import CommentsList from './CommentList';
 
-// eslint-disable-next-line react/prop-types
-function Post({ post }) {
+function Post({ postInfo }) {
   return (
     <div className="post__block">
-      <Users author={post.author} />
-      <h2>{post.title}</h2>
-      <p>{post.body}</p>
+      <User author={postInfo.author} />
+      <h2>{postInfo.title}</h2>
+      <p>{postInfo.body}</p>
       <div className="post__block-comments-counter">
-        {`Comments: ${post.postComments.length}`}
+        {`Comments: ${postInfo.postComments.length}`}
       </div>
-      <CommentsList comments={post.postComments} />
+      <CommentsList comments={postInfo.postComments} />
     </div>
   );
 }
 
-Post.propType = { post: PropTypes.object.isRequired };
+Post.propTypes = {
+  postInfo: PropTypes.shape({
+    title: PropTypes.string,
+    body: PropTypes.string,
+    postComments: PropTypes.object,
+  }).isRequired,
+};
 
 export default Post;
