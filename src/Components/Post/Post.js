@@ -6,7 +6,7 @@ import './post.css';
 import '../Comments/comments.css';
 
 const Post = ({ post }) => (
-  <section className="post container">
+  <section className="post">
     <h1 className="post__header">{post.title}</h1>
     <article>{post.body}</article>
     <div>
@@ -19,10 +19,17 @@ const Post = ({ post }) => (
   </section>
 );
 
-Post.propTypes
-  = {
-    post: PropTypes.oneOfType([PropTypes.object])
-      .isRequired,
-  };
+Post.propTypes = {
+  post: PropTypes.shape({
+    userId: PropTypes.number,
+    id: PropTypes.number,
+    title: PropTypes.string,
+    body: PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    user: PropTypes.object,
+  }),
+};
+
+Post.defaultProps = { post: {} };
 
 export default Post;

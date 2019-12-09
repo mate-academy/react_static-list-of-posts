@@ -16,8 +16,24 @@ const Comment = ({ comment }) => (
 
 Comment.propTypes
   = {
-    comment: PropTypes.oneOfType([PropTypes.object])
-      .isRequired,
+    comment: PropTypes.shape({
+      postId: PropTypes.number,
+      id: PropTypes.number,
+      name: PropTypes.string,
+      email: PropTypes.string,
+      body: PropTypes.string,
+    }),
+  };
+
+Comment.defaultProps
+  = {
+    comment: {
+      postId: null,
+      id: null,
+      name: '',
+      email: '',
+      body: '',
+    },
   };
 
 export default Comment;

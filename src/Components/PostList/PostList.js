@@ -11,7 +11,5 @@ const PostList = ({ list }) => (
   </div>
 );
 
-PostList.propTypes
-  = { list: PropTypes.oneOfType([PropTypes.object]).isRequired };
-
+PostList.propTypes = { list: PropTypes.arrayOf(PropTypes.object).isRequired };
 export default PostList;

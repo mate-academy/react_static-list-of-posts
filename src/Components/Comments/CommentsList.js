@@ -5,15 +5,11 @@ import Comment from './Comment';
 const CommentsList = ({ list }) => (
   <div>
     {list.map(item => (
-      <Comment comment={item} />
+      <Comment comment={item} key={item.name} />
     ))}
   </div>
 );
 
 CommentsList.propTypes
-  = {
-    list: PropTypes.oneOfType([PropTypes.object])
-      .isRequired,
-  };
-
+  = { list: PropTypes.arrayOf(PropTypes.object).isRequired };
 export default CommentsList;
