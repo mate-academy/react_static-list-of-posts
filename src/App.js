@@ -5,12 +5,12 @@ import comments from './api/comments';
 import users from './api/users';
 import PostList from './Components/PostList/PostList';
 
-const getCommentPostUsers = (commentsList, postsList, user) => postsList
+const getCommentPostUsers = (commentsList, postsList, userList) => postsList
   .map(post => (
     {
       ...post,
       comments: commentsList.filter(comment => comment.postId === post.id),
-      user: user.find(singleUser => singleUser.id === post.userId),
+      user: userList.find(singleUser => singleUser.id === post.userId),
     }));
 
 const newList = getCommentPostUsers(comments, posts, users);
