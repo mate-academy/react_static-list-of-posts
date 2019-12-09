@@ -1,3 +1,19 @@
+body {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #253757;
+  font-style: italic;
+}
+
+p,
+article {
+  text-align: justify;
+  line-height: 1.5;
 }
