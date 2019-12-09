@@ -15,16 +15,16 @@
   border-radius: 2px;
 }
 
-.post__comments--name {
+.comments__name {
   position: relative;
   margin-top: 50px;
 }
 
-.post__comments--name:first-child {
+.comments__name:first-child {
   margin-top: 25px;
 }
 
-.post__comments--name:before {
+.comments__name:before {
   content: "* * * * *";
   position: absolute;
   left: 0;
@@ -33,7 +33,7 @@
   font-style: italic;
 }
 
-.post__comments--name:first-child:before {
+.comments__name:first-child:before {
   content: none;
 }
 

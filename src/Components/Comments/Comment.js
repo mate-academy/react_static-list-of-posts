@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Comment = ({ comment }) => (
   <article>
-    <h2 className="post__comments--name">{comment.name}</h2>
+    <h2 className="comments__name">{comment.name}</h2>
     <p>{comment.body}</p>
     <p className="comments__text">
       Comments by&nbsp;
