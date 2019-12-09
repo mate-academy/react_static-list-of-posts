@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Comment = ({ comment }) => (
-  <>
-    <h3 className="post__comments--name">{comment.name}</h3>
+  <article>
+    <h2 className="post__comments--name">{comment.name}</h2>
     <p>{comment.body}</p>
     <p className="comments__text">
       Comments by&nbsp;
@@ -11,7 +11,7 @@ const Comment = ({ comment }) => (
         {comment.email}
       </a>
     </p>
-  </>
+  </article>
 );
 
 Comment.propTypes

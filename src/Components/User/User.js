@@ -11,7 +11,6 @@ const User = ({ info }) => (
       {info.address.suite}
       <a href={info.email} className="link link--user">{info.email}</a>
     </address>
-    <a href={info.email} className="link link--user">{info.email}</a>
   </div>
 );
 
