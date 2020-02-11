@@ -1,30 +1,50 @@
 import React from 'react';
-
-import './App.css';
-
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import PostList from './PostList';
 
-const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
+const App = () => {
+  const preparedPosts = posts
+    .map((post) => {
+      const user = users.find(it => it.id === post.userId);
 
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
+      return {
+        ...post,
+        user,
+      };
+    }).map((post) => {
+      const commentsList = comments
+        .filter(comment => comment.postId === post.id);
 
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
+      return {
+        ...post,
+        comments: commentsList,
+      };
+    });
 
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
-  </div>
-);
+  return (
+    <div className="App">
+      <h1>Static list of posts</h1>
+
+      <p>
+        <span>posts: </span>
+        {posts.length}
+      </p>
+
+      <p>
+        <span>comments: </span>
+        {comments.length}
+      </p>
+
+      <p>
+        <span>Users: </span>
+        {users.length}
+      </p>
+
+      <PostList posts={preparedPosts} />
+    </div>
+  );
+};
 
 export default App;
