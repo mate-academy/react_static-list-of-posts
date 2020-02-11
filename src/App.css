@@ -1,3 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  background: lightblue;
+}
+
 .App {
   text-align: center;
+}
+
+.post {
+  max-width: 600px;
+  border: 2px solid gray;
+  border-radius: 7px;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.comments {
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 0 30px 15px;
+  border-radius: 5px;
+}
+
+.comments-email {
+  display: flex;
+  margin-top: 10px;
+  font-size: 12px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-basis: fill;
+
+}
+
+.post-title {
+  padding: 10px 40px;
+  font-size: 22px;
+}
+
+.article {
+  border: 4px solid gray;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+
+}
+
+.post-wrapper {
+  background: gray;
+  padding-top: 10px;
 }
