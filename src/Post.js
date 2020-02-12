@@ -9,7 +9,9 @@ const Post = ({ post }) => (
       Post
       {' '}
       {post.id}
-      <User user={post.user} />
+      <div>
+        <User user={post.user} />
+      </div>
     </div>
     <article className="article">
       <h2 className="post-title">

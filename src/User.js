@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const User = ({ user }) => (
-  <div>
+  <React.Fragment>
     <p>{`👳${user.name}`}</p>
     <p>{`🏠 ${user.address.city}`}</p>
     <a href={user.email}>{`📧 ${user.email}`}</a>
-  </div>
+  </React.Fragment>
 );
 
 User.propTypes = {

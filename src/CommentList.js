@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Comment from './Comment';
 
 const CommentList = ({ comments }) => (
-  <div>
+  <React.Fragment>
     {comments.map(comment => (
       <Comment key={comment.id} oneComment={comment} />
     ))}
-  </div>
+  </React.Fragment>
 );
 
 CommentList.propTypes = {
