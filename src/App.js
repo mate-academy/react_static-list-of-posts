@@ -8,17 +8,12 @@ const App = () => {
   const preparedPosts = posts
     .map((post) => {
       const user = users.find(it => it.id === post.userId);
-
-      return {
-        ...post,
-        user,
-      };
-    }).map((post) => {
       const commentsList = comments
         .filter(comment => comment.postId === post.id);
 
       return {
         ...post,
+        user,
         comments: commentsList,
       };
     });
