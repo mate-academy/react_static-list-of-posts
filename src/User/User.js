@@ -8,26 +8,26 @@ const User = ({ person }) => (
       {person.name}
     </h3>
     <p className="user__email">
-E-mail:
+      E-mail:
       <span>
         {` ${person.email}`}
       </span>
     </p>
     <address className="user__address">
       <span>
-          street:
+        street:
         {` ${person.address.street}`}
       </span>
       <span>
-          suite:
+        suite:
         {` ${person.address.suite}`}
       </span>
       <span>
-          city:
+        city:
         {` ${person.address.city}`}
       </span>
       <span>
-          zipcode:
+        zipcode:
         {` ${person.address.zipcode}`}
       </span>
     </address>

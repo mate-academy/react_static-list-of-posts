@@ -4,22 +4,20 @@ import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 import './Post.css';
 
-const Post = ({ postInfo }) => (
+const Post = ({ user, title, body, comments }) => (
   <div className="post">
-    <User person={postInfo.user} />
-    <h2 className="post__heading">{postInfo.title}</h2>
-    <p className="post__text">{postInfo.body}</p>
-    <CommentList comments={postInfo.comments} />
+    <User person={user} />
+    <h2 className="post__heading">{title}</h2>
+    <p className="post__text">{body}</p>
+    <CommentList comments={comments} />
   </div>
 );
 
 Post.propTypes = {
-  postInfo: PropTypes.shape({
-    user: PropTypes.shape.isRequired,
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    comments: PropTypes.arrayOf.isRequired,
-  }).isRequired,
+  user: PropTypes.shape().isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  comments: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 export default Post;
