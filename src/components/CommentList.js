@@ -7,7 +7,7 @@ export function CommentList({ comments }) {
     <ul className="comments">
       {comments.map(comment => (
         <li className="comment" key={comment.id}>
-          <Comment comment={comment} />
+          <Comment {...comment} />
         </li>
       ))}
     </ul>
@@ -15,5 +15,5 @@ export function CommentList({ comments }) {
 }
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  comments: PropTypes.arrayOf(PropTypes.shape(Comment)).isRequired,
 };

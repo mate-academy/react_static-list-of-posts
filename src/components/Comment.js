@@ -1,21 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Comment = ({ comment }) => (
+export const Comment = ({ name, body, email }) => (
   <>
-    <h4 className="caption">{comment.name}</h4>
-    <p>{comment.body}</p>
+    <h4 className="caption">{name}</h4>
+    <p>{body}</p>
     <p className="email">
 commented by:
-      {comment.email}
+      {email}
     </p>
   </>
 );
 
 Comment.propTypes = {
-  comment: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };
