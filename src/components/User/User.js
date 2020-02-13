@@ -2,32 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.css';
 
-export const User = ({ currentUser }) => (
-  <div>
-    <h3>{currentUser.name}</h3>
-    <div className="user__email">
-      <a href={`mailto:${currentUser.email}`}>
-        {currentUser.email}
-      </a>
+export const User = ({ currentUser }) => {
+  const { name, email } = currentUser;
+  const { city, street, suite, zipcode } = currentUser.address;
+
+  return (
+    <div>
+      <h3>{name}</h3>
+      <div className="user__email">
+        <a href={`mailto:${email}`}>
+          {email}
+        </a>
+      </div>
+      <div className="address">
+        <div>{city}</div>
+        <div>{street}</div>
+        <div>{suite}</div>
+        <div>{zipcode}</div>
+      </div>
     </div>
-    <div className="address">
-      <div>{currentUser.address.city}</div>
-      <div>{currentUser.address.street}</div>
-      <div>{currentUser.address.suite}</div>
-      <div>{currentUser.address.zipcode}</div>
-    </div>
-  </div>
-);
+  );
+};
 
 User.propTypes = {
   currentUser: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    email: PropTypes.string,
     address: PropTypes.shape({
-      city: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-      suite: PropTypes.string.isRequired,
-      zipcode: PropTypes.string.isRequired,
-    }).isRequired,
+      city: PropTypes.string,
+      street: PropTypes.string,
+      suite: PropTypes.string,
+      zipcode: PropTypes.string,
+    }),
   }).isRequired,
 };

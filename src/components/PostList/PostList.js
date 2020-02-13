@@ -15,5 +15,7 @@ export const PostList = ({ postsList }) => (
 );
 
 PostList.propTypes = {
-  postsList: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  postsList: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+  })).isRequired,
 };
