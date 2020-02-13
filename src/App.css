@@ -1,3 +1,16 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #232122;
+  color: #ddd;
+  font-family: Arial, Helvetica, sans-serif;
 }

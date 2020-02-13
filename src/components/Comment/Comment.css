@@ -1,0 +1,25 @@
+.comment__name {
+  color: #a6e98f;
+  font-size: 20px;
+
+  margin: 15px 0;
+}
+
+.comment__name::first-letter {
+  text-transform: uppercase;
+}
+
+.comment__email {
+  font-size: 12px;
+}
+
+.comment__text {
+  margin: 20px 10px;
+}
+
+.comment {
+  padding: 20px 0;
+
+  border-bottom: 1px solid #a6e98f;
+  border-top: 1px solid #a6e98f;
+}

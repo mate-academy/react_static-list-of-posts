@@ -1,0 +1,36 @@
+.post {
+  padding-top: 50px;
+
+  border-bottom: 3px solid #a6e98f;
+}
+
+.post__title {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+
+  margin: 30px 0;
+}
+
+.post__title::first-letter {
+  text-transform: uppercase;
+}
+
+.post__text {
+  font-size: 16px;
+
+  margin: 30px 0;
+}
+
+.post__text::first-letter {
+  text-transform: uppercase;
+}
+
+.post__discusion {
+  font-size: 22px;
+  color: #a6e98f;
+
+  padding-bottom: 30px;
+
+  border-bottom: 3px solid #a6e98f;
+}
