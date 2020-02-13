@@ -1,0 +1,18 @@
+html,
+body,
+p,
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box ;
+}
+
+body {
+  background-color: #d3f4ff;
+  font-family: "Lato", sans-serif;
+}
