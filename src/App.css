@@ -1,3 +1,24 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  background: khaki !important;
+  padding-top: 60px;
+}
+
+.App.jumbotron {
   text-align: center;
+  max-width: 90%;
+  margin: auto;
+  background: #fff;
+}
+
+@media (max-width: 600px) {
+  .App.jumbotron {
+    max-width: 100%;
+  }
 }

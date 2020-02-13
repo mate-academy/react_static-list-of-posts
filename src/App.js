@@ -1,29 +1,17 @@
 import React from 'react';
 
 import './App.css';
+import 'bootswatch/dist/lux/bootstrap.min.css';
+import { PostList } from './components/PostList/PostList';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
 const App = () => (
-  <div className="App">
+  <div className="App jumbotron">
     <h1>Static list of posts</h1>
-
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+    <PostList posts={posts} comments={comments} users={users} />
   </div>
 );
 
