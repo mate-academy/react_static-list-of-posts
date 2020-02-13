@@ -1,4 +1,4 @@
-.UserInfo {
+.userInfo {
   text-align: right;
   margin-bottom: 30px;
   padding-bottom: 10px;
@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.UserInfo:after {
+.userInfo:after {
   content: "";
   display: block;
   position: absolute;
@@ -18,6 +18,6 @@
   transform: translateX(-50%);
 }
 
-.UserInfo span {
+.userInfo span {
   display: block;
 }

@@ -5,7 +5,7 @@ import { Comment } from '../Comment/Comment';
 import './Comments.css';
 
 export const Comments = ({ comments }) => (
-  <ul className="Comments">
+  <ul className="comments">
     {comments.map(comment => <Comment key={comment.id} {...comment} />)}
   </ul>
 
@@ -13,10 +13,6 @@ export const Comments = ({ comments }) => (
 
 Comments.propTypes = {
   comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-    }),
+    PropTypes.object,
   ).isRequired,
 };

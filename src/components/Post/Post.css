@@ -1,4 +1,4 @@
-.Post {
+.post {
   max-width: 90%;
   margin: auto;
   display: block;
@@ -7,12 +7,12 @@
   border-bottom: 1px solid #cecece;
 }
 
-.Title {
+.post__title {
   margin: auto;
   max-width: 700px;
   margin-bottom: 10px;
 }
 
-.PostBody {
+.post__body {
   text-align: left;
 }

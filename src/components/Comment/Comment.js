@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import './Comment.css';
 
 export const Comment = ({ name, body, email }) => (
-  <li className="Comment">
-    <span className="CommentName">{`${name} (${email})`}</span>
-    <p className="CommentBody">{body}</p>
+  <li className="сomment">
+    <span className="сomment__name">{`${name} (${email})`}</span>
+    <p className="сomment__body">{body}</p>
   </li>
 );
 

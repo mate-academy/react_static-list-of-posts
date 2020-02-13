@@ -1,13 +1,13 @@
-.Comment {
+.сomment {
   text-align: left;
 }
 
-.CommentBody {
+.сomment__body {
   margin-top: 15px;
   padding-left: 30px;
 }
 
-.CommentName {
+.сomment__name {
   font-style: italic;
   font-weight: 600;
 }

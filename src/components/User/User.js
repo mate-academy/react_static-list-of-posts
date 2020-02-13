@@ -7,7 +7,7 @@ export const User = ({ name, email, address }) => {
   const { city } = address;
 
   return (
-    <div className="UserInfo">
+    <div className="userInfo">
       <span>{`${name} -`}</span>
       <span>{`${email} -`}</span>
       <span>{`${city} -`}</span>
