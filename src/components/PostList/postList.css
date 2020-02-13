@@ -1,0 +1,12 @@
+ul {
+  list-style: none;
+  font-family: Arial;
+}
+
+.list__item {
+  border: 1px solid #c5a204;
+  width: 700px;
+  padding: 20px;
+  background-color: #f8f085;
+  margin: 20px;
+}
