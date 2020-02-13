@@ -5,6 +5,13 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import { PostList } from './components/PostList/PostList';
+
+const allPosts = posts.map(post => ({
+  ...post,
+  user: users.find(item => item.id === post.userId),
+  comments: comments.filter(item => item.postId === post.id),
+}));
 
 const App = () => (
   <div className="App">
@@ -24,6 +31,8 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <PostList allPosts={allPosts} />
   </div>
 );
 
