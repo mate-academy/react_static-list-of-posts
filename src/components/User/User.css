@@ -1,0 +1,8 @@
+.address {
+  display: flex;
+  justify-content: space-around;
+}
+
+.user__email {
+  margin: 10px;
+}
