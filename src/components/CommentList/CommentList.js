@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
 import './commentsList.css';
 
-const CommentList = ({ data }) => (
-  <>
-    {data.map(item => (
-      <li key={item.id} className="comment">
-        <Comment {...item} />
-      </li>
-    ))}
-  </>
+const CommentList = ({ comments }) => (
+  comments.map(comment => (
+    <li key={comment.id} className="comment">
+      <Comment {...comment} />
+    </li>
+  ))
 );
 
 CommentList.propTypes = {
-  data: PropTypes.arrayOf(
+  comments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }).isRequired,

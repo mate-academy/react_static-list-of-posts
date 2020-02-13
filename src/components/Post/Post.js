@@ -11,7 +11,7 @@ const Post = ({ title, body, comments, user }) => (
     <User {...user} />
     <p>Comments</p>
     <ul className="comments">
-      <CommentList data={comments} />
+      <CommentList comments={comments} />
     </ul>
   </>
 );

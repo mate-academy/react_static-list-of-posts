@@ -13,7 +13,7 @@ const preparedPosts = posts.map(post => ({
 }));
 
 const App = () => (
-  <PostList data={preparedPosts} />
+  <PostList posts={preparedPosts} />
 );
 
 export default App;

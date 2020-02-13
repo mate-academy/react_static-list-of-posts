@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import './postList.css';
 
-const PostList = ({ data }) => (
+const PostList = ({ posts }) => (
   <ul>
-    {data.map(item => (
-      <li key={item.id} className="list__item">
-        <Post {...item} />
+    {posts.map(post => (
+      <li key={post.id} className="list__item">
+        <Post {...post} />
       </li>
     ))}
   </ul>
 );
 
 PostList.propTypes = {
-  data: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }).isRequired,
