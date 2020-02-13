@@ -1,0 +1,13 @@
+.Comment {
+  text-align: left;
+}
+
+.CommentBody {
+  margin-top: 15px;
+  padding-left: 30px;
+}
+
+.CommentName {
+  font-style: italic;
+  font-weight: 600;
+}

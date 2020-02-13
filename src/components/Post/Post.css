@@ -1,0 +1,18 @@
+.Post {
+  max-width: 90%;
+  margin: auto;
+  display: block;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cecece;
+}
+
+.Title {
+  margin: auto;
+  max-width: 700px;
+  margin-bottom: 10px;
+}
+
+.PostBody {
+  text-align: left;
+}
