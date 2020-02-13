@@ -4,24 +4,37 @@ import './PostList.css';
 import { Post } from '../Post/Post';
 
 export const PostList = (props) => {
-  const { posts, users, comments } = props;
+  const { postList } = props;
 
   return (
     <ul className="postList">
-      {posts.map(post => (
-        <Post
-          key={post.id}
-          post={post}
-          user={users.find(item => item.id === post.userId)}
-          comments={comments.filter(item => item.postId === post.id)}
-        />
-      ))}
+      {postList.map((post) => {
+        const { user, comments, id, title, body } = post;
+
+        return (
+          <Post
+            key={id}
+            title={title}
+            body={body}
+            user={user}
+            comments={comments}
+          />
+        );
+      })}
     </ul>
   );
 };
 
 PostList.propTypes = {
-  posts: PropTypes.shape().isRequired,
-  users: PropTypes.shape().isRequired,
-  comments: PropTypes.shape().isRequired,
+  postList: PropTypes.arrayOf({
+    user: PropTypes.shape({
+      name: PropTypes.string,
+      email: PropTypes.string,
+      adress: PropTypes.object,
+    }).isRequired,
+    comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
 };

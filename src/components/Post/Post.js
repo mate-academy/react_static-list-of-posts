@@ -6,7 +6,7 @@ import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 
 export const Post = (props) => {
-  const { post: { title, body }, user, comments } = props;
+  const { title, body, user, comments } = props;
 
   return (
     <li className="post">
@@ -19,11 +19,11 @@ export const Post = (props) => {
 };
 
 Post.propTypes = {
-  post: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    title: PropTypes.string,
+    body: PropTypes.string,
   }).isRequired,
-
-  user: PropTypes.shape().isRequired,
   comments: PropTypes.arrayOf.isRequired,
 };
