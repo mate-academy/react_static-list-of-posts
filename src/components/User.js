@@ -6,9 +6,9 @@ export const User = ({ name, email, address }) => {
 
   return (
     <div className="user">
-      <div>{`author: ${name}`}</div>
-      <div>{`e-mail: ${email}`}</div>
-      <div>{`address: ${city}`}</div>
+      <p>{`author: ${name}`}</p>
+      <p>{`e-mail: ${email}`}</p>
+      <p>{`address: ${city}`}</p>
     </div>
   );
 };
@@ -18,6 +18,5 @@ User.propTypes = {
   email: PropTypes.string.isRequired,
   address: PropTypes.shape({
     city: PropTypes.string.isRequired,
-    zipcode: PropTypes.string.isRequired,
   }).isRequired,
 };
