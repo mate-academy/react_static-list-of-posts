@@ -16,9 +16,22 @@ export const Post = ({ post: { title, body, user, comments } }) => (
 
 Post.propTypes = {
   post: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    user: PropTypes.oneOfType([PropTypes.object]),
-    comments: PropTypes.oneOfType([PropTypes.object]),
+    title: PropTypes.string,
+    body: PropTypes.string,
+    user: PropTypes.shape({
+      name: PropTypes.string,
+      email: PropTypes.string,
+      address: PropTypes.shape({
+        street: PropTypes.string,
+        city: PropTypes.string,
+      }),
+    }),
+    comments: PropTypes.shape({
+      comment: PropTypes.shape({
+        name: PropTypes.string,
+        body: PropTypes.string,
+        email: PropTypes.string,
+      }),
+    }),
   }).isRequired,
 };

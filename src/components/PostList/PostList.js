@@ -14,5 +14,25 @@ export const PostList = ({ posts }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.shape({
+    post: PropTypes.shape({
+      title: PropTypes.string,
+      body: PropTypes.string,
+      user: PropTypes.shape({
+        name: PropTypes.string,
+        email: PropTypes.string,
+        address: PropTypes.shape({
+          street: PropTypes.string,
+          city: PropTypes.string,
+        }),
+      }),
+      comments: PropTypes.shape({
+        comment: PropTypes.shape({
+          name: PropTypes.string,
+          body: PropTypes.string,
+          email: PropTypes.string,
+        }),
+      }),
+    }),
+  })).isRequired,
 };

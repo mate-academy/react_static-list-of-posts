@@ -15,11 +15,11 @@ export const User = ({ user: { name, email, address: { street, city } } }) => (
 
 User.propTypes = {
   user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    email: PropTypes.string,
     address: PropTypes.shape({
-      street: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
-    }).isRequired,
+      street: PropTypes.string,
+      city: PropTypes.string,
+    }),
   }),
 }.isRequired;
