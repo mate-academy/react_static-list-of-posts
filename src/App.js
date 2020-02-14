@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Post } from './components/Post/Post';
+import { PostList } from './components/PostList/PostList';
 
 import './App.css';
 
@@ -32,11 +32,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <ul className="posts-container">
-      {postsWithUsers.map(post => (
-        <Post key={post.id} {...post} />
-      ))}
-    </ul>
+    <PostList posts={postsWithUsers} />
   </div>
 );
 
