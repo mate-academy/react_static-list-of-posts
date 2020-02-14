@@ -8,8 +8,8 @@ export const PostList = ({ preparedPosts }) => (
   <div>
     {preparedPosts.map(post => (
       <div className="box">
-        <Post key={post.id} title={post.title} body={post.body} />
         <User user={post.user} />
+        <Post key={post.id} title={post.title} body={post.body} />
         <CommentList comments={post.comment} />
       </div>
     ))}

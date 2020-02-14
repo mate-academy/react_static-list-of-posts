@@ -5,13 +5,15 @@ export const Comment = ({ comment }) => {
   const { name, body, email } = comment;
 
   return (
-    <li>
-      <div className="notification is-link">
-        <h4>{name}</h4>
-        <p>{body}</p>
-        <p>{email}</p>
+    <article className="message is-dark">
+      <div className="message-header">
+        <p>{name}</p>
       </div>
-    </li>
+      <div className="message-body">
+        <p>{body}</p>
+        <strong>{email}</strong>
+      </div>
+    </article>
   );
 };
 

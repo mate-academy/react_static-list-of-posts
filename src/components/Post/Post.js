@@ -5,9 +5,9 @@ export const Post = (props) => {
   const { title, body } = props;
 
   return (
-    <div>
-      <h2>{title}</h2>
-      <p>{body}</p>
+    <div className="posts">
+      <h2 className="subtitle is-4">{title}</h2>
+      <p className="subtitle is-5">{body}</p>
     </div>
   );
 };

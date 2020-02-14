@@ -7,13 +7,27 @@ export const User = ({ user }) => {
   const { lat, lng } = geo;
 
   return (
-    <div>
-      <h3>{name}</h3>
-      <p>{email}</p>
-      <p>
-        {`${street}, ${suite},
-        ${city}, ${zipcode}, ${lat}, ${lng}`}
-      </p>
+    <div className="card">
+      <div className="card-content">
+        <p className="title">
+          {name}
+        </p>
+        <p className="subtitle title">
+          {email}
+        </p>
+      </div>
+      <footer className="card-footer">
+        <p className="card-footer-item">
+          <span>
+            {`${street}, ${suite} ${city}`}
+          </span>
+        </p>
+        <p className="card-footer-item">
+          <span>
+            {`${zipcode}, ${lat}, ${lng}`}
+          </span>
+        </p>
+      </footer>
     </div>
   );
 };

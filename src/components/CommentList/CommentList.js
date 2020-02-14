@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Comment } from '../Comment/Comment';
 
 export const CommentList = ({ comments }) => (
-  <div className="content">
-    <ol type="1">
+  <div className="content comment-list">
+    <div>
       {comments.map(comment => (
         <Comment key={comment.id} comment={comment} />
       ))}
-    </ol>
+    </div>
   </div>
 );
 
