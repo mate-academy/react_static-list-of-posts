@@ -8,11 +8,19 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const App = () => (
-  <div className="App jumbotron">
-    <h1>Static list of posts</h1>
-    <PostList posts={posts} comments={comments} users={users} />
-  </div>
-);
+const App = () => {
+  const postListComplicate = posts.map(post => ({
+    ...post,
+    postComments: comments.filter(comment => comment.postId === post.id),
+    author: users.find(user => user.id === post.userId),
+  }));
+
+  return (
+    <div className="App">
+      <h1>Static list of posts</h1>
+      <PostList postList={postListComplicate} />
+    </div>
+  );
+};
 
 export default App;

@@ -6,13 +6,15 @@ import { Comments } from '../Comments/Comments';
 import './Post.css';
 
 export const Post = (props) => {
-  const { text,
+  const {
+    text,
     title,
     author,
     emailAuthor,
     address,
     idx,
-    commentsList } = props;
+    commentsList,
+  } = props;
 
   return (
     <div className="card text-white bg-primary">
@@ -26,9 +28,6 @@ export const Post = (props) => {
         {commentsList.map(({ name, id, postId, body, email }) => (
           <Comments
             key={`${name}-${id}-${postId}`}
-            className="list-group-item d-flex
-                  justify-content-between
-                  align-items-center"
             body={body}
             commentAuthor={name}
             commentEmail={email}
