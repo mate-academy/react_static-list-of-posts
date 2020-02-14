@@ -5,8 +5,9 @@ import { Comment } from '../Comment/Comment';
 import './Comments.css';
 
 export const Comments = ({ comments }) => (
+
   <ul className="comments">
-    {comments.map(comment => <Comment key={comment.id} {...comment} />)}
+    {comments.map(comment => <Comment key={comment.id} comment={comment} />)}
   </ul>
 
 );

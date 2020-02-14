@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import './User.css';
 
-export const User = ({ name, email, address }) => {
+export const User = ({ user }) => {
+  const { name, email, address } = user;
   const { city } = address;
 
   return (
@@ -16,9 +17,11 @@ export const User = ({ name, email, address }) => {
 };
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    city: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };

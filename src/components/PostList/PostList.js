@@ -4,14 +4,15 @@ import { Post } from '../Post/Post';
 
 import './PostList.css';
 
-export const PostList = ({ postList }) => (
+export const PostList = ({ posts }) => (
   <ul className="postsWrapper">
-    {postList.map(post => <Post key={post.id} {...post} />)}
+    {posts.map(post => <Post key={post.id} post={post} />)}
   </ul>
+
 );
 
 PostList.propTypes = {
-  postList: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.object,
   ).isRequired,
 };

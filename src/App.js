@@ -5,7 +5,7 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import { PostLists } from './components/PostLists/PostLists';
+import { PostList } from './components/PostList/PostList';
 
 const postsList = posts.map(post => (
   {
@@ -17,7 +17,7 @@ const postsList = posts.map(post => (
 
 const App = () => (
   <div className="App">
-    <PostLists posts={postsList} />
+    <PostList posts={postsList} />
   </div>
 );
 
