@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Comment.css';
 
 export function Comment(comment) {
-  const { name, email, body } = comment;
+  const { name, email, body } = comment.comment;
 
   return (
     <>

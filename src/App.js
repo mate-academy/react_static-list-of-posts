@@ -13,7 +13,7 @@ const allPosts = posts.map(post => ({
   comments: comments.filter(item => item.postId === post.id),
 }));
 
-const App = () => (
+export const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
@@ -35,5 +35,3 @@ const App = () => (
     <PostList allPosts={allPosts} />
   </div>
 );
-
-export default App;

@@ -5,8 +5,6 @@ import './PostList.css';
 import { Post } from '../Post/Post';
 
 export function PostList({ allPosts }) {
-  // console.log(allPosts[0]);
-
   return (
     <div className="post-list">
       {allPosts.map(post => (
@@ -17,5 +15,12 @@ export function PostList({ allPosts }) {
 }
 
 PostList.propTypes = {
-  allPosts: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  allPosts: PropTypes.arrayOf(PropTypes.shape({
+    userId: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    user: PropTypes.shape.isRequired,
+    comments: PropTypes.array.isRequired,
+  })).isRequired,
 };

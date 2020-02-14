@@ -6,7 +6,6 @@ import { CommentList } from '../CommentList/CommentList';
 
 export function Post({ post }) {
   const { title, body, user, comments } = post;
-  // console.log(post);
 
   return (
     <>
