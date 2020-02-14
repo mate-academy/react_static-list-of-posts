@@ -22,7 +22,7 @@ Post.propTypes = {
   postInfo: PropTypes.shape({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    user: PropTypes.shape.isRequired,
-    comments: PropTypes.arrayOf.isRequired,
+    user: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired,
   }).isRequired,
 };

@@ -13,6 +13,6 @@ export const CommentList = ({ comments }) => (
 
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(
-    PropTypes.shape,
+    PropTypes.object,
   ).isRequired,
 };
