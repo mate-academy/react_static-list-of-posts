@@ -1,3 +1,10 @@
-.App {
-  text-align: center;
+.post__wrapper {
+  width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.post {
+  margin-bottom: 150px;
+
 }
