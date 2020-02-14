@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Comment.css';
 
-export function Comment(comment) {
-  const { name, email, body } = comment.comment;
+export function Comment(props) {
+  const { name, email, body } = props.comment;
 
   return (
     <>
