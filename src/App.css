@@ -10,5 +10,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding: 0 5vw;
+}
+
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0 auto;
 }

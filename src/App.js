@@ -13,6 +13,7 @@ const filteredPosts = posts.map(post => ({
 
 const App = () => (
   <div className="App">
+    <h1>List of posts</h1>
     <PostList posts={filteredPosts} />
   </div>
 );
