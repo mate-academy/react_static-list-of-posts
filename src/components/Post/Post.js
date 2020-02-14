@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { User } from '../User/User';
-import { CommentList } from '../CommentList/CommentList';
+import { User, UserPropTypes } from '../User/User';
+import { CommentList, CommentListPropTypes } from '../CommentList/CommentList';
 import './Post.css';
 
 export const Post = ({ post }) => {
@@ -23,17 +23,13 @@ export const Post = ({ post }) => {
   );
 };
 
-Post.defaultProps = {
-  user: {},
-  comments: {},
-  title: '',
-  body: '',
-};
-
 Post.propTypes = {
-  post: PropTypes.shape().isRequired,
-  user: PropTypes.shape(),
-  comments: PropTypes.shape(),
-  title: PropTypes.string,
-  body: PropTypes.string,
+  post: PropTypes.shape({
+    user: PropTypes.shape(UserPropTypes),
+    comments: PropTypes.arrayOf(
+      PropTypes.shape(CommentListPropTypes),
+    ).isRequired,
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
 };

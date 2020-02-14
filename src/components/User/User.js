@@ -12,8 +12,10 @@ export const User = ({ name, username, email }) => (
   </div>
 );
 
-User.propTypes = {
+export const UserPropTypes = {
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 };
+
+User.propTypes = UserPropTypes;

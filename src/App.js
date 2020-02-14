@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './App.css';
 
 import posts from './api/posts';
@@ -8,7 +7,7 @@ import users from './api/users';
 import { PostList } from './components/Postlist/PostList';
 
 const App = () => {
-  const postsInformation = posts.map(post => (
+  const preparedPosts = posts.map(post => (
     {
       ...post,
       user: users.find(user => user.id === post.userId),
@@ -19,25 +18,9 @@ const App = () => {
   return (
     <div className="App">
       <h1>Static list of posts</h1>
-      <PostList postsInformation={postsInformation} />
+      <PostList preparedPosts={preparedPosts} />
     </div>
   );
-};
-
-App.defaultProps = {
-  post: {},
-  user: {},
-};
-
-App.propTypes = {
-  post: PropTypes.shape({
-    userId: PropTypes.number,
-    id: PropTypes.number,
-  }),
-
-  user: PropTypes.shape({
-    id: PropTypes.number,
-  }),
 };
 
 export default App;
