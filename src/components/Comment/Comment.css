@@ -1,0 +1,16 @@
+.comment {
+  background-color: rgb(244, 254, 241);
+  margin: 5px 0;
+  border: 1px solid #deefec;
+  padding: 4px;
+  border-radius: 25px;
+}
+
+.comment__email {
+  font-style: italic;
+  color: blue;
+}
+
+.comment__body {
+  font-style: italic;
+}
