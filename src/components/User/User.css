@@ -1,0 +1,16 @@
+.card-header {
+  background: khaki;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .card-header {
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+  }
+}

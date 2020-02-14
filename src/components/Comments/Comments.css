@@ -1,0 +1,18 @@
+.comment-body {
+  padding-top: 20px;
+  background: #fff;
+  border-top-left-radius: 24px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+}
+
+.comments-link {
+  display: block;
+  padding: 0 12px;
+}
+
+.comments-text {
+  padding: 0 10px;
+  text-align: left;
+}
