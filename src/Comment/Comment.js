@@ -9,8 +9,7 @@ const Comment = ({ name, body, email }) => (
     <p>{body}</p>
     <p className="comments__email">
       Email:
-      {' '}
-      {email}
+      {` ${email}`}
     </p>
   </li>
 );

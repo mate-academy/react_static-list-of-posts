@@ -5,30 +5,33 @@ import PropTypes from 'prop-types';
 
 const User = ({ name, email, address }) => (
   <li className="user">
-    <h3 className="title">
+    <h3 className="user__title">
       {name}
     </h3>
-    <p className="email">
-    E-mail:
+    <p className="user__email">
       <span>
+        e-mail:
         {` ${email}`}
       </span>
     </p>
-    <p className="address">
+    <p className="user__address">
       <span>
-      street:
+        street:
         {` ${address.street}`}
       </span>
+
       <span>
-      suite:
+        suite:
         {` ${address.suite}`}
       </span>
+
       <span>
-      city:
+        city:
         {` ${address.city}`}
       </span>
+
       <span>
-      zipcode:
+        zipcode:
         {` ${address.zipcode}`}
       </span>
     </p>
