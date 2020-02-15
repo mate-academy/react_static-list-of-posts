@@ -4,12 +4,34 @@ import './User.css';
 
 export const User = ({ person: { name, email, address } }) => (
   <div className="user">
-    <h3>{ name }</h3>
-    <p>{ email }</p>
-    <p>{ address.street }</p>
-    <p>{ address.suite }</p>
-    <p>{ address.city }</p>
-    <p>{ address.zipcode }</p>
+    <h3>
+      <span className="user__author">author: </span>
+      { name }
+    </h3>
+    <p>
+      <span>email: </span>
+      { email }
+    </p>
+    <p>
+      <span>adress: </span>
+      { address.street }
+      ,
+      {' '}
+      <span>
+        {address.suite }
+      ,
+        {' '}
+      </span>
+      <span>
+        { address.city }
+      ,
+        {' '}
+      </span>
+      <span>
+        { address.zipcode }
+      ,
+      </span>
+    </p>
   </div>
 );
 
