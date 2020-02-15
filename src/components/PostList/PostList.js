@@ -23,8 +23,23 @@ PostList.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       body: PropTypes.string,
-      user: PropTypes.shape(),
-      comments: PropTypes.arrayOf(),
+      user: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        email: PropTypes.string,
+        address: PropTypes.shape({
+          email: PropTypes.string,
+          suite: PropTypes.string,
+          city: PropTypes.string,
+          zipcode: PropTypes.string,
+        }).isRequired,
+      }).isRequired,
+      comments: PropTypes.arrayOf({
+        postId: PropTypes.number,
+        name: PropTypes.string,
+        email: PropTypes.string,
+        body: PropTypes.string,
+      }).isRequired,
     }).isRequired,
   ).isRequired,
 };
