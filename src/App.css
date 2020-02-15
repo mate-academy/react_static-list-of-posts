@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  padding: 30px 20px;
   text-align: center;
+  background-color: #49274a;
+  color: #f4decb;
 }
