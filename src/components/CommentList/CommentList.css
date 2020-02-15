@@ -1,6 +1,11 @@
 .comment-list {
-  padding: 15px;
+  padding: 10px;
   background-color: #eabd96;
   border-radius: 5px;
   color: #49274a;
+}
+
+.comment-list__title {
+  padding-bottom: 12px;
+  border-bottom: 3px double #341235;
 }

@@ -5,6 +5,7 @@ import { Comment } from '../Comment/Comment';
 
 export const CommentList = ({ allComments }) => (
   <div className="comment-list">
+    <h2 className="comment-list__title">Comments:</h2>
     {allComments.map(comment => (
       <Comment key={comment.id} commentInfo={comment} />
     ))}
