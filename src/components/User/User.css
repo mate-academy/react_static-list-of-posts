@@ -1,0 +1,12 @@
+.post__author-name {
+  color: #a6e98f;
+  font-size: 20px;
+
+  margin: 15px 0;
+}
+
+.post__author li:not(:first-child) {
+  font-size: 12px;
+  
+  margin: 5px 0;
+}
