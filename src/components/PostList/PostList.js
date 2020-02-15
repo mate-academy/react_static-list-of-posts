@@ -11,6 +11,13 @@ export const PostList = ({ posts }) => (
 
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.object,
+    PropTypes.shape({
+      userId: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      user: PropTypes.shape.isRequired,
+      comments: PropTypes.array.isRequired,
+    }),
   ).isRequired,
 };
