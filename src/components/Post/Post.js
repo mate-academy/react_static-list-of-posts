@@ -6,13 +6,11 @@ import { User, userData } from '../User/User';
 import { commentData } from '../Comment/Comment';
 
 export const Post = ({ post }) => (
-
   <div className="post">
     <div className="post__block">
       <h3 className="post__title">{post.title}</h3>
       <p className="post__body">{post.body}</p>
     </div>
-
     <User user={post.user} />
     <CommentList comments={post.comments} />
   </div>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Comment, commentData } from '../Comment/Comment';
 
 export const CommentList = ({ comments }) => (
-
   <div className="CommentList">
     <div className="comments">
       {comments.map(comment => (
