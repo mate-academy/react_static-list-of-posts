@@ -20,7 +20,16 @@ export const Post = ({ post }) => {
 
 Post.propTypes = {
   post: PropTypes.shape({
-    user: PropTypes.shape(),
+    user: PropTypes.shape({
+      name: PropTypes.string,
+      email: PropTypes.string,
+      address: PropTypes.shape({
+        street: PropTypes.string,
+        suite: PropTypes.string,
+        city: PropTypes.string,
+        zipcode: PropTypes.string,
+      }),
+    }),
     title: PropTypes.string,
     body: PropTypes.string,
     commentList: PropTypes.arrayOf(
