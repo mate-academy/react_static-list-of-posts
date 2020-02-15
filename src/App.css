@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  width: 70vw;
+  margin: 0 auto;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
