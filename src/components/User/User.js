@@ -1,28 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = ({
-  user: { name, email, address: { city, street, zipcode } },
-}) => (
-  <div className="user">
-    <p>Contact info:</p>
-    <p>{`name: ${name}, email: ${email}`}</p>
-    <p>{`address: ${zipcode}, ${street}, ${city}`}</p>
-  </div>
-);
+export const User = ({ user }) => {
+  const { name, email, address: { city, street, zipcode } } = user;
 
-const addressData = {
+  return (
+    <div className="user">
+      <p>Contact info:</p>
+      <p>{`name: ${name}, email: ${email}`}</p>
+      <p>{`address: ${zipcode}, ${street}, ${city}`}</p>
+    </div>
+  );
+};
+
+const addressTypes = {
   city: PropTypes.string,
   street: PropTypes.string,
   zipcode: PropTypes.string,
 };
 
-export const userData = {
+export const userTypes = {
   name: PropTypes.string,
   email: PropTypes.string,
-  address: PropTypes.shape(addressData),
+  address: PropTypes.shape(addressTypes),
 };
 
 User.propTypes = {
-  user: PropTypes.shape(userData).isRequired,
+  user: PropTypes.shape(userTypes).isRequired,
 };

@@ -14,7 +14,7 @@ body {
   padding: 0 5vw;
 }
 
-h1 {
+.title {
   font-size: 30px;
   text-transform: uppercase;
   margin: 0 auto;
