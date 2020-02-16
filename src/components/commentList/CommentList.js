@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from '../comment/Comment';
+import { Comment, commentPropTypes } from '../comment/Comment';
 
 const CommentList = ({ comments }) => (
   <ul className="CommentList">
@@ -14,12 +14,7 @@ const CommentList = ({ comments }) => (
 
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      title: PropTypes.string,
-      body: PropTypes.string,
-      user: PropTypes.shape(),
-    }).isRequired,
+    PropTypes.shape(commentPropTypes).isRequired,
   ).isRequired,
 };
 

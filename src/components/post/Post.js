@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import User from '../user/User';
 import CommentList from '../commentList/CommentList';
 import './post.css';
+import { User, userPropTypes } from '../user/User';
+import { commentPropTypes } from '../comment/Comment';
 
 function Post({ post }) {
   const { title, body, user, comments } = post;
@@ -21,17 +22,9 @@ Post.propTypes = {
   post: PropTypes.shape({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    user: PropTypes.shape({
-      address: PropTypes.shape({
-        city: PropTypes.string,
-      }).isRequired,
-    }),
+    user: PropTypes.shape(userPropTypes),
     comments: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number,
-        name: PropTypes.string.isRequired,
-        body: PropTypes.string.isRequired,
-      }),
+      PropTypes.shape(commentPropTypes),
     ).isRequired,
   }).isRequired,
 };

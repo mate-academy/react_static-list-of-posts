@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../post/Post';
 import './PostList.css';
+import { userPropTypes } from '../user/User';
+import { commentPropTypes } from '../comment/Comment';
 
 const PostList = ({ posts }) => (
   <div className="Postlist">
@@ -19,9 +21,9 @@ PostList.propTypes = {
       id: PropTypes.number,
       title: PropTypes.string,
       body: PropTypes.string,
-      user: PropTypes.shape(),
+      user: PropTypes.shape(userPropTypes),
       comments: PropTypes.arrayOf(
-        PropTypes.shape(),
+        PropTypes.shape(commentPropTypes),
       ),
     }).isRequired,
   ).isRequired,
