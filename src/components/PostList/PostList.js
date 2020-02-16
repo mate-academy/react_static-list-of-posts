@@ -22,7 +22,13 @@ PostList.propTypes = {
       title: PropTypes.string,
       body: PropTypes.string,
       user: PropTypes.object,
-      comment: PropTypes.arrayOf(PropTypes.object),
+      comment: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string,
+          email: PropTypes.string,
+          body: PropTypes.string,
+        }),
+      ),
     }),
   ).isRequired,
 };
