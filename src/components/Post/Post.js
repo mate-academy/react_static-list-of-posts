@@ -9,7 +9,7 @@ export const Post = ({ title, body, user, comments }) => (
   <>
     <h2 className="post__title">{title}</h2>
     <p className="post__body">{body}</p>
-    <User person={user} />
+    <User {...user} />
     <h3>Comments</h3>
     <CommentList comments={comments} />
   </>
