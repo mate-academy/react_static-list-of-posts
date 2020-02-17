@@ -1,3 +1,57 @@
-.App {
+body {
+  font-family: Roboto;
+}
+
+.title {
   text-align: center;
+}
+
+.list {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  border: black 1px solid;
+  border-radius: 20px;
+  background: #94bfac;
+
+}
+
+.post__section {
+  margin: 10px auto 40px;
+  padding: 20px;
+  border: black 1px solid;
+  background: #e4eff3;
+  border-radius: 10px;
+}
+
+.post__title {
+  text-transform: uppercase;
+  color: #264d7e;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.post__user {
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+  text-align: right;
+}
+
+.comment__name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.post__comments {
+  font-weight: bold;
+  font-size: 26px;
+  color: #3a73a9;
+}
+
+.line {
+  height: 3px;
+  border-radius: 4px;
+  background: #5b9291;
 }
