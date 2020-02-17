@@ -7,10 +7,10 @@ import { CommentList } from '../CommentList/CommentList';
 export const PostList = ({ preparedPosts }) => (
   <div>
     {preparedPosts.map(post => (
-      <div className="box">
+      <div key={post.id} className="box">
         <User user={post.user} />
-        <Post key={post.id} title={post.title} body={post.body} />
-        <CommentList comments={post.comment} />
+        <Post title={post.title} body={post.body} />
+        <CommentList comments={post.comments} />
       </div>
     ))}
   </div>
@@ -22,7 +22,7 @@ PostList.propTypes = {
       title: PropTypes.string,
       body: PropTypes.string,
       user: PropTypes.object,
-      comment: PropTypes.arrayOf(
+      comments: PropTypes.arrayOf(
         PropTypes.shape({
           name: PropTypes.string,
           email: PropTypes.string,
