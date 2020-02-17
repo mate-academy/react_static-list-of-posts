@@ -13,7 +13,7 @@ const preparedList = posts.map(post => ({
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="app">
       <h1>STATIC LIST OF POSTS</h1>
       <PostList posts={preparedList} />
     </div>

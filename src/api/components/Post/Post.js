@@ -31,7 +31,13 @@ Post.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
     user: PropTypes.string.isRequired,
-    commentsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    commentsList: PropTypes.arrayOf({
+      comment: PropTypes.shape({
+        email: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        body: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
   }).isRequired,
