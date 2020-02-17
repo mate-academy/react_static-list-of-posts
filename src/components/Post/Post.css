@@ -1,0 +1,8 @@
+.post__title,
+.post__body {
+  text-align: center;
+}
+
+.post__body {
+  margin-bottom: 30px;
+}

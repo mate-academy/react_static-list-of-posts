@@ -1,0 +1,9 @@
+.comment {
+  margin-top: 20px;
+  border-top: 1.5px solid teal;
+  height: 100%;
+}
+
+.comment__email {
+  font-style: italic;
+}
