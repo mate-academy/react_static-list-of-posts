@@ -12,26 +12,13 @@ export const User = ({ person: { name, email, address } }) => (
       <span>email: </span>
       { email }
     </p>
-    <p>
-      <span>adress: </span>
-      { address.street }
-      ,
-      {' '}
-      <span>
-        {address.suite }
-      ,
-        {' '}
-      </span>
-      <span>
-        { address.city }
-      ,
-        {' '}
-      </span>
-      <span>
-        { address.zipcode }
-      ,
-      </span>
-    </p>
+    <div>
+      <p>adress:</p>
+      <p>{address.street}</p>
+      <p>{address.suite}</p>
+      <p>{address.city}</p>
+      <p>{address.zipcode}</p>
+    </div>
   </div>
 );
 
