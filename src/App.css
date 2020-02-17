@@ -1,3 +1,16 @@
-.App {
+.app {
+  margin: 0 auto;
+  width: 70vw;
+}
+
+.title {
   text-align: center;
+}
+
+.comment-list {
+  width: 30vw;
+}
+
+.posts {
+  margin-bottom: 20px;
 }
