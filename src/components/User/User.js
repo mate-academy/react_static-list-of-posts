@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const User = ({ user }) => {
-  const { name, email, address: { city, street, zipcode } } = user;
+  const { name, email, address } = user;
+  const { city, street, zipcode } = address;
 
   return (
     <div className="user">
