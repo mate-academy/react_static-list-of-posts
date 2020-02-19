@@ -1,0 +1,26 @@
+.post {
+  margin: 10px;
+  padding: 5px;
+  width: 100vw;
+  border-radius: 15px;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post__block {
+  width: 100%;
+  background: #fafff1;
+  border-radius: 15px;
+}
+
+.post__title {
+  font-size: 25px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.post__body {
+  font-size: 15px;
+}
