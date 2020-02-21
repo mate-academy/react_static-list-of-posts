@@ -8,7 +8,7 @@ import users from './api/users';
 
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1>Static list of postsRoma</h1>
 
     <p>
       <span>posts: </span>
