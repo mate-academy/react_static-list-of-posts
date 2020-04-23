@@ -1,0 +1,10 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.posts__item {
+  display: block;
+  width: 600px;
+  border: 2px solid rgb(100, 100, 214);
+}
