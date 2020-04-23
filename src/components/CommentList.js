@@ -7,7 +7,7 @@ function CommentList({ comments }) {
 }
 
 Comment.propTypes = {
-  comments: PropTypes.shape({
+  comment: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
