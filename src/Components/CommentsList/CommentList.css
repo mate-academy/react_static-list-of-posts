@@ -1,0 +1,22 @@
+.comment__list {
+  margin: 0;
+  padding: 0;
+}
+
+.comment__item {
+  margin: 0 0 10px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #dcd6f7;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.comment__name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.comment__body {
+  margin-top: 10px;
+}
