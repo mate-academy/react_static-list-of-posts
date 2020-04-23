@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function Comment({ comment: { name, email, body } }) {
   return (
     <p className="posts__comment">
-      <span className="posts__comment-name">{`Name: ${name}`}</span>
-      <span className="posts__comment-email">{`Email: ${email}`}</span>
-      <span className="posts__comment-text">{`Comment text: ${body}`}</span>
+      <span className="posts__comment-name">{name}</span>
+      <a href={`mailto:${email}`} className="posts__comment-email">{email}</a>
+      <span className="posts__comment-text">{body}</span>
     </p>
   );
 }

@@ -4,17 +4,20 @@ import PropTypes from 'prop-types';
 function User({ user: { name, email,
   address: { street, city, suite, zipcode } } }) {
   return (
-    <p className="posts__user">
-      <span>
+    <div className="posts__user">
+      <span className="posts__user-name">
         {`Name: ${name}`}
       </span>
-      <span>
-        {`Email: ${email}`}
-      </span>
-      <span>
-        {`City: ${city}, street: ${street}, suite: ${suite} zip: ${zipcode}`}
-      </span>
-    </p>
+      <a href={`mailto:${email}`} className="posts__user-email">
+        {email}
+      </a>
+      <p className="posts__user-address">
+        <span>{`City: ${city}`}</span>
+        <span>{`street: ${street}`}</span>
+        <span>{`suite: ${suite}`}</span>
+        <span>{`zip: ${zipcode}`}</span>
+      </p>
+    </div>
   );
 }
 
