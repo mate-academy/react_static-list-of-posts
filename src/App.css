@@ -1,8 +1,36 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.posts__item {
+  width: 900px;
+}
+
+.posts__title {
+  width: 700px;
+  margin: 0 auto;
+  text-transform: uppercase;
 }
 
 .posts__comment {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.posts__user {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.posts__text {
+  width: 500px;
+  margin: 20px auto 0;
 }

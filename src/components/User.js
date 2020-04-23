@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 function User({ user: { name, email,
   address: { street, city, suite, zipcode } } }) {
   return (
-    <>
-      <p>
+    <p className="posts__user">
+      <span>
         {`Name: ${name}`}
-      </p>
-      <p>
+      </span>
+      <span>
         {`Email: ${email}`}
-      </p>
+      </span>
       <span>
         {`City: ${city}, street: ${street}, suite: ${suite} zip: ${zipcode}`}
       </span>
-    </>
+    </p>
   );
 }
 

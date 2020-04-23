@@ -5,12 +5,12 @@ import CommentList from './CommentList';
 
 function Post({ postItem: { title, body, user, comments } }) {
   return (
-    <>
-      <h3>{title}</h3>
-      <p>{body}</p>
+    <div className="posts__item">
+      <h3 className="posts__title">{title}</h3>
+      <p className="posts__text">{body}</p>
       <User user={user} />
       <CommentList comments={comments} />
-    </>
+    </div>
   );
 }
 

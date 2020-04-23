@@ -5,8 +5,8 @@ function Comment({ comment: { name, email, body } }) {
   return (
     <p className="posts__comment">
       <span className="posts__comment-name">{`Name: ${name}`}</span>
-      <span className="posts__comment-email">{`email: ${email}`}</span>
-      <span className="posts__comment-text">{`text: ${body}`}</span>
+      <span className="posts__comment-email">{`Email: ${email}`}</span>
+      <span className="posts__comment-text">{`Comment text: ${body}`}</span>
     </p>
   );
 }
