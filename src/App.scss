@@ -1,0 +1,53 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.post {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f1f3f4;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  &__title {
+    color: #512b58;
+    text-transform: capitalize;
+  }
+
+  &__comments {
+    padding: 0;
+  }
+
+  &__comment {
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #c7e1e4;
+  }
+}
+
+.user {
+  text-align: right;
+
+  &__name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  &__address {
+    margin-top: 5px;
+  }
+}
+
+.comment {
+
+  &__name {
+    font-size: 18px;
+  }
+
+  &__email {
+    font-size: 14px;
+  }
+}
