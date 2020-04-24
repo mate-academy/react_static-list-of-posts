@@ -30,11 +30,3 @@ Post.propTypes = {
 };
 
 export default Post;
-
-// author: PropTypes.objectOf(
-//   PropTypes.oneOfType([
-//     PropTypes.string,
-//     PropTypes.number,
-//     PropTypes.object,
-//   ]),
-// ).isRequired,
