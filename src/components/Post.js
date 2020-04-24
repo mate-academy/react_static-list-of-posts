@@ -26,7 +26,7 @@ const Post = ({ title, body, postUser, postComent }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  postUser: PropTypes.arrayOf(PropTypes.object).isRequired,
+  postUser: PropTypes.shape({}).isRequired,
   postComent: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
