@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Comment = ({ name, body, email }) => (
-  <>
+  <li className="post__comment comment">
     <p className="comment__name">
       {name}
     </p>
@@ -12,7 +12,7 @@ const Comment = ({ name, body, email }) => (
     <a href={`mailto:${email}`} className="comment__email">
       {email}
     </a>
-  </>
+  </li>
 );
 
 Comment.propTypes = {
