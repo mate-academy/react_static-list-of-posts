@@ -1,0 +1,81 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-width: 750px;
+}
+
+body {
+  background-color: #edeef0;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+
+}
+
+.post {
+  background-color: #fff;
+  padding: 15px 50px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  width: 50%;
+
+  &_title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: rgb(66, 66, 163);
+  }
+
+  &_text {
+    line-height: 1.6;
+  }
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #9a9a9c;
+  line-height: 0.6;
+
+  &_address {
+    font-size: 18px;
+  }
+
+  &_email {
+    color: #9a9a9c;
+    font-size: 20px;
+  }
+}
+
+.guest {
+  &_name {
+    color: rgb(66, 66, 163);
+  }
+
+  &_email {
+    display: flex;
+    justify-content: flex-end;
+    color: #9a9a9c;
+    font-size: 20px;
+  }
+}
+
+.author_email:hover,
+.guest_email:hover {
+  color: #838383;
+}
