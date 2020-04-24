@@ -1,3 +1,71 @@
 .App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  font-family: sans-serif;
   text-align: center;
+
+  padding: 20px;
+}
+
+.posts__item {
+  width: 800px;
+  background-color: #f4a548;
+  border-radius: 20px;
+  margin: 0 auto;
+
+  padding: 20px;
+}
+
+.posts__title {
+  width: 700px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.posts__comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #7ebdb4;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.posts__comment-name {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.posts__comment-email {
+  margin-bottom: 10px;
+  text-transform: lowercase;
+  font-size: 0.9em;
+}
+
+.posts__user-address {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts__user {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  text-transform: capitalize;
+}
+
+.posts__user-name {
+  font-size: 1.1em;
+  text-transform: capitalize;
+}
+
+.posts__text {
+  width: 500px;
+  margin: 20px auto 0;
 }
