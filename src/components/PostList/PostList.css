@@ -1,0 +1,10 @@
+.PostList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  list-style-type: none;
+}
+
+.PostList__item {
+  background-color: mediumpurple;
+}
