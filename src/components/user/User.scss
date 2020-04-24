@@ -1,0 +1,18 @@
+.author {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: black;
+    text-decoration-color: black;
+  }
+
+  &__address {
+    font-style: italic;
+  }
+}
