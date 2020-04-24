@@ -1,0 +1,76 @@
+body,
+html,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  width: 900px;
+  height: 840px;
+  border: 1px solid #61d4b3;
+  box-sizing: border-box;
+  margin: 15px auto 50px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+    color: #44c29e;
+  }
+
+  &__text {
+    display: block;
+    margin: 15px;
+    font-size: 18px;
+    color: #f16c37;
+    text-align: center;
+  }
+}
+
+.user {
+  &__case {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  &__mail {
+    text-decoration: none;
+    color: rgb(29, 26, 26);
+  }
+}
+
+.comment {
+  margin: 15px;
+  border: 1px solid #3fc9a2;
+  border-radius: 10px;
+  &__name {
+    text-align: center;
+    margin: 5px 0;
+    font-weight: bold;
+    font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  &__body {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    display: block;
+    width: 200px;
+    margin: 0 auto 10px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(39, 38, 38);
+  }
+}
