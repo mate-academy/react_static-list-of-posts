@@ -1,0 +1,11 @@
+.post__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post__item {
+  padding: 16px;
+  border: 2px solid darkgrey;
+  border-radius: 4px;
+  margin: 16px auto;
+}
