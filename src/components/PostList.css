@@ -1,0 +1,11 @@
+.post__header {
+  padding: 25px 0 30px;
+  text-align: center;
+  color: rgb(73, 117, 117);
+}
+
+.post__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
