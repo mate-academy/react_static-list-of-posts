@@ -8,6 +8,10 @@
     text-align: center;
   }
 
+  &__info {
+    margin-right: 10px;
+  }
+
   &__post-list {
     margin-top: 20px;
     display: grid;
@@ -31,8 +35,7 @@
 
   &__comment {
     margin: 10px 0;
-    padding: 0 10px;
-    //border: 1px solid blueviolet;
+    padding: 10px;
     border-radius: 10px;
     background-color: rgb(230, 230, 250);
 
@@ -46,5 +49,20 @@
   &__name {
     font-weight: bold;
     margin: 0;
+  }
+}
+
+.comment {
+  &__heading {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__body {
+    font-style: italic;
+  }
+
+  &__email {
+    font-size: 16px;
   }
 }

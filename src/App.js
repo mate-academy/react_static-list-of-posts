@@ -20,14 +20,17 @@ const App = () => {
         <h1 className="app__heading">Static list of posts</h1>
         <span className="app__info">
           Users:
+          {' '}
           {users.length}
         </span>
         <span className="app__info">
           Posts:
+          {' '}
           {posts.length}
         </span>
         <span className="app__info">
           Comments:
+          {' '}
           {comments.length}
         </span>
       </div>

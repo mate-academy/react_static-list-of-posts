@@ -8,6 +8,7 @@ export const Post = ({ title, body, user, comments }) => (
     <h2 className="post__title">{title}</h2>
     <p className="post__body">{body}</p>
     <User {...user} />
+    <p className="comment__heading">Comments</p>
     <CommentList comments={comments} />
   </>
 );

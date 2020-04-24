@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 export const Comment = ({ name, body, email }) => (
   <>
-    <p><i>{email}</i></p>
-    <p><i>{name}</i></p>
-    <p><i>{body}</i></p>
+    <p className="comment__name">{name}</p>
+    <p className="comment__body">{body}</p>
+    <a href={`mailto:${email}`} className="comment__email">
+      {email}
+    </a>
   </>
 );
 

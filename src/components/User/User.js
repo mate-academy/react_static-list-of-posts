@@ -8,9 +8,8 @@ export const User = ({ name, email, address }) => (
       {email}
     </a>
     <address className="user__address">
-      <span>
-        {`${address.city}, ${address.street}, ${address.suite}`}
-      </span>
+      <div>{`${address.street}, ${address.suite}`}</div>
+      <div>{address.city}</div>
     </address>
   </section>
 );
