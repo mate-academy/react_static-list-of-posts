@@ -3,16 +3,14 @@ import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './CommentList';
 
-function Post({ postItem: { title, body, user, comments } }) {
-  return (
-    <div className="posts__item">
-      <h3 className="posts__title">{title}</h3>
-      <p className="posts__text">{body}</p>
-      <User user={user} />
-      <CommentList comments={comments} />
-    </div>
-  );
-}
+const Post = ({ postItem: { title, body, user, comments } }) => (
+  <div className="posts__item">
+    <h3 className="posts__title">{title}</h3>
+    <p className="posts__text">{body}</p>
+    <User {...user} />
+    <CommentList comments={comments} />
+  </div>
+);
 
 Post.propTypes = {
   postItem: PropTypes.shape({

@@ -2,17 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-function CommentList({ comments }) {
-  return comments.map(item => <Comment key={item.id} comment={item} />);
-}
+const CommentList = ({ comments }) => (
+  comments.map(item => <Comment key={item.id} {...item} />)
+);
 
 Comment.propTypes = {
-  comment: PropTypes.shape({
-    id: PropTypes.number,
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  }).isRequired,
+  id: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };
 
 export default CommentList;
