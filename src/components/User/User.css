@@ -1,0 +1,12 @@
+.user {
+  margin: 25px auto;
+  max-width: 300px;
+  background-color: #341235;
+  border: 2px solid #f4decb;
+  border-radius: 5px;
+}
+
+.user__author {
+  font-weight: 400;
+  font-size: 16px;
+}
