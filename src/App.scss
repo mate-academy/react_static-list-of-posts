@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.posts {
+  &_item {
+    margin: 20px;
+    border: 1px solid #03175d;
+    border-radius: 30px;
+  }
+  &_title {
+    font-style: italic;
+    font-size: 2em;
+  }
+  &_text {
+    background-color: #43b8bb;
+    padding: 10px 20px;
+    font-size: 1.3em;
+  }
+  &__user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &_wrap {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      border: 1px solid black;
+      border-radius: 20px;
+      margin-right: 50px;
+    }
+    &_name {
+      margin: 5px;
+    }
+    &_email {
+      margin: 5px;
+    }
+    &_address {
+      margin: 0;
+      box-sizing: border-box;
+      border: 1px solid black;
+      border-radius: 20px;
+      &-city {
+        margin: 10px;
+      }
+      &-street {
+        margin: 10px;
+      }
+      &-zip {
+        margin: 10px;
+      }
+      &-title {
+        background-color: #c35451;
+        padding: 16px 0;
+        margin-top: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    }
+  }
+}
