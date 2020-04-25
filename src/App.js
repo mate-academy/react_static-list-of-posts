@@ -6,6 +6,17 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
+import { PostList } from './PostList/PostList';
+
+const postsWithCommentsAndAuthors = posts.map(post => {
+  const currentPost = { ...post };
+
+  currentPost.commentsToPost = comments.filter(comment => comment.postId === currentPost.id);
+  currentPost.authorOfPost = users.find(user => user.id === currentPost.userId);
+
+  return currentPost;
+});
+
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
@@ -24,6 +35,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+    <PostList postsList={postsWithCommentsAndAuthors} />
   </div>
 );
 
