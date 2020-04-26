@@ -1,0 +1,11 @@
+.post {
+  background-color: rgb(224, 202, 202);
+  padding: 20px;
+
+}
+
+.post__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: 50px;
+}
