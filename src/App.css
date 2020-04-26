@@ -1,3 +1,26 @@
-.App {
+@import "./PostList/PostList.css";
+@import "./Post/Post.css";
+@import "./User/User.css";
+@import "./CommentList/CommentList.css";
+@import "./Comment/Comment.css";
+
+@font-face {
+  font-family: "Roboto Slab", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600;900&display=swap");
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
   text-align: center;
+  padding-top: 50px;
+}
+
+.App {
+  font-family: "Roboto Slab", serif;
 }
