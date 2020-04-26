@@ -1,0 +1,14 @@
+.highlighter {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.user {
+  background-color: #f0f0f0;
+  border: 2px solid #888;
+  border-radius: 10px;
+  text-align: left;
+  padding: 20px;
+  display: inline-block;
+  margin: 20px 0 20px auto;
+}

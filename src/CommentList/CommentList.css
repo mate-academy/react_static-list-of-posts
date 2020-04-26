@@ -1,0 +1,12 @@
+.comment__list {
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.singleComment {
+  border: 2px solid #888;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}

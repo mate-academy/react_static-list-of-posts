@@ -1,0 +1,10 @@
+.singleComment__body {
+  padding: 10px 0 10px 20px;
+  font-weight: 600;
+}
+
+.singleComment__body::before,
+.singleComment__body::after {
+  content: '"';
+  font-weight: 600;
+}

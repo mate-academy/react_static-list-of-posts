@@ -1,0 +1,8 @@
+
+.item__body {
+  font-size: 1.1em;
+  background-color: #f0f0f0;
+  border: 2px solid #888;
+  border-radius: 10px;
+  padding: 20px;
+}
