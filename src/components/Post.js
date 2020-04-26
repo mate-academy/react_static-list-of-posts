@@ -4,9 +4,11 @@ import User from './User';
 
 const Post = ({ title, body, comments, author }) => (
   <>
-    <h3 className="title">{title}</h3>
-    <p className="body">{body}</p>
-    <User {...author} comments={comments} />
+    <li className="list__userInfo">
+      <h3 className="title">{title}</h3>
+      <p className="body">{body}</p>
+      <User {...author} comments={comments} />
+    </li>
   </>
 );
 

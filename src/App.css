@@ -8,7 +8,7 @@
 
 .list__userInfo {
   background-color: #f7f6f6;
-  border-radius: 40px;
+  border-radius: 20px;
 }
 
 .title {
@@ -27,4 +27,11 @@
 
 .comment {
   font-size: 14px;
+  background-color: rgb(207, 203, 203);
+  list-style-type: none;
+  border-radius: 20px;
+}
+
+ul {
+  padding-left: 0;
 }
