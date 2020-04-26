@@ -1,8 +1,8 @@
 # React static list of posts
 - Replace `<your_account>` with your Github username in the links
 
-    - [DEMO LINK](https://andreas-just.github.io/react_article/)
-    - [PULL REQUEST](https://github.com/mate-academy/react_article/pull/59)
+    - [DEMO LINK](https://andreas-just.github.io/react_static-list-of-posts/)
+    - [PULL REQUEST](https://github.com/mate-academy/react_static-list-of-posts/pull/194)
 
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
