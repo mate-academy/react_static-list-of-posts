@@ -1,3 +1,65 @@
-.App {
+@font-face {
+  font-family: "Roboto Slab", serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600;900&display=swap");
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.highlighter {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.main-header {
   text-align: center;
+  padding-top: 50px;
+}
+
+.App {
+  font-family: "Roboto Slab", serif;
+}
+
+.post__list {
+  margin: 20px 50px;
+  padding: 50px;
+}
+
+.item {
+  border: 2px solid #888;
+  background-color: #ffe8df;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  padding: 20px 40px;
+}
+
+.item__title {
+  text-align: center;
+}
+
+.user {
+  background-color: #f0f0f0;
+  border: 2px solid #888;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 20px 0 20px auto;
+}
+
+.comment__list {
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.singleComment {
+  border: 2px solid #888;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
 }
