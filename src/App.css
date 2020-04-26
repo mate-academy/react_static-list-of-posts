@@ -1,3 +1,48 @@
+
 .App {
   text-align: center;
+}
+
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+
+.post__wrap {
+  margin-bottom: 20px;
+}
+
+.post__item {
+  width: 620px;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 2%;
+}
+
+.post__title {
+  text-align: center;
+}
+
+.post__comments {
+  background-color: rgba(241, 235, 235, 0.4);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 2%;
+  margin-top: -10px;
+  padding: 10px;
+}
+
+.post__comment-title {
+  margin: 10px auto;
+  text-align: center;
+  font-style: italic;
+  color: white;
+  background-color: rgb(80, 80, 80);
+}
+
+.post__comment-answer {
+  font-style: italic;
+  margin: 5px;
 }
