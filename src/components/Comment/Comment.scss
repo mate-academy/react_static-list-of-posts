@@ -1,0 +1,12 @@
+.comment {
+  background-color: lightgrey;
+  border-radius: 5px;
+
+  &__title {
+    color: red;
+  }
+
+  &__text {
+    padding-bottom: 10px;
+  }
+}
