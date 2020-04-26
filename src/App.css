@@ -25,7 +25,12 @@ body {
   text-transform: uppercase;
 }
 
+.ui.segment.post .items {
+  padding: 1em 0.6em;
+}
+
 .ui.segment.post .header.post__title[title] {
+  display: block;
   font-size: 1.7em;
   line-height: 1.2;
   text-align: center;
