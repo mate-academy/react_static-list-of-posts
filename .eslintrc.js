@@ -4,7 +4,7 @@ module.exports = {
     "object-curly-newline": [2, {
       "ObjectExpression": {
         "consistent": true,
-        "minProperties": 3,
+        "minProperties": 5,
       },
     }],
   },

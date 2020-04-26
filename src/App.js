@@ -15,7 +15,7 @@ const preparedPosts = posts.map(post => ({
 
 const App = () => (
   <Container className="App">
-    <Header as="h1" textAlign="center">
+    <Header as="h1" className="page__title" color="blue">
       Static list of posts
     </Header>
     <PostList list={preparedPosts} />

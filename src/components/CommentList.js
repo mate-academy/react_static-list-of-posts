@@ -4,7 +4,7 @@ import { Comment, Header } from 'semantic-ui-react';
 import CommentItem from './CommentItem';
 
 const CommentList = ({ cmts }) => (
-  <Comment.Group>
+  <Comment.Group className="cmts">
     <Header as="h3" dividing content="Comments" />
     {cmts.map(cmt => <CommentItem key={cmt.id} {...cmt} />)}
   </Comment.Group>

@@ -6,6 +6,7 @@ const users = [
     name: 'Leanne Graham',
     username: 'Bret',
     email: 'Sincere@april.biz',
+    photo: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
     address: {
       street: 'Kulas Light',
       suite: 'Apt. 556',
@@ -29,6 +30,7 @@ const users = [
     name: 'Ervin Howell',
     username: 'Antonette',
     email: 'Shanna@melissa.tv',
+    photo: 'https://react.semantic-ui.com/images/avatar/small/christian.jpg',
     address: {
       street: 'Victor Plains',
       suite: 'Suite 879',
@@ -75,6 +77,7 @@ const users = [
     name: 'Patricia Lebsack',
     username: 'Karianne',
     email: 'Julianne.OConner@kory.org',
+    photo: 'https://react.semantic-ui.com/images/avatar/small/jenny.jpg',
     address: {
       street: 'Hoeger Mall',
       suite: 'Apt. 692',
@@ -121,6 +124,7 @@ const users = [
     name: 'Mrs. Dennis Schulist',
     username: 'Leopoldo_Corkery',
     email: 'Karley_Dach@jasper.info',
+    photo: 'https://react.semantic-ui.com/images/avatar/small/steve.jpg',
     address: {
       street: 'Norberto Crossing',
       suite: 'Apt. 950',
@@ -144,6 +148,7 @@ const users = [
     name: 'Kurtis Weissnat',
     username: 'Elwyn.Skiles',
     email: 'Telly.Hoeger@billy.biz',
+    photo: 'https://react.semantic-ui.com/images/avatar/small/joe.jpg',
     address: {
       street: 'Rex Trail',
       suite: 'Suite 280',
@@ -167,6 +172,7 @@ const users = [
     name: 'Nicholas Runolfsdottir V',
     username: 'Maxime_Nienow',
     email: 'Sherwood@rosamond.me',
+    photo: 'https://react.semantic-ui.com/images/avatar/small/matt.jpg',
     address: {
       street: 'Ellsworth Summit',
       suite: 'Suite 729',
@@ -213,6 +219,7 @@ const users = [
     name: 'Clementina DuBuque',
     username: 'Moriah.Stanton',
     email: 'Rey.Padberg@karina.biz',
+    photo: 'https://react.semantic-ui.com/images/avatar/small/stevie.jpg',
     address: {
       street: 'Kattie Turnpike',
       suite: 'Suite 198',
