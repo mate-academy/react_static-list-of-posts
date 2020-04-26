@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import './CommentList.scss';
 
 const CommentList = ({ comments }) => (
   <div className="comments">

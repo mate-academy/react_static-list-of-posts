@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './Post';
-import './PostList.scss';
 
 const PostList = ({ posts }) => (
   <>

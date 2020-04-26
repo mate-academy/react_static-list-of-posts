@@ -1,4 +1,12 @@
 .post {
+  background-color: rgb(224, 202, 202);
+  padding: 20px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 50px;
+  }
 
   &__title {
     text-align: center;
@@ -9,4 +17,5 @@
     font-weight: 500;
     text-align: start;
   }
+
 }
