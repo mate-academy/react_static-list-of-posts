@@ -1,0 +1,24 @@
+.post__comment-item {
+  margin-bottom: 10px;
+  background-color: lighten(#f1f6fb, 2%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.post__comment-text {
+  margin-top: 20px;
+}
+
+.post__comment-name {
+  font-size: 14px;
+  color: grey;
+}
+
+.post__comment-mail {
+  font-size: 14px;
+
+  a {
+    margin-top: 10px;
+    text-decoration: none;
+  }
+}

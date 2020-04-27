@@ -1,0 +1,22 @@
+html {
+  font-family: Roboto, sans-serif;
+  color: #3e3e3e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f8fd;
+}
+
+.app {
+  padding-top: 50px;
+  min-width: 800px;
+  margin: 0 auto;
+  width: calc(100% - 60%);
+
+  &__stat {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+}
