@@ -8,9 +8,10 @@ import users from './api/users';
 import PostList from './components/PostList/PostList';
 
 const preparedPosts = posts.map((post) => {
-  const user = users.find(curUser => curUser.id === post.userId);
-  // eslint-disable-next-line max-len
-  const userComments = comments.filter(curComent => (curComent.postId === post.id));
+  const user = users
+    .find(currentUser => currentUser.id === post.userId);
+  const userComments = comments
+    .filter(comment => (comment.postId === post.id));
 
   return {
     ...post,
@@ -42,9 +43,8 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <div className="container">
-      <PostList posts={preparedPosts} />
-    </div>
+
+    <PostList posts={preparedPosts} />
   </div>
 );
 

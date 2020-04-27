@@ -23,5 +23,8 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   user: PropTypes.string.isRequired,
   body: PropTypes.bool.isRequired,
-  userComments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  userComments: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  })).isRequired,
 };
