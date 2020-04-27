@@ -1,3 +1,48 @@
 .App {
   text-align: center;
 }
+
+body {
+  background-color: rgb(224, 248, 255);
+}
+
+ul {
+  padding: 0;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  grid-gap: 35px;
+  justify-content: center;
+  list-style-type: none;
+
+}
+
+.list__userInfo {
+  border: 3px solid rgb(81, 185, 255);
+  background-color: #f7f6f6;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.body {
+  font-size: 16px;
+}
+
+.address,
+.email,
+.author {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comment {
+  font-size: 13px;
+  background-color: rgb(223, 223, 223);
+  list-style-type: none;
+  border-radius: 20px;
+}
