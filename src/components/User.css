@@ -1,0 +1,21 @@
+
+.personalInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.personalInfo__address {
+  display: flex;
+  flex-direction: column;
+}
+
+.personalInfo__address,
+.personalInfo__name,
+.personalInfo__email {
+  margin: 8px 0;
+}
+
+.personalInfo__email {
+  font-weight: bold;
+}
