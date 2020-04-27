@@ -5,13 +5,7 @@ import Post from './Post';
 export const PostList = ({ posts }) => (
   <div>
     {posts.map(post => (
-      <Post
-        key={post.id}
-        title={post.title}
-        body={post.body}
-        user={post.user}
-        comments={post.comments}
-      />
+      <Post {...post} />
     ))}
   </div>
 );
