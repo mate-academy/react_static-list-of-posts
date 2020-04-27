@@ -5,7 +5,7 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import User from './User';
+
 import Post from './Post';
 
 const PostList = posts.map(item => ({
@@ -33,10 +33,9 @@ const App = () => (
     </p>
 
     <ol>
-      {PostList.map(item => (
-        <li key={item.id}>
-          <Post item={item} />
-          <User item={item} />
+      {PostList.map(post => (
+        <li key={post.id}>
+          <Post item={post} />
         </li>
       ))}
     </ol>
