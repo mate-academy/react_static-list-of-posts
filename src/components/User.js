@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentList from './CommentList';
+import UserInfo from './UserInfo';
+import { CommentType } from './CommentType';
 
-const User = ({ name, email, address: { city, street, zipcode, suite }, comments }) => (
+const User = ({ name, email, address, comments }) => (
   <>
     <h4 className="author">
       Author:&nbsp;
@@ -12,16 +14,7 @@ const User = ({ name, email, address: { city, street, zipcode, suite }, comments
       Email:&nbsp;
       {email}
     </p>
-    <p className="address">
-      City:&nbsp;
-      {city}
-      , zipcode:&nbsp;
-      {zipcode}
-      , street:&nbsp;
-      {street}
-      , suite:&nbsp;
-      {suite}
-    </p>
+    <UserInfo {...address} />
     <CommentList comments={comments} />
   </>
 );
@@ -29,8 +22,12 @@ const User = ({ name, email, address: { city, street, zipcode, suite }, comments
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
-  address: PropTypes.objectOf(PropTypes.array).isRequired,
+  comments: CommentType,
+  address: PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.object,
+  ]).isRequired),
 };
 
 export default User;

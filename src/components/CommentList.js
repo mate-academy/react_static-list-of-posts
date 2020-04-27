@@ -1,18 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Comment from './Comment';
+import { CommentType } from './CommentType';
 
 const CommentList = ({ comments }) => (
-  <ul>
+  <article>
     Comments:&nbsp;
     {comments.map(comment => (
       <Comment {...comment} key={comment.id} />
     ))}
-  </ul>
+  </article>
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  comments: CommentType,
 };
 
 export default CommentList;

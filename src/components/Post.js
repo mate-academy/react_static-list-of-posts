@@ -16,7 +16,11 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   comments: PropTypes.arrayOf(PropTypes.object).isRequired,
-  author: PropTypes.arrayOf(PropTypes.object).isRequired,
+  author: PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.object,
+  ]).isRequired),
 };
 
 export default Post;
