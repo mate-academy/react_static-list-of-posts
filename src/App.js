@@ -4,11 +4,7 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-
-import PostTitle from './components/PostTitle';
-import PostBody from './components/PostBody';
-import Comments from './components/comments';
-import User from './components/User';
+import PostList from './components/PostList';
 
 const generatedPosts = posts.map(post => ({
   ...post,
@@ -17,14 +13,7 @@ const generatedPosts = posts.map(post => ({
 }));
 
 const App = () => (
-  generatedPosts.map(item => (
-    <div className="post" key={item.id}>
-      <PostTitle post={item} />
-      <PostBody post={item} />
-      <User info={item} />
-      <Comments item={item} />
-    </div>
-  ))
+  <PostList search={generatedPosts} />
 );
 
 export default App;
