@@ -1,0 +1,7 @@
+.user {
+  font-style: italic;
+}
+
+.user__name {
+  font-weight: bold;
+}

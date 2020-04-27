@@ -1,0 +1,23 @@
+.post__list {
+  margin: 0;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.post__item {
+  list-style: none;
+  padding: 10px 20px;
+  margin: 0 0 10px;
+  background-color: #f4eeff;
+  border: 1px solid #424874;
+  border-radius: 8px;
+}
+
+.post__title {
+  text-transform: capitalize;
+}
+
+.post__body {
+  margin: 40px 0;
+  font-size: 20px;
+}
