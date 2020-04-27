@@ -1,0 +1,26 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Comment = ({ name, body, email }) => (
+  <div className="post__comment">
+    <p className="post__comment-title">
+      <b>
+        {name}
+      </b>
+    </p>
+    <p className="post__comment-answer">
+      {body}
+    </p>
+    <a href={`mailto: ${email}`}>
+      {email}
+    </a>
+  </div>
+);
+
+export default Comment;
+
+Comment.propTypes = {
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+};
