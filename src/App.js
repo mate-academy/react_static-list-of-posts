@@ -7,15 +7,10 @@ import comments from './api/comments';
 import users from './api/users';
 import PostList from './components/PostList/Postlist';
 
-const postsWithUsers = posts.map(post => (
+const data = posts.map(post => (
   {
     ...post,
     user: users.find(user => (post.userId === user.id)),
-  }
-));
-const data = postsWithUsers.map(post => (
-  {
-    ...post,
     comments: comments.filter(comment => (post.id === comment.postId)),
   }
 ));

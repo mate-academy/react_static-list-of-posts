@@ -10,4 +10,5 @@
 .user__contacts-item {
   padding-bottom: 5px;
   word-spacing: 5px;
+  display: inline-block;
 }
