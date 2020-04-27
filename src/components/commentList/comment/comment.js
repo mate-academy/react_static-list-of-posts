@@ -4,17 +4,12 @@ import PropTypes from 'prop-types';
 
 function Comment({ comment }) {
   return (
-    <>
-      <strong>
-        {comment.name}
-        {' '}
-      </strong>
+
+    <li key={comment.id}>
+      <strong>{`${comment.name} `}</strong>
       <span>{comment.email}</span>
-      <p>
-        {comment.body}
-        {' '}
-      </p>
-    </>
+      <p>{comment.body}</p>
+    </li>
   );
 }
 
@@ -23,6 +18,7 @@ Comment.propTypes = {
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 

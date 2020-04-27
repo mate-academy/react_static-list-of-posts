@@ -6,11 +6,11 @@ function PostList({ conditionPosts }) {
   return (
     <ul>
       {conditionPosts.map(post => (
-        <li key={post.id}>
-          <Post
-            post={post}
-          />
-        </li>
+
+        <Post
+          post={post}
+        />
+
       ))}
 
     </ul>
