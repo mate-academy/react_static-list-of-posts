@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Post from './Post';
 
 const PostList = ({ genericPosts }) => (
-  <section className="post">
+  <section className="posts">
     {genericPosts.map(post => (
       <article className="post__wrap">
         <Post post={post} key={post.id} />

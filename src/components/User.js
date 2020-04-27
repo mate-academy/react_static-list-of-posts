@@ -4,34 +4,22 @@ import PropTypes from 'prop-types';
 const User = ({ name, email, address }) => (
   <div className="post__user">
     <p>
-      <b>
-        Name:
-        {' '}
-      </b>
+      <b>Name: </b>
       {name}
     </p>
     <a href={`mailto: ${email}`}>
       {email}
     </a>
     <p>
-      <b>
-        City:
-        {' '}
-      </b>
+      <b>City: </b>
       {address.city}
     </p>
     <p>
-      <b>
-        Street:
-        {' '}
-      </b>
+      <b>Street: </b>
       {address.street}
     </p>
     <p>
-      <b>
-        Apartment:
-        {' '}
-      </b>
+      <b> Apartment: </b>
       {address.suite}
     </p>
   </div>

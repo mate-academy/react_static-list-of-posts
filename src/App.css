@@ -1,12 +1,14 @@
 
+h2 {
+  margin: 0;
+  padding: 10px;
+}
+
 .App {
   text-align: center;
 }
 
-.post {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.posts {
   margin: 0 15px;
 }
 
@@ -14,16 +16,25 @@
   margin-bottom: 20px;
 }
 
+.post__body {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
 .post__item {
-  width: 620px;
-  padding: 10px;
+  padding: 0 15px;
   text-align: left;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   border-radius: 2%;
 }
 
-.post__title {
-  text-align: center;
+.post__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 5px;
+  margin-bottom: 10px;
 }
 
 .post__comments {
@@ -31,15 +42,16 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 2%;
   margin-top: -10px;
+  margin-bottom: 10px;
   padding: 10px;
 }
 
 .post__comment-title {
   margin: 10px auto;
-  text-align: center;
+  padding-left: 10px;
   font-style: italic;
   color: white;
-  background-color: rgb(80, 80, 80);
+  background-color: rgb(122, 118, 118);
 }
 
 .post__comment-answer {

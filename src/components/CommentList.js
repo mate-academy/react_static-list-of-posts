@@ -5,13 +5,12 @@ import Comment from './Comment';
 const CommentList = ({ comments }) => (
   <div className="post__comments">
     {comments.map(comment => (
-      <div className="post__comment" key={comment.id}>
-        <Comment
-          name={comment.name}
-          body={comment.body}
-          email={comment.email}
-        />
-      </div>
+      <Comment
+        name={comment.name}
+        body={comment.body}
+        email={comment.email}
+        key={comment.id}
+      />
     ))}
   </div>
 );

@@ -6,7 +6,7 @@ import User from './User';
 const Post = ({ post }) => (
   <div className="post__item">
     <h2 className="post__title">{post.title}</h2>
-    <p>{post.body}</p>
+    <p className="post__body">{post.body}</p>
     <User {...post.user} />
     <CommentList comments={post.comments} />
   </div>
