@@ -1,22 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { CommentType } from '../../Typedefs';
 
-export function Post({ post }) {
-  return (
-    <>
-      <h1>
-        {post.title}
-      </h1>
-      <p>
-        {post.body}
-      </p>
-    </>
-  );
-}
+export const Post = ({ post }) => (
+  <div>
+    <h1>
+      {post.title}
+    </h1>
+    <p>
+      {post.body}
+    </p>
+  </div>
+);
 
 Post.propTypes = {
-  post: PropTypes.objectOf({
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  }).isRequired,
+  post: CommentType.isRequired,
 };

@@ -4,27 +4,26 @@ import PropTypes from 'prop-types';
 import { Post } from '../Post/Post';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
+import { CommentType } from '../../Typedefs';
 
-export function PostList({ posts, users, comments }) {
-  return (
-    <ul>
-      {posts.map(post => (
-        <li key={post.id}>
-          <>
-            <Post post={post} />
-            <User user={users.find(user => user.id === post.userId)} />
-            <CommentList
-              comments={comments.filter(coment => coment.postId === post.id)}
-            />
-          </>
-        </li>
-      ))}
-    </ul>
-  );
-}
+export const PostList = ({ posts, users, comments }) => (
+  <ul>
+    {posts.map(post => (
+      <li key={post.id}>
+        <div>
+          <Post post={post} />
+          <User user={users.find(user => user.id === post.userId)} />
+          <CommentList
+            comments={comments.filter(coment => coment.postId === post.id)}
+          />
+        </div>
+      </li>
+    ))}
+  </ul>
+);
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
-  users: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
-  comments: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  posts: PropTypes.arrayOf(CommentType).isRequired,
+  users: PropTypes.arrayOf(CommentType).isRequired,
+  comments: PropTypes.arrayOf(CommentType).isRequired,
 };

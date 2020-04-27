@@ -1,26 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { CommentType } from '../../Typedefs';
 
-export function Comment({ comment }) {
-  return (
-    <>
-      <h3>
-        {comment.name}
-      </h3>
-      <p>
-        {comment.body}
-      </p>
-      <p>
-        {comment.email}
-      </p>
-    </>
-  );
-}
+export const Comment = ({ comment }) => (
+  <div>
+    <h3>
+      {comment.name}
+    </h3>
+    <p>
+      {comment.body}
+    </p>
+    <p>
+      {comment.email}
+    </p>
+  </div>
+);
 
 Comment.propTypes = {
-  comment: PropTypes.objectOf({
-    name: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-  }).isRequired,
+  comment: CommentType.isRequired,
 };
