@@ -1,3 +1,50 @@
 .App {
   text-align: center;
 }
+
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: lightsteelblue;
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
+
+.post__title {
+  text-align: center;
+  color: dimgray;
+  text-transform: uppercase;
+}
+
+.post__text {
+  font-style: italic;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.user__name {
+  color: red;
+  margin: 0;
+}
+
+.user__email {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.comments {
+  background-color: lightgoldenrodyellow;
+  border-radius: 5%;
+  margin-bottom: 15px;
+}
+
+.comments__title {
+  text-decoration: underline;
+}
+
+.comments__text {
+  font-style: italic;
+}
