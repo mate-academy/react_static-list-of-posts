@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Post } from './Post';
 
 export const PostList = ({ posts }) => (
-  <ul className="post--list">
+  <ul className="postList">
     {posts.map(post => (
-      <li key={post.id} className="post--list__item">
+      <li key={post.id} className="postList__item">
         <Post {...post} />
       </li>
     ))}

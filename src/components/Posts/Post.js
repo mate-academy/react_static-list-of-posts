@@ -30,5 +30,5 @@ Post.propTypes = {
 };
 
 Post.defaultProps = {
-  comments: {},
+  comments: [],
 };

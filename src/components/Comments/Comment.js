@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Comment = ({ name, email, body }) => (
-  <>
+  <li className="comments__item">
+    <p className="comment__title">Comment</p>
     <p>
       Name:
       {' '}
@@ -18,7 +19,7 @@ export const Comment = ({ name, email, body }) => (
       {' '}
       {body}
     </p>
-  </>
+  </li>
 );
 
 Comment.propTypes = {

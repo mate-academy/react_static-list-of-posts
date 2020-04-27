@@ -5,10 +5,8 @@ import { Comment } from './Comment';
 export const CommentList = ({ comments }) => (
   <ul className="comments">
     {comments.map(comment => (
-      <li className="comments__item" key={comment.id}>
-        <p className="comment__title">Comment</p>
-        <Comment {...comment} />
-      </li>
+      <Comment {...comment} key={comment.id} />
+
     ))}
 
   </ul>
@@ -16,6 +14,8 @@ export const CommentList = ({ comments }) => (
 
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(
-    PropTypes.object.isRequired,
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
   ).isRequired,
 };

@@ -7,14 +7,11 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const newPosts = posts.map(post => ({
+const postsWithComments = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.id),
 }));
-
-// eslint-disable-next-line no-console
-console.log(newPosts);
 
 const App = () => (
   <div className="App">
@@ -34,7 +31,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <PostList posts={newPosts} />
+    <PostList posts={postsWithComments} />
   </div>
 );
 
