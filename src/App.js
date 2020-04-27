@@ -7,6 +7,14 @@ import comments from './api/comments';
 import users from './api/users';
 import PostList from './components/postList/postList';
 
+const conditionPosts = posts.map(post => (
+  {
+    ...post,
+    comments: comments.filter(comment => (comment.postId === post.id)),
+    user: users.find(user => (user.id === post.userId)),
+  }
+));
+
 const App = () => (
   <>
     <div className="App">
@@ -27,7 +35,7 @@ const App = () => (
         {users.length}
       </p>
     </div>
-    <PostList posts={posts} comments={comments} users={users} />
+    <PostList conditionPosts={conditionPosts} />
   </>
 );
 

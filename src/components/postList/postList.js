@@ -2,24 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from './post/post';
 
-function PostList({ posts, comments, users }) {
+function PostList({ conditionPosts }) {
   return (
     <ul>
-      {posts.map((post) => {
-        const thisPostComments = comments.filter(comment => (
-          comment.postId === post.id
-        ));
-
-        return (
-          <li key={post.id}>
-            <Post
-              post={post}
-              thisPostComments={thisPostComments}
-              users={users}
-            />
-          </li>
-        );
-      })}
+      {conditionPosts.map(post => (
+        <li key={post.id}>
+          <Post
+            post={post}
+          />
+        </li>
+      ))}
 
     </ul>
 
@@ -27,9 +19,8 @@ function PostList({ posts, comments, users }) {
 }
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
-  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
-  users: PropTypes.arrayOf(PropTypes.object).isRequired,
+  conditionPosts: PropTypes.arrayOf(PropTypes.object).isRequired,
+
 };
 
 export default PostList;

@@ -1,30 +1,28 @@
 import React from 'react';
 
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 
-function User({ userId, users }) {
-  const userObj = users.find(user => (user.id === userId));
-
+function User({ user }) {
   return (
     <>
       <strong>
-        {userObj.name}
+        {user.name}
         {' '}
       </strong>
       <span>
-        {userObj.email}
+        {user.email}
         {' '}
       </span>
       <span>
-        {userObj.address.city}
+        {user.address.city}
         {' '}
       </span>
       <span>
-        {userObj.address.street}
+        {user.address.street}
         {' '}
       </span>
       <span>
-        {userObj.address.suite}
+        {user.address.suite}
         {' '}
       </span>
     </>
@@ -32,8 +30,18 @@ function User({ userId, users }) {
 }
 
 User.propTypes = {
-  userId: PropTypes.number.isRequired,
-  users: PropTypes.arrayOf(object).isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      street: PropTypes.string.isRequired,
+      suite: PropTypes.string.isRequired,
+    }).isRequired,
+
+  }).isRequired,
+
 };
 
 export default User;

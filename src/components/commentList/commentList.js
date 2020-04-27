@@ -3,10 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './comment/comment';
 
-function CommentList({ thisPostComments, users }) {
+function CommentList({ comments }) {
   return (
     <ul>
-      {thisPostComments.map(comment => (
+      {comments.map(comment => (
         <li key={comment.id}>
           <Comment comment={comment} />
         </li>
@@ -16,7 +16,7 @@ function CommentList({ thisPostComments, users }) {
 }
 
 CommentList.propTypes = {
-  thisPostComments: PropTypes.arrayOf(
+  comments: PropTypes.arrayOf(
     PropTypes.shape({
       postId: PropTypes.number.isRequired,
       id: PropTypes.number.isRequired,
@@ -25,7 +25,6 @@ CommentList.propTypes = {
       body: PropTypes.string.isRequired,
     }),
   ).isRequired,
-  users: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default CommentList;
