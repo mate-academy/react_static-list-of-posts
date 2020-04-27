@@ -2,21 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Comment = ({ name, body, email }) => (
-  <>
+  <div>
     <h3>
       {name}
     </h3>
     <p>
-      <strong>
-        <a href={`mailot:${email}`}>
-          {email}
-        </a>
-      </strong>
+      <a href={`mailot:${email}`}>
+        {email}
+      </a>
     </p>
     <p>
       {body}
     </p>
-  </>
+  </div>
 );
 
 Comment.propTypes = {

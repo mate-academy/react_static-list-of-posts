@@ -3,16 +3,14 @@ import PropTypes from 'prop-types';
 import './User.css';
 
 const User = ({ name, email, address }) => (
-  <>
+  <div className="personalInfo">
     <h3 className="personalInfo__name">
       {name}
     </h3>
     <p className="personalInfo__email">
-      <strong>
-        <a href={`mailto=${email}`}>
-          {email}
-        </a>
-      </strong>
+      <a href={`mailto=${email}`}>
+        {email}
+      </a>
     </p>
     <address className="personalInfo__address">
       <span>
@@ -22,7 +20,7 @@ const User = ({ name, email, address }) => (
       <span>{address.city}</span>
       <span>{address.zipcode}</span>
     </address>
-  </>
+  </div>
 );
 
 User.propTypes = {

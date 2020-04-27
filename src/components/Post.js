@@ -4,16 +4,16 @@ import User from './User';
 import CommentList from './CommentList';
 
 const Post = ({ title, body, user, comments }) => (
-  <>
+  <div>
     <h2>{title}</h2>
     <p>{body}</p>
-    <section className="post__personalInfo personalInfo">
+    <section className="post__personalInfo">
       <User {...user} />
     </section>
     <section className="comments">
       <CommentList comments={comments} />
     </section>
-  </>
+  </div>
 );
 
 Post.propTypes = {

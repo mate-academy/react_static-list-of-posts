@@ -15,3 +15,7 @@
 .personalInfo__email {
   margin: 8px 0;
 }
+
+.personalInfo__email {
+  font-weight: bold;
+}

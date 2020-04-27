@@ -8,7 +8,7 @@ import users from './api/users';
 
 import PostList from './components/PostList';
 
-const PrerapedPostList = posts.map(post => ({
+const prerapedPostList = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.id),
@@ -17,7 +17,7 @@ const PrerapedPostList = posts.map(post => ({
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList postList={PrerapedPostList} />
+    <PostList postList={prerapedPostList} />
   </div>
 );
 
