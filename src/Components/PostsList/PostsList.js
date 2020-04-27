@@ -3,17 +3,25 @@ import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import './PostsList.scss';
 
-function PostsList({ posts }) {
-  return (
-    <div className="container">
-      {posts.map(post => <Post {...post} key={post.id} />)}
-    </div>
-  );
-}
+const PostsList = ({ posts }) => (
+  <div className="container">
+    {posts.map(post => <Post {...post} key={post.id} />)}
+  </div>
+);
 
 PostsList.propTypes = {
-  posts: PropTypes.objectOf({
-    id: PropTypes.number.isRequired,
+  posts: PropTypes.arrayOf({
+    post: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      comments: PropTypes.string.isRequired,
+      user: PropTypes.objectOf({
+        name: PropTypes.string.isRequired,
+        street: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        address: PropTypes.string.isRequired,
+      }),
+    }),
   }).isRequired,
 };
 

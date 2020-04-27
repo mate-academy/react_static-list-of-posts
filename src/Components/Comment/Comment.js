@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Comment({ comments }) {
-  return (
-    <section className="post__comment">
-      <p className="post__comment-body">{comments.body}</p>
-      <div className="post__comment-author">
-        <a href="lalala" className="post__comment-author-email">
-          {comments.email}
-        </a>
-        <span className="post__comment-author-name">{comments.name}</span>
-      </div>
-    </section>
-  );
-}
+const Comment = ({ comments }) => (
+  <section className="post__comment">
+    <p className="post__comment-body">{comments.body}</p>
+    <div className="post__comment-author">
+      <a href="link" className="post__comment-author-email">
+        {comments.email}
+      </a>
+      <span className="post__comment-author-name">{comments.name}</span>
+    </div>
+  </section>
+);
 
 Comment.propTypes = {
-  comments: PropTypes.objectOf({
-    id: PropTypes.number.isRequired,
+  comments: PropTypes.shape({
+    body: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
   }).isRequired,
 };
 
