@@ -6,15 +6,15 @@ import { Post } from './Post';
 export const PostList = ({ posts }) => (
   <ul className="post__list">
     {posts.map(post => (
-      <li key={post.id} className="post__item">
-        <Post {...post} />
-      </li>
+      <Post {...post} key={post.id} />
     ))}
   </ul>
 );
 
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.object.isRequired,
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }).isRequired,
   ).isRequired,
 };

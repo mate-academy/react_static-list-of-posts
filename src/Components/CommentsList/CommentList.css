@@ -12,6 +12,10 @@
   list-style: none;
 }
 
+.comment__author {
+  font-style: italic;
+}
+
 .comment__name {
   font-weight: bold;
   text-transform: capitalize;

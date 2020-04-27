@@ -4,20 +4,22 @@ import { User } from '../User/User';
 import { CommentList } from '../CommentsList/CommentList ';
 
 export const Post = ({ title, body, user, comments }) => (
-  <article>
-    <h2 className="post__item-title">
-      {title}
-    </h2>
-    <User {...user} />
-    <p className="post__item-body">
-      {body}
-    </p>
+  <li className="post__item">
+    <article>
+      <h2 className="post__title">
+        {title}
+      </h2>
+      <User {...user} />
+      <p className="post__body">
+        {body}
+      </p>
+    </article>
     <CommentList comments={comments} />
-  </article>
+  </li>
 );
 
 Post.defaultProps = {
-  comments: {},
+  comments: [],
 };
 
 Post.propTypes = {

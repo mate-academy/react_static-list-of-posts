@@ -8,9 +8,7 @@ export const CommentList = ({ comments }) => (
     <h3>Comments: </h3>
     <ul className="comment__list">
       {comments.map(comment => (
-        <li key={comment.id} className="comment__item">
-          <Comment {...comment} />
-        </li>
+        <Comment {...comment} key={comment.id} />
       ))}
     </ul>
   </section>
@@ -18,6 +16,8 @@ export const CommentList = ({ comments }) => (
 
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(
-    PropTypes.object.isRequired,
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }).isRequired,
   ).isRequired,
 };

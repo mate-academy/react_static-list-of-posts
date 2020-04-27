@@ -13,11 +13,11 @@
   border-radius: 8px;
 }
 
-.post__item-title {
+.post__title {
   text-transform: capitalize;
 }
 
-.post__item-body {
+.post__body {
   margin: 40px 0;
   font-size: 20px;
 }
