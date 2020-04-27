@@ -2,32 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentList from './CommentList';
 import UserInfo from './UserInfo';
-import { CommentType } from './CommentType';
+import { PropsType } from './CommentType';
 
-const User = ({ name, email, address, comments }) => (
+const User = ({ author, comments }) => (
   <>
     <h4 className="author">
       Author:&nbsp;
-      {name}
+      {author.name}
     </h4>
     <p className="email">
       Email:&nbsp;
-      {email}
+      {author.email}
     </p>
-    <UserInfo {...address} />
+    <UserInfo {...author.address} />
     <CommentList comments={comments} />
   </>
 );
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  comments: CommentType,
-  address: PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.object,
-  ]).isRequired),
+  author: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.object,
+    ]).isRequired,
+  ).isRequired,
+  comments: PropsType,
 };
 
 export default User;

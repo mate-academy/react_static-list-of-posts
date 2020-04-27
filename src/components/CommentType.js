@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const CommentType = PropTypes.arrayOf(PropTypes.objectOf(
+export const PropsType = PropTypes.arrayOf(PropTypes.objectOf(
   PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

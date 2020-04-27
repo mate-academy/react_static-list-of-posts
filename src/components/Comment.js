@@ -3,19 +3,17 @@ import PropTypes from 'prop-types';
 
 const Comment = ({ name, body, email }) => (
   <>
-    <ul>
-      <li className="comment">
-        <p className="author">
-          Сomment author:&nbsp;
-          {name}
-        </p>
-        <p>{body}</p>
-        <p className="email">
-          Email:&nbsp;
-          {email}
-        </p>
-      </li>
-    </ul>
+    <div className="comment">
+      <p className="author">
+        Сomment author:&nbsp;
+        {name}
+      </p>
+      <p>{body}</p>
+      <p className="email">
+        Email:&nbsp;
+        {email}
+      </p>
+    </div>
   </>
 );
 
