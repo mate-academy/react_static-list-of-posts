@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .posts {
@@ -7,6 +10,8 @@
     margin: 20px;
     border: 1px solid #03175d;
     border-radius: 30px;
+    width: 45vw;
+    overflow: hidden;
   }
   &_title {
     font-style: italic;
@@ -31,7 +36,11 @@
       margin-right: 50px;
     }
     &_name {
-      margin: 5px;
+      padding: 16px 0;
+      margin-top: 0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      background-color: #c35451;
     }
     &_email {
       margin: 5px;
@@ -57,6 +66,15 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
       }
+    }
+  }
+}
+
+.post {
+  &__comment {
+    background-color: bisque;
+    &_email {
+      background-color: #cbb096;
     }
   }
 }

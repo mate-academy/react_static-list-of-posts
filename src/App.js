@@ -16,7 +16,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Static list of posts</h1>
       <PostList post={resultPost} />
     </div>
   );
