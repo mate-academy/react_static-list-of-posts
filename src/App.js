@@ -31,7 +31,7 @@ const App = () => (
         {users.length}
       </p>
     </div>
-    <PostList postsList={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 
