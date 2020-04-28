@@ -1,0 +1,9 @@
+.posts-list__post {
+  width: 900px;
+  border: 2px solid black;
+  border-radius: 50px;
+  list-style: none;
+  padding: 10px;
+  background-color: #47474A;
+  margin-bottom: 15px;
+}
