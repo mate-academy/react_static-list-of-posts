@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 import './User.css';
 
 export const User = ({ name, email, address }) => (
-  <div className="posts-list__post__author">
-    <p className="name">
+  <div className="posts-list__post-author">
+    <p>
       <b>Author</b>: {name}
     </p>
-    <p className="email">
+    <p>
       Email:
       <em>
         <a href={email}> {email}</a>
       </em>
     </p>
-    <p className="adress">
+    <p>
       From: {address.city}
     </p>
   </div>

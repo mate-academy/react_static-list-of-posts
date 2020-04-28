@@ -6,19 +6,20 @@ import './Post.css';
 import { CommentsList } from '../CommentsList/CommentsList';
 import { User } from '../User/User';
 
-export const Post = ({ title, body, authorOfPost, commentsToPost }) => (
-  <>
+export const Post = ({ title, body, user, comments }) => (
+  <div>
     <p className="posts-list__post__title">{title}</p>
-    <User {...authorOfPost} />
+    <User {...user} />
     <p className="posts-list__post__body">{body}</p>
-    <CommentsList comments={commentsToPost} />
-  </>
+    <p className="comments">Comments:</p>
+    <CommentsList comments={comments} />
+  </div>
 );
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  authorOfPost: PropTypes.shape({
+  user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     address: PropTypes.shape({
@@ -28,7 +29,7 @@ Post.propTypes = {
       zipcode: PropTypes.string.isRequired,
     }).isRequired
   }).isRequired,
-  commentsToPost: PropTypes.arrayOf(PropTypes.shape({
+  comments: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
