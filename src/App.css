@@ -1,3 +1,24 @@
 .App {
   text-align: center;
+  background: aliceblue;
+}
+
+.post__list {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.user {
+  background: lightgoldenrodyellow;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.comment {
+  border: 1px solid lightblue;
+  background: antiquewhite;
+  border-radius: 10px;
 }
