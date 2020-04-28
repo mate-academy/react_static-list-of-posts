@@ -1,0 +1,14 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 68px;
+}
+
+.post-list__title {
+  margin-bottom: 48px;
+
+  border-bottom: 1px solid #000;
+  text-transform: uppercase;
+}
