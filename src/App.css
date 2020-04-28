@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.post {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.post__card {
+  border: 2px solid blue;
+}
