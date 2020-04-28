@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import User from './User';
+import CommentList from './CommentList';
 
 const Post = ({ title, body, comments, author }) => (
-  <>
-    <li className="list__userInfo">
-      <h3 className="title">{title}</h3>
-      <p className="body">{body}</p>
-      <User {...author} comments={comments} />
-    </li>
-  </>
+  <li className="list__userInfo">
+    <h3 className="title">{title}</h3>
+    <p className="body">{body}</p>
+    <User {...author} comments={comments} />
+    <CommentList comments={comments} />
+  </li>
 );
 
 Post.propTypes = {

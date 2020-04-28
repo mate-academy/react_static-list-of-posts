@@ -1,36 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentList from './CommentList';
 
 // eslint-disable-next-line max-len
-const User = ({ name, email, address: { city, street, zipcode, suite }, comments }) => (
-  <>
-    <h4 className="author">
-      Author:&nbsp;
+const User = ({ name, email, address }) => (
+  <div className="personalInfo">
+    <h3 className="personalInfo__name">
       {name}
-    </h4>
-    <p className="email">
-      Email:&nbsp;
-      {email}
+    </h3>
+    <p className="personalInfo__email">
+      <a href={`mailto=${email}`}>
+        {email}
+      </a>
     </p>
-    <p className="address">
-      City:&nbsp;
-      {city}
-      , zipcode:&nbsp;
-      {zipcode}
-      , street:&nbsp;
-      {street}
-      , suite:&nbsp;
-      {suite}
-    </p>
-    <CommentList comments={comments} />
-  </>
+    <address className="personalInfo__address">
+      <span>
+        {address.street}
+        ,&nbsp;
+        {address.suite}
+        ,&nbsp;
+      </span>
+      <span>
+        {address.city}
+        ,&nbsp;
+      </span>
+      <span>
+        {address.zipcode}
+        ,&nbsp;
+      </span>
+    </address>
+  </div>
 );
 
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
   address: PropTypes.objectOf(PropTypes.array).isRequired,
 };
 
