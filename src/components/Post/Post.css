@@ -1,0 +1,9 @@
+.posts_item {
+  background-color: gray;
+  padding: 10px;
+}
+
+.posts_title {
+  margin: 0 auto;
+  text-transform: uppercase;
+}
