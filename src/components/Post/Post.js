@@ -4,30 +4,24 @@ import User from '../User/User';
 import CommentsList from '../CommentsList/CommentsList';
 import './Post.css';
 
-function Post({ id, title, body, user, comments }) {
-  return (
-    <div key={id} className="post__element">
+const Post = ({ title, body, user, comments }) => (
+  <div className="post__element">
 
-      <div className="post__item">
-        <h3 className="post__title">
-          {title}
-        </h3>
-        <p className="post__body">
-          {body}
-        </p>
-      </div>
-
-      <User
-        name={user.name}
-        email={user.email}
-        address={user.address}
-      />
-
-      <CommentsList comments={comments} />
-
+    <div className="post__item">
+      <h3 className="post__title">
+        {title}
+      </h3>
+      <p className="post__body">
+        {body}
+      </p>
     </div>
-  );
-}
+
+    <User {...user} />
+
+    <CommentsList comments={comments} />
+
+  </div>
+);
 
 export default Post;
 

@@ -11,15 +11,9 @@ const preparedPosts = posts.map(post => (
   {
     ...post,
     user: users.find(user => user.id === post.userId),
-  }
-)).map(post => (
-  {
-    ...post,
     comments: comments.filter(comment => post.id === comment.postId),
   }
 ));
-
-// console.log(preparedPosts);
 
 const App = () => (
   <div className="App">
