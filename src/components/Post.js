@@ -7,11 +7,10 @@ import comments from '../api/comments';
 
 const Post = ({ title, body, user }) => (
   <li className="post-card">
-    <br />
-    <strong>{title}</strong>
+    <h2>{title}</h2>
     <p>{body}</p>
     <User user={user} />
-    <p className="comment">
+    <p>
       <span className="comments__heading">Comments: </span>
       {comments.map(comment => (
         <Comments {...comment} key={comment.id} />

@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 
 const Comments = ({ name, body, email }) => (
   <div className="comments">
-    <p>
-      <strong>{name}</strong>
-    </p>
+    <p className="bold-font">{name}</p>
     <p>{body}</p>
-    <i>{email}</i>
-    <br />
+    <p className="email">{email}</p>
   </div>
 );
 

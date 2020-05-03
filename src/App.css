@@ -33,3 +33,17 @@ body {
   font-weight: bold;
   font-size: 20px;
 }
+
+.email {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.user__name {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.bold-font {
+  font-weight: 600;
+}

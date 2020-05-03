@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 const User = ({ user }) => (
   <div className="user-info">
-    <strong>User: </strong>
-    <i className="user__name">{user.name}</i>
-    <p>
-      <strong>User-email: </strong>
+    <h3>User: </h3>
+    <p className="user__name">{user.name}</p>
+    <div>
+      <p className="bold-font">User-email: </p>
       {user.email}
-    </p>
+    </div>
     <address>
-      <strong>User-address: </strong>
+      <p className="bold-font">User-address: </p>
       {`${user.address.suite},
        ${user.address.street},
        ${user.address.city}`
