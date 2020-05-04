@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const User = ({ user }) => (
-  <div className="user-info">
+  <div>
     <h3>User: </h3>
     <p className="user__name">{user.name}</p>
     <div>
-      <p className="bold-font">User-email: </p>
+      <span className="bold-font">User-email: </span>
       {user.email}
     </div>
     <address>
-      <p className="bold-font">User-address: </p>
+      <span className="bold-font">User-address: </span>
       {`${user.address.suite},
        ${user.address.street},
        ${user.address.city}`

@@ -5,8 +5,8 @@ import Post from './Post';
 
 const PostList = ({ preparedPosts }) => (
   <ul className="post-list">
-    {preparedPosts.map(posts => (
-      <Post {...posts} key={posts.id} />
+    {preparedPosts.map(post => (
+      <Post {...post} key={post.id} />
     ))}
   </ul>
 );
