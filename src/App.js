@@ -5,6 +5,15 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import { PostList } from './components/PostList';
+
+const preparedList = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  commentList: comments.filter(
+    comment => comment.postId === post.id,
+  ),
+}));
 
 const App = () => (
   <div className="App">
@@ -13,17 +22,15 @@ const App = () => (
     <p>
       <span>posts: </span>
       {posts.length}
-    </p>
 
-    <p>
-      <span>comments: </span>
+      <span> comments: </span>
       {comments.length}
-    </p>
 
-    <p>
-      <span>Users: </span>
+      <span> Users: </span>
       {users.length}
     </p>
+
+    <PostList pList={preparedList} />
   </div>
 );
 
