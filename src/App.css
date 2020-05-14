@@ -1,3 +1,28 @@
 .App {
   text-align: center;
+  background-color: burlywood;
+  width: 900px;
+}
+
+.posts__list {
+  padding: 50px;
+}
+
+.post__item {
+  text-align: justify;
+  background-color: cornsilk;
+  padding: 20px;
+}
+
+.post__item-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.post__comment {
+  background-color: darkgray;
+}
+
+.post__user {
+  padding-left: 1cm;
 }
