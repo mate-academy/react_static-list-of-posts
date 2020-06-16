@@ -1,0 +1,18 @@
+.comment {
+  padding: 5px;
+  border-radius: 5px;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment__title {
+  margin: 0 0 5px;
+}
+
+.comment__email {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.comment__email:hover {
+  transform: translate(10%);
+}

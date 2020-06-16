@@ -1,0 +1,14 @@
+.post__author {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+
+.post__email {
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.post__email:hover {
+  transform: translate(10%);
+}
