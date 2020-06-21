@@ -1,0 +1,14 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  padding-bottom: 20px;
+
+  border-radius: 25px;
+  background-color: rgb(184, 248, 250);
+}
+
+.comment:not(:last-child) {
+  margin-bottom: 10px;
+}
