@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapePostItem } from '../Shapes';
 import PostComments from '../PostComments/PostComments';
 import './PostItem.css';
 
@@ -16,14 +16,5 @@ const PostItem = ({ address, author, body, comments, email, id, title, userId })
   </li>
 );
 
-PostItem.propTypes = {
-  body: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  comments: PropTypes.string.isRequired,
-  userId: PropTypes.number.isRequired,
-};
+PostItem.propTypes = ShapePostItem.isRequired;
 export default PostItem;

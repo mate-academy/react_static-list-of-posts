@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapePostList } from '../Shapes';
 import PostItem from '../PostItem/PostItem';
 import './PostsList.css';
 
@@ -7,13 +7,11 @@ const PostsList = props => (
   <ul className="posts">
     {
       props.list.map(post => (
-        <PostItem {...post} />
+        <PostItem key={post.id} {...post} />
       ))
     }
   </ul>
 );
 
-PostsList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+PostsList.propTypes = ShapePostList.isRequired;
 export default PostsList;
