@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { ShapeAddress } from '../Shapes/ShapeUser';
 
 export const Address = ({ address }) => (
   <div>
@@ -12,6 +12,4 @@ export const Address = ({ address }) => (
   </div>
 );
 
-Address.propTypes = {
-  address: PropTypes.objectOf(Object).isRequired,
-};
+Address.propTypes = ShapeAddress.isRequired;

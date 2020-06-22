@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../comment/Comment';
 import './Comments.css';
+import { ShapeComment } from '../Shapes/ShapeComment';
 
 export const Comments = ({ comments }) => (
   <div className="comments">
@@ -12,5 +13,5 @@ export const Comments = ({ comments }) => (
 );
 
 Comments.propTypes = {
-  comments: PropTypes.arrayOf(Object).isRequired,
+  comments: PropTypes.arrayOf(ShapeComment).isRequired,
 };
