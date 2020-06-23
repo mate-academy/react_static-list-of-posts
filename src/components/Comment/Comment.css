@@ -1,0 +1,12 @@
+.alert {
+  max-width: 600px;
+}
+
+.comment-heading {
+  font-size: 20px;
+}
+
+.comment-email {
+  display: block;
+  margin-bottom: 5px;
+}
