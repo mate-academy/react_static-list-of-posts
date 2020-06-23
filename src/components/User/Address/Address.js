@@ -1,5 +1,5 @@
 import React from 'react';
-import PropType from 'prop-types';
+import { addressShape } from '../../../Shapes/AddressShape';
 
 export const Address = props => (
   <div>
@@ -12,10 +12,4 @@ export const Address = props => (
   </div>
 );
 
-Address.propTypes = {
-  street: PropType.string.isRequired,
-  suite: PropType.string.isRequired,
-  city: PropType.string.isRequired,
-  zipcode: PropType.string.isRequired,
-  geo: PropType.objectOf(PropType.string).isRequired,
-};
+Address.propTypes = addressShape.isRequired;
