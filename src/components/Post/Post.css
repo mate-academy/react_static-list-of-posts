@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.post {
+  font-family: Oswald, sans-serif;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+}
+
+.post__headline {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.post__article {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.post__content {
+  font-size: 15px;
+}

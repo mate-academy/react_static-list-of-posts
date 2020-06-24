@@ -1,0 +1,16 @@
+.comments__list {
+  list-style: none;
+  width: 500px;
+  float: right;
+}
+
+.comments__list_item {
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 2px dotted #6b6a69;
+}
+
+.comments__list_content {
+  width: 300px;
+  margin: 0 auto;
+}
