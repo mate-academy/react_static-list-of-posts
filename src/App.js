@@ -5,6 +5,17 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import PostList from './components/PostList';
+
+function getPostsUsersComments(postsList, commentsList, usersList) {
+  return postsList.map(post => ({
+    ...post,
+    user: usersList.find(el => el.id === post.userID),
+    comments: commentsList.filter(comment => comment.postId === post.id),
+  }));
+}
+
+const postsWithUsersAndComments = getPostsUsersComments(posts, comments, users);
 
 const App = () => (
   <div className="App">
@@ -24,6 +35,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+    <PostList post={postsWithUsersAndComments} />
   </div>
 );
 
