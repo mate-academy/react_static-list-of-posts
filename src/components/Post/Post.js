@@ -1,4 +1,6 @@
 import React from 'react';
+
+import './Post.css';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 import { PostTypes } from '../Shape/PostTypes';

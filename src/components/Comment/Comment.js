@@ -1,17 +1,20 @@
 import React from 'react';
+import './Comment.css';
 import { CommentsTypes } from '../Shape/CommentsTypes';
 
 export const Comment = props => (
   <>
-    <li className="comments__item comments__item--name">
+    <p className="comments__item comments__item--name">
       {props.name}
-    </li>
-    <li className="comments__item comments__item--email">
+    </p>
+    <p className="comments__item comments__item--body">
       {props.body}
-    </li>
-    <li className="comments__item comments__item--address">
-      {props.email}
-    </li>
+    </p>
+    <p className="comments__item comments__item--email">
+      <a href="# ">
+        {props.email}
+      </a>
+    </p>
   </>
 );
 

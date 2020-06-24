@@ -1,4 +1,6 @@
 import React from 'react';
+
+import './User.css';
 import { UserAddress } from '../UserAddress.js/UserAddress';
 import { UserTypes } from '../Shape/UserTypes';
 
@@ -8,7 +10,9 @@ export const User = props => (
       {props.name}
     </li>
     <li className="user__item user__item--email">
-      {props.email}
+      <a href="# ">
+        {props.email}
+      </a>
       <UserAddress {...props.address} />
     </li>
   </>
