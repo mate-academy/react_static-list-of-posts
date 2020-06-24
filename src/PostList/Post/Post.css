@@ -1,0 +1,9 @@
+.Post {
+  border: 2px slategrey solid;
+  margin: 10px;
+  padding: 10px;
+}
+
+.Post__tittle {
+  text-align: center;
+}
