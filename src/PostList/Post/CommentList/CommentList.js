@@ -3,7 +3,7 @@ import './CommentList.css';
 import comments from '../../../api/comments';
 
 export const CommentList = postId => (
-  <>
+  <div className="CommentList">
     {comments.map((comment) => {
       const title = (comment.name[0]).toUpperCase()
         + (comment.name).slice(1);
@@ -26,5 +26,5 @@ export const CommentList = postId => (
         <div key={comment.id} />
       );
     })}
-  </>
+  </div>
 );

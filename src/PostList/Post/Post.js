@@ -12,9 +12,7 @@ export const Post = ({ post }) => {
     <>
       <h3 className="Post__tittle">{tittle}</h3>
       <p>{message}</p>
-      <div className="CommentList">
-        <User userId={post.userId} />
-      </div>
+      <User userId={post.userId} />
       <CommentList postId={post.id} />
     </>
   );
