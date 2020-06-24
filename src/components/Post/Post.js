@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './Post.css';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
+import { commentListShape } from '../Shapes/CommentListShape';
+import { userShape } from '../Shapes/UserShape';
 
 const Post = props => (
   <div className="post">
@@ -18,23 +20,8 @@ const Post = props => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape({
-    id: PropTypes.number,
-    address: PropTypes.object,
-    company: PropTypes.object,
-    email: PropTypes.string,
-    name: PropTypes.string,
-    phone: PropTypes.string,
-    username: PropTypes.string,
-    website: PropTypes.string,
-  }).isRequired,
-  comment: PropTypes.arrayOf(PropTypes.shape({
-    body: PropTypes.string,
-    email: PropTypes.string,
-    id: PropTypes.number,
-    name: PropTypes.string,
-    posId: PropTypes.number,
-  })).isRequired,
+  user: userShape.isRequired,
+  comment: PropTypes.arrayOf(commentListShape).isRequired,
 };
 
 export default Post;

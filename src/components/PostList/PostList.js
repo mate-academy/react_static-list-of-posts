@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import './PostList.css';
+import { postListShape } from '../Shapes/PostListShape';
 
 const PostList = ({ preparedPosts }) => (
   <div className="posts__list">
@@ -12,14 +13,7 @@ const PostList = ({ preparedPosts }) => (
 );
 
 PostList.propTypes = {
-  preparedPosts: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    body: PropTypes.string,
-    comment: PropTypes.array,
-    userId: PropTypes.number,
-    title: PropTypes.string,
-    user: PropTypes.object,
-  })).isRequired,
+  preparedPosts: PropTypes.arrayOf(postListShape).isRequired,
 };
 
 export default PostList;

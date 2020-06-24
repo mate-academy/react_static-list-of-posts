@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Address from '../Address/Address';
 import './User.css';
+import { addressShape } from '../Shapes/AddressShape';
 
 const User = props => (
   <div className="user">
@@ -18,13 +19,7 @@ const User = props => (
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    city: PropTypes.string,
-    geo: PropTypes.object,
-    street: PropTypes.string,
-    suite: PropTypes.string,
-    zipcode: PropTypes.string,
-  }).isRequired,
+  address: addressShape.isRequired,
 };
 
 export default User;
