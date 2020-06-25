@@ -23,7 +23,7 @@ export const CommentList = postId => (
       }
 
       return (
-        <div key={comment.id} />
+        <React.Fragment key={comment.id} />
       );
     })}
   </div>
