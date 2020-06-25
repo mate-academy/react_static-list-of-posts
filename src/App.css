@@ -1,3 +1,15 @@
 .App {
   text-align: center;
 }
+
+.comments {
+  color: red;
+}
+
+.item {
+  border: 1px black solid;
+}
+
+.list {
+  list-style: none;
+}
