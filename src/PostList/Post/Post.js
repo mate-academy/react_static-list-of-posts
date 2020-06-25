@@ -19,11 +19,10 @@ export const Post = ({ post }) => {
 };
 
 Post.propTypes = {
-  post: PropTypes.objectOf(PropTypes.shape({
+  post: PropTypes.shape({
     userId: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    slice: PropTypes.func.isRequired,
-  })).isRequired,
+  }).isRequired,
 };
