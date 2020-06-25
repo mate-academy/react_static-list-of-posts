@@ -1,0 +1,14 @@
+.post__item {
+  width: 800px;
+  margin: 0 auto 20px;
+  border: 1px solid;
+}
+
+.post__top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.post__titles {
+  width: 400px;
+}
