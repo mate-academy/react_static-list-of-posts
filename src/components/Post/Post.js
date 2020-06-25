@@ -1,12 +1,11 @@
 import React from 'react';
-
+import './Post.css';
 import { PostShape } from '../shapes';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 
 const Post = ({ title, body, comments, user }) => (
   <div className="post">
-    <User {...user} />
     <div className="post__body">
       <h2 className="post__title">
         {title}
@@ -14,8 +13,11 @@ const Post = ({ title, body, comments, user }) => (
       <p className="post__text">
         {body}
       </p>
+      <User {...user} />
     </div>
-    <CommentList comments={comments} />
+    <div className="post__comments">
+      <CommentList comments={comments} />
+    </div>
   </div>
 );
 
