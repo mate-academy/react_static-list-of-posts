@@ -1,6 +1,6 @@
 import React from 'react';
 import './Comment.css';
-import { commentShape } from '../shapes';
+import { CommentShape } from '../shapes';
 
 const Comment = ({ comment }) => (
   <li className="post__comments-item">
@@ -17,6 +17,6 @@ const Comment = ({ comment }) => (
   </li>
 );
 
-Comment.propTypes = commentShape.isRequired;
+Comment.propTypes = CommentShape.isRequired;
 
 export { Comment };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Post.css';
-import { postShape, commentShape, userShape } from '../shapes';
+import { PostShape, CommentShape, UserShape } from '../shapes';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 
@@ -15,9 +15,9 @@ const Post = ({ post }) => (
 );
 
 Post.propTypes = PropTypes.arrayOf(
-  postShape,
-  commentShape,
-  userShape,
+  PostShape,
+  CommentShape,
+  UserShape,
 ).isRequired;
 
 export { Post };

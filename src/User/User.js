@@ -1,6 +1,6 @@
 import React from 'react';
 import './User.css';
-import { userShape } from '../shapes';
+import { UserShape } from '../shapes';
 
 const User = ({ name, email, address }) => (
   <div className="post__author">
@@ -25,6 +25,6 @@ const User = ({ name, email, address }) => (
   </div>
 );
 
-User.propTypes = userShape.isRequired;
+User.propTypes = UserShape.isRequired;
 
 export { User };

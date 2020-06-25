@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { commentShape } from '../shapes';
+import { CommentShape } from '../shapes';
 import './CommentList.css';
 import { Comment } from '../Comment/Comment';
 
@@ -13,7 +13,7 @@ const CommentList = ({ comments }) => (
 
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(
-    commentShape,
+    CommentShape,
   ).isRequired,
 };
 
