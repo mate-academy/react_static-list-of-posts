@@ -1,0 +1,27 @@
+.comments__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 1.25em 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.comments__item:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.comments__item-title {
+  padding: 0 40px 0.94em 0;
+  font-size: 1.3em;
+}
+
+.comments__item-email {
+  margin-left: auto;
+  padding-bottom: 0.94em;
+  font-style: italic;
+}
+
+.comments__item-body {
+  width: 100%;
+}

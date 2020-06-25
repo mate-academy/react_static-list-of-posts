@@ -1,0 +1,11 @@
+.comments {
+  padding: 0.63em 0 0 1.25em;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 451px) {
+  .comments {
+    font-size: 16px;
+  }
+}
