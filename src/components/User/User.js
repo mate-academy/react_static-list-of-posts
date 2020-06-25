@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Address } from './Address/Address';
-import { addressShape } from '../../Shapes/AddressShape';
+import { AddressShape } from '../../Shapes/AddressShape';
 
 export const User = (props) => {
   const { name, email, address } = props;
@@ -9,10 +9,8 @@ export const User = (props) => {
   return (
     <div className="user">
       <span>
-        {name}
-        &nbsp;
+        { `${name} ${email}`}
       </span>
-      <span>{email}</span>
       <Address {...address} />
     </div>
   );
@@ -21,5 +19,5 @@ export const User = (props) => {
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: addressShape.isRequired,
+  address: AddressShape.isRequired,
 };

@@ -1,15 +1,15 @@
 import React from 'react';
-import { addressShape } from '../../../Shapes/AddressShape';
+import { AddressShape } from '../../../Shapes/AddressShape';
 
-export const Address = props => (
+export const Address = ({ street, suite, city, zipcode, geo }) => (
   <div>
-    <span>{`Street: ${props.street}, `}</span>
-    <span>{`Suite: ${props.suite}, `}</span>
-    <span>{`City: ${props.city}, `}</span>
-    <span>{`Zipcode: ${props.zipcode}, `}</span>
-    <span>{`Latitude: ${props.geo.lat}, `}</span>
-    <span>{`Longitude: ${props.geo.lng}`}</span>
+    <span>{`Street: ${street}, `}</span>
+    <span>{`Suite: ${suite}, `}</span>
+    <span>{`City: ${city}, `}</span>
+    <span>{`Zipcode: ${zipcode}, `}</span>
+    <span>{`Latitude: ${geo.lat}, `}</span>
+    <span>{`Longitude: ${geo.lng}`}</span>
   </div>
 );
 
-Address.propTypes = addressShape.isRequired;
+Address.propTypes = AddressShape.isRequired;
