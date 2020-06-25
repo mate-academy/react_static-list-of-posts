@@ -1,0 +1,23 @@
+.posts__item {
+  padding: 20px;
+}
+
+.posts__item:not(:last-of-type) {
+  border-bottom: 20px solid #ececec;
+}
+
+.posts__item-title {
+  padding-bottom: 0.95em;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.posts__item-body {
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 451px) {
+  .posts__item {
+    padding: 30px;
+  }
+}

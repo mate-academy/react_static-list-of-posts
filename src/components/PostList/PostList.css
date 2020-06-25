@@ -1,0 +1,30 @@
+.posts {
+  margin: 0 auto;
+  width: 90%;
+  min-width: 320px;
+  max-width: 1000px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  list-style-type: none;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 451px) {
+  .posts {
+    margin: 10px auto;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .posts {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .posts {
+    margin: 30px auto;
+  }
+}
