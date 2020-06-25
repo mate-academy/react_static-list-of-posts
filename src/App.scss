@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  border-radius: 15px;
+  border: 2px solid grey;
+
+  &__title,
+  &__body {
+    display: block;
+    background-color: white;
+    text-align: center;
+    margin: 10px auto;
+  }
+}
+
+.user__info {
+  color: red;
+  text-align: right;
+  margin-right: 50px;
+}
+
+.comments {
+  display: flex;
+}
+
+.comment {
+  border: 2px solid blue;
+  margin: 10px;
+
+  &__name {
+    text-transform: uppercase;
+  }
+}
