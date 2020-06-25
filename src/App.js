@@ -5,6 +5,20 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import PostList from './components/PostList/PostList';
+
+const preparedPosts = [...posts].map((post) => {
+  const user = users.find(item => item.id === post.userId);
+  const postComments = [...comments].filter(
+    comment => comment.postId === post.id,
+  );
+
+  return {
+    ...post,
+    user,
+    postComments,
+  };
+});
 
 const App = () => (
   <div className="App">
@@ -24,6 +38,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+    <PostList posts={preparedPosts} />
   </div>
 );
 
