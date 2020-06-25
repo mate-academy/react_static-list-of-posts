@@ -1,3 +1,32 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+}
+
+.wrapper {
+  text-align: left;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  margin: 10px auto;
+  border: 3px solid red;
+  background-color: rgb(213, 222, 223);
+}
+
+.wrapper__caption {
+  font-weight: bold;
+  color: rgb(10, 10, 138);
+}
+
+.wrapper__list {
+  font-style: italic;
+}
+
+.wrapper__list-head {
+  font-weight: bold;
 }
