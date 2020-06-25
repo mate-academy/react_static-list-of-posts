@@ -1,9 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { User, userShape } from '../User/User';
-import { CommentList, commentListShape } from '../CommentList/CommentList';
 
-export const Post = ({ title, body, user, comments }) => (
+import { PostShape } from '../shapes';
+import { User } from '../User/User';
+import { CommentList } from '../CommentList/CommentList';
+
+const Post = ({ title, body, comments, user }) => (
   <div className="post">
     <User {...user} />
     <div className="post__body">
@@ -14,15 +15,10 @@ export const Post = ({ title, body, user, comments }) => (
         {body}
       </p>
     </div>
-    <CommentList {...comments} />
+    <CommentList comments={comments} />
   </div>
 );
 
-export const postShape = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  user: { ...userShape },
-  comments: { ...commentListShape },
-});
+export { Post };
 
-Post.propTypes = { ...postShape };
+Post.propTypes = PostShape;
