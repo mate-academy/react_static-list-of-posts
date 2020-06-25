@@ -6,7 +6,7 @@ import CommentList from './CommentList';
 function PostItem({ postItem }) {
   return (
     <div>
-      <div><User {...postItem.user} /></div>
+      <div><User user={postItem.user} /></div>
       <h2>{postItem.title}</h2>
       <p>{postItem.body}</p>
       <div>

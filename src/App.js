@@ -10,7 +10,7 @@ import PostList from './components/PostList';
 function getPostsUsersComments(postsList, commentsList, usersList) {
   return postsList.map(post => ({
     ...post,
-    user: usersList.find(el => el.id === post.userID),
+    user: usersList.find(el => el.id === post.userId),
     comments: commentsList.filter(comment => comment.postId === post.id),
   }));
 }

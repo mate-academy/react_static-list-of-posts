@@ -1,25 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function User({ name, email, address }) {
+export default function User({ user }) {
   return (
     <>
       <p>
         {'Name: '}
-        {name}
+        {user.name}
       </p>
       <p>
         {'Email: '}
-        {email}
+        {user.email}
+      </p>
+      <p>
+        {'Adress: '}
+        {user.address.street}
       </p>
     </>
   );
 }
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    street: PropTypes.string,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      street: PropTypes.string,
+    }).isRequired,
   }).isRequired,
 };

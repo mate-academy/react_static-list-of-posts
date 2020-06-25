@@ -6,10 +6,9 @@ export default function CommentList({ comments }) {
   return (
     <table>
       <thead>
-        <td>Title</td>
         <td>Name</td>
         <td>Email</td>
-        <td>Status</td>
+        <td>Comment</td>
       </thead>
       <tbody>
         {comments.map(item => (
