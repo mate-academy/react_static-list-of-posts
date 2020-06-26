@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShapeComment } from '../Shapes/ShapeComment';
+import './Comment.css';
 
 export const Comment = ({ name, email, body }) => (
   <div className="comment">

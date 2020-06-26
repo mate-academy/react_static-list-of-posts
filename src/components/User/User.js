@@ -1,16 +1,17 @@
 import React from 'react';
 import { ShapeUser } from '../Shapes/ShapeUser';
+import './User.css';
 
 export const User = ({ name, email, address }) => (
   <div className="user">
     <div className="user__name">
       {name}
     </div>
-    <div className="user__email">
+    <a href="mailto" className="user__email">
       {email}
-    </div>
+    </a>
     <div className="user___address">
-      {`${address.street} ${address.city}`}
+      {`${address.street}, ${address.city}`}
     </div>
   </div>
 );

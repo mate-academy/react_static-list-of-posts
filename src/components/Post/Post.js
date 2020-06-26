@@ -9,19 +9,22 @@ import './Post.css';
 // }));
 
 export const Post = ({ title, body, user, comments }) => (
-  <div className="post__item">
-    <div className="post__author">
-      <img src="/images/user.png" alt="user" className="post__avatar" />
-      <User {...user} />
-    </div>
-    <div className="post__content">
-      <div className="post__title">
-        {title}
+  <div className="post__wrapper">
+    <div className="post__item">
+      <div className="post__author">
+        <img src="/images/user.png" alt="user" className="post__avatar" />
+        <User {...user} />
       </div>
-      <div className="post__body">
-        {body}
+      <div className="post__content">
+        <h3 className="post__title">
+          {title}
+        </h3>
+        <p className="post__body">
+          {body}
+        </p>
       </div>
     </div>
+    <div className="post__comments">Comments:</div>
     <CommentList comments={comments} />
   </div>
 );
