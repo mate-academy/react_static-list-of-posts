@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 // import { Fragment } from 'react';
-import { postAuthorShape, postsCommentsShape } from './Shapes';
+import { postShape } from './Shapes';
 import { Author } from './Author';
 import { Comments } from './Comments';
 import { Text } from './Text';
@@ -21,10 +20,4 @@ export const Post = (props) => {
   );
 };
 
-Post.propTypes = {
-  postAuthor: postAuthorShape.isRequired,
-  postId: PropTypes.number.isRequired,
-  postTitle: PropTypes.string.isRequired,
-  postText: PropTypes.string.isRequired,
-  comments: postsCommentsShape.isRequired,
-};
+Post.propTypes = postShape.isRequired;

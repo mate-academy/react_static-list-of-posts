@@ -41,3 +41,11 @@ export const postsCommentsShape = PropTypes.arrayOf(PropTypes.shape({
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 }));
+
+export const postShape = PropTypes.shape({
+  postAuthor: postAuthorShape.isRequired,
+  postId: PropTypes.number.isRequired,
+  postTitle: PropTypes.string.isRequired,
+  postText: PropTypes.string.isRequired,
+  comments: postsCommentsShape.isRequired,
+});
