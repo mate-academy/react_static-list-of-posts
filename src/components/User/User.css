@@ -1,0 +1,8 @@
+.user__name {
+  font-weight: 500;
+}
+
+.user__email {
+  color: rgb(255, 74, 150);
+  text-decoration: none;
+}

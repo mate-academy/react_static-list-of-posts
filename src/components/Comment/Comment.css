@@ -1,0 +1,24 @@
+.comment {
+  padding: 15px;
+
+  background-color: rgb(255, 200, 238);
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.comment:hover {
+  background-color: rgb(255, 130, 215);
+}
+
+.comment__name {
+  font-weight: 500;
+}
+
+.comment__email {
+  color: #000;
+  transition: color 0.3s;
+}
+
+.comment__email:hover {
+  color: rgb(255, 255, 255);
+}
