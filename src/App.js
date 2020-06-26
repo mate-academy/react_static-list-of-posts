@@ -9,28 +9,30 @@ import users from './api/users';
 import PostsList from './components/PostsList/PostsList';
 
 function findAuthor(userId) {
-  const person = users.filter(user => user.id === userId);
-  const address = Object.entries(person[0].address)
+  const person = users.find(user => user.id === userId);
+  const address = Object.entries(person.address)
     .slice(0, 4)
     .map(option => option.join(' : '))
     .join(', ');
 
-  return [person[0].name, person[0].email, address];
+  return [person.name, person.email, address];
 }
 
 function findComments(id) {
   return comments.filter(comment => comment.postId === id);
 }
 
-const prepearedPosts = posts.map(post => ({
-  ...post,
-  author: findAuthor(post.userId)[0],
-  email: findAuthor(post.userId)[1],
-  address: findAuthor(post.userId)[2],
-  comments: findComments(post.id),
-}));
+const prepearedPosts = posts.map((post) => {
+  const [author, email, address] = findAuthor(post.userId);
 
-// console.log(prepearedPosts);
+  return {
+    ...post,
+    author,
+    email,
+    address,
+    comments: findComments(post.id),
+  };
+});
 
 const App = () => (
   <div className="App">

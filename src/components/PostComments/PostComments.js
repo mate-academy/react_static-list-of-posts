@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShapePostComments } from '../Shapes';
-import Comment from '../Comment/Comment';
+import { Comment } from '../Comment/Comment';
 import './PostComments.css';
 
 const PostComments = props => (

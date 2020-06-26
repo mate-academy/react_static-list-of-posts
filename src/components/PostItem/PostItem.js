@@ -4,7 +4,10 @@ import PostComments from '../PostComments/PostComments';
 import './PostItem.css';
 
 // eslint-disable-next-line max-len
-const PostItem = ({ address, author, body, comments, email, id, title, userId }) => (
+const PostItem = ({
+  address, author, body,
+  comments, email, id, title,
+}) => (
   <li className="post" key={id}>
     <h3 className="post__title">{title}</h3>
     <p className="post__text">{body}</p>
