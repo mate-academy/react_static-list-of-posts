@@ -4,15 +4,11 @@ import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 import './Post.css';
 
-// const preparedComments = comments.map(comment => ({
-//   ...comment,
-// }));
-
 export const Post = ({ title, body, user, comments }) => (
   <div className="post__wrapper">
     <div className="post__item">
       <div className="post__author">
-        <img src="/images/user.png" alt="user" className="post__avatar" />
+        <img src="images/user.png" alt="user" className="post__avatar" />
         <User {...user} />
       </div>
       <div className="post__content">
