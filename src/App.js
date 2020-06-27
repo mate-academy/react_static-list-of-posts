@@ -1,10 +1,11 @@
 import React from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Badge from 'react-bootstrap/Badge';
 import Alert from 'react-bootstrap/Alert';
 
+import { PostList } from './components/PostList/PostList';
 import './App.css';
 
 import posts from './api/posts';
@@ -15,25 +16,20 @@ const App = () => (
   <Container className="App">
     <h1>Static list of posts</h1>
     <Row>
-      <Col sm>
-        <Alert variant="primary">
-          posts:
-          <Badge variant="secondary">{posts.length}</Badge>
-        </Alert>
-      </Col>
-      <Col sm>
-        <Alert variant="primary">
-          comments:
-          <Badge variant="secondary">{comments.length}</Badge>
-        </Alert>
-      </Col>
-      <Col sm>
-        <Alert variant="primary">
-          Users:
-          <Badge variant="light">{users.length}</Badge>
-        </Alert>
-      </Col>
+      <Alert variant="primary">
+        {`posts: `}
+        <Badge variant="light">{posts.length}</Badge>
+      </Alert>
+      <Alert variant="primary">
+        {`comments: `}
+        <Badge variant="light">{comments.length}</Badge>
+      </Alert>
+      <Alert variant="primary">
+        {`Users: `}
+        <Badge variant="light">{users.length}</Badge>
+      </Alert>
     </Row>
+    <PostList posts={posts} />
   </Container>
 );
 
