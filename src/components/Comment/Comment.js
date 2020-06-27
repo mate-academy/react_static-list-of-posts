@@ -15,8 +15,8 @@ export const Comment = (props) => {
         <Col xs={8} sm={5} md={4}>
           <Alert variant="info">
             {name}
-            <br />
-            <h6>{email}</h6>
+            <hr />
+            <h6 className="email">{email}</h6>
           </Alert>
         </Col>
         <Col xs={12} sm={7} md={8}>

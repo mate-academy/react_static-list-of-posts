@@ -10,8 +10,8 @@ export const User = (props) => {
     <Alert variant="info">
       <Alert.Heading>
         <p>{name}</p>
-        <p>{email}</p>
       </Alert.Heading>
+      <p className="email">{email}</p>
       <hr />
       <p>{street}</p>
       <p>{city}</p>
