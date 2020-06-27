@@ -5,13 +5,11 @@ import Col from 'react-bootstrap/Col';
 
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
-
-import users from '../../api/users';
-import comments from '../../api/comments';
+import { getUser, filterComments } from './PostData';
 
 export const Post = (props) => {
   const { title, body, userId, id } = props;
-  const user = users.find(usr => (usr.id === userId));
+  const user = getUser(userId);
 
   return (
     <>
@@ -31,7 +29,7 @@ export const Post = (props) => {
       </Row>
       <Row>
         <CommentList
-          comments={comments.filter(comment => (comment.postId === id))}
+          comments={filterComments(id)}
         />
       </Row>
     </>
