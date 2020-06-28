@@ -1,14 +1,21 @@
 import React from 'react';
 
-import './App.css';
-
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+
+import './App.css';
 import { PostList } from './PostList/PostList';
+
+const preparedPosts = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  comment: comments.filter(comment => comment.postId === post.id),
+}));
 
 const App = () => (
   <>
+
     <div className="App">
       <h1>Static list of posts</h1>
 
@@ -27,9 +34,11 @@ const App = () => (
         {users.length}
       </p>
     </div>
+
     <section className="PostList">
-      <PostList posts={posts} />
+      <PostList preparedPosts={preparedPosts} />
     </section>
+
   </>
 );
 

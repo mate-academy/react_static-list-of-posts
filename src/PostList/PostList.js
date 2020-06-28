@@ -1,23 +1,22 @@
 import React from 'react';
-import './PostList.css';
 import PropTypes from 'prop-types';
+
+import './PostList.css';
+import { postProp } from './Post/props';
 import { Post } from './Post/Post';
 
-export const PostList = ({ posts }) => (
+export const PostList = ({ preparedPosts }) => (
   <>
-    {posts.map(post => (
+    {preparedPosts.map(post => (
+
       <div className="Post" key={post.id}>
-        <Post post={post} />
+        <Post {...post} />
       </div>
+
     ))}
   </>
 );
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.shape({
-    userId: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  })).isRequired,
+  preparedPosts: PropTypes.arrayOf(postProp).isRequired,
 };

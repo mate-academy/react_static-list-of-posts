@@ -1,36 +1,33 @@
 import React from 'react';
+import { userProp } from '../props';
+
 import './User.css';
-import users from '../../../api/users';
 
-export const User = (ID) => {
-  let usr = {};
+export const User = ({ name, email, address, id }) => (
+  <div className="User" key={id}>
 
-  users.forEach((unit) => {
-    if (unit.id === ID.userId) {
-      usr = unit;
-    }
-  });
-
-  return (
-    <div className="User" key={usr.id}>
-      <b>
-        {usr.name}
+    <b className="User__name">
+      {name}
         &nbsp;
-      </b>
-      <small className="User__mail">{usr.email}</small>
-      <div className="User__address">
-        <p>
-          {usr.address.city}
-        </p>
-        <p>
-          {usr.address.street}
+    </b>
+
+    <small className="User__mail">{email}</small>
+
+    <div className="User__address">
+      <p>
+        {address.city}
+      </p>
+      <p>
+        {address.street}
           &nbsp;
-          {usr.address.suite}
-        </p>
-        <p>
-          {usr.address.zipcode}
-        </p>
-      </div>
+        {address.suite}
+      </p>
+      <p>
+        {address.zipcode}
+      </p>
     </div>
-  );
-};
+
+  </div>
+);
+
+User.propTypes = userProp.isRequired;

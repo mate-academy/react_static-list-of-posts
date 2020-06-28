@@ -1,28 +1,27 @@
 import React from 'react';
-import './Post.css';
 import PropTypes from 'prop-types';
+
+import './Post.css';
 import { User } from './User/User';
 import { CommentList } from './CommentList/CommentList';
+import { postProp, userProp, commentsProp } from './props';
 
-export const Post = ({ post }) => {
-  const tittle = (post.title)[0].toUpperCase() + (post.title).slice(1);
-  const message = (post.body)[0].toUpperCase() + (post.body).slice(1);
+export const Post = ({ title, body, user, comment }) => {
+  const postTitle = (title)[0].toUpperCase() + (title).slice(1);
+  const postMessage = (body)[0].toUpperCase() + (body).slice(1);
 
   return (
     <>
-      <h3 className="Post__tittle">{tittle}</h3>
-      <p>{message}</p>
-      <User userId={post.userId} />
-      <CommentList postId={post.id} />
+      <h3 className="Post__title">{postTitle}</h3>
+      <p>{postMessage}</p>
+      <User {...user} />
+      <CommentList props={comment} />
     </>
   );
 };
 
+Post.propTypes = postProp.isRequired;
 Post.propTypes = {
-  post: PropTypes.shape({
-    userId: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  }).isRequired,
+  user: userProp.isRequired,
+  comment: PropTypes.arrayOf(commentsProp).isRequired,
 };
