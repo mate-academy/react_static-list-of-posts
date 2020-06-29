@@ -1,21 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { User } from './User';
-import { CommentList } from './CommentList';
-import { Post } from './Post';
+import { User, UserShape } from './User';
+import { CommentList, CommentListShape } from './CommentList';
+import { Post, PostShape } from './Post';
 
 export const PostList = ({ preparedList }) => (
   <ul>
-    {preparedList.map(x => (
+    {preparedList.map(entry => (
       <li>
-        <Post post={x.post} />
-        <User user={x.user} />
-        <CommentList commentList={x.commentList} />
+        <Post post={entry.post} />
+        <User user={entry.user} />
+        <CommentList commentList={entry.commentList} />
       </li>
     ))}
   </ul>
 );
 
 PostList.propTypes = {
-  preparedList: PropTypes.instanceOf(Array).isRequired,
+  preparedList: PropTypes.arrayOf(PropTypes.shape({
+    post: PostShape.isRequired,
+    user: UserShape.isRequired,
+    commentList: CommentListShape.isRequired,
+  })).isRequired,
 };

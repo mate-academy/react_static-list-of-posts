@@ -8,9 +8,11 @@ export const Post = ({ post }) => (
   </>
 );
 
+export const PostShape = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+}).isRequired;
+
 Post.propTypes = {
-  post: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  }).isRequired,
+  post: PostShape.isRequired,
 };
