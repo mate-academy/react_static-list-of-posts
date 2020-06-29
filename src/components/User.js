@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { UserShape } from './Shapes';
 
 export default function User({ user }) {
   return (
@@ -20,12 +20,4 @@ export default function User({ user }) {
   );
 }
 
-User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      street: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
-};
+User.propTypes = UserShape;
