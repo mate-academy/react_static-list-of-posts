@@ -4,8 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Static list of posts</title>
+    <style>
+      .loader:empty {
+        position: absolute;
+        top: calc(50% - 4em);
+        left: calc(50% - 4em);
+        width: 6em;
+        height: 6em;
+        border: 1.1em solid #cce5ff;
+        border-left: 1.1em solid #94c5fa;
+        border-radius: 50%;
+        animation: load8 1.1s infinite linear;
+      }
+
+      @keyframes load8 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root" class="loader"></div>
   </body>
 </html>
