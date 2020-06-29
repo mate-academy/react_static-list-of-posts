@@ -1,30 +1,38 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+
+import { PostList } from './components/PostList/PostList';
+import { Counters } from './components/Counters/Counters';
 
 import './App.css';
+import { preparedPosts } from './components/Post/PostData';
 
-import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
+class App extends React.Component {
+  state = {
+    loading: true,
+  };
 
-const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
+  componentDidMount() {
+    this.setState({
+      loading: false,
+    });
+  }
 
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
+  render() {
+    const { loading } = this.state;
 
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
+    if (loading) {
+      return null;
+    }
 
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
-  </div>
-);
+    return (
+      <Container className="App">
+        <h1>Static list of posts</h1>
+        <Counters />
+        <PostList posts={preparedPosts} />
+      </Container>
+    );
+  }
+}
 
 export default App;
