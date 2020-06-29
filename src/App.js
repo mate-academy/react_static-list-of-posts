@@ -5,7 +5,7 @@ import './App.css';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import PostList from './components/PostList';
+import PostList from './components/PostList/PostList';
 
 function getPostsUsersComments(postsList, commentsList, usersList) {
   return postsList.map(post => ({

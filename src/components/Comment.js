@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CommentList/CommentList.css';
 
 export default function Comment({ comment }) {
   return (
-    <tr>
+    <tr className="comment__row">
       <td>{comment.name}</td>
       <td>{comment.email}</td>
       <td>{comment.body}</td>

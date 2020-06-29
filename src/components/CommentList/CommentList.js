@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from './Comment';
+import Comment from '../Comment';
 
 export default function CommentList({ comments }) {
   return (
-    <table>
+    <table className="table">
       <thead>
         <td>Name</td>
         <td>Email</td>
