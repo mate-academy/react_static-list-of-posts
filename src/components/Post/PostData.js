@@ -1,9 +1,16 @@
 import users from '../../api/users';
 import comments from '../../api/comments';
+import posts from '../../api/posts';
 
-export const getUser = id => (
-  users.find(usr => (usr.id === id))
-);
-export const filterComments = id => (
-  comments.filter(comment => (comment.postId === id))
-);
+export const preparedPosts = [...posts].map((post) => {
+  const postUser = users
+    .find(user => (user.id === post.userId));
+  const postComments = comments
+    .filter(comment => (comment.postId === post.id));
+
+  return {
+    ...post,
+    postUser,
+    postComments,
+  };
+});

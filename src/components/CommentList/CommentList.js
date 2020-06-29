@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import { Comment } from '../Comment/Comment';
+import { CommentListShape } from './CommentListShape';
 
 export const CommentList = (props) => {
   const { comments } = props;
@@ -23,8 +23,4 @@ export const CommentList = (props) => {
   );
 };
 
-CommentList.propTypes = {
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({}),
-  ).isRequired,
-};
+CommentList.propTypes = CommentListShape.isRequired;

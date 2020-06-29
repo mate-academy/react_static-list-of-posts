@@ -3,15 +3,15 @@ import Container from 'react-bootstrap/Container';
 
 import { PostList } from './components/PostList/PostList';
 import { Counters } from './components/Counters/Counters';
-import posts from './api/posts';
 
 import './App.css';
+import { preparedPosts } from './components/Post/PostData';
 
 const App = () => (
   <Container className="App">
     <h1>Static list of posts</h1>
     <Counters />
-    <PostList posts={posts} />
+    <PostList posts={preparedPosts} />
   </Container>
 );
 

@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
-
-// import comments from './api/comments';
+import { CommentShape } from './CommentShape';
 
 export const Comment = (props) => {
   const { name, email, body } = props;
@@ -27,8 +25,4 @@ export const Comment = (props) => {
   );
 };
 
-Comment.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-};
+Comment.propTypes = CommentShape.isRequired;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Alert from 'react-bootstrap/Alert';
-import { UserPropShape } from './UserPropShape';
+import { UserPropShape } from './UserShape';
 
 export const User = (props) => {
   const { name, email, address } = props;
@@ -20,4 +20,4 @@ export const User = (props) => {
   );
 };
 
-User.propTypes = UserPropShape;
+User.propTypes = UserPropShape.isRequired;

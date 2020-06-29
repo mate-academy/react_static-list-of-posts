@@ -1,15 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import { User } from '../User/User';
+
 import { CommentList } from '../CommentList/CommentList';
-import { getUser, filterComments } from './PostData';
+import { PostShape } from './PostShape';
 
 export const Post = (props) => {
-  const { title, body, userId, id } = props;
-  const user = getUser(userId);
+  const { title, body, id, postUser, postComments } = props;
 
   return (
     <>
@@ -17,9 +16,9 @@ export const Post = (props) => {
         {id}
         <Col sm={6} md={4}>
           <User
-            name={user.name}
-            email={user.email}
-            address={user.address}
+            name={postUser.name}
+            email={postUser.email}
+            address={postUser.address}
           />
         </Col>
         <Col>
@@ -29,16 +28,11 @@ export const Post = (props) => {
       </Row>
       <Row>
         <CommentList
-          comments={filterComments(id)}
+          comments={postComments}
         />
       </Row>
     </>
   );
 };
 
-Post.propTypes = {
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  userId: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
-};
+Post.propTypes = PostShape.isRequired;
