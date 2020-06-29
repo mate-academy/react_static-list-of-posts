@@ -1,6 +1,6 @@
 # React static list of posts
-- Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)
+- Replace `Dead-TR` with your Github username in the
+  [DEMO LINK](https://Dead-TR.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
