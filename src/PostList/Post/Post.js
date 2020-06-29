@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Post.css';
 import { User } from './User/User';
 import { CommentList } from './CommentList/CommentList';
-import { postProp, userProp, commentsProp } from './props';
+import { postShape, userShape, commentsShape } from './props';
 
 export const Post = ({ title, body, user, comment }) => {
   const postTitle = (title)[0].toUpperCase() + (title).slice(1);
@@ -12,7 +12,7 @@ export const Post = ({ title, body, user, comment }) => {
 
   return (
     <>
-      <h3 className="Post__title">{postTitle}</h3>
+      <h3 className="post__title">{postTitle}</h3>
       <p>{postMessage}</p>
       <User {...user} />
       <CommentList props={comment} />
@@ -20,8 +20,8 @@ export const Post = ({ title, body, user, comment }) => {
   );
 };
 
-Post.propTypes = postProp.isRequired;
+Post.propTypes = postShape.isRequired;
 Post.propTypes = {
-  user: userProp.isRequired,
-  comment: PropTypes.arrayOf(commentsProp).isRequired,
+  user: userShape.isRequired,
+  comment: PropTypes.arrayOf(commentsShape).isRequired,
 };

@@ -1,19 +1,19 @@
 import React from 'react';
-import { userProp } from '../props';
+import { userShape } from '../props';
 
 import './User.css';
 
 export const User = ({ name, email, address, id }) => (
-  <div className="User" key={id}>
+  <div className="user" key={id}>
 
-    <b className="User__name">
+    <b className="user__name">
       {name}
         &nbsp;
     </b>
 
-    <small className="User__mail">{email}</small>
+    <small className="user__mail">{email}</small>
 
-    <div className="User__address">
+    <div className="user__address">
       <p>
         {address.city}
       </p>
@@ -30,4 +30,4 @@ export const User = ({ name, email, address, id }) => (
   </div>
 );
 
-User.propTypes = userProp.isRequired;
+User.propTypes = userShape.isRequired;

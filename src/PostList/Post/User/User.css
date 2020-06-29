@@ -1,4 +1,4 @@
-.User {
+.user {
   border: 1px slategrey solid;
   margin-top: 10px;
   margin-left: auto;
@@ -8,16 +8,16 @@
   position: relative;
 }
 
-.User__mail {
+.user__mail {
   position: absolute;
   right: 20px;
 }
 
-.User__name {
+.user__name {
   display: block;
 }
 
-.User__address {
+.user__address {
   margin: 10px 20px;
   font-size: 0.7em;
 }

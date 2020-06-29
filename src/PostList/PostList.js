@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './PostList.css';
-import { postProp } from './Post/props';
+import { postShape } from './Post/props';
 import { Post } from './Post/Post';
 
 export const PostList = ({ preparedPosts }) => (
   <>
     {preparedPosts.map(post => (
 
-      <div className="Post" key={post.id}>
+      <div className="post" key={post.id}>
         <Post {...post} />
       </div>
 
@@ -18,5 +18,5 @@ export const PostList = ({ preparedPosts }) => (
 );
 
 PostList.propTypes = {
-  preparedPosts: PropTypes.arrayOf(postProp).isRequired,
+  preparedPosts: PropTypes.arrayOf(postShape).isRequired,
 };

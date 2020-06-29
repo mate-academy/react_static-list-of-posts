@@ -1,10 +1,10 @@
 import React from 'react';
-import { commentsProp } from '../props';
+import { commentsShape } from '../props';
 
 import './CommentList.css';
 
 export const CommentList = ({ props }) => (
-  <div className="CommentList">
+  <div className="commentList">
 
     {props.map(({ name, body, email, id }) => {
       const title = (name[0]).toUpperCase()
@@ -14,11 +14,11 @@ export const CommentList = ({ props }) => (
         + (body).slice(1);
 
       return (
-        <div className="CommentList__comment" key={id}>
+        <div className="commentList__comment" key={id}>
 
-          <h3 className="CommentList__title">{title}</h3>
+          <h3 className="commentList__title">{title}</h3>
           <p>{message}</p>
-          <div className="CommentList__mail">
+          <div className="commentList__mail">
             {email}
           </div>
 
@@ -28,4 +28,4 @@ export const CommentList = ({ props }) => (
   </div>
 );
 
-CommentList.propTypes = commentsProp.isRequired;
+CommentList.propTypes = commentsShape.isRequired;

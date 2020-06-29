@@ -1,9 +1,9 @@
-.Post {
+.post {
   border: 2px slategrey solid;
   margin: 10px;
   padding: 10px;
 }
 
-.Post__title {
+.post__title {
   text-align: center;
 }

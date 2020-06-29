@@ -1,38 +1,38 @@
 import PropTypes from 'prop-types';
 
 // Users
-export const geoProp = PropTypes.shape({
+export const geoShape = PropTypes.shape({
   lat: PropTypes.string.isRequired,
   lng: PropTypes.string.isRequired,
 });
 
-export const addressProp = PropTypes.shape({
+export const addressShape = PropTypes.shape({
   street: PropTypes.string.isRequired,
   suite: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
   zipcode: PropTypes.string.isRequired,
-  geo: geoProp,
+  geo: geoShape,
 });
 
-export const companyProp = PropTypes.shape({
+export const companyShape = PropTypes.shape({
   bs: PropTypes.string.isRequired,
   catchPhrase: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 });
 
-export const userProp = PropTypes.shape({
+export const userShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: addressProp.isRequired,
+  address: addressShape.isRequired,
   phone: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
-  company: companyProp.isRequired,
+  company: companyShape.isRequired,
 });
 
 // Comments
-export const commentsProp = PropTypes.shape({
+export const commentsShape = PropTypes.shape({
   postId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   email: PropTypes.string.isRequired,
@@ -41,7 +41,7 @@ export const commentsProp = PropTypes.shape({
 });
 
 // Posts
-export const postProp = PropTypes.shape({
+export const postShape = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,

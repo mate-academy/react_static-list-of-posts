@@ -35,7 +35,7 @@ const App = () => (
       </p>
     </div>
 
-    <section className="PostList">
+    <section className="postList">
       <PostList preparedPosts={preparedPosts} />
     </section>
 
