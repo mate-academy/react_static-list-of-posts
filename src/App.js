@@ -1,11 +1,10 @@
 import React from 'react';
 
-import './App.css';
-
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 import PostList from './components/PostList/PostList';
+import './App.css';
 
 const preparedPosts = [...posts].map((post) => {
   const user = users.find(item => item.id === post.userId);
