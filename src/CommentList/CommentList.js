@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ShapeComment } from '../Shapes';
 import { Comment } from '../Comment/Comment';
 
-const CommentList = ({ comments }) => (
+export const CommentList = ({ comments }) => (
   <ul className="comments">
     <h3>Comments:</h3>
     {comments.map(comment => (
@@ -17,5 +17,3 @@ CommentList.propTypes = {
     ShapeComment,
   ).isRequired,
 };
-
-export { CommentList };

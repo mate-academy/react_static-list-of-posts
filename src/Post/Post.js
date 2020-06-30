@@ -4,7 +4,7 @@ import { ShapePost, ShapeComment, ShapeUser } from '../Shapes';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 
-const Post = ({ post }) => (
+export const Post = ({ post }) => (
   <div className="post">
     <h2>{post.title}</h2>
     <p>{post.body}</p>
@@ -13,10 +13,8 @@ const Post = ({ post }) => (
   </div>
 );
 
-Post.propTypes = PropTypes.arrayOf(
+Post.propTypes = PropTypes.shape(
   ShapePost,
   ShapeComment,
   ShapeUser,
 ).isRequired;
-
-export { Post };

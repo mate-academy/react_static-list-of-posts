@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShapeComment } from '../Shapes';
 
-const Comment = ({ comment }) => (
+export const Comment = ({ comment }) => (
   <li>
     <span className="comments__info">
       <span>Name: </span>
@@ -16,5 +16,3 @@ const Comment = ({ comment }) => (
 );
 
 Comment.propTypes = ShapeComment.isRequired;
-
-export { Comment };

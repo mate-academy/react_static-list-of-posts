@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShapeUser } from '../Shapes';
 
-const User = ({ name, email, address }) => (
+export const User = ({ name, email, address }) => (
   <div>
     <span>
       <span>Name: </span>
@@ -25,5 +25,3 @@ const User = ({ name, email, address }) => (
 );
 
 User.propTypes = ShapeUser.isRequired;
-
-export { User };
