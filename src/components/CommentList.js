@@ -12,14 +12,14 @@ export const CommentList = ({ commentList }) => (
   </ul>
 );
 
-export const CommentListShape = PropTypes.arrayOf(PropTypes.shape({
+export const CommentListShape = {
   postId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-})).isRequired;
+};
 
 CommentList.propTypes = {
-  commentList: CommentListShape.isRequired,
+  commentList: PropTypes.arrayOf(CommentListShape).isRequired,
 };
