@@ -1,0 +1,11 @@
+.post__comment {
+  margin: 0 auto;
+  padding: 20px;
+
+  background-color: #33393f;
+  color: #dedad4;
+  border-radius: 5px;
+
+  line-height: 100%;
+  text-align: justify;
+}
