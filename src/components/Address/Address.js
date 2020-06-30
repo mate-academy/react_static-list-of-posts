@@ -1,9 +1,9 @@
 import React from 'react';
 import { AdressShape } from '../Shape';
 
-export const Address = props => (
+export const Address = ({ street, suite, city, zipcode }) => (
   <p>
-    {`${props.street}, ${props.suite}, ${props.city}, ${props.zipcode}`}
+    {`${street}, ${suite}, ${city}, ${zipcode}`}
   </p>
 
 );

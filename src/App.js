@@ -4,18 +4,13 @@ import { PostList } from './components/PostList/PostList';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import { AppShape } from './components/Shape';
 
-export const App = () => {
-  const post = posts.map(item => ({
-    ...item,
-    comments: comments.filter(comment => comment.postId === item.id),
-    user: users.find(person => person.id === item.userId),
-  }));
+const postList = posts.map(post => ({
+  ...post,
+  comments: comments.filter(comment => comment.postId === post.id),
+  user: users.find(person => person.id === post.userId),
+}));
 
-  return (
-    <PostList posts={post} />
-  );
-};
-
-App.propTypes = AppShape.isRequired;
+export const App = () => (
+  <PostList posts={postList} />
+);

@@ -6,8 +6,8 @@ import { PostListShape } from '../Shape';
 export const PostList = props => (
   <ul className="postList">
     {props.posts.map(post => (
-      <li className="post">
-        <Post key={post.id} {...post} />
+      <li key={post.id} className="post">
+        <Post {...post} />
       </li>
     ))}
   </ul>

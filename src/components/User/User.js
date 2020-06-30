@@ -2,13 +2,13 @@ import React from 'react';
 import { Address } from '../Address/Address';
 import { UserShape } from '../Shape';
 
-export const User = props => (
+export const User = ({ address, name, email }) => (
   <div>
-    <Address {...props.address} />
+    <Address {...address} />
     <p>
-      {props.name}
+      {name}
       {' '}
-      {props.email}
+      {email}
     </p>
   </div>
 );

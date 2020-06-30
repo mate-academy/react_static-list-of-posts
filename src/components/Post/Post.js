@@ -3,19 +3,19 @@ import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 import { PostShape } from '../Shape';
 
-export const Post = props => (
+export const Post = ({ title, user, body, comments }) => (
   <div>
     <h1>
-      {props.title}
+      {title}
     </h1>
     <p>
-      <User {...props.user} />
+      <User {...user} />
     </p>
     <p>
-      {props.body}
+      {body}
     </p>
     <ol>
-      <CommentList commentList={props.comments} />
+      <CommentList commentList={comments} />
     </ol>
   </div>
 );

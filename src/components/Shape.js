@@ -17,12 +17,8 @@ export const CommentListShape = PropTypes.shape({
   comments: PropTypes.arrayOf(CommentShape).isRequired,
 });
 
-export const AppShape = PropTypes.shape({
-  post: PropTypes.arrayOf(PropTypes.object).isRequired,
-});
-
 export const PostListShape = PropTypes.shape({
-  list: PropTypes.arrayOf(PropTypes.object).isRequired,
+  postList: PropTypes.arrayOf(PropTypes.PostShape).isRequired,
 });
 
 export const UserShape = PropTypes.shape({
