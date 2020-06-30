@@ -1,0 +1,7 @@
+﻿.Post__Comment-Item {
+  margin-bottom: 10px;
+}
+
+.Post__Comment-Item:last-child {
+  margin-bottom: 0;
+}

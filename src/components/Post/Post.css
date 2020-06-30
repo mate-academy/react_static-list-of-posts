@@ -1,0 +1,11 @@
+﻿.Post {
+  margin-bottom: 100px;
+}
+
+.Post:first-child {
+  margin-top: 50px;
+}
+
+.Post:last-child {
+  margin-bottom: 0;
+}
