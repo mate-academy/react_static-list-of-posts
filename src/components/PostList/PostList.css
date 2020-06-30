@@ -1,0 +1,18 @@
+.postList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.post {
+  border: 1px black solid;
+  width: 500px;
+  margin: 50px;
+  text-align: center;
+  transition: 1s;
+}
+
+.post:hover {
+  transform: scale(1.1);
+}
