@@ -1,3 +1,20 @@
 .App {
   text-align: center;
 }
+
+.wrapper {
+  text-align: left;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  margin: 10px auto;
+  background-color: grey;
+}
+
+.wrapper__caption {
+  font-weight: bold;
+}
+
+.wrapper__list-head {
+  font-weight: bold;
+}
