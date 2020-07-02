@@ -1,15 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { CommentShape } from './shapes';
 
-const Comment = ({ comment }) => (
-  <li className="wrapper__list">
-    <p className="wrapper__list-head">{comment.name}</p>
-    <p>{comment.email}</p>
-    <p>{comment.body}</p>
-  </li>
+export const Comment = ({ comment }) => (
+  <div className="comment">
+    <span className="comment__name">{comment.name}</span>
+    <a className="comment__email" href={`mailto:${comment.email}`}>
+      {comment.email}
+    </a>
+    <p className="text">{comment.body}</p>
+  </div>
 );
 
-Comment.propTypes
-  = { comment: PropTypes.objectOf(PropTypes.string).isRequired };
-
-export default Comment;
+Comment.propTypes = {
+  comment: CommentShape.isRequired,
+};

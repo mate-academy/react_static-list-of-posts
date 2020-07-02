@@ -1,23 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { UserShape } from './shapes';
 
-export const User = ({ userData }) => (
-  <>
-    <li>
-      <p className="wrapper__caption">User name</p>
-      <p>{userData.name}</p>
-    </li>
-    <li>
-      <p className="wrapper__caption">User email</p>
-      <p>{userData.email}</p>
-    </li>
-    <li>
-      <p className="wrapper__caption">User address</p>
-      <p>{`${userData.address.city} ${userData.address.street}`}</p>
-    </li>
-  </>
+export const User = ({ user }) => (
+  <div className="user">
+    <span className="user__name">{user.name}</span>
+    <a className="user__email" href={`mailto:${user.email}`}>{user.email}</a>
+    <span className="user__address">
+      {`${user.address.city}, ${user.address.street}`}
+    </span>
+  </div>
 );
 
-User.propTypes = { userData: PropTypes.objectOf(PropTypes.string).isRequired };
-
-export default User;
+User.propTypes = {
+  user: UserShape.isRequired,
+};
