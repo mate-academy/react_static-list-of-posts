@@ -1,0 +1,13 @@
+.post {
+  margin: 2% 0;
+  padding: 2%;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.post__comments {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 10px;
+}
