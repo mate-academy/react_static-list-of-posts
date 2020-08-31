@@ -1,0 +1,16 @@
+.body {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.name {
+  text-transform: uppercase;
+  color: midnightblue;
+  font-size: 0.9em;
+}
+
+.email {
+  font-weight: bold;
+  text-align: right;
+  font-size: 0.8em;
+}
