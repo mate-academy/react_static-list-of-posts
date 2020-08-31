@@ -1,0 +1,7 @@
+.postList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f2f5;
+  padding: 0% 20%;
+}

@@ -1,0 +1,11 @@
+.comment {
+  margin-top: 2%;
+  font-size: smaller;
+  background-color: #f0f2f5;
+  border-radius: 8px;
+  padding: 2%;
+}
+
+.comment__email {
+  text-align: right;
+}
