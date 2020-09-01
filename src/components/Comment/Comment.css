@@ -1,0 +1,23 @@
+.comment {
+  font-size: 14px;
+  border: 1px dashed black;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.comment:last-child {
+  margin-bottom: 0;
+}
+
+.comment__title {
+  margin-top: 0;
+}
+
+.comment__body {
+  font-style: italic;
+}
+
+.comment__email {
+  font-size: 12px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,25 @@
+.post {
+  background-color: cornsilk;
+  border: 1px solid black;
+  width: 500px;
+  box-shadow: 6px 6px 10px rgba(0, 0, 255, 0.2);
+  padding: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.post:last-child {
+  margin-right: 0;
+}
+
+.post__title {
+  margin-top: 0;
+}
+
+.post__text {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2px;
+  margin-bottom: 0;
+}
