@@ -1,0 +1,24 @@
+.post {
+  width: 500px;
+  padding: 15px;
+  border: 2px solid salmon;
+  background-color: rgb(255, 247, 204);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.8s all;
+}
+
+.post:hover {
+  transform: scale(1.05);
+  background-color: rgb(255, 238, 144);
+}
+
+.post-title {
+  text-transform: uppercase;
+}
+
+.post-text {
+  color: rgb(144, 36, 36);
+}
