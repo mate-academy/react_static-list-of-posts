@@ -1,0 +1,21 @@
+.post {
+  display: grid;
+  grid-template-areas: "title title"
+    "descr user"
+    "comments comments";
+  grid-gap: 20px 50px;
+  margin-top: 50px;
+  padding: 0 30px;
+  text-align: left;
+  border: 2px solid red;
+}
+
+.post__title {
+  text-align: center;
+  grid-area: title;
+}
+
+.post__text {
+  grid-area: descr;
+  margin: 0;
+}

@@ -1,0 +1,20 @@
+.user {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  grid-area: user;
+  justify-self: right;
+}
+
+.user__name {
+  font-weight: bold;
+}
+
+.user__email {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.user__address {
+  font-style: italic;
+}

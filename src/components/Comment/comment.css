@@ -1,0 +1,14 @@
+.comment {
+  border: 1px solid grey;
+  padding: 6px;
+}
+
+.comment__name {
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.comment__email {
+  text-decoration: none;
+  color: cornflowerblue;
+}
