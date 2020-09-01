@@ -6,7 +6,6 @@ import { Post } from '../Post/Post';
 export const PostList = ({ posts }) => (
   <section className="posts">
     {posts.map(post => <Post {...post} key={post.id} />)}
-
   </section>
 );
 
