@@ -1,0 +1,9 @@
+.user {
+  padding: 30px 20px;
+}
+
+.user__name {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
