@@ -1,0 +1,18 @@
+.post {
+  border-radius: 8px;
+
+  &__title {
+    background-color: #84a59d;
+    line-height: 20px;
+    padding: 30px 10px;
+    border-top-right-radius: inherit;
+    text-align: center;
+    grid-area: title;
+  }
+
+  &__body {
+    background-color: #f7ede2;
+    padding: 30px 10px;
+    grid-area: post;
+  }
+}

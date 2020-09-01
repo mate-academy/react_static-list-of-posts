@@ -1,0 +1,15 @@
+.comment {
+
+  &__user {
+    border-radius: inherit;
+    background-color: #f5cac3;
+  }
+
+  &__userName {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: #5f0f40;
+  }
+}
