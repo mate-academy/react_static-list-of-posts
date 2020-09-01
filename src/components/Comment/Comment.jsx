@@ -4,12 +4,12 @@ import { CommentShape } from '../Shape';
 
 export const Comment = ({ name, email, body }) => (
   <div className="comment">
-    <p>
-      <strong>
-        {`Comment by: ${name}`}
-      </strong>
+    <p className="comment__author">
+      {`Comment by: ${name}`}
     </p>
-    <p>{`Email: ${email}`}</p>
+    <p className="comment__email">
+      {`Email: ${email}`}
+    </p>
     <p className="comment__text">{body}</p>
   </div>
 

@@ -1,6 +1,10 @@
 .comment {
   padding-top: 20px;
 
+  &__author {
+    font-weight: bold;
+  }
+
   &__text {
     font-style: italic;
     padding-top: 5px;

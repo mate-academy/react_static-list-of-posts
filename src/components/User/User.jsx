@@ -1,15 +1,14 @@
 import React from 'react';
+import './User.scss';
 import { UserShape } from '../Shape';
 
 export const User = ({ name, email, address }) => (
-  <section className="userInfo">
-    <p>
-      <strong>
-        {`Post by ${name}`}
-      </strong>
+  <section className="user">
+    <p className="user__name">
+      {`Post by ${name}`}
     </p>
-    <p>{`Email: ${email}`}</p>
-    <p>{`City: ${address.city}`}</p>
+    <p className="user__email">{`Email: ${email}`}</p>
+    <p className="user__address">{`City: ${address.city}`}</p>
   </section>
 );
 
