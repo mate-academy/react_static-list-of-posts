@@ -1,0 +1,15 @@
+.comment {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+
+  &__author {
+    font-weight: bold;
+  }
+
+  &__text {
+    font-style: italic;
+    padding-top: 5px;
+  }
+}

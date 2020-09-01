@@ -1,1 +1,20 @@
-// styles go here
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f5f5f5;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  color: #4d4d4d;
+}
+
+h1 {
+  text-align: center;
+}
+
+
