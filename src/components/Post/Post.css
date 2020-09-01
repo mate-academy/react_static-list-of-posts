@@ -1,0 +1,20 @@
+.postId {
+  color: darkblue;
+  font-weight: bold;
+}
+
+.postTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.postBody {
+  color: blue;
+  font-size: 0.8em;
+}
+
+.user {
+  font-weight: bold;
+  font-style: italic;
+  text-align: left;
+}
