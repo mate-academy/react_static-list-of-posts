@@ -6,13 +6,13 @@ import { CommentList } from '../CommentList';
 import './Post.scss';
 
 export const Post = ({ id, title, body, user, comments }) => (
-  <section className="card">
+  <article className="card">
     <p className="card__id">{id}</p>
     <User {...user} />
     <p className="card__title-text">{title.toUpperCase()}</p>
     <p>{body}</p>
     <CommentList comments={comments} />
-  </section>
+  </article>
 );
 
 Post.propTypes = {
