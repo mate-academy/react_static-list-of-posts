@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CommentList.css';
 import Comment from '../Comment';
 
 function CommentList({ commentList }) {
   return (
-    <ul>
+    <ul className="commentList">
       {
         commentList
-          .map(comment => <Comment key={comment.id} comment={comment} />)
+          .map(comment => <Comment key={comment.id} {...comment} />)
       }
     </ul>
   );

@@ -1,37 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import User from '../User';
+import { userShape } from '../User/userShape';
 import './Post.css';
 import CommentList from '../CommentList';
 
-function Post({ post }) {
-  const title = post.title[0].toUpperCase() + post.title.substring(1);
+function Post({ title, user, comments, body }) {
+  const titlePost = title[0].toUpperCase() + title.substring(1);
 
   return (
     <div className="post">
-      <User user={post.user} />
-      <h3>{title}</h3>
-      <p>{post.body}</p>
+      <User {...user} />
+      <h3>{titlePost}</h3>
+      <p>{body}</p>
       <div className="post__comments">
         <p>
           Comments:
-          {post.comments.length}
+          {comments.length}
         </p>
-        <CommentList commentList={post.comments} />
+        <CommentList commentList={comments} />
       </div>
     </div>
   );
 }
 
 Post.propTypes = {
-  post: PropTypes.shape({
-    userId: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    user: PropTypes.object.isRequired,
-    comments: PropTypes.arrayOf(PropTypes.object).isRequired,
-  }).isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: userShape.isRequired,
+  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Post;
