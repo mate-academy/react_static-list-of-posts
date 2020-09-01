@@ -7,8 +7,12 @@ export const User = ({ name, email, address }) => (
     <p className="user__name">
       {`Post by ${name}`}
     </p>
-    <p className="user__email">{`Email: ${email}`}</p>
-    <p className="user__address">{`City: ${address.city}`}</p>
+    <p className="user__email">
+      {`Email: ${email}`}
+    </p>
+    <p className="user__address">
+      {`City: ${address.city}`}
+    </p>
   </section>
 );
 
