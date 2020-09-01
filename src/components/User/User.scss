@@ -1,0 +1,11 @@
+.User {
+  align-self: flex-end;
+  text-align: end;
+  margin-right: 100px;
+  color: #ac6380;
+
+  &__name {
+    font-weight: bold;
+    color: #ae2275;
+  }
+}

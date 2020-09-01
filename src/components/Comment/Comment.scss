@@ -1,0 +1,25 @@
+.Comment {
+  margin: 5px;
+  padding: 1px 20px;
+  border-radius: 20px;
+
+  &:nth-child(odd) {
+    background: #e8d0f1;
+  }
+
+  &:nth-child(even) {
+    background: #d8ecd8;
+  }
+
+  &__name {
+    color: #097c80;
+  }
+
+  &__email {
+    color: #647575;
+  }
+
+  &__body {
+    color: #0d4135;
+  }
+}
