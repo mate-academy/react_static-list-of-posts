@@ -1,0 +1,15 @@
+$gap: 15px;
+
+.user {
+  margin-top: $gap;
+
+  font-size: 14px;
+  font-weight: normal;
+  color: #8d93ab;
+  font-style: italic;
+
+  &__name,
+  &__email {
+    margin-bottom: $gap / 3;
+  }
+}

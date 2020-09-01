@@ -1,0 +1,9 @@
+$gap: 15px;
+
+.postlist {
+
+  &__post {
+    position: relative;
+    margin-bottom: $gap * 2;
+  }
+}
