@@ -2,14 +2,14 @@ import React from 'react';
 import { userShape } from './userShape';
 import './User.css';
 
-function User({ user }) {
-  const userAdress = user.address.suite
-    .concat(` `, user.address.street, `, `, user.address.city);
+function User({ address, name, email }) {
+  const userAdress = address.suite
+    .concat(` `, address.street, `, `, address.city);
 
   return (
     <div className="user">
-      <h4>{user.name}</h4>
-      <span>{user.email}</span>
+      <h4>{name}</h4>
+      <span>{email}</span>
       <div>
         <p>{userAdress}</p>
       </div>
