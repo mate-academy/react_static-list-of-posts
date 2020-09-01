@@ -1,0 +1,17 @@
+.posts {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 10px;
+    padding: 10px;
+
+    background: #f5f5f5;
+    border-radius: 5px;
+  }
+}
