@@ -9,13 +9,8 @@ import users from './api/users';
 import { PostList } from './components/PostList/PostList';
 
 const preparedPosts = posts.map(post => ({
-  id: post.id,
-  title: post.title,
-  text: post.body,
-  userNick: users[post.userId - 1].username,
-  userName: users[post.userId - 1].name,
-  userEmail: users[post.userId - 1].email,
-  userCity: users[post.userId - 1].address.city,
+  post,
+  user: users.find(current => current.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.id),
 }));
 
