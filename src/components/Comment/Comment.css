@@ -1,0 +1,8 @@
+.post__comment {
+  margin: 20px;
+  padding: 10px;
+
+  background-color: #ffd890;
+  color: rgb(75, 75, 75);
+  border-radius: 20px;
+}

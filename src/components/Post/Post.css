@@ -1,0 +1,24 @@
+.post {
+  display: flex;
+  margin: 15px;
+  border-radius: 20px;
+
+  background-color: #aad4d8;
+  color: rgb(75, 75, 75);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 30%;
+  padding: 15px 30px;
+  
+  text-align: center;
+}
+
+.post__comments {
+  width: 70%;
+}
