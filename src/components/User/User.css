@@ -1,0 +1,12 @@
+.user__name,
+.user__email,
+.user__city {
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.user__city {
+  margin-bottom: 20px;
+}
