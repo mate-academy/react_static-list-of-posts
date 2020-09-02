@@ -1,1 +1,74 @@
-// styles go here
+.PostList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 680px;
+  background: linear-gradient(90deg, #b9deed, #efefef);
+
+  &__post {
+    margin-top: 30px;
+  }
+
+  &__comment {
+    margin: 20px;
+  }
+}
+
+.post {
+
+  &__title {
+    text-align: center;
+    text-decoration-line: underline;
+  }
+
+  &__text {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  &__author {
+    text-align: right;
+    margin-right: 20px;
+
+    &-name {
+      margin: 0;
+    }
+
+    &-email {
+      color: black;
+      margin-top: 10px;
+    }
+  }
+}
+
+.comment {
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-top: 15px;
+    padding: 20px;
+    border: 1px dashed black;
+    border-radius: 40px;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__email {
+    display: block;
+    color: lightslategray;
+    font-style: italic;
+    text-align: right;
+  }
+}
