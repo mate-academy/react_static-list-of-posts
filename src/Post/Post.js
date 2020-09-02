@@ -6,7 +6,7 @@ import { PostShape } from '../PropTypes';
 import './Post.css';
 
 export const Post = ({ title, body, author, comments }) => (
-  <>
+  <section>
     <p className="author">
       <User {...author} />
     </p>
@@ -15,7 +15,7 @@ export const Post = ({ title, body, author, comments }) => (
       {body}
     </p>
     <CommentList comments={comments} />
-  </>
+  </section>
 );
 
 Post.propTypes = PostShape;
