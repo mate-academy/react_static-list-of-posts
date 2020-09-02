@@ -1,0 +1,13 @@
+.comment {
+  padding: 10px;
+  text-align: left;
+
+  &__name {
+    color: yellow;
+  }
+
+  &__email {
+    color: magenta;
+    margin: 0;
+  }
+}
