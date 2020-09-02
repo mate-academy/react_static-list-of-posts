@@ -1,0 +1,11 @@
+.post {
+  display: block;
+  width: 700px;
+  background-color: #e9d5fc;
+  margin-bottom: 50px;
+  padding: 40px;
+}
+
+.post-text h2 {
+  text-transform: uppercase;
+}
