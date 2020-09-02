@@ -1,0 +1,15 @@
+.comment__email {
+  text-align: right;
+}
+
+.comment__name {
+  margin-top: 30px;
+}
+
+.comment__name::first-letter {
+  text-transform: uppercase;
+}
+
+.comment__content::first-letter {
+  text-transform: uppercase;
+}

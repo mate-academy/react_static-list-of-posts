@@ -1,0 +1,19 @@
+ul,
+li {
+  list-style: none;
+}
+
+.posts {
+  display: grid;
+  grid-template-rows: repeat(2, 600px);
+  gap: 50px 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.posts__item {
+  padding: 40px;
+  border: 2px solid blue;
+  margin-top: 20px;
+  border-radius: 12px;
+}

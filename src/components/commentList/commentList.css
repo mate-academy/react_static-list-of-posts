@@ -1,0 +1,15 @@
+.comment__list {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.comment__item {
+  border: 1px solid black;
+  margin: 0 5px;
+  padding: 5px 30px;
+  border-radius: 8px;
+  text-align: center;
+}
