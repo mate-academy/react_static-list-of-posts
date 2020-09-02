@@ -4,11 +4,11 @@ import './Comment.css';
 
 function Comment({ name, body, email }) {
   return (
-    <li className="comment">
+    <div className="comment">
       <h4>{name}</h4>
       <p>{body}</p>
       <p className="comment__email">{email}</p>
-    </li>
+    </div>
   );
 }
 
