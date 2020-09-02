@@ -1,0 +1,15 @@
+.commentlist {
+  padding: 15px;
+}
+
+.comment {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(54, 148, 204, 0.1);
+  border-radius: 20px;
+
+  &__author {
+    text-align: right;
+    font-size: 11px;
+  }
+}
