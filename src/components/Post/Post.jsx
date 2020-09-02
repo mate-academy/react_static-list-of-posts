@@ -11,11 +11,6 @@ export const Post = ({ title, body, user, replies }) => (
       <p className="article__text">{body}</p>
       <User {...user} />
       <CommentList replies={replies} />
-      {/* <ul className="commentlist">
-        {replies.map(comment => (
-          <CommentList key={comment.id} {...comment} />
-        ))}
-      </ul> */}
     </article>
   </li>
 );
@@ -23,7 +18,13 @@ export const Post = ({ title, body, user, replies }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape({}).isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
   replies: PropTypes.arrayOf(
     PropTypes.object,
   ).isRequired,
