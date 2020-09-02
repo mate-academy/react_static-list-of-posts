@@ -1,1 +1,28 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+ul,
+li {
+  margin: 0;
+  padding: 10px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    display: flex;
+    justify-content: center;
+    line-height: 200%;
+    color: #3b6978;
+  }
+}
