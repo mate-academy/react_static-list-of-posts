@@ -1,0 +1,17 @@
+.comments {
+  &__heading {
+    margin-bottom: 30px;
+  }
+
+  &__author {
+    text-align: left;
+    margin: 20px 0;
+  }
+
+  &__body {
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+    border: 1px solid black;
+  }
+}

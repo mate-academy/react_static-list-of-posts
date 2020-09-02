@@ -1,0 +1,28 @@
+.post {
+  margin: 30px auto;
+  padding: 20px;
+  width: 600px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    margin-bottom: 20px;
+    text-align: justify;
+
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__author {
+    text-align: right;
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,1 +1,15 @@
-// styles go here
+@import './components/comments.scss';
+@import './components/post.scss';
+
+html {
+  font-family: Arial, Helvetica, sans-serif;;
+}
+
+p {
+  margin: 5px;
+}
+
+.App {
+  margin: 0 auto;
+  text-align: center;
+}
