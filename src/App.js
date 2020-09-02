@@ -17,7 +17,7 @@ const App = () => (
   <>
     <div className="App">
       <h1>Static list of posts</h1>
-      <div>
+      <div className="statistic">
         <p>
           <span>posts: </span>
           {postsFromServer.length}

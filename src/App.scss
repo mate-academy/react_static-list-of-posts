@@ -3,8 +3,18 @@
   display: grid;
   justify-content: center;
 }
+.statistic {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.statistic span {
+  font-weight: 700;
+  margin-left: 30px;
+}
+
 .postList {
-  // display: grid;
   max-width: 60%;
   margin: 0 auto;
 }
