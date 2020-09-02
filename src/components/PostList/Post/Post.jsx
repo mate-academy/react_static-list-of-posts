@@ -6,31 +6,30 @@ import { User } from '../../User';
 import './Post.scss';
 
 export const Post = ({
-  id,
   title,
   body,
   user,
   comments,
 }) => (
   <>
-    <li key={id} className="post">
-      <p className="title">
-        {title}
-      </p>
-      <p className="text">
-        {body}
-      </p>
-      <User {...user} />
-      <CommnentList comments={comments} />
-    </li>
-
+    <p className="title">
+      {title}
+    </p>
+    <p className="text">
+      {body}
+    </p>
+    <User {...user} />
+    <CommnentList comments={comments} />
   </>
 );
 
 Post.propTypes = {
-  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  comments: PropTypes.string.isRequired,
-  user: PropTypes.string.isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.object.isRequired,
+  ).isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+  }).isRequired,
 };
