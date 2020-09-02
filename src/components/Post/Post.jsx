@@ -10,11 +10,12 @@ export const Post = ({ title, body, user, replies }) => (
       <h2 className="article__title">{title}</h2>
       <p className="article__text">{body}</p>
       <User {...user} />
-      <ul className="commentlist">
+      <CommentList replies={replies} />
+      {/* <ul className="commentlist">
         {replies.map(comment => (
           <CommentList key={comment.id} {...comment} />
         ))}
-      </ul>
+      </ul> */}
     </article>
   </li>
 );
