@@ -1,0 +1,16 @@
+.post {
+  padding: 16px;
+  background: #fff;
+  width: 500px;
+  margin: 10px 25px;
+
+  &__title {
+    margin-top: 40px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+}

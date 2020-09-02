@@ -1,0 +1,14 @@
+.comment {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-top: 1px solid lightgrey;
+  font-size: 12px;
+
+  &__author {
+    font-weight: bold;
+  }
+
+  &__text {
+    padding-top: 5px;
+  }
+}
