@@ -1,20 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Comment from './Comment';
 
-const CommentList = (comments) => {
-  const arrayComments = Object.values(comments);
+const CommentList = ({ comments }) => (
+  <div className="comments">
+    <h3 className="comments__heading">Comments:</h3>
+    {comments.map(comment => (
+      <div className="comments__item" key={comment.id}>
+        <hr />
+        <Comment {...comment} />
+      </div>
+    ))}
+  </div>
+);
 
-  return (
-    <div className="comments">
-      <h3 className="comments__heading">Comments:</h3>
-      {arrayComments.map(comment => (
-        <div key={comment.id} className="comments__item">
-          <hr />
-          <Comment {...comment} />
-        </div>
-      ))}
-    </div>
-  );
+CommentList.propTypes = {
+  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default CommentList;
