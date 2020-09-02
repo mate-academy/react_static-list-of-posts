@@ -1,0 +1,13 @@
+$gap: 15px;
+
+.comments {
+
+  &__title {
+    margin-top: $gap * 2;
+    font-size: 20px;
+  }
+
+  &__comment {
+    margin-top: $gap;
+  }
+}

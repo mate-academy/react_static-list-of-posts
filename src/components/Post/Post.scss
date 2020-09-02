@@ -1,0 +1,24 @@
+$gap: 15px;
+
+.post {
+  padding: $gap * 3;
+  color: #393b44;
+
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 4px 1px #f1f3f8;
+
+  &__title {
+    padding-bottom: $gap * 2;
+    font-size: 30px;
+    border-bottom: 1px solid #8d93ab;
+  }
+
+  &__body {
+    margin-top: $gap * 2;
+
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.7rem;
+  }
+}

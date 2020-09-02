@@ -1,1 +1,68 @@
-// styles go here
+$gap: 15px;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  color: #2e2e2e;
+}
+
+body {
+  background-color: #fcfcfc;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  color: #393b44;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.App {
+  width: 900px;
+  margin: 0 auto;
+  transition: width 0.3s;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+}
+
+.info {
+  display: flex;
+  margin-bottom: $gap;
+  font-size: 14px;
+  font-weight: normal;
+  color: #393b44;
+
+  &__title {
+    font-style: italic;
+  }
+
+  &__posts,
+  &__comments {
+    margin-right: $gap;
+  }
+
+  &__value {
+    font-weight: bold;
+  }
+}
