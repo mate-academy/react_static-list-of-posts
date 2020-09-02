@@ -1,1 +1,43 @@
-// styles go here
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(181,189,200,1) 0%,
+    rgba(130,140,149,1) 0%,
+    rgba(40,52,59,1) 100%
+  );
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-style: italic;
+}
+
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.App {
+  padding: 2vh 5vw;
+  margin: 0 auto;
+  max-width: 1300px;
+
+  &__header {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #cad6db;
+  }
+}
