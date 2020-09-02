@@ -30,6 +30,10 @@ export const Post = ({
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(PropTypes.any).isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.object.isRequired,
+  }).isRequired,
   comments: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

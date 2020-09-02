@@ -26,5 +26,7 @@ export const User = ({
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.objectOf(PropTypes.any).isRequired,
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  }).isRequired,
 };
