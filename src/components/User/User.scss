@@ -1,0 +1,33 @@
+.user {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+
+  &__photo {
+    display: block;
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    background-color: rgb(4, 83, 4);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+  }
+
+  &__information {
+    padding-left: 15px;
+    font-size: 12px;
+
+    &-data {
+      display: block;
+      color: grey;
+    }
+
+  }
+}
+
+.name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
