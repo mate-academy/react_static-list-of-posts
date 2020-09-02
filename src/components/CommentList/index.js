@@ -8,7 +8,11 @@ function CommentList({ commentList }) {
     <ul className="commentList">
       {
         commentList
-          .map(comment => <li key={comment.id}><Comment {...comment} /></li>)
+          .map(comment => (
+            <li key={comment.id}>
+              <Comment {...comment} />
+            </li>
+          ))
       }
     </ul>
   );
