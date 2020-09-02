@@ -1,0 +1,9 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user p {
+  margin: 5px;
+}
