@@ -5,28 +5,32 @@ import { User } from '../../User';
 
 import './Post.scss';
 
-export const Post = ({ post }) => (
+export const Post = ({
+  id,
+  title,
+  body,
+  user,
+  comments,
+}) => (
   <>
-    <li key={post.id} className="post">
+    <li key={id} className="post">
       <p className="title">
-        {post.title}
+        {title}
       </p>
       <p className="text">
-        {post.body}
+        {body}
       </p>
-      <User oneUser={post.user} />
-      <CommnentList comments={post.comments} />
+      <User {...user} />
+      <CommnentList comments={comments} />
     </li>
 
   </>
 );
 
 Post.propTypes = {
-  post: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    comments: PropTypes.string.isRequired,
-    user: PropTypes.string.isRequired,
-  }).isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  comments: PropTypes.string.isRequired,
+  user: PropTypes.string.isRequired,
 };

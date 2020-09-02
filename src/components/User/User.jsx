@@ -3,19 +3,25 @@ import PropTypes from 'prop-types';
 
 import './User.scss';
 
-export const User = ({ oneUser }) => (
-  <div className="author">
-    <p className="name">{oneUser.name}</p>
-    <p className="email">{oneUser.email}</p>
-    <p className="adress">{oneUser.address.city}</p>
-  </div>
+export const User = ({
+  name,
+  email,
+  address,
+}) => (
+  <>
+    <div className="author">
+      <p className="name">{name}</p>
+      <p className="email">{email}</p>
+      <p className="adress">{address.city}</p>
+    </div>
+    <p className="commentaries_block">Commetaries</p>
+  </>
 );
 
 User.propTypes = {
-  oneUser: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
   }).isRequired,
-
 };

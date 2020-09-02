@@ -5,7 +5,6 @@ import './Comment.scss';
 
 export const Comment = ({ oneComment }) => (
   <div className="commentaries">
-    Commentaries:
     <p className="commentName">{oneComment.name}</p>
     <p className="commentText">{oneComment.body}</p>
     <p className="commentEmail">{oneComment.email}</p>

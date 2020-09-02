@@ -35,9 +35,7 @@ const App = () => (
       </div>
 
     </div>
-    <ul className="postList">
-      <PostList posts={posts} />
-    </ul>
+    <PostList posts={posts} />
   </>
 );
 
