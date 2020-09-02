@@ -11,35 +11,3 @@ $gap: 15px;
     margin-top: $gap;
   }
 }
-
-.comment {
-  padding: $gap;
-
-  border: 1px solid #d6e0f0;
-  border-radius: 3px;
-  box-shadow: 0 3px 4px 1px #f1f3f8;
-
-  &__name,
-  &__body {
-    margin-bottom: $gap;
-  }
-
-  &__name {
-    font-size: 18px;
-    font-weight: bold;
-    font-style: italic;
-  }
-
-  &__body {
-    padding-bottom: $gap;
-
-    border-bottom: 1px solid #d6e0f0;
-  }
-
-  &__email {
-    color: #8d93ab;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: italic;
-  }
-}
