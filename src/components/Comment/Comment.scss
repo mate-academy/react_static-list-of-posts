@@ -1,0 +1,23 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+
+  border: 2px solid #cad6db;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #cad6db;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__name {
+    margin-top: 0;
+  }
+
+  &__body {
+    margin-bottom: 15px;
+  }
+}

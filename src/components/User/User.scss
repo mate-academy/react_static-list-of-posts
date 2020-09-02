@@ -1,0 +1,14 @@
+.user {
+  text-align: right;
+  line-height: 1.5;
+
+  &__name {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
