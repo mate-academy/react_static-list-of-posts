@@ -1,0 +1,21 @@
+.post {
+  &Block {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  &Name {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &Body {
+    text-align: left;
+    margin: 20px;
+    padding: 20px;
+    font-size: 24px;
+  }
+}

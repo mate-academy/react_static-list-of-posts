@@ -1,0 +1,23 @@
+.user {
+  padding: 10px;
+  background-color: rgb(197, 255, 212);
+  border-radius: 10px;
+  width: fit-content;
+
+   &Name {
+     text-transform: uppercase;
+     text-align: center;
+   }
+
+   &Email {
+     color: blue;
+     font-weight: 100;
+     text-align: center;
+   }
+
+   &Address {
+     display: flex;
+     justify-content: space-around;
+     font-weight: 600;
+   }
+}
