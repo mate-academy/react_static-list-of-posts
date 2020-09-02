@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import '../comment/comment.css';
 
-function Comment({body, name, email, id}) {
+function Comment({body, name, email}) {
   return (
     <>
       <div className="comment__info">

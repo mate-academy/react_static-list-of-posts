@@ -10,8 +10,10 @@ function Post({title, user, body, comments}) {
         <p className="post__name">
           {user.name}
         </p>
+        <p>From: {user.address.city}</p>
         <span className="post__email">
-          <a href="#">{user.email}</a>
+          Email:
+          <a href="#"> {user.email}</a>
         </span>
       </div>
       <h1 className="post__title">{title}</h1>

@@ -3,6 +3,10 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .posts {
   display: grid;
   grid-template-rows: repeat(2, 600px);
