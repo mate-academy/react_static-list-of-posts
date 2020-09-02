@@ -1,0 +1,28 @@
+.commentaries {
+  padding:10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(16, 70, 5);
+  box-shadow: gray -2px -2px 5px ;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.commentName {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.commentText {
+  border: 3px solid rgb(118, 120, 228);
+  border-radius: 5px;
+  max-width: 80%;
+  font-weight: 500;
+}
+.commentEmail {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+  border-bottom: 2px dashed grey;
+}
