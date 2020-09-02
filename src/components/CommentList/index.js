@@ -6,12 +6,10 @@ import Comment from '../Comment';
 function CommentList({ commentList }) {
   return (
     <ul className="commentList">
-      <li>
-        {
-          commentList
-            .map(comment => <Comment key={comment.id} {...comment} />)
-        }
-      </li>
+      {
+        commentList
+          .map(comment => <li key={comment.id}><Comment {...comment} /></li>)
+      }
     </ul>
   );
 }
