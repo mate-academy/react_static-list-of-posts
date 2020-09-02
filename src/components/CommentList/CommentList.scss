@@ -1,0 +1,16 @@
+.comment {
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 2px solid #5f0f40;
+    border-radius: 8px;
+  }
+
+  &__title {
+    border-radius: inherit;
+    background-color: #fdfcdc;
+    line-height: 40px;
+    text-align: center;
+  }
+}

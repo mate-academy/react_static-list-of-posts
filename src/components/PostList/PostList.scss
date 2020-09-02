@@ -1,0 +1,16 @@
+.container {
+  padding: 40px calc(50% - 960px / 2);
+
+}
+
+.post {
+  display: grid;
+  grid-template-areas: "user title title"
+    "email title title"
+    "address post post"
+    "comments comments comments";
+ 
+  &__comments {
+    grid-area: comments;
+  }
+}

@@ -1,0 +1,18 @@
+.post {
+
+  &__userName {
+    background-color: #f6bd60;
+    grid-area: user;
+    border-top-left-radius: inherit;
+  }
+
+  &__userEmail {
+    background-color: #f6bd60;
+    grid-area: email;
+  }
+
+  &__userAddress {
+    background-color: #f2e9e4;
+    grid-area: address;
+  }
+}
