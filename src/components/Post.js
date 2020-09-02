@@ -4,10 +4,16 @@ import CommentList from './CommentList';
 import User from './User';
 
 const Post = ({ post }) => (
-  <article key={post.id}>
-    <h3>{post.title}</h3>
-    <p>{post.body}</p>
-    <User user={post.user} />
+  <article
+    key={post.id}
+    className="post"
+  >
+    <div className="postBody">
+      <h3>{post.title}</h3>
+      <p>{post.body}</p>
+      <User user={post.user} />
+    </div>
+    <span>Comments:</span>
     <CommentList comments={post.comments} />
   </article>
 );

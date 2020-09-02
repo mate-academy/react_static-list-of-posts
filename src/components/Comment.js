@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Comment = ({ comment }) => (
-  <li>
+  <li className="comment">
     <h4>{comment.name}</h4>
     <p>{comment.body}</p>
-    <span>{comment.email}</span>
+    <div className="email">{comment.email}</div>
   </li>
 );
 
