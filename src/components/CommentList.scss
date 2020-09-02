@@ -1,0 +1,11 @@
+.Comments {
+  padding: 20px;
+  background-color: #454647;
+
+  &__header {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #528bcc;
+    margin-bottom: 20px;
+  }
+}
