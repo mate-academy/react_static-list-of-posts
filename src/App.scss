@@ -1,1 +1,10 @@
-// styles go here
+body {
+  font-family: "Verdana", sans-serif;
+  font-size: 12px;
+}
+
+.App {
+  &__title {
+    text-align: center;
+  }
+}
