@@ -1,0 +1,17 @@
+.posts__content {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 50px;
+}
+
+.posts__title {
+  margin-top: 10px;
+  margin-bottom: 50px;
+
+  color: rgb(156, 23, 6);
+}
+
+.posts__text {
+  font-size: 20px;
+}

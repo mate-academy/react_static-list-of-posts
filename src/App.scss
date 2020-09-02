@@ -1,1 +1,24 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: rgb(44, 44, 44);
+
+  background-color: rgb(156, 23, 6);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
