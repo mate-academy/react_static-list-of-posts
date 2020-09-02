@@ -1,0 +1,22 @@
+.comment {
+  &Header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &Name {
+    text-transform: uppercase;
+  }
+
+  &Email {
+    color: blue;
+    font-weight: 100;
+  }
+
+  &Body {
+    padding: 5px;
+    margin: 5px;
+    background-color: #eee;
+    border: 1px solid black;
+  }
+}
