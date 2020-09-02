@@ -1,0 +1,19 @@
+.author {
+  margin-left: auto;
+  margin-bottom: 5px;
+  width: 150px;
+  padding: 5px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  box-shadow: 1px 19px 29px -18px rgba(207,195,207,1);
+
+  &__name {
+    margin: 0;
+    font-style: italic;
+  }
+
+  &__city {
+    margin: 0;
+    color: brown;
+  }
+}
