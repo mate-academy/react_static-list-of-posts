@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Post from './Post';
+import Post from '../Post/Post';
+import './PostList.scss';
 
 const PostList = ({ posts }) => (
   <section className="posts">
     {posts.map(post => (
-      <Post key={post.id} post={post} />
+      <Post key={post.id} {...post} />
     ))}
   </section>
 );

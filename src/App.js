@@ -5,7 +5,7 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import PostList from './components/PostList';
+import PostList from './components/PostList/PostList';
 
 const preparedPosts = posts.map(post => ({
   ...post,

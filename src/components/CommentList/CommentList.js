@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from './Comment';
+import Comment from '../Comment/Comment';
+import './CommentList.scss';
 
 const CommentList = ({ comments }) => (
   <ul className="comments">
     {comments.map(comment => (
-      <Comment key={comment.id} comment={comment} />
+      <li
+        key={comment.id}
+        className="comment"
+      >
+        <Comment {...comment} />
+      </li>
     ))}
   </ul>
 );
