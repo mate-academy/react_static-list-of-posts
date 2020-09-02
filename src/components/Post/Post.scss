@@ -1,0 +1,13 @@
+.post {
+  padding: 5px;
+
+  background-color: #c0c0c0;
+  border-radius: 5px;
+
+  &__author {
+    background-color: #f5f5f5;
+
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+}
