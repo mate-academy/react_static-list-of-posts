@@ -1,0 +1,23 @@
+.comment {
+  border: 1px solid red;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: rgb(255, 204, 203);
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__body {
+    margin-top: 5px;
+    max-width: 300px;
+  }
+}

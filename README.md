@@ -1,7 +1,7 @@
-# React static list of posts
+<!-- # React static list of posts
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)
-- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+  [DEMO LINK](https://tykhan.github.io/react_static-list-of-posts/)
+- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline) -->
 
 ## Task
 - Implement an application with 5 components `PostList`, `Post`, `User`, `CommentList` and `Comment`
