@@ -10,14 +10,14 @@ export const PostList = ({ posts }) => (
     {posts.map(current => (
       <Post
         key={current.post.id}
-        data={current}
+        post={current}
       />
     ))}
   </div>
 );
 
 PostList.propTypes = {
-  posts: PropTypes.objectOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape(),
   ).isRequired,
 };

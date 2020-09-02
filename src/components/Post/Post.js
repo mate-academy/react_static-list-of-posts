@@ -6,25 +6,23 @@ import PropTypes from 'prop-types';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 
-export const Post = ({ data }) => (
+export const Post = ({ post }) => (
   <div className="Post">
     <User
-      {...data.user}
+      {...post.user}
     />
     <div className="PostInfo">
       <div className="PostBody">
-        <h2 className="PostTitle">{data.post.title}</h2>
-        <p className="PostText">{data.post.text}</p>
+        <h2 className="PostTitle">{post.post.title}</h2>
+        <p className="PostText">{post.post.text}</p>
       </div>
       <CommentList
-        comments={data.comments}
+        comments={post.comments}
       />
     </div>
   </div>
 );
 
 Post.propTypes = {
-  data: PropTypes.objectOf(
-    PropTypes.shape(),
-  ).isRequired,
+  post: PropTypes.shape().isRequired,
 };
