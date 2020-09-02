@@ -1,0 +1,26 @@
+.post {
+  max-width: 700px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 0;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 14px;
+  }
+
+  &__body {
+    font-size: 12px;
+    padding: 5px 0;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__comments {
+    color: blue;
+  }
+}
