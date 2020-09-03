@@ -1,1 +1,13 @@
-// styles go here
+body {
+  margin: 0;
+  background-color: #7878fb;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blue;
+}
+
+
