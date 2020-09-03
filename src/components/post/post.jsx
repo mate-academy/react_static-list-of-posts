@@ -2,20 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../post/post.css';
 import CommentList from '../commentList/commentList'
+import User from '../User/User';
 
 function Post({title, user, body, comments}) {
   return (
     <>
-      <div className="post__info-user">
-        <p className="post__name">
-          {user.name}
-        </p>
-        <p>From: {user.address.city}</p>
-        <span className="post__email">
-          Email:
-          <a href="#"> {user.email}</a>
-        </span>
-      </div>
+      <User {...user}/>
       <h1 className="post__title">{title}</h1>
       <div className="post__content">
         <p className="post__text">

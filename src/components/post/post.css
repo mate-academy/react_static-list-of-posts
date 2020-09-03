@@ -2,15 +2,6 @@
   text-transform: uppercase;
 }
 
-.post__info-user {
-  text-align: right;
-  padding-bottom: 20px;
-}
-
-.post__name {
-  font-size: 18px;
-}
-
 .post__content {
   width: 700px;
   margin: 0 auto;
