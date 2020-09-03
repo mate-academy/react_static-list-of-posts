@@ -1,0 +1,15 @@
+.user {
+  text-align: right;
+  line-height: 1.5;
+
+  &__name {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 5px;
+  }
+}

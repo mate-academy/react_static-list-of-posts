@@ -1,0 +1,25 @@
+.post {
+  padding: 20px;
+  border-radius: 10px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(181,189,200,1) 0%,
+    rgba(130,140,149,1) 90%,
+    rgba(40,52,59,1) 100%
+  );
+  flex-direction: column;
+
+  &__title {
+    align-self: center;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__body {
+    margin-bottom: 15px;
+  }
+
+  &__comments {
+    margin-bottom: 20px;
+  }
+}
