@@ -1,0 +1,12 @@
+.comment {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  border-radius: 30px;
+  font-style: italic;
+  line-height: 15px;
+
+  &__body {
+    color: grey;
+  }
+}
