@@ -17,7 +17,7 @@ const preparedPosts = posts.map(post => (
 ));
 
 const App = () => (
-  <div className="App">
+  <div className="app">
     <h1>Static list of posts</h1>
 
     <p>
