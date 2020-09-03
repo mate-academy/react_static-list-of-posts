@@ -1,0 +1,29 @@
+.commentary {
+  padding:10px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(16, 70, 5);
+  box-shadow: gray -2px -2px 5px ;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  &__text {
+    border: 3px solid rgba(89, 93, 94, 0.301);
+    border-radius: 5px;
+    max-width: 80%;
+    font-weight: 500;
+  }
+
+  &__email {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    border-bottom: 2px dashed grey;
+  }
+}
