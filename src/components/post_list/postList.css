@@ -1,0 +1,27 @@
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.posts {
+  display: grid;
+  grid-template-rows: repeat(2, 600px);
+  gap: 50px 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.posts__item {
+  padding: 40px;
+  border: 1px solid blue;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+.posts__item:hover {
+  box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
+}

@@ -1,0 +1,12 @@
+.post__title::first-letter {
+  text-transform: uppercase;
+}
+
+.post__content {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.post__content::first-letter {
+  text-transform: uppercase;
+}
