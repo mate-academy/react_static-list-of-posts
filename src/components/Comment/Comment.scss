@@ -1,0 +1,9 @@
+.comment {
+  border-top: 1px solid black;
+
+  &__user {
+    margin-bottom: 10px;
+    color: DarkRed;
+    font-weight: bold;
+  }
+}
