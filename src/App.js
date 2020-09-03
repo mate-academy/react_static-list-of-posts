@@ -15,21 +15,21 @@ const posts = postsFromServer.map(post => ({
 
 const App = () => (
   <>
-    <div className="App">
+    <div className="app">
       <h1>Static list of posts</h1>
-      <div className="statistic">
+      <div className="app__statistic">
         <p>
-          <span>posts: </span>
+          <span className="app__statistic--item">posts: </span>
           {postsFromServer.length}
         </p>
 
         <p>
-          <span>comments: </span>
+          <span className="app__statistic--item">comments: </span>
           {commentsFromServer.length}
         </p>
 
         <p>
-          <span>Users: </span>
+          <span className="app__statistic--item">Users: </span>
           {usersFromServer.length}
         </p>
       </div>

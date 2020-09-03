@@ -12,10 +12,10 @@ export const Post = ({
   comments,
 }) => (
   <>
-    <p className="title">
+    <p className="postList__post--title">
       {title}
     </p>
-    <p className="text">
+    <p className="postList__post--text">
       {body}
     </p>
     <User {...user} />
@@ -27,7 +27,7 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   comments: PropTypes.arrayOf(
-    PropTypes.object.isRequired,
+    PropTypes.object,
   ).isRequired,
   user: PropTypes.shape({
     id: PropTypes.number.isRequired,

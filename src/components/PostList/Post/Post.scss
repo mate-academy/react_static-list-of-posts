@@ -1,4 +1,4 @@
-.post {
+.postList__post {
   display: grid;
   padding:10px;
   margin: 10px;
@@ -6,19 +6,19 @@
   box-shadow: gray 5px -5px 2px ;
   background-color: rgba(227, 240, 52, 0.329);
   border-radius: 10px;
-}
 
-.title {
-  justify-self: center;
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-bottom: 2px solid;
-  text-align: center;
-}
+  &--title {
+    justify-self: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid;
+    text-align: center;
+  }
 
-.text {
-  font-size: 20px;
-  font-weight: bold;
-  color: rgba(36, 22, 233, 0.952);
+  &--text {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(36, 22, 233, 0.952);
+  }
 }

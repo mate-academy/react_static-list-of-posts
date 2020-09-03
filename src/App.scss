@@ -1,17 +1,17 @@
 // styles go here
-.App {
+.app {
   display: grid;
   justify-content: center;
-}
-.statistic {
-  display: flex;
-  justify-content: space-around;
 
-}
+  &__statistic {
+    display: flex;
+    justify-content: space-around;
 
-.statistic span {
-  font-weight: 700;
-  margin-left: 30px;
+    &--item {
+      font-weight: 700;
+      margin-left: 30px;
+    }
+  }
 }
 
 .postList {

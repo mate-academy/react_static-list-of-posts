@@ -9,10 +9,10 @@ export const User = ({
   address,
 }) => (
   <>
-    <div className="author">
-      <p className="name">{name}</p>
-      <p className="email">{email}</p>
-      <p className="adress">{address.city}</p>
+    <div className="postList__post--author author">
+      <p className="author__name">{name}</p>
+      <p className="author__email">{email}</p>
+      <p className="author__adress">{address.city}</p>
     </div>
     <p className="commentaries_block">Commetaries</p>
   </>
