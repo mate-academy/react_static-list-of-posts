@@ -1,0 +1,31 @@
+.comment-list {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  column-gap: 10px;
+  row-gap: 10px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid rgb(122, 24, 78);
+    box-shadow: 10px 5px 5px rgb(122, 24, 78);
+    border-radius: 2px;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgb(233, 197, 197);
+    }
+  }
+
+  &__title {
+    align-self: center;
+    font-weight: bold;
+  }
+
+  &__email {
+    font-size: 13px;
+  }
+}

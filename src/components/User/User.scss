@@ -1,0 +1,13 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    font-style: italic;
+  }
+}
