@@ -17,7 +17,11 @@ a {
 
 .posts__item {
   padding: 40px;
-  border: 2px solid blue;
+  border: 1px solid blue;
   margin-top: 20px;
   border-radius: 12px;
+}
+
+.posts__item:hover {
+  box-shadow: 0 6px 23px rgba(0, 117, 255, 0.46);
 }
