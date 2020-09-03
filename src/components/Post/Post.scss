@@ -1,0 +1,26 @@
+.post {
+  display: grid;
+
+  border: 2px solid darkmagenta;
+  border-radius: 5px;
+  width: 40vw;
+  margin: 30px;
+  padding: 30px;
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    font-style: oblique;
+    font-size: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
