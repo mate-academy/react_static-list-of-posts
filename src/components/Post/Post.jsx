@@ -17,7 +17,7 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   user: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(PropTypes.string),
+  comments: PropTypes.arrayOf(PropTypes.object),
 };
 
 Post.defaultProps = {

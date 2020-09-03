@@ -14,7 +14,7 @@ export const PostList = ({ posts }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.objectOf(PropTypes.string),
+  posts: PropTypes.arrayOf(PropTypes.object),
 };
 
 PostList.defaultProps = {
