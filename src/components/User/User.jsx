@@ -5,7 +5,7 @@ import './User.scss';
 export const User = ({ name, email, address }) => (
   <div className="user">
     <p className="user__name">
-      <i>{name}</i>
+      {name}
     </p>
     <a
       href={`mailto:${email}`}

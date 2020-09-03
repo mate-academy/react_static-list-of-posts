@@ -6,13 +6,13 @@ import { CommentList } from '../CommentList';
 import { User } from '../User';
 
 export const Post = ({ title, body, user, comments }) => (
-  <>
+  <div className="post__container">
     <h2 className="post__title">{title}</h2>
     <p className="post__body">{body}</p>
     <User {...user} />
     <h3 className="post__comments">Comments:</h3>
     <CommentList commentsOnPost={comments} />
-  </>
+  </div>
 );
 
 Post.propTypes = {

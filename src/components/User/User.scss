@@ -3,8 +3,9 @@
   line-height: 1.5;
 
   &__name {
-    font-weight: 600;
     margin-bottom: 5px;
+    font-weight: 600;
+    font-style: italic;
   }
 
   &__email {

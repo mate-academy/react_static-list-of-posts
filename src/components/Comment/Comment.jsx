@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
-  <>
+  <div className="comment__container">
     <h4 className="comment__name">{name}</h4>
     <p className="comment__body">{body}</p>
     <a
@@ -12,7 +12,7 @@ export const Comment = ({ name, body, email }) => (
     >
       {email}
     </a>
-  </>
+  </div>
 );
 
 Comment.propTypes = {
