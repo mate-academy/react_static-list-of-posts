@@ -1,1 +1,63 @@
-// styles go here
+ul,
+li {
+  list-style: none;
+}
+
+h2,
+h3,
+body {
+  margin: 0;
+}
+
+p,
+h1 {
+  font-style: italic;
+  text-align: center;
+}
+
+body {
+  background-color: rgb(68, 228, 206);
+}
+
+.post {
+  margin: 15px;
+}
+
+.address {
+  right: 15px;
+  top: 100px;
+}
+
+.post_text {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(211, 176, 63);
+}
+
+.button {
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(32, 204, 61);
+  cursor: pointer;
+  outline: none;
+}
+
+.comments {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  padding: 10px;
+  margin: 15px 0;
+  border-bottom: 2px solid black;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  background-color: rgb(180, 41, 223);
+}
