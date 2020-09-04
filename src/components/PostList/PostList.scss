@@ -1,0 +1,17 @@
+.post-list {
+  list-style: none;
+
+  &__item {
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #f3eee6;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 2px #dfdfdd;
+    text-transform: capitalize;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+  }
+}
