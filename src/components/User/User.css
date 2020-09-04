@@ -1,0 +1,11 @@
+.user p {
+  width: max-content;
+  margin: 3px 0;
+}
+
+.user {
+  width: max-content;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #8d93ab;
+}

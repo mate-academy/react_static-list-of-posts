@@ -1,0 +1,19 @@
+.post {
+  padding: 15px;
+  border: 2px solid cornflowerblue;
+  border-radius: 10px;
+  background-color: #d6e0f0;
+}
+
+.post__head {
+  display: flex;
+}
+
+.title {
+  width: 60%;
+  margin-left: 20px;
+}
+
+.text {
+  color: dodgerblue;
+}
