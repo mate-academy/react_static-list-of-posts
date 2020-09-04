@@ -1,25 +1,27 @@
 import React from 'react';
-import propTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 import './Post.scss';
 
-const Post = ({ post }) => (
+const Post = ({ title, body, user, comments }) => (
   <>
-    <h2>{post.title}</h2>
-    <p>{post.body}</p>
-    <User user={post.user} />
-    <CommentList comments={post.comments} />
+    <h2>{title}</h2>
+    <p>{body}</p>
+    <User {...user} />
+    <CommentList comments={comments} />
   </>
 );
 
 Post.propTypes = {
-  post: propTypes.shape({
-    title: propTypes.string.isRequired,
-    body: propTypes.string.isRequired,
-    user: propTypes.object.isRequired,
-    comments: propTypes.arrayOf(object).isRequired,
-  }).isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: PropTypes.objectOf(PropTypes.string).isRequired,
+  comments: PropTypes.arrayOf(PropTypes.object),
+};
+
+Post.defaultProps = {
+  comments: [],
 };
 
 export default Post;
