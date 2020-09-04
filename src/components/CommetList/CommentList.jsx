@@ -10,9 +10,8 @@ export const CommentList = ({ comments }) => (
   </ul>
 );
 
-CommentList.prototype = {
-  comments: PropTypes.array.isRequired,
-  comment: PropTypes.objectOf(
+CommentList.propTypes = {
+  comments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),

@@ -3,29 +3,34 @@ import PropTypes from 'prop-types';
 
 export const User = ({ name, email, address }) => (
   <>
-    <span>Name: {name} /</span>
-    <span> Email: {email}</span>
+    <span>
+      Name:
+      {name}
+      {' '}
+      /
+    </span>
+    <span>
+      {' '}
+      Email:
+      {email}
+    </span>
     <div className="address">
-      <span>Address (</span>
-      <span>City: "{address.city}" </span>
-      <span>str. "{address.street}" </span>
-      <span>{address.suite} )</span>
+      <span>
+        Address ( City: &quot;
+        {address.city}
+        &quot;
+        str. &quot;
+        {address.street}
+        &quot;&nbsp;
+        {address.suite}
+        )
+      </span>
     </div>
   </>
 );
 
-User.prototype = {
+User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.objectOf(
-    PropTypes.shape({
-      city: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-      suite: PropTypes.string.isRequired,
-    }),
-  ),
-};
-
-User.defaultProps = {
-  address: {},
+  address: PropTypes.shape().isRequired,
 };
