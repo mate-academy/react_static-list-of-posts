@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Comment.css';
+import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
   <div className="postComment">

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Comment } from '../Comment';
 
-import './CommentList.css';
+import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
   <ul className="commentList">
