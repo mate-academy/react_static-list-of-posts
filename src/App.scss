@@ -1,1 +1,12 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+}
