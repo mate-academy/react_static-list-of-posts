@@ -1,0 +1,20 @@
+.post {
+  margin: 10px 100px;
+  border: 3px orange solid;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #e8e8e8;
+}
+
+.comment {
+  margin: 0 100px;
+  border: 2px solid orange;
+  border-radius: 8px;
+
+    li {
+      border: 1px solid black;
+      border-radius: 8px;
+      margin: 15px;
+      padding: 0 20px;
+    }
+}
