@@ -11,11 +11,11 @@ import users from './api/users';
 const preparedPosts = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
-  comment: comments.filter(comment => comment.postId === post.id),
+  comments: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App = () => (
-  <div className="App">
+  <div className="app">
     <h1>Static list of posts</h1>
 
     <p>
