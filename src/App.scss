@@ -1,1 +1,41 @@
 // styles go here
+.App {
+  font-style: oblique;
+  text-align: center;
+  border: 1px solid mediumpurple;
+  padding: 20px;
+  background-color: rgb(212, 205, 205);
+}
+
+.page-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+h1 {
+  text-shadow: 5px 0 2px mediumslateblue;
+}
+
+h3 {
+  text-align: center;
+}
+
+.post {
+  background-color: rgb(223, 221, 221);
+  box-shadow: 5px 5px slategray;
+  border: 1px solid rgb(157, 162, 167);
+  margin-bottom: 10px;
+}
+
+.comment {
+  height: 150px;
+  overflow: auto ;
+  border: 5px solid salmon;
+  margin: 0 10px 10px;
+  background-color: snow;
+}
+
+.address {
+  text-align: left;
+}
