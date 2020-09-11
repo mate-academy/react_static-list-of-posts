@@ -7,6 +7,12 @@ import users from './api/users';
 
 import { PostList } from './components/PostList';
 
+const postsData = posts.map(post => ({
+  ...post,
+  user: users.find(user => post.userId === user.id),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
+
 const App = () => (
   <div className="App">
     <h1 className="info">Static list of posts</h1>
@@ -25,7 +31,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <PostList posts={posts} comments={comments} users={users} />
+    <PostList postsData={postsData} />
   </div>
 );
 
