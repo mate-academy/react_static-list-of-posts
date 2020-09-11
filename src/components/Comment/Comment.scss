@@ -1,0 +1,12 @@
+.comment {
+  display: grid;
+  grid-gap: 5px;
+}
+
+.comment-author-name {
+  font-weight: bold;
+}
+
+.comment-author-email {
+  text-decoration: underline;
+}
