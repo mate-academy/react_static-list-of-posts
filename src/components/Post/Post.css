@@ -1,0 +1,22 @@
+.post {
+  width: 20%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  transition: all 400ms;
+}
+
+.post h1,
+.post p {
+  margin-top: 0;
+}
+
+.post__title {
+  height: 23%;
+}
+
+.post:hover {
+  box-shadow: 5px 5px 7px gray;
+  background-color: salmon;
+  cursor: pointer;
+}
