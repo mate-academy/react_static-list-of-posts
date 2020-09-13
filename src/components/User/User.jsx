@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const User = ({ name, email, address }) => (
   <div className="post__user-info">
     <div className="user-name">
-      <strong>{name}</strong>
+      <p>{name}</p>
     </div>
     <div className="user-email">
       <p>{email}</p>
@@ -20,5 +20,9 @@ export const User = ({ name, email, address }) => (
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
+  address: PropTypes.shape({
+    city: PropTypes.string,
+    street: PropTypes.string,
+    suite: PropTypes.string,
+  }).isRequired,
 };

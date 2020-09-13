@@ -11,7 +11,7 @@ import { PostList } from './components/PostList';
 const allInfo = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
-  comment: comments.find(comment => comment.postId === post.userId),
+  comments: comments.filter(comment => comment.postId === post.userId),
 }));
 
 const App = () => (

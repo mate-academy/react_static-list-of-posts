@@ -1,5 +1,5 @@
 .post {
-  width: 20%;
+  width: 45%;
   border-radius: 10px;
   padding: 10px;
   margin-top: 20px;
@@ -9,10 +9,6 @@
 .post h1,
 .post p {
   margin-top: 0;
-}
-
-.post__title {
-  height: 23%;
 }
 
 .post:hover {

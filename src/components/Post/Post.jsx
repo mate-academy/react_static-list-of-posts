@@ -5,7 +5,7 @@ import { CommentList } from '../CommentList';
 
 import './Post.css';
 
-export const Post = ({ title, body, user, comment }) => (
+export const Post = ({ title, body, user, comments }) => (
   <div className="post">
     <div className="post__title">
       <h1>{title}</h1>
@@ -14,7 +14,7 @@ export const Post = ({ title, body, user, comment }) => (
       <p>{body}</p>
     </div>
     <User {...user} />
-    <CommentList comment={comment} />
+    <CommentList comments={comments} />
   </div>
 );
 
@@ -22,11 +22,9 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   user: PropTypes.objectOf(
-    PropTypes.number,
-    PropTypes.string,
+    PropTypes.any,
   ).isRequired,
-  comment: PropTypes.objectOf(
-    PropTypes.number,
-    PropTypes.string,
+  comments: PropTypes.arrayOf(
+    PropTypes.any,
   ).isRequired,
 };
