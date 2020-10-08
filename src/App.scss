@@ -1,1 +1,72 @@
 // styles go here
+body {
+  background: linear-gradient(45deg,rgb(15, 180, 172), violet);
+  background-attachment: fixed;
+}
+
+.App {
+  h1 {
+    text-align: center;
+    font-family: monospace;
+  }
+}
+
+.post-list {
+  ul {
+    list-style: none;
+  }
+}
+
+.post {
+  border-style: inset;
+  border-width: thick;
+  border-color: rgb(212, 20, 20);
+  padding: 10px;
+  margin-bottom: 20px;
+
+  .post-title {
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: red, 5px, 5px, 5px;  //how to set???
+  }
+
+  .post-text {
+    text-align: center;
+    font-size: x-large;
+    font-style: oblique;
+    color: brown;
+  }
+  
+  .user {
+    text-align: right;
+
+    section {
+      text-decoration: underline;
+    }
+
+    address {
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+
+  .comments-data {
+    ul {
+      padding-top: 30px;
+      list-style: "🚀";
+
+      li {
+        font-size: large;
+        p {
+          text-align: center;
+          font-style: italic;
+        }
+        address {
+          text-align: right;
+          text-decoration: underline;
+        }
+      }
+    }
+
+  }
+}
