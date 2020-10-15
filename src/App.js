@@ -5,6 +5,14 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+// eslint-disable-next-line import/extensions
+import { PostList } from './components/PostList/PostList';
+
+const dataPosts = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  comments: comments.filter(coment => coment.postId === post.id),
+}));
 
 const App = () => (
   <div className="App">
@@ -24,6 +32,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+    <PostList dataPosts={dataPosts} />
   </div>
 );
 
