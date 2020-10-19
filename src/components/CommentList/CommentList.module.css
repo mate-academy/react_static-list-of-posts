@@ -1,0 +1,11 @@
+.commentList {
+  list-style: none;
+}
+
+.commentList__item {
+  border: 1px solid black;
+  border-radius: 1%;
+
+  margin: 5px auto;
+  width: 50%;
+}
