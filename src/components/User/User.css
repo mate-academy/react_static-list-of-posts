@@ -1,0 +1,14 @@
+.user {
+  margin-top: 50px;
+}
+
+.user__info {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user__contacts {
+  margin: 0 auto;
+}
