@@ -9,4 +9,4 @@ export const userShape = PropTypes.shape({
     city: PropTypes.string.isRequired,
     zipcode: PropTypes.string.isRequired,
   }).isRequired,
-});
+}).isRequired;

@@ -10,4 +10,4 @@ export const commentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-});
+}).isRequired;

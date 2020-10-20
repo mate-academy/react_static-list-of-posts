@@ -7,4 +7,4 @@ export const postShape = PropTypes.shape({
   body: PropTypes.string.isRequired,
   user: userShape.isRequired,
   comments: PropTypes.arrayOf(commentShape).isRequired,
-});
+}).isRequired;
