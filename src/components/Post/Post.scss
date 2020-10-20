@@ -1,0 +1,13 @@
+.Post {
+  border: 1px solid  rgb(1, 53, 18);
+  border-radius: 5px;
+  padding: 20px;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__User {
+    margin-bottom: 20px;
+  }
+}
