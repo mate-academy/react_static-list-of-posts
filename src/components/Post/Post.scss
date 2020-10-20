@@ -1,0 +1,29 @@
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  color: #fff;
+  background-color: #8a5954;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 50px;
+
+  &__description {
+    background-color: #6e4a46;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  &__body {
+    font-size: 14px;
+  }
+}
