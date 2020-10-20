@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { User } from './User';
-import { UserShape } from '../shapes/UserShape';
 import { CommentList } from './CommentList';
-import { CommentShape } from '../shapes/CommentShape';
+import { PostShape } from '../shapes/PostShape';
 
 export const Post = ({ title, body, user, comments }) => (
   <div className="App__post">
@@ -14,9 +12,4 @@ export const Post = ({ title, body, user, comments }) => (
   </div>
 );
 
-Post.propTypes = {
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  user: UserShape.isRequired,
-  comments: PropTypes.arrayOf(CommentShape).isRequired,
-};
+Post.propTypes = PostShape;
