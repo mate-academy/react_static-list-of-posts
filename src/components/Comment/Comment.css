@@ -1,6 +1,16 @@
 .App__comment {
-  margin: 10px 0;
+  width: 17%;
+  height: 300px;
   padding: 0 10px;
   background: #fff;
-  border: 1px outset #fff;
+  border: 2px outset #fff;
+  border-radius: 10px;
+}
+
+.App__commentTitle {
+  font-size: larger;
+}
+
+.App__commentEmail {
+  color: rgb(182, 181, 181);
 }

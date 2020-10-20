@@ -13,8 +13,7 @@ const addresses = users.map(user => ({
   address: `${user.address.suite}, `
     + `${user.address.street}, `
     + `${user.address.city}, `
-    + `${user.address.zipcode}, `
-    + `(${user.address.geo.lat}, ${user.address.geo.lng})`,
+    + `${user.address.zipcode}`,
 }));
 
 const preparedPosts = posts.map(post => ({

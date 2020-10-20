@@ -1,11 +1,11 @@
 .App__list {
-  background: radial-gradient(circle,
-  rgba(184,184,184,1) 0%,
-  rgba(255,255,255, 0.7) 100%);
+  background: linear-gradient(
+    180deg, rgba(255,255,255,1) 0%, rgba(194,193,192,1) 100%
+  );
   font-size: x-large;
   margin: 20px;
   padding: 20px;
-  border: 1px dashed black;
+  border: 2px dashed black;
   border-radius: 10px;
 }
 

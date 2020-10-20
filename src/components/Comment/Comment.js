@@ -5,25 +5,16 @@ import './Comment.css';
 export const Comment = ({ name, body, email }) => (
   <div className="App__comment">
     <p>
-      <strong>
-        Comment
-      </strong>
-      {' : '}
-      {body}
-      {', '}
-      <p>
-        <strong>
-          Comment  from
-        </strong>
-        {' : '}
-        {name}
+      <p className="App__commentTitle">
+        <i>
+          {name}
+        </i>
         {', '}
       </p>
-      <strong>
-        Email
-      </strong>
-      {' : '}
-      {email}
+      {body}
+      <p className="App__commentEmail">
+        {email}
+      </p>
     </p>
   </div>
 );
