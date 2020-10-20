@@ -1,0 +1,16 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export const Comment = ({ name, body, email }) => (
+  <div className="comment">
+    <div className="comment__author">{name}</div>
+    <div className="comment__body">{body}</div>
+    <div className="comment__email">{email}</div>
+  </div>
+);
+
+Comment.propTypes = {
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+};
