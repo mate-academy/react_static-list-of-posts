@@ -6,7 +6,10 @@ export const User = ({ name, email, address }) => (
     <div className="user__name">{name}</div>
     <div className="user__email">{email}</div>
     <div className="user__address">
-      {`${address.street}, ${address.suite}`}
+      {`${address.street}, `
+      + `${address.suite}, `
+      + `${address.city}, `
+      + `${address.zipcode}`}
     </div>
   </div>
 );
@@ -17,5 +20,7 @@ User.propTypes = {
   address: PropTypes.shape({
     street: PropTypes.string.isRequired,
     suite: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    zipcode: PropTypes.string.isRequired,
   }).isRequired,
 };
