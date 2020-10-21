@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { PostList } from './components/PostList';
 import preparedPostss from './helpers/preparedPosts';
+import './App.css';
 
 const App = () => (
   <div className="App">
