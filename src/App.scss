@@ -1,1 +1,66 @@
-// styles go here
+* {
+  font-family: Georgia, serif;
+  color: rgb(85, 84, 84);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: pink;
+  }
+
+  &__post {
+    padding: 10px;
+    display: grid;
+    gap: 15px;
+    max-width: 350px;
+    border-radius: 10px;
+    background-color: rgb(169, 227, 245);
+  }
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.user {
+  &__name {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+.comments {
+  margin-left: 10px;
+}
+
+.comment {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 10px;
+  &__author {
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+}
