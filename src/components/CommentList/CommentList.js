@@ -7,20 +7,18 @@ export const CommentList = ({ comments, hasShownComments }) => (
   <ul className="CommentList" hidden={!hasShownComments}>
     {
       comments.map(comment => (
-        <li key={comment.id} className="CommentList__item">
-          <Comment {...comment} />
-        </li>
+        <Comment {...comment} />
       ))
     }
   </ul>
 );
 
-const Comment = ({ name, body, email }) => (
-  <>
+const Comment = ({ id, name, body, email }) => (
+  <li key={id} className="CommentList__item">
     <p className="CommentList__name">{name}</p>
     <p className="CommentList__text">{body}</p>
     <p>{`Email: ${email}`}</p>
-  </>
+  </li>
 );
 
 CommentList.propTypes = CommentListShape;
