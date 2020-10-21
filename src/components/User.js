@@ -6,10 +6,12 @@ export const User = ({ name, email, address }) => (
     <div className="user__name">{name}</div>
     <div className="user__email">{email}</div>
     <div className="user__address">
-      {`${address.street}, `
-      + `${address.suite}, `
-      + `${address.city}, `
-      + `${address.zipcode}`}
+      {
+        `${address.street}, `
+        + `${address.suite}, `
+        + `${address.city}, `
+        + `${address.zipcode}`
+      }
     </div>
   </div>
 );

@@ -5,9 +5,11 @@ import { PostShape } from '../shapes/PostShape';
 
 export const PostList = ({ posts }) => (
   <div className="App__posts">
-    {posts.map(post => (
-      <Post {...post} key={post.id} />
-    ))}
+    {
+      posts.map(post => (
+        <Post {...post} key={post.id} />
+      ))
+    }
   </div>
 );
 
