@@ -1,29 +1,15 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './App.scss';
-
-import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
+import { PostList } from './components/PostList';
+import preparedPostss from './helpers/preparedPosts';
+import './App.css';
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+    <PostList posts={preparedPostss} />
   </div>
 );
 
