@@ -1,1 +1,8 @@
-// styles go here
+.App {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+
+  &__header {
+    text-align: center;
+  }
+}
