@@ -1,0 +1,14 @@
+.comments {
+  text-align: left;
+  border-top: 2px solid black;
+  width: 90%;
+  padding-top: 20px;
+
+  &__item {
+    list-style: none;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+}
