@@ -1,0 +1,22 @@
+.post {
+  padding: 1vw 2vw;
+  background: white;
+  border-radius: 1vw;
+  box-shadow: 0 8px 6px -6px #c6c5c5;
+
+  &__title {
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 3vw;
+    color: #004720;
+    margin: 2vw 0 0.5vw;
+  }
+
+  &__body {
+    font-size: 1.5vw;
+    font-weight: 200;
+    line-height: 2vw;
+    margin: 2vw 0 1vw;
+  }
+}
