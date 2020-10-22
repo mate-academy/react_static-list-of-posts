@@ -1,0 +1,23 @@
+.post {
+  margin: 20px 0;
+
+  border-radius: 20px;
+  font-size: 18px;
+
+  &__info {
+    padding: 20px 30px;
+
+    background-color: rgb(205, 216, 215);
+    border: solid 3px rgb(65, 78, 74);
+    border-radius: 20px;
+    color: rgb(48, 58, 55);
+  }
+
+  &__title {
+    font-size: 28px;
+  }
+
+  &__body {
+    font-style: italic;
+  }
+}
