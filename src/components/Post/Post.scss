@@ -1,0 +1,12 @@
+.post {
+  margin: 20px;
+  padding: 20px;
+
+  box-shadow: 0 0 10px 1px #261e1e;
+  background-color: #b7714b;
+  border-radius: 20px;
+
+  &__title {
+    text-align: center;
+  }
+}
