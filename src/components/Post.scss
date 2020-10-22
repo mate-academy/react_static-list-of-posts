@@ -1,0 +1,44 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  background-color: rgb(222, 236, 213);
+  border: rgb(174, 214, 198) solid 7px;
+  border-radius: 15px;
+
+  &__heading {
+    display: flex;
+    margin: 15px;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    background-color: rgb(216, 131, 148);
+    border-radius: 15px;
+  }
+
+  &__author {
+    font-size: 13px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 10px;
+  }
+
+  &__title {
+    flex-grow: 3;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  &__text {
+    margin: 0 20px 20px;
+  }
+
+  &__comments_heading {
+    margin-left: 40px;
+  }
+}
