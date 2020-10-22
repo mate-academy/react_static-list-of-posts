@@ -1,0 +1,18 @@
+.comment {
+  background-color: #e1e2e1;
+
+  &__userName {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &__userName,
+  &__userMessage {
+    padding: 10px;
+  }
+
+  &__line {
+    border-top: 1px solid transparent;
+    margin: 10px;
+  }
+}
