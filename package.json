@@ -7,19 +7,24 @@
   "author": "Mate Academy",
   "license": "GPL-3.0",
   "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "^3.4.4"
   },
   "devDependencies": {
     "@mate-academy/eslint-config-react": "*",
     "@mate-academy/stylelint-config": "*",
+    "css-loader": "^5.0.0",
     "eslint": "^6.8.0",
     "gh-pages": "^2.2.0",
     "husky": "^4.0.10",
     "lint-staged": "^9.5.0",
+    "style-loader": "^2.0.0",
     "stylelint": "^13.0.0"
   },
   "scripts": {
