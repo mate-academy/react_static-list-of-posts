@@ -8,7 +8,7 @@ import users from './api/users';
 
 import { PostList } from './components/PostList';
 
-const postWithComments = posts.map(post => (
+const postsWithComments = posts.map(post => (
   {
     ...post,
     author: users.find(user => user.id === post.userId),
@@ -20,7 +20,7 @@ const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
-    <PostList posts={postWithComments} />
+    <PostList posts={postsWithComments} />
   </div>
 );
 

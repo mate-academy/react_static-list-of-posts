@@ -4,13 +4,15 @@ import { Post } from './Post';
 import { PostShape } from '../shapes/PostShape';
 
 export const PostList = ({ posts }) => (
-  <div>
-    {
-      posts.map(post => (
-        <Post {...post} key={post.id} />
-      ))
-    }
-  </div>
+  <ul>
+    <li>
+      {
+        posts.map(post => (
+          <Post {...post} key={post.id} />
+        ))
+      }
+    </li>
+  </ul>
 );
 
 PostList.propTypes = {
