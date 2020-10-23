@@ -10,7 +10,7 @@ export const User = ({ name, email, address }) => (
 
     <div>
       {'email: '}
-      <a href="mailto:email">
+      <a href={`mailto:${email}`}>
         {email}
       </a>
     </div>

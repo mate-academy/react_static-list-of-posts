@@ -8,7 +8,7 @@ export const Comment = ({ name, body, email }) => (
       {name}
     </div>
     <div className="comment__user">
-      <a href="mailto:email">
+      <a href={`mailto:${email}`}>
         {email}
       </a>
     </div>
