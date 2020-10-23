@@ -1,0 +1,10 @@
+.user {
+  &__italic {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &__address {
+    margin-top: 4px;
+  }
+}
