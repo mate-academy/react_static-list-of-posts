@@ -2,24 +2,24 @@ import React from 'react';
 import './Post.scss';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
-import { postPropType } from '../propTypes/post';
+import { PostListShape } from '../propTypes/post';
 
 export const Post = (post) => {
   const { title, body, users, comments } = post;
 
   return (
-    <div className="post">
+    <li className="post">
       <h2 className="post__heading">Post</h2>
-      <h4>
+      <h4 className="post__title">
         {title}
       </h4>
-      <p>
+      <p className="post__body">
         {body}
       </p>
       <User {...users} />
-      <CommentList comment={comments} />
-    </div>
+      <CommentList comments={comments} />
+    </li>
   );
 };
 
-Post.propTypes = postPropType;
+Post.propTypes = PostListShape;

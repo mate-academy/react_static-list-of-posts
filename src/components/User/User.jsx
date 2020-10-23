@@ -1,6 +1,6 @@
 import React from 'react';
 import './User.scss';
-import { userPropType } from '../propTypes/user';
+import { UserShape } from '../propTypes/user';
 
 export const User = (users) => {
   const { name, email } = users;
@@ -10,26 +10,22 @@ export const User = (users) => {
   return (
     <div className="user">
       <h2 className="user__heading">User</h2>
-      <p>{name}</p>
-      <p>{email}</p>
-      <p>
-        Street:
-        {street}
-        , Suite:
-        {suite}
-        , City:
-        {city}
-        , Zipcode:
-        {zipcode}
+      <p className="user__name">{name}</p>
+      <p className="user__email">{email}</p>
+      <p className="user__address">
+        {
+          `
+        Street:${street}, Suite: ${suite}, City: ${city}
+        Zipcode: ${zipcode}
+        `
+        }
+
       </p>
-      <p>
-        Geolocation:
-        {lat}
-        ,
-        {lng}
+      <p className="user__geo">
+        { `Geolocation:${lat} ${lng}` }
       </p>
     </div>
   );
 };
 
-User.propTypes = userPropType;
+User.propTypes = UserShape;

@@ -1,15 +1,17 @@
 import React from 'react';
 import { Post } from '../Post';
-import { postPropType } from '../propTypes/post';
+import { PostListShape } from '../propTypes/post';
 
 export const PostList = ({ postlist }) => (
   <>
     {
       postlist.map(post => (
-        <Post {...post} key={post.id} />
+        <ul className="postList" key={post.id}>
+          <Post {...post} />
+        </ul>
       ))
     }
   </>
 );
 
-PostList.propTypes = postPropType;
+PostList.propTypes = PostListShape;
