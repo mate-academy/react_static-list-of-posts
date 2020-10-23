@@ -6,4 +6,4 @@ export const PostListShape = {
       id: PropTypes.number.isRequired,
     }),
   ),
-}.isRequired;
+};

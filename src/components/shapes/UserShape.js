@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const UserShape = PropTypes.shape({
+export const UserShape = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   address: PropTypes.shape({
@@ -9,4 +9,4 @@ export const UserShape = PropTypes.shape({
     city: PropTypes.string.isRequired,
     zipcode: PropTypes.string.isRequired,
   }).isRequired,
-}).isRequired;
+};
