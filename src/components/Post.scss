@@ -1,0 +1,15 @@
+.post {
+  display: flex;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 15px;
+  
+
+  background-color: gray;
+  max-width: 800px;
+
+  &__user {
+    margin: auto 0;
+  }
+}
