@@ -9,7 +9,7 @@ export const Post = ({ title, body, user, row, postComments }) => {
   const [isCommentShown, setisCommentShown] = useState(false);
 
   return (
-    <div
+    <li
       className="Post"
       style={{
         gridColumn: isCommentShown && '1/4',
@@ -37,7 +37,7 @@ export const Post = ({ title, body, user, row, postComments }) => {
         </div>
       </div>
       <CommentList comments={postComments} hasShownComments={isCommentShown} />
-    </div>
+    </li>
   );
 };
 

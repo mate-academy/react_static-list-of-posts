@@ -20,17 +20,19 @@ ul {
 }
 
 .App {
-  display: grid;
-  grid-template-columns: repeat(3, 350px);
-  justify-content: center;
-
-  gap: 20px;
-
   padding: 70px 40px 30px;
 
   &__title {
     position: absolute;
     top: 5px;
     left: 40%;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: center;
+
+    gap: 20px;
   }
 }

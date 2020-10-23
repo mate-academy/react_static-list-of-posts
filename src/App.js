@@ -16,16 +16,17 @@ const postsList = posts.map(post => ({
 const App = () => (
   <div className="App">
     <h1 className="App__title">Static list of posts</h1>
-
-    {
-      postsList.map((post, index) => (
-        <Post
-          key={post.id}
-          row={Math.trunc(index / 3) + 1}
-          {...post}
-        />
-      ))
-    }
+    <ul className="App__list">
+      {
+        postsList.map((post, index) => (
+          <Post
+            key={post.id}
+            row={Math.trunc(index / 3) + 1}
+            {...post}
+          />
+        ))
+      }
+    </ul>
   </div>
 );
 
