@@ -1,6 +1,7 @@
 import React from 'react';
-import { UserPropTypes } from '../propTypes/UserPropTypes';
 import './User.scss';
+
+import { UserPropTypes } from '../propTypes/UserPropTypes';
 
 export const User = ({ name, email, address }) => (
   <section className="user">

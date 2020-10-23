@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './PostList.scss';
+
 import { PostPropTypes } from '../propTypes/PostPropTypes';
 import { Post } from '../Post/Post';
-import './PostList.scss';
 
 export const PostList = ({ posts }) => (
   <section className="posts">

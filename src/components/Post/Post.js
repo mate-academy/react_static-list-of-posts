@@ -1,8 +1,9 @@
 import React from 'react';
+import './Post.scss';
+
 import { PostPropTypes } from '../propTypes/PostPropTypes';
 import { User } from '../User/User';
 import { CommentList } from '../CommentsList/CommentList';
-import './Post.scss';
 
 export const Post = ({ title, body, user, comments }) => (
   <article className="post">
