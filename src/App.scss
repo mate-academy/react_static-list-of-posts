@@ -1,1 +1,31 @@
-// styles go here
+html {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  padding: 5vw;
+  background: #eeeded;
+}

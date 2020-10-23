@@ -1,0 +1,28 @@
+.comment {
+  padding: 1vw 2vw;
+  background: #eafff1;
+  border-radius: 1vw;
+
+  &__author {
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #004720;
+    margin: 1vw 0;
+  }
+
+  &__body {
+    font-size: 1.2vw;
+    font-weight: 200;
+    line-height: 2vw;
+    margin-bottom: 1vw;
+  }
+
+  &__email {
+    font-size: 1.2vw;
+    font-weight: 200;
+    line-height: 2vw;
+    padding-bottom: 0.3vw;
+    border-bottom: 0.01vw solid;
+  }
+}
