@@ -1,10 +1,10 @@
 import React from 'react';
-import { User } from './User';
+import { User } from './User/User';
 import { CommentList } from './CommentList';
 import { PostShape } from './Shapes/PostShape';
 
 export const Post = ({ title, body, user, comments }) => (
-  <div className="App__post">
+  <li className="App__post">
     <div className="App__title">
       {title}
     </div>
@@ -16,7 +16,7 @@ export const Post = ({ title, body, user, comments }) => (
     <User {...user} />
 
     <CommentList commentList={comments} />
-  </div>
+  </li>
 );
 
 Post.propTypes = PostShape;

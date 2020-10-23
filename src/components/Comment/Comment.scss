@@ -1,0 +1,19 @@
+.comment {
+  margin: 10px 0;
+  padding: 5px;
+  border: 2px solid #ffa445;
+  border-radius: 10px;
+  list-style-type: none;
+
+  &__name {
+    font-style: italic;
+  }
+
+  &__body {
+    color: black;
+  }
+
+  &__email {
+    text-decoration: underline;
+  }
+}

@@ -1,1 +1,42 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
+.App {
+  color: #30539c;
+  background-color: #f0f2f5;
+  box-shadow: 1px 0 5px #30539c;
+
+  &__list {
+    margin-right: 40px;
+  }
+
+  &__post {
+    margin: 10px 0;
+    padding: 0 5px;
+    background-color: #f0f2f5;
+    box-shadow: 1px 0 5px #30539c;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__body {
+    color: black;
+  }
+
+  &__user {
+    margin: 10px 0;
+  }
+
+  &__comments {
+    margin-right: 40px;
+  }
+}

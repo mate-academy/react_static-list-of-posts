@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Comment } from './Comment';
+import { Comment } from './Comment/Comment';
 import { CommentShape } from './Shapes/CommentShape';
 
-export const CommentList = ({ comments }) => (
-  <div className="App__comment comment">
+export const CommentList = ({ commentList }) => (
+  <ul className="App__comments">
     {
-      comments.map(comment => (
+      commentList.map(comment => (
         <Comment {...comment} key={comment.id} />
       ))
     }
-  </div>
+  </ul>
 );
 
 CommentList.propTypes = {
