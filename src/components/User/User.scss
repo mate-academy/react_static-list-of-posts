@@ -1,0 +1,11 @@
+.User {
+  padding-bottom: 20px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  &__label {
+    color: #b8afa1;
+    font-style: italic;
+    margin-right: 8px;
+  }
+}

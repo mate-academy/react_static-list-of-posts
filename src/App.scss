@@ -1,1 +1,38 @@
-// styles go here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Commissioner", sans-serif;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding: 70px 40px 30px;
+
+  &__title {
+    position: absolute;
+    top: 5px;
+    left: 40%;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: center;
+
+    gap: 20px;
+  }
+}

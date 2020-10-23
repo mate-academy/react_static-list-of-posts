@@ -1,0 +1,40 @@
+.Post {
+  display: flex;
+
+  background-color: #f8f8f8;
+  color: #5f6660;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 350px;
+    height: 100%;
+    padding: 25px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  &__btn {
+    padding: 8px 12px;
+
+    border: none;
+
+    background-color: #4d4d4d;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+
+    cursor: pointer;
+  }
+}

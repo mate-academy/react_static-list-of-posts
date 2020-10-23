@@ -1,0 +1,20 @@
+.CommentList {
+  list-style: none;
+  padding: 20px;
+
+  &__item {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__name {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+}
