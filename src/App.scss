@@ -1,1 +1,39 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f0eeef;
+}
+
+.app {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  &__title {
+    margin: 25px 0;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  &__info {
+    margin-bottom: 25px;
+    font-size: 12px;
+  }
+
+  &__text {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
