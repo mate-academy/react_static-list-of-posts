@@ -1,0 +1,20 @@
+.post {
+  margin: 20px 0;
+  color: white;
+
+  border: 1px solid #004c8c;
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+
+    padding: 10px;
+    background-color: #004c8c;
+  }
+
+  &__body {
+    font-size: 18px;
+    padding: 20px;
+    background-color: #0277bd;
+  }
+}
