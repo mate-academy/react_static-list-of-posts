@@ -1,40 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import UserShape from '../../shapes/UserShape';
 
-const User = ({ user }) => {
-  const { name, email, address } = user;
+const User = ({ name, email, address }) => (
+  <div>
+    <p>{name}</p>
+    <p>{email}</p>
+    <p>
+      {`${address.suite}, ${address.street}, }
+      {${address.city}, ${address.zipcode}`}
+    </p>
+  </div>
+);
 
-  return (
-    <>
-      <p>{name}</p>
-      <p>{email}</p>
-      <p>
-        {address.suite}
-        ,
-        {' '}
-        {address.street}
-        ,
-        {' '}
-        {address.city}
-        ,
-        {' '}
-        {address.zipcode}
-      </p>
-    </>
-  );
-};
-
-User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      suite: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
-      zipcode: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+User.propTypes = UserShape;
 
 export default User;

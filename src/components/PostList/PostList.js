@@ -1,21 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
+import PostShape from '../../shapes/PostShape';
 
 const PostList = ({ posts }) => (
   posts.map(post => (
-    <Post post={post} key={post.id} />
+    <div>
+      <Post {...post} key={post.id} />
+    </div>
   ))
 );
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    comments: PropTypes.array.isRequired,
-    user: PropTypes.object.isRequired,
-  })).isRequired,
+  posts: PropTypes.arrayOf(PostShape).isRequired,
 };
 
 export default PostList;
