@@ -1,0 +1,12 @@
+.postlist {
+  display: grid;
+  grid-template-columns: repeat(4, 330px);
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none
+}
+
+
+.postlist__item {
+  border: solid 2px grey;
+}

@@ -1,0 +1,12 @@
+.post {
+  padding-top: 20px;
+  background-color: rgba(220, 241, 180, 0.849);
+
+   &__text {
+     padding: 20px 10px 50px 10px;
+   }
+
+   &__title {
+     padding: 20px 0 20px;
+   }
+}
