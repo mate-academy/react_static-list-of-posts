@@ -1,0 +1,14 @@
+.user {
+  &__name {
+    font-style: italic;
+  }
+
+  &__email {
+    margin: 5px 0;
+    text-decoration: underline;
+  }
+
+  &__address {
+    font-size: 18px;
+  }
+}
