@@ -5,7 +5,7 @@ import { PostShape } from '../shapes/PostShape';
 import { CommentList } from '../CommentList/CommentList';
 
 export const Post = ({ user, title, body, comments }) => (
-  <div className="post">
+  <li className="post">
     <div>
       <h2 className="post__title">
         {title.toUpperCase()}
@@ -21,7 +21,7 @@ export const Post = ({ user, title, body, comments }) => (
     <div>
       <CommentList comments={comments} />
     </div>
-  </div>
+  </li>
 );
 
 Post.propTypes = PostShape;

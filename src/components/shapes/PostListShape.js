@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
+import { PostShape } from './PostShape';
 
 export const PostListShape = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
-  ),
+  posts: PropTypes.arrayOf(PostShape),
 };

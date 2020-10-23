@@ -3,7 +3,7 @@ import './Comment.scss';
 import { CommentShape } from '../shapes/CommentShape';
 
 export const Comment = ({ name, body, email }) => (
-  <div className="comment">
+  <li className="comment">
     <div className="comment__user">
       {name}
     </div>
@@ -15,7 +15,7 @@ export const Comment = ({ name, body, email }) => (
     <div className="comment__text">
       {body}
     </div>
-  </div>
+  </li>
 );
 
 Comment.propTypes = CommentShape;
