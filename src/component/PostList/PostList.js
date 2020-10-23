@@ -1,7 +1,8 @@
 import React from 'react';
 import './PostList.scss';
+import PropTypes from 'prop-types';
 import { Post } from '../Post/Post';
-import { PostListShape } from '../propTypes/PostListShape';
+import { PostShape } from '../propTypes/PostShape';
 
 export const PostList = ({ posts }) => (
   <section className="posts">
@@ -9,4 +10,6 @@ export const PostList = ({ posts }) => (
   </section>
 );
 
-PostList.propTypes = PostListShape;
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(PostShape).isRequired,
+};
