@@ -1,1 +1,75 @@
-// styles go here
+li {
+  list-style: none;
+}
+
+.App {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #402f1c;
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin: 10px;
+    padding: 20px;
+    
+    background-color: #a2c2cf;
+    border: 4px solid #8e867b;
+  }
+
+  &__post-title {
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+  
+  &__post-body {
+    width: 55w;
+    font-size: 25px;
+    font-style: italic;
+  }
+  
+  &__user {
+    font-weight: 900;
+    text-align: right;
+    color: #895423;
+  }
+  
+  &__comment-list {
+    width: 50vw;
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+  
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid #895423;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 10px;
+  
+    background-color: #d3b695;
+  }
+  
+  &__comment-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-left: 25px;
+    padding-bottom: 10px;
+  }
+  
+  &__comment-body {
+    padding: 10px;
+    font-style: italic;
+  }
+  
+  &__comment-email {
+    font-weight: 600;
+    text-align: right;
+    color: #895423;
+  }
+}
