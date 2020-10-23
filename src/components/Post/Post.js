@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostsShape } from '../../shapes/PostsShape';
+import { PostShape } from '../../shapes/PostShape';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 
@@ -10,7 +10,6 @@ export const Post = ({ title, body, user, comments }) => (
     <h1 className="post__title">
       {title}
     </h1>
-    <hr />
     <p className="post__body">
       {body.replace(/^[a-z]/, c => c.toUpperCase())}
       {'.'}
@@ -20,4 +19,4 @@ export const Post = ({ title, body, user, comments }) => (
   </article>
 );
 
-Post.propTypes = PostsShape;
+Post.propTypes = PostShape;

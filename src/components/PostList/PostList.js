@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PostsShape } from '../../shapes/PostsShape';
+import { PostShape } from '../../shapes/PostShape';
 import { Post } from '../Post/Post';
 
 import './PostList.scss';
@@ -18,5 +18,5 @@ export const PostList = ({ posts }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PostsShape).isRequired,
+  posts: PropTypes.arrayOf(PostShape).isRequired,
 };

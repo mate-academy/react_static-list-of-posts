@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { UserShape } from './UserShape';
 import { CommentShape } from './CommentShape';
 
-export const PostsShape = PropTypes.shape({
+export const PostShape = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,

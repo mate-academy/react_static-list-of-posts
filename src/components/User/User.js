@@ -5,17 +5,11 @@ import './User.scss';
 
 export const User = ({ name, email, address }) => (
   <address className="author">
-    {`Written by `}
-    {name}
-    {`. `}
-    <br />
-    <a href={email}>{email}</a>
-    <br />
-    {address.suite}
-    {`, `}
-    {address.street}
-    <br />
-    {address.city}
+    {`Written by ${name}.`}
+    <div>
+      <a href={email}>{email}</a>
+    </div>
+    {`${address.suite}, ${address.street}, ${address.city}`}
   </address>
 );
 
