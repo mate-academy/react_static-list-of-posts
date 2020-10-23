@@ -23,9 +23,6 @@ User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   address: PropTypes.shape({
-    street: PropTypes.string,
-    suite: PropTypes.string,
     city: PropTypes.string,
-    zipcode: PropTypes.string,
   }).isRequired,
 };

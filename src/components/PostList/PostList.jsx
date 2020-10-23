@@ -7,9 +7,7 @@ import { Post } from '../Post';
 export const PostList = ({ posts }) => (
   <div className="App__postlist postlist">
     {posts.map(post => (
-      <div className="postlist__post post" key={post.id}>
-        <Post {...post} />
-      </div>
+      <Post {...post} />
     ))}
     ;
   </div>
@@ -19,6 +17,8 @@ PostList.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };
