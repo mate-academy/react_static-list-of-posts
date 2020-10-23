@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import { PostPropTypes } from './propTypes/PostPropTypes';
 import { User } from './User';
 import { CommentList } from './CommentList';
+
 import './Post.scss';
 
 export const Post = ({ title, body, user, comments }) => (
-  <>
+  <article className="Post">
     <div className="Post__heading">
       <span className="Post__author">
         <User {...user} />
@@ -23,7 +24,7 @@ export const Post = ({ title, body, user, comments }) => (
       Comments:
     </div>
     <CommentList comments={comments} />
-  </>
+  </article>
 );
 
 Post.propTypes = PropTypes.shape(PostPropTypes).isRequired;

@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 
 import { PostPropTypes } from './propTypes/PostPropTypes';
 import { Post } from './Post';
+
 import './PostList.scss';
 
 export const PostList = ({ posts }) => (
   <section className="PostList">
     {posts.map(post => (
-      <article className="Post" key={post.id}>
-        <Post {...post} />
-      </article>
+      <Post {...post} key={post.id} />
     ))}
   </section>
 );

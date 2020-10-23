@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Comment } from './Comment';
 import { CommentPropTypes } from './propTypes/CommentPropTypes';
+
 import './CommentsList.scss';
 
 export const CommentList = ({ comments }) => (
