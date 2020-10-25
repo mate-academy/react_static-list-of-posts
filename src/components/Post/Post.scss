@@ -1,0 +1,24 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  
+
+  &__title {
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+  &__body {
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+  }
+}
