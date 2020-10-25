@@ -1,15 +1,9 @@
 import React from 'react';
 
-import { CommentTypes } from './PropTypes/CommentTypes';
+import { CommentShape } from './shapes/CommentShape';
 
 export const Comment = ({ name, body, email, id, postId }) => (
-  <div
-    className="
-      comments__comment
-      card
-    "
-    style={{ background: '#e9c46a' }}
-  >
+  <>
     <div className="card-header p-1">
       <h2 className="mb-0">
         <button
@@ -43,11 +37,10 @@ export const Comment = ({ name, body, email, id, postId }) => (
         <div className="text-uppercase h6">
           {name}
         </div>
-
         {body}
       </div>
     </div>
-  </div>
+  </>
 );
 
-Comment.propTypes = CommentTypes;
+Comment.propTypes = CommentShape;

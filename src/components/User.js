@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { UserTypes } from './PropTypes/UserTypes';
+import { UserShape } from './shapes/UserShape';
 
 export const User = ({ user }) => (
   <div className="author">
@@ -41,5 +41,5 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: PropTypes.objectOf(UserTypes).isRequired,
+  user: PropTypes.shape(UserShape).isRequired,
 };

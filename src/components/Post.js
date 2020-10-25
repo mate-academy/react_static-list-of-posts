@@ -2,22 +2,10 @@ import React from 'react';
 
 import { User } from './User';
 import { CommentList } from './CommentList';
-import { PostTypes } from './PropTypes/PostTypes';
+import { PostShape } from './shapes/PostShape';
 
 export const Post = ({ title, body, user, postComments, id }) => (
-  <article
-    className="
-      jumbotron
-      px-3
-      py-4
-      col-sm
-      bg
-    "
-    style={{
-      marginRight: '5px',
-      background: '#fcbf49',
-    }}
-  >
+  <>
     <h4
       className="
         text-uppercase
@@ -43,7 +31,7 @@ export const Post = ({ title, body, user, postComments, id }) => (
 
     <b style={{ fontSize: 15 }}>Users comments</b>
     <CommentList comments={postComments} postId={`post-${id}`} />
-  </article>
+  </>
 );
 
-Post.propTypes = PostTypes;
+Post.propTypes = PostShape;

@@ -2,22 +2,42 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Post } from './Post';
-import { PostTypes } from './PropTypes/PostTypes';
+import { PostShape } from './shapes/PostShape';
 
 export const PostList = ({ posts }) => (
   <section className="container">
-    <div className="row">
+    <ul
+      className="row px-0"
+      style={{
+        listStyle: 'none',
+      }}
+    >
       {
         posts.map(post => (
-          <Post key={post.id} {...post} />
+          <li
+            className="
+              jumbotron
+              px-3
+              py-4
+              col-sm
+              bg
+            "
+            style={{
+              marginRight: '5px',
+              background: '#fcbf49',
+            }}
+            key={post.id}
+          >
+            <Post {...post} />
+          </li>
         ))
       }
-    </div>
+    </ul>
   </section>
 );
 
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.shape(PostTypes),
+    PropTypes.shape(PostShape),
   ).isRequired,
 };

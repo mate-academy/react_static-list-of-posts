@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const CommentTypes = PropTypes.shape({
+export const CommentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   postId: PropTypes.number.isRequired,
   email: PropTypes.string.isRequired,

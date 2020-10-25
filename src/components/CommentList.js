@@ -2,22 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from './Comment';
 
-import { CommentTypes } from './PropTypes/CommentTypes';
+import { CommentShape } from './shapes/CommentShape';
 
 export const CommentList = ({ comments, postId }) => (
-  <section
-    className="comments accordion"
+  <ul
+    className="comments accordion px-0"
     id={postId}
   >
     {
       comments.map(comment => (
-        <Comment postId={postId} key={comment.id} {...comment} />
+        <li
+          className="
+            comments__comment
+            card
+          "
+          style={{ background: '#e9c46a' }}
+          key={comment.id}
+        >
+          <Comment postId={postId} {...comment} />
+        </li>
       ))
     }
-  </section>
+  </ul>
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(CommentTypes).isRequired,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
   postId: PropTypes.string.isRequired,
 };
