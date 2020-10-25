@@ -1,0 +1,40 @@
+.post {
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+  max-width: 350px;
+  border-radius: 10px;
+  background-color: rgb(245, 191, 169);
+  transition: box-shadow 0.3s;
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  &__info {
+    text-align: center;
+    font-style: italic;
+    padding: 5px;
+    border-top: 2px solid;
+    border-radius: 10px;
+
+    &::after {
+      border: 2px solid;
+    }
+  }
+
+  &__user {
+    text-align: left;
+    padding: 15px 10px 0;
+    border-bottom: 2px solid;
+    border-radius: 10px;
+    padding-bottom: 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+}

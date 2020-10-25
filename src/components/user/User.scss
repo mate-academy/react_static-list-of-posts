@@ -1,0 +1,13 @@
+.user {
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email--link {
+    transition: ease-in-out 0.4s;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
