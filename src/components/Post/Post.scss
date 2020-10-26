@@ -1,0 +1,35 @@
+.post {
+  background-color: azure;
+
+  &__container {
+    background-color: white;
+    margin: 10px auto;
+    padding: 10px;
+
+    width: 800px;
+
+    border: solid black 1px;
+    border-radius: 8px;
+
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: rgb(218, 216, 216);
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+
+  &__text {
+    font-style: italic;
+    padding-bottom: 5px;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
