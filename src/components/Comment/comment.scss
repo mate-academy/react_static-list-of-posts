@@ -2,8 +2,10 @@
   margin-bottom: 15px;
   padding: 5px;
 
-  border: 1px solid #ccc;
-  background-color: #7478A3;
+  box-shadow: 1px 1px 1px #ccc;
+  border-radius: 3px;
+
+  background-color: #B6BBF0;
 
   &__name {
     margin-bottom: 5px;
@@ -19,6 +21,5 @@
 
   &__body {
     font-size: 14px;
-
   }
 }
