@@ -1,0 +1,14 @@
+.comment {
+  border: 1px solid #2e3b37;
+  background: #8ec2a7;
+  list-style: none;
+  margin: 5px;
+
+  &__item {
+    padding: 3px;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+}
