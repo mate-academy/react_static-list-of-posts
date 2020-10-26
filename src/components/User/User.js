@@ -1,27 +1,11 @@
 import React from 'react';
 import './User.css';
-import { UserShape } from '../../shapes';
+import { UserShape } from './UserShape';
 
 export const User = ({ name, email, address }) => (
   <div className="App__user">
     <p>
-      <strong>
-        Author
-      </strong>
-      {' : '}
-      {name}
-      {', '}
-      <strong>
-        Email
-      </strong>
-      {' : '}
-      {email}
-      {', '}
-      <strong>
-        Address
-      </strong>
-      {' : '}
-      {address}
+      {`Author: ${name} | Email: ${email}, | Address: ${address}`}
     </p>
   </div>
 );

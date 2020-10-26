@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentShape } from '../../shapes';
+import { CommentShape } from './CommentShape';
 import './Comment.css';
 
 export const Comment = ({ name, body, email }) => (

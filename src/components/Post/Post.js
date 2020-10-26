@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostShape } from '../../shapes';
+import { PostShape } from './PostShape';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
 import './Post.css';
@@ -13,7 +13,7 @@ export const Post = ({ title, body, user, comments }) => (
       <User {...user} />
     </div>
     <p>
-      &nbsp;
+      {' '}
       {body}
     </p>
     <p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostListShape } from '../../shapes';
+import { PostListShape } from './PostListShape';
 import { Post } from '../Post';
 import './PostList.css';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentListShape } from '../../shapes';
+import { CommentListShape } from './CommentListShape';
 import { Comment } from '../Comment';
 import './CommentList.css';
 
