@@ -1,0 +1,25 @@
+.comment {
+  margin-bottom: 15px;
+  padding: 5px;
+
+  box-shadow: 1px 1px 1px #ccc;
+  border-radius: 3px;
+
+  background-color: #B6BBF0;
+
+  &__name {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__email {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    font-size: 14px;
+  }
+}

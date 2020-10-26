@@ -1,1 +1,13 @@
-// styles go here
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  text-align: center;
+  background-color: #f4f4f4;
+
+  &__name {
+    margin: 0;
+  }
+}
