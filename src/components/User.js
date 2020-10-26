@@ -2,24 +2,25 @@ import React from 'react';
 import { UserShape } from '../shapes/UserShape';
 
 export const User = ({ name, email, address }) => (
-  <>
-    <p className="cardText">
-      <big className="textMuted">
-        <strong>Name: </strong>
-        {name}
+  <div className="cardText">
+    <div className="textMuted">
+      <strong>Name: </strong>
+      {name}
+      <p>
         <strong> Email: </strong>
         <cite title="Source Title">
           {email}
         </cite>
-        <p>
-          <strong>City: </strong>
-          {address.city}
-          <strong> Street: </strong>
-          {address.street}
-        </p>
-      </big>
-    </p>
-  </>
+      </p>
+
+      <p>
+        <strong>City: </strong>
+        {address.city}
+        <strong> Street: </strong>
+        {address.street}
+      </p>
+    </div>
+  </div>
 );
 
-User.propTypes = UserShape;
+User.propTypes = UserShape.isRequired;

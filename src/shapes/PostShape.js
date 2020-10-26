@@ -6,5 +6,5 @@ export const PostShape = PropTypes.shape({
   title: PropTypes.string,
   body: PropTypes.string,
   user: UserShape,
-  comments: CommentShape,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
 });

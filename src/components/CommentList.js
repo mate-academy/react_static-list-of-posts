@@ -10,4 +10,4 @@ export const CommentList = ({ comments }) => (
   ))
 );
 
-CommentList.propTypes = CommentShape;
+CommentList.propTypes = CommentShape.isRequired;
