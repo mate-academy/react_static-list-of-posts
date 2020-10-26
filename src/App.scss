@@ -1,1 +1,23 @@
-// styles go here
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list__item {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 3px 0 gray;
+  margin: 0 auto 50px;
+  padding: 20px;
+  border-radius: 25px;
+  max-width: 800px;
+  transition: transform 1s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.post-list__title {
+  text-align: center;
+}
