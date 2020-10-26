@@ -1,0 +1,12 @@
+.user {
+  font-weight: bold;
+  font-size: 12px;
+
+  &__title {
+    font-size: 16px;
+  }
+
+  &__mail {
+    font-style: italic;
+  }
+}

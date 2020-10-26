@@ -1,1 +1,31 @@
 // styles go here
+*{
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  padding: 70px 40px 30px;
+
+  &__title {
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
