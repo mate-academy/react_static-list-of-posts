@@ -3,8 +3,8 @@ import { UserShape } from './UserShape';
 import { CommentShape } from './CommentShape';
 
 export const PostShape = PropTypes.shape({
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  user: UserShape.isRequired,
-  comments: PropTypes.arrayOf(CommentShape).isRequired,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  user: UserShape,
+  comments: PropTypes.arrayOf(CommentShape),
 }).isRequired;
