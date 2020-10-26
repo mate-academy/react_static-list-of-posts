@@ -1,0 +1,31 @@
+.item {
+  // padding: 0 200px;
+  display: grid;
+  // justify-items: stretch;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+
+  // display: flex;
+  // justify-content: space-between;
+
+  &__block {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: whitesmoke;
+    margin: 5px auto;
+    padding: 20px;
+
+    border: 1px solid violet;
+    border-radius: 25px;
+
+    &:last-child {
+      grid-column-start: 3;
+      grid-column-end: 1;
+    }
+
+    &--email {
+      font-size: 14px;
+    }
+  }
+}
