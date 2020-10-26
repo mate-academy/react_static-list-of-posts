@@ -1,1 +1,19 @@
-// styles go here
+body,
+div,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+
+  background-color: #006064;
+}
+
+.app {
+  &__head {
+    text-align: center;
+  }
+}

@@ -1,0 +1,18 @@
+.comment {
+  padding: 10px;
+  max-width: 80%;
+
+  &__name {
+    padding-bottom: 5px;
+    font-size: 22px;
+  }
+
+  &__description {
+    font-size: 18px;
+  }
+
+  &__email {
+    font-style: italic;
+    color: #004d40;
+  }
+}
