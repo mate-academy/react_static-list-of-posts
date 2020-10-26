@@ -3,14 +3,14 @@ import { CommentShape } from '../../shapes/CommentShape';
 import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
-  <ul className="comments__item">
-    <li className="comments__name">
+  <ul className="comment">
+    <li className="comment__item comment__title">
       {name}
     </li>
-    <li className="comments__email">
+    <li className="comment__item">
       {`Email: ${email}`}
     </li>
-    <li className="comments__body">
+    <li className="comment__item">
       {body}
     </li>
   </ul>
