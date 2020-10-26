@@ -11,7 +11,7 @@ export const Post = ({ title, body, user, comments }) => (
       {title}
     </h1>
     <p className="post__body">
-      {body.replace(/^[a-z]/, leter => leter.toUpperCase())}
+      {body.replace(/^[a-z]/, letter => letter.toUpperCase())}
       {'.'}
     </p>
     <User {...user} />
