@@ -5,13 +5,13 @@ import './PostList.scss';
 import { PostShape } from '../../shapes/PostShape';
 
 export const PostList = ({ posts }) => (
-  <div className="postList">
+  <ul className="postList">
     {posts.map(post => (
-      <div className="postList__item" key={post.id}>
+      <li className="postList__item" key={post.id}>
         <Post {...post} />
-      </div>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 PostList.propTypes = {
