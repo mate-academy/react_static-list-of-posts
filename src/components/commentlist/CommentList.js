@@ -13,6 +13,7 @@ export function CommentList({ comments }) {
           <Comment
             body={comment.body}
             name={comment.name}
+            email={comment.email}
             key={comment.id}
           />
         ))}
