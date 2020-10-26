@@ -4,15 +4,7 @@
   font-size: 14px;
   color: rgb(18, 59, 25);
 
-  & :nth-child(1) {
-    margin: 0;
-  }
-
-  & :nth-child(2) {
-    margin: 0;
-  }
-
-  & :nth-child(3) {
+  & * {
     margin: 0;
   }
 }
