@@ -2,7 +2,7 @@ import React from 'react';
 import './Post.scss';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
-import { PostListShape } from '../propTypes/post';
+import { PostShape } from '../propTypes/post';
 
 export const Post = (post) => {
   const { title, body, users, comments } = post;
@@ -22,4 +22,4 @@ export const Post = (post) => {
   );
 };
 
-Post.propTypes = PostListShape;
+Post.propTypes = PostShape;

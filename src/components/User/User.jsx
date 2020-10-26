@@ -13,12 +13,10 @@ export const User = (users) => {
       <p className="user__name">{name}</p>
       <p className="user__email">{email}</p>
       <p className="user__address">
-        {
-          `
-        Street:${street}, Suite: ${suite}, City: ${city}
-        Zipcode: ${zipcode}
-        `
-        }
+        {`
+          Street: ${street}, Suite: ${suite}, City: ${city}
+          Zipcode: ${zipcode}
+        `}
 
       </p>
       <p className="user__geo">

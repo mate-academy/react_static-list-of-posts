@@ -1,7 +1,6 @@
 import React from 'react';
-
+import { CommentListShape } from '../propTypes/commentList';
 import { Comment } from '../Comment';
-import { CommentListShape } from '../propTypes/comment';
 
 export const CommentList = ({ comments }) => (
   <>
