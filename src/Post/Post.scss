@@ -1,0 +1,24 @@
+.post {
+  margin-bottom: 15px;
+  border-radius: 25px;
+  background-color: rgb(110, 115, 247);
+
+  &-title {
+    position: relative;
+    left: 10%;
+    margin-bottom: 15px;
+    font-size: 21px;
+  }
+
+  &-body {
+    text-align: center;
+    margin-bottom: 30px;
+
+    font-size: 18px;
+  }
+}
+
+.user-info {
+  text-align: right;
+  padding-right: 10px;
+}
