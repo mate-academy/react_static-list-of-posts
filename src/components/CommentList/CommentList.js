@@ -17,7 +17,7 @@ export const CommentList = ({ comments }) => (
               list-group-item
               list-group-item-action
               list-group-item-light
-          "
+            "
             key={comment.id}
           >
             <Comment {...comment} />
