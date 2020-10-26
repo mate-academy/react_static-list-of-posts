@@ -1,10 +1,12 @@
 import React from 'react';
+
 import { User } from '../User';
 import { PostShape } from '../Shapes/PostShape';
+import { CommentList } from '../CommentList';
 
 import './Post.scss';
 
-export const Post = ({ id, title, body, user }) => (
+export const Post = ({ title, body, user, comments }) => (
 
   <li className="Post">
     <h1 className="Post__title">
@@ -14,6 +16,7 @@ export const Post = ({ id, title, body, user }) => (
       {body}
     </h2>
     <User {...user} />
+    <CommentList comments={comments} />
   </li>
 );
 
