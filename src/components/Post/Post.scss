@@ -1,0 +1,15 @@
+.post {
+  background: #f2f2df;
+  margin: 0 auto;
+  font-size: 15px;
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+  }
+
+  &__body {
+    font-size: 18px;
+  }
+}
