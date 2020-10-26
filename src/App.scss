@@ -1,1 +1,16 @@
 // styles go here
+body {
+  margin: 0;
+  background: linear-gradient(
+    90deg, rgba(232,232,232,1) 0%,
+    rgba(255,255,255,1) 50%,
+    rgba(210,210,210,1) 100%
+  );
+}
+
+.App {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: larger;
+}
