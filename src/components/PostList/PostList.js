@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './PostList.scss';
 
 import { Post } from '../Post';
+import { PostPropTypes } from '../PropTypes/PostPropTypes';
 
 export const PostList = ({ posts }) => (
   <ul className="postlist">
@@ -19,10 +20,6 @@ export const PostList = ({ posts }) => (
 
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-    }),
+    PropTypes.shape(PostPropTypes),
   ).isRequired,
 };
