@@ -2,7 +2,6 @@ import React from 'react';
 import { Comment } from '../Comment/Comment';
 import { CommentListShape } from '../shapes/CommentListShape';
 
-// import './CommentList/CommentsList.scss';
 import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
