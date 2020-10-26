@@ -7,7 +7,7 @@ import { Post } from './Post';
 import './PostList.scss';
 
 export const PostList = ({ posts }) => (
-  <section className="postList">
+  <section className="post_list">
     {posts.map(post => (
       <Post {...post} key={post.id} />
     ))}

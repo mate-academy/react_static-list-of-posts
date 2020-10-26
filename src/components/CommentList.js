@@ -7,7 +7,7 @@ import { CommentPropTypes } from './propTypes/CommentPropTypes';
 import './CommentsList.scss';
 
 export const CommentList = ({ comments }) => (
-  <ul className="commentsList">
+  <ul className="comments_list">
     {comments.map(comment => (
       <li className="comment" key={comment.id}>
         <Comment {...comment} />
