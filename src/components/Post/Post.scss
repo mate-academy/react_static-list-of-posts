@@ -1,0 +1,26 @@
+.post {
+  margin-bottom: 30px;
+
+  background-color: #b2ebf2;
+  border: 3px solid #00897b;
+  border-radius: 20px;
+
+  &__info {
+    margin: 20px;
+    padding: 15px;
+    background-color: #4db6ac;
+
+    border: 3px solid #0097a7;
+    border-radius: 20px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__description {
+    padding: 10px;
+    font-size: 25px;
+  }
+}
