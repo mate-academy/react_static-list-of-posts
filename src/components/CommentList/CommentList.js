@@ -13,9 +13,11 @@ export const CommentList = ({ comments }) => (
       {
         comments.map(comment => (
           <li
-            className="list-group-item
+            className="
+              list-group-item
               list-group-item-action
-              list-group-item-light"
+              list-group-item-light
+          "
             key={comment.id}
           >
             <Comment {...comment} />
