@@ -1,0 +1,14 @@
+.User {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__name {
+    text-transform: capitalize;
+  }
+
+  &__email,
+  &__address {
+    margin: 5px;
+  }
+}

@@ -1,0 +1,19 @@
+.Comment {
+  margin-top: 5px;
+  padding: 5px 20px;
+  border-radius: 20px;
+
+  background-color: rgb(43, 82, 121);
+
+  
+
+  &__email {
+    font-size: 12px;
+    color: rgb(148, 198, 240);
+  }
+
+  &__name {
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+}
