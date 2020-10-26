@@ -1,0 +1,20 @@
+.comment {
+  &__name {
+    font-weight: 700;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    padding-top: 4px;
+    font-style: italic;
+    font-size: 13px;
+  }
+
+  &__email {
+    padding-top: 3px;
+    font-size: 11px;
+  }
+}
