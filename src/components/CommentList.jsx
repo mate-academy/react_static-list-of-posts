@@ -7,9 +7,11 @@ export function CommentList({ comments }) {
   return (
     <div className="comments-list">
       <h3 className="comments-list__title">Comments:</h3>
-      {comments.map(comment => (
-        <Comment body={comment.body} name={comment.name} key={comment.id} />
-      ))}
+      <ul>
+        {comments.map(comment => (
+          <Comment body={comment.body} name={comment.name} key={comment.id} />
+        ))}
+      </ul>
     </div>
   );
 }
