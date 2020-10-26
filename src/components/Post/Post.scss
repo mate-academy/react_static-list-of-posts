@@ -1,0 +1,26 @@
+.post {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-bottom: 30px;
+    padding: 50px;
+    background-color: rgb(79, 207, 101);
+    border-radius: 50px;
+    box-shadow: 0 0 8px rgba(75, 74, 74, 0.3);
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__body {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: gray;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(75, 74, 74, 0.3);
+  }
+}

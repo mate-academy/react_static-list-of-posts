@@ -1,0 +1,15 @@
+.comment {
+  &__list {
+    margin-top: 50px;
+    padding-left: 0;
+    list-style: none;
+    font-style: italic;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(205, 235, 210);
+  }
+}
