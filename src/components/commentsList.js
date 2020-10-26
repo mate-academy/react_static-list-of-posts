@@ -1,26 +1,18 @@
 import React from 'react';
 
-import { commentsProperties } from './propertiesVar';
+import { commentsListPropTypes } from './propertiesVar';
+import { Comment } from './comment';
 
-export function CommentsList({ comments }) {
-  return (
-    <div>
-      <ul>
-        {comments.map(({ id, name, body, email }) => (
-          <li key={id}>
-            <h4>
-              {name}
-            </h4>
-            {body}
-            <br />
-            <a href="https://mail.google.com/">
-              {email}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+export const CommentsList = ({ comments }) => (
+  <div>
+    <ul>
+      {comments.map(({ id, name, body, email }) => (
+        <li key={id}>
+          <Comment name={name} body={body} email={email} />
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
-CommentsList.propTypes = commentsProperties;
+CommentsList.propTypes = commentsListPropTypes;

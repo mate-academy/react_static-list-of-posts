@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { userProperties } from './propertiesVar';
+import { userPropTypes } from './propertiesVar';
 
 export function User({ name, email, address }) {
   const { street, suite, city, zipcode } = address;
@@ -21,5 +21,5 @@ export function User({ name, email, address }) {
 }
 
 User.propTypes = {
-  ...userProperties,
+  ...userPropTypes,
 };

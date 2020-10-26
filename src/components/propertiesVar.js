@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const userProperties = {
+export const userPropTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   address: PropTypes.shape(
@@ -13,13 +13,12 @@ export const userProperties = {
   ).isRequired,
 };
 
-export const commentsProperties = {
-  comments: PropTypes.arrayOf(PropTypes.shape(
-    {
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-    }.isRequired,
-  ).isRequired).isRequired,
+export const commentPropTypes = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+}).isRequired;
+
+export const commentsListPropTypes = {
+  comments: PropTypes.arrayOf(commentPropTypes).isRequired,
 };
