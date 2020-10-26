@@ -1,0 +1,15 @@
+.comments-list {
+  &__name {
+    font-size: 19px;
+    text-transform: uppercase;
+  }
+  &__body {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__email {
+    color: blue;
+    cursor: pointer;
+  }
+}
