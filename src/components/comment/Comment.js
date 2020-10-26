@@ -1,9 +1,9 @@
 import React from 'react';
 import { CommentShape } from '../shapes/CommentShape';
 
-export function Comment({ body, name, email }) {
+export function Comment({ body, name, email, id }) {
   return (
-    <li className="comment">
+    <li className="comment" key={id}>
       <p className="comment__name">
         {name}
         :
