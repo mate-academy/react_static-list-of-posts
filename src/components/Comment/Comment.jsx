@@ -1,18 +1,19 @@
 import React from 'react';
 import { CommentShape } from '../../shapes/CommentShape';
+import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
-  <div className="comments__item">
-    <p className="comments__name">
+  <ul className="comments__item">
+    <li className="comments__name">
       {name}
-    </p>
-    <p className="comments__email">
+    </li>
+    <li className="comments__email">
       {`Email: ${email}`}
-    </p>
-    <p className="comments__body">
+    </li>
+    <li className="comments__body">
       {body}
-    </p>
-  </div>
+    </li>
+  </ul>
 );
 
 Comment.propTypes = CommentShape;
