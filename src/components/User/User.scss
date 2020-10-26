@@ -1,0 +1,10 @@
+.post__user {
+  align-self: flex-end;
+  text-align: end;
+  font-size: 14px;
+  color: rgb(18, 59, 25);
+
+  & * {
+    margin: 0;
+  }
+}

@@ -1,0 +1,22 @@
+.comment {
+  &__item {
+    width: 700px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(145, 228, 159);
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(75, 74, 74, 0.3);
+  }
+
+  &__name {
+    color: rgb(21, 117, 37);
+  }
+
+  &__body {
+    color: rgb(18, 59, 25);
+  }
+
+  &__email {
+    color: gray;
+  }
+}
