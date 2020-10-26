@@ -11,15 +11,21 @@
     padding: 10px;
   }
 
-  &__user--email {
-    transition: ease-in-out 0.4s;
-    
-    &:hover {
-      color: blue;
-    }
+  &__email {
+    padding: 0 0 10px;
   }
 
   &__text {
     font-style: italic;
+  }
+}
+
+.email {
+  &__link {
+    transition: ease-in-out 0.4s;
+
+    &:hover {
+      color: blue;
+    }
   }
 }
