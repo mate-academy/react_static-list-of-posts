@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { UserPropTypes } from './propTypes/UserPropTypes';
 
@@ -14,4 +13,4 @@ export const User = ({ name, email, address }) => (
   </div>
 );
 
-User.propTypes = PropTypes.shape(UserPropTypes).isRequired;
+User.propTypes = UserPropTypes;

@@ -6,17 +6,15 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList';
 
-const preparedPosts = posts.map(post => (
-  {
-    ...post,
-    user: users.find(user => user.id === post.userId),
-    comments: comments.filter(comment => comment.postId === post.id),
-  }
-));
+const preparedPosts = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
 
 const App = () => (
-  <main className="App">
-    <h1 className="App__name">Static list of posts</h1>
+  <main className="app">
+    <h1 className="app__name">Static list of posts</h1>
     <PostList posts={preparedPosts} />
   </main>
 );

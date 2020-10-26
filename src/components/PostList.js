@@ -7,13 +7,15 @@ import { Post } from './Post';
 import './PostList.scss';
 
 export const PostList = ({ posts }) => (
-  <section className="PostList">
+  <section className="postList">
     {posts.map(post => (
       <Post {...post} key={post.id} />
     ))}
   </section>
 );
 
-PostList.propTypes = PropTypes.arrayOf(
-  PropTypes.shape(PostPropTypes).isRequired,
-).isRequired;
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape(PostPropTypes).isRequired,
+  ).isRequired,
+};

@@ -7,15 +7,17 @@ import { CommentPropTypes } from './propTypes/CommentPropTypes';
 import './CommentsList.scss';
 
 export const CommentList = ({ comments }) => (
-  <ul className="CommentsList">
+  <ul className="commentsList">
     {comments.map(comment => (
-      <li className="Comment" key={comment.id}>
+      <li className="comment" key={comment.id}>
         <Comment {...comment} />
       </li>
     ))}
   </ul>
 );
 
-CommentList.propTypes = PropTypes.arrayOf(
-  PropTypes.shape(CommentPropTypes).isRequired,
-).isRequired;
+CommentList.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape(CommentPropTypes).isRequired,
+  ).isRequired,
+};

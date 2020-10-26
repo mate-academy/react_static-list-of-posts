@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { PostPropTypes } from './propTypes/PostPropTypes';
 import { User } from './User';
@@ -8,23 +7,23 @@ import { CommentList } from './CommentList';
 import './Post.scss';
 
 export const Post = ({ title, body, user, comments }) => (
-  <article className="Post">
-    <div className="Post__heading">
-      <span className="Post__author">
+  <article className="post">
+    <div className="post__heading">
+      <span className="post__author">
         <User {...user} />
       </span>
-      <h3 className="Post__title">
+      <h3 className="post__title">
         {title}
       </h3>
     </div>
-    <p className="Post__text">
+    <p className="post__text">
       {body}
     </p>
-    <div className="Post__comments_heading">
+    <div className="post__comments_heading">
       Comments:
     </div>
     <CommentList comments={comments} />
   </article>
 );
 
-Post.propTypes = PropTypes.shape(PostPropTypes).isRequired;
+Post.propTypes = PostPropTypes;
