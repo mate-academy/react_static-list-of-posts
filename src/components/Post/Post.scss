@@ -1,0 +1,14 @@
+.Post {
+  border-radius: 5px;
+  background-color: rgb(14, 22, 33);
+  color: white;
+  padding: 20px;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__User {
+    margin-bottom: 20px;
+  }
+}
