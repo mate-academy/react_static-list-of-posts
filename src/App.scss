@@ -1,1 +1,104 @@
-// styles go here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Raleway", sans-serif;
+  background: #78a5a3;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+.post-list {
+  margin: 50px;
+  background: white;
+  border-radius: 15px;
+}
+
+.post-list__container {
+  margin: 50px;
+}
+
+.post-list__title {
+  text-align: center;
+  margin: 20px;
+}
+
+.post {
+  padding: 10px 30px 20px;
+  margin-bottom: 20px;
+  border-bottom: black 2px solid;
+}
+
+.post__container {
+  margin-bottom: 20px;
+}
+
+.post__title {
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.post__text {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.post__author {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.post__author-name {
+  font-weight: 700;
+}
+
+.comments-list__title {
+  margin-bottom: 10px;
+}
+
+.comment {
+  padding: 15px;
+  width: 70%;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 10px;
+  border: grey 1px solid;
+  list-style-type: none;
+}
+
+.comment__user-name {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.comment__text {
+  font-size: 14px;
+}
