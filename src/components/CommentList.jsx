@@ -5,10 +5,16 @@ import { Comment } from './Comment';
 export function CommentList({ comments }) {
   return (
     <div className="comments-list">
-      <h3 className="comments-list__title">Comments:</h3>
+      <h3 className="comments-list__title">
+        Comments:
+      </h3>
       <ul>
         {comments.map(comment => (
-          <Comment body={comment.body} name={comment.name} key={comment.id} />
+          <Comment
+            body={comment.body}
+            name={comment.name}
+            key={comment.id}
+          />
         ))}
       </ul>
     </div>
