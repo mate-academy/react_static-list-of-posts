@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './CommentList.scss';
 
 import { Comment } from '../Comment';
-import { commentType } from '../../propTypes/commentType';
+import { CommentShape } from '../../propTypes/CommentShape';
 
 export const CommentList = ({ comments }) => (
   <ul className="comment__list">
@@ -23,5 +23,5 @@ export const CommentList = ({ comments }) => (
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(commentType).isRequired,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
 };

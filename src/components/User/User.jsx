@@ -1,7 +1,7 @@
 import React from 'react';
 import './User.scss';
 
-import { userType } from '../../propTypes/userType';
+import { UserShape } from '../../propTypes/UserShape';
 
 export const User = ({ name, email, address }) => (
   <div className="post__user">
@@ -13,4 +13,4 @@ export const User = ({ name, email, address }) => (
   </div>
 );
 
-User.propTypes = userType.isRequired;
+User.propTypes = UserShape.isRequired;

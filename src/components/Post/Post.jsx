@@ -3,7 +3,7 @@ import './Post.scss';
 
 import { User } from '../User';
 import { CommentList } from '../CommentList';
-import { postType } from '../../propTypes/postType';
+import { PostShape } from '../../propTypes/PostShape';
 
 export const Post = ({ title, body, user, comments }) => (
   <article className="post__item">
@@ -18,4 +18,4 @@ export const Post = ({ title, body, user, comments }) => (
   </article>
 );
 
-Post.propTypes = postType.isRequired;
+Post.propTypes = PostShape.isRequired;
