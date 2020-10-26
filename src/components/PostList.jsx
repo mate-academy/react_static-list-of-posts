@@ -7,13 +7,13 @@ export function PostList({ posts }) {
   return (
     <div className="post-list__container">
       <h1 className="post-list__title">Static list of posts</h1>
-      {posts.map(post => (
+      {posts.map(({ id, title, body, user, comments }) => (
         <Post
-          key={post.id}
-          title={post.title}
-          body={post.body}
-          user={post.user}
-          comments={post.comments}
+          key={id}
+          title={title}
+          body={body}
+          user={user}
+          comments={comments}
         />
       ))}
     </div>
