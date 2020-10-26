@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import User from './User';
 import CommentList from './CommentList';
+import PostShape from './PropTypes/PostShape';
 
 const Post = ({ postItem: { title, body, user, comments } }) => (
   <li className="post-list__item">
@@ -12,27 +12,6 @@ const Post = ({ postItem: { title, body, user, comments } }) => (
   </li>
 );
 
-Post.propTypes = {
-  postItem: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    body: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      address: PropTypes.shape({
-        street: PropTypes.string.isRequired,
-        suite: PropTypes.string.isRequired,
-        city: PropTypes.string.isRequired,
-        zipcode: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-    comments: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-    })).isRequired,
-  }).isRequired,
-};
+Post.propTypes = PostShape;
 
 export default Post;
