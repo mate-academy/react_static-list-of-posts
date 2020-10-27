@@ -7,10 +7,10 @@ import './Post.scss';
 
 export const Post = ({ title, body, user, comments }) => (
   <div className="post">
-    <div className="post-title">
+    <div className="post__title">
       <strong>{title}</strong>
     </div>
-    <div className="post-body">{body}</div>
+    <div className="post__body">{body}</div>
     <User {...user} />
     <CommentList comments={comments} />
   </div>

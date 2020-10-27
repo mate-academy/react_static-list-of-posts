@@ -3,20 +3,20 @@
   background-color: rgb(12, 233, 130);
   border-radius: 25px;
 
-  &-name {
+  &__name {
     padding: 10px 0;
 
     font-size: 24px;
     text-align: center;
   }
 
-  &-body {
+  &__body {
     padding: 25px;
     display: flex;
     justify-content: center;
   }
 
-  &-email {
+  &__email {
     padding: 0 10px 5px;
     text-align: right;
   }
