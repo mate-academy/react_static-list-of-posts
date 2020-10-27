@@ -6,11 +6,9 @@ import './PostList.scss';
 
 export const PostList = ({ posts }) => (
   <ul className="post-list">
-    <li className="post-list__item">
-      {posts.map(post => (
-        <Post key={post} {...post} />
-      ))}
-    </li>
+    {posts.map(post => (
+      <Post key={post} {...post} />
+    ))}
   </ul>
 );
 

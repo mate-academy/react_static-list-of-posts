@@ -4,15 +4,15 @@ import { CommentShape } from '../shapes/CommentShape';
 import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
-  <div className="item__block">
-    <h2 className="item__block--name">{name}</h2>
-    <p className="item__block--email">
+  <li className="comment__block">
+    <h2 className="comment__block_name">{name}</h2>
+    <p className="comment__block_email">
       {`email: ${email}`}
     </p>
-    <p className="item__block--body">
+    <p className="comment__block_body">
       {body}
     </p>
-  </div>
+  </li>
 );
 
 Comment.propTypes = CommentShape;

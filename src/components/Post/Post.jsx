@@ -9,20 +9,20 @@ export const Post = (props) => {
   const { title, body, user, comments } = props;
 
   return (
-    <div className="post">
-      <div className="post__user user">
+    <li className="post-list__item item">
+      <div className="item__user user">
         <User {...user} />
       </div>
-      <h2 className="post__title">
+      <h2 className="item__title">
         {title}
       </h2>
-      <p className="post__body">
+      <p className="item__body">
         {body}
       </p>
-      <div className="post__comment comment">
+      <ul className="item__comment comment">
         <CommentList comments={comments} />
-      </div>
-    </div>
+      </ul>
+    </li>
   );
 };
 

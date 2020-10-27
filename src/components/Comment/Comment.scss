@@ -1,4 +1,4 @@
-.item {
+.comment {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -19,7 +19,7 @@
       grid-column-end: 1;
     }
 
-    &--email {
+    &_email {
       font-size: 14px;
     }
   }
