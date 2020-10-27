@@ -3,15 +3,13 @@ import { CommentListShape } from '../propTypes/commentList';
 import { Comment } from '../Comment';
 
 export const CommentList = ({ comments }) => (
-  <>
+  <ul className="commentList">
     {
       comments.map(comment => (
-        <ul className="commentList" key={comment.id}>
-          <Comment {...comment} />
-        </ul>
+        <Comment {...comment} key={comment.id} />
       ))
     }
-  </>
+  </ul>
 );
 
 CommentList.propTypes = CommentListShape;
