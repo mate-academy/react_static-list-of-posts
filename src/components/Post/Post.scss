@@ -1,0 +1,16 @@
+.post {
+  padding: 0 20px;
+
+  &__user {
+    font-size: 24px;
+    padding-top: 10px;
+  }
+
+  &__title {
+    font-size: 20px;
+  }
+
+  &__body {
+    font-size: 14px;
+  }
+}
