@@ -1,5 +1,5 @@
 import React from 'react';
-import { commentSmallShape } from '../shapes/commentShape';
+import { commentShape } from '../shapes/commentShape';
 
 export const Comment = ({ name, body, email }) => (
   <div className="post--comment">
@@ -9,4 +9,4 @@ export const Comment = ({ name, body, email }) => (
   </div>
 );
 
-Comment.propTypes = commentSmallShape;
+Comment.propTypes = commentShape;
