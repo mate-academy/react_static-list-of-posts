@@ -1,1 +1,36 @@
-// styles go here
+body {
+  background-color: rgb(14, 22, 33);
+  color: white;
+
+}
+
+.post {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 50%;
+
+  &--email {
+    color: rgb(132, 177, 219);
+  }
+
+  &--message {
+    background-color: rgb(24, 38, 51);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  &--title {
+    text-transform: uppercase;
+  }
+
+  &--comment {
+    background-color: rgb(44, 82, 119);
+    padding: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    
+    border-radius: 10px;
+  }
+}
