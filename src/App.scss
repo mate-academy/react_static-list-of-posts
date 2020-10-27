@@ -1,1 +1,10 @@
-// styles go here
+body {
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+}
+
+.App {
+  &__title {
+    text-align: center;
+  }
+}

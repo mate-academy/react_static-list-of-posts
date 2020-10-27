@@ -1,0 +1,7 @@
+.comment {
+  border-bottom: 1px solid rgb(199, 195, 195);
+
+  &:last-child {
+    border: none;
+  }
+}
