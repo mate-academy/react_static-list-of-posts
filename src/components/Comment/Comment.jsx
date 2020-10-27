@@ -4,12 +4,12 @@ import { CommentShape } from '../shapes/CommentShape';
 import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
-  <li className="comment__block">
-    <h2 className="comment__block_name">{name}</h2>
-    <p className="comment__block_email">
+  <li className="comment__block block">
+    <h2 className="block__name">{name}</h2>
+    <p className="block__email">
       {`email: ${email}`}
     </p>
-    <p className="comment__block_body">
+    <p className="block_body">
       {body}
     </p>
   </li>
