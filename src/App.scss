@@ -1,1 +1,13 @@
-// styles go here
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  list-style-type: none;
+  width: 20%;
+  border: 1px solid lightgray;
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+}
