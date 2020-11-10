@@ -1,1 +1,104 @@
-// styles go here
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 5%;
+    background-color: rgba(225, 230, 189, 0.7);
+    list-style: none;
+  }
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+  background-color: rgba(205, 250, 153, 0.5);
+  border-top: 1px solid #000;
+  border-bottom: 1px dashed #000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  &__container {
+    border: 1px solid #000;
+    border-radius: 5%;
+    padding: 20px;
+  }
+
+  &__title {
+    text-align: justify;
+    margin: 10px 0;
+    padding: 0 10px;
+    font-size: 28px;
+
+    &::first-letter {
+      font-size: 32px;
+      text-transform: uppercase;
+      color: rgb(253, 0, 0);
+    }
+  }
+
+  &__text {
+    width: 80%;
+    align-self: center;
+  }
+
+  &__author {
+    align-self: flex-end;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.comments-list__title {
+  font-size: 26px;
+  margin-left: 10px;
+}
+
+.comment {
+  list-style: none;
+  border-top: 5px double rgb(100, 100, 100);
+  
+  &__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(60, 60, 60);
+
+    &::first-letter {
+      font-size: 26px;
+      text-transform: uppercase;
+      line-height: 1.5;
+      color: rgb(253, 122, 0);
+    }
+  }
+
+  &__text {
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+
+    &::first-letter {
+      margin-left: 10px;
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 1.5;
+      color: rgb(253, 122, 0);
+    }
+  }
+
+  &__email {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
