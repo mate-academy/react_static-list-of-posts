@@ -1,1 +1,23 @@
-// styles go here
+h1,
+#root p,
+.post-list {
+  text-align: center;
+
+}
+
+.post {
+  background-color: lightseagreen;
+  border: 5px solid lightseagreen;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-bottom: 20px;
+}
+
+.comment-list {
+  background-color: limegreen;
+}
+
+.comment {
+  border: 2px solid grey;
+  margin-top: 5px;
+}
