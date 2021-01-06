@@ -1,4 +1,5 @@
 import React from 'react';
+import { TodoList } from './components/TodoList';
 
 import './App.scss';
 
@@ -10,20 +11,11 @@ const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+    <TodoList
+      post={posts}
+      comment={comments}
+      user={users}
+    />
   </div>
 );
 
