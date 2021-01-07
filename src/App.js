@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoList } from './components/TodoList';
+import { PostList } from './components/PostList';
 
 import './App.scss';
 
@@ -11,7 +11,7 @@ const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
-    <TodoList
+    <PostList
       post={posts}
       comment={comments}
       user={users}
