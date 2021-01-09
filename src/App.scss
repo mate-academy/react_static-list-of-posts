@@ -1,1 +1,65 @@
-// styles go here
+div > h1 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  line-height: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0;
+  text-overflow: ellipsis;
+  color: #fff;
+  background: #6d84a2 repeat-x;
+  border-bottom: 1px solid #2d3642;
+}
+
+h2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  line-height: 20px;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0;
+  text-overflow: ellipsis;
+  color: #fff;
+  background: #715d74 repeat-x;
+  border-bottom: 1px solid #2d3642;
+}
+
+div > ul {
+  display: block;
+  left: 0;
+  top: 41px;
+  width: 100%;
+  min-height: 418px;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+  background: right center;
+  font-size: 20px;
+  list-style: none;
+}
+
+ol {
+  display: block;
+  left: 0;
+  top: 41px;
+  width: 100%;
+  margin: 20px;
+  padding: 0;
+}
+
+ol > li {
+  margin: 0;
+  border: 2px solid hsl(0, 5%, 18%);
+  padding: 2px;
+  background: rgb(128, 121, 121) right center;
+  font-size: 20px;
+  list-style: none;
+}
