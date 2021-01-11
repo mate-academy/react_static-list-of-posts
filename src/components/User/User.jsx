@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './User.scss';
+
 export const User = ({ name, email, address }) => (
-  <>
+  <div>
     <span className="user_name">{name}</span>
-    {' '}
     <br />
-    Email:
-    {' '}
+    <span className="user_email-label">Email: </span>
     <span className="user_email">{email}</span>
-    {' '}
     <br />
-    City:
-    {' '}
+    <span className="user_city-label">City: </span>
     <span className="user_city">{address.city}</span>
-  </>
+  </div>
 );
 
 User.propTypes = {

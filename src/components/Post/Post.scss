@@ -6,6 +6,11 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+.post_wrap {
+  width: 85%;
+  margin: 0 auto;
+}
+
 .post_title {
   text-transform: capitalize;
   font-size: 25px;
@@ -14,7 +19,14 @@
   text-align: center;
 }
 
-.post_wrap {
-  width: 85%;
-  margin: 0 auto;
+.post_body {
+  text-indent: 25px;
+}
+
+.post_body::first-letter {
+  text-transform: uppercase;
+}
+
+.post_body::after {
+  content: ".";
 }

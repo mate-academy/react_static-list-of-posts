@@ -1,0 +1,21 @@
+.user_name {
+  font-size: 20px;
+  color: #5d9dca;
+}
+
+.user_email-label,
+.user_city-label {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: default;
+}
+
+.user_email,
+.user_city {
+  font-size: 18px;
+  cursor: default;
+}
+
+.user_email:hover {
+  color: #5d9dca;
+}

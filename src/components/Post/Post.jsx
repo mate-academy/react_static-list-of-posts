@@ -14,7 +14,8 @@ export const Post = ({ user, cmts, body, title }) => (
         {...user}
       />
 
-      <p>{body}</p>
+      <p className="post_body">{body}</p>
+
       <CommentList
         cmts={cmts}
       />
