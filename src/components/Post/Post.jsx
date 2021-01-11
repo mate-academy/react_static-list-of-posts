@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
 
-export const Post = ({ user, cmts }) => (
+export const Post = ({ user, cmts, body, title }) => (
   <>
-    <h3>post</h3>
+    <h2>{title}</h2>
     <User
       {...user}
     />
+    <p>{body}</p>
     <CommentList
       cmts={cmts}
     />
@@ -23,6 +24,7 @@ Post.propTypes = {
       PropTypes.object.isRequired,
     ]),
   ).isRequired,
-
   cmts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  body: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
