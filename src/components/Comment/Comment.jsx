@@ -2,7 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Comment = ({ cmts }) => (
-  <h4>Comment</h4>
+  <>
+    <p>
+      <span>{cmts.name}</span>
+      <br />
+      <span>{cmts.body}</span>
+      <br />
+      <span>{cmts.email}</span>
+      <br />
+      <br />
+      <br />
+    </p>
+  </>
 );
 
 Comment.propTypes = {

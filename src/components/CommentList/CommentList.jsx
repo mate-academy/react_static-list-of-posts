@@ -4,8 +4,7 @@ import { Comment } from '../Comment';
 
 export const CommentList = ({ cmts }) => (
   <>
-    <h3>Comment list</h3>
-
+    <h5 className="comments">Comments</h5>
     {cmts.map(cmt => (
       <Comment
         key={cmt.id}

@@ -7,6 +7,7 @@ export function PostList({ objPosts }) {
     <>
       {objPosts.map(post => (
         <Post
+          className="Post"
           key={post.id}
           {...post}
         />

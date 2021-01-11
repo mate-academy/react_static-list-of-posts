@@ -9,6 +9,7 @@ export const Post = ({ user, cmts, body, title }) => (
     <User
       {...user}
     />
+
     <p>{body}</p>
     <CommentList
       cmts={cmts}

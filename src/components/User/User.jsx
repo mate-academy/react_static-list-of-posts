@@ -2,7 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const User = ({ name, email, address }) => (
-  <h3>User</h3>
+  <>
+    <span className="user_name">{name}</span>
+    {' '}
+    <br />
+    Email:
+    {' '}
+    <span className="user_email">{email}</span>
+    {' '}
+    <br />
+    City:
+    {' '}
+    <span className="user_city">{address.city}</span>
+  </>
 );
 
 User.propTypes = {
