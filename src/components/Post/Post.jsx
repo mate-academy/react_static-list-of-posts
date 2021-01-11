@@ -16,6 +16,13 @@ export const Post = ({ user, cmts }) => (
 );
 
 Post.propTypes = {
-  user: PropTypes.objectOf(PropTypes.object).isRequired,
+  user: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.string.isRequired,
+      PropTypes.number.isRequired,
+      PropTypes.object.isRequired,
+    ]),
+  ).isRequired,
+
   cmts: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

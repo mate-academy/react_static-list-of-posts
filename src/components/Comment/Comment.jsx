@@ -6,5 +6,11 @@ export const Comment = ({ cmts }) => (
 );
 
 Comment.propTypes = {
-  cmts: PropTypes.objectOf(PropTypes.object).isRequired,
+  cmts: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.number.isRequired,
+      PropTypes.string.isRequired,
+      PropTypes.object.isRequired,
+    ]),
+  ).isRequired,
 };

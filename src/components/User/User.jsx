@@ -8,5 +8,10 @@ export const User = ({ name, email, address }) => (
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.objectOf(PropTypes.object).isRequired,
+  address: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.string.isRequired,
+      PropTypes.object.isRequired,
+    ]),
+  ).isRequired,
 };
