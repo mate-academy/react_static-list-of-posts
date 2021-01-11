@@ -1,0 +1,36 @@
+.Post {
+  width: 95%;
+  margin: 30px auto 0;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.post_wrap {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.post_title {
+  text-transform: capitalize;
+  font-size: 25px;
+  margin: 0 auto 15px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.post_body {
+  font-size: 18px;
+  text-indent: 25px;
+  margin: 20px 0 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.post_body::first-letter {
+  text-transform: uppercase;
+}
+
+.post_body::after {
+  content: ".";
+}
