@@ -7,16 +7,24 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
+function App() {
+  const preparedPost = posts.map(post => ({
+    ...post,
+    user: users.find(user => user.id === post.userId),
+    cmts: comments.filter(cmts => cmts.postId === post.id),
+  }));
 
-    <PostList
-      post={posts}
-      comment={comments}
-      user={users}
-    />
-  </div>
-);
+  // console.log(preparedPost);
+
+  return (
+    <div className="App">
+      <h1>Static list of posts</h1>
+
+      <PostList
+        objPosts={preparedPost}
+      />
+    </div>
+  );
+}
 
 export default App;

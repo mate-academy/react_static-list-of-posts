@@ -2,16 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
 
-export function PostList({ post, comment, user }) {
+export function PostList({ objPosts }) {
   return (
     <>
-      <Post />
+      {objPosts.map(post => (
+        <Post
+          key={post.id}
+          {...post}
+        />
+      ))}
     </>
   );
 }
 
 PostList.propTypes = {
-  post: PropTypes.arrayOf(PropTypes.object).isRequired,
-  comment: PropTypes.arrayOf(PropTypes.object).isRequired,
-  user: PropTypes.arrayOf(PropTypes.object).isRequired,
+  objPosts: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
