@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../Comment';
 
+import './CommentList.scss';
+
 export const CommentList = ({ cmts }) => (
-  <>
-    <h5 className="comments">Comments</h5>
+  <div className="Comment-list">
+    <h5 className="comment-list_title">Comments</h5>
     {cmts.map(cmt => (
       <Comment
         key={cmt.id}
         cmts={cmt}
       />
     ))}
-  </>
+  </div>
 );
 
 CommentList.propTypes = {

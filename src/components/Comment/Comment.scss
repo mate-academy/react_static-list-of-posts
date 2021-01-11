@@ -1,0 +1,26 @@
+.comment {
+  border: 1px solid #0000002b;
+}
+
+.comment_name,
+.comment_content,
+.comment_email {
+  margin-bottom: 7px;
+  display: inline-block;
+}
+
+.comment_name::first-letter,
+.comment_content::first-letter,
+.comment_email::first-letter {
+  text-transform: uppercase;
+}
+
+.comment_name::after,
+.comment_content::after {
+  content: ".";
+}
+
+.comment_email:hover {
+  color: #5d9dca;
+  cursor: default;
+}

@@ -1,19 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Comment.scss';
+
 export const Comment = ({ cmts }) => (
-  <>
-    <p>
-      <span>{cmts.name}</span>
-      <br />
-      <span>{cmts.body}</span>
-      <br />
-      <span>{cmts.email}</span>
-      <br />
-      <br />
-      <br />
-    </p>
-  </>
+  <p className="comment">
+    <span className="comment_name">{cmts.name}</span>
+    <br />
+    <span className="comment_content">{cmts.body}</span>
+    <br />
+    <span className="comment_email">{cmts.email}</span>
+  </p>
 );
 
 Comment.propTypes = {

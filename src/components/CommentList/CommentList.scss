@@ -1,0 +1,15 @@
+.Comment-list {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
+.comment-list_title {
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-list_title::after {
+  content: ":";
+}

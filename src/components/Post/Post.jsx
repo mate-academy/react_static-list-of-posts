@@ -9,7 +9,7 @@ export const Post = ({ user, cmts, body, title }) => (
   <div className="Post">
     <div className="post_wrap">
       <h2 className="post_title">{title}</h2>
-    
+
       <User
         {...user}
       />
