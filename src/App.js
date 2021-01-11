@@ -14,11 +14,9 @@ function App() {
     cmts: comments.filter(cmts => cmts.postId === post.id),
   }));
 
-  // console.log(preparedPost);
-
   return (
     <div className="App">
-      <h1>Static list of posts</h1>
+      <h1 className="app_title">Static list of posts</h1>
 
       <PostList
         objPosts={preparedPost}

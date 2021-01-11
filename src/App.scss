@@ -1,1 +1,20 @@
-// styles go here
+body {
+  margin: 0;
+  padding: 0;
+  background: #c9c9c9;
+}
+
+.App {
+  margin-top: 40px;
+  padding: 0;
+}
+
+.app_title {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  color: #5d9dca;
+  border-bottom: 1px solid #ff00003b;
+  width: 45%;
+  margin: 0 auto;
+}
