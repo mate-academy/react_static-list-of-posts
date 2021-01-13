@@ -1,0 +1,14 @@
+.post {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #5f5a5a;
+  border-radius: 5px;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__author-name {
+    font-weight: 700;
+  }
+}
