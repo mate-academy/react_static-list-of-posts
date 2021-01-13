@@ -7,10 +7,11 @@ import comments from './api/comments';
 import users from './api/users';
 
 const preparedPosts = posts
-  .map(post => Object.assign({
+  .map(post => ({
+    ...post,
     user: users.find(person => person.id === post.userId),
     comments: comments.filter(comment => comment.postId === post.id),
-  }, post));
+  }));
 
 const App = () => (
   <div className="App">

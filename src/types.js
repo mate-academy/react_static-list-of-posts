@@ -32,7 +32,7 @@ export const CommentTypes = PropTypes.shape({
   body: PropTypes.string.isRequired,
 });
 
-export const Types = PropTypes.shape({
+export const PostShape = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,

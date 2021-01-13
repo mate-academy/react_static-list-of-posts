@@ -1,7 +1,7 @@
 import React from 'react';
 import { User } from './User';
 import { CommentList } from './CommentList';
-import { Types } from './types';
+import { PostShape } from './types';
 
 export const Post = ({ user, title, body, comments }) => (
   <>
@@ -12,4 +12,4 @@ export const Post = ({ user, title, body, comments }) => (
   </>
 );
 
-Post.propTypes = Types.isRequired;
+Post.propTypes = PostShape.isRequired;
