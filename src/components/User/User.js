@@ -7,7 +7,12 @@ export const User = ({ name, email, address: { city } }) => (
     <p className="User__name">{name}</p>
     <div className="User__contacts">
       <span className="User__city">{city}</span>
-      <a className="User__email" href={email}>{email.toLowerCase()}</a>
+      <a
+        className="User__email"
+        href={`mailto:${email}`}
+      >
+        {email.toLowerCase()}
+      </a>
     </div>
   </div>
 );

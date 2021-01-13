@@ -7,7 +7,12 @@ export const Comment = ({ name, email, body }) => (
     <h4 className="Comment__author">
       {`${name} `}
     </h4>
-    <a href={email} className="Comment__email">{email.toLowerCase()}</a>
+    <a
+      href={`mailto:${email}`}
+      className="Comment__email"
+    >
+      {email.toLowerCase()}
+    </a>
     <p className="Comment__body">{body}</p>
   </div>
 );
