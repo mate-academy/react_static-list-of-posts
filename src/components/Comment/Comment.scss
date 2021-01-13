@@ -1,0 +1,16 @@
+.comment {
+  font-style: italic;
+  border: 1px solid red;
+  padding: 1rem;
+
+  &__title {
+    padding-top: 1rem;
+    font-weight: 600;
+  }
+
+  &__title,
+  &__text,
+  &__email {
+    padding-left: 1rem;
+  }
+}
