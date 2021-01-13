@@ -5,7 +5,7 @@ import CommentList from '../CommentList/CommentList';
 
 function Post({ post, newUsers, newComments }) {
   return (
-    <div className="'box'">
+    <div className="box">
       <User newUsers={newUsers} />
       <strong>{post.body}</strong>
       <p>{post.title}</p>

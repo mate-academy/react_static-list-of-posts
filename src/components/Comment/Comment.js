@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Comment({ comment }) {
   return (
-    <div className="'message is-info'">
+    <div className="message is-info">
       <p>{comment.name}</p>
       <p>{comment.email}</p>
       <p>{comment.body}</p>
