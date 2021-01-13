@@ -13,7 +13,7 @@ const postsWithComments = posts.map(item => ({
   comment: comments.filter(comment => comment.postId === item.id),
 }));
 
-const postCommentUser = postsWithComments.map(item => ({
+const preparedListOfPosts = postsWithComments.map(item => ({
   ...item,
   user: users.find(user => user.id === item.userId),
 }));
@@ -37,7 +37,7 @@ const App = () => (
       {users.length}
     </p>
 
-    <PostList postCommentUser={postCommentUser} />
+    <PostList preparedListOfPosts={preparedListOfPosts} />
   </div>
 );
 

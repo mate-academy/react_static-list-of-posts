@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { userType, commentType } from '../../types';
 import { CommentList } from '../CommentList';
 import { User } from '../User';
 
@@ -15,8 +16,6 @@ export const Post = ({ title, body, user, comment }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape().isRequired,
-  comment: PropTypes.arrayOf(
-    PropTypes.shape().isRequired,
-  ).isRequired,
+  user: userType.isRequired,
+  comment: commentType.isRequired,
 };

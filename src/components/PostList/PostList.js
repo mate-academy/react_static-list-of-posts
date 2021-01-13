@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
 
-export const PostList = ({ postCommentUser }) => (
-  postCommentUser.map(
+export const PostList = ({ preparedListOfPosts }) => (
+  preparedListOfPosts.map(
     item => (<Post {...item} key={item.id} />),
   )
 );
 
 PostList.propTypes = {
-  postCommentUser: PropTypes.arrayOf(
+  preparedListOfPosts: PropTypes.arrayOf(
     PropTypes.shape().isRequired,
   ).isRequired,
 };
