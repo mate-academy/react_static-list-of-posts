@@ -5,6 +5,13 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import { Postlist } from './postlist/Postlist';
+
+const database = posts.map(post => ({
+  ...post,
+  comments: comments.filter(com => com.postId === post.id),
+  user: users.find(user => user.id === post.userId),
+}));
 
 const App = () => (
   <div className="App">
@@ -24,6 +31,8 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <Postlist data={database} />
   </div>
 );
 
