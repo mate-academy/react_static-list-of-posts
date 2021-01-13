@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function User({ newUsers }) {
   return (
-    <>
+    <div className="'block'">
       <h1>
         {newUsers.name}
       </h1>
@@ -11,7 +11,7 @@ function User({ newUsers }) {
         {newUsers.email}
         {newUsers.address.street}
       </h2>
-    </>
+    </div>
   );
 }
 

@@ -4,11 +4,11 @@ import Comment from '../Comment/Comment';
 
 function CommentList({ newComments }) {
   return (
-    <>
+    <div className="'block'">
       {newComments.map(comment => (
         <Comment key={comment.id} comment={comment} />
       ))}
-    </>
+    </div>
   );
 }
 
