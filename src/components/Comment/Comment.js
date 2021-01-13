@@ -1,5 +1,5 @@
 import React from 'react';
-import { commentType } from '../../types';
+import { CommentType } from '../../types';
 
 const Comment = ({ comment }) => (
   <div className="comment">
@@ -10,7 +10,7 @@ const Comment = ({ comment }) => (
 );
 
 Comment.propTypes = {
-  comment: commentType.isRequired,
+  comment: CommentType.isRequired,
 };
 
 export default Comment;

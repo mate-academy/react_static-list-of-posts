@@ -2,20 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
 import './CommentList.scss';
-import { commentType } from '../../types';
+import { CommentType } from '../../types';
 
 const CommentList = ({ commentList }) => (
-  <div>
+  <div className="comment-list">
+    <h3>Comments:</h3>
     {commentList.map(comment => (
-      <div className="comment-list" key={comment.id}>
-        <Comment comment={comment} />
-      </div>
+      <Comment comment={comment} key={comment.id} />
     ))}
   </div>
 );
 
 CommentList.propTypes = {
-  commentList: PropTypes.arrayOf(commentType).isRequired,
+  commentList: PropTypes.arrayOf(CommentType).isRequired,
 };
 
 export default CommentList;

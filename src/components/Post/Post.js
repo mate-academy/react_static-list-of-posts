@@ -3,24 +3,21 @@ import PropTypes from 'prop-types';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 import './Post.scss';
-import { commentType, postType, usersType } from '../../types';
+import { CommentType, PostType, UsersType } from '../../types';
 
-const Post = ({ post, user, comment }) => (
+const Post = ({ post, user, comments }) => (
   <div className="post">
     <h2>{post.title}</h2>
     <p>{post.body}</p>
     <User user={user} />
-    <h3>Comments:</h3>
-    <CommentList commentList={comment} />
+    <CommentList commentList={comments} />
   </div>
 );
 
 Post.propTypes = {
-  post: postType.isRequired,
-
-  user: usersType.isRequired,
-
-  comment: PropTypes.arrayOf(commentType).isRequired,
+  post: PostType.isRequired,
+  user: UsersType.isRequired,
+  comments: PropTypes.arrayOf(CommentType).isRequired,
 };
 
 export default Post;

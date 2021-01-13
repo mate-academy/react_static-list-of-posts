@@ -2,17 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import './PostList.scss';
-import { commentType, postType, usersType } from '../../types';
+import { PostType } from '../../types';
 
-const PostList = ({ posts, commentList, users }) => (
+const PostList = ({ posts }) => (
   <section className="post-list">
     {posts.map(post => (
       <Post
         post={post}
-        user={users.find(user => user.id === post.userId)}
-        comment={commentList.filter(comment => (
-          comment.postId === post.userId
-        ))}
+        user={post.user}
+        comments={post.comments}
         key={post.id}
       />
     ))}
@@ -20,11 +18,7 @@ const PostList = ({ posts, commentList, users }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(postType).isRequired,
-
-  users: PropTypes.arrayOf(usersType).isRequired,
-
-  commentList: PropTypes.arrayOf(commentType).isRequired,
+  posts: PropTypes.arrayOf(PostType).isRequired,
 };
 
 export default PostList;
