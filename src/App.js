@@ -6,6 +6,18 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
+import { PostList } from './components/PostList';
+
+const postsWithComments = posts.map(item => ({
+  ...item,
+  comment: comments.filter(comment => comment.postId === item.id),
+}));
+
+const postCommentUser = postsWithComments.map(item => ({
+  ...item,
+  user: users.find(user => user.id === item.userId),
+}));
+
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
@@ -24,6 +36,8 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <PostList postCommentUser={postCommentUser} />
   </div>
 );
 
