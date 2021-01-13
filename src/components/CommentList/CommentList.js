@@ -7,11 +7,7 @@ import { Comment } from '../Comment';
 export const CommentList = ({ comments }) => (
   <div className="comments">
     {comments.map(comment => (
-      <Comment
-        name={comment.name}
-        body={comment.body}
-        email={comment.email}
-      />
+      <Comment {...comment} />
     ))
     }
   </div>

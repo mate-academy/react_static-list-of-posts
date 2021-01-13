@@ -8,6 +8,11 @@
     text-transform: uppercase;
   }
 
+  &__author {
+    display: flex;
+    gap: 5px;
+  }
+
   &__author-name {
     font-weight: 700;
   }
