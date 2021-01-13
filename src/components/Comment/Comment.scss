@@ -1,0 +1,11 @@
+.comment {
+  border: 1px solid black;
+
+  &__author {
+    border-top: 1px solid black;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
