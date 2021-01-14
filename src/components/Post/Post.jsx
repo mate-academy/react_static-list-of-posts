@@ -6,7 +6,6 @@ import './Post.scss';
 
 const Post = ({ title, body, user, comments, index, id }) => (
   <li
-    // key={index + id}
     className="post"
   >
     <span className="post__title">
@@ -18,14 +17,14 @@ const Post = ({ title, body, user, comments, index, id }) => (
     </p>
 
     <br />
-    <User data={user} />
+    <User user={user} />
     <br />
 
     <span className="post__comments-title">
       Comments:
     </span>
     {`[${comments.length} comments]`}
-    <CommentsList data={comments} />
+    <CommentsList comments={comments} />
   </li>
 );
 

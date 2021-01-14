@@ -1,16 +1,16 @@
 import React from 'react';
 import { userType } from '../types';
 
-const User = ({ data }) => (
+const User = ({ user }) => (
   <div>
     <b>User:</b>
-    {data.name}
+    {user.name}
     <br />
     <b>Email:</b>
-    {data.email}
+    {user.email}
     <br />
     <b>Address:</b>
-    {`${data.address.city}, ${data.address.street}`}
+    {`${user.address.city}, ${user.address.street}`}
   </div>
 );
 

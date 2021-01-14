@@ -2,9 +2,9 @@ import React from 'react';
 import { commentsListType } from '../types';
 import Comment from '../Comment/Comment';
 
-const CommentsList = ({ data }) => (
+const CommentsList = ({ comments }) => (
   <ul>
-    {data.map(comment => (
+    {comments.map(comment => (
       <Comment
         key={comment.id}
         name={comment.name}
