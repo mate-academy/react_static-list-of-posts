@@ -1,0 +1,17 @@
+.post {
+  padding-bottom: 40px ;
+
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+  }
+  
+  &__border {
+    background-color: peachpuff;
+    border: 2px solid black;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba($color: #000, $alpha: 0.5);
+  }
+}
