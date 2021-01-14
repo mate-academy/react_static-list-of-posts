@@ -1,1 +1,44 @@
-// styles go here
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.post {
+  background-color: seashell;
+  padding: 15px;
+  border: 1px solid rgb(15, 15, 15);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.comments {
+  background-color: rgb(194, 190, 243);
+  padding: 15px;
+  border: 1px dashed rgb(15, 15, 15);
+  border-radius: 15px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+.comment {
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+}
+
+.name {
+  font-weight: 700;
+}
