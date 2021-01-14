@@ -1,0 +1,18 @@
+.post {
+  border-bottom: 15px solid white;
+
+  &__box {
+    background-color: #e6b566;
+    padding: 10px;
+    border-bottom: 2px solid #111d5e;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+
+  &__comments {
+    background-color: #a3ddcb;
+    padding: 10px;
+  }
+}
