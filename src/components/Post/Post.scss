@@ -1,0 +1,16 @@
+.post-tile {
+  padding-left: 20px;
+  background-color: rgba(185, 185, 185, 0.15);
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__body {
+    max-width: 40vw;
+  }
+
+  &:nth-child(odd) {
+    background-color: rgba(116, 116, 116, 0.3);
+  }
+}
