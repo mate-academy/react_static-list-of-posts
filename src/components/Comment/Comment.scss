@@ -1,0 +1,17 @@
+.comment {
+  border-bottom: 2px dashed ;
+
+  &__name {
+    display: inline-block;
+    border: 1px solid gray;
+    margin-bottom: 0;
+  }
+
+  &__email {
+    margin: 5px auto 20px;
+  }
+  
+  &__text {
+    padding-bottom: 20px;
+  }
+}
