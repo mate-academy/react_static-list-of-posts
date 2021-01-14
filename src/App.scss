@@ -1,1 +1,29 @@
-// styles go here
+body {
+  padding: 30px 50px;
+}
+
+.posts {
+  list-style: none;
+  max-width: 60vw;
+}
+
+.post {
+  margin-bottom: 40px;
+
+  &__title {
+    color: #3451a2;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  &__text {
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  &__user {
+    font-size: 14px;
+    opacity: 70%;
+  }
+}
