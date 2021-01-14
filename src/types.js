@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const TypeAddress = {
+export const TypeAddress = {
   street: PropTypes.string.isRequired,
   suite: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
