@@ -4,24 +4,24 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 import { UserShape } from '../../Types';
 
-const User = ({ users, id }) => (
+const User = ({ email, address, name }) => (
   <>
     <Container>
       <Row>
         <Col xs={6} md={4} className="author">
           Author:
           {' '}
-          {users.find(user => user.id === id).name}
+          {name}
         </Col>
         <Col xs={6} md={4} className="email">
           E-mail:
           {' '}
-          {users.find(user => user.id === id).email}
+          {email}
         </Col>
         <Col xs={6} md={4}>
           City:
           {' '}
-          {users.find(user => user.id === id).address.city}
+          {address.city}
         </Col>
       </Row>
     </Container>
@@ -29,8 +29,9 @@ const User = ({ users, id }) => (
 );
 
 User.propTypes = {
-  users: PropTypes.objectOf(UserShape).isRequired,
-  id: PropTypes.number.isRequired,
+  email: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  address: PropTypes.objectOf(UserShape).isRequired,
 };
 
 export default User;

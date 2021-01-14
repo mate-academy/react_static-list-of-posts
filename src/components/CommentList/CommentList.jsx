@@ -4,24 +4,23 @@ import PropTypes from 'prop-types';
 import { CommentShape } from '../../Types';
 import Comment from '../Comment';
 
-const CommentList = ({ comments, postId }) => (
+const CommentList = ({ commentsData }) => (
   <>
     <div className="text-center pb-3">Comment section</div>
-    <span className="commentsList">
-      {comments.filter(comm => comm.postId === postId).map(person => (
-        <Comment
-          name={person.name}
-          email={person.email}
-          body={person.body}
-        />
+    <div className="commentsList">
+      {commentsData.map(person => (
+        <div key={person.id}>
+          <Comment
+            {...person}
+          />
+        </div>
       ))}
-    </span>
+    </div>
   </>
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.objectOf(CommentShape).isRequired,
-  postId: PropTypes.number.isRequired,
+  commentsData: PropTypes.arrayOf(CommentShape).isRequired,
 };
 
 export default CommentList;

@@ -8,7 +8,7 @@ const Comment = ({ name, email, body }) => (
   <>
     <Card className="mb-3 card">
       <Card.Body>
-        <Card.Title><h6>{ name }</h6></Card.Title>
+        <h6>{ name }</h6>
         <Card.Subtitle className="mb-2 text-muted">{email}</Card.Subtitle>
         <Card.Text>
           {body}

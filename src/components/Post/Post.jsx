@@ -3,39 +3,37 @@ import './Post.scss';
 import PropTypes from 'prop-types';
 import User from '../User';
 import CommentList from '../CommentList';
-import { PostShape } from '../../Types';
+import { CommentShape, UserShape } from '../../Types';
 
-// eslint-disable-next-line max-len
-const Post = ({ postId, postTitle, postBody, idUser, dataUsers, commentsData }) => (
+const Post = ({ users, comments, id, title, body }) => (
   <>
     <div className="post">
       <div>
         Post ID:
         {' '}
         <strong>
-          {postId}
+          {id}
         </strong>
       </div>
       <span>
         Post name:
         {' '}
-        {postTitle}
+        {title}
       </span>
-      <User users={dataUsers} id={idUser} />
-      <h3 className="text-center">{postTitle}</h3>
-      <p className="postBody">{postBody}</p>
-      <p><CommentList comments={commentsData} postId={postId} /></p>
+      <User {...users} />
+      <h3 className="text-center">{title}</h3>
+      <p className="postBody">{body}</p>
+      <CommentList commentsData={comments} />
     </div>
   </>
 );
 
 Post.propTypes = {
-  postId: PropTypes.number.isRequired,
-  postTitle: PropTypes.string.isRequired,
-  postBody: PropTypes.string.isRequired,
-  idUser: PropTypes.number.isRequired,
-  dataUsers: PropTypes.objectOf(PostShape).isRequired,
-  commentsData: PropTypes.objectOf(PostShape).isRequired,
+  users: PropTypes.objectOf(UserShape).isRequired,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };
 
 export default Post;
