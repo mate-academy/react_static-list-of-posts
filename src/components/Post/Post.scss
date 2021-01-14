@@ -1,0 +1,37 @@
+.post {
+  padding: 20px 25px;
+  border-radius: 5px 10px;
+
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 15px;
+
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    margin-top: 20px;
+  }
+
+  &__user-name {
+    font-style: italic;
+  }
+
+  &__user-address {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  &__comments {
+    margin-top: 30px;
+  }
+}
