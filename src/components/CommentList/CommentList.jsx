@@ -10,9 +10,7 @@ const CommentList = ({ comments, postId }) => (
     <span className="commentsList">
       {comments.filter(comm => comm.postId === postId).map(person => (
         <Comment
-          name={person.name}
-          email={person.email}
-          body={person.body}
+          {...person}
         />
       ))}
     </span>
