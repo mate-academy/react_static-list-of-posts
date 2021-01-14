@@ -1,0 +1,19 @@
+.user {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  &__email {
+    text-decoration: underline;
+  }
+
+  &__address {
+    margin-top: -10px;
+    text-decoration: underline;
+  }
+}
