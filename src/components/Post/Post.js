@@ -14,3 +14,8 @@ export const Post = ({ title, body, name, email, address, commenters }) => (
 );
 
 Post.propTypes = PostType;
+
+Post.defaultProps = {
+  address: {},
+  commenters: [],
+};

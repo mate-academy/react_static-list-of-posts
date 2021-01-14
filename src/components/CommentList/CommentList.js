@@ -4,7 +4,7 @@ import { CommentListType } from '../../types';
 
 export const CommentList = ({ comments }) => (
   <ul>
-    {comments.map(comment => <Comment {...comment} />)}
+    {comments.map(comment => <Comment {...comment} key={comment.id} />)}
   </ul>
 );
 
