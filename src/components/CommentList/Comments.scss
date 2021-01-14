@@ -1,0 +1,23 @@
+.comments {
+  &__item {
+    background-color: rgba(155, 168, 163, 0.1);
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    font-size: 0.8rem;
+  }
+
+  &__body {
+    font-size: 0.6rem;
+    margin-top: 10px;
+  }
+
+  &__email {
+    font-size: 0.7rem;
+    font-style: italic;
+    text-align: right;
+  }
+}
