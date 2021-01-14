@@ -1,0 +1,13 @@
+.comment {
+  padding-left: 10px;
+  border: 2px dotted rgb(214, 235, 26);
+  border-radius: 20px;
+
+  &__name {
+    font-size: 16px;
+  }
+
+  &__email {
+    font-style: italic;
+  }
+}
