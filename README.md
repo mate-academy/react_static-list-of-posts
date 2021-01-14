@@ -3,7 +3,7 @@
   [DEMO LINK](https://alexmogwaiii.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
-## Task
+# Task
 - Implement an application with 5 components `PostList`, `Post`, `User`, `CommentList` and `Comment`
   displaying [posts.js](./src/api/posts.js), [users.js](./src/api/users.js) and [comments.js](./src/api/comments.js).
 - Each post in the `PostList` is represented by a `Post` component. It should show:
