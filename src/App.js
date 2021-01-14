@@ -1,10 +1,21 @@
 import React from 'react';
-
 import './App.scss';
+import { PostList } from './components/PostList';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+
+export const preparedPosts = posts.map(post => ({
+  ...post,
+  user: users.find(user => (user.id === post.userId)),
+  comments: comments.filter(comment => (
+    comment.postId === post.id
+  )),
+}
+));
+
+// console.log(preparedPosts);
 
 const App = () => (
   <div className="App">
@@ -24,6 +35,13 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <section>
+      <ul>
+        <PostList posts={preparedPosts} />
+      </ul>
+    </section>
+
   </div>
 );
 
