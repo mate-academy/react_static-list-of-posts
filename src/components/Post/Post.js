@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
+import { PostShape, UserShape, CommentShape } from '../shapes';
 
 const Post = ({ post, user, comment }) => (
   <article>
@@ -14,28 +15,9 @@ const Post = ({ post, user, comment }) => (
 );
 
 Post.propTypes = {
-  post: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      city: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-  comment: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
+  post: PostShape.isRequired,
+  user: UserShape.isRequired,
+  comment: PropTypes.arrayOf(CommentShape.isRequired).isRequired,
 };
 
 export default Post;

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Post from '../Post/Post';
 
+import { PostShape, UserShape, CommentShape } from '../shapes';
+
 const PostList = ({ postList, users, commentList }) => (
   <section>
     {postList.map(post => (
@@ -19,26 +21,9 @@ const PostList = ({ postList, users, commentList }) => (
 );
 
 PostList.propTypes = {
-  postList: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
-  commentList: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
+  postList: PropTypes.arrayOf(PostShape.isRequired).isRequired,
+  users: PropTypes.arrayOf(UserShape.isRequired).isRequired,
+  commentList: PropTypes.arrayOf(CommentShape.isRequired).isRequired,
 };
 
 export default PostList;
