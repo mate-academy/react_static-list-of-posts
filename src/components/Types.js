@@ -17,7 +17,7 @@ export const CommentsListProp = PropTypes.arrayOf(CommentProp);
 export const PostType = PropTypes.shape({
   body: PropTypes.string.isRequired,
   user: UserProp.isRequired,
-  comments: CommentsListProp,
+  comments: CommentsListProp.isRequired,
   title: PropTypes.string.isRequired,
 });
 

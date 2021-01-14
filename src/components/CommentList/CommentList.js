@@ -6,9 +6,7 @@ export const CommentsList = ({ comments }) => (
   <div className="commentsList">
     {comments.map(comment => (
       <Comment
-        name={comment.name}
-        email={comment.email}
-        text={comment.body}
+        {...comment}
         key={comment.id}
       />
     ))}

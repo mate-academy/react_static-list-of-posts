@@ -3,16 +3,10 @@ import { Post } from '../Post/Post';
 import './PostList.scss';
 import { PostListType } from '../Types';
 
-export const PostList = ({ preparedPosts }) => (
+export const PostList = ({ posts }) => (
   <div className="postList">
-    {preparedPosts.map(post => (
-      <Post
-        body={post.body}
-        user={post.user}
-        comments={post.comments}
-        title={post.title}
-        key={post.id}
-      />
+    {posts.map(post => (
+      <Post {...post} key={post.id} />
     ))}
   </div>
 );

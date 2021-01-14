@@ -15,7 +15,7 @@ const preparedPosts = posts.map(post => ({
 
 const App = () => (
   <div className="App">
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 
