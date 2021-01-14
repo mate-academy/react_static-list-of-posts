@@ -1,1 +1,24 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.header,
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
