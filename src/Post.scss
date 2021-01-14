@@ -1,0 +1,16 @@
+.post {
+  border: 1px solid black;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 600px;
+  border-radius: 20px;
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__text {
+    font-size: 22px;
+  }
+}
