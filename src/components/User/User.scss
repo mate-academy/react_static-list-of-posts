@@ -1,0 +1,18 @@
+.User {
+  &__name {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+
+  &__email {
+    margin: 0;
+    font-style: italic;
+    text-decoration: none;
+    color: black;
+  }
+
+  &__address {
+    margin: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.Post {
+  padding: 30px 20px 20px;
+
+  text-align: start;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 4px 4px rgba(32, 30, 160, 0.6);
+
+  &__header {
+    line-height: 1.2em;
+
+    &::first-letter {
+      font-size: 1.75em;
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
