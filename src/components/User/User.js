@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { UserShape } from '../shapes/UserShape';
+import { UserType } from '../types/UserType';
 import './User.scss';
 
 export const User = ({ name, email, address }) => (
@@ -17,4 +17,4 @@ export const User = ({ name, email, address }) => (
   </div>
 );
 
-User.propTypes = UserShape;
+User.propTypes = UserType;

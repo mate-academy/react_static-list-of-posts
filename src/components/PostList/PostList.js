@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './PostList.scss';
 
-import { PostShape } from '../shapes/PostShape';
+import { PostType } from '../types/PostType';
 import { Post } from '../Post/Post';
 
 export const PostList = ({ compilledPosts }) => (
@@ -16,4 +16,4 @@ export const PostList = ({ compilledPosts }) => (
   </ul>
 );
 
-PostList.propTypes = PropTypes.arrayOf(PostShape).isRequired;
+PostList.propTypes = PropTypes.arrayOf(PostType).isRequired;

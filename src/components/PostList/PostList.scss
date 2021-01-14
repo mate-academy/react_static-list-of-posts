@@ -1,11 +1,11 @@
 .post-list {
   padding: 0;
   list-style: none;
-  box-shadow: 0 0 20px rgba($color: #555, $alpha: 0.7);
 
   &__item {
-    margin-bottom: -2px;
+    margin-bottom: 20px;
     padding: 0 20px 20px;
     border: 2px solid #333;
+    box-shadow: 0 0 15px rgba($color: #555, $alpha: 0.5);
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Post.scss';
-import { PostShape } from '../shapes/PostShape';
+import { PostType } from '../types/PostType';
 
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
@@ -17,4 +17,4 @@ export const Post = ({ author, title, body, comments }) => (
   </>
 );
 
-Post.propTypes = PostShape;
+Post.propTypes = PostType;

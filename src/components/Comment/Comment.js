@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CommentShape } from '../shapes/CommentShape';
+import { CommentType } from '../types/CommentType';
 import './Comment.scss';
 
 export const Comment = ({ body, email, name }) => (
@@ -14,4 +14,4 @@ export const Comment = ({ body, email, name }) => (
   </>
 );
 
-Comment.propTypes = CommentShape;
+Comment.propTypes = CommentType;
