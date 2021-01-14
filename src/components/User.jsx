@@ -5,9 +5,7 @@ const User = ({ name, email, address }) => (
   <p className="user">
     <span className="name">{name}</span>
     <span>
-      {' '}
-      from
-      {address.city}
+      {` from ${address.city}`}
     </span>
     <br />
     <a href="mailto:" className="mail">{email}</a>
