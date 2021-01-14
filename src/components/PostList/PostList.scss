@@ -1,0 +1,20 @@
+.posts__post {
+  list-style-type: none;
+  font-size: 20px;
+
+  &__title {
+    color: rgb(92, 20, 20);
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__body {
+    color: rgb(0, 0, 27);
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
