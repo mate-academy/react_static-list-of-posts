@@ -1,1 +1,14 @@
-// styles go here
+.App {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid rgb(3, 37, 3);
+  background-color: rgb(111, 145, 111);
+
+  &__header {
+    padding: 10px;
+    background-color: rgb(2, 22, 2);
+    color: white ;
+    text-align: center;
+  }
+}
