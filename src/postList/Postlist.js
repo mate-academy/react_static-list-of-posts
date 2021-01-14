@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Post } from '../post/Post';
-import { checkPropTypesPosts } from '../checkPropTypes/CheckPropTypesPosts';
+
+import { typeMails } from '../types/propTypesCollection';
 
 import '../App.scss';
 
@@ -12,4 +14,6 @@ export const PostList = ({ mails }) => (
   </div>
 );
 
-PostList.propTypes = checkPropTypesPosts;
+PostList.propTypes = {
+  mails: PropTypes.arrayOf(typeMails).isRequired,
+};

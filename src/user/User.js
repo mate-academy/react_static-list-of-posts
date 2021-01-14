@@ -1,5 +1,5 @@
 import React from 'react';
-import { checkPropTypesUsers } from '../checkPropTypes/CheckPropTypesUsers';
+import { usersType } from '../types/propTypesCollection';
 
 import '../App.scss';
 
@@ -24,4 +24,4 @@ export const User = ({ user }) => (
   </div>
 );
 
-User.propTypes = checkPropTypesUsers;
+User.propTypes = usersType;

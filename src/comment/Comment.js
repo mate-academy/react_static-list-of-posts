@@ -1,5 +1,6 @@
 import React from 'react';
-import { checkPropTypesComments } from '../checkPropTypes/CheckPropTypeComment';
+import PropTypes from 'prop-types';
+import { commentsType } from '../types/propTypesCollection';
 
 export const Comment = ({ remark }) => (
   <div className="comment">
@@ -17,4 +18,9 @@ export const Comment = ({ remark }) => (
   </div>
 );
 
-Comment.propTypes = checkPropTypesComments;
+Comment.propTypes = {
+  remark: PropTypes.arrayOf(commentsType).isRequired,
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+};

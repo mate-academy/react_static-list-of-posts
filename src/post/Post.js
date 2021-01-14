@@ -1,5 +1,9 @@
 import React from 'react';
-import { checkPropTypesPosts } from '../checkPropTypes/CheckPropTypesPosts';
+import PropTypes from 'prop-types';
+import { postsType,
+  usersType,
+  commentsType }
+  from '../types/propTypesCollection';
 import { User } from '../user/User';
 import { CommentList } from '../commentlist/Commentlist';
 
@@ -22,4 +26,10 @@ export const Post = ({ post }) => (
   </div>
 );
 
-Post.propTypes = checkPropTypesPosts;
+Post.propTypes = {
+  post: PropTypes.arrayOf(postsType).isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  users: PropTypes.arrayOf(usersType).isRequired,
+  comments: PropTypes.arrayOf(commentsType).isRequired,
+};
