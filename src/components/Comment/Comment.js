@@ -11,8 +11,6 @@ const Comment = ({ comment }) => (
   </div>
 );
 
-Comment.propTypes = {
-  comment: CommentShape.isRequired,
-};
+Comment.propTypes = CommentShape.isRequired;
 
 export default Comment;

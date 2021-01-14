@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 
 import Post from '../Post/Post';
 
-import { PostShape, UserShape, CommentShape } from '../shapes';
+import { PostShape } from '../shapes';
 
-const PostList = ({ postList, users, commentList }) => (
+const PostList = ({ posts }) => (
   <section>
-    {postList.map(post => (
+    {posts.map(post => (
       <Post
-        post={post}
-        user={users.find(user => user.id === post.userId)}
-        comment={commentList.filter(comment => (
-          comment.postId === post.userId
-        ))}
+        {...post}
         key={post.id}
       />
     ))}
@@ -21,9 +17,7 @@ const PostList = ({ postList, users, commentList }) => (
 );
 
 PostList.propTypes = {
-  postList: PropTypes.arrayOf(PostShape.isRequired).isRequired,
-  users: PropTypes.arrayOf(UserShape.isRequired).isRequired,
-  commentList: PropTypes.arrayOf(CommentShape.isRequired).isRequired,
+  posts: PropTypes.arrayOf(PostShape).isRequired,
 };
 
 export default PostList;

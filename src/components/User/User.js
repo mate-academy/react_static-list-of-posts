@@ -2,18 +2,16 @@ import React from 'react';
 
 import { UserShape } from '../shapes';
 
-const User = ({ user }) => (
+const User = ({ name, email, address }) => (
   <div>
-    <span>{user.name}</span>
-    <a href={`mailto:${user.email}`}>{user.email}</a>
+    <span>{name}</span>
+    <a href={`mailto:${email}`}>{email}</a>
     <span>
-      {`${user.address.city}, ${user.address.street}`}
+      {`${address.city}, ${address.street}`}
     </span>
   </div>
 );
 
-User.propTypes = {
-  user: UserShape.isRequired,
-};
+User.propTypes = UserShape.isRequired;
 
 export default User;

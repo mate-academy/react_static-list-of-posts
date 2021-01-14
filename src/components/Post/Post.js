@@ -1,23 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
-import { PostShape, UserShape, CommentShape } from '../shapes';
+import { PostShape } from '../shapes';
 
-const Post = ({ post, user, comment }) => (
+const Post = ({ user, title, body, comments }) => (
   <article>
-    <h2>{post.title}</h2>
-    <p>{post.body}</p>
-    <User user={user} />
-    <CommentList commentList={comment} />
+    <h2>{title}</h2>
+    <p>{body}</p>
+    <User {...user} />
+    <CommentList commentList={comments} />
   </article>
 );
 
-Post.propTypes = {
-  post: PostShape.isRequired,
-  user: UserShape.isRequired,
-  comment: PropTypes.arrayOf(CommentShape.isRequired).isRequired,
-};
+Post.propTypes = PostShape.isRequired;
 
 export default Post;
