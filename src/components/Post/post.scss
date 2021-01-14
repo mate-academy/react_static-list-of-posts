@@ -1,0 +1,31 @@
+.post {
+  max-width: 700px;
+
+  padding: 20px;
+  margin: 5px;
+  margin-bottom: 30px;
+
+  border-radius: 10px;
+  background: linear-gradient(90deg, #d80e3067, #35c2c2a2);
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  margin: 5px;
+  padding: 20px 5px;
+
+  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.title {
+  margin-bottom: 5px;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.body {
+  font-size: 14px;
+}
