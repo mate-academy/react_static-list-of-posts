@@ -1,9 +1,10 @@
 import React from 'react';
 import { TypeUser } from '../../types';
+import './User.scss';
 
 export const User = ({ user }) => (
-  <p>
-    <span>{user.name}</span>
+  <p className="user">
+    <span className="user__name">{user.name}</span>
     {' '}
     <br />
     <span>{user.email}</span>
