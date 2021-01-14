@@ -1,11 +1,11 @@
 import React from 'react';
+import './PostList.scss';
 import PropTypes from 'prop-types';
 import Post from '../Post';
 import { PostShape, CommentShape, UserShape } from '../../Types';
 
 const PostList = ({ postsData, usersData, commentsData }) => (
-  <div>
-
+  <div className="postStyle">
     {postsData.map(post => (
       <div key={post.id}>
         <Post

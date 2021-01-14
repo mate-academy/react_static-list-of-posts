@@ -34,5 +34,3 @@ export const UserShape = PropTypes.shape({
   phone: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
 });
-
-export default CommentShape;

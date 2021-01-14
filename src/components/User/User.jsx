@@ -1,13 +1,30 @@
 import React from 'react';
+import './User.scss';
 import PropTypes from 'prop-types';
-import UserShape from '../../Types';
+import { Container, Row, Col } from 'react-bootstrap';
+import { UserShape } from '../../Types';
 
 const User = ({ users, id }) => (
   <>
-    <p>{users.find(user => user.id === id).name}</p>
-    <p>{users.find(user => user.id === id).email}</p>
-    <p>{users.find(user => user.id === id).address.city}</p>
-    <p>{users.find(user => user.id === id).address.street}</p>
+    <Container>
+      <Row>
+        <Col xs={6} md={4} className="author">
+          Author:
+          {' '}
+          {users.find(user => user.id === id).name}
+        </Col>
+        <Col xs={6} md={4} className="email">
+          E-mail:
+          {' '}
+          {users.find(user => user.id === id).email}
+        </Col>
+        <Col xs={6} md={4}>
+          City:
+          {' '}
+          {users.find(user => user.id === id).address.city}
+        </Col>
+      </Row>
+    </Container>
   </>
 );
 

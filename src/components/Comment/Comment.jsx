@@ -1,13 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Comment.scss';
 import { Card } from 'react-bootstrap';
-import CommentShape from '../../Types';
+import PropTypes from 'prop-types';
 
 const Comment = ({ name, email, body }) => (
   <>
-    <Card>
-      <Card.Body colSpan="4">
-        <Card.Title><h5>{ name }</h5></Card.Title>
+    <Card className="mb-3 card">
+      <Card.Body>
+        <Card.Title><h6>{ name }</h6></Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{email}</Card.Subtitle>
         <Card.Text>
           {body}
@@ -17,6 +18,10 @@ const Comment = ({ name, email, body }) => (
   </>
 );
 
-Comment.propTypes = CommentShape.isRequired;
+Comment.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+};
 
 export default Comment;

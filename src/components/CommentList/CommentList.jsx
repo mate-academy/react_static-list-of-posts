@@ -1,11 +1,13 @@
 import React from 'react';
+import './CommentList.scss';
+import PropTypes from 'prop-types';
+import { CommentShape } from '../../Types';
 import Comment from '../Comment';
-import CommentShape from '../../Types';
 
 const CommentList = ({ comments, postId }) => (
   <>
-    <span>Comment TEST</span>
-    <span>
+    <div className="text-center pb-3">Comment section</div>
+    <span className="commentsList">
       {comments.filter(comm => comm.postId === postId).map(person => (
         <Comment
           name={person.name}
@@ -17,6 +19,9 @@ const CommentList = ({ comments, postId }) => (
   </>
 );
 
-CommentList.propTypes = CommentShape.isRequired;
+CommentList.propTypes = {
+  comments: PropTypes.objectOf(CommentShape).isRequired,
+  postId: PropTypes.number.isRequired,
+};
 
 export default CommentList;
