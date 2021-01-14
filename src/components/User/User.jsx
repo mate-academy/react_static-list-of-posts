@@ -2,7 +2,9 @@ import React from 'react';
 import './User.scss';
 import { AuthorType } from '../../types';
 
-export function User({ name, email, id }) {
+export function User({ name, email, address }) {
+  const { city, street, suite, zipcode } = address;
+
   return (
     <div className="user">
       <p>
@@ -14,8 +16,8 @@ export function User({ name, email, id }) {
         {` ${email}`}
       </p>
       <p>
-        id:
-        {` ${id}`}
+        adress:
+        {` ${city}, ${street}, ${suite}, ${zipcode}`}
       </p>
     </div>
   );

@@ -8,7 +8,15 @@ export const CommentType = PropTypes.shape({
   postId: PropTypes.number.isRequired,
 });
 
+export const AdressType = PropTypes.shape({
+  city: PropTypes.string.isRequired,
+  street: PropTypes.string.isRequired,
+  suite: PropTypes.string.isRequired,
+  zipcode: PropTypes.string.isRequired,
+});
+
 export const AuthorType = PropTypes.shape({
+  adress: AdressType.isRequired,
   email: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
