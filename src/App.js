@@ -1,10 +1,17 @@
 import React from 'react';
-
 import './App.scss';
+
+import { PostList } from './postList/Postlist';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+
+const mails = posts.map(post => ({
+  ...post,
+  users: users.find(user => user.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.userId),
+}));
 
 const App = () => (
   <div className="App">
@@ -24,6 +31,11 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <>
+      <PostList mails={mails} />
+    </>
+
   </div>
 );
 
