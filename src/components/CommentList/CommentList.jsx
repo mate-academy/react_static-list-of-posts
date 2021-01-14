@@ -1,14 +1,17 @@
 import React from 'react';
 
-import { TypeComment } from '../../types';
+import { TypeComments } from '../../types';
 
 import './CommentList.scss';
 import { Comment } from '../Comment';
 
-export const CommentList = ({ comment }) => (
+export const CommentList = ({ comments }) => (
   <div className="content__comments">
-    <Comment {...comment} />
+    <u>Comments:</u>
+    {comments.map(comment => (
+      <Comment {...comment} key={comment.id}/>
+    ))}
   </div>
 );
 
-CommentList.propTypes = TypeComment.isRequired;
+CommentList.propTypes = TypeComments.isRequired;

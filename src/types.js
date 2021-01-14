@@ -14,8 +14,13 @@ export const TypeUser = PropTypes.shape({
   address: PropTypes.shape(TypeAddress).isRequired,
 });
 
-export const TypeComment = PropTypes.shape({
+export const TypeComment = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-});
+};
+
+export const TypeComments = PropTypes.arrayOf(
+  PropTypes.shape(TypeComment).isRequired,
+);
