@@ -8,13 +8,9 @@ import users from './api/users';
 
 import { PostList } from './components/PostList';
 
-const postsWithComments = posts.map(item => ({
+const preparedListOfPosts = posts.map(item => ({
   ...item,
   comment: comments.filter(comment => comment.postId === item.id),
-}));
-
-const preparedListOfPosts = postsWithComments.map(item => ({
-  ...item,
   user: users.find(user => user.id === item.userId),
 }));
 

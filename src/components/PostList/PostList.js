@@ -17,7 +17,7 @@ PostList.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       user: userType.isRequired,
-      comment: commentType.isRequired,
+      comment: PropTypes.arrayOf(commentType).isRequired,
       title: PropTypes.string.isRequired,
       body: PropTypes.string.isRequired,
     }).isRequired,
