@@ -15,8 +15,6 @@ export const preparedPosts = posts.map(post => ({
 }
 ));
 
-// console.log(preparedPosts);
-
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>

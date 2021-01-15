@@ -1,19 +1,25 @@
 import React from 'react';
-import { TypeUser } from '../../types';
+import PropTypes from 'prop-types';
 import './User.scss';
 
-export const User = ({ user }) => (
+export const User = ({ name, email, address }) => (
   <p className="user">
-    <span className="user__name">{user.name}</span>
+    <span className="user__name">{name}</span>
     {' '}
     <br />
-    <span>{user.email}</span>
+    <span>{email}</span>
     {' '}
     <br />
-    <span>{user.address.city}</span>
+    <span>{address.city}</span>
     {' '}
     <br />
   </p>
 );
 
-User.propTypes = TypeUser;
+User.propTypes = {
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  }).isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+};

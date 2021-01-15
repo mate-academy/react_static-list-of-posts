@@ -1,7 +1,7 @@
 import React from 'react';
 import './CommentList.scss';
 import { Comment } from '../Comment';
-import { TypeCommentList } from '../../types';
+import { TypeComments } from '../../types';
 
 export const CommentList = ({ comments }) => (
   <ul>
@@ -9,10 +9,12 @@ export const CommentList = ({ comments }) => (
     <b>Comments:</b>
     {comments.map(comment => (
       <li key={comment.id} className="comment">
-        <Comment opinion={comment} />
+        <Comment {...comment} />
       </li>
     ))}
   </ul>
 );
 
-CommentList.propTypes = TypeCommentList;
+CommentList.propTypes = {
+  comments: TypeComments.isRequired,
+};
