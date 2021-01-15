@@ -1,6 +1,5 @@
 import React from 'react';
 import './User.scss';
-
 import { userTypes } from '../../types';
 
 export const User = ({ user }) => (
@@ -16,4 +15,6 @@ export const User = ({ user }) => (
   </div>
 );
 
-User.propTypes = userTypes.isRequired;
+User.propTypes = {
+  user: userTypes.isRequired,
+};

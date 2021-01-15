@@ -14,4 +14,6 @@ export const CommentList = ({ comments }) => (
   </ul>
 );
 
-CommentList.propTypes = PropTypes.arrayOf(commentTypes.isRequired).isRequired;
+CommentList.propTypes = {
+  comments: PropTypes.arrayOf(commentTypes).isRequired,
+};

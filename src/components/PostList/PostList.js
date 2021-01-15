@@ -14,4 +14,6 @@ export const PostList = ({ posts }) => (
   </div>
 );
 
-PostList.propTypes = PropTypes.arrayOf(postTypes.isRequired).isRequired;
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(postTypes).isRequired,
+};

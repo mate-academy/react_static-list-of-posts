@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Post.scss';
 
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
-import { postTypes } from '../../types';
+import { userTypes, commentTypes } from '../../types';
 
 export const Post = ({
   title,
@@ -22,4 +23,9 @@ export const Post = ({
   </div>
 );
 
-Post.propTypes = postTypes.isRequired;
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: userTypes.isRequired,
+  comments: PropTypes.arrayOf(commentTypes).isRequired,
+};
