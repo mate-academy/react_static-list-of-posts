@@ -1,5 +1,6 @@
 import React from 'react';
-import { TypeOfPost } from '../../types';
+import PropTypes from 'prop-types';
+import { TypeOfCommentsList, TypeOfUser } from '../../types';
 
 import { User } from '../User';
 import { CommentList } from '../CommentList';
@@ -15,4 +16,9 @@ export const Post = ({ body, title, comments, user }) => (
   </div>
 );
 
-Post.propTypes = TypeOfPost.isRequired;
+Post.propTypes = {
+  body: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  comments: PropTypes.arrayOf(TypeOfCommentsList).isRequired,
+  user: TypeOfUser.isRequired,
+};

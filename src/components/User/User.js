@@ -9,4 +9,6 @@ export const User = ({ user }) => (
   </div>
 );
 
-User.propTypes = TypeOfUser.isRequired;
+User.propTypes = {
+  user: TypeOfUser.isRequired,
+};
