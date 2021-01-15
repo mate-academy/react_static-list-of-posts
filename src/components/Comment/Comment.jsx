@@ -1,6 +1,6 @@
 import React from 'react';
 import './Comment.scss';
-import { CommentType } from '../Types';
+import PropTypes from 'prop-types';
 
 export const Comment = ({ name, body, email }) => (
   <li className="post__item">
@@ -19,4 +19,8 @@ export const Comment = ({ name, body, email }) => (
   </li>
 );
 
-Comment.propTypes = CommentType.isRequired;
+Comment.propTypes = {
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+};

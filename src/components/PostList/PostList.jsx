@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post/Post';
-import './PostList.scss';
 import { PostType } from '../Types';
 
-export const PostList = ({ dataFromServer }) => (
+export const PostList = ({ posts }) => (
   <div>
     {
-      dataFromServer.map(post => (
+      posts.map(post => (
         <Post {...post} key={post.id} />
       ))
     }
@@ -16,5 +15,5 @@ export const PostList = ({ dataFromServer }) => (
 );
 
 PostList.propTypes = {
-  dataFromServer: PropTypes.arrayOf(PostType).isRequired,
+  posts: PropTypes.arrayOf(PostType).isRequired,
 };

@@ -10,7 +10,7 @@ import { PostList } from './components/PostList/PostList';
 const dataFromServer = posts.map(item => ({
   ...item,
   user: users.find(user => user.id === item.userId),
-  listOfComment: comments.filter(comment => comment.postId === item.id),
+  comments: comments.filter(comment => comment.postId === item.id),
 }));
 
 const App = () => (
@@ -32,7 +32,7 @@ const App = () => (
       {users.length}
     </p>
 
-    <PostList dataFromServer={dataFromServer} />
+    <PostList posts={dataFromServer} />
 
   </div>
 );
