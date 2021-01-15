@@ -3,7 +3,7 @@ import { commentsType } from '../../typesValidation';
 import { Comment } from '../Comment';
 import './commentList.scss';
 
-export const CommentList = ({ disscus }) => (
+export const CommentList = ({ comments }) => (
   <div className="commentList">
 
     {disscus.map(comment => (
