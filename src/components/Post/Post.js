@@ -5,25 +5,25 @@ import { typePost } from '../../types';
 
 import './Post.scss';
 
-const Post = ({ post }) => (
+const Post = ({ user, title, body, comments }) => (
   <section className="post">
     <p className="post__author">
       Written by:
       {' '}
       <br />
-      <User user={post.user} />
+      <User user={user} />
     </p>
 
     <div className="post__content">
-      <h2>{`${post.title}`}</h2>
+      <h2>{`${title}`}</h2>
 
-      <p>{`${post.body}`}</p>
+      <p>{`${body}`}</p>
     </div>
 
-    <CommentList list={post.comments} />
+    <CommentList comments={comments} />
   </section>
 );
 
-Post.propTypes = { post: typePost.isRequired };
+Post.propTypes = typePost.isRequired;
 
 export default Post;

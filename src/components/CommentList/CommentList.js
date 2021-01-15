@@ -3,20 +3,20 @@ import Comment from '../Comment/Comment';
 import './CommentList.scss';
 import { typeComments } from '../../types';
 
-const CommentList = ({ list }) => (
+const CommentList = ({ comments }) => (
   <ul className="commentList">
     <h3>
       Comments
     </h3>
 
     <li className="commentList__comment">
-      {list.map(comm => (
-        <Comment comment={comm} key={comm.id} />
+      {comments.map(comment => (
+        <Comment comment={comment} key={comment.id} />
       ))}
     </li>
   </ul>
 );
 
-CommentList.propTypes = { list: typeComments.isRequired };
+CommentList.propTypes = typeComments.isRequired;
 
 export default CommentList;

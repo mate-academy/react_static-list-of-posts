@@ -15,6 +15,6 @@ const User = ({ user }) => (
   </section>
 );
 
-User.propTypes = { user: typeUser.isRequired };
+User.propTypes = typeUser.isRequired;
 
 export default User;
