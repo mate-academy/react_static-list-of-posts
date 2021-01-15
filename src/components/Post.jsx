@@ -1,29 +1,20 @@
 import React from 'react';
 import { User } from './User';
 import { CommentList } from './CommentList';
-import { TypeOfPostList } from '../types';
+import { PostType } from '../types';
 
 export const Post = ({ id, body, title, author, comments }) => (
-  <div style={{
-    background: 'lightskyblue', padding: '20px', margin: '20px',
-  }}
-  >
-    <div style={{
-      background: 'lavender', padding: '20px',
-    }}
-    >
-      <h2 style={{
-        textAlign: 'center', color: 'dodgerblue',
-      }}
-      >
+  <div className="App__post-body">
+    <div className="App__post-header">
+      <h2 className="App__title">
         Post
         {' '}
         {id}
         :
         {' '}
-        <i style={{ textTransform: 'uppercase' }}>{title}</i>
+        <i>{title}</i>
       </h2>
-      <article style={{ fontSize: '24px' }}>{body}</article>
+      <article className="App__article">{body}</article>
       <div>
         <User {...author} />
       </div>
@@ -36,4 +27,4 @@ export const Post = ({ id, body, title, author, comments }) => (
   </div>
 );
 
-Post.propTypes = TypeOfPostList;
+Post.propTypes = PostType;

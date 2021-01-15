@@ -1,11 +1,14 @@
 import React from 'react';
-import { TypeOfUsers } from '../types';
+import { UserType } from '../types';
 
 export const User = ({ name, email, address }) => (
   <div>
     <p>
       Author:
-      <strong> {name}</strong>
+      <strong>
+        {' '}
+        {name}
+      </strong>
     </p>
     <p>
       Adress:
@@ -15,10 +18,14 @@ export const User = ({ name, email, address }) => (
           address.street}, ${
           address.suite}`}
     </p>
-    <p style={{ color: 'blue' }}>
-      Email: {email}
+    <p>
+      Email:
+      <span className="App__email">
+        {' '}
+        {email}
+      </span>
     </p>
   </div>
 );
 
-User.propTypes = TypeOfUsers;
+User.propTypes = UserType;

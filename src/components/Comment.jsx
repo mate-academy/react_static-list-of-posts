@@ -1,15 +1,18 @@
 import React from 'react';
-import { TypeOfComments } from '../types';
+import { CommentType } from '../types';
 
 export const Comment = ({ body, name, email }) => (
-  <li style={{ borderTop: 'thin solid dodgerblue' }}>
+  <li className="App__comment">
     <p>{body}</p>
     <p>
       Name:
-      <strong> {name}</strong>
+      <strong>
+        {' '}
+        {name}
+      </strong>
     </p>
-    <p style={{ color: 'blue' }}>{email}</p>
+    <p className="App__email">{email}</p>
   </li>
 );
 
-Comment.propTypes = TypeOfComments;
+Comment.propTypes = CommentType;
