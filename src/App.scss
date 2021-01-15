@@ -2,37 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1,
-p {
+.page-heading,
+.page-paragraph {
   text-align: center;
-}
-
-.posts {
-  &__item {
-    max-width: 768px;
-    margin: 0 auto 20px;
-    border: 2px solid black;
-    padding: 10px;
-  }
-
-  &__item-title {
-    font-weight: 700;
-    font-size: 18px;
-  }
-
-  &__item-body {
-    font-style: italic;
-  }
-
-  &__item-comments {
-    margin-top: 30px;
-  }
-
-  &__item-comments-amount {
-    font-weight: 700;
-  }
-
-  &__item-comments-item:not(:last-child) {
-    border-bottom: 2px dotted black;
-  }
 }

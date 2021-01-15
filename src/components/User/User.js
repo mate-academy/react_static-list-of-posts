@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserTypes } from '../types';
+import { UserTypes } from '../../types';
 
 export const User = ({ name, email, address }) => (
   <p className="posts__item-author">

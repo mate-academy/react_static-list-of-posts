@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Comment } from './Comment';
-import { CommentTypes } from '../types';
+import { Comment } from '../Comment';
+import { CommentTypes } from '../../types';
 
 export const CommentList = ({ comments }) => (
   <div className="posts__item-comments">
@@ -10,9 +10,7 @@ export const CommentList = ({ comments }) => (
     </p>
     <div className="posts__item-comments-list">
       {comments.map(comment => (
-        <div className="posts__item-comments-item" key={comment.id}>
-          <Comment {...comment} />
-        </div>
+        <Comment {...comment} key={comment.id} />
       ))}
     </div>
   </div>
