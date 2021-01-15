@@ -12,4 +12,6 @@ export const CommentList = ({ comments }) => (
   </div>
 );
 
-CommentList.propTypes = TypeOfCommentsList.isRequired;
+CommentList.propTypes = {
+  comments: TypeOfCommentsList.isRequired,
+};
