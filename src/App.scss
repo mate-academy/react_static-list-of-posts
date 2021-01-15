@@ -1,1 +1,46 @@
-// styles go here
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.list {
+  margin: 0 auto;
+  width: 70%;
+  list-style-type: none;
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 15px;
+    margin: 40px 0;
+    box-shadow: 0 0 10px #000;
+  }
+}
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+  &__item {
+    margin: 20px 0;
+  }
+}
+
+.table {
+  margin: 0 auto;
+  background-color: blue;
+  border: 1px solid #000;
+  &__cell {
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+}
+
+.clolor {
+  color: red;
+}
