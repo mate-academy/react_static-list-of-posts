@@ -1,0 +1,10 @@
+.post-list {
+  border: 1px solid black;
+
+  &__item {
+    margin: 30px;
+    padding: 30px;
+
+    border: 1px solid black;
+  }
+}

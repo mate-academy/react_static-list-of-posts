@@ -1,0 +1,11 @@
+.user {
+  padding-bottom: 10px;
+  &__email {
+    color: black;
+    text-decoration: none;
+  }
+
+  &__city {
+    padding: 0 10px;
+  }
+}
