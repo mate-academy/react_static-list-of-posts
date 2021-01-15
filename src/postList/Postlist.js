@@ -4,16 +4,16 @@ import { Post } from '../post/Post';
 
 import { typeMails } from '../types/propTypesCollection';
 
-import '../App.scss';
+import './PostList.scss';
 
-export const PostList = ({ mails }) => (
+export const PostList = ({ preparedPost }) => (
   <div className="post-list">
-    {mails.map(post => (
+    {preparedPost.map(post => (
       <Post post={post} key={post.id} />
     ))}
   </div>
 );
 
 PostList.propTypes = {
-  mails: PropTypes.arrayOf(typeMails).isRequired,
+  preparedPost: PropTypes.arrayOf(typeMails).isRequired,
 };

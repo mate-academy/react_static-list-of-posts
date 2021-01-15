@@ -20,13 +20,13 @@ export const usersType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-}).isRequired;
+});
 
 export const typeMails = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: usersType,
+  user: usersType.isRequired,
   comments: commentsType,
 }).isRequired;

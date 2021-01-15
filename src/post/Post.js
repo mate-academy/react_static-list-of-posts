@@ -7,7 +7,7 @@ import { postsType,
 import { User } from '../user/User';
 import { CommentList } from '../commentlist/Commentlist';
 
-import '../App.scss';
+import './Post.scss';
 
 export const Post = ({ post }) => (
   <div className="post">
@@ -30,6 +30,6 @@ Post.propTypes = {
   post: PropTypes.arrayOf(postsType).isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  users: PropTypes.arrayOf(usersType).isRequired,
+  users: usersType.isRequired,
   comments: PropTypes.arrayOf(commentsType).isRequired,
 };

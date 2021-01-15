@@ -7,14 +7,14 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const mails = posts.map(post => ({
+const preparedPosts = posts.map(post => ({
   ...post,
   users: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.userId),
 }));
 
 const App = () => (
-  <div className="App">
+  <div className="app">
     <h1>Static list of posts</h1>
 
     <p>
@@ -33,7 +33,7 @@ const App = () => (
     </p>
 
     <>
-      <PostList mails={mails} />
+      <PostList preparedPost={preparedPosts} />
     </>
 
   </div>
