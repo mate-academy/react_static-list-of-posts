@@ -1,15 +1,23 @@
 import React from 'react';
-import { userPostCommentType } from '../../types';
+import PropTypes from 'prop-types';
 import { Comment } from '../Comment';
 
-export const CommentList = ({ post }) => (
+export const CommentList = ({ comments }) => (
   <div className="comment__list">
-    {post.comment.map(comment => (
+    {comments.map(comment => (
       <Comment comment={comment} key={comment.id} />
     ))}
   </div>
 );
 
 CommentList.propTypes = {
-  post: userPostCommentType.isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      postId: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };

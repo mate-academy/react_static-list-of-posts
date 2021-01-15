@@ -7,18 +7,18 @@ import { User } from '../User';
 import { CommentList } from '../CommentList';
 import { userPostCommentType } from '../../types';
 
-export const PostList = ({ userPostsComments }) => (
+export const PostList = ({ posts }) => (
   <ul>
-    {userPostsComments.map(post => (
+    {posts.map(post => (
       <li className="full-post" key={post.id}>
         <Post post={post} />
-        <User post={post} />
-        <CommentList post={post} key={post.comment.postId} />
+        <User user={post.user} />
+        <CommentList comments={post.comment} />
       </li>
     ))}
   </ul>
 );
 
 PostList.propTypes = {
-  userPostsComments: PropTypes.arrayOf(userPostCommentType).isRequired,
+  posts: PropTypes.arrayOf(userPostCommentType).isRequired,
 };

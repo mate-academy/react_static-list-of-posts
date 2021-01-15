@@ -7,6 +7,12 @@ import users from './api/users';
 
 import { PostList } from './components/PostList';
 
+const userPostsComments = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  comment: comments.filter(comm => comm.postId === post.id),
+}));
+
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
@@ -26,14 +32,8 @@ const App = () => (
       {users.length}
     </p>
 
-    <PostList userPostsComments={userPostsComments} />
+    <PostList posts={userPostsComments} />
   </div>
 );
-
-const userPostsComments = posts.map(post => ({
-  ...post,
-  user: users.find(user => user.id === post.userId),
-  comment: comments.filter(comm => comm.postId === post.id),
-}));
 
 export default App;

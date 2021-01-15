@@ -1,5 +1,5 @@
 import React from 'react';
-import { userPostCommentType } from '../../types';
+import PropTypes from 'prop-types';
 
 import './Post.scss';
 
@@ -11,5 +11,8 @@ export const Post = ({ post }) => (
 );
 
 Post.propTypes = {
-  post: userPostCommentType.isRequired,
+  post: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
 };
