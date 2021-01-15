@@ -2,9 +2,9 @@ import React from 'react';
 import { Post } from '../Post';
 import { PostListType } from '../../types';
 
-export const PostList = ({ post }) => (
+export const PostList = ({ posts }) => (
   <div className="container">
-    {post.map(item => <Post {...item} key={item.id} />)}
+    {posts.map(item => <Post {...item} key={item.id} />)}
   </div>
 );
 

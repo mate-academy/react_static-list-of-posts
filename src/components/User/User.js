@@ -1,13 +1,13 @@
 import React from 'react';
 import { UserType } from '../../types';
 
-export const User = ({ userName, userEmail, userAddress }) => {
-  const { street, suite, city } = userAddress;
+export const User = ({ name, email, address }) => {
+  const { street, suite, city } = address;
 
   return (
     <p>
       <i>
-        {`Posted by: ${userName}, <${userEmail}>, ${city} ${street} ${suite}.`}
+        {`Posted by: ${name}, <${email}>, ${city} ${street} ${suite}.`}
       </i>
     </p>
   );

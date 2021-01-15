@@ -7,23 +7,16 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList';
 
-const preparedPosts = posts.map((post) => {
-  const item = { ...post };
-  const postUser = users.find(person => person.id === item.userId);
-  const postComment = comments.filter(comment => comment.postId === item.id);
-
-  item.name = postUser.name;
-  item.email = postUser.email;
-  item.address = { ...postUser.address };
-  item.commenters = postComment;
-
-  return item;
-});
+const preparedPosts = posts.map(post => ({
+  ...post,
+  postUser: users.find(person => person.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList post={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 
