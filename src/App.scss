@@ -1,1 +1,35 @@
-// styles go here
+.App {
+  &__posts {
+    background: dodgerblue;
+    padding: 20px;
+  }
+
+  &__post-body {
+    background: lightskyblue;
+    padding: 20px;
+    margin: 20px;
+  }
+
+  &__post-header {
+    background: lavender;
+    padding: 20px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    color: dodgerblue;
+  }
+
+  &__article {
+    font-size: 24px;
+  }
+
+  &__comment {
+    border-top: thin solid dodgerblue;
+  }
+
+  &__email {
+    color: blue;
+  }
+}
