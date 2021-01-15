@@ -4,13 +4,11 @@ import { commentType, userType } from '../../types';
 import { Post } from '../Post';
 
 export const PostList = ({ posts }) => (
-  posts.map(
-    post => (
-      <div key={post.id}>
-        <Post {...post} />
-      </div>
-    ),
-  )
+  <div>
+    {posts.map(post => (
+      <Post {...post} key={post.id} />
+    ))}
+  </div>
 );
 
 PostList.propTypes = {

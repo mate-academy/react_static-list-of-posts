@@ -4,13 +4,14 @@ import { commentType } from '../../types';
 import { Comment } from '../Comment';
 
 export const CommentList = ({ comments }) => (
-  comments.map(
-    comment => (
-      <div key={comment.id}>
-        <Comment {...comment} />
-      </div>
-    ),
-  )
+  <div>
+    {comments.map(comment => (
+      <Comment
+        {...comment}
+        key={comment.id}
+      />
+    ))}
+  </div>
 );
 
 CommentList.propTypes = {
