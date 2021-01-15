@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentType } from '../../types';
+import { TypeOfComment } from '../../types';
 import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
@@ -14,4 +14,4 @@ export const Comment = ({ name, body, email }) => (
   </div>
 );
 
-Comment.propTypes = CommentType;
+Comment.propTypes = TypeOfComment.isRequired;

@@ -1,25 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { CommentType, PostType, AuthorType } from '../../types';
+import { TypeOfPostsList } from '../../types';
 
 import { Post } from '../Post';
 
-export const PostList = ({ posts, comments, users }) => (
+export const PostList = ({ posts }) => (
   <div className="posts">
-    {posts.map((post) => {
-      const commentsOfPost = comments.filter(
-        comment => post.id === comment.postId,
-      );
-      const author = users.find(user => post.userId === user.id);
-
-      return <Post comments={commentsOfPost} post={post} author={author} />;
-    })}
-
+    {posts.map(post => (
+      <Post {...post} key={post.id} />
+    ))}
   </div>
 );
 
-PostList.propTypes = {
-  posts: PropTypes.arrayOf(PostType).isRequired,
-  comments: PropTypes.arrayOf(CommentType).isRequired,
-  users: PropTypes.arrayOf(AuthorType).isRequired,
-};
+PostList.propTypes = TypeOfPostsList.isRequired;
