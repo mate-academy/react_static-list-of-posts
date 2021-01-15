@@ -1,16 +1,29 @@
 import React from 'react';
+
+import { CommentList } from './CommentList';
 import { User } from './User';
+import PropTypes from 'prop-types';
 
-import { TypePost } from '../types';
+import { TypeComments } from '../types';
+import { TypeUser } from '../types'
 
-export const Post = ({ singlePost }) => (
+export const Post = ({ user, comments, body, title}) => {
+  return (
+  <>  
   <li className="list__item">
-    <h1 className="list__title">{singlePost.title}</h1>
-    <p className="list__text">{singlePost.body}</p>
-    <User {...singlePost} />
+    <h1 className="list__title">{title}</h1>
+    <p className="list__text">{body}</p>
+    <User {...user} />
+    <CommentList comments={comments} />
   </li>
+    
+  </>
 );
+}
 
 Post.propTypes = {
-  singlePost: TypePost.isRequired,
+  user: TypeUser.isRequired,
+  comments: TypeComments.isRequired,
+  body: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };

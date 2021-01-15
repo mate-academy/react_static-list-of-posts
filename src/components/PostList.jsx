@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Post } from './Post';
 import { TypePost } from '../types';
 
-export const PostList = ({ preparedPosts }) => (
-  <ol className="list">
-    {preparedPosts.map(post => (
-      <Post singlePost={post} key={post.id} />
+export const PostList = ({ posts }) => (
+  <ul className="list">
+    {posts.map(post => (
+      <Post {...post} key={post.id} />
     ))}
-  </ol>
+  </ul>
 );
 
 PostList.propTypes = {
-  preparedPosts: PropTypes.arrayOf(TypePost).isRequired,
+  posts: PropTypes.arrayOf(TypePost).isRequired,
 };
