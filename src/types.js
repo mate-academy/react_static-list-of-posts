@@ -16,7 +16,7 @@ export const AdressType = PropTypes.shape({
 });
 
 export const AuthorType = PropTypes.shape({
-  adress: AdressType.isRequired,
+  address: AdressType.isRequired,
   email: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
@@ -32,4 +32,4 @@ export const PostsType = PropTypes.shape({
   userId: PropTypes.number.isRequired,
 });
 
-export const PostListType = PropTypes.arrayOf(PostsType);
+export const CommentsType = PropTypes.arrayOf(CommentType);

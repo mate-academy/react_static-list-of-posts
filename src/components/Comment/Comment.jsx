@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentType } from '../../types';
+import PropTypes from 'prop-types';
 import './Comment.scss';
 
 export function Comment({ email, name, body }) {
@@ -18,4 +18,8 @@ export function Comment({ email, name, body }) {
   );
 }
 
-Comment.propTypes = CommentType.isRequired;
+Comment.propTypes = {
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};

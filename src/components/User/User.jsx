@@ -1,6 +1,6 @@
 import React from 'react';
 import './User.scss';
-import { AuthorType } from '../../types';
+import PropTypes from 'prop-types';
 
 export function User({ name, email, address }) {
   const { city, street, suite, zipcode } = address;
@@ -23,4 +23,13 @@ export function User({ name, email, address }) {
   );
 }
 
-User.propTypes = AuthorType.isRequired;
+User.propTypes = {
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    suite: PropTypes.string.isRequired,
+    zipcode: PropTypes.string.isRequired,
+  }).isRequired,
+  email: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
