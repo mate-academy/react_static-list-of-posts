@@ -1,0 +1,19 @@
+.user {
+  &__name {
+    margin-bottom: 10px;
+
+    font-size: 1.17em;
+    font-weight: 700;
+  }
+
+  &__email {
+    color: #6c788b;
+    text-decoration: none;
+  }
+
+  &__address {
+    margin: 0;
+
+    color: #6c788b;
+  }
+}

@@ -1,0 +1,22 @@
+.post {
+  padding: 30px 20px 20px;
+
+  border: 2px solid #000;
+  border-radius: 20px;
+
+  &__title {
+    font-size: 40px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
