@@ -1,0 +1,11 @@
+.user {
+  padding-left: 35px;
+  border: 2px solid green;
+  border-radius: 20px;
+
+  &__name-email,
+  &__address {
+    color: crimson;
+    font-style: italic;
+  }
+}
