@@ -1,43 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
+import { PostType } from '../Types/Type';
 
-const PostList = ({ posts, users, comments }) => (
+const PostList = ({ posts }) => (
   <section>
     {posts.map(post => (
-      <Post
-        post={post}
-        user={users.find(user => user.id === post.userId)}
-        postComments={comments.filter(comment => (
-          comment.postId === post.userId
-        ))}
-        key={post.id}
-      />
+      <Post {...post} key={post.id} />
     ))}
   </section>
 );
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
+  posts: PropTypes.arrayOf(PostType).isRequired,
 };
 
 export default PostList;

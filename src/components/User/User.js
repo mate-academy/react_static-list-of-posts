@@ -1,29 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { AuthorType } from '../Types/Type';
 
-const User = ({ user }) => (
+const User = ({ name, email, address }) => (
   <div>
-    <span>{user.name}</span>
+    <span>{name}</span>
     <a href="mailto:{email}">
-      {user.email}
+      {email}
     </a>
     <span>
-      {user.address.city}
+      {address.city}
       ,
-      {user.address.street}
+      {address.street}
     </span>
   </div>
 );
 
-User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      city: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
+User.propTypes = AuthorType.isRequired;
 
 export default User;

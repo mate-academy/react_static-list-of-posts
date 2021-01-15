@@ -1,26 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { CommentType } from '../Types/Type';
 
-const Comment = ({ comment }) => (
+const Comment = ({ name, body, email }) => (
   <>
     <span>
-      {comment.name}
+      {name}
     </span>
     <a href="mailto:{email}">
-      {comment.email}
+      {email}
     </a>
     <p>
-      {comment.body}
+      {body}
     </p>
   </>
 );
 
-Comment.propTypes = {
-  comment: PropTypes.arrayOf(
-    PropTypes.shape({
-      postId: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
-};
+Comment.propTypes = CommentType.isRequired;
 
 export default Comment;
