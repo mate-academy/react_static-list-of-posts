@@ -1,1 +1,16 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  padding: 20px;
+
+  &__text {
+    text-align: center;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

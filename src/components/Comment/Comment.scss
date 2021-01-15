@@ -1,0 +1,25 @@
+.comment {
+  &__header {
+    font-weight: 700;
+    color: #000;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #000;
+    }
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__email {
+    color: #6c788b;
+    text-decoration: none;
+  }
+}
