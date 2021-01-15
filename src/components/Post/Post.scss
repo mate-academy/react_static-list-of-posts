@@ -1,0 +1,20 @@
+.post {
+  border-bottom: 1px dotted #000;
+  margin-bottom: 50px;
+
+  &__author {
+    padding-left: 15px;
+  }
+
+  &__content {
+    border: 1px solid rgba(46, 52, 56, 0.25);
+    border-radius: 15px;
+    background-color: rgba(194, 227, 247, 0.25);
+
+    padding: 20px;
+  }
+}
+
+h2 {
+  border-bottom: 1px dotted rgba(198, 225, 243, 0.75);
+}

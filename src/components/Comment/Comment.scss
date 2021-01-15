@@ -1,0 +1,15 @@
+.singleComment {
+  border: 1px solid rgba(46, 52, 56, 0.25);
+  border-radius: 15px;
+
+  padding: 15px;
+  margin: 10px;
+
+  &__content {
+    border: 1px solid rgba(46, 52, 56, 0.25);
+    border-radius: 15px;
+    background-color: rgba(194, 227, 247, 0.25);
+
+    padding: 0 20px;
+  }
+}
