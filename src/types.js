@@ -37,6 +37,3 @@ export const CommentType = PropTypes.shape({
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 }).isRequired;
-
-export const CommentListType = PropTypes.arrayOf(CommentType).isRequired;
-export const PostListType = PropTypes.arrayOf(PostType).isRequired;

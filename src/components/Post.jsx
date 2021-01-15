@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { UserType, CommentType } from '../types';
 import { User } from './User';
 import { CommentList } from './CommentList';
-import { PostType } from '../types';
 
 export const Post = ({ id, body, title, author, comments }) => (
   <div className="App__post-body">
@@ -27,4 +28,11 @@ export const Post = ({ id, body, title, author, comments }) => (
   </div>
 );
 
-Post.propTypes = PostType;
+Post.propTypes = {
+  userId: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  author: PropTypes.shape(UserType).isRequired,
+  comments: PropTypes.arrayOf(CommentType).isRequired,
+};
