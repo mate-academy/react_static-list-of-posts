@@ -1,6 +1,6 @@
 import React from 'react';
 import './Comment.scss';
-import typeComment from '../../types';
+import { typeComment } from '../../types';
 
 const Comment = ({ comment }) => (
   <li className="singleComment" key={comment.id}>

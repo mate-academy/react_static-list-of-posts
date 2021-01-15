@@ -27,5 +27,3 @@ export const typePost = PropTypes.shape({
   user: typeUser,
   comments: typeComments,
 });
-
-// export default typePost;

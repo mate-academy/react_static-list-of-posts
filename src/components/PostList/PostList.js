@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import typePost from '../../types';
+import { typePost } from '../../types';
 
 import Post from '../Post/Post';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Comment from '../Comment/Comment';
 import './CommentList.scss';
-import typeComments from '../../types';
+import { typeComments } from '../../types';
 
 const CommentList = ({ list }) => (
   <ul className="commentList">

@@ -1,7 +1,7 @@
 import React from 'react';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
-import typePost from '../../types';
+import { typePost } from '../../types';
 
 import './Post.scss';
 

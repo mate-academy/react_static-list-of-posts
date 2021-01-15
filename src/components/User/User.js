@@ -1,22 +1,17 @@
 import React from 'react';
-import typeUser from '../../types';
+import { typeUser } from '../../types';
 
 const User = ({ user }) => (
   <section>
     name:
-    {user.name}
+    {` ${user.name}`}
     <br />
     e-mail:
-    {user.email}
+    {` ${user.email}`}
     <br />
     address:
-    {user.address.zipcode}
-    ,
-    {user.address.city}
-    ,
-    {user.address.street}
-    ,
-    {user.address.suite}
+    {` ${user.address.zipcode}, ${user.address.city},
+      ${user.address.street}, ${user.address.suite}`}
   </section>
 );
 
