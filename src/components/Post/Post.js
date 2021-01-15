@@ -12,7 +12,7 @@ export const Post = ({ title, body, user, postComments }) => (
     <br />
     <User {...user} />
     <h3>Comments:</h3>
-    <CommentList comm={postComments} />
+    <CommentList comments={postComments} />
   </div>
 );
 
@@ -23,7 +23,7 @@ Post.propTypes = {
     id: PropTypes.number.isRequired,
 
   }).isRequired,
-  postComments: PropTypes.shape({
+  postComments: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-  }).isRequired,
+  }).isRequired).isRequired,
 };

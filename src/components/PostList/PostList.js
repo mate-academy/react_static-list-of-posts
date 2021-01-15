@@ -5,7 +5,7 @@ import { Post } from '../Post/Post';
 export const PostList = ({ prepPosts }) => (
   <>
     {prepPosts.map(post => (
-      <Post {...post} />
+      <Post key={post.id} {...post} />
     ))}
   </>
 );

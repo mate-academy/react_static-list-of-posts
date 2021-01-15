@@ -1,8 +1,8 @@
 import React from 'react';
 import { Comment } from '../Comment/Comment';
 
-export const CommentList = ({ comm }) => (
-  comm.map(comment => (
-    <Comment {...comment} />
+export const CommentList = ({ comments }) => (
+  comments.map(comment => (
+    <Comment key={comment.id} {...comment} />
   ))
 );
