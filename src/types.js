@@ -8,10 +8,8 @@ export const userType = PropTypes.shape({
   }).isRequired,
 });
 
-export const commentType = PropTypes.arrayOf(
-  PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-  }),
-);
+export const commentType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+});

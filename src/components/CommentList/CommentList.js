@@ -1,4 +1,5 @@
 import React from 'react';
+import PropType from 'prop-types';
 import { commentType } from '../../types';
 import { Comment } from '../Comment';
 
@@ -13,5 +14,5 @@ export const CommentList = ({ comments }) => (
 );
 
 CommentList.propTypes = {
-  comments: commentType.isRequired,
+  comments: PropType.arrayOf(commentType).isRequired,
 };

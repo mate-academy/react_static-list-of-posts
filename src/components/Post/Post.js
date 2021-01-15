@@ -17,5 +17,5 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   user: userType.isRequired,
-  comment: commentType.isRequired,
+  comment: PropTypes.arrayOf(commentType).isRequired,
 };
