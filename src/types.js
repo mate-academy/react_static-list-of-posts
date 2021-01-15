@@ -20,6 +20,6 @@ export const typePost = PropTypes.shape({
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  comments: typeComment,
   user: typeUser,
 });
