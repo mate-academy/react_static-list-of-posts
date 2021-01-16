@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { commentsType } from '../types/propTypesCollection';
 
 import './Comment.scss';
 
@@ -21,8 +20,9 @@ export const Comment = ({ comment }) => (
 );
 
 Comment.propTypes = {
-  comment: PropTypes.shape(commentsType).isRequired,
-  name: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
+  comment: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
 };

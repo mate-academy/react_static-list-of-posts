@@ -9,8 +9,8 @@ import users from './api/users';
 
 const preparedPosts = posts.map(post => ({
   ...post,
-  users: users.find(user => user.id === post.userId),
-  comments: comments.filter(comment => comment.postId === post.userId),
+  user: users.find(user => user.id === post.userId),
+  comment: comments.filter(comment => comment.postId === post.userId),
 }));
 
 const App = () => (
@@ -33,7 +33,7 @@ const App = () => (
     </p>
 
     <>
-      <PostList preparedPost={preparedPosts} />
+      <PostList posts={preparedPosts} />
     </>
 
   </div>

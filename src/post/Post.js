@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { postsType,
-  usersType,
-  commentsType }
+import { usersType,
+  commentType }
   from '../types/propTypesCollection';
-import { User } from '../user/User';
-import { CommentList } from '../commentlist/Commentlist';
 
 import './Post.scss';
 
@@ -18,18 +15,14 @@ export const Post = ({ post }) => (
     <p>
       {post.body}
     </p>
-
-    <div>
-      <User user={post.users} />
-      <CommentList commentList={post.comments} />
-    </div>
   </div>
 );
 
 Post.propTypes = {
-  post: PropTypes.arrayOf(postsType).isRequired,
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  users: usersType.isRequired,
-  comments: PropTypes.arrayOf(commentsType).isRequired,
+  post: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    users: usersType.isRequired,
+    comments: PropTypes.arrayOf(commentType).isRequired,
+  }).isRequired,
 };

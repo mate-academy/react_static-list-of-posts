@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { usersType } from '../types/propTypesCollection';
+import { addressType } from '../types/propTypesCollection';
 
 import './User.scss';
 
@@ -26,5 +26,10 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: PropTypes.shape(usersType).isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: addressType.isRequired,
+  }).isRequired,
 };
