@@ -2,7 +2,7 @@ import React from 'react';
 import { CommentType } from '../Types/Type';
 
 const Comment = ({ name, body, email }) => (
-  <>
+  <li>
     <span>
       {name}
     </span>
@@ -12,7 +12,7 @@ const Comment = ({ name, body, email }) => (
     <p>
       {body}
     </p>
-  </>
+  </li>
 );
 
 Comment.propTypes = CommentType.isRequired;

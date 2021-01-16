@@ -6,9 +6,7 @@ import { CommentType } from '../Types/Type';
 const CommentList = ({ comments }) => (
   <ul>
     {comments.map(comment => (
-      <li key={comment.id}>
-        <Comment {...comment} comment={comment} />
-      </li>
+      <Comment {...comment} key={comment.id} />
     ))}
   </ul>
 );
