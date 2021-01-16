@@ -1,17 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Post from './Post';
 import { PostType } from '../types';
 
-const PostList = ({ infoList }) => (
+const PostList = ({ posts }) => (
   <div>
-    {infoList.map(info => (
-      <div key={info.id} className="post">
-        <Post {...info} />
+    {posts.map(post => (
+      <div key={post.id} className="post">
+        <Post {...post} />
       </div>
     ))}
   </div>
 );
 
-PostList.propTypes = PostType.isRequired;
+PostList.propTypes = PropTypes.arrayOf(PostType).isRequired;
 
 export default PostList;

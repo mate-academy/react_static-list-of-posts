@@ -3,7 +3,7 @@ import CommentList from './CommentList';
 import User from './User';
 import { PostType } from '../types';
 
-const Post = ({ title, body, user, comment }) => (
+const Post = ({ title, body, user, comments }) => (
   <>
     <h1 className="title">
       <span>&quot;</span>
@@ -17,7 +17,7 @@ const Post = ({ title, body, user, comment }) => (
     <div><User {...user} /></div>
     <div className="comments">
       <span className="comments__title">Comments:</span>
-      <CommentList comments={comment} />
+      <CommentList comments={comments} />
     </div>
   </>
 );
