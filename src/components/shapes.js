@@ -5,9 +5,9 @@ export const UserShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.objectOf(PropTypes.shape({
+  address: PropTypes.shape({
     street: PropTypes.string.isRequired,
-  })),
+  }),
   phone: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
 });
@@ -25,6 +25,6 @@ export const PostShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(UserShape).isRequired,
-  comments: PropTypes.arrayOf(CommentShape).isRequired,
+  user: UserShape.isRequired,
+  comments: CommentShape.isRequired,
 });
