@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { CommentType } from '../types/CommentType';
+// import PropTypes from 'prop-types';
+import { CommentType } from '../types/types';
 import './Comment.scss';
 
 export const Comment = ({ body, email, name }) => (

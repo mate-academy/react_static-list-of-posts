@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import './PostList.scss';
 
-import { PostType } from '../types/PostType';
+import { PostType } from '../types/types';
 import { Post } from '../Post/Post';
 
-export const PostList = ({ compilledPosts }) => (
+export const PostList = ({ posts }) => (
   <ul className="post-list">
-    {compilledPosts.map(post => (
+    {posts.map(post => (
       <li className="post-list__item" key={post.id}>
         <Post {...post} />
       </li>
@@ -16,4 +16,6 @@ export const PostList = ({ compilledPosts }) => (
   </ul>
 );
 
-PostList.propTypes = PropTypes.arrayOf(PostType).isRequired;
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(PostType).isRequired,
+}.isRequired;

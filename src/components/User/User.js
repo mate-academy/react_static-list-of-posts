@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { UserType } from '../types/UserType';
+// import PropTypes from 'prop-types';
+import { UserType } from '../types/types';
 import './User.scss';
 
 export const User = ({ name, email, address }) => (
