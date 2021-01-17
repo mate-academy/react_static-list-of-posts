@@ -1,26 +1,25 @@
 import React from 'react';
-import { TypePost } from '../../types';
-import comments from '../../api/comments';
-import users from '../../api/users';
+import PropTypes from 'prop-types';
 import { CommentList } from '../CommentList';
+import { Comment } from '../Comment';
 import { User } from '../User';
 
 import './Post.scss';
 
-export const Post = (props) => {
-  const userLink = users.find(user => user.id === props.userId);
-  const commentsList = comments.filter(comment => (
-    comment.postId === props.id
-  ));
+export const Post = ({ title, body, user, comments }) => (
+  <article className="Post">
+    <h2 className="Post__header">{title}</h2>
+    <p className="Post__text">{body}</p>
+    <User {...user} />
+    <CommentList commentsList={comments} />
+  </article>
+);
 
-  return (
-    <article className="Post">
-      <h2 className="Post__header">{props.title}</h2>
-      <p className="Post__text">{props.body}</p>
-      <User {...userLink} />
-      <CommentList commentsList={commentsList} />
-    </article>
-  );
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: PropTypes.shape(User.propTypes).isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape(Comment.propTypes),
+  ).isRequired,
 };
-
-Post.propTypes = TypePost.isRequired;

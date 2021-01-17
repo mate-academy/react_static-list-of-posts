@@ -1,5 +1,5 @@
 import React from 'react';
-import { TypeUser } from '../../types';
+import PropTypes from 'prop-types';
 
 import './User.scss';
 
@@ -18,4 +18,12 @@ export const User = ({ name, email, address }) => (
   </div>
 );
 
-User.propTypes = TypeUser.isRequired;
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  address: PropTypes.shape({
+    suite: PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+  }).isRequired,
+};
