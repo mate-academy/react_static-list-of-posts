@@ -1,0 +1,18 @@
+.comment__item {
+  margin-bottom: 15px;
+}
+
+.comment__name {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.comment__link {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+
+  &:hover {
+    color: blue;
+  }
+}
