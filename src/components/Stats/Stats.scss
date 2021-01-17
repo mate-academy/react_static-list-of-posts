@@ -1,0 +1,9 @@
+.stats {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+}

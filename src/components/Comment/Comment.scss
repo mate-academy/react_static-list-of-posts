@@ -1,0 +1,25 @@
+.Comment {
+  &:not(:last-child) {
+    border-bottom: 1px solid blue;
+  }
+
+  &__header {
+    font-weight: 700;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__email {
+    color: black;
+    font-style: italic;
+    text-decoration: none;
+  }
+}
