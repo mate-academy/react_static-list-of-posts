@@ -3,8 +3,8 @@ import './Comment.scss';
 import PropTypes from 'prop-types';
 
 export const Comment = ({ name, body, email }) => (
-  <li className="post__item">
-    <span className="post__name">
+  <li className="comment__item">
+    <span className="comment__name">
       {name}
     </span>
     <br />
@@ -13,7 +13,7 @@ export const Comment = ({ name, body, email }) => (
     <b>
       {`Email: `}
     </b>
-    <a href={`mailto:${email}`} className="post__link">
+    <a href={`mailto:${email}`} className="comment__link">
       {email}
     </a>
   </li>
