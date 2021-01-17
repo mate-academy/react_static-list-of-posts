@@ -1,0 +1,16 @@
+.list-comments {
+  &__item {
+    padding-left: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-style: italic;
+  }
+}
