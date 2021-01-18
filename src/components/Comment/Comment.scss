@@ -1,0 +1,17 @@
+.comment-section__single {
+  max-width: 50vw;
+  padding: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: rgba(188, 204, 199, 0.2);
+  transition: 0.2s ease-in-out;
+  transition-property: filter;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+}
+
+.comment-section__single:nth-child(2n + 1) {
+  background-color: rgba(160, 176, 171, 0.2);
+}
