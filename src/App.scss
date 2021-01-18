@@ -1,1 +1,23 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  color: darkslategrey;
+}
+
+.app {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
