@@ -5,7 +5,7 @@ import { PostShape } from '../../types';
 
 export const Post = ({ user, title, body, comments }) => (
   <>
-    <h2 style={{ color: 'green' }}>{title}</h2>
+    <h2>{title}</h2>
     <p>{body}</p>
     <User {...user} />
     <CommentList comments={comments} />
