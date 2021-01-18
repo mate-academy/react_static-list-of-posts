@@ -8,10 +8,12 @@ export const PostList = ({ posts }) => (
   <ul>
     {posts.map(post => (
       <li key={post.id} className="post-tile">
-        <Post postItem={post} />
+        <Post post={post} />
       </li>
     ))}
   </ul>
 );
 
-PostList.propTypes = PropTypes.arrayOf(TypePost).isRequired;
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(TypePost).isRequired,
+};

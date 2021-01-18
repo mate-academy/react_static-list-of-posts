@@ -16,4 +16,6 @@ export const CommentList = ({ userComments }) => (
   </div>
 );
 
-CommentList.propTypes = PropTypes.arrayOf(TypeComment).isRequired;
+CommentList.propTypes = {
+  userComments: PropTypes.arrayOf(TypeComment).isRequired,
+};

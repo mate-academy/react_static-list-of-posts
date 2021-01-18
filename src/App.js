@@ -9,12 +9,11 @@ import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
 const preparedPosts = postsFromServer
-  .map(post => (
-    {
-      ...post,
-      user: usersFromServer.find(user => post.userId === user.id),
-      comment: commentsFromServer.filter(comment => post.id === comment.postId),
-    }));
+  .map(post => ({
+    ...post,
+    user: usersFromServer.find(user => post.userId === user.id),
+    comment: commentsFromServer.filter(comment => post.id === comment.postId),
+  }));
 
 const App = () => (
   <div className="App">

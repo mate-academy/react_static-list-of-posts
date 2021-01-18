@@ -11,4 +11,6 @@ export const Comment = ({ comment }) => (
   </>
 );
 
-Comment.propTypes = TypeComment.isRequired;
+Comment.propTypes = {
+  comment: TypeComment.isRequired,
+};
