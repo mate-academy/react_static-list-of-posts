@@ -1,22 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { CommentShape } from '../shapes';
 
-function Comment({ comment }) {
-  return (
-    <div className="message is-info">
-      <p>{comment.name}</p>
-      <p>{comment.email}</p>
-      <p>{comment.body}</p>
-    </div>
-  );
-}
+const Comment = ({ comment }) => (
+  <div>
+    <span>{comment.name}</span>
+    <a href={`mailto:${comment.email}`}>
+      {comment.email}
+    </a>
+    <p>{comment.body}</p>
+  </div>
+);
 
-Comment.propTypes = {
-  comment: PropTypes.arrayOf(
-    PropTypes.shape({
-      postId: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
-};
+Comment.propTypes = CommentShape.isRequired;
 
 export default Comment;
