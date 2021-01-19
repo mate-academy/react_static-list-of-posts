@@ -8,9 +8,7 @@ import { typePost } from '../../types';
 export const PostList = ({ posts }) => (
   <div className="postList">
     {posts.map(post => (
-      <div key={post.id}>
-        <Post post={post} />
-      </div>
+      <Post post={post} key={post.id} />
     ))}
   </div>
 );
