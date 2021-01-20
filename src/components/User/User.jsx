@@ -8,11 +8,17 @@ export const User = ({
   address,
 }) => (
   <div className="user">
-    {name}
-    ,
-    {email}
-    <br />
-    {address.street}
+    <p>{name}</p>
+    <p>
+      Email:
+      {email}
+    </p>
+    <p>
+      Address:
+      {address.city}
+      ,
+      {address.street}
+    </p>
   </div>
 );
 
