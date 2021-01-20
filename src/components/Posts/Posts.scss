@@ -1,0 +1,19 @@
+@import "../../config";
+
+.post {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: $color_sand_light;
+  border-top: 1px dashed;
+  border-bottom: 1px dashed;
+  border-color: $color_sand_dark;
+  box-shadow: 0 0 10px rgba(75, 75, 60, 0.25);
+
+  @media (min-width: 768px) {
+    padding: 15px;
+  }
+
+  &-title {
+    color: $color_green;
+  }
+}
