@@ -1,1 +1,20 @@
-// styles go here
+html {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: rgb(85, 159, 184);
+  text-shadow: 0 1px 1px #1b0a57;
+}
+
+p {
+  font-weight: bold;
+  font-size: 16px;
+}
