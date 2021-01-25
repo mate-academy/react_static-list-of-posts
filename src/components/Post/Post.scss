@@ -1,0 +1,49 @@
+.post {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(174, 191, 202);
+  border: solid 3px rgb(9, 68, 179);
+  border-radius: 50px;
+}
+
+.post:hover {
+  background: #c4c9b9;
+}
+
+.title {
+  font-size: 20px;
+  color: rgb(42, 20, 165);
+}
+
+.text {
+  position: relative;
+  padding: 40px;
+  margin: 16px 16px 26px;
+  font-size: 16px;
+  border-top: 2px solid #337ab7;
+  border-bottom: 2px solid #337ab7;
+}
+
+.text::after {
+  font-family: Times, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  content: "”";
+  color: #bfe2ff;
+  font-size: 160px;
+  line-height: 0;
+  bottom: -22px;
+  right: 30px;
+  text-shadow: 2px 0 0 #337ab7, -2px 0 0 #337ab7;
+}
+
+.number {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: rgb(85, 159, 184);
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+}
