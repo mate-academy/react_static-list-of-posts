@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import users from '../api/users';
+import { TypeUser, TypeComment } from '../types';
 import { User } from './User';
 
-export const Post = ({ title, body, id, userId }) => (
+export const Post = ({ title, body, user, comments }) => (
   <>
     Title:
     {title}
@@ -12,16 +12,16 @@ export const Post = ({ title, body, id, userId }) => (
     {body}
     <>
       <User
-        postID={id}
-        {...users.find(user => user.id === userId)}
+        {...user}
+        comments={comments}
       />
     </>
   </>
 );
 
 Post.propTypes = {
-  id: PropTypes.number.isRequired,
-  userId: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
+  user: TypeUser.isRequired,
+  comments: PropTypes.arrayOf(TypeComment).isRequired,
 };

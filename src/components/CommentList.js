@@ -1,16 +1,17 @@
 import React from 'react';
-import comments from '../api/comments';
+import PropTypes from 'prop-types';
+import { TypeComment } from '../types';
 import { Comment } from './Comment';
 
-export const CommentList = postID => (
+export const CommentList = ({ comments }) => (
   <ul>
-    {comments.map(comment => (comment.postId === postID.id
-      ? (
-        <li key={comment.id}>
+    {comments.map(comment => (
+      <li key={comment.id}>
 
-          <Comment {...comment} />
-        </li>
-      ) : null
+        <Comment {...comment} />
+      </li>
     ))}
   </ul>
 );
+
+CommentList.propTypes = PropTypes.arrayOf(TypeComment).isRequired;

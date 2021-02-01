@@ -1,8 +1,9 @@
 import React from 'react';
-import posts from '../api/posts';
+import PropTypes from 'prop-types';
 import { Post } from './Post';
+import { TypePost } from '../types';
 
-export const PostList = () => (
+export const PostList = ({ posts }) => (
   <ul>
     {posts.map(post => (
       <li key={post.id}>
@@ -11,3 +12,5 @@ export const PostList = () => (
     ))}
   </ul>
 );
+
+PostList.propTypes = PropTypes.arrayOf(TypePost).isRequired;
