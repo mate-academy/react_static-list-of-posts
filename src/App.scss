@@ -1,1 +1,31 @@
 // styles go here
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.post {
+  background-color: lightblue;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 400px;
+}
+
+.post h2 {
+  text-transform: uppercase;
+}
+
+.comment {
+  background-color: white;
+  padding: 5px 15px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.comment:first-child {
+  margin-top: 30px;
+}
+.userInfo div {
+  padding: 2px 0;
+}
