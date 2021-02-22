@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { User, userType } from '../User1';
+import { User } from '../User1';
 import './Post.scss';
+import { userType, postType } from '../typedefs';
 
 export const Post = ({ title, body, user }) => (
   <>
@@ -12,13 +13,6 @@ export const Post = ({ title, body, user }) => (
     <p className="postBody">{body}</p>
   </>
 );
-
-export const postType = {
-  title: PropTypes.string,
-  body: PropTypes.string,
-  id: PropTypes.number,
-  userId: PropTypes.number,
-};
 
 Post.propTypes = {
   title: postType.title.isRequired,

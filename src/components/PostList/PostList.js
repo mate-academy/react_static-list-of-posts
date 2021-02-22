@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Post, postType } from '../Post/Post';
+import { Post } from '../Post/Post';
 import { CommentList } from '../CommentList';
-import { userType } from '../User1';
-import { commentsType } from '../Comment';
+import { userType, postType, commentsType } from '../typedefs';
+
 import './PostList.scss';
 
 export const PostList = ({ posts }) => (

@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Comment, commentsType } from '../Comment';
+import { Comment } from '../Comment';
 import './CommentList.scss';
+import { commentsType } from '../typedefs';
 
 export const CommentList = ({ comments }) => (
   <>
     {comments.map(comment => (
       <li
-        key={[comment.id]}
+        key={comment.id}
         className="Comment"
       >
         <Comment {...comment} />
