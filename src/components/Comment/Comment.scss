@@ -1,0 +1,19 @@
+.comment_list {
+  display: flex;
+  margin: 0 30rem;
+  background-color: #3cb371;
+}
+
+.comment {
+  border: 2px solid #afeeee;
+  padding: 1rem;
+}
+
+.comment_name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.comment_body {
+  font-size: 1.6rem;
+}
