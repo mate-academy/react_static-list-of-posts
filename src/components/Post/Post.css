@@ -1,0 +1,12 @@
+.post {
+  padding: 1.25rem 1.5rem;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 8px 4px 4px black;
+  margin-bottom: 3rem;
+}
+
+.post > h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
