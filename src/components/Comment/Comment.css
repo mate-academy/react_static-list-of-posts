@@ -1,0 +1,21 @@
+.comment {
+  padding: 1.25rem 1.5rem;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+}
+
+.commentName {
+  font-size: 1.25em;
+  text-align: center;
+  margin-bottom: 1.15rem;
+  text-transform: uppercase;
+}
+
+.commentEmail {
+  font-size: 1.15em;
+  font-style: italic;
+  color: blue;
+  margin-bottom: 1.25rem;
+  margin-left: 1.25rem;
+}

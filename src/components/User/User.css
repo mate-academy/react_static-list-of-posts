@@ -1,0 +1,9 @@
+.user {
+  padding: 1.25rem 1.5rem;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.address {
+  margin-left: 1.25rem;
+}
