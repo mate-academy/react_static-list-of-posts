@@ -1,0 +1,15 @@
+.post {
+  &__item {
+    border: 5px dashed purple;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 28px;
+  }
+
+  &__body {
+    font-style: italic;
+  }
+}

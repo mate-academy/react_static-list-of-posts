@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const comments = [
+export const comments = [
   {
     postId: 1,
     id: 1,
@@ -3502,5 +3502,3 @@ const comments = [
     body: 'perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis',
   },
 ];
-
-export default comments;
