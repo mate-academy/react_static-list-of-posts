@@ -1,0 +1,11 @@
+.post-list {
+  list-style: none;
+  padding: 0;
+  &__comment-title {
+    margin-top: 5px;
+
+    background-color: rgb(135, 160, 241);
+    color: white;
+    text-align: center;
+  }
+}
