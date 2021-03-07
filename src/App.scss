@@ -1,1 +1,32 @@
-// styles go here
+html {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 15px;
+}
+
+.post {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__text {
+    font-style: italic;
+  }
+}
+
+.comment {
+  border-bottom: 1px dashed #000;
+  margin: 5px;
+
+  &__list {
+    list-style: none;
+    font-size: 13px;
+    padding: 10px;
+    border: 1px dashed #000;
+    margin-top: 15px;
+  }
+}
