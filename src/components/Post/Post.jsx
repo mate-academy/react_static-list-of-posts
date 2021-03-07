@@ -3,37 +3,41 @@ import PropTypes from 'prop-types';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
 
-export function Post({
-  post,
-}) {
-  // eslint-disable-next-line react/prop-types
-  const pairedCommentsWithPosts = post.comments.filter(comment => (
-    comment.postId === post.userId
-  ));
-
-  return (
-    <>
-      <h1>
-        {post.title}
-      </h1>
-      <p>
-        {post.body}
-      </p>
-      <User {...post.user} />
-      <CommentList comments={pairedCommentsWithPosts} />
-    </>
-  );
-}
+export const Post = ({
+  title,
+  body,
+  user,
+  comments,
+}) => (
+  <>
+    <h1>
+      {title}
+    </h1>
+    <p>
+      {body}
+    </p>
+    <User {...user} />
+    <CommentList comments={comments} />
+  </>
+);
 
 Post.propTypes = {
-  post: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      user: PropTypes.shape({}).isRequired,
-      pairedCommentsWithPosts: PropTypes.arrayOf(
-        PropTypes.shape({}).isRequired,
-      ),
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      street: PropTypes.string.isRequired,
+      suite: PropTypes.string.isRequired,
     }),
+  }),
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({}),
   ).isRequired,
+};
+
+Post.defaultProps = {
+  user: null,
 };

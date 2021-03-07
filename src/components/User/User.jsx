@@ -10,7 +10,7 @@ export const User = ({
     <p>
       {name}
     </p>
-    <a href={`mailto: + ${email}`}>
+    <a href={`mailto: ${email}`}>
       {email}
     </a>
     <p>

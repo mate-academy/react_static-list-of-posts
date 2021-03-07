@@ -8,7 +8,7 @@ export const PostList = ({
   <ul>
     {posts.map(post => (
       <li key={post.id}>
-        <Post post={post} />
+        <Post {...post} />
       </li>
     ))}
   </ul>
