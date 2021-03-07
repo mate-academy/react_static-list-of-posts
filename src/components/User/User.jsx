@@ -10,9 +10,9 @@ export const User = ({
     <p>
       {name}
     </p>
-    <p>
+    <a href={`mailto: + ${email}`}>
       {email}
-    </p>
+    </a>
     <p>
       {`${address.city}, ${address.street}, ${address.suite}`}
     </p>

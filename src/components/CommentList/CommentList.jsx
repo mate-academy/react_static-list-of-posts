@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { Comment } from '../Comment';
 
 export const CommentList = ({ comments }) => (
-  <>
+  <ul>
     {comments.map(comment => (
       <li key={comment.id}>
         <Comment {...comment} />
       </li>
     ))}
-  </>
+  </ul>
 );
 
 CommentList.propTypes = {
@@ -21,5 +21,5 @@ CommentList.propTypes = {
 };
 
 CommentList.defaultProps = {
-  comments: null,
+  comments: [],
 };

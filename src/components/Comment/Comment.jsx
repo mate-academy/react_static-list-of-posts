@@ -13,9 +13,9 @@ export const Comment = ({
     <p>
       {body}
     </p>
-    <span>
+    <a href={`mailto:${email}`}>
       {email}
-    </span>
+    </a>
   </>
 );
 
