@@ -17,14 +17,5 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: PropTypes.shape({
-    UserType,
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      city: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-      suite: PropTypes.string.isRequired,
-    }),
-  }).isRequired,
+  user: PropTypes.shape(UserType).isRequired,
 };
