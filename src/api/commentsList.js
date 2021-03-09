@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-export const comments = [
+export const commentsList = [
   {
     postId: 1,
     id: 1,

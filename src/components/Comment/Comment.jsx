@@ -3,7 +3,7 @@ import React from 'react';
 
 import './Comment.scss';
 
-export default function Comment({
+export function Comment({
   name,
   body,
   email,

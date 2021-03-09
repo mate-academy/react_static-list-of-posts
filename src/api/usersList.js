@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-export const users = [
+export const usersList = [
   {
     id: 1,
     name: 'Leanne Graham',

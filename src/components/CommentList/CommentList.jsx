@@ -1,30 +1,35 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import Comment from '../Comment';
-
 import './CommentList.scss';
 
-export default function CommentList({
+import { Comment } from '../Comment';
+import { TypeComments } from '../../Types/types';
+
+export function CommentList({
   comments,
 }) {
-  const postComments = comments.map(comment => (
-    <Comment key={comment.id} {...comment} />
-  ));
+  const renderedComments = comments.map((comment) => {
+    const { body, email, id, name } = comment;
+
+    return (
+      <Comment
+        key={id}
+        body={body}
+        email={email}
+        name={name}
+      />
+    );
+  });
 
   return (
     <>
       <p className="comment__text">Comments:</p>
       <ul className="comment__list">
-        {postComments}
+        {renderedComments}
       </ul>
     </>
   );
 }
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
+  comments: TypeComments.isRequired,
 };

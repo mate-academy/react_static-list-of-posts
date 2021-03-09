@@ -1,25 +1,23 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import CommentList from '../CommentList';
-
 import './User.scss';
 
-export default function User({
-  address,
-  email,
-  name,
+import { CommentList } from '../CommentList';
+import { TypeUser, TypeComments } from '../../Types/types';
+
+export function User({
+  user,
   comments,
 }) {
-  const { city, street, suite, zipcode, geo } = address;
+  const { city, street, suite, zipcode, geo } = user.address;
   const { lat, lng } = geo;
 
   return (
     <>
       <h3 className="user__name">
-        {name}
+        {user.name}
       </h3>
-      <a className="user__email" href={`mailto:${email}`}>
-        {email}
+      <a className="user__email" href={`mailto:${user.email}`}>
+        {user.email}
       </a>
       <address className="user__address">
         {`City: ${city},`}
@@ -46,19 +44,6 @@ export default function User({
 }
 
 User.propTypes = {
-  email: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    city: PropTypes.string.isRequired,
-    street: PropTypes.string.isRequired,
-    suite: PropTypes.string.isRequired,
-    zipcode: PropTypes.string.isRequired,
-    geo: PropTypes.shape({
-      lat: PropTypes.string.isRequired,
-      lng: PropTypes.string.isRequired,
-    }),
-  }).isRequired,
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({}),
-  ).isRequired,
+  user: TypeUser.isRequired,
+  comments: TypeComments.isRequired,
 };

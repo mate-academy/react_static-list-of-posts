@@ -1,43 +1,41 @@
 import React from 'react';
-import PostList from './components/PostList';
-
 import './App.scss';
 
-import { posts } from './api/posts';
-import { comments } from './api/comments';
-import { users } from './api/users';
+import { PostList } from './components/PostList';
 
-const addedUsersWithinPosts = posts.map(
+import { postsList } from './api/postsList';
+import { commentsList } from './api/commentsList';
+import { usersList } from './api/usersList';
+
+const addedUsersAndCommentsWithinPosts = postsList.map(
   post => ({
     ...post,
-    user: users.find(user => user.id === post.userId),
+    user: usersList.find(user => user.id === post.userId),
+    comments: commentsList.filter(comment => comment.postId === post.id),
   }),
 );
 
-const App = () => (
+export const App = () => (
   <div className="App">
     <h1 className="app__title">
       Static list of posts
     </h1>
     <PostList
-      comments={comments}
-      addedUsersWithinPosts={addedUsersWithinPosts}
+      postsList={addedUsersAndCommentsWithinPosts}
     />
     <p>
       <span>posts: </span>
-      {posts.length}
+      {postsList.length}
     </p>
 
     <p>
       <span>comments: </span>
-      {comments.length}
+      {commentsList.length}
     </p>
 
     <p>
       <span>Users: </span>
-      {users.length}
+      {usersList.length}
     </p>
   </div>
 );
-
-export default App;

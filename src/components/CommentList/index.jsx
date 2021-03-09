@@ -1,1 +1,1 @@
-export { default } from './CommentList';
+export { CommentList } from './CommentList';

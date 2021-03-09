@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-export const posts = [
+export const postsList = [
   {
     userId: 1,
     id: 1,

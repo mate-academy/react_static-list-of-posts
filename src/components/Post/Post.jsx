@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import User from '../User';
-
 import './Post.scss';
 
-export default function Post({
+import { User } from '../User';
+import { TypeUser, TypeComments } from '../../Types/types';
+
+export function Post({
   title,
   body,
   user,
@@ -19,7 +20,7 @@ export default function Post({
         {body}
       </p>
       <User
-        {...user}
+        user={user}
         comments={comments}
       />
     </li>
@@ -29,13 +30,6 @@ export default function Post({
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape({}),
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({}).isRequired,
-  ),
-};
-
-Post.defaultProps = {
-  user: {},
-  comments: [],
+  user: TypeUser.isRequired,
+  comments: TypeComments.isRequired,
 };
