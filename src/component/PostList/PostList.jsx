@@ -6,7 +6,7 @@ export const PostList = ({ posts }) => (
   <ul>
     {posts.map(post => (
       <li key={post.id}>
-        <Post {...post} />
+        <Post post={post} />
       </li>
     ))}
   </ul>
@@ -15,7 +15,10 @@ export const PostList = ({ posts }) => (
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
+      userId: PropTypes.number,
       id: PropTypes.number.isRequired,
+      title: PropTypes.string,
+      body: PropTypes.string,
     }).isRequired,
   ).isRequired,
 };

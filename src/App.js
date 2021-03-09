@@ -19,7 +19,6 @@ const App = () => (
     <h1>Static list of posts</h1>
 
     <>
-      <span>posts: </span>
       <PostList posts={listOfData} />
     </>
   </div>
