@@ -1,13 +1,12 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+
+import { TypeComments } from '../../Types/types';
 
 import './Comment.scss';
 
-export function Comment({
-  name,
-  body,
-  email,
-}) {
+export function Comment(props) {
+  const { name, body, email } = props.comment;
+
   return (
     <li className="comment__item">
       <h4 className="comment__title">
@@ -27,7 +26,5 @@ export function Comment({
 }
 
 Comment.propTypes = {
-  name: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
+  comment: TypeComments.isRequired,
 };

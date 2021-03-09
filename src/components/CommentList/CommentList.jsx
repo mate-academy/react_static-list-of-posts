@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import './CommentList.scss';
 
@@ -7,18 +8,12 @@ import { TypeComments } from '../../Types/types';
 export function CommentList({
   comments,
 }) {
-  const renderedComments = comments.map((comment) => {
-    const { body, email, id, name } = comment;
-
-    return (
-      <Comment
-        key={id}
-        body={body}
-        email={email}
-        name={name}
-      />
-    );
-  });
+  const renderedComments = comments.map(comment => (
+    <Comment
+      key={comment.id}
+      comment={comment}
+    />
+  ));
 
   return (
     <>
@@ -31,5 +26,7 @@ export function CommentList({
 }
 
 CommentList.propTypes = {
-  comments: TypeComments.isRequired,
+  comments: PropTypes.arrayOf(
+    TypeComments.isRequired,
+  ).isRequired,
 };

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import './User.scss';
 
@@ -45,5 +46,7 @@ export function User({
 
 User.propTypes = {
   user: TypeUser.isRequired,
-  comments: TypeComments.isRequired,
+  comments: PropTypes.arrayOf(
+    TypeComments.isRequired,
+  ).isRequired,
 };

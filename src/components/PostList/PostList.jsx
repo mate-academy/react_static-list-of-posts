@@ -3,24 +3,17 @@ import React from 'react';
 import './PostList.scss';
 
 import { Post } from '../Post';
-import { TypeUser, TypeComments } from '../../Types/types';
+import { TypePosts } from '../../Types/types';
 
 export function PostList({
-  postsList,
+  posts,
 }) {
-  const renderedPosts = postsList.map((post) => {
-    const { body, comments, id, title, user } = post;
-
-    return (
-      <Post
-        key={id}
-        body={body}
-        comments={comments}
-        title={title}
-        user={user}
-      />
-    );
-  });
+  const renderedPosts = posts.map(post => (
+    <Post
+      key={post.id}
+      post={post}
+    />
+  ));
 
   return (
     <ul className="post__list">
@@ -30,13 +23,7 @@ export function PostList({
 }
 
 PostList.propTypes = {
-  postsList: PropTypes.arrayOf(
-    PropTypes.shape({
-      body: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired,
-      comments: TypeComments.isRequired,
-      user: TypeUser.isRequired,
-    }),
+  posts: PropTypes.arrayOf(
+    TypePosts.isRequired,
   ).isRequired,
 };

@@ -1,16 +1,12 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import './Post.scss';
 
 import { User } from '../User';
-import { TypeUser, TypeComments } from '../../Types/types';
+import { TypePosts } from '../../Types/types';
 
-export function Post({
-  title,
-  body,
-  user,
-  comments,
-}) {
+export function Post(props) {
+  const { title, body, user, comments } = props.post;
+
   return (
     <li className="post__item">
       <h2 className="post__title">
@@ -28,8 +24,5 @@ export function Post({
 }
 
 Post.propTypes = {
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  user: TypeUser.isRequired,
-  comments: TypeComments.isRequired,
+  post: TypePosts.isRequired,
 };

@@ -24,12 +24,20 @@ export const TypeUser = PropTypes.shape({
   website: PropTypes.string.isRequired,
 });
 
-export const TypeComments = PropTypes.arrayOf(
-  PropTypes.shape({
-    body: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    postId: PropTypes.number.isRequired,
-  }),
-);
+export const TypeComments = PropTypes.shape({
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  postId: PropTypes.number.isRequired,
+});
+
+export const TypePosts = PropTypes.shape({
+  body: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  comments: PropTypes.arrayOf(
+    TypeComments.isRequired,
+  ),
+  user: TypeUser.isRequired,
+});

@@ -7,7 +7,7 @@ import { postsList } from './api/postsList';
 import { commentsList } from './api/commentsList';
 import { usersList } from './api/usersList';
 
-const addedUsersAndCommentsWithinPosts = postsList.map(
+const preparedPosts = postsList.map(
   post => ({
     ...post,
     user: usersList.find(user => user.id === post.userId),
@@ -21,7 +21,7 @@ export const App = () => (
       Static list of posts
     </h1>
     <PostList
-      postsList={addedUsersAndCommentsWithinPosts}
+      posts={preparedPosts}
     />
     <p>
       <span>posts: </span>
