@@ -1,34 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { UserType } from '../../types';
 
-export const User = ({
-  name,
-  email,
-  address,
-}) => (
+export const User = ({ user }) => (
   <>
     <p>
-      {name}
+      {user.name}
     </p>
-    <a href={`mailto: ${email}`}>
-      {email}
+    <a href={`mailto: ${user.email}`}>
+      {user.email}
     </a>
     <p>
-      {`${address.city}, ${address.street}, ${address.suite}`}
+      {`${user.address.city}, ${user.address.street}, ${user.address.suite}`}
     </p>
   </>
 );
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    city: PropTypes.string.isRequired,
-    street: PropTypes.string.isRequired,
-    suite: PropTypes.string.isRequired,
-  }),
-};
-
-User.defaultProps = {
-  address: null,
+  user: PropTypes.shape({
+    UserType,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      street: PropTypes.string.isRequired,
+      suite: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
 };
