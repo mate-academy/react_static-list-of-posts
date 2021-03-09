@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
+import { postsType } from '../../types';
 
 export const PostList = ({ posts }) => (
   <ul>
@@ -14,11 +15,6 @@ export const PostList = ({ posts }) => (
 
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      userId: PropTypes.number,
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string,
-      body: PropTypes.string,
-    }).isRequired,
+    PropTypes.shape(postsType).isRequired,
   ).isRequired,
 };

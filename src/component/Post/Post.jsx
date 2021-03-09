@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CommentList } from '../CommentList/CommentList';
 import { User } from '../User';
+import { postsType, commentsType } from '../../types';
 
 export const Post = ({ post }) => (
   <>
@@ -13,28 +14,12 @@ export const Post = ({ post }) => (
 );
 
 Post.propTypes = {
-  post: PropTypes.shape({
-    userId: PropTypes.number,
-    id: PropTypes.number,
-    title: PropTypes.string,
-    body: PropTypes.string,
-    user: PropTypes.shape({
-      name: PropTypes.string,
-      email: PropTypes.string,
-      address: PropTypes.shape({
-        street: PropTypes.string,
-        city: PropTypes.string,
-        suite: PropTypes.string,
-      }).isRequired,
-    }).isRequired,
-    comments: PropTypes.arrayOf(
-      PropTypes.shape({
-        postId: PropTypes.number,
-        id: PropTypes.number,
-        name: PropTypes.string,
-        body: PropTypes.string,
-        email: PropTypes.string,
-      }).isRequired,
-    ),
-  }).isRequired,
+  post: PropTypes.shape(postsType).isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape(commentsType),
+  ),
+};
+
+Post.defaultProps = {
+  comments: null,
 };
