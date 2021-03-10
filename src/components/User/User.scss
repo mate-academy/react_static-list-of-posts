@@ -1,0 +1,30 @@
+.user {
+  &__name {
+    color: rgb(85, 84, 84);
+    font-weight: 500px;
+    margin-bottom: 2px;
+  }
+  &__email {
+    display: block;
+    margin-bottom: 10px;
+
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__address {
+    display: block;
+    width: 100px;
+    padding-left: 10px;
+
+    text-decoration: none;
+    color: grey;
+    font-size: 13px;
+    &:hover {
+      color: black;
+    }
+  }
+}

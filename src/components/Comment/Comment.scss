@@ -1,0 +1,26 @@
+.comment {
+  &__name {
+    margin-bottom: 5px;
+
+    text-decoration: underline;
+  }
+  &__text {
+    margin: 0;
+
+    font-style: italic;
+  }
+  &__mail {
+    display: block;
+    margin-top: 10px;
+    padding-bottom: 30px;
+
+    border-bottom: rgb(170, 167, 167) 3px solid;
+
+    color: rgb(125, 125, 201);
+    text-decoration: none;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
