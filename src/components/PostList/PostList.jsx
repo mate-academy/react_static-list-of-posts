@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
-import { postType } from '../../types';
+import { PostType } from '../../types';
 
 import './PostList.css';
 
@@ -18,5 +18,5 @@ export function PostList({ posts }) {
 }
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(postType).isRequired,
+  posts: PropTypes.arrayOf(PostType).isRequired,
 };

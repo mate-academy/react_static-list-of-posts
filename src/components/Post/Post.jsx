@@ -1,5 +1,5 @@
 import React from 'react';
-import { postType } from '../../types';
+import { PostType } from '../../types';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
 
@@ -17,5 +17,5 @@ export function Post({ post }) {
 }
 
 Post.propTypes = {
-  post: postType.isRequired,
+  post: PostType.isRequired,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { commentType } from '../../types';
+import { CommentType } from '../../types';
 
 import './Comment.css';
 
@@ -14,5 +14,5 @@ export function Comment({ comment }) {
 }
 
 Comment.propTypes = {
-  comment: commentType.isRequired,
+  comment: CommentType.isRequired,
 };
