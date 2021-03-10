@@ -1,1 +1,9 @@
 // styles go here
+
+ul {
+  border: 1px solid black;
+}
+
+ul > li > ul > li > p {
+  color: goldenrod;
+}
