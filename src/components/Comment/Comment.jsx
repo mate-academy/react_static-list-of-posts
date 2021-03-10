@@ -11,8 +11,8 @@ export function Comment({ comment }) {
         Comment
       </h3>
 
-      <p>{name}</p>
-      <p>{body}</p>
+      <p>Username: {name}</p>
+      <p>Message: {body}</p>
       <p>Email: {email}</p>
     </div>
   )
