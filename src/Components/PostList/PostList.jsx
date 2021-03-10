@@ -2,8 +2,8 @@ import React from 'react';
 import Post from '../Post';
 import { PostType } from '../PostType/PostType';
 
-export default function PostList({ postsWithComments }) {
-  const userWithComents = postsWithComments.map(post => (
+export default function PostList({ posts }) {
+  const userWithComents = posts.map(post => (
     <Post key={post.id} post={post} />
   ));
 
@@ -15,9 +15,9 @@ export default function PostList({ postsWithComments }) {
 }
 
 PostList.propTypes = {
-  postsWithComments: PostType,
+  posts: PostType,
 };
 
 PostList.defaultProps = {
-  postsWithComments: [],
+  posts: [],
 };
