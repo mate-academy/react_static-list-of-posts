@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const commentsType = {
+export const CommentsType = {
   postId: PropTypes.number,
   id: PropTypes.number.isRequired,
   name: PropTypes.string,
@@ -8,14 +8,14 @@ export const commentsType = {
   email: PropTypes.string,
 };
 
-export const postsType = {
+export const PostsType = {
   userId: PropTypes.number,
   id: PropTypes.number.isRequired,
   title: PropTypes.string,
   body: PropTypes.string,
 };
 
-export const userType = {
+export const UserType = {
   id: PropTypes.number,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
