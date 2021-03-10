@@ -1,15 +1,10 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import Post from '../Post';
+import { PostType } from '../PostType/PostType';
 
-export default function PostList({ postList, comments }) {
-  const userComments = postList.map(todo => ({
-    ...todo,
-    comments: comments.filter(comment => comment.postId === todo.id),
-  }));
-
+export default function PostList({ userComments }) {
   const userWithComents = userComments.map(post => (
-    <Post key={post.id} {...post} />
+    <Post key={post.id} post={post} />
   ));
 
   return (
@@ -20,20 +15,9 @@ export default function PostList({ postList, comments }) {
 }
 
 PostList.propTypes = {
-  postList: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
-  ),
-
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      postId: PropTypes.number.isRequired,
-    }),
-  ),
+  userComments: PostType,
 };
 
 PostList.defaultProps = {
-  postList: [],
-  comments: [],
+  userComments: [],
 };

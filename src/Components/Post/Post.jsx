@@ -1,27 +1,21 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import { PostType } from '../PostType/PostType';
 import User from '../User';
 
-export default function Post({ title, body, user, comments }) {
+export default function Post({ post }) {
   return (
     <li>
-      <h2>{title}</h2>
-      <p>{body}</p>
-      <User user={user} comments={comments} />
+      <h2>{post.title}</h2>
+      <p>{post.body}</p>
+      <User user={post.user} comments={post.comments} />
     </li>
   );
 }
 
 Post.propTypes = {
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  user: PropTypes.shape({}),
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({}).isRequired,
-  ),
+  post: PostType,
 };
 
 Post.defaultProps = {
-  user: {},
-  comments: [],
+  post: null,
 };

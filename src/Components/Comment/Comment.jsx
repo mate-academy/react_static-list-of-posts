@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { CommentType } from '../CommentType/CommentType';
 
@@ -19,5 +18,5 @@ export default function Comment({ comment }) {
 }
 
 Comment.propTypes = {
-  comment: PropTypes.arrayOf(CommentType).isRequired,
+  comment: CommentType.isRequired,
 };
