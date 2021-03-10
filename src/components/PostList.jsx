@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Post } from './Post';
 import { PostType } from '../types';
 
-export const PostList = ({ listOfPosts }) => (
+export const PostList = ({ posts }) => (
   <ul className="post__list">
-    {listOfPosts.map(post => (
+    {posts.map(post => (
       <li key={post.id} className="post">
         <Post
           title={post.title}
@@ -19,5 +19,5 @@ export const PostList = ({ listOfPosts }) => (
 );
 
 PostList.propTypes = {
-  listOfPosts: PropTypes.arrayOf(PostType).isRequired,
+  posts: PropTypes.arrayOf(PostType).isRequired,
 };
