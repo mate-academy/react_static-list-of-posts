@@ -3,13 +3,13 @@ import Post from '../Post';
 import { PostType } from '../PostType/PostType';
 
 export default function PostList({ posts }) {
-  const userWithComents = posts.map(post => (
+  const postList = posts.map(post => (
     <Post key={post.id} post={post} />
   ));
 
   return (
     <ul>
-      {userWithComents}
+      {postList}
     </ul>
   );
 }
