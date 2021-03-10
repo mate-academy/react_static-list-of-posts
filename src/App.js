@@ -12,7 +12,7 @@ const postList = posts.map(post => ({
   user: users.find(user => user.id === post.userId),
 }));
 
-const userComments = postList.map(todo => ({
+const postsWithComments = postList.map(todo => ({
   ...todo,
   comments: comments.filter(comment => comment.postId === todo.id),
 }));
@@ -21,7 +21,7 @@ const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
     <PostList
-      userComments={userComments}
+      postsWithComments={postsWithComments}
     />
     <p>
       <span>posts: </span>
