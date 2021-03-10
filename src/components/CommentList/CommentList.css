@@ -1,0 +1,5 @@
+.comment-list__item {
+  padding: 15px 0;
+  border-top: 1px solid rgb(141, 179, 250);
+  list-style-type: none;
+}

@@ -1,0 +1,12 @@
+.post__content {
+  padding: 20px;
+
+  border-radius: 60px;
+  border: 2px solid rgb(151, 171, 224);
+  background-color: rgb(222, 255, 255);
+}
+
+.post__title {
+  text-align: center;
+  text-transform: uppercase;
+}
