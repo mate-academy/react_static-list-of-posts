@@ -16,7 +16,7 @@ const fullPosts = posts.map(post => ({
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList fullPosts={fullPosts} />
+    <PostList posts={fullPosts} />
     <p>
       <span>posts: </span>
       {posts.length}

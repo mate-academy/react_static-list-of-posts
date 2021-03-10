@@ -6,9 +6,9 @@ import { Post } from '../Post';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
 
-export const PostList = ({ fullPosts }) => (
+export const PostList = ({ posts }) => (
   <ul className="post-list">
-    {fullPosts.map(post => (
+    {posts.map(post => (
       <li className="post-list__item" key={post.id}>
         <Post
           title={post.title}
@@ -23,7 +23,7 @@ export const PostList = ({ fullPosts }) => (
 );
 
 PostList.propTypes = {
-  fullPosts: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape(
       {
         body: PropTypes.string.isRequired,
