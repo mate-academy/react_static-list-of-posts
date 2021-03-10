@@ -24,7 +24,7 @@ export const UserType = PropTypes.shape({
   website: PropTypes.string.isRequired,
 });
 
-export const TypeComment = PropTypes.shape({
+export const CommentType = PropTypes.shape({
   body: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -32,12 +32,12 @@ export const TypeComment = PropTypes.shape({
   postId: PropTypes.number.isRequired,
 });
 
-export const TypePost = PropTypes.shape({
+export const PostType = PropTypes.shape({
   body: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   comments: PropTypes.arrayOf(
-    TypeComment.isRequired,
+    CommentType.isRequired,
   ),
   user: UserType.isRequired,
 });

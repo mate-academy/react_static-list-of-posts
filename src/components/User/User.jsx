@@ -3,7 +3,7 @@ import React from 'react';
 import './User.scss';
 
 import { CommentList } from '../CommentList';
-import { UserType, TypeComment } from '../../Types/types';
+import { UserType, CommentType } from '../../Types/types';
 
 export function User({
   user,
@@ -45,6 +45,6 @@ export function User({
 User.propTypes = {
   user: UserType.isRequired,
   comments: PropTypes.arrayOf(
-    TypeComment.isRequired,
+    CommentType.isRequired,
   ).isRequired,
 };
