@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const posts = [
+export const postsList = [
   {
     userId: 1,
     id: 1,
@@ -602,5 +602,3 @@ const posts = [
     body: 'cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut',
   },
 ];
-
-export default posts;

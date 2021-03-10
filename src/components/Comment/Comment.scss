@@ -1,0 +1,15 @@
+.comment {
+  &__item {
+    padding-bottom: 10px;
+    border-bottom: 3px solid green;
+  }
+
+  &__email {
+    color: whitesmoke;
+    text-decoration: none;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}

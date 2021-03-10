@@ -1,0 +1,22 @@
+.user {
+  &__name {
+    color: green;
+    font-size: 20px;
+  }
+
+  &__email,
+  &__map {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: blue;
+    }
+  }
+  &__address {
+    border:4px dotted grey;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+}
