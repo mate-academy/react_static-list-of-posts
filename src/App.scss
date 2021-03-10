@@ -1,1 +1,8 @@
-// styles go here
+body {
+  font-family: sans-serif;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #535353;
+    color: #ebebeb;
+  }
+}
