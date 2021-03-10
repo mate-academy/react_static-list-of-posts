@@ -1,24 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { CommentType } from '../CommentType/CommentType';
 
-export default function Comment({ name, body, email }) {
+export default function Comment({ comment }) {
   return (
     <li>
       <h3>
-        {name}
+        {comment.name}
       </h3>
       <p>
-        {body}
+        {comment.body}
       </p>
-      <a href={`malito:${email}`}>
-        {email}
+      <a href={`malito:${comment.email}`}>
+        {comment.email}
       </a>
     </li>
   );
 }
 
 Comment.propTypes = {
-  name: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
+  comment: PropTypes.arrayOf(CommentType).isRequired,
 };

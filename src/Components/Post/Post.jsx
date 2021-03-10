@@ -7,7 +7,7 @@ export default function Post({ title, body, user, comments }) {
     <li>
       <h2>{title}</h2>
       <p>{body}</p>
-      <User {...user} comments={comments} />
+      <User user={user} comments={comments} />
     </li>
   );
 }

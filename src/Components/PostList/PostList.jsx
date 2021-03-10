@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Post from '../Post';
 
-export default function PostList({ preparedTodos, comments }) {
-  const addUserComments = preparedTodos.map(todo => ({
+export default function PostList({ postList, comments }) {
+  const userComments = postList.map(todo => ({
     ...todo,
     comments: comments.filter(comment => comment.postId === todo.id),
   }));
 
-  const userWithComents = addUserComments.map(post => (
+  const userWithComents = userComments.map(post => (
     <Post key={post.id} {...post} />
   ));
 
@@ -20,7 +20,7 @@ export default function PostList({ preparedTodos, comments }) {
 }
 
 PostList.propTypes = {
-  preparedTodos: PropTypes.arrayOf(
+  postList: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),
@@ -34,6 +34,6 @@ PostList.propTypes = {
 };
 
 PostList.defaultProps = {
-  preparedTodos: [],
+  postList: [],
   comments: [],
 };
