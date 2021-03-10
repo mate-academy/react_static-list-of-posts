@@ -8,15 +8,15 @@ import { CommentList } from '../CommentList';
 
 export const PostList = ({ fullPosts }) => (
   <ul className="post-list">
-    {fullPosts.map(fullPost => (
-      <li className="post-list__item" key={fullPost.id}>
+    {fullPosts.map(post => (
+      <li className="post-list__item" key={post.id}>
         <Post
-          title={fullPost.title}
-          body={fullPost.body}
+          title={post.title}
+          body={post.body}
         />
-        <User user={fullPost.user} />
+        <User user={post.user} />
         <h3 className="post-list__comment-title">Comments:</h3>
-        <CommentList comments={fullPost.comments} />
+        <CommentList comments={post.comments} />
       </li>
     ))}
   </ul>
