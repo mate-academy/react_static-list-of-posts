@@ -2,7 +2,7 @@ import React from 'react';
 import './Post.scss';
 
 import { User } from '../User';
-import { TypePosts } from '../../Types/types';
+import { TypePost } from '../../Types/types';
 
 export function Post(props) {
   const { title, body, user, comments } = props.post;
@@ -24,5 +24,5 @@ export function Post(props) {
 }
 
 Post.propTypes = {
-  post: TypePosts.isRequired,
+  post: TypePost.isRequired,
 };

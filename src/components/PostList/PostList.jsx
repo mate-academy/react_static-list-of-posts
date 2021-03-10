@@ -3,7 +3,7 @@ import React from 'react';
 import './PostList.scss';
 
 import { Post } from '../Post';
-import { TypePosts } from '../../Types/types';
+import { TypePost } from '../../Types/types';
 
 export function PostList({
   posts,
@@ -24,6 +24,6 @@ export function PostList({
 
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
-    TypePosts.isRequired,
+    TypePost.isRequired,
   ).isRequired,
 };

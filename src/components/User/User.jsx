@@ -3,7 +3,7 @@ import React from 'react';
 import './User.scss';
 
 import { CommentList } from '../CommentList';
-import { TypeUser, TypeComments } from '../../Types/types';
+import { UserType, TypeComment } from '../../Types/types';
 
 export function User({
   user,
@@ -37,16 +37,14 @@ export function User({
           reference to map
         </a>
       </address>
-      <CommentList
-        comments={comments}
-      />
+      <CommentList comments={comments} />
     </>
   );
 }
 
 User.propTypes = {
-  user: TypeUser.isRequired,
+  user: UserType.isRequired,
   comments: PropTypes.arrayOf(
-    TypeComments.isRequired,
+    TypeComment.isRequired,
   ).isRequired,
 };
