@@ -5,7 +5,7 @@ import { Comment } from '../Comment';
 
 export const CommentsList = ({ comments }) => {
   if (!comments.length) {
-    return '';
+    return null;
   }
 
   return (
