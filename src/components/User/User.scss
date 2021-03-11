@@ -1,0 +1,11 @@
+.table {
+  background-color: rgba($color: #a88484, $alpha: 0.5);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0 auto;
+
+  &__cell {
+    font-size: 18px;
+    border: 2px solid blue;
+    padding: 15px;
+  }
+}
