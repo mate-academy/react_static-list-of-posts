@@ -1,0 +1,21 @@
+.comment {
+  background-color: deepskyblue;
+  border: 1px solid rgb(99, 99, 99);
+  border-radius: 5px;
+  padding: 5px;
+
+  &__name {
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  &__email {
+    font-style: italic;
+    padding: 5px;
+  }
+
+  &:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+  }
+}
