@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import './PostList.scss';
 import Post from '../Post/Post';
 
-const PostList = ({ postsList }) => (
-  <div className="postList">
+const PostList = ({ posts }) => (
+  <ul className="postList">
     {
-      postsList.map(post => (<Post postInfo={post} />))
+      posts.map(post => (<li key={post.id}><Post postInfo={post} /></li>))
     }
-  </div>
+  </ul>
 );
 
 PostList.propTypes = {
-  postsList: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.object.isRequired,
   ).isRequired,
 };

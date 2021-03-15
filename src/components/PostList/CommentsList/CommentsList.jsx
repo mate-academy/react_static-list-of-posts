@@ -4,11 +4,13 @@ import Comment from '../Comment/Comment';
 import './CommentsList.scss';
 
 const CommentsList = ({ list }) => (
-  <div className="commentsList">
+  <ul className="commentsList">
     {
-      list.map(comment => <Comment comments={comment} />)
+      list.map(
+        comment => <li key={comment.id}><Comment comments={comment} /></li>,
+      )
     }
-  </div>
+  </ul>
 );
 
 CommentsList.propTypes = {

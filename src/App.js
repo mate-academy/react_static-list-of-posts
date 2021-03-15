@@ -7,17 +7,13 @@ import comments from './api/comments';
 import users from './api/users';
 import PostList from './components/PostList/PostList/PostList';
 
-const postsList = [];
-
-posts.map((post, index) => {
-  postsList.push(post);
-  postsList[index].user = users.find(user => user.id === post.userId);
-  postsList[index].comments = comments.filter(
+const postsList = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  comments: comments.filter(
     comment => post.id === comment.postId,
-  );
-
-  return post;
-});
+  ),
+}));
 
 const App = () => (
   <div className="App">
@@ -37,7 +33,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <PostList postsList={postsList} />
+    <PostList posts={postsList} />
   </div>
 );
 
