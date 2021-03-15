@@ -6,7 +6,11 @@ import Post from '../Post/Post';
 const PostList = ({ posts }) => (
   <ul className="postList">
     {
-      posts.map(post => (<li key={post.id}><Post postInfo={post} /></li>))
+      posts.map(post => (
+        <li key={post.id}>
+          <Post postInfo={post} />
+        </li>
+      ))
     }
   </ul>
 );

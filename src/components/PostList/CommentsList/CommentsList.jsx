@@ -6,9 +6,11 @@ import './CommentsList.scss';
 const CommentsList = ({ list }) => (
   <ul className="commentsList">
     {
-      list.map(
-        comment => <li key={comment.id}><Comment comments={comment} /></li>,
-      )
+      list.map(comment => (
+        <li key={comment.id}>
+          <Comment comments={comment} />
+        </li>
+      ))
     }
   </ul>
 );
