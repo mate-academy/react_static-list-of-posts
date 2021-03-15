@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
 import './CommentsList.scss';
 
-const CommentsList = props => (
+const CommentsList = ({ list }) => (
   <div className="commentsList">
     {
-      props.list.map(
-        comment => <Comment commentInfo={comment} key={comment.id} />,
-      )
+      list.map(comment => <Comment comments={comment} />)
     }
   </div>
 );

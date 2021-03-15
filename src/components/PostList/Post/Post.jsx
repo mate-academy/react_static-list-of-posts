@@ -1,37 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import comments from '../../../api/comments';
-import CommentsList from '../CommentsList/CommentsList';
+
 import './Post.scss';
-import users from '../../../api/users';
+import CommentsList from '../CommentsList/CommentsList';
 
-const Post = (props) => {
-  const commentUnderPost = comments.filter(
-    id => props.postInfo.id === id.postId,
-  );
-
-  const currentUser = users.find(user => props.postInfo.userId === user.id);
-
-  return (
-    <div className="post">
-      <div className="post__author">
-        <div className="post__author-name">
-          {currentUser.name}
-        </div>
-        <div className="post__author-email">
-          {currentUser.email}
-        </div>
+const Post = ({ postInfo }) => (
+  <div className="post">
+    <div className="post__author">
+      <div className="post__author-name">
+        {postInfo.user.name}
       </div>
-      <div className="post__title">
-        {props.postInfo.title}
+      <div className="post__author-email">
+        {postInfo.user.email}
       </div>
-      <div className="post__text">
-        {props.postInfo.body}
-      </div>
-      <CommentsList list={commentUnderPost} />
     </div>
-  );
-};
+    <div className="post__title">
+      {postInfo.title}
+    </div>
+    <div className="post__text">
+      {postInfo.body}
+    </div>
+    <CommentsList list={postInfo.comments} />
+  </div>
+);
 
 Post.propTypes = {
   postInfo: PropTypes.shape({
@@ -39,6 +30,13 @@ Post.propTypes = {
     id: PropTypes.number.isRequired,
     body: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    }).isRequired,
+    comments: PropTypes.arrayOf(
+      PropTypes.object.isRequired,
+    ).isRequired,
   }).isRequired,
 };
 

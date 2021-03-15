@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Comment.scss';
 
-const Comment = props => (
-  <div className="comment" key={props.commentInfo.id}>
+const Comment = ({ comments }) => (
+  <div className="comment" key={comments.id}>
     <div className="comment__name">
-      {props.commentInfo.name}
+      {comments.name}
     </div>
     <div className="comment__email">
-      {props.commentInfo.email}
+      {comments.email}
     </div>
     <div className="comment__text">
-      {props.commentInfo.body}
+      {comments.body}
     </div>
   </div>
 );
 
 Comment.propTypes = {
-  commentInfo: PropTypes.shape({
+  comments: PropTypes.shape({
     postId: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
