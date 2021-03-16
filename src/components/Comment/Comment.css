@@ -1,0 +1,5 @@
+.comment__title,
+.comment__body,
+.comment__email {
+  padding: 5px;
+}
