@@ -1,0 +1,22 @@
+.Comment {
+  &__author {
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+  }
+
+  &__body {
+    margin: 0;
+  }
+}
