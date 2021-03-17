@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import './PostList.css';
 import { Post } from '../Post';
 
-export function PostList({ postsList }) {
+export function PostList({ posts }) {
   return (
     <ul className="post__list">
-      {postsList.map(post => (
+      {posts.map(post => (
         <li className="post__item" key={post.id}>
           <Post
             title={post.title}
@@ -21,7 +21,7 @@ export function PostList({ postsList }) {
 }
 
 PostList.propTypes = {
-  postsList: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
