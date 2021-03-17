@@ -1,0 +1,33 @@
+
+.post {
+  display: inline-flex;
+  margin-bottom: 40px;
+  padding: 20px;
+
+  background: #f7f4f4;
+  box-shadow: 5px 6px 7px -1px #c9b8d1;
+
+  &__profile-photo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    line-height: 30px;
+    margin-left: 15px;
+  }
+
+  &__comments {
+    margin-left: 15px;
+  }
+
+  &__comment {
+    margin-bottom: 10px;
+    padding: 10px;
+
+    background-color: #f1e8e3;
+    border: 1px solid rgb(212, 196, 207);
+    border-radius: 20px;
+  }
+}
