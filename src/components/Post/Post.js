@@ -1,3 +1,5 @@
+/* eslint max-len: ["error", { "ignoreUrls": true }] */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Post.scss';
@@ -13,7 +15,7 @@ export const Post = ({
 }) => (
   <div className="post">
     <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIltE7CNXgJ95jKIkczNnzcVEbiox9t0c-sg&usqp=CAU"// eslint-disable-line
+      src="https://cdn.iconscout.com/icon/premium/png-512-thumb/adult-2540773-2125237.png"
       alt="user"
       className="post__profile-photo"
     />
