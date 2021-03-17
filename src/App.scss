@@ -1,1 +1,55 @@
 // styles go here
+body {
+  background-color:lightyellow;
+}
+
+.postList {
+  list-style: none;
+}
+
+.post {
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #fff8dc;
+  -webkit-box-shadow: 0px 0px 25px 12px rgba(249, 230, 152, 0.639) inset;
+  -moz-box-shadow: 0px 0px 25px 12px rgba(249, 230, 152, 0.64) inset;
+  box-shadow: 0px 0px 25px 12px rgba(249, 230, 152, 0.64) inset;
+
+  &__title {
+    color:darkslategray;
+  }
+}
+
+.user {
+  &__name {
+    font-weight: 700;
+    color: #2f4f4f;
+  }
+
+  &__email {
+    text-decoration: underline;
+  }
+
+  &__address {
+    font-style: oblique;
+  }
+}
+
+.comments {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: ivory;
+  -webkit-box-shadow: 0px 0px 16px 1px rgba(47, 79, 79, 0.64) inset;
+  -moz-box-shadow: 0px 0px 16px 1px rgba(47, 79, 79, 0.64) inset;
+  box-shadow: 0px 0px 16px 1px rgba(47, 79, 79, 0.64) inset;
+}
+
+.comment {
+  &__name{
+    font-weight: 700;
+  }
+
+  &__email{
+    text-decoration: underline;
+  }
+}
