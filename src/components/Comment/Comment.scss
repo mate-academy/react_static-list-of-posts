@@ -1,0 +1,13 @@
+.comment {
+  background-color: rgba(228, 197, 24, 0.15);
+
+  &__header {
+    font-weight: bold;
+    padding-left: 40px;
+  }
+
+  &__body {
+    width: 85%;
+    padding-left: 40px;
+  }
+}
