@@ -1,0 +1,26 @@
+.User {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 10px 0;
+
+  &__name {
+    margin: 0;
+  }
+
+  &__address {
+    color: #a9a9a9;
+
+    & > * {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  & > * {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
