@@ -7,7 +7,7 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const data = [...posts].map(post => ({
+const data = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.userId),
