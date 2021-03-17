@@ -3,11 +3,11 @@ import React from 'react';
 import { PostList } from './components/PostList';
 import './App.scss';
 
-import posts from './api/posts';
+import postsFromServer from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const allUsersInfo = [...posts].map(post => ({
+const posts = [...postsFromServer].map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.userId),
@@ -16,10 +16,10 @@ const allUsersInfo = [...posts].map(post => ({
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList list={allUsersInfo} />
+    <PostList posts={posts} />
     <p>
       <span>posts: </span>
-      {posts.length}
+      {postsFromServer.length}
     </p>
 
     <p>

@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const posts = [
+const postsFromServer = [
   {
     userId: 1,
     id: 1,
@@ -603,4 +603,4 @@ const posts = [
   },
 ];
 
-export default posts;
+export default postsFromServer;
