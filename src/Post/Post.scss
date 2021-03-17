@@ -1,0 +1,23 @@
+.post {
+  color: #1a1347;
+  background-color: #c4caec;
+  border: 5px solid #1a1347;
+  margin: 10px;
+  padding: 15px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-style: italic;
+    background-color: white;
+    border: 1px solid #1a1347;
+    padding: 10px;
+    text-align: center;
+  }
+}

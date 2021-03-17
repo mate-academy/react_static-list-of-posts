@@ -1,1 +1,12 @@
-// styles go here
+.App {
+  font-family: Georgia, Times, serif;
+  box-sizing: border-box;
+
+  &__title {
+    font-size: 35px;
+    font-weight: 600;
+    color: #1a1347;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,21 @@
+.comment {
+  &__text {
+    font-style: italic;
+    background-color: white;
+    border: 1px solid #1a63fe;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  font-size: 15px;
+  color: #1a63fe;
+
+  &__name {
+    font-weight: 600;
+  }
+}
