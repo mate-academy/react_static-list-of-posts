@@ -1,0 +1,13 @@
+.post {
+  border: 1px solid black;
+}
+
+.post__title,
+.post__body {
+  padding: 10px 10px 5px;
+}
+
+.post__comment {
+  border: 2px dotted black;
+  margin: 10px;
+}
