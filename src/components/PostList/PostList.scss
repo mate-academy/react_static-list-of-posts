@@ -1,0 +1,15 @@
+.post {
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: 500px;
+    background: #f2f2f2;
+    box-shadow: 5px 5px 5px black;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+}
