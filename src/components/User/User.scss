@@ -1,0 +1,26 @@
+.user {
+  display: flex;
+  flex-direction: column;
+
+  width: 250px;
+  padding: 10px 25px 15px;
+
+  font-family: "Arial", sans-serif;
+
+  &__name {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(68, 114, 114);
+  }
+
+  &__email {
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  &__address {
+    font-size: 12px;
+    line-height: 8px;
+    font-weight: 400;
+  }
+}

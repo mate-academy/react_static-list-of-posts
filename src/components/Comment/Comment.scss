@@ -1,0 +1,19 @@
+.comment {
+  font-family: "Roboto", sans-serif;
+  width: 700px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(68, 114, 114);
+  }
+
+  &__content {
+    font-size: 15px;
+  }
+
+  &__email {
+    font-size: 12px;
+    font-style: italic;
+  }
+}
