@@ -1,0 +1,11 @@
+.user {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 18px;
+  color: #6400f0;
+
+  &__name {
+    font-weight: 600;
+  }
+}
