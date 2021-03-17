@@ -1,0 +1,17 @@
+.list {
+  max-width: 40vw;
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  background: rgb(230, 230, 230);
+
+  list-style: disc;
+
+  &__comment {
+    border-bottom: 1px solid black;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}

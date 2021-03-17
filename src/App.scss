@@ -1,1 +1,26 @@
 // styles go here
+.App {
+  max-width: 60vw;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background: rgb(255, 241, 236);
+
+  &__header {
+    margin: 0;
+    line-height: 2;
+    display: inline-block;
+    padding-left: 1em;
+    color: white;
+    background: linear-gradient(90deg, red, white);
+  }
+
+  &__info {
+    padding-left: 2em;
+    font-size: 10px;
+  }
+}
