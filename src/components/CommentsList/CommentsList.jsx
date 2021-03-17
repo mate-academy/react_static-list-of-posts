@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Comment } from '../Comment';
 import './CommentsList.scss';
 
-export const CommentsList = ({ commentsList }) => (
+export const CommentsList = ({ comments }) => (
   <ol className="Comments">
-    {commentsList.map(comment => (
+    {comments.map(comment => (
       <li key={comment.id} className="Comment">
         <Comment
           name={comment.name}
@@ -18,7 +18,7 @@ export const CommentsList = ({ commentsList }) => (
 );
 
 CommentsList.propTypes = {
-  commentsList: PropTypes.arrayOf(PropTypes.shape({
+  comments: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,

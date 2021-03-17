@@ -17,7 +17,7 @@ export const Post = ({ title, body, comments, user }) => (
     <p className="Post__text">
       {body}
     </p>
-    <CommentsList commentsList={comments} />
+    <CommentsList comments={comments} />
   </>
 );
 
