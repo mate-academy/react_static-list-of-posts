@@ -6,7 +6,7 @@ export const Comment = ({ name, body, email }) => (
     <h3>{name}</h3>
     <p>{body}</p>
     <p>
-      <span role="img" aria-label="person emodji">👤: </span>
+      <span role="img" aria-label="person emodji">👤 </span>
       {' '}
       <b>
         commented:
