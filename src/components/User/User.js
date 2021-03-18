@@ -9,9 +9,9 @@ export const User = ({ name, email, address }) => (
       {name}
     </div>
     <div>
+      email:
+      {' '}
       <a href={`mailto:${email}`}>
-        email:
-        {' '}
         {email}
       </a>
     </div>
