@@ -1,10 +1,11 @@
 import React from 'react';
+import './User.scss';
 import PropTypes from 'prop-types';
 
 export const User = ({ user }) => (
-  <ul className="users">
-    <p>{user.name}</p>
-    <p>{user.email}</p>
+  <ul className="post__user user">
+    <li className="user__name">{`name: ${user.name}`}</li>
+    <li className="user__email">{`email: ${user.email}`}</li>
   </ul>
 );
 

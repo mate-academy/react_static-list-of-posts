@@ -5,9 +5,9 @@ import { CommentTypes } from '../../default';
 import './CommentList.scss';
 
 export const CommentList = ({ comment }) => (
-  <div className="comment">
+  <ul className="comment">
     <Comment comments={comment} />
-  </div>
+  </ul>
 );
 
 CommentList.propTypes = {
