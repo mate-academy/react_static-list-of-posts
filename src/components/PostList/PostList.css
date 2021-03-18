@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  justify-content: center;
+}
+
+.post {
+  padding: 20px;
+  background-color: #faebd7;
+  list-style: none;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin: 20px;
+  max-width: 700px;
+}
