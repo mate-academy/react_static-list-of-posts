@@ -6,11 +6,11 @@ export const Comment = ({
   body,
   email,
 }) => (
-  <li>
+  <>
     <p>{name}</p>
     <p>{body}</p>
     <p>{email}</p>
-  </li>
+  </>
 );
 
 Comment.propTypes = {

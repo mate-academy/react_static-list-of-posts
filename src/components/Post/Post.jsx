@@ -15,13 +15,16 @@ export const Post = ({
       <p>{body}</p>
     </div>
 
-    <User {...user} />
+    <User
+      name={user.name}
+      email={user.email}
+      address={user.address}
+    />
     <CommentList comments={comments} />
   </div>
 );
 
 Post.propTypes = {
-  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   user: PropTypes.shape({
