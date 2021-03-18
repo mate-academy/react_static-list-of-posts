@@ -1,1 +1,22 @@
-// styles go here
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F9EE9E;
+}
+
+.App {
+  &__header,
+  &__statistics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  &__statistics {
+    padding-left: 35px;
+
+    &--item {
+      padding-right: 30px;
+    }
+  }
+}

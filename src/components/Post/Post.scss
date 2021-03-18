@@ -1,0 +1,16 @@
+.post {
+  &__body {
+    margin-left: 50px;
+  }
+
+  &__title {
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  &__comments {
+    padding-top: 10px;
+    margin-left: 50px;
+  }
+}

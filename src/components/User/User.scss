@@ -1,0 +1,14 @@
+.user {
+  display: flex;
+  align-items: center;
+
+  &__name,
+  &__address,
+  &__email {
+    padding-left: 10px;
+  }
+
+  &__address {
+    font-style: italic;
+  }
+}
