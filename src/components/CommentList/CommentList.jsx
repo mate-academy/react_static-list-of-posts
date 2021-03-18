@@ -4,9 +4,9 @@ import { Comment } from '../Comment';
 import { CommentTypes } from '../../default';
 import './CommentList.scss';
 
-export const CommentList = ({ comment }) => (
+export const CommentList = ({ comments }) => (
   <ul className="comment">
-    <Comment comments={comment} />
+    <Comment comments={comments} />
   </ul>
 );
 

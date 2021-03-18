@@ -11,8 +11,8 @@ const preparedPosts = posts.map(post => (
   {
     ...post,
 
-    user: users.find(user => user.id === post.userId),
-    comment: comments.filter(comment => comment.postId === post.id),
+    users: users.find(user => user.id === post.userId),
+    comments: comments.filter(comment => comment.postId === post.id),
   }
 ));
 
@@ -34,7 +34,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <PostList post={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 

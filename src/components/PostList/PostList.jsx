@@ -6,10 +6,10 @@ import { CommentList } from '../CommentList';
 import { User } from '../User/index';
 import './PostList.scss';
 
-export function PostList({ post }) {
+export function PostList({ posts }) {
   return (
     <ul className="post__list">
-      {post.map(item => (
+      {posts.map(item => (
         <li
           key={item.id}
           className="post__item"
@@ -18,8 +18,8 @@ export function PostList({ post }) {
             title={item.title}
             body={item.body}
           />
-          <User user={item.user} />
-          <CommentList comment={item.comment} />
+          <User user={item.users} />
+          <CommentList comments={item.comments} />
         </li>
       ))}
     </ul>
