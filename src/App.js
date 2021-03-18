@@ -7,7 +7,7 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './Components/PostList/PostList';
 
-const prepearingPosts = (
+const preparedPosts = (
   posts.map(post => ({
     ...post,
     user: users.find(user => post.userId === user.id),
@@ -33,7 +33,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <PostList posts={prepearingPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 
