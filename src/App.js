@@ -6,23 +6,16 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const commonPostsObject = posts.map((post) => {
-  const user = users.find(human => human.id === post.userId);
-  const postCopy = Object.assign({}, post);
-  const commentsToPost
-   = comments.filter(comment => comment.postId === post.userId);
-
-  return {
-    user,
-    postCopy,
-    commentsToPost,
-  };
-});
+const commonPostsObject = posts.map(post => ({
+  ...post,
+  user: users.find(human => human.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList props={commonPostsObject} />
+    <PostList posts={commonPostsObject} />
   </div>
 );
 

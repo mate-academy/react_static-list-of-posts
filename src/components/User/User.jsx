@@ -2,14 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './User.scss';
 
-export const User = ({props}) => (
+export const User = ({ props }) => (
   <>
     <p className="user">
       <span className="user--data">
-        {props.name} | {props.email} |
+        {props.name}
+        {' '}
+        |
+        {props.email}
+        {' '}
+        |
       </span>
-      <br/>
-      {`City: ${props.address.city} |Street: ${props.address.street}`} / {props.address.zipcode} / {props.address.suite}
+      <br />
+      {`City: ${props.address.city} |Street: ${props.address.street}`}
+      {' '}
+      /
+      {props.address.zipcode}
+      {' '}
+      /
+      {props.address.suite}
     </p>
   </>
 );
@@ -24,5 +35,5 @@ User.propTypes = {
       city: PropTypes.string.isRequired,
       zipcode: PropTypes.string.isRequired,
     }),
-}),
-}
+  }),
+};

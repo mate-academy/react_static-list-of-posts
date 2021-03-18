@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Comment} from '../Comment/Comment';
+import { Comment } from '../Comment/Comment';
 import './Comment.scss';
 
-export const CommentList = ({props}) => (
+export const CommentList = ({ comments }) => (
   <>
     <div className="comments">
-      {props.map(comment => (
+      {comments.map(comment => (
         <>
-          {console.log(comment)}
-          <Comment props={comment} />
+          <Comment comment={comment} key={comment.id} />
         </>
       ))}
-      <br/>
+      <br />
     </div>
   </>
 );
 
 CommentList.propTypes = {
-  props: PropTypes.array,
-}
+  comments: PropTypes.array,
+};

@@ -1,35 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Post} from '../Post/Post';
+import { Post } from '../Post/Post';
 
 import './PostList.scss';
 
-export const PostList = ({props}) => (
+export const PostList = ({ posts }) => (
   <>
     <div className="postList">
-      {props.map(post => {
-        const {user, commentsToPost, postCopy} = post;
+      {posts.map((post) => {
+        const { user, comments} = post;
+        const postProperties = {};
+        postProperties.userId = post.userId;
+        postProperties.id = post.id;
+        postProperties.title = post.title;
+        postProperties.body = post.body;
+
         return (
           <Post
             user={user}
-            commentsToPost={commentsToPost}
-            postCopy={postCopy}
+            comments={comments}
+            post={postProperties}
+            key={post.id}
           />
-        )})}
-      <br/>
+        );
+      })}
+      <br />
     </div>
   </>
 );
 
 PostList.propTypes = {
-  props: PropTypes.array//Of({
-    // commentsToPost: PropTypes.array,
-    // user: PropTypes.shape({
-    //   name: PropTypes.string.isRequired,
-    // }),
-    // postCopy:PropTypes.shape({
-    //   body: PropTypes.string.isRequired,
-    //   title: PropTypes.string.isRequired,
-    // })
-  //}),
-}
+  posts: PropTypes.array,
+};
