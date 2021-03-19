@@ -13,7 +13,11 @@ export const Post = ({
   <div className="list__container">
     <h3>{title}</h3>
     <p>{body}</p>
-    <User {...user} />
+    <User
+      name={user.name}
+      email={user.email}
+      address={user.address}
+    />
     <CommentList comments={comments} />
   </div>
 );
