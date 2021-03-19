@@ -5,7 +5,7 @@ import { CommentTypes } from '../../default';
 import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
-  <ul className="comment">
+  <ul key={comments.id} className="comment">
     <Comment comments={comments} />
   </ul>
 );

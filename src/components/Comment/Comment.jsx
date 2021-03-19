@@ -5,9 +5,9 @@ export const Comment = ({ comments }) => (
   <>
     {comments.map(comment => (
       <>
-        <li key={comment.id} className="comment__name">{comment.name}</li>
-        <li key={comment.id} className="comment__body">{comment.body}</li>
-        <li key={comment.id} className="comment__email">{comment.email}</li>
+        <li className="comment__name">{comment.name}</li>
+        <li className="comment__body">{comment.body}</li>
+        <li className="comment__email">{comment.email}</li>
       </>
     ))}
   </>
