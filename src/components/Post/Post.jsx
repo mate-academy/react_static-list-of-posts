@@ -5,30 +5,26 @@ import { CommentList } from '../CommentList/CommentList';
 
 import './Post.scss';
 
-export const Post = ({
-  user,
-  comments,
-  post,
-}) => (
+export const Post = ({post}) => (
   <div className="post">
-    <User props={user} />
+    <User props={post.user} />
     <hr />
     <h2 className="post__header">{post.title}</h2>
     <p className="post__message">{post.body}</p>
     <div className="comment">
-      <CommentList comments={comments} />
+      <CommentList comments={post.comments} />
     </div>
     <hr />
   </div>
 );
 
 Post.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-  }),
-  comments: PropTypes.array,
-  postCopy: PropTypes.shape({
+  post: PropTypes.shape({
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    }),
+    comments: PropTypes.array,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
   }),

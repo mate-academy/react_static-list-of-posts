@@ -7,23 +7,12 @@ import './PostList.scss';
 export const PostList = ({ posts }) => (
   <>
     <div className="postList">
-      {posts.map((post) => {
-        const { user, comments} = post;
-        const postProperties = {};
-        postProperties.userId = post.userId;
-        postProperties.id = post.id;
-        postProperties.title = post.title;
-        postProperties.body = post.body;
-
-        return (
+    {posts.map((post) => (
           <Post
-            user={user}
-            comments={comments}
-            post={postProperties}
+            post={post}
             key={post.id}
           />
-        );
-      })}
+    ))}
       <br />
     </div>
   </>
