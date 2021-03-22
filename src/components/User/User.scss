@@ -2,4 +2,10 @@
   &--data {
     border-bottom: 1px dashed #000;
   }
+
+  &--image {
+    height: 100px;
+    width: 100px;
+    float: left;
+  }
 }

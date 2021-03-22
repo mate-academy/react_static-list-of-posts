@@ -5,18 +5,19 @@ import './Comment.scss';
 export const Comment = ({ comment }) => (
   <div className="comment">
     <p className="comment__header">
-      $
-      {comment.name}
-      {' '}
-      /
+      <img 
+          src="https://shorturl.at/bBV25"
+          alt="user"
+          className="comment--image"
+        />
+      {` ${comment.name} / `}
+      <br />
       <a href="#">
-        $
         {comment.email}
       </a>
     </p>
     <br />
     <p className="comment__body">
-      : $
       {comment.body}
     </p>
     <hr />

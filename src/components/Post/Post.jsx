@@ -24,7 +24,12 @@ Post.propTypes = {
       name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
     }),
-    comments: PropTypes.array,
+    comments: PropTypes.arrayOf(
+      PropTypes.shape({
+        body: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+      })
+    ),
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
   }),

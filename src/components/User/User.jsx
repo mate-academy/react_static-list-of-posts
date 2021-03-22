@@ -5,22 +5,18 @@ import './User.scss';
 export const User = ({ props }) => (
   <>
     <p className="user">
+      <img 
+        src="https://shorturl.at/bBV25"
+        alt="user"
+        className="user--image"
+      />
       <span className="user--data">
-        {props.name}
-        {' '}
-        |
-        {props.email}
-        {' '}
-        |
+        {`${props.name} | ${props.email} `}
       </span>
       <br />
-      {`City: ${props.address.city} |Street: ${props.address.street}`}
-      {' '}
-      /
-      {props.address.zipcode}
-      {' '}
-      /
-      {props.address.suite}
+      <br />
+      {`City: ${props.address.city} | Street: ${props.address.street}`}
+      {` / ${props.address.zipcode} / ${props.address.suite} `}
     </p>
   </>
 );
