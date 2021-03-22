@@ -1,0 +1,19 @@
+.comment {
+  padding: 10px;
+  list-style: none;
+
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+  }
+
+  &__email {
+    font-size: 12px;
+    font-style: italic;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+  }
+}
