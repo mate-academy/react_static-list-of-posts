@@ -1,11 +1,11 @@
 import React from 'react';
 import { CommentTypes } from '../../default';
 
-export const Comment = ({ name, body, email, id }) => (
+export const Comment = ({ name, body, email}) => (
   <>
-    <li key={id} className="comment__name">{name}</li>
-    <li key={id} className="comment__body">{body}</li>
-    <li key={id} className="comment__email">{email}</li>
+    <li className="comment__name">{name}</li>
+    <li className="comment__body">{body}</li>
+    <li className="comment__email">{email}</li>
   </>
 );
 

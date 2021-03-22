@@ -9,19 +9,20 @@ import './PostList.scss';
 export function PostList({ posts }) {
   return (
     <ul className="post__list">
-      {posts.map(item => (
+      {posts.map(post => (
         <li
-          key={item.id}
+          key={post.id}
           className="post__item"
         >
           <Post
-            title={item.title}
-            body={item.body}
+            title={post.title}
+            body={post.body}
           />
-          <User user={item.users} />
-          <CommentList comments={item.comments} />
+          <User user={post.users} />
+          <CommentList comments={post.comments} />
         </li>
       ))}
+
     </ul>
   );
 }
