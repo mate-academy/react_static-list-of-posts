@@ -5,7 +5,7 @@ import { CommentList } from '../CommentList/CommentList';
 
 import './Post.scss';
 
-export const Post = ({post}) => (
+export const Post = ({ post }) => (
   <div className="post">
     <User props={post.user} />
     <hr />

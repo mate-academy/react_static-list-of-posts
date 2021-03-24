@@ -6,7 +6,7 @@ export const User = ({ props }) => (
   <>
     <p className="user">
       <img 
-        src="https://shorturl.at/bBV25"
+        src="https://rebrand.ly/o4ky5oo"
         alt="user"
         className="user--image"
       />

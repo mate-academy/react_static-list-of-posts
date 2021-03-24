@@ -6,7 +6,7 @@ export const Comment = ({ comment }) => (
   <div className="comment">
     <p className="comment__header">
       <img 
-          src="https://shorturl.at/bBV25"
+          src="https://rebrand.ly/o4ky5oo"
           alt="user"
           className="comment--image"
         />

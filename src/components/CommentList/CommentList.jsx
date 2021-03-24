@@ -7,9 +7,7 @@ export const CommentList = ({ comments }) => (
   <>
     <div className="comments">
       {comments.map(comment => (
-        <>
-          <Comment comment={comment} key={comment.id} />
-        </>
+        <Comment comment={comment} key={comment.id} />
       ))}
       <br />
     </div>
@@ -17,5 +15,10 @@ export const CommentList = ({ comments }) => (
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.array,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      body: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    })
+  ),
 };
