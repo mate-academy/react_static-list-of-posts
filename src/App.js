@@ -1,10 +1,11 @@
 import React from 'react';
-
 import './App.scss';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+
+import { PostList } from './components/PostList';
 
 const App = () => (
   <div className="App">
@@ -24,6 +25,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+    <PostList />
   </div>
 );
 
