@@ -17,6 +17,7 @@ export const Post = ({
       <div className="post__info">
         <p className="post__info-title">
           Theme:
+          {' '}
           {title}
         </p>
         <p className="post__info-text">{body}</p>

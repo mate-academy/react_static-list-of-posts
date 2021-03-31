@@ -22,6 +22,7 @@ export const Comment = ({ name, body, email }) => (
     <div className="comments__body">
       <div className="comments__body-name">
         Theme:
+        {' '}
         {name}
       </div>
       <div className="comments__body-text">{body}</div>
