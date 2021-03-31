@@ -1,0 +1,21 @@
+.post {
+  display: flex;
+  border: 1px solid #ccc;
+
+  &__info {
+
+    &-title {
+      font-weight: bold;
+      font-size: 25px;
+      padding-left: 50px;
+      padding-bottom: 10px;
+    }
+
+    &-text {
+      padding-left: 40px;
+      font-size: 20px;
+      width: 950px;
+
+    }
+  }
+}

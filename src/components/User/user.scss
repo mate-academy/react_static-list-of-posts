@@ -1,0 +1,26 @@
+.user {
+  padding: 15px;
+  border-right: 1px solid #ccc;
+  width: 170px;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  &__name {
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  &__email {
+    margin: 0;
+  }
+
+  &__city {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
