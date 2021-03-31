@@ -1,0 +1,19 @@
+.Post {
+  margin: 15px;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+  background-color: rgb(109, 120, 136);
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.Post__title {
+  font-size: 30px;
+  text-decoration: underline;
+  text-align: justify;
+}
+
+.Post__body {
+  font-size: 22px;
+}
