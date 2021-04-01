@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = ({ name, email, address }) => (
+export const User = ({
+  name,
+  email,
+  address,
+}) => (
   <div className="user">
     <strong className="user__name">{name}</strong>
     <p>{email}</p>

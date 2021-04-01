@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Comment = ({ name, body, email }) => (
+export const Comment = ({
+  name,
+  body,
+  email,
+}) => (
   <div className="text">
     <h3>{name}</h3>
     <p>{body}</p>

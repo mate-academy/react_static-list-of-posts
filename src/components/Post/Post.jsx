@@ -5,7 +5,12 @@ import { CommentList } from '../CommentList';
 import { CommentShape, UserShape } from '../../types';
 import './Post.scss';
 
-export const Post = ({ user, title, body, comment }) => (
+export const Post = ({
+  user,
+  title,
+  body,
+  comment,
+}) => (
   <div className="post">
     <h2 className="post__title">{title}</h2>
     <p className="post__subtitle">{body}</p>
