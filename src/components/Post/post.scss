@@ -1,0 +1,21 @@
+.post {
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(16, 156, 79);
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    color: rgb(157, 40, 192);
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

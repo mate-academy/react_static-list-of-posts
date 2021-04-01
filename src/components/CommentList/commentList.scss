@@ -1,0 +1,20 @@
+.commentList {
+  list-style-type: none;
+  counter-reset: num;
+
+  &__element {
+    position: relative;
+
+    &::before {
+      font-size: 20px;
+      content: counter(num) "  )";
+      counter-increment: num;
+      color: rgb(6, 3, 185);
+      font-style: italic;
+      position: absolute;
+      top: 70px;
+      left: -30px;
+    }
+
+  }
+}

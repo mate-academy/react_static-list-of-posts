@@ -1,0 +1,20 @@
+.user {
+
+  &__name {
+    font-size: 22px;
+    font-weight: 800;
+    color: rgb(145, 112, 5);
+  }
+
+  &__email {
+    font-size: 20px;
+    color: rgb(204, 18, 18);
+    cursor: pointer;
+  }
+
+  &__address {
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(15, 105, 50);
+  }
+}
