@@ -1,1 +1,15 @@
-// styles go here
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f0f2ff;
+}
+
+.app {
+  &__title {
+    font-size: 48px;
+    text-align: center;
+  }
+  &__info {
+    font-size: 24px;
+    text-align: center;
+  }
+}
