@@ -8,18 +8,11 @@ import users from './api/users';
 
 import { PostList } from './components/PostList';
 
-const preparePosts = [];
-
-posts.forEach((post) => {
-  const postItem = post;
-
-  postItem.user = users
-    .find(user => user.id === postItem.userId);
-  postItem.usersComments = comments
-    .filter(comment => comment.postId === postItem.id);
-
-  preparePosts.push(postItem);
-});
+const preparePosts = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  usersComments: comments.filter(comment => comment.postId === post.id),
+}));
 
 const App = () => (
   <>

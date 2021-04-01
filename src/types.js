@@ -5,7 +5,7 @@ export const PostShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-});
+}).isRequired;
 
 export const CommentShape = PropTypes.shape({
   postId: PropTypes.number.isRequired,
@@ -13,7 +13,7 @@ export const CommentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-});
+}).isRequired;
 
 export const UserShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -33,4 +33,4 @@ export const UserShape = PropTypes.shape({
   company: PropTypes.object.isRequired,
   phone: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
-});
+}).isRequired;
