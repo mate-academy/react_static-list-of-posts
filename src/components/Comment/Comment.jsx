@@ -2,7 +2,11 @@ import React from 'react';
 import { commentType } from '../../types';
 import './Comment.scss';
 
-export const Comment = ({ body, name, email }) => (
+export const Comment = ({
+  body,
+  name,
+  email,
+}) => (
   <li className="comment">
     <h4>
       {name}

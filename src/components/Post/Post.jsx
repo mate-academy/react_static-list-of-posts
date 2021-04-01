@@ -4,7 +4,12 @@ import { User } from '../User';
 import { postType } from '../../types';
 import './Post.scss';
 
-export const Post = ({ title, body, user, comments }) => (
+export const Post = ({
+  title,
+  body,
+  user,
+  comments,
+}) => (
   <li className="post-list__item post">
     <User {...user} />
     <h2 className="post__title">{title}</h2>
