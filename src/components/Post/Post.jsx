@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Post.scss';
-import { Comment } from '../Comment'
+import { CommentsList } from '../CommentsList'
 
 export const Post = ({
   title,
@@ -40,12 +40,7 @@ export const Post = ({
         {body[0].toUpperCase() + body.slice(1)}
       </p>
     </div>
-    <div className='post__comments'>
-      <h3>Comments:</h3>
-      {comments.map(comment => (
-        <Comment key={comment.id} {...comment} />
-      ))}
-    </div>
+    <CommentsList comments={comments} />
   </div>
 )
 }
