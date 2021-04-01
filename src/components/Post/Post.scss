@@ -1,0 +1,18 @@
+.post {
+  border: 1px solid black;
+  width: 50%;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  &__heading {
+    padding: 10px;
+    background-color: #5193ba;
+  }
+  &__body {
+    padding: 10px;
+  }
+  &__comments {
+    padding: 10px;
+    border: 1px solid black;
+  }
+}
