@@ -1,13 +1,20 @@
 import React from 'react';
 
-import './App.scss';
-
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import { PostList } from './components/PostList';
 
-const App = () => (
-  <div className="App">
+import './app.scss';
+
+const postList = posts.map(post => ({
+  ...post,
+  user: users.find(user => post.userId === user.id),
+  comment: comments.filter(comment => comment.postId === post.id),
+}));
+
+export const App = () => (
+  <div className="app">
     <h1>Static list of posts</h1>
 
     <p>
@@ -24,7 +31,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <PostList posts={postList} />
   </div>
 );
-
-export default App;
