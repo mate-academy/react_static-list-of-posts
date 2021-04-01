@@ -18,13 +18,11 @@ export const User = ({
     <strong className="user__name">{name}</strong>
     <p className="user__email">
       <strong>Login:</strong>
-      {' '}
-      {email}
+      {` ${email}`}
     </p>
     <p className="user__city">
       <strong>City:</strong>
-      {' '}
-      {address.city}
+      {` ${address.city}`}
     </p>
   </div>
 );

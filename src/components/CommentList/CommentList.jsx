@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import './commentList.scss';
 import { Comment } from '../Comment/Comment';
+import { commentType } from '../../types';
 
 export const CommentList = ({ comments }) => (
   <div className="comment-list">
@@ -18,9 +19,5 @@ export const CommentList = ({ comments }) => (
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
+  comments: PropTypes.arrayOf(commentType).isRequired,
 };

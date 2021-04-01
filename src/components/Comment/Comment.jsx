@@ -15,15 +15,12 @@ export const Comment = ({ name, body, email }) => (
       </div>
       <div className="comments__profile-email">
         <strong>Login:</strong>
-        {' '}
-        {email}
+        {` ${email}`}
       </div>
     </div>
     <div className="comments__body">
       <div className="comments__body-name">
-        Theme:
-        {' '}
-        {name}
+        {`Theme: ${name}`}
       </div>
       <div className="comments__body-text">{body}</div>
     </div>
