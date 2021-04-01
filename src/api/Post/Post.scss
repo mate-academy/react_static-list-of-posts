@@ -1,18 +1,19 @@
 
 .title {
-  margin: 0px 0px 0px 10px;
+  margin: 0 0 0 10px;
   color: black;
   font-size: large;
   font-weight: bold;
   text-decoration: underline;
 }
+
 .postBody {
   padding: 5px;
   background-color: blanchedalmond;
   word-wrap: break-word;
   border-radius: 4px;
   border: black solid;
-  border-width: 0px 0px 0px 5px;
+  border-width: 0 0 0 5px;
   color: black;
 }
 
@@ -21,8 +22,8 @@
 }
 
 .postFrame {
-  font-family: 'Hack';
-  padding: 0px 40px 0px 10px;
+  font-family: "Hack";
+  padding: 0 40px 0 10px;
   background-color: lightyellow;
   width: 500px;
   height: auto;

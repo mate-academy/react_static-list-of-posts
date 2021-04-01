@@ -7,7 +7,9 @@ import { Comment } from '../Comment';
 export const CommentList = ({ postId }) => (
   <ul>
     {comments.filter(a => (a.postId === postId)).map(a => (
-      <li><Comment comment={a} /></li>
+      <li>
+        <Comment comment={a} />
+      </li>
     ))}
   </ul>
 );

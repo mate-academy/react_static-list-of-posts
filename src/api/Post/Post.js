@@ -8,7 +8,14 @@ import users from '../users';
 export const Post = ({ post }) => {
   const { title, body, userId, id } = post;
   const user = users.find(u => u.id === userId);
-  const { name, email, address } = user;
+
+  const preparedPost = {
+    user,
+    comments: CommentList(id),
+    content: {
+      title, body,
+    },
+  };
 
   return (
     <>
@@ -22,14 +29,16 @@ export const Post = ({ post }) => {
           </text>
         </div>
         <div>
-          <text>{`Name: ${name}`}</text>
+          <text>{`Name: ${preparedPost.user.name}`}</text>
           <br />
           <text className="userInfo">
-            {`Address: ${address.city}, ${address.street}`}
+            Address:
+            {`${preparedPost.user.address.city}, ${
+              preparedPost.user.address.street}`}
           </text>
           <br />
           <footer className="userInfo">
-            {email}
+            {preparedPost.user.email}
           </footer>
         </div>
       </div>
