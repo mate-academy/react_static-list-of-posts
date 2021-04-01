@@ -1,0 +1,18 @@
+.comment {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    opacity: 0.5;
+    bottom: -10px;
+  }
+
+  &__email {
+    font-style: italic;
+    opacity: 0.8;
+  }
+}

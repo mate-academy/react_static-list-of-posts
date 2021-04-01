@@ -1,0 +1,18 @@
+.post-list__item {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.post {
+  padding: 20px;
+
+  &__title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  &__paragraph {
+    font-size: 20px;
+  }
+}
