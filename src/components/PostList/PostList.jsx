@@ -15,9 +15,11 @@ export const PostList = () => (
   <>
     <div className="PostList">
       {preparedforPosting.map(item => (
-        <div key={item.id}>
-          <Post {...item} />
-        </div>
+        <ul>
+          <li key={item.id}>
+            <Post {...item} />
+          </li>
+        </ul>
       ))}
     </div>
   </>
