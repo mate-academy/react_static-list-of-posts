@@ -7,10 +7,10 @@ export const Comment = ({
   body,
   email,
 }) => (
-  <div className="Comment">
-    <p className="Comment__name">{name}</p>
-    <p className="Comment__body">{body}</p>
-    <p className="Comment__email">{email}</p>
+  <div className="comment">
+    <p className="comment__name">{name}</p>
+    <p className="comment__body">{body}</p>
+    <p className="comment__email">{email}</p>
   </div>
 );
 

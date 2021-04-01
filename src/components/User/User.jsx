@@ -7,7 +7,7 @@ export const User = ({
   email,
   address,
 }) => (
-  <p className="Post__user user">
+  <p className="post__user">
     {`${name} from ${address.city}\n`}
     {email}
   </p>

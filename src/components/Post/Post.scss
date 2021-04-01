@@ -1,4 +1,4 @@
-.Post {
+.post {
   margin: 15px;
   padding: 30px;
   border-radius: 30px;
@@ -6,14 +6,12 @@
   background-color: rgb(109, 120, 136);
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.Post__title {
-  font-size: 30px;
-  text-decoration: underline;
-  text-align: justify;
-}
-
-.Post__body {
-  font-size: 22px;
+  &__title {
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: justify;
+  }
+  &__body {
+    font-size: 22px;
+  }
 }
