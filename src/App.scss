@@ -1,1 +1,28 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e4f0f3d6;
+
+  &__title {
+    padding: 30px 20px 0;
+    text-align: center;
+  }
+}

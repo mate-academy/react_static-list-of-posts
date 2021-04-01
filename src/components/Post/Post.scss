@@ -1,0 +1,32 @@
+.post {
+  padding-bottom: 10px;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px 0;
+  }
+
+  &__content {
+    font-size: 30px;
+    background-color: cornsilk;
+    padding: 20px 30px;
+    text-align: justify;
+    border: outset;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__user-info {
+    font-size: 15px;
+    padding: 20px 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__comments-list {
+    margin-top: 20px;
+  }
+}
