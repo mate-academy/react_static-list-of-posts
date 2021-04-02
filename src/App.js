@@ -7,7 +7,7 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList/PostList';
 
-const postComponent = posts.map(post => ({
+const postComponents = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.id),
@@ -31,7 +31,7 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
-    <PostList list={postComponent} />
+    <PostList list={postComponents} />
   </div>
 );
 

@@ -7,7 +7,7 @@
 
     &::before {
       font-size: 20px;
-      content: counter(num) "  )";
+      content: counter(num) " )";
       counter-increment: num;
       color: rgb(6, 3, 185);
       font-style: italic;
