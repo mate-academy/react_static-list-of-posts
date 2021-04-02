@@ -10,20 +10,20 @@ export const Post = ({
   title,
   body,
   user,
-  usersComments,
+  comments,
 }) => (
   <div className="Post">
     <h2 className="Post__title">{title}</h2>
     <p className="Post__body">{body}</p>
 
     <User {...user} />
-    <CommentList list={usersComments} />
+    <CommentList comments={comments} />
   </div>
 );
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(UserShape).isRequired,
-  usersComments: PropTypes.arrayOf(CommentShape).isRequired,
+  user: UserShape,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
 };
