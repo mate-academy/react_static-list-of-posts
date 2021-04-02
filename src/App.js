@@ -16,16 +16,16 @@ function getAddress(user) {
 
 const preparedPosts = posts.map((post) => {
   const user = users.find(person => person.id === post.userId);
+  const address = getAddress(user);
 
-  const postClone = { ...post };
-
-  postClone.user = {
-    username: user.name, email: user.email, address: getAddress(user),
-  };
-
-  postClone.comments = comments.filter(comment => comment.postId === post.id);
-
-  return postClone;
+  return ({
+    ...post,
+    user: {
+      ...user,
+      address,
+    },
+    comments: comments.filter(comment => comment.postId === post.id),
+  });
 });
 
 const App = () => (
