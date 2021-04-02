@@ -1,0 +1,32 @@
+.post {
+  color: gray;
+  border-radius: 10px;
+  margin: 70px 0;
+  padding: 30px;
+
+  &__heading {
+    color: #474747;
+    font-size: 48px;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__subheading {
+    font-size: 30px;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__user-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__email {
+    color: #2d1cfa;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

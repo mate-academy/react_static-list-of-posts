@@ -1,0 +1,33 @@
+.comment-list {
+  &__comment {
+    margin-top: 40px;
+    text-align: left;
+    padding: 10px;
+    background: lightgrey;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 gray;
+  }
+
+  &__id,
+  &__name {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__body {
+    color: darkolivegreen;
+    margin: 5px 0 15px;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__email {
+    color: #2d1cfa;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
