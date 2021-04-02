@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import './post.scss';
 import { CommentList } from '../CommentList/CommentList';
 import { User } from '../User/User';
-import { userTypes, commentType } from '../../types';
+import { userType, commentType } from '../../types';
 
 export const Post = ({
   title,
   body,
   user,
-  usersComments,
+  comments,
 }) => (
   <>
     <div className="post">
@@ -22,13 +22,13 @@ export const Post = ({
         <p className="post__info-text">{body}</p>
       </div>
     </div>
-    <CommentList comments={usersComments} />
+    <CommentList comments={comments} />
   </>
 );
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: userTypes,
-  usersComments: PropTypes.arrayOf(commentType).isRequired,
+  user: userType,
+  comments: PropTypes.arrayOf(commentType).isRequired,
 };

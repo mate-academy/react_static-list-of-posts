@@ -7,7 +7,7 @@ export const commentType = PropTypes.shape({
   id: PropTypes.number.isRequired,
 });
 
-export const userTypes = PropTypes.shape({
+export const userType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   address: PropTypes.shape({
@@ -15,10 +15,10 @@ export const userTypes = PropTypes.shape({
   }).isRequired,
 }).isRequired;
 
-export const postTypes = PropTypes.shape({
+export const postType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: userTypes,
+  user: userType,
   userComment: PropTypes.arrayOf(commentType).isRequired,
 });
