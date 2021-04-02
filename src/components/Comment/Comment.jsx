@@ -7,13 +7,11 @@ export const Comment = ({ name, body, email }) => (
     <div className="userInfo">
       <p>
         <strong>User:</strong>
-        {' '}
-        {name}
+        {`  ${name}`}
       </p>
       <p>
         <strong>Email:</strong>
-        {' '}
-        {email}
+        {` ${email}`}
       </p>
     </div>
     <p className="subtitle is-4">{body}</p>

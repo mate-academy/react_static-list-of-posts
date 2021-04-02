@@ -14,42 +14,40 @@ function getAddress(user) {
   return addressFields.join(', ');
 }
 
-const App = () => {
-  const preparedPosts = posts.map((post) => {
-    const user = users.find(person => person.id === post.userId);
+const preparedPosts = posts.map((post) => {
+  const user = users.find(person => person.id === post.userId);
 
-    const postClone = { ...post };
+  const postClone = { ...post };
 
-    postClone.user = {
-      username: user.name, email: user.email, address: getAddress(user),
-    };
+  postClone.user = {
+    username: user.name, email: user.email, address: getAddress(user),
+  };
 
-    postClone.comments = comments.filter(comment => comment.postId === post.id);
+  postClone.comments = comments.filter(comment => comment.postId === post.id);
 
-    return postClone;
-  });
+  return postClone;
+});
 
-  return (
-    <div className="App">
-      <h1 className="title is-1 centered">Static list of posts</h1>
+const App = () => (
+  <div className="App">
+    <h1 className="title is-1 centered">Static list of posts</h1>
 
-      <p className="subtitle is-3 centered">
-        <span>posts: </span>
-        {posts.length}
-      </p>
+    <p className="subtitle is-3 centered">
+      <span>posts: </span>
+      {posts.length}
+    </p>
 
-      <p className="subtitle is-3 centered">
-        <span>comments: </span>
-        {comments.length}
-      </p>
+    <p className="subtitle is-3 centered">
+      <span>comments: </span>
+      {comments.length}
+    </p>
 
-      <p className="subtitle is-3 centered">
-        <span>Users: </span>
-        {users.length}
-      </p>
-      <PostList posts={preparedPosts} />
-    </div>
-  );
-};
+    <p className="subtitle is-3 centered">
+      <span>Users: </span>
+      {users.length}
+    </p>
+    <PostList posts={preparedPosts} />
+  </div>
+);
 
 export default App;
