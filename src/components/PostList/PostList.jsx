@@ -6,21 +6,24 @@ import users from '../../api/users';
 
 import { Post } from '../Post';
 
-posts.forEach(item => (item.author = users.find(user => user.id === item.userId)));
-posts.forEach(item => (item.comments = comments.filter(comment => comment.postId=== item.id)));
+posts.map(item => (
+  item.author = users.find(user => user.id === item.userId)
+));
+
+posts.map(item => (
+  item.comments = comments.filter(comment => comment.postId === item.id)
+));
+
 const preparedforPosting = [...posts];
-console.log(preparedforPosting)
 
 export const PostList = () => (
-  <>
-    <div className="PostList">
+  <div className="PostList">
+    <ul>
       {preparedforPosting.map(item => (
-        <ul>
-          <li key={item.id}>
-            <Post {...item} />
-          </li>
-        </ul>
+        <li key={item.id}>
+          <Post {...item} />
+        </li>
       ))}
-    </div>
-  </>
+    </ul>
+  </div>
 );

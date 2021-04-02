@@ -1,8 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const User = ({name, email, address}) => (
-  <p>{name} / {email} / {address.city} {address.street} {address.suite}</p>
+export const User = ({ name, email, address }) => (
+  <p>
+    {name}
+    /
+    {email}
+    /
+    {address.city}
+    {address.street}
+    {address.suite}
+  </p>
 );
 
 export const userType = {
@@ -12,7 +20,7 @@ export const userType = {
     city: PropTypes.string.isRequired,
     street: PropTypes.string.isRequired,
     suite: PropTypes.string.isRequired,
-    }).isRequired,
-}
+  }).isRequired,
+};
 
 User.propTypes = userType;
