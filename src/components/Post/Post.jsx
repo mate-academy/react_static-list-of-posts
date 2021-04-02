@@ -2,7 +2,7 @@ import React from 'react';
 
 import { User } from '../User';
 import { CommentList } from '../CommentList';
-import { postsType } from '../../Types/postsType';
+import { postType } from '../../types/postsType';
 
 import './Post.scss';
 
@@ -21,4 +21,4 @@ export const Post = ({ title, body, user, comments }) => {
   );
 };
 
-Post.propTypes = postsType;
+Post.propTypes = postType.isRequired;

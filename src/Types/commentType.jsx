@@ -6,4 +6,4 @@ export const commentType = PropTypes.shape({
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-}).isRequired;
+});

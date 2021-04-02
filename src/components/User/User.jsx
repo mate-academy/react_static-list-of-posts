@@ -1,5 +1,5 @@
 import React from 'react';
-import { userType } from '../../Types/userType';
+import { userType } from '../../types/userType';
 
 export const User = ({ name, email, address }) => {
   const { city, street, suite } = address;
@@ -22,4 +22,4 @@ export const User = ({ name, email, address }) => {
   );
 };
 
-User.propTypes = userType;
+User.propTypes = userType.isRequired;
