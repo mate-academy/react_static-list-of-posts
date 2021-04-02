@@ -1,0 +1,14 @@
+.comments-list {
+  list-style: none;
+  margin: 0;
+
+  &__comment {
+    border: outset;
+    border-radius: 20px;
+    background-color: cornsilk;
+    margin: 10px 40px 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

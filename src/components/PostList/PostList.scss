@@ -1,0 +1,10 @@
+.posts-list {
+  max-width: 1000px;
+
+  &__post {
+    margin: 50px;
+    background-color: #b7c1b4b3;
+    border-radius: 50px;
+    box-shadow: 0 0 18px 9px #7c675d;
+  }
+}
