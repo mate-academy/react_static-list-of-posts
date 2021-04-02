@@ -1,0 +1,8 @@
+.Post-list {
+  padding: 20px;
+  margin: 0;
+  &__item {
+    border-bottom: 3px solid black;
+    list-style: none;
+  }
+}

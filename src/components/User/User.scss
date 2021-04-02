@@ -1,0 +1,11 @@
+.User {
+  width: 350px;
+  padding: 15px;
+  background-color: cadetblue;
+  border-radius: 20px;
+  color: #fff;
+
+  &__address {
+    margin-bottom: 0;
+  }
+}

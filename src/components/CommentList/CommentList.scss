@@ -1,0 +1,10 @@
+.Comment-list {
+  list-style: none;
+  padding: 0;
+
+  &__comment {
+    background-color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+  }
+}
