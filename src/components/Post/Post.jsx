@@ -5,18 +5,18 @@ import { CommentList } from '../CommentList';
 import { UserShape, CommentShape } from '../../api/Types';
 import './post.scss';
 
-export const Post = ({ user, comment, body, title }) => (
+export const Post = ({ user, commentList, body, title }) => (
   <div className="post">
     <h2 className="post__title">{title}</h2>
     <p className="post__body">{body}</p>
     <User {...user} />
-    <CommentList comment={comment} />
+    <CommentList commentList={commentList} />
   </div>
 );
 
 Post.propTypes = {
-  user: UserShape.isRequired,
-  comment: PropTypes.arrayOf(CommentShape).isRequired,
+  user: UserShape,
+  commentList: PropTypes.arrayOf(CommentShape).isRequired,
   body: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
