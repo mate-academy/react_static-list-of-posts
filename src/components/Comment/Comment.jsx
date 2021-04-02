@@ -14,10 +14,10 @@ export const Comment = ({
   </div>
 );
 
-export const CommentType = {
+export const commentType = {
   name: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 };
 
-Comment.propTypes = CommentType;
+Comment.propTypes = commentType;

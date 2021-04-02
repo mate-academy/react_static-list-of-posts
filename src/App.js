@@ -4,6 +4,17 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList';
 
+export const preparedPosts = posts.map((post) => {
+  const commentsList = comments.filter(comment => comment.postId === post.id);
+  const user = users.find(person => person.id === post.userId);
+
+  return {
+    ...post,
+    user,
+    commentsList,
+  };
+});
+
 const App = () => (
   <>
     <div className="App">
@@ -27,15 +38,5 @@ const App = () => (
     <PostList postList={preparedPosts} />
   </>
 );
-
-export const preparedPosts = posts.map((post) => {
-  const commentsList = comments.filter(comment => comment.postId === post.id);
-
-  return {
-    ...post,
-    user: users.find(user => user.id === post.userId),
-    commentsList,
-  };
-});
 
 export default App;

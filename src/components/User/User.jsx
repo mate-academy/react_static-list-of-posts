@@ -13,7 +13,7 @@ export const User = ({
   </p>
 );
 
-export const UserType = {
+export const userType = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   address: PropTypes.shape({
@@ -21,4 +21,4 @@ export const UserType = {
   }).isRequired,
 };
 
-User.propTypes = UserType;
+User.propTypes = userType;
