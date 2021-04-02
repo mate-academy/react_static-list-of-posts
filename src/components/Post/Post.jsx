@@ -10,7 +10,7 @@ export const Post = ({
   title,
   body,
   user,
-  userComment,
+  usersComments,
 }) => (
   <>
     <div className="post">
@@ -22,7 +22,7 @@ export const Post = ({
         <p className="post__info-text">{body}</p>
       </div>
     </div>
-    <CommentList comments={userComment} />
+    <CommentList comments={usersComments} />
   </>
 );
 
@@ -30,5 +30,5 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   user: userTypes,
-  userComment: PropTypes.arrayOf(commentType).isRequired,
+  usersComments: PropTypes.arrayOf(commentType).isRequired,
 };

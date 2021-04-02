@@ -10,7 +10,7 @@ import { PostList } from './components/PostList/PostList';
 const preparedPosts = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
-  userComment: comments.filter(comment => comment.postId === post.id),
+  usersComments: comments.filter(comments => comments.postId === post.id),
 }));
 
 const App = () => (
