@@ -1,0 +1,13 @@
+.comment {
+  border-bottom: 1px solid white;
+  &__name {
+    font-weight: bold;
+  }
+  &__email {
+    text-align: right;
+    font-size: 15px;
+  }
+  &:last-child {
+    border-bottom: hidden;
+  }
+}
