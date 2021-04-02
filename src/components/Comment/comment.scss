@@ -1,0 +1,40 @@
+.comments {
+  display: flex;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  &__profile {
+    border-right: 1px solid #ccc;
+    width: 150px;
+    padding: 10px;
+
+    &-image {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    &-email {
+      word-break: break-all;
+    }
+  }
+
+  &__body {
+
+    &-name {
+      font-size: 20px;
+      font-weight: bold;
+      padding: 30px;
+    }
+
+    &-text {
+      padding-left: 25px;
+      width: 950px;
+    }
+  }
+}
+
+.profile-img {
+  width: 80px;
+}
