@@ -10,7 +10,7 @@ import './app.scss';
 const postList = posts.map(post => ({
   ...post,
   user: users.find(user => post.userId === user.id),
-  comment: comments.filter(comment => comment.postId === post.id),
+  commentList: comments.filter(comment => comment.postId === post.id),
 }));
 
 export const App = () => (

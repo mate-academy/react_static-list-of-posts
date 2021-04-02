@@ -5,20 +5,20 @@ export const UserShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.objectOf(PropTypes.shape({
+  address: PropTypes.shape({
     city: PropTypes.string.isRequired,
-    geo: PropTypes.objectOf(PropTypes.shape({
+    geo: PropTypes.shape({
       lat: PropTypes.string.isRequired,
       lng: PropTypes.string.isRequired,
-    })),
+    }).isRequired,
     street: PropTypes.string.isRequired,
     suite: PropTypes.string.isRequired,
     zipcode: PropTypes.string.isRequired,
-  })),
+  }),
   company: PropTypes.object.isRequired,
   phone: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
-});
+}).isRequired;
 
 export const CommentShape = PropTypes.shape({
   postId: PropTypes.number.isRequired,
