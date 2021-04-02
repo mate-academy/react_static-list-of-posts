@@ -1,0 +1,25 @@
+.user {
+  &__name {
+    font-size: 1.4rem;
+
+    &::first-letter {
+      font-size: 200%;
+      color: rgb(206, 59, 15);
+    }
+  }
+
+  &__email {
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: rgb(30, 30, 228);
+    }
+  }
+
+  &__address {
+    font-style: oblique;
+  }
+}
