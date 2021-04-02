@@ -9,19 +9,19 @@ export const Post = ({
   user,
   title,
   body,
-  comment,
+  comments,
 }) => (
   <div className="post">
     <h2 className="post__title">{title}</h2>
     <p className="post__subtitle">{body}</p>
     <User {...user} />
-    <CommentList comment={comment} />
+    <CommentList comments={comments} />
   </div>
 );
 
 Post.propTypes = {
   user: PropTypes.objectOf(UserShape).isRequired,
-  comment: PropTypes.arrayOf(CommentShape).isRequired,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };

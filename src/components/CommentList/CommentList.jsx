@@ -4,16 +4,16 @@ import { Comment } from '../Comment';
 import { CommentShape } from '../../types';
 import './CommentList.scss';
 
-export const CommentList = ({ comment }) => (
+export const CommentList = ({ comments }) => (
   <ol className="comment-list">
-    { comment.map(commen => (
-      <li key={commen.id} className="comment-list__item">
-        <Comment {...commen} />
+    { comments.map(comment => (
+      <li key={comment.id} className="comment-list__item">
+        <Comment {...comment} />
       </li>
     ))}
   </ol>
 );
 
 CommentList.propTypes = {
-  comment: PropTypes.arrayOf(CommentShape).isRequired,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
 };
