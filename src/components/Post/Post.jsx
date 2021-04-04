@@ -4,7 +4,7 @@ import { CommentList } from '../CommentList';
 import { User } from '../User';
 import { CommentShape, UserShape } from '../../propTypes';
 
-export const Post = ({ title, body, user, comment }) => (
+export const Post = ({ title, body, user, comments }) => (
   <>
     <h2 className="post__heading">
       {title}
@@ -13,13 +13,13 @@ export const Post = ({ title, body, user, comment }) => (
       {body}
     </h3>
     <User {...user} />
-    <CommentList list={comment} />
+    <CommentList list={comments} />
   </>
 );
 
 Post.propTypes = {
   user: PropTypes.objectOf(UserShape).isRequired,
-  comment: PropTypes.arrayOf(CommentShape).isRequired,
+  comments: PropTypes.arrayOf(CommentShape).isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };
