@@ -4,9 +4,9 @@ import { Post } from '../Post';
 
 export const PostList = ({ posts }) => (
   <ul>
-    {posts.map(list => (
-      <li key={list.id}>
-        <Post {...list} />
+    {posts.map(post => (
+      <li key={post.id}>
+        <Post {...post} />
       </li>
     ))}
   </ul>

@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../Comment';
 
-export const CommentList = ({ comment }) => (
+export const CommentList = ({ comments }) => (
   <ul>
-    {comment.map(comments => (
-      <li key={comments.id}>
-        <Comment {...comments} />
+    {comments.map(comment => (
+      <li key={comment.id}>
+        <Comment {...comment} />
       </li>
     ))}
   </ul>
 );
 
 CommentList.propTypes = {
-  comment: PropTypes.arrayOf(PropTypes.shape({
+  comments: PropTypes.arrayOf(PropTypes.shape({
     postId: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,

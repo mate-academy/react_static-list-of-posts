@@ -13,19 +13,19 @@ export const Post = ({
     <p>{title}</p>
     <p>{body}</p>
     <User {...user} />
-    <CommentList comment={comment} />
+    <CommentList comments={comment} />
   </>
 );
 
 Post.propTypes = {
-  user: PropTypes.objectOf(PropTypes.shape({
+  user: PropTypes.shape(PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    address: PropTypes.objectOf(PropTypes.shape({
+    address: PropTypes.shape(PropTypes.shape({
       city: PropTypes.string.isRequired,
-      geo: PropTypes.objectOf(PropTypes.shape({
+      geo: PropTypes.shape(PropTypes.shape({
         lat: PropTypes.string.isRequired,
         lng: PropTypes.string.isRequired,
       })),
