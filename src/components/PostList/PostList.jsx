@@ -1,22 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import posts from '../../api/posts';
-import comments from '../../api/comments';
-import users from '../../api/users';
+import { Post, postType } from '../Post';
 
-import { Post } from '../Post';
-
-posts.map(item => (
-  item.author = users.find(user => user.id === item.userId)
-));
-
-posts.map(item => (
-  item.comments = comments.filter(comment => comment.postId === item.id)
-));
-
-const preparedforPosting = [...posts];
-
-export const PostList = () => (
+export const PostList = ({ preparedforPosting }) => (
   <div className="PostList">
     <ul>
       {preparedforPosting.map(item => (
@@ -27,3 +14,7 @@ export const PostList = () => (
     </ul>
   </div>
 );
+
+PostList.propTypes = {
+  preparedforPosting: PropTypes.arrayOf(postType).isRequired,
+};

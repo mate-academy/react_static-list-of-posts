@@ -20,9 +20,11 @@ export const Post = ({ author, title, body, comments }) => (
   </>
 );
 
-Post.propTypes = {
+export const postType = {
   author: userType.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   comments: PropTypes.arrayOf(commentType).isRequired,
 };
+
+Post.propTypes = postType;
