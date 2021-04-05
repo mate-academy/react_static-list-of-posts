@@ -2,9 +2,17 @@ import React from 'react';
 
 import './App.scss';
 
-import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+
+import { PostList } from './components/PostList';
+
+const posts = postsFromServer.map(post => ({
+  ...post,
+  user: usersFromServer.find(user => (post.userId === user.id)),
+  comments: commentsFromServer.filter(comment => (post.id === comment.postId)),
+}));
 
 const App = () => (
   <div className="App">
@@ -12,18 +20,19 @@ const App = () => (
 
     <p>
       <span>posts: </span>
-      {posts.length}
+      {postsFromServer.length}
     </p>
 
     <p>
       <span>comments: </span>
-      {comments.length}
+      {commentsFromServer.length}
     </p>
 
     <p>
       <span>Users: </span>
-      {users.length}
+      {usersFromServer.length}
     </p>
+    <PostList postList={posts} />
   </div>
 );
 
