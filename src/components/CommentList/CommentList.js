@@ -6,9 +6,9 @@ import { CommentShape } from '../../propTypes';
 
 export const CommentList = ({ list }) => (
   <div className="comment-list">
-    {list.map(comments => (
-      <div className="comment-list__comment" key={comments.id}>
-        <Comment {...comments} />
+    {list.map(comment => (
+      <div className="comment-list__comment" key={comment.id}>
+        <Comment {...comment} />
       </div>
     ))}
   </div>

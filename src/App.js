@@ -8,7 +8,7 @@ import usersFromServer from './api/users';
 
 import { PostList } from './components/PostList';
 
-const postsAll = postsFromServer.map(post => ({
+const posts = postsFromServer.map(post => ({
   ...post,
   user: usersFromServer.find(user => (post.userId === user.id)),
   comments: commentsFromServer.filter(comment => (post.id === comment.postId)),
@@ -32,7 +32,7 @@ const App = () => (
       <span>Users: </span>
       {usersFromServer.length}
     </p>
-    <PostList postList={postsAll} />
+    <PostList postList={posts} />
   </div>
 );
 
