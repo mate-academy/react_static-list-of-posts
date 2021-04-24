@@ -11,7 +11,7 @@ export const Post = ({ post }) => (
     <p>{post.title}</p>
     <p>{post.body}</p>
     <User user={post.user} />
-    <CommentList comment={post.comment} />
+    <CommentList comments={post.comments} />
   </>
 );
 
@@ -20,7 +20,7 @@ Post.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     user: TypeUser.isRequired,
-    comment: TypeComment.isRequired,
+    comments: PropTypes.arrayOf(TypeComment.isRequired).isRequired,
   }).isRequired,
 
 };

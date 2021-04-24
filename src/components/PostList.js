@@ -20,6 +20,6 @@ PostList.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     user: TypeUser.isRequired,
-    comment: TypeComment.isRequired,
+    comments: PropTypes.arrayOf(TypeComment.isRequired).isRequired,
   }).isRequired).isRequired,
 };

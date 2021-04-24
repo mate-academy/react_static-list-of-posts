@@ -7,16 +7,13 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const arrayPostsUsersComments = posts.map((post) => {
-  const objUser = users.find(user => user.id === post.userId);
-  const objComment = comments.find(comment => comment.postId === post.id);
-
-  return {
+const combinedPosts = posts.map(post => (
+  {
     ...post,
-    user: objUser,
-    comment: objComment,
-  };
-});
+    user: users.find(user => user.id === post.userId),
+    comments: comments.filter(comment => comment.postId === post.id),
+  }
+));
 
 const App = () => (
   <div className="App">
@@ -37,7 +34,7 @@ const App = () => (
       {users.length}
     </p>
     <div>
-      <PostList posts={arrayPostsUsersComments} />
+      <PostList posts={combinedPosts} />
     </div>
   </div>
 );

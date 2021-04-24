@@ -1,14 +1,16 @@
 import React from 'react';
-import { TypeComment } from './TypeComment';
+import PropTypes from 'prop-types';
 
-export const Comment = ({ comment }) => (
+export const Comment = ({ name, body, email }) => (
   <div>
-    <p>{comment.name}</p>
-    <p>{comment.body}</p>
-    <p>{comment.email}</p>
+    <p>{name}</p>
+    <p>{body}</p>
+    <p>{email}</p>
   </div>
 );
 
 Comment.propTypes = {
-  comment: TypeComment.isRequired,
+  name: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
 };

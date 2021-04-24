@@ -1,15 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TypeComment } from './TypeComment';
 import { Comment } from './Comment';
 
-export const CommentList = ({ comment }) => (
+export const CommentList = ({ comments }) => (
   <ul>
-    <li key={comment.id}>
-      <Comment comment={comment} />
-    </li>
+    {comments.map(comment => (
+      <li key={comment.id}>
+        <Comment {...comment} />
+      </li>
+    ))}
   </ul>
 );
 
 CommentList.propTypes = {
-  comment: TypeComment.isRequired,
+  comments: PropTypes.arrayOf(TypeComment.isRequired).isRequired,
 };
