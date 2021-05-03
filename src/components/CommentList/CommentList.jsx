@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Comment } from '../Comment';
 
 export const CommentList = ({ commentList }) => (
-  <div className="Post">
+  <div className="CommentList">
     {commentList.map(comment => (
       <Comment key={comment.id} {...comment} />
     ))}

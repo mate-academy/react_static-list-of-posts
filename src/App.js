@@ -7,14 +7,11 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList';
 
-const postListWithUsers = [...posts].map(
+const preparedPostList = posts.map(
   post => Object.assign(
-    post, { user: users.filter(u => u.id === post.userId)[0] },
-  ),
-);
-const preparedPostList = [...postListWithUsers].map(
-  post => Object.assign(
-    post, { commentList: comments.filter(c => c.postId === post.id) },
+    post,
+    { user: users.find(u => u.id === post.userId) },
+    { commentList: comments.filter(c => c.postId === post.id) },
   ),
 );
 
