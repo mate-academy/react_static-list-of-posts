@@ -5,16 +5,16 @@ import users from '../api/users';
 import Post from './Post';
 
 function PostList() {
-  return (
-    posts.map( post =>{
-     return <Post
+  const preparedPosts = posts.map(post => (
+    <Post
       key={post.id}
       comments={comments}
       users={users}
       post={post}
     />
-    })
-  );
+  ));
+
+  return preparedPosts;
 }
 
 export default PostList;

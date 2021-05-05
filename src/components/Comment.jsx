@@ -1,10 +1,9 @@
 import React from 'react';
-import './comment.scss';
-import PropTypes from 'prop-types';
+git 
 
 function Comment({ comment }) {
   return (
-    <div className="comment">
+    <div>
       <h2>
         {comment.email}
         ,
