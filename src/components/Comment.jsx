@@ -1,5 +1,5 @@
 import React from 'react';
-git 
+import PropTypes from 'prop-types';
 
 function Comment({ comment }) {
   return (
