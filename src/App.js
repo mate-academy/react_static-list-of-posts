@@ -2,18 +2,18 @@ import React from 'react';
 
 import './App.scss';
 
-import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import PostList from './components/PostList';
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
-    <p>
+    <div>
       <span>posts: </span>
-      {posts.length}
-    </p>
+      <PostList />
+    </div>
 
     <p>
       <span>comments: </span>
