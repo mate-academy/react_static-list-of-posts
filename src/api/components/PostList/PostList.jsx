@@ -6,16 +6,13 @@ import { Post } from '../Post';
 export const PostList = ({ postsList }) => (
   <ul>
     {postsList.map(post => (
-      <li key={post.id}>
-        <Post {...post} />
-      </li>
+      <Post {...post} key={post.id} />
     ))}
   </ul>
 );
 
 PostList.propTypes = {
   postsList: PropTypes.arrayOf(PropTypes.shape({
-    userId: PropTypes.number.isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,

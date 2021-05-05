@@ -24,7 +24,6 @@ export const UserType = PropTypes.shape({
 });
 
 export const CommentType = PropTypes.shape({
-  postId: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
