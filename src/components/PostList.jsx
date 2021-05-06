@@ -4,12 +4,13 @@ import comments from '../api/comments';
 import users from '../api/users';
 import Post from './Post';
 
+
 function PostList() {
   const preparedPosts = posts.map(post => (
     <Post
       key={post.id}
-      comments={comments}
-      users={users}
+      comments={comments.filter(comment => (comment.postId === post.id))}
+      user={users.find(user => post.userId === user.id)}
       post={post}
     />
   ));
