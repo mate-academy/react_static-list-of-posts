@@ -1,0 +1,35 @@
+.Post {
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  border-radius: 1em;
+  margin: 1em;
+  padding: 1em 2em;
+
+  &__title {
+    margin: 0 0 0.25em;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__author {
+    flex-basis: 25%;
+  }
+
+  &__body {
+    flex-basis: 75%;
+    position: relative;
+  }
+
+  &__body::before {
+    content: "";
+    display: inline-block;
+    background-color: lightgray;
+    width: 3px;
+    height: 50px;
+    position: absolute;
+    left: -10px;
+  }
+}

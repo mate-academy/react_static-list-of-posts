@@ -1,0 +1,14 @@
+.Comment {
+  border: 2px solid lightgray;
+  border-radius: 1em;
+  margin: 1em 0;
+  padding: 1em;
+
+  &__title {
+    margin: 0 0 5px;
+  }
+
+  &__body {
+    margin: 5px 0 0;
+  }
+}

@@ -1,0 +1,10 @@
+.CommentList {
+  border: 2px solid lightgray;
+  border-radius: 1em;
+  margin: 2em 0;
+  padding: 1em 2em;
+
+  &__title {
+    margin: 0;
+  }
+}
