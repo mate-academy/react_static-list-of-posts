@@ -1,0 +1,15 @@
+.user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(23, 54, 80);
+
+  margin-top: 20px;
+
+  &__name {
+
+    font-size: 20px;
+    font-style: italic;
+    padding: 0 40px 0 10px;
+  }
+}
