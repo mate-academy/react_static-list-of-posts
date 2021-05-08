@@ -1,1 +1,31 @@
-// styles go here
+%text {
+  text-align: center;
+  font-size: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+
+  &__title {
+    @extend %text;
+    font-size: 35px;
+    margin: 0 auto;
+    color: lime;
+    border: 3px solid darkslategrey;
+    border-radius: 15px;
+    background-color: lightslategray;
+    box-shadow: 10px 5px 7px silver;
+  }
+
+  &__text {
+    @extend %text;
+    color: lime;
+    font-weight: bold;
+    text-shadow: 10px 5px 7px silver;
+  }
+}
