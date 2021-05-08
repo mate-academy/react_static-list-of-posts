@@ -1,0 +1,32 @@
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  padding: 10px;
+  border-radius: 10px;
+  border-left: 1px solid grey;
+  background-color: rgb(219, 193, 193);
+  box-shadow: inset 0 -1px 3px black;
+
+  gap: 10px;
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    font-size: 15px;
+    .email {
+      font-size: 16px;
+
+      margin-left: 20px;
+    }
+  }
+
+  .text::first-letter {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-left: 10px;
+  }
+}
