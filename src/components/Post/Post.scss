@@ -1,0 +1,40 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 3px solid darkslategrey;
+  border-radius: 50px;
+  background-color: silver;
+  box-shadow: 10px 5px 7px silver;
+
+  &__id {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+    background-color: darkslategrey;
+    color: lime;
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  &__title {
+    text-align: center;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    font-weight: bold;
+    letter-spacing: normal;
+    font-style: italic;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

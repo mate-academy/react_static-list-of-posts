@@ -1,0 +1,36 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid darkslategrey;
+  background-color: lightslategray;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  color: whitesmoke;
+
+  &__name {
+    font-size: 22px;
+    font-style: italic;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    font-weight: 700;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__email {
+    align-self: flex-end;
+    font-weight: bold;
+    color: lime;
+    text-shadow: 7px -4px 3px whitesmoke;
+  }
+}

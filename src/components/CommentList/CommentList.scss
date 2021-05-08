@@ -1,0 +1,28 @@
+.comments {
+  list-style-type: none;
+  counter-reset: num;
+
+  &__title {
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 10px;
+  }
+
+  &__comment {
+    position: relative;
+
+    &::before {
+      content: counter(num) ")";
+      counter-increment: num;
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: darkslategrey;
+      top: 35%;
+      left: -40px;
+      font-size: 30px;
+      color: lime;
+    }
+  }
+}
