@@ -1,1 +1,54 @@
-// styles go here
+html {
+  background-color: lightskyblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 8px whitesmoke;
+  color: gray;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 70px;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__title,
+.post__body,
+.comment__title,
+.comment-body {
+text-transform: capitalize;
+}
+
+.post__title {
+  font-size: 20px;
+}
+
+.post__body {
+  font-size: 18px;
+}
+
+.comment-list {
+  list-style: none;
+}
+
+.comment {
+  background-color: linen;
+  padding: 10px;
+  border: 1px solid goldenrod;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
