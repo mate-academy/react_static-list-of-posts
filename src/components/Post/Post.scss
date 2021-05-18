@@ -1,0 +1,20 @@
+.post {
+  margin-bottom: 40px;
+  padding: 10px 30px;
+  border: 2px solid #333;
+  border-radius: 15px;
+  background-color: rgb(250, 250, 250);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__author-info {
+    text-align: right;
+    margin: 50px 0;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+}
