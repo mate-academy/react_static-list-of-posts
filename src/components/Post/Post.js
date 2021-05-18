@@ -23,9 +23,11 @@ Post.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
-  comment: PropTypes.shape({
-    body: PropTypes.string.isRequired,
-  }).isRequired,
+  comment: PropTypes.arrayOf(
+    PropTypes.shape({
+      body: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default Post;

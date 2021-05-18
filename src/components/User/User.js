@@ -19,7 +19,9 @@ const User = ({ name, email, address }) => (
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default User;
