@@ -8,10 +8,10 @@ const User = ({ name, email, address }) => (
       {name}
     </h2>
     <p>
-      {email}
+      {`Contact info ${email}`}
     </p>
     <p>
-      {JSON.stringify(address, null, 4)}
+      {`From ${address.city}`}
     </p>
   </>
 );

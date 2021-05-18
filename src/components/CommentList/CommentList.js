@@ -4,12 +4,20 @@ import Comment from '../Comment';
 
 const CommentList = ({ comment }) => (
   <ul>
-    <Comment {...comment} />
+    {comment.map(post => (
+      <li key={post.id}>
+        <Comment {...post} />
+      </li>
+    ))}
   </ul>
 );
 
 CommentList.propTypes = {
-  comment: PropTypes.shape({}).isRequired,
+  comment: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default CommentList;

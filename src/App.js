@@ -10,7 +10,7 @@ const preparedPosts = posts.map(post => (
   {
     ...post,
     user: users.find(user => post.userId === user.id),
-    comment: comments.find(comment => post.id === comment.postId),
+    comment: comments.filter(comment => post.id === comment.postId),
   }
 ));
 
