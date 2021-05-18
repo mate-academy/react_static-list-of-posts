@@ -1,0 +1,19 @@
+.comment {
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  &__email {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+  }
+
+  &__title {
+    margin: 10px 0;
+    color: #333;
+  }
+
+  &__text {
+    margin: 10px 0;
+    color: #555;
+  }
+}
