@@ -1,0 +1,27 @@
+.post {
+  max-width: 85%;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.05 );
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  list-style: none;
+
+  @media( min-width: 1199px ) {
+    max-width: 55%;
+  }
+
+  @media( min-width: 767px) and (max-width: 1199px) {
+    max-width: 75%;
+  }
+
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+  }
+
+  &__text {
+    color: #555;
+  }
+}
