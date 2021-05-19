@@ -1,0 +1,32 @@
+.post__title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  height: 100px;
+  color: #251026;
+}
+
+.post__body {
+  text-align: justify;
+  height: 200px;
+  color: #251026;
+}
+
+.post__user {
+  font-style: italic;
+  color: #251026;
+}
+
+.post__comment-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  
+}
+
+.coomments__title {
+  text-align: center;
+  margin: 50px 0 10px;
+  font-weight: bold;
+}
