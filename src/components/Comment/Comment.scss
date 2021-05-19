@@ -1,0 +1,19 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  &__author-email {
+    text-decoration: none;
+    color: dimgray;
+    font-size: 12px;
+  }
+
+  &__body {
+    padding-left: 10px;
+  }
+}
