@@ -8,14 +8,21 @@ import Comment from '../Comment/Comment';
 const CommentList = function({ comments }) {
   return (
     <ul className="CommentList">
-      {comments.map(comment => <Comment {...comment} />)}
+      {comments.map(comment => (
+        <li key={comment.id}>
+          <Comment {...comment} />
+        </li>
+      ))}
     </ul>
   );
 };
 
 CommentList.propTypes = {
-  // eslint-disable-next-line
-  comments: PropTypes.object.isRequired,
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default CommentList;

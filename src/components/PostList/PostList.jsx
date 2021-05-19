@@ -5,17 +5,24 @@ import './PostList.scss';
 
 import Post from '../Post/Post';
 
-const PostList = function({ fPosts }) {
+const PostList = function({ posts }) {
   return (
     <ul className="PostList">
-      {fPosts.map(fPost => <Post {...fPost} />)}
+      {posts.map(post => (
+        <li key={post.id}>
+          <Post {...post} />
+        </li>
+      ))}
     </ul>
   );
 };
 
 PostList.propTypes = {
-  // eslint-disable-next-line
-  fPosts: PropTypes.object.isRequired,
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default PostList;

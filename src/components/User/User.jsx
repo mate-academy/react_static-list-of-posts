@@ -4,15 +4,9 @@ import PropTypes from 'prop-types';
 const User = function({ name, email, address }) {
   return (
     <div className="User">
-      <p>
-        {`Name: ${name}`}
-      </p>
-      <p>
-        {`Email: ${email}`}
-      </p>
-      <p>
-        {`Adress: ${address.city} ${address.street} ${address.suite}`}
-      </p>
+      <p>{`Name: ${name}`}</p>
+      <p>{`Email: ${email}`}</p>
+      <p>{`Address: ${address.city} ${address.street} ${address.suite}`}</p>
     </div>
   );
 };

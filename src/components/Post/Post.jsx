@@ -6,9 +6,9 @@ import './Post.scss';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 
-const Post = function({ id, title, body, user, comments }) {
+const Post = function({ title, body, user, comments }) {
   return (
-    <li key={id} className="Post">
+    <div className="Post">
       <h2>
         Post title:
         {title}
@@ -20,12 +20,11 @@ const Post = function({ id, title, body, user, comments }) {
       </p>
       <User {...user} />
       <CommentList comments={comments} />
-    </li>
+    </div>
   );
 };
 
 Post.propTypes = {
-  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string,
   // eslint-disable-next-line
