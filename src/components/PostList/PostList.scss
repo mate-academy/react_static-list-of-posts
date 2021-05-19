@@ -4,8 +4,10 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 19% 19% 19% 19% 19%;
   gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 .post__item {

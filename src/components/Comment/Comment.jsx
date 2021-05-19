@@ -12,7 +12,8 @@ export const Comment = ({ name, body, email }) => (
       {body}
     </p>
     <p className="comment__email">
-      {`Email: ${email}`}
+      {`Email: 
+      ${email}`}
     </p>
   </>
 );
