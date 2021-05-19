@@ -18,8 +18,14 @@ export const User = ({
     </a>
 
     <p className="post-creator__city">
-      {'City: '}
-      <strong>{address.city}</strong>
+      {address.city
+        ? (
+          <>
+            {'City: '}
+            <strong>{address.city}</strong>
+          </>
+        )
+        : 'User prefered to hidden his city'}
     </p>
   </div>
 );
@@ -27,10 +33,11 @@ export const User = ({
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  // eslint-disable-next-line
-  address: PropTypes.object,
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  }),
 };
 
 User.defaultProps = {
-  address: 'User prefered to hidden his address',
+  address: {},
 };
