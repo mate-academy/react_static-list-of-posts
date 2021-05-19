@@ -1,1 +1,15 @@
-// styles go here
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: rgb(54, 54, 54);
+}
+
+ul {
+  list-style: none;
+}
