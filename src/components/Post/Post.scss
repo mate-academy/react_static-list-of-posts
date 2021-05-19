@@ -1,0 +1,10 @@
+.post {
+  &-text {
+    font-size: 20px;
+  }
+
+  &-user {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
