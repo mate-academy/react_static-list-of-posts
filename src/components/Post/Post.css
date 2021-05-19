@@ -1,0 +1,10 @@
+.post {
+  border: 2px solid rgb(88, 72, 42);
+  border-radius: 10px;
+  padding: 16px;
+  background-color: rgb(248, 246, 242);
+}
+
+.post__title {
+  text-align: center;
+}
