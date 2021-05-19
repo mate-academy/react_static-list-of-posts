@@ -7,15 +7,13 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList/PostList';
 
-const preparedPosts = posts.map((post) => {
-  const preparedPost = {
+const preparedPosts = posts.map(post => (
+  {
     ...post,
-    user: users.filter(({ id }) => id === post.userId)[0],
+    user: users.find(({ id }) => id === post.userId),
     comments: comments.filter(({ postId }) => postId === post.id),
-  };
-
-  return preparedPost;
-});
+  }
+));
 
 const App = () => (
   <div className="App">

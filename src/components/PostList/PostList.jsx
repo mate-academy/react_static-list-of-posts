@@ -6,7 +6,9 @@ import { Post } from '../Post/Post';
 export const PostList = ({ posts }) => (
   <ul className="postList">
     {posts.map(post => (
-      <Post {...post} key={post.id} />
+      <li className="postList__post" key={post.id}>
+        <Post {...post} />
+      </li>
     ))}
   </ul>
 );

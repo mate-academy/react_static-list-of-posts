@@ -1,3 +1,7 @@
 .commentList {
   padding-left: 10px;
+
+  &__comment {
+    list-style: none;
+  }
 }
