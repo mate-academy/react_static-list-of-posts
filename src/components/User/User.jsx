@@ -16,7 +16,7 @@ export const User = ({ user }) => (
 const addressData = {
   street: PropTypes.string.isRequired,
   suite: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
 };
 
 const userData = {
