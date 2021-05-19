@@ -1,0 +1,9 @@
+.comments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  font-size: 17px;
+
+  justify-content: space-between;
+}
