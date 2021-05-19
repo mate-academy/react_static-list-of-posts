@@ -1,0 +1,23 @@
+.comment-container {
+  width: 300px;
+  &:last-child {
+    padding-bottom: 30px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    font-style: italic;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

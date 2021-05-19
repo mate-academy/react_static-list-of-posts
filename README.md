@@ -1,6 +1,6 @@
 # React static list of posts
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)
+  [DEMO LINK](https://Bogdan-Kotsupey.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## Task
@@ -12,3 +12,4 @@
   - the `User` component showing the `name`, `email` and `address` of the author of the post
   - `CommentList` a sublist of the post comments.
     - Each `Comment` should show the `name`, `body` and `email`.
+<>
