@@ -1,1 +1,18 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(223, 224, 209);
+}
+
+.App {
+  padding: 20px;
+}
+
+.App__title {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-align: center;
+}
