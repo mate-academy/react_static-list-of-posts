@@ -1,0 +1,12 @@
+.post__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  list-style: none;
+}
+
+.post__item {
+  padding: 10px;
+  background-color: skyblue;
+  border-radius: 20px;
+}
