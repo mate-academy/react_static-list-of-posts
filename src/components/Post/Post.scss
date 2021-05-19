@@ -1,0 +1,12 @@
+.post {
+  text-align: center;
+
+  &-title {
+    font-size: 21px;
+  }
+
+  &-user {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
