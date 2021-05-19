@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export function User({ name, email, address }) {
+  const emailLink = `mailto:${email}`;
+
   return (
     <div className="mt-4">
       <p>
@@ -10,7 +12,7 @@ export function User({ name, email, address }) {
       </p>
       <p>
         {'Email: '}
-        {email}
+        <a href={emailLink}>{email}</a>
       </p>
       <p>
         {'Address: '}

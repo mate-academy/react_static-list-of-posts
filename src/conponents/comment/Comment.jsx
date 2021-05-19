@@ -1,26 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Comment = ({ name, body, email }) => (
-  <div className="list-group mt-3">
-    <div className="list-group-item">
-      <h4 className="display-6">{name}</h4>
-      <blockquote className="blockquote">
-        <p className="lead p-3">
-          <i>
-            &quot;
-            {body}
-            &quot;
-          </i>
-        </p>
-      </blockquote>
-      <figcaption className="blockquote-footer">
-        {'Author: '}
-        {email}
-      </figcaption>
+export function Comment({ name, body, email }) {
+  const emailLink = `mailto:${email}`;
+
+  return (
+    <div className="list-group mt-3">
+      <div className="list-group-item">
+        <h4 className="display-6">{name}</h4>
+        <blockquote className="blockquote">
+          <p className="lead p-3">
+            <i>
+              &quot;
+              {body}
+              &quot;
+            </i>
+          </p>
+        </blockquote>
+        <figcaption className="blockquote-footer">
+          {'Author: '}
+          <a href={emailLink}>{email}</a>
+        </figcaption>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 Comment.propTypes = {
   name: PropTypes.string.isRequired,
