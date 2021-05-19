@@ -1,0 +1,13 @@
+.PostList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30%);
+  gap: 20px;
+  list-style: none;
+
+  &__item {
+    padding: 10px;
+    background-color: rgb(239, 234, 248);
+    border: 2px solid rgb(50, 6, 92);
+    border-radius: 5px;
+  }
+}
