@@ -1,0 +1,8 @@
+.posts-list {
+  list-style: none;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: row;
+}
