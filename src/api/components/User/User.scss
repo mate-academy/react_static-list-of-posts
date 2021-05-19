@@ -1,0 +1,16 @@
+.User {
+  &__title {
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  &__email {
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(123, 34, 224);
+  }
+
+  &__address {
+    font-style: italic;
+  }
+}
