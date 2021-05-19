@@ -1,0 +1,30 @@
+.post-info {
+  background-color: #eee;
+  color: #474545;
+  padding: 20px;
+  border-radius: 8px;
+
+  &__title {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    width: 80%;
+    text-align: center;
+  }
+
+  &__title::first-letter {
+    text-transform: capitalize;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: justify;
+    color: rgb(9, 9, 104);
+    padding: 20px 50px;
+  }
+
+  &__text::first-letter {
+    text-transform: capitalize;
+  }
+}
