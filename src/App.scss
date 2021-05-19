@@ -1,1 +1,44 @@
 // styles go here
+* {
+  font-family: "Dubai", serif;
+  color: black;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+
+  &__posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    background-color: whitesmoke;
+  }
+  &__post {
+    padding: 10px;
+    display: grid;
+    gap: 15px;
+    max-width: 350px;
+    background-color: mediumpurple;
+  }
+}
+
+.user {
+  &__name {
+    color: gold;
+  }
+}
+
+.comment {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 10px;
+
+  &__author {
+    color: red;
+    margin-bottom: 10px;
+  }
+}
