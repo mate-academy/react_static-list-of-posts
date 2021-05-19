@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CommentsType, UserType } from '../../types';
 import { CommentList } from '../CommentList';
 import { User } from '../User';
 
@@ -32,10 +33,7 @@ export const Post = ({
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
-  // eslint-disable-next-line
-  user: PropTypes.object.isRequired,
+  user: PropTypes.shape(UserType).isRequired,
   body: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(
-    PropTypes.object.isRequired,
-  ).isRequired,
+  comments: CommentsType.isRequired,
 };
