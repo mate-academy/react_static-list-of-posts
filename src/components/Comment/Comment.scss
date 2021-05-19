@@ -1,0 +1,16 @@
+.comment {
+  &__name {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: #96b9d9;
+  }
+}
