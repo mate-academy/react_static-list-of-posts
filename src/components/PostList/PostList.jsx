@@ -4,23 +4,17 @@ import { Post } from '../Post';
 import './PostList.scss';
 import { commentType, userType } from '../../types';
 
-export const PostList = ({ preparedData }) => {
-  
-  console.log(preparedData.comments);
-
-  return (
+export const PostList = ({ preparedData }) => (
   <section className="post-list">
     {preparedData.map(post => (
       <div className="post-wrap" key={post.id}>
         <Post {...post} />
       </div>
     ))}
-
   </section>
 );
-    }
 
-const preparedDataType = PropTypes.arrayOf({
+const preparedDataType = PropTypes.shape({
   userId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
@@ -30,7 +24,7 @@ const preparedDataType = PropTypes.arrayOf({
 });
 
 PostList.propTypes = {
-  preparedData: preparedDataType.isRequired,
+  preparedData: PropTypes.arrayOf(preparedDataType).isRequired,
 };
 
 PostList.defaultProp = {

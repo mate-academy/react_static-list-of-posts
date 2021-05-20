@@ -33,6 +33,6 @@ export const userType = PropTypes.shape({
   phone: PropTypes.string.isRequired,
 
   address: PropTypes.objectOf(addressType),
-  website: PropTypes.objectOf(addressType),
+  website: PropTypes.string,
   company: PropTypes.objectOf(companyType),
 });
