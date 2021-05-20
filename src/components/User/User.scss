@@ -1,0 +1,13 @@
+.User {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+}
