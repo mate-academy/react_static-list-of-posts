@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../Comment/Comment';
+import { TypeComments } from '../../types';
 
 export const CommentsList = ({ comments }) => (
   <>
@@ -17,13 +18,5 @@ export const CommentsList = ({ comments }) => (
 );
 
 CommentsList.propTypes = {
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      postId: PropTypes.number.isRequired,
-      id: PropTypes.number.isRequired,
-      email: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  comments: PropTypes.arrayOf(TypeComments).isRequired,
 };

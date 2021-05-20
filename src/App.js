@@ -9,22 +9,15 @@ import { PostList } from './components/PostList/PostList';
 
 const postsWithComments = posts.map(post => ({
   ...post,
+  user: users.find(user => user.id === post.userId),
   comments: comments.filter(comment => comment.postId === post.id),
-}));
-
-const usersWithPosts = users.map(user => ({
-  id: user.id,
-  name: user.name,
-  email: user.email,
-  address: user.address,
-  posts: postsWithComments.filter(post => post.userId === user.id),
 }));
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
-    <PostList users={usersWithPosts} />
+    <PostList posts={postsWithComments} />
 
     <p>
       <span>posts: </span>

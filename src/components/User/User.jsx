@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Post } from '../Post/Post';
+import { TypeAddress } from '../../types';
 
-export const User = ({ name, email, address, posts }) => (
+export const User = ({ name, email, address }) => (
   <li>
     <span>
       <strong>{`${name} posted:`}</strong>
@@ -53,47 +53,12 @@ export const User = ({ name, email, address, posts }) => (
     <br />
     <br />
 
-    {posts.map(post => (
-      <Post {...post} key={post.id} />
-    ))}
-
-    <br />
-    <br />
-    <br />
-    <br />
   </li>
 );
 
-const TypeGeo = PropTypes.shape({
-  lat: PropTypes.string,
-  lng: PropTypes.string,
-});
-
-const TypeAddress = PropTypes.shape({
-  street: PropTypes.string.isRequired,
-  suite: PropTypes.string.isRequired,
-  city: PropTypes.string.isRequired,
-  zipcode: PropTypes.string.isRequired,
-
-  geo: TypeGeo,
-});
-
-const TypePosts = PropTypes.shape({
-  userId: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-});
-
 User.propTypes = {
-  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 
-  address: TypeAddress,
-  posts: PropTypes.arrayOf(TypePosts).isRequired,
-};
-
-User.defaultProps = {
-  address: {},
+  address: TypeAddress.isRequired,
 };
