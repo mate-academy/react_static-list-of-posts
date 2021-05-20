@@ -1,15 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Comment } from '../Comment/Comment';
-import { ProtoPost } from '../ProtoPost';
 
-export const CommentList = ({ post }) => (
+export const CommentList = ({ commentList }) => (
   <div>
-    {post.commentList.map(comment => (
-      <div className="comment" key={post.id}>
-        <Comment comment={comment} />
+    {commentList.map(comment => (
+      <div className="comment" key={comment.id}>
+        <Comment {...comment} />
       </div>
     ))}
   </div>
 );
 
-CommentList.propTypes = ProtoPost;
+CommentList.propTypes = {
+  commentList: PropTypes.arrayOf(PropTypes.shape).isRequired,
+};

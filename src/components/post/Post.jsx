@@ -1,18 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { CommentList } from '../CommentList/CommentList';
-import { ProtoPost } from '../ProtoPost';
 import { User } from '../User/User';
+import { ProtoUser } from '../ProtoPost';
 
-export const Post = ({ post }) => (
+export const Post = ({ title, body, user, commentList }) => (
   <>
-    <h2>{post.title}</h2>
+    <h2>{title}</h2>
     <p>
-      {post.body}
+      {body}
     </p>
-    <User post={post} />
-    <CommentList post={post} />
+    <User {...user} />
+    <CommentList commentList={commentList} />
   </>
 );
 
-Post.propTypes = ProtoPost;
+Post.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: ProtoUser.isRequired,
+  commentList: PropTypes.arrayOf(PropTypes.shape).isRequired,
+};
