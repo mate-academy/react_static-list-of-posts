@@ -1,0 +1,11 @@
+.post {
+  width: 80%;
+  margin: 50px auto;
+
+  &__contant {
+    width: 100%;
+    background-color: lightblue;
+    border-radius: 8px;
+    padding: 20px;
+  }
+}
