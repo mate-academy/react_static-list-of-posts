@@ -16,10 +16,7 @@ export const Post = ({ title, body, user, comment }) => (
     <div className="post__user">
       <User {...user} />
     </div>
-    <p className="coomments__title">List of comments</p>
-    <div className="post__comment-list">
-      <CommentList comments={comment} />
-    </div>
+    <CommentList comments={comment} />
   </>
 );
 

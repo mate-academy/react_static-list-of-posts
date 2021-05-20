@@ -4,9 +4,9 @@ import { Post } from '../Post';
 
 import './PostList.scss';
 
-export const PostList = ({ listOfPosts }) => (
+export const PostList = ({ posts }) => (
   <ul className="post__list">
-    {listOfPosts.map(post => (
+    {posts.map(post => (
       <li className="post__item" key={post.id}>
         <Post {...post} />
       </li>
@@ -15,7 +15,7 @@ export const PostList = ({ listOfPosts }) => (
 );
 
 PostList.propTypes = {
-  listOfPosts: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }).isRequired,
