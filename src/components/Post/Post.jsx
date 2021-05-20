@@ -27,8 +27,11 @@ const Post = function({ title, body, user, comments }) {
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string,
-  // eslint-disable-next-line
-  user: PropTypes.object.isRequired,
+  user: PropTypes.PropTypes.shape({
+    city: PropTypes.string.isRequired,
+    street: PropTypes.string.isRequired,
+    suite: PropTypes.string.isRequired,
+  }).isRequired,
   comments: PropTypes.arrayOf(
     PropTypes.object,
   ).isRequired,
