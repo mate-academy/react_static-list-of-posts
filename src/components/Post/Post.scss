@@ -1,0 +1,20 @@
+.post {
+  padding: 10px;
+  background-color: #96b9d9;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px 10px rgba(0,0,0, 0.1);
+  
+  &__title {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  &__text {
+    margin-left: -10px;
+    margin-right: 20px;
+    padding: 20px;
+
+    font-size: 20px;
+    color: white;
+  }
+}
