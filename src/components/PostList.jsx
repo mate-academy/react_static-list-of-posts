@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Post } from './Post'
 
 export const PostList = ({ whole }) => (
@@ -10,3 +11,11 @@ export const PostList = ({ whole }) => (
     ))}
   </ul>
 );
+
+PostList.propTypes = {
+  whole: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
+};

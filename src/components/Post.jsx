@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { User } from './User'
 import { CommentList } from './CommentList'
 
@@ -25,3 +27,13 @@ export const Post = (post) => (
     </div>
   </>
 );
+
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  comment: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
+};
