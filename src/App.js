@@ -6,7 +6,7 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-import { PostList } from './conponents/postList';
+import { PostList } from './components/postList';
 
 const preparedData = posts.map(post => ({
   ...post,

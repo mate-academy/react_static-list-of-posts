@@ -6,7 +6,7 @@ export function Comment({ name, body, email }) {
 
   return (
     <div className="list-group mt-3">
-      <figure className="list-group-item">
+      <div className="list-group-item">
         <h4 className="display-6">{name}</h4>
         <blockquote className="blockquote">
           <p className="lead p-3">
@@ -17,11 +17,11 @@ export function Comment({ name, body, email }) {
             </i>
           </p>
         </blockquote>
-        <figcaption className="blockquote-footer">
+        <div className="blockquote-footer">
           {'Author: '}
           <a href={emailLink}>{email}</a>
-        </figcaption>
-      </figure>
+        </div>
+      </div>
     </div>
   );
 }
