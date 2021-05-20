@@ -9,8 +9,6 @@ const PostList = ({ posts, users, comments }) => (
       <Post
         key={post.id}
         {...post}
-        user={users.find(user => user.id === post.userId)}
-        comments={comments.filter(comment => comment.postId === post.id)}
       />
     ))}
   </div>
