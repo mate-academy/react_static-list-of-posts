@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  padding: 0;
+  width: 70%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-input {
+  list-style: none;
+  display: flex;
+  border: aliceblue 5px solid;
+  border-radius: 20px;
+  background-color: antiquewhite;
+}
+
+p {
+  margin: 20px;
+}
