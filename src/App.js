@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { PostList } from './components/PostList';
-import { CommentList } from './components/CommentList';
+import { PostList } from './components/PostList/PostList';
 import './App.scss';
 
 import posts from './api/posts';
@@ -16,12 +15,7 @@ const preparedPosts = posts.map(post => ({
 
 const App = () => (
   <div className="app">
-    {preparedPosts.map(post => (
-      <>
-        <PostList post={post} />
-        <CommentList {...post} />
-      </>
-    ))}
+    <PostList preparedPosts={preparedPosts} />
   </div>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Comment } from './Comment';
+import { Comment } from '../Comment/Comment';
 
 export const CommentList = ({ comments }) => (
   <div className="comment-list">
