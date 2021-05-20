@@ -1,0 +1,21 @@
+.comment {
+  padding: 10px 20px;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  &__name {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  
+  &__email {
+    margin-bottom: 30px;
+  }
+}
