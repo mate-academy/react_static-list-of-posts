@@ -15,17 +15,11 @@ export const Post = ({ title, body, user, comments }) => (
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.string,
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  body: PropTypes.string.isRequired,
+  user: PropTypes.shape({}).isRequired,
   comments: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
-};
-
-Post.defaultProps = {
-  body: 'No comment',
 };

@@ -12,10 +12,6 @@ export const Comment = ({ name, body, email }) => (
 
 Comment.propTypes = {
   name: PropTypes.string.isRequired,
-  body: PropTypes.string,
+  body: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-};
-
-Comment.defaultProps = {
-  body: 'No comment',
 };
