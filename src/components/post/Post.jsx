@@ -18,7 +18,7 @@ export const Post = ({ title, body, user, comments}) => (
   </div>
 );
 
-Post.propTypes = PropTypes.shape({
+Post.propTypes = {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-  });
+  };

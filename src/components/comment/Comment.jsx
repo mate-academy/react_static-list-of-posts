@@ -19,8 +19,8 @@ export const Comment = ({ name, body, email }) => (
   </div>
 );
 
-Comment.propTypes = PropTypes.shape({
+Comment.propTypes = {
   name: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-});
+};

@@ -19,8 +19,10 @@ import './User.scss';
   </div>
 );
 
-User.propTypes =  PropTypes.shape({
+User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  });
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  })
+};
