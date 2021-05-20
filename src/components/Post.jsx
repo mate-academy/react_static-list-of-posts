@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { User } from './User';
-import { CommentList } from './CommentList';
+import { Comment } from './CommentList';
 
 export const Post = post => (
   <>
@@ -20,7 +20,7 @@ export const Post = post => (
       <div className="comments">
         {post.comments.map(comment => (
           <div key={comment.id} className="comment">
-            <CommentList {...comment} />
+            <Comment {...comment} />
           </div>
         ))}
       </div>
