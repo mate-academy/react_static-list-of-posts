@@ -1,0 +1,6 @@
+.post {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(320px, 768px));
+  }
+}
