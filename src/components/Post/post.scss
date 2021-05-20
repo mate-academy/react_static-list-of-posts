@@ -1,0 +1,22 @@
+.list {
+  &__title {
+    text-align: center;
+    font-size: 30px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    font-size: 15px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__users {
+    text-align: right;
+  }
+}
