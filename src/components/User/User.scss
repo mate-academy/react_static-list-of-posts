@@ -1,0 +1,18 @@
+.user {
+  text-align: right;
+
+  &__name {
+    font-weight: 700;
+    color: #055;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: brown;
+  }
+
+  &__address {
+    margin-bottom: 20px;
+    color: #033;
+  }
+}
