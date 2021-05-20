@@ -1,0 +1,15 @@
+.Comment {
+  background-color: rgb(241, 221, 194);
+  margin: 15px;
+  padding: 5px;
+  border-radius: 15px;
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  &__message {
+    margin-top: 5px;
+  }
+}
