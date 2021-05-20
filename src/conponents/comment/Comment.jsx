@@ -6,7 +6,7 @@ export function Comment({ name, body, email }) {
 
   return (
     <div className="list-group mt-3">
-      <div className="list-group-item">
+      <figure className="list-group-item">
         <h4 className="display-6">{name}</h4>
         <blockquote className="blockquote">
           <p className="lead p-3">
@@ -21,10 +21,10 @@ export function Comment({ name, body, email }) {
           {'Author: '}
           <a href={emailLink}>{email}</a>
         </figcaption>
-      </div>
+      </figure>
     </div>
   );
-};
+}
 
 Comment.propTypes = {
   name: PropTypes.string.isRequired,

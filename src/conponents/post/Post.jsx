@@ -33,6 +33,6 @@ export function Post({ title, body, user, comments }) {
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.objectOf.isRequired,
-  comments: PropTypes.arrayOf.isRequired,
+  user: PropTypes.shape({}).isRequired,
+  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

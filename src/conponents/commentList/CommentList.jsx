@@ -6,9 +6,7 @@ import { Comment } from '../comment';
 export function CommentsList({ comments }) {
   return (
     comments.map(comment => (
-      <div>
-        <Comment {...comment} key={comment.id} />
-      </div>
+      <Comment {...comment} key={comment.id} />
     ))
   );
 }
