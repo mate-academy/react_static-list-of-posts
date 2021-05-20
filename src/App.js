@@ -7,23 +7,11 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-function findUser(userId) {
-  return users.find(user => user.id === userId);
-}
-
-function findComment(id) {
-  return comments.filter(comment => comment.postId === id);
-}
-
-const wholePost = posts.map((post) => {
-  const copy = {
-    ...post,
-    user: findUser(post.userId),
-    comment: findComment(post.id),
-  };
-
-  return copy;
-});
+const wholePosts = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
 
 const App = () => (
   <div className="App">
@@ -44,7 +32,7 @@ const App = () => (
       {users.length}
     </p>
 
-    <PostList whole={wholePost} />
+    <PostList posts={wholePosts} />
   </div>
 );
 

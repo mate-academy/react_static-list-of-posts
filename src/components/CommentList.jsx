@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const CommentList = (com) => (
+export const CommentList = comment => (
   <>
-    <h3>{com.name}</h3>
-    <p>{com.body}</p>
-    <p className="email">{com.email}</p>
+    <h3>{comment.name}</h3>
+    <p>{comment.body}</p>
+    <p className="email">{comment.email}</p>
   </>
 );
 

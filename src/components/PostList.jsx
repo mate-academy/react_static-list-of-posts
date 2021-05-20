@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Post } from './Post'
+import { Post } from './Post';
 
-export const PostList = ({ whole }) => (
+export const PostList = ({ posts }) => (
   <ul className="ul">
-    {whole.map(post => (
+    {posts.map(post => (
       <li key={post.id} className="li">
         <Post {...post} />
       </li>
@@ -13,7 +13,7 @@ export const PostList = ({ whole }) => (
 );
 
 PostList.propTypes = {
-  whole: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),

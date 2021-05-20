@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { User } from './User'
-import { CommentList } from './CommentList'
+import { User } from './User';
+import { CommentList } from './CommentList';
 
-export const Post = (post) => (
+export const Post = post => (
   <>
     <div className="post">
       <h2>{post.title}</h2>
@@ -18,9 +18,9 @@ export const Post = (post) => (
     <div>
       <h2 className="comm">COMMENTS</h2>
       <div className="comments">
-        {post.comment.map(com => (
-          <div key={com.id} className="comment">
-            <CommentList {...com} />
+        {post.comments.map(comment => (
+          <div key={comment.id} className="comment">
+            <CommentList {...comment} />
           </div>
         ))}
       </div>
