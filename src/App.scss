@@ -1,1 +1,27 @@
-// styles go here
+.post {
+  margin: 50px;
+  padding: 20px;
+  border: 1px solid grey;
+}
+
+.title {
+  padding: 5px;
+  color: blue;
+}
+
+.body {
+  padding: 5px;
+  color: green;
+}
+
+.user {
+  padding: 10px;
+  margin: 10px;
+  background-color: bisque;
+}
+
+.comment {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(181, 189, 179);
+}
