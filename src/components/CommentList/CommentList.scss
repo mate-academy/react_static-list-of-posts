@@ -1,0 +1,23 @@
+.post__comment {
+  color: #094000;
+  background-color: #78ff63;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 190px;
+}
+
+.comment__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.comments__title {
+  text-align: center;
+  margin: 50px 0 10px;
+  font-weight: bold;
+}

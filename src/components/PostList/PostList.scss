@@ -1,0 +1,19 @@
+.post__list {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 19% 19% 19% 19% 19%;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.post__item {
+  padding: 5px 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #ab8cad;
+}
