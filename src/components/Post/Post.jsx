@@ -27,6 +27,6 @@ Post.propTypes = {
     id: PropTypes.number.isRequired,
   }).isRequired,
   comments: PropTypes.arrayOf(
-    PropTypes.shape({}).isRequired,
+    PropTypes.object.isRequired,
   ).isRequired,
 };
