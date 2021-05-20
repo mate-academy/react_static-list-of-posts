@@ -35,7 +35,7 @@ const App = () => (
       </p>
     </section>
 
-    <PostList preparedData={preparedData} />
+    <PostList posts={preparedData} />
   </div>
 );
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
-import { commentType, userType } from '../../types';
+import { CommentType, UserType } from '../../types';
 import './Post.scss';
 
 export const Post = ({ title, body, user, comments }) => (
@@ -20,6 +20,6 @@ export const Post = ({ title, body, user, comments }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.objectOf(userType).isRequired,
-  comments: PropTypes.arrayOf(commentType).isRequired,
+  user: PropTypes.shape(UserType).isRequired,
+  comments: PropTypes.arrayOf(CommentType).isRequired,
 };

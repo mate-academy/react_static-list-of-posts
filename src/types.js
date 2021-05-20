@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const commentType = PropTypes.shape({
+export const CommentType = PropTypes.shape({
   postId: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
@@ -8,7 +8,7 @@ export const commentType = PropTypes.shape({
   body: PropTypes.string.isRequired,
 });
 
-export const addressType = PropTypes.shape({
+export const AddressType = PropTypes.shape({
   street: PropTypes.string.isRequired,
   suite: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
@@ -20,19 +20,28 @@ export const addressType = PropTypes.shape({
   }),
 });
 
-export const companyType = PropTypes.shape({
+export const CompanyType = PropTypes.shape({
   name: PropTypes.string,
   catchPhrase: PropTypes.string,
   bs: PropTypes.string,
 });
 
-export const userType = PropTypes.shape({
+export const UserType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
 
-  address: PropTypes.objectOf(addressType),
+  address: PropTypes.objectOf(AddressType),
   website: PropTypes.string,
-  company: PropTypes.objectOf(companyType),
+  company: PropTypes.objectOf(CompanyType),
+});
+
+export const PostsType = PropTypes.shape({
+  userId: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: UserType.isRequired,
+  comments: PropTypes.arrayOf(CommentType),
 });
