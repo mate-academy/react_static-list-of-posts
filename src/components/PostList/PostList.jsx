@@ -4,19 +4,21 @@ import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import CommentList from '../CommentList/CommentList';
 
-const PostList = ({ list }) => (
+import comments from '../../api/comments';
+
+const PostList = ({ posts }) => (
   <>
-    {list.map(post => (
+    {posts.map(post => (
       <div className="Post" key={post.id}>
         <Post {...post} />
-        <CommentList {...post} />
+        <CommentList comments={comments} />
       </div>
     ))}
   </>
 );
 
 PostList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.shape({
+  posts: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
   })).isRequired,
 };

@@ -19,7 +19,7 @@ const Post = ({ title, body, user }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape().isRequired,
+  user: PropTypes.shape({}).isRequired,
 };
 
 export default Post;

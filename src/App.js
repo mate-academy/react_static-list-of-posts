@@ -10,12 +10,12 @@ import PostList from './components/PostList/PostList';
 const Posts = posts.map(post => ({
   ...post,
   user: users.find(user => post.userId === user.id),
-  comment: comments.filter(comment => comment.postId === post.id),
+  comments: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App = () => (
   <div className="App">
-    <PostList list={Posts} />
+    <PostList posts={Posts} />
   </div>
 );
 
