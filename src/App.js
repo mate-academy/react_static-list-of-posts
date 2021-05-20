@@ -6,7 +6,7 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const preparePost = posts.map(post => ({
+const preparePosts = posts.map(post => ({
   ...post,
   comments: comments.filter(comment => (
     post.id === comment.postId
@@ -21,7 +21,7 @@ const App = () => (
     <h1>
       Post List
     </h1>
-    <PostList posts={preparePost} />
+    <PostList posts={preparePosts} />
   </main>
 );
 
