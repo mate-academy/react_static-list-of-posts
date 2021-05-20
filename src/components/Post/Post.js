@@ -14,13 +14,17 @@ export const Post = ({ user, comments, title, body }) => (
   </>
 );
 
-Post.defaultProps = {
-  comments: [],
-};
+const PostUserType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+});
+
+const PostCommentType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+});
 
 Post.propTypes = {
-  user: PropTypes.shape({}).isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(PropTypes.shape()),
+  user: PostUserType.isRequired,
+  comments: PropTypes.arrayOf(PostCommentType.isRequired).isRequired,
 };
