@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
+import '../Post/post.scss';
 
 const Post = ({ title, body, user, comments }) => (
-  <div>
+  <div className='post'>
     <h2>{title}</h2>
     <p>{body}</p>
     <div>

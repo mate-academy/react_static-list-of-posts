@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../Comment/comment.scss';
+
 const Comment = ({ name, body, email}) => (
-  <div>
+  <div className='comment'>
     <p>{body}</p>
-    <p>
+    <p className>
       {name}
       <br />
       <a href={`mailto: ${email}`}>{email}</a>
