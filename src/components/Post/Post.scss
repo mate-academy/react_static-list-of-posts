@@ -1,0 +1,21 @@
+.post {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  width: 60%;
+  border: 1px solid black;
+  background-color: rgb(187, 216, 230);
+}
+
+.post-title {
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: serif;
+  text-transform: uppercase;
+}
+
+.post-body {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: serif;
+}
