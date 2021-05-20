@@ -1,1 +1,22 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  font-size: 25px;
+}
+
+.post {
+  padding: 20px;
+  width: 100%;
+  background-color: #eee;
+}
