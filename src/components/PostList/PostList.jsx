@@ -4,9 +4,12 @@ import Post from '../Post/Post';
 
 function PostList({ posts }) {
   return (
-   <ul>
-     { posts.map(post => <Post {...post}/>) }
-   </ul>
+   <div>
+     { 
+       posts.map(post => 
+         <Post {...post} key={post.id} />)
+     }
+   </div>
   )
 }
 
@@ -14,10 +17,14 @@ PostList.propTypes = {
   posts: propTypes.arrayOf(
     propTypes.shape({
       title: propTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
+      name: propTypes.string.isRequired,
+      body: propTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
 };
+
+PostList.defaultProps = {
+  posts: [],
+}
 
 export default PostList;

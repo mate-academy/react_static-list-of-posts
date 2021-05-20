@@ -1,16 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import User from '../User/User';
+import{ User }  from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 
-function Post({title, body, id, user, comments}) {
+function Post({title, body, user, comments}) {
   return (
-  <li key={id}>
+  <div>
     <h3>{title}</h3>
     <p>{body}</p>
     <User {...user}/>
-    <CommentList {...comments}/>
-  </li>
+    <CommentList comments={comments}/>
+  </div>
   )
 }
 

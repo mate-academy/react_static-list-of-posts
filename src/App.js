@@ -14,9 +14,11 @@ const preparedPosts = posts
     comments: comments.filter(comment => comment.postId === post.id),
   }));
 
-export const App = () => (
+const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList post={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
+
+export default App;
