@@ -1,0 +1,11 @@
+.comment {
+  margin-top: 10px;
+  background-color: rgb(250, 250, 69);
+  border-radius: 5px;
+  list-style: none;
+
+  &__info {
+    font-style: italic;
+    font-weight: bold;
+  }
+}
