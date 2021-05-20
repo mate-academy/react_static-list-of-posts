@@ -10,7 +10,7 @@ import { PostList } from './components/PostList/PostList';
 const preparedPosts = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
-  comment: comments.filter(comment => comment.postId === post.id),
+  comments: comments.filter(comment => comment.postId === post.id),
 }
 ));
 
@@ -18,7 +18,7 @@ const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
     <div className="container">
-      <PostList preparedPosts={preparedPosts} />
+      <PostList posts={preparedPosts} />
     </div>
   </div>
 );

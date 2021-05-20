@@ -4,21 +4,19 @@ import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 import './Post.scss';
 
-export const Post = ({ title, body, user, comment }) => (
+export const Post = ({ title, body, user, comments }) => (
   <div className="post">
     <User {...user} />
     <div className="post-body">
       <div className="post-title">
-        post
-        {': '}
-        {title}
+        {`Post: ${title}`}
       </div>
       <p>
         {body}
       </p>
     </div>
 
-    <CommentList comments={comment} />
+    <CommentList comments={comments} />
   </div>
 );
 
@@ -28,7 +26,7 @@ Post.propTypes = {
   user: PropTypes.shape({
     id: PropTypes.number.isRequired,
   }).isRequired,
-  comment: PropTypes.arrayOf(
+  comments: PropTypes.arrayOf(
     PropTypes.shape({}).isRequired,
   ).isRequired,
 };

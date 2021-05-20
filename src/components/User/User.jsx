@@ -11,9 +11,7 @@ export const User = ({ name, email, address }) => (
       {email}
     </div>
     <div>
-      Address
-      {': '}
-      {address.city}
+      {`Address: ${address.city}`}
     </div>
   </div>
 );
