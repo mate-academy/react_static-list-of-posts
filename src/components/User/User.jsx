@@ -11,17 +11,6 @@ export const User = ({ name, email, address, posts }) => (
     <br />
     <br />
 
-    {posts.map(post => (
-      <Post {...post} key={post.id} />
-    ))}
-
-    <span>
-      {`email: ${email}`}
-    </span>
-
-    <br />
-    <br />
-
     <span>
       Address:
     </span>
@@ -53,6 +42,20 @@ export const User = ({ name, email, address, posts }) => (
       {`zipcode: ${address.zipcode}`}
       .
     </span>
+
+    <br />
+    <br />
+
+    <span>
+      {`email: ${email}`}
+    </span>
+
+    <br />
+    <br />
+
+    {posts.map(post => (
+      <Post {...post} key={post.id} />
+    ))}
 
     <br />
     <br />
