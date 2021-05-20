@@ -7,10 +7,10 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const preperedTodos = posts.map(element => ({
-  ...element,
-  comments: comments.filter(com => com.postId === element.id),
-  user: users.find(user => user.id === element.userId),
+const preperedPosts = posts.map(post => ({
+  ...post,
+  comments: comments.filter(com => com.postId === post.id),
+  user: users.find(user => user.id === post.userId),
 }));
 
 const App = () => (
@@ -32,7 +32,7 @@ const App = () => (
       {users.length}
     </p>
 
-    <PostList props={preperedTodos} />
+    <PostList posts={preperedPosts} />
   </div>
 );
 

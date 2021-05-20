@@ -23,9 +23,3 @@ export const Comment = ({
     </p>
   </>
 );
-
-Comment.propTypes = {
-  name: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-};

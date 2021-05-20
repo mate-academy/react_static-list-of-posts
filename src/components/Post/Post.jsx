@@ -29,11 +29,26 @@ export const Post = ({
   </>
 );
 
+const user = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  address: PropTypes.shape({
+    city: PropTypes.string.isRequired,
+  }).isRequired,
+}).isRequired;
+
+const comment = PropTypes.arrayOf(
+  PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }),
+).isRequired;
+
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape().isRequired,
-  comments: PropTypes.arrayOf(
-    PropTypes.shape(),
-  ).isRequired,
+  user: user,
+  comments: comment,
 };

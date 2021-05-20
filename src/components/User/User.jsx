@@ -16,15 +16,7 @@ export const User = ({
     </p>
 
     <p className="user__adress">
-      {`Leaving: ${address.city}`}
+      {`Live: ${address.city}`}
     </p>
   </>
 );
-
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    city: PropTypes.string.isRequired,
-  }).isRequired,
-};
