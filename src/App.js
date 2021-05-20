@@ -14,7 +14,7 @@ const preparedPosts = posts.map(post => ({
 }));
 
 const App = () => (
-  <PostList preparedPosts={preparedPosts} />
+  <PostList posts={preparedPosts} />
 );
 
 export default App;

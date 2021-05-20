@@ -21,10 +21,13 @@ Post.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string,
-  // eslint-disable-next-line
-  user: PropTypes.object.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+  }).isRequired,
   comments: PropTypes.arrayOf(
-    PropTypes.object,
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
   ).isRequired,
 };
 
