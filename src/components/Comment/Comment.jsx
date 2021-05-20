@@ -5,10 +5,10 @@ import './Comment.scss';
 
 export const Comment = ({ name, body, email }) => (
   <div className="comment">
-    <span>
-      {`User ${name} (${email}) has left the comment:`}
-    </span>
-    <p>{body}</p>
+    <span>{name}</span>
+    {`  `}
+    <span>({email})</span>
+    <p className="comment__info">{body}</p>
   </div>
 );
 

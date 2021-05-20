@@ -6,7 +6,9 @@ import './User.scss';
 export const User = ({ name, email, address }) => (
   <div className="user">
     <span>{name}</span>
+    <br></br>
     <span>{email}</span>
+    <br></br>
     <span>{`${address.city}, ${address.street}`}</span>
   </div>
 );

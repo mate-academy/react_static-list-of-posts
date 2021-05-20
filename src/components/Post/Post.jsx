@@ -8,9 +8,9 @@ import './Post.scss';
 export const Post = ({ title, user, body, comments }) => (
   <div>
     <h2 className="post-title">{title}</h2>
+    <p><b>{body}</b></p>
     <User {...user}/>
-    <p>{body}</p>
-    <CommentList {...comments} />
+    <CommentList comments={comments} />
   </div>
 );
 
