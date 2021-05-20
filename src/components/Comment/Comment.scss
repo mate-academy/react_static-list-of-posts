@@ -1,0 +1,12 @@
+.App {
+  &__comment {
+    padding: 10px;
+
+    background-color: lightgoldenrodyellow;
+
+    &-name {
+      text-transform: uppercase;
+      font-style: italic;
+    }
+  }
+}
