@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80vw;
+  padding: 15px;
+  list-style: none;
+
+  &__item {
+    background-color: #bbc;
+    padding: 20px;
+    margin: 15px;
+  }
+}

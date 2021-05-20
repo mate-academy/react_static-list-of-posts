@@ -1,0 +1,15 @@
+.post {
+  background-color: #fff;
+  padding: 10px;
+
+  &__title {
+    margin: 5px 5px 15px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__body {
+    margin: 0;
+    font-size: 18px;
+  }
+}
