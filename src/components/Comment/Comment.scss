@@ -1,0 +1,22 @@
+$lineMargins: 20px;
+$marginTop: 15px;
+
+.comment {
+  position: relative;
+  width: 80%;
+  background-color: cornflowerblue;
+  color: white;
+  margin-top: $marginTop * 2;
+  padding: 10px;
+  border-radius: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: $lineMargins;
+    right: $lineMargins;
+    top: -15px;
+    border-top: rgb(4, 29, 61) solid 3px;
+    border-radius: 10%;
+  }
+}
