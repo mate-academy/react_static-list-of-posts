@@ -1,0 +1,18 @@
+.comment__name {
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.comment__email {
+  margin-left: 10px;
+}
+
+.comment__body {
+  margin-left: 10px;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
