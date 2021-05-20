@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-input {
+  list-style: none;
+  display: flex;
+  border: aliceblue 5px solid;
+  border-radius: 20px;
+  background-color: antiquewhite;
+}
