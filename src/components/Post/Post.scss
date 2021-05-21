@@ -1,0 +1,19 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 1000px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  border: 2px solid grey;
+}
+
+.postTitle {
+  font-weight: bold;
+  text-align: center;
+}
+
+.infoUser {
+  text-align: right;
+  color: brown;
+}
