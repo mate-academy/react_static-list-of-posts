@@ -1,5 +1,4 @@
 import React from 'react';
-import './CommentList.scss';
 import PropTypes from 'prop-types';
 import Comment from '../Comments/Comments';
 

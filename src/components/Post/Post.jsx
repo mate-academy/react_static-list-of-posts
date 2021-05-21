@@ -1,5 +1,4 @@
 import React from 'react';
-import './Post.scss';
 import PropTypes from 'prop-types';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';

@@ -1,5 +1,4 @@
 import React from 'react';
-import './Comments.scss';
 import PropTypes from 'prop-types';
 
 const Comment = ({ name, body, email }) => (
