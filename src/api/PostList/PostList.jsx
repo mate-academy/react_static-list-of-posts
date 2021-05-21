@@ -1,13 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentList from '../CommentList/CommentList';
 import User from '../User/User';
 
+
 const PostList = ({ posts }) => (
   posts.map(post => (
-    <ul>
-      <li className="post-title">
+    <>
+      <div className="post-title">
         {post.title}
-      </li>
+      </div>
       <div>
         {post.body}
       </div>
@@ -19,8 +21,15 @@ const PostList = ({ posts }) => (
       <div>
         <CommentList comments={post.comments} />
       </div>
-    </ul>
+    </>
   ))
 );
+
+CommentList.propTypes = {
+  posts: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default PostList;

@@ -1,12 +1,11 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CommentList.css';
 
 const CommentList = ({ comments }) => (
-  <>
-    {comments.map(comment => (
-      <ul className="comments">
+  comments.map(comment => (
+    <>
+      <div className="comments">
         <div className="comments-name">
           {comment.name}
         </div>
@@ -16,9 +15,9 @@ const CommentList = ({ comments }) => (
         <div className="comments-email">
           {comment.email}
         </div>
-      </ul>
-    ))}
-  </>
+      </div>
+    </>
+  ))
 );
 
 CommentList.propTypes = {
