@@ -1,1 +1,18 @@
 // styles go here
+.App {
+  padding: 10px;
+  text-align: center;
+}
+
+.Post {
+  margin: 20px 0;
+  padding: 10px;
+
+  text-align: left;
+  background-color: #fceebf;
+  border-radius: 10px;
+}
+
+.Comment {
+  padding: 0 40px;
+}
