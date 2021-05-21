@@ -7,7 +7,7 @@ export const CommentList = ({ list }) => (
   <ul className="comment-list">
     {list.map(comment => (
       <li key={comment.id}>
-        <Comment commentItem={comment} />
+        <Comment {...comment} />
       </li>
     ))}
   </ul>

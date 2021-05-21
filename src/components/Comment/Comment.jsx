@@ -2,22 +2,20 @@ import React from 'react';
 import './Comment.scss';
 import PropTypes from 'prop-types';
 
-export const Comment = ({ commentItem }) => (
+export const Comment = ({ name, email, body }) => (
   <div className="comment">
     <div className="comment__info">
-      {`Author: ${commentItem.name}`}
+      {`Author: ${name}`}
       <br />
-      {`Email: ${commentItem.email}`}
+      {`Email: ${email}`}
       <br />
-      {commentItem.body}
+      {body}
     </div>
   </div>
 );
 
 Comment.propTypes = {
-  commentItem: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
 };

@@ -2,17 +2,17 @@ import React from 'react';
 import './User.scss';
 import PropTypes from 'prop-types';
 
-export const User = ({ user }) => (
+export const User = ({ name, email, address }) => (
   <div className="user">
     <div className="user__info">
-      {`Author: ${user.name}`}
+      {`Author: ${name}`}
       <br />
-      {`Email: ${user.email}`}
+      {`Email: ${email}`}
       <br />
       {`Address: `
-        + `${user.address.city},`
-        + ` ${user.address.street},`
-        + ` ${user.address.suite}`}
+        + `${address.city},`
+        + ` ${address.street},`
+        + ` ${address.suite}`}
     </div>
   </div>
 );
@@ -24,9 +24,7 @@ const AddressType = PropTypes.shape({
 });
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: AddressType,
-  }).isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  address: AddressType.isRequired,
 };
