@@ -3,14 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
 
-export const PostList = ({ preparedPosts }) => (
+export const PostList = ({ posts }) => (
   <div className="listPost" key="">
-    {preparedPosts.map(post => (
+    {posts.map(post => (
       <Post {...post} key={post.id} />
     ))}
   </div>
 );
 
 PostList.propTypes = {
-  preparedPosts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };

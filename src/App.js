@@ -33,7 +33,7 @@ const App = () => (
       {users.length}
     </p>
 
-    <PostList preparedPosts={preparedPosts} key={preparedPosts.id} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 

@@ -39,5 +39,5 @@ Post.propTypes = {
       }),
     }),
   }).isRequired,
-  comments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  comments: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
