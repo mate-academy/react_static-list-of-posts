@@ -1,0 +1,19 @@
+.App {
+  &__post-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    row-gap: 20px;
+  }
+
+  &__post-item {
+    padding: 35px;
+    width: 600px;
+
+    list-style-type: none;
+
+    border: solid 1px #000;
+    border-radius: 5px;
+  }
+}

@@ -1,1 +1,8 @@
-// styles go here
+.App {
+
+  &__title {
+    font-family: 'Code Light', sans-serif;
+    text-decoration: underline;
+    text-align: center;
+  }
+}
