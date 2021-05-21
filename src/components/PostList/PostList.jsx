@@ -12,5 +12,5 @@ export const PostList = ({ preparedPosts }) => (
 );
 
 PostList.propTypes = {
-  preparedPosts: PropTypes.shape.isRequired,
+  preparedPosts: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
