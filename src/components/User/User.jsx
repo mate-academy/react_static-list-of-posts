@@ -11,17 +11,19 @@ export const User = ({ name, email, address }) => (
       </span>
       {name}
     </p>
-    <p>
+    <div>
       <span className="User__title">
         {`Email: `}
       </span>
-      {email}
-    </p>
+      <a href={`mailto:${email}`}>
+        {email}
+      </a>
+    </div>
     <p>
       <span className="User__title">
         {`Address: `}
       </span>
-      {address.street}
+      {`${address.city}, ${address.street}, ${address.suite}`}
     </p>
   </div>
 );
