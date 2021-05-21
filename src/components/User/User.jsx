@@ -9,7 +9,7 @@ export const User = ({ name, email, address: { city, street } }) => (
   </div>
 );
 
-const propTypes = PropTypes.shape({
+const AddressType = PropTypes.shape({
   city: PropTypes.string.isRequired,
   street: PropTypes.string.isRequired,
 });
@@ -17,5 +17,5 @@ const propTypes = PropTypes.shape({
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: propTypes.isRequired,
+  address: AddressType.isRequired,
 };

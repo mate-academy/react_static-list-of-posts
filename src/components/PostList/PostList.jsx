@@ -12,10 +12,10 @@ export const PostList = ({ posts }) => (
 
 );
 
-const propTypes = PropTypes.shape({
+const PostType = PropTypes.shape({
   id: PropTypes.number.isRequired,
 });
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(propTypes).isRequired,
+  posts: PropTypes.arrayOf(PostType).isRequired,
 };

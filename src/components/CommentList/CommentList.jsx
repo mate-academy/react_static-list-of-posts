@@ -13,10 +13,10 @@ export const CommentList = ({ comments }) => (
   </div>
 );
 
-const propTypes = PropTypes.shape({
+const CommentType = PropTypes.shape({
   id: PropTypes.number.isRequired,
 });
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(propTypes).isRequired,
+  comments: PropTypes.arrayOf(CommentType).isRequired,
 };
