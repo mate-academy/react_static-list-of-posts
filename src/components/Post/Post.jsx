@@ -16,6 +16,6 @@ export const Post = ({ title, body, user, comments }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.arrayOf({}).isRequired,
+  user: PropTypes.shape({}).isRequired,
   comments: PropTypes.arrayOf({}).isRequired,
 };
