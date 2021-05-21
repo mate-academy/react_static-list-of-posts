@@ -6,21 +6,19 @@ import './User.scss';
 const author = 'Author';
 
 export const User = ({ name, email, address }) => (
-  <>
-    <div className="App__post-author">
-      <p>
-        {`${author}: ${name}`}
-      </p>
+  <div className="App__post-author">
+    <p>
+      {`${author}: ${name}`}
+    </p>
 
-      <a href={email}>
-        {email}
-      </a>
+    <a href={email}>
+      {email}
+    </a>
 
-      <p>
-        {`${address.suite}, ${address.street}, ${address.city}`}
-      </p>
-    </div>
-  </>
+    <p>
+      {`${address.suite}, ${address.street}, ${address.city}`}
+    </p>
+  </div>
 );
 
 User.defaultProps = {
