@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import CommentList from '../CommentList/CommentList';
 import User from '../User/User';
 
-
 const PostList = ({ posts }) => (
   posts.map(post => (
     <>
