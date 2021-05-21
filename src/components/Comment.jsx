@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = ({ name, body, email }) => (
-  <div className="comment">
-    <p>{body}</p>
-    <p className="comment-info">
-      {name}
-      <br />
-      {email}
-    </p>
-    <br />
-  </div>
-);
+function Comment({ name, body, email }) {
+  return (
+    <>
+      <h3>{name}</h3>
+      <p>{body}</p>
+      <p>{email}</p>
+    </>
+  );
+}
 
 Comment.propTypes = {
   name: PropTypes.string.isRequired,

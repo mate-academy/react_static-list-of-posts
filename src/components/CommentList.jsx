@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Comment from '../Comments/Comments';
+import Comment from './Comment';
 
-const CommentList = ({ comments }) => (
-  <>
-    <h2>Comments</h2>
-    <div className="comments">
-      {comments.map(comment => <Comment {...comment} key={comment.id} />)}
-    </div>
-  </>
-);
+function CommentList({ comments }) {
+  return (
+    <ul>
+      {comments.map(comment => (
+        <li key={comment.id}>
+          <Comment {...comment} />
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(
