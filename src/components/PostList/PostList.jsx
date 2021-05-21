@@ -6,7 +6,7 @@ import { TypeUser, TypeComments } from '../../types';
 export const PostList = ({ posts }) => (
   <ul>
     {posts.map(post => (
-      <Post {...post} key={post.id} />
+      <li key={post.id}><Post {...post} /></li>
     ))}
   </ul>
 );

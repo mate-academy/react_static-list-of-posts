@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TypeAddress } from '../../types';
 
 export const User = ({ name, email, address }) => (
-  <li>
+  <div>
     <span>
       <strong>{`${name} posted:`}</strong>
     </span>
@@ -53,7 +53,7 @@ export const User = ({ name, email, address }) => (
     <br />
     <br />
 
-  </li>
+  </div>
 );
 
 User.propTypes = {
