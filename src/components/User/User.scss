@@ -1,0 +1,12 @@
+.user {
+  position: relative;
+  padding-bottom: 120px;
+
+  &__info {
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 0;
+  }
+}

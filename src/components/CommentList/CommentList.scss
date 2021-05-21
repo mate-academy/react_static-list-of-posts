@@ -1,0 +1,9 @@
+.comment-list {
+  list-style-type: none;
+
+  & > * {
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 5px;
+  }
+}
