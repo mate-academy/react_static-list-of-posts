@@ -1,0 +1,11 @@
+.User {
+  margin-bottom: 40px;
+
+  p {
+    margin: 0;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,22 @@
+.Comment {
+  &__author-name {
+    margin: 0;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__text {
+    font-style: italic;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__email {
+    font-size: 14px;
+    color: rgb(109, 109, 109);
+  }
+}
