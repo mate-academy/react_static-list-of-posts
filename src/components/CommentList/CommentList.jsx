@@ -7,20 +7,10 @@ export const CommentList = ({ comments }) => {
   return (
     <ul>
       {comments.map(comment => 
+        <li>
         <Comment {...comment} key={comment.id}/>
+        </li>
       )}
     </ul>
   )
-}
-
-CommentList.propTypes = {
-  comments:  propTypes.shape({
-    comment: propTypes.arrayOf(
-      propTypes.shape({
-        name: propTypes.string.isRequired,
-        body: propTypes.string.isRequired,
-        email: propTypes.string.isRequired,
-      }).isRequired,
-    ).isRequired,
-  }).isRequired,
 }

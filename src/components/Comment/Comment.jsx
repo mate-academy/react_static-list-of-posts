@@ -3,11 +3,11 @@ import propTypes from 'prop-types';
 
 function Comment({name, body, email}){
   return (
-    <li>
+    <>
       <h4>{name}</h4>
       <p>{body}</p>
       <p>{email}</p>
-    </li>
+    </>
   )
 };
 

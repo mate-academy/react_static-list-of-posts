@@ -17,7 +17,24 @@ function Post({title, body, user, comments}) {
 Post.propTypes = {
   title: propTypes.string.isRequired,
   body: propTypes.string.isRequired,
-  id: propTypes.string.isRequired,
+  user: propTypes.arrayOf(
+    propTypes.shape({
+      name: propTypes.string.isRequired,
+      email: propTypes.string.isRequired,
+      address: propTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
+  comments: propTypes.arrayOf(
+    propTypes.shape({
+      comment: propTypes.arrayOf(
+        propTypes.shape({
+          name: propTypes.string.isRequired,
+          body: propTypes.string.isRequired,
+          email: propTypes.string.isRequired,
+        }).isRequired,
+      ).isRequired,
+    })
+  )
 }
 
 export default Post;

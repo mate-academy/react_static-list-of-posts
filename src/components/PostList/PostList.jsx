@@ -16,9 +16,7 @@ function PostList({ posts }) {
 PostList.propTypes = {
   posts: propTypes.arrayOf(
     propTypes.shape({
-      title: propTypes.string.isRequired,
-      name: propTypes.string.isRequired,
-      body: propTypes.string.isRequired,
+      id: propTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
 };
