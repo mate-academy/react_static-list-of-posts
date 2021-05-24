@@ -9,9 +9,7 @@ const Post = ({ title, body, author, comments }) => (
     <span>Author info:</span>
     <Author {...author}/>
     <p>Comments:</p>
-    <ul>
-      <CommentList comments={comments}/>
-    </ul>
+    <CommentList comments={comments}/>
   </li>
 );
 
