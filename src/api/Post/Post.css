@@ -1,0 +1,15 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.post {
+  padding: 20px;
+  width: 100%;
+  background-color: #eee;
+}

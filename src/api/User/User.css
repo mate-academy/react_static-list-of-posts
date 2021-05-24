@@ -1,0 +1,8 @@
+.user {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: lightblue;
+  font-size: 12px;
+}
