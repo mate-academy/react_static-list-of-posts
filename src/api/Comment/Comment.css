@@ -1,0 +1,15 @@
+.comment-name {
+  font-size: 20px;
+}
+
+.comment-body {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #508080;
+  font-size: 20px;
+}
+
+.comment-email {
+  margin-top: 10px;
+  font-size: 15px;
+}

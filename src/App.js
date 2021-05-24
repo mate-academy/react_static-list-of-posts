@@ -16,21 +16,12 @@ const preparedPosts = posts.map(post => ({
 
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1>Static list of posts:</h1>
 
-    <div className="posts">
+    <div className="posts" key={posts.id}>
       <PostList posts={preparedPosts} />
     </div>
 
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
   </div>
 );
 
