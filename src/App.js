@@ -1,5 +1,6 @@
 import React from 'react';
-import { PostList } from './components/PostList';
+import { PostList } from './api/components/PostList/PostList';
+
 import './App.scss';
 
 import posts from './api/posts';
@@ -9,27 +10,14 @@ import users from './api/users';
 const preparedPosts = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
-  comments: comments.filter(comment => comment.postId === post.id),
+  comment: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App = () => (
-  <div className="app">
-    <h1 className="app__title">Static list of posts</h1>
-    <PostList posts={preparedPosts} />
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
+  <div className="App">
+    <h1>Static list of posts</h1>
 
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+    <PostList postList={preparedPosts} />
   </div>
 );
 
