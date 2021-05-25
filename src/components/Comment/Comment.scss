@@ -1,0 +1,33 @@
+.comment {
+  display: flex;
+  margin: 10px 0 10px 50px;
+  border: 1px solid grey;
+  background-color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__user {
+    width: 20%;
+    flex-grow: 1;
+    padding: 5px;
+    border-right: 1px solid grey;
+  }
+  
+  &__user-name {
+    color: green;
+    font-size: 14px;
+  }
+  
+  &__user-email {
+    padding-top: 5px;
+    font-size: 12px;
+    color: #13f;
+  }
+
+  &__text {
+    padding: 5px;
+    width: 80%;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 14px;
+  }
+}

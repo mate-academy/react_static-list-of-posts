@@ -1,0 +1,13 @@
+.post {
+  display: flex;
+  background-color: #eee;
+  border: 1px solid grey;
+
+  &__section {
+    padding: 5px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

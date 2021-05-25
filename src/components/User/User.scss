@@ -1,0 +1,21 @@
+.user {
+  padding: 5px;
+  border-right: 1px solid grey;
+  min-width: 200px;
+
+  &__name {
+    color: green;
+  }
+  
+  &__email {
+    padding-top: 5px;
+    font-size: 14px;
+    color: #13f;
+  }
+
+  &__address {
+    font-size: 12px;
+    padding-top: 10px;
+    color: grey;
+  }
+}
