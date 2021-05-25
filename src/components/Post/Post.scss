@@ -1,0 +1,14 @@
+.post {
+  border: 2px solid black;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  p:first-letter {
+    text-transform: capitalize;
+  }
+}
