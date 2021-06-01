@@ -6,22 +6,20 @@ import { CommentType } from './CommentType';
 import './Comment.css';
 
 export const Comment = ({ name, body, email }) => (
-  <Card variant="outlined">
-    <CardContent>
-      <Typography variant="h6" component="h7">
-        {name}
-      </Typography>
-      <Typography variant="body2" component="p">
-        {body}
-      </Typography>
-      <Typography
-        className="title"
-        color="textSecondary"
-        gutterBottom
-      >
-        {`Author: ${email}`}
-      </Typography>
-    </CardContent>
+  <Card className="comment" variant="outlined">
+    <Typography variant="h6" component="h7">
+      {name}
+    </Typography>
+    <Typography variant="body2" component="p">
+      {body}
+    </Typography>
+    <Typography
+      className="title"
+      color="textSecondary"
+      gutterBottom
+    >
+      {`Author: ${email}`}
+    </Typography>
   </Card>
 );
 

@@ -34,14 +34,10 @@ function initFullPosts(rawPosts, allComments, allUsers) {
   return rawPosts.map((post) => {
     const author = allUsers.find(user => user.id === post.userId);
     const postWithAuthor = {
-      ...post, author, comments: [],
+      ...post,
+      author,
+      comments: allComments.filter(comment => comment.postId === post.id),
     };
-
-    allComments.forEach((comment) => {
-      if (comment.postId === postWithAuthor.id) {
-        postWithAuthor.comments.push(comment);
-      }
-    });
 
     return postWithAuthor;
   });
