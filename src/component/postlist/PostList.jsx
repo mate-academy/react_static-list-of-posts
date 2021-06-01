@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Post } from '../post';
+import './PostList.css';
 
 export const PostList = ({ list }) => {
-  const classes = useStyles();
 
   return (
-    <ul className={classes.posts}>
+    <ul className="posts">
       {list.map(postContent => (
-        <li key={postContent.id} className={classes.post}>
+        <li key={postContent.id}>
           <Post {...postContent} />
         </li>
       ))}
@@ -26,10 +26,3 @@ PostList.propTypes = {
 PostList.defaultProps = {
   list: [],
 };
-
-const useStyles = makeStyles({
-  posts: {
-    height: 'auto',
-    listStyle: 'none',
-  },
-});

@@ -1,0 +1,6 @@
+.tree {
+  height: auto;
+  flex-grow: 10px;
+  max-width: inherit;
+  margin: 5px;
+}
