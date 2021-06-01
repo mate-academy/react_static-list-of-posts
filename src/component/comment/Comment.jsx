@@ -5,15 +5,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { CommentType } from './CommentType';
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  title: {
-    fontSize: 14,
-  },
-});
-
 export const Comment = ({ name, body, email }) => {
   const classes = useStyles();
 
@@ -39,3 +30,12 @@ export const Comment = ({ name, body, email }) => {
 };
 
 Comment.propTypes = CommentType;
+
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275,
+  },
+  title: {
+    fontSize: 14,
+  },
+});
