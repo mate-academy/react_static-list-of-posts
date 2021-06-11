@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
 import './App.scss';
@@ -5,6 +6,8 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+
+import { PostList } from './components/PostList';
 
 const App = () => (
   <div className="App">
@@ -24,6 +27,10 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <div>
+      <PostList actualPosts={posts} />
+    </div>
   </div>
 );
 
