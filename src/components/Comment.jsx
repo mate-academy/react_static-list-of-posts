@@ -1,34 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Comment = ({ postId, newComment }) => {
-  if (postId === newComment.postId) {
-    return (
-      <ul>
-        <li>
-          Name:
-          {newComment.name}
-        </li>
-        <li>
-          Body:
-          {newComment.body}
-        </li>
-        <li>
-          Email:
-          {newComment.email}
-        </li>
-      </ul>
-    );
-  }
-
-  return null;
-};
+export const Comment = ({ comment }) => (
+  <ul>
+    <li>
+      Name:
+      {comment.name}
+    </li>
+    <li>
+      Body:
+      {comment.body}
+    </li>
+    <li>
+      Email:
+      {comment.email}
+    </li>
+  </ul>
+);
 
 Comment.propTypes = {
-  postId: PropTypes.number.isRequired,
-  newComment: PropTypes.shape({
-    postId: PropTypes.number.isRequired,
-    id: PropTypes.number.isRequired,
+  comment: PropTypes.shape({
     name: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
