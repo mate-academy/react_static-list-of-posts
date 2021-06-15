@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,9 +9,18 @@ export const User = ({ post, newUsers }) => (
       if (user.id === post.userId) {
         return (
           <div>
-            <p>Author: <span className="author">{user.name}</span></p>
-            <p>Email: {user.email}</p>
-            <p>Address:
+            <p>
+              Author:
+              <span className="author">
+                {user.name}
+              </span>
+            </p>
+            <p>
+              Email:
+              {user.email}
+            </p>
+            <p>
+              Address:
               <UserAddress addressObject={user.address} />
             </p>
           </div>

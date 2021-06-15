@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
 import './App.scss';
@@ -8,6 +7,12 @@ import comments from './api/comments';
 import users from './api/users';
 
 import { PostList } from './components/PostList';
+
+/* const actualPosts = posts.map(post => ({
+  ...post,
+  user: users.find(user => post.userId === user.id),
+  comments: comments.filter(comment => comment.postId === post.id),
+})); */
 
 const App = () => (
   <div className="App">

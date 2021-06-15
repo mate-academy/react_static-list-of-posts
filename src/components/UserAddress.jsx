@@ -1,11 +1,14 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 export const UserAddress = ({ addressObject }) => (
   <span>
-    {addressObject.street},{' '}
-    {addressObject.suite},{' '}
+    {addressObject.street}
+    ,
+    {' '}
+    {addressObject.suite}
+    ,
+    {' '}
     {addressObject.city}
   </span>
 );
