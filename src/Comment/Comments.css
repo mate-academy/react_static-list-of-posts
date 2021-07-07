@@ -1,0 +1,11 @@
+.comments {
+  background-color: #5B52AB;
+  color: #fff;
+}
+
+.comments__email {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
