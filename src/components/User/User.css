@@ -1,0 +1,8 @@
+.user_email {
+  cursor: pointer;
+  color: blue;
+}
+
+.user_name {
+  font-style: italic;
+}
