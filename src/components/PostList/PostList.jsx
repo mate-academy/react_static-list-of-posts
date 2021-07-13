@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Post from '../Post/Post';
 import './PostList.css';
+import { TypeUser, TypeComment } from '../../types';
 
 const PostList = ({ posts }) => (
   <div className="postList">
@@ -15,24 +16,13 @@ const PostList = ({ posts }) => (
   </div>
 );
 
-// name, body и email
-
 PostList.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      address: PropTypes.string.isRequired,
-    }).isRequired,
-    comments: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-    }),
+    user: TypeUser,
+    comments: TypeComment,
   })).isRequired,
 };
 

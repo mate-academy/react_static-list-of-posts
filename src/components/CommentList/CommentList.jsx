@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from '../Comment/Comment';
+import { TypeComment } from '../../types';
 
-const CommentList = ({ commentList }) => (
+const CommentList = ({ comments }) => (
   <div className="commentList">
     <ul>
-      {commentList.map(comment => (
+      {comments.map(comment => (
         <li key={comment.id}>
           <Comment comment={comment} />
         </li>
@@ -15,12 +16,7 @@ const CommentList = ({ commentList }) => (
 );
 
 CommentList.propTypes = {
-  commentList: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-  })).isRequired,
+  comments: PropTypes.arrayOf(TypeComment).isRequired,
 };
 
 export default CommentList;

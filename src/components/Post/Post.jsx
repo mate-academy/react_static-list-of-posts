@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
 import './Post.css';
+import { TypeUser, TypeComment } from '../../types';
 
 const Post = ({ post }) => (
   <div className="post">
     <p className="post_title">{post.title.toUpperCase()}</p>
     <p className="post__body">{post.body}</p>
     <User user={post.user} />
-    <CommentList commentList={post.comments} />
+    <CommentList comments={post.comments} />
   </div>
 );
 
@@ -18,17 +19,8 @@ Post.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      address: PropTypes.string.isRequired,
-    }).isRequired,
-    comments: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-    }).isRequired,
+    user: TypeUser,
+    comments: TypeComment,
   }).isRequired,
 };
 
