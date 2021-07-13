@@ -1,0 +1,11 @@
+.post {
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  max-width: 500px;
+}
+
+.post_title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
