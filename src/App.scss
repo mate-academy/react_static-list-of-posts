@@ -1,1 +1,17 @@
-// styles go here
+*::first-letter {
+  text-transform: uppercase;
+}
+
+html {
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
