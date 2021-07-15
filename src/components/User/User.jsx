@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './User.scss';
+import { UserTypes } from '../../propTypes/types';
 
 export function User({ name, email, address }) {
   const receiveAddress
@@ -26,17 +26,4 @@ export function User({ name, email, address }) {
   );
 }
 
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  address: PropTypes.shape({
-    street: PropTypes.string.isRequired,
-    suite: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    zipcode: PropTypes.string.isRequired,
-    geo: PropTypes.shape({
-      lat: PropTypes.string,
-      lng: PropTypes.string,
-    }),
-  }).isRequired,
-};
+User.propTypes = UserTypes;

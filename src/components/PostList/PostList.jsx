@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Post from '../Post/Post';
+import { PostListTypes } from '../../propTypes/types';
 
 export function PostList({ posts }) {
   return (
@@ -12,10 +12,4 @@ export function PostList({ posts }) {
   );
 }
 
-PostList.propTypes = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
-};
+PostList.propTypes = PostListTypes;

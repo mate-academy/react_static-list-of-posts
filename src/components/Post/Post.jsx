@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { PostTypes } from '../../propTypes/types';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
 import './Post.scss';
@@ -38,17 +38,6 @@ class Post extends Component {
   }
 }
 
-Post.propTypes = {
-  title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-  user: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  }).isRequired,
-  comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }).isRequired,
-  ).isRequired,
-};
+Post.propTypes = PostTypes;
 
 export default Post;
