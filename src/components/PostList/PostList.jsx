@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { postTypes } from '../../postTypes';
+import PostTypes from '../../types/PostTypes';
 
 import comments from '../../api/comments';
 import users from '../../api/users';
@@ -22,5 +22,5 @@ export const PostList = ({ posts }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.objectOf(postTypes).isRequired,
+  posts: PropTypes.arrayOf(PostTypes).isRequired,
 };

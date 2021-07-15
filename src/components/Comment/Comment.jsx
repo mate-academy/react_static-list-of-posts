@@ -1,15 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { commentTypes } from '../../commetTypes';
+import CommentTypes from '../../types/CommentTypes';
 
-export const Comment = ({comment}) => (
-  <>
-    <p>{comment.name}</p>
-    <p>{comment.body}</p>
-    <a href={comment.email}>{comment.email}</a>
-  </>
-);
+export const Comment = ({ comment }) => {
+  const userMail = comment.email;
+  const atributHref = `mailto:${userMail}`;
+
+  return (
+    <>
+      <p>{comment.name}</p>
+      <p>{comment.body}</p>
+      <a href={atributHref}>{comment.email}</a>
+    </>
+  );
+};
 
 Comment.propTypes = {
-  comment: PropTypes.objectOf(commentTypes).isRequired,
+  comment: CommentTypes.isRequired,
 };

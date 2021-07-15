@@ -1,8 +1,11 @@
 import React from 'react';
-import { userTypes } from '../userTypes';
+import PropTypes from 'prop-types';
+import UserTypes from '../../types/UserTypes';
+import PostTypes from '../../types/PostTypes';
 
 export const User = ({ users, post }) => {
   const findUserWithId = users.find(user => user.id === post.userId);
+  const userMail = `mailto: ${findUserWithId.email}`;
 
   return (
     <div className="user">
@@ -11,7 +14,7 @@ export const User = ({ users, post }) => {
         {' '}
         {findUserWithId.name}
       </h3>
-      <a href={findUserWithId.email} className="user__email">
+      <a href={userMail} className="user__email">
         {findUserWithId.email}
       </a>
       <div className="user__address">
@@ -29,4 +32,7 @@ export const User = ({ users, post }) => {
   );
 };
 
-User.propTypes = { ...userTypes };
+User.propTypes = {
+  post: PostTypes.isRequired,
+  users: PropTypes.arrayOf(UserTypes).isRequired,
+};

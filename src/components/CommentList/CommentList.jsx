@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../Comment/Comment';
-import { commentTypes } from '../../commetTypes';
+import CommentTypes from '../../types/CommentTypes';
+import PostTypes from '../../types/PostTypes';
 
 export const CommentList = ({ comments, post }) => (
   <ul>
@@ -16,6 +17,6 @@ export const CommentList = ({ comments, post }) => (
 );
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(commentTypes.comments).isRequired,
-  post: PropTypes.arrayOf(commentTypes.post).isRequired,
+  comments: PropTypes.arrayOf(CommentTypes).isRequired,
+  post: PostTypes.isRequired,
 };

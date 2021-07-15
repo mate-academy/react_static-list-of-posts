@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User/User';
 import { CommentList } from '../CommentList/CommentList';
-import { postTypes } from '../../postTypes';
-
-
-import comments from '../../api/comments';
-import users from '../../api/users';
+import PostTypes from '../../types/PostTypes';
+import CommentTypes from '../../types/CommentTypes';
+import UserTypes from '../../types/UserTypes';
 import './Post.scss';
 
-export const Post = ({ post }) => (
+export const Post = ({ post, users, comments }) => (
   <>
     <h2 className="post__titel">{post.title}</h2>
     <p className="post__body">{post.body}</p>
@@ -19,5 +17,7 @@ export const Post = ({ post }) => (
 );
 
 Post.propTypes = {
-  post: PropTypes.objectOf(postTypes).isRequired,
+  post: PostTypes.isRequired,
+  users: PropTypes.arrayOf(UserTypes).isRequired,
+  comments: PropTypes.arrayOf(CommentTypes).isRequired,
 };
