@@ -1,1 +1,16 @@
-// styles go here
+.App {
+  padding: 5%;
+  margin: 10px;
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.Components {
+  background-color: rgb(202, 202, 202);
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
