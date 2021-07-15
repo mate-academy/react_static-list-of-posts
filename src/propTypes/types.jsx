@@ -15,10 +15,10 @@ export const UserTypes = PropTypes.shape({
     phone: PropTypes.string.isRequired,
     website: PropTypes.string.isRequired,
     company: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    catchPhrase: PropTypes.string.isRequired,
-    bs: PropTypes.string.isRequired,
-  }).isRequired,
+      name: PropTypes.string.isRequired,
+      catchPhrase: PropTypes.string.isRequired,
+      bs: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 }).isRequired;
 
@@ -41,4 +41,4 @@ export const PostTypes = PropTypes.shape({
   body: PropTypes.string.isRequired,
 }).isRequired;
 
-export const PostListType = PropTypes.arrayOf(PostTypes).isRequired;
+export const PostListTypes = PropTypes.arrayOf(PostTypes).isRequired;
