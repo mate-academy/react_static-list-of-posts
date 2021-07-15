@@ -1,0 +1,27 @@
+.post__container {
+  width: 100%;
+}
+
+.post {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+  }
+
+  &__coments {
+    display: flex;
+    justify-content: space-between;
+  }
+}

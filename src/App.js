@@ -1,4 +1,5 @@
 import React from 'react';
+import { PostList } from './components/PostList/PostList';
 
 import './App.scss';
 
@@ -8,8 +9,10 @@ import users from './api/users';
 
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
-
+    <h1 className="title">Static list of posts</h1>
+    <div className="container">
+      <PostList posts={posts} users={users} comments={comments} />
+    </div>
     <p>
       <span>posts: </span>
       {posts.length}

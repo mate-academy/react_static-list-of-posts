@@ -1,1 +1,13 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: lightgrey;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
