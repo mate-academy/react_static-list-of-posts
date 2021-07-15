@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { postTypes } from '../../postTypes';
 
 import comments from '../../api/comments';
 import users from '../../api/users';
@@ -21,7 +22,5 @@ export const PostList = ({ posts }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  }).isRequired,
+  posts: PropTypes.objectOf(postTypes).isRequired,
 };
