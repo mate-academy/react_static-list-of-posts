@@ -9,7 +9,7 @@ export const Post = ({ user, comments, title, body }) => (
     <h2>{title}</h2>
     <p>{body}</p>
     <User currentUser={user} />
-    <CommentList commentsArr={comments} />
+    <CommentList comments={comments} />
   </>
 );
 

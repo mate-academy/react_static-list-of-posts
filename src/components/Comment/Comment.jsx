@@ -1,14 +1,14 @@
 import React from 'react';
 import { commentShape } from '../../types';
 
-export const Comment = ({ commentObj }) => (
+export const Comment = ({ comment }) => (
   <>
-    <h4>{commentObj.name}</h4>
-    <p>{commentObj.body}</p>
-    <p>{commentObj.email}</p>
+    <h4>{comment.name}</h4>
+    <p>{comment.body}</p>
+    <p>{comment.email}</p>
   </>
 );
 
 Comment.propTypes = {
-  commentObj: commentShape.isRequired,
+  comment: commentShape.isRequired,
 };
