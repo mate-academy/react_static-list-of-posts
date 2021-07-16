@@ -18,16 +18,16 @@ const postList = posts.map(post => ({
 const App = () => (
   <div className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <div>
+    <ul>
       {postList.map(x => (
-        <ul key={x.id} className="Components">
+        <p key={x.id} className="Components">
           <h2>{x.title}</h2>
-          <li>{x.body}</li>
+          <p>{x.body}</p>
           <User {...x.users} />
           <Comments {...x.comments} />
-        </ul>
+        </p>
       ))}
-    </div>
+    </ul>
   </div>
 );
 

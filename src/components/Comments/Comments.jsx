@@ -5,7 +5,7 @@ export const Comments = (comments) => {
   const changeTypeOfComment = (Object.entries(comments));
 
   return (
-    <div>
+    <ul>
       {
         changeTypeOfComment.map(item => (
           <li key={item.body}>
@@ -24,6 +24,6 @@ export const Comments = (comments) => {
           </li>
         ))
       }
-    </div>
+    </ul>
   );
 };

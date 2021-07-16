@@ -4,14 +4,14 @@ import { Adress } from '../Adress/Adress';
 
 export const User = ({ name, email, address }) => (
   <>
-    <li>
+    <p>
       User name:
       {` ${name}`}
-    </li>
-    <li>
+    </p>
+    <p>
       Email:
       {` ${email}`}
-    </li>
+    </p>
     <Adress address={address} />
   </>
 );
