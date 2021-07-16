@@ -1,27 +1,27 @@
 import React from 'react';
 import './Comments.scss';
 
-export const Comments = (props) => {
-  const newObj = (Object.entries(props));
+export const Comments = (comments) => {
+  const changeTypeOfComment = (Object.entries(comments));
 
   return (
     <div>
       {
-        newObj.map(item => (
-          <>
-            <p key={item.name}>
+        changeTypeOfComment.map(item => (
+          <li key={item.body}>
+            <p>
               Name:
               {item[1].name}
             </p>
             <div className="just__line"> </div>
-            <p key={item.body}>
+            <p>
               {item[1].body}
             </p>
-            <p key={item.email}>
+            <p>
               Email:
               {item[1].email}
             </p>
-          </>
+          </li>
         ))
       }
     </div>

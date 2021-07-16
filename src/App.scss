@@ -1,5 +1,4 @@
 .App {
-  padding: 5%;
   margin: 10px;
   &__title {
     display: flex;
@@ -11,6 +10,7 @@
   background-color: rgb(202, 202, 202);
   border: 1px solid black;
   margin: 20px;
-  padding: 20px;
+  padding: 50px;
+  list-style: number;
   border-radius: 10px;
 }

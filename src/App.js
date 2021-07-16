@@ -20,12 +20,12 @@ const App = () => (
     <h1 className="App__title">Static list of posts</h1>
     <div>
       {postList.map(x => (
-        <div className="Components">
-          <h2 key={x.title}>{x.title}</h2>
-          <p key={x.body}>{x.body}</p>
-          <User key={x.User} {...x.users} />
-          <Comments key={x.comments} {...x.comments} />
-        </div>
+        <ul key={x.id} className="Components">
+          <h2>{x.title}</h2>
+          <li>{x.body}</li>
+          <User {...x.users} />
+          <Comments {...x.comments} />
+        </ul>
       ))}
     </div>
   </div>

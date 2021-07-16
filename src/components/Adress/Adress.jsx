@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Adress = ({ address }) => (
-  <p>
+  <li>
     Adress:
     {
       ` ${address.city} ${address.street} , ${address.suite} `
     }
-  </p>
+  </li>
 );
 
 Adress.propTypes = {
