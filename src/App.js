@@ -1,29 +1,33 @@
 import React from 'react';
 
 import './App.scss';
+import { User } from './components/User/User';
+
+import { Comments } from './components/Comments/Comments';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
+const postList = posts.map(post => ({
+  ...post,
+  users: users.find(user => user.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
+
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
-
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+    <h1 className="App__title">Static list of posts</h1>
+    <ul>
+      {postList.map(x => (
+        <li key={x.id} className="Components">
+          <h2>{x.title}</h2>
+          <p>{x.body}</p>
+          <User {...x.users} />
+          <Comments {...x.comments} />
+        </li>
+      ))}
+    </ul>
   </div>
 );
 
