@@ -6,7 +6,9 @@ export function Comment({ name, body, email }) {
     <>
       <h3>{name}</h3>
       <p>{body}</p>
-      <p>{email}</p>
+      <a href={`mailto:${email}`}>
+        {email}
+      </a>
     </>
   );
 }

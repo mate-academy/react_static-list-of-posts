@@ -15,7 +15,10 @@ export const User = ({ userId }) => {
       </p>
 
       <p className="user__email">
-        {`E-mail: ${email}`}
+        E-mail:
+        <a href={`mailto:${email}`}>
+          {email}
+        </a>
       </p>
 
       <p className="user__address">
