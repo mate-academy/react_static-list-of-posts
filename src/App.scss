@@ -1,1 +1,49 @@
-// styles go here
+html {
+  font-family: Roboto, sans-serif;
+  color: #333;
+}
+
+.app {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.title::first-letter,
+.post__body::first-letter {
+  text-transform: uppercase;
+}
+
+.post {
+  padding: 10px 20px;
+  background-color: #eee;
+  border: 1px solid #8d8d8d;
+  border-radius: 16px;
+}
+
+.user__name,
+.user__email,
+.user__address {
+  margin: 0;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment__item {
+  list-style: decimal;
+  position: relative;
+  &::before {
+    content: "";
+    right: 2%;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #8d8d8d;
+  }
+}
