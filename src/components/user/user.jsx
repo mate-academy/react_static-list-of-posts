@@ -15,4 +15,6 @@ User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
+  street: PropTypes.string.isRequired,
+  suite: PropTypes.string.isRequired,
 };
