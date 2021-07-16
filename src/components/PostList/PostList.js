@@ -5,12 +5,14 @@ import { Post } from '../Post';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
 
+import { postPropTypes, userPropTypes, commentPropTypes } from '../proptypes';
+
 import './PostList.scss';
 
 export const PostList = ({ posts, users, comments }) => (
-  <div className="post__container">
+  <ul className="post__container">
     {posts.map(post => (
-      <div key={post.id} className="post">
+      <li key={post.id} className="post">
         <Post {...post} />
         <User {...users.find(user => user.id === post.userId)} />
         <CommentList
@@ -18,25 +20,19 @@ export const PostList = ({ posts, users, comments }) => (
             comments.filter(comment => comment.postId === post.id)
           }
         />
-      </div>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 PostList.propTypes = {
   posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
+    PropTypes.shape(postPropTypes),
   ).isRequired,
   users: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
+    PropTypes.shape(userPropTypes),
   ).isRequired,
   comments: PropTypes.arrayOf(
-    PropTypes.shape({
-      postId: PropTypes.number.isRequired,
-    }),
+    PropTypes.shape(commentPropTypes),
   ).isRequired,
 };

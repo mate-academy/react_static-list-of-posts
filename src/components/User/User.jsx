@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { userPropTypes } from '../proptypes';
 
 export const User = ({ name, email, address }) => (
   <div className="post__info">
@@ -9,8 +9,4 @@ export const User = ({ name, email, address }) => (
   </div>
 );
 
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-};
+User.propTypes = userPropTypes;

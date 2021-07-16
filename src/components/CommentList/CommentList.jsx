@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { commentPropTypes } from '../proptypes';
 
 import { Comment } from '../Comment';
 
 export const CommentList = ({ commentsFilter }) => (
-  <div className="comments">
+  <ul className="post__comments">
     {commentsFilter.map(comment => (
-      <div className="comment__item">
+      <li key={comment.id} className="comments__item">
         <Comment {...comment} />
-      </div>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 CommentList.propTypes = {
-  commentsFilter: PropTypes.arrayOf.isRequired,
+  commentsFilter: PropTypes.arrayOf(
+    PropTypes.shape(commentPropTypes),
+  ).isRequired,
 };

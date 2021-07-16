@@ -1,18 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { commentPropTypes } from '../proptypes';
 
 export const Comment = ({ name, email, body }) => (
   <>
-    <div className="post__coments">
+    <div className="post__comment-info">
       <h3>{name.toUpperCase()}</h3>
-      <p>{`Email: ${email}`}</p>
+      <p className="post__comment-email">{`Email: ${email}`}</p>
     </div>
     <p>{body}</p>
   </>
 );
 
-Comment.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
-};
+Comment.propTypes = commentPropTypes;
