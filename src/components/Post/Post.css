@@ -1,0 +1,12 @@
+.title {
+  width: max-content;
+  margin: 60px auto 30px;
+}
+
+.post {
+  width: 50vw;
+  margin: 0 auto;
+  background-color: cornsilk;
+  padding: 30px;
+  font-style: italic;
+}
