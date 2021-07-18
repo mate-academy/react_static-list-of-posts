@@ -1,4 +1,5 @@
 import React from 'react';
+import { PostList } from './components/PostList';
 
 import './App.scss';
 
@@ -7,23 +8,9 @@ import comments from './api/comments';
 import users from './api/users';
 
 const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
-
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+  <div className="app">
+    <h1 className="title">Static list of posts</h1>
+    <PostList postList={posts} commentsList={comments} usersList={users} />
   </div>
 );
 

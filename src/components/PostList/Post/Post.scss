@@ -1,0 +1,15 @@
+.post__title {
+  margin-top: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
+}
+
+.post__content {
+  font-size: 0.8em;
+}
+
+.user {
+  font-size: 0.6em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
