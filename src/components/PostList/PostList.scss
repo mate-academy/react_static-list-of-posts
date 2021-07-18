@@ -1,0 +1,25 @@
+.posts-list {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  row-gap: 20px;
+
+  &__item {
+    max-width: 49%;
+    transition-property: transform;
+    transition-duration: 0.4s;
+
+    &:hover {
+      transform: translate(-10px, -10px);
+    }
+  }
+}
+
+.post {
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
