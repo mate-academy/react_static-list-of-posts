@@ -1,20 +1,26 @@
 import React from 'react';
 import './PostList.scss';
+import propTypes from 'prop-types';
 import { User } from '../User/User';
 import { Post } from '../Post/Post';
 import { CommentList } from '../CommentList/CommentList';
 
-export const PostList = ({ posts, users, comments }) => (
-  posts.map(item => (
-    <ul className="wrapper" key={item.id}>
-      <Post part={item} />
-      <User user={users.find(author => author.id === item.userId)} />
+export const PostList = ({ posts }) => (
+  posts.map(post => (
+    <ul className="wrapper" key={post.id}>
+      <Post post={post} />
+      <User user={post.user} />
       <li>
-        <CommentList filteredComments={comments.filter(comment => (
-          comment.postId === item.id
-        ))}
-        />
+        <CommentList filteredComments={post.comments} />
       </li>
     </ul>
   ))
 );
+
+PostList.propTypes = {
+  posts: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.number.isRequired,
+    }),
+  ).isRequired,
+};

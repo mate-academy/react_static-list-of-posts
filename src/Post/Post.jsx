@@ -1,15 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-export const Post = ({ part }) => (
+export const Post = ({ post }) => (
   <>
-    <li className="title">{part.title}</li>
-    <li className="body">{part.body}</li>
+    <li className="title">{post.title}</li>
+    <li className="body">{post.body}</li>
   </>
 );
 
 Post.propTypes = {
-  part: propTypes.shape({
+  post: propTypes.shape({
     title: propTypes.string.isRequired,
     body: propTypes.string.isRequired,
   }).isRequired,
