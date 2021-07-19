@@ -4,6 +4,7 @@ import comments from '../../api/comments';
 import users from '../../api/users';
 import { User } from '../user/user';
 import { Comment } from '../comment/comment';
+import './posts.scss';
 
 export const Posts = () => (
   posts.map(post => (
