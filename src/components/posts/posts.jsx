@@ -7,11 +7,11 @@ import { Comment } from '../comment/comment';
 
 export const Posts = () => (
   posts.map(post => (
-    <div className="post">
+    <div className="post" key={post.id}>
 
       <h2 className="title">{post.title}</h2>
 
-      <p className="post__body" key={post.id}>
+      <p className="post__body">
         {post.body}
       </p>
 
@@ -20,7 +20,11 @@ export const Posts = () => (
       <ul className="comment">
         {
         comments.filter(comment => comment.postId === post.userId)
-          .map(comment => <Comment comment={comment} />)
+          .map(comment => (
+            <li className="comment__item" key={comment.id}>
+              <Comment comment={comment} />
+            </li>
+          ))
         }
       </ul>
     </div>

@@ -14,7 +14,14 @@ export const User = ({ name, email, address }) => (
 User.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  street: PropTypes.string.isRequired,
-  suite: PropTypes.string.isRequired,
+  address: PropTypes.shape({
+    street: PropTypes.string,
+    suite: PropTypes.string,
+    city: PropTypes.string,
+    zipcode: PropTypes.string,
+    geo: PropTypes.shape({
+      lat: PropTypes.string,
+      lng: PropTypes.string,
+    }),
+  }).isRequired,
 };
