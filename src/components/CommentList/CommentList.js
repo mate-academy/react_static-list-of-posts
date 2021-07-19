@@ -8,7 +8,11 @@ export function CommentList({ comments }) {
     <ul>
       {comments.map(comment => (
         <li key={comment.id}>
-          <Comment {...comment} />
+          <Comment
+            name={comment.name}
+            body={comment.body}
+            email={comment.email}
+          />
         </li>
       ))}
     </ul>

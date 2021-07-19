@@ -7,7 +7,12 @@ export function PostList({ posts }) {
     <ul>
       {posts.map(post => (
         <li key={post.id}>
-          <Post {...post} />
+          <Post
+            title={post.title}
+            body={post.body}
+            user={post.user}
+            comments={post.comments}
+          />
         </li>
       ))}
     </ul>
