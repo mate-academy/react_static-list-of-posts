@@ -1,0 +1,10 @@
+.list {
+  list-style: none;
+
+  &__post {
+    margin-bottom: 10px;
+    border: 1px solid darkgrey;
+    border-radius: 20px;
+    padding-left: 20px;
+  }
+}
