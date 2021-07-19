@@ -1,5 +1,5 @@
 import React from 'react';
-import { commentTypes } from '../../types';
+import { CommentTypes } from '../../types';
 import './Comment.scss';
 
 export const Comment = ({ comment }) => (
@@ -21,5 +21,5 @@ Comment.defaultProps = {
 };
 
 Comment.propTypes = {
-  comment: commentTypes,
+  comment: CommentTypes,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { userTypes } from '../../types';
+import { UserTypes } from '../../types';
 import './User.scss';
 
 export const User = ({ user }) => (
@@ -19,11 +19,7 @@ export const User = ({ user }) => (
     <div>
       <p>
         <span className="user__info">{'Address: '}</span>
-        {user.address.city}
-        {', '}
-        {user.address.street}
-        {', '}
-        {user.address.suite}
+        {`${user.address.city}, ${user.address.street}, ${user.address.suite}`}
       </p>
     </div>
   </>
@@ -34,5 +30,5 @@ User.defaultProps = {
 };
 
 User.propTypes = {
-  user: userTypes,
+  user: UserTypes,
 };

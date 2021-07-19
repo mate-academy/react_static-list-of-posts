@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CommentList } from '../CommentList/CommentList';
 import { User } from '../User/User';
-import { commentTypes, userTypes } from '../../types';
+import { CommentTypes, UserTypes } from '../../types';
 
 export const Post = ({ title, body, user, comments }) => (
   <>
@@ -16,6 +16,6 @@ export const Post = ({ title, body, user, comments }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape(userTypes).isRequired,
-  comments: PropTypes.arrayOf(commentTypes).isRequired,
+  user: PropTypes.shape(UserTypes).isRequired,
+  comments: PropTypes.arrayOf(CommentTypes).isRequired,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Comment } from '../Comment/Comment';
-import { commentTypes } from '../../types';
+import { CommentTypes } from '../../types';
 import './CommentList.scss';
 
 export const CommentList = ({ comments }) => (
@@ -19,5 +19,5 @@ CommentList.defaultProps = {
 };
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(commentTypes),
+  comments: PropTypes.arrayOf(CommentTypes),
 };
