@@ -2,25 +2,40 @@ import React from 'react';
 import './post.scss';
 import PropTypes from 'prop-types';
 
-import users from '../../api/users';
 import User from '../User/User';
 import CommentList from '../CommentList/CommentList';
-import comments from '../../api/comments';
 
-function Post({ userId, id, title, body }) {
+function Post({ author, postComments, title, body }) {
   return (
     <>
       <h2 className="post__title">{title}</h2>
       <p className="post__content">{body}</p>
-      <User {...users.find(user => user.id === userId)} />
-      <CommentList list={comments.filter(comment => comment.postId === id)} />
+      <User
+        name={author.name}
+        email={author.email}
+        address={author.address}
+      />
+      <CommentList list={postComments} />
     </>
   );
 }
 
 Post.propTypes = {
-  userId: PropTypes.number.isRequired,
-  id: PropTypes.number.isRequired,
+  author: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      street: PropTypes.string.isRequired,
+      suite: PropTypes.string.isRequired,
+      zipcode: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  postComments: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };

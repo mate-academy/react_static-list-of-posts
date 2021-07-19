@@ -16,11 +16,7 @@ function User({ name, email, address }) {
         {email}
       </span>
       <p className="post__address">
-        {address.city}
-        {', '}
-        {address.street}
-        {', '}
-        {address.suite}
+        {`${address.city}, ${address.street}, ${address.suite}`}
       </p>
       <p className="post__zip">
         {address.zipcode}

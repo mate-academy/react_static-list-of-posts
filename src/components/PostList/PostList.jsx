@@ -10,8 +10,8 @@ function PostList({ posts }) {
       {posts.map(post => (
         <div key={post.id} className="article__post post">
           <Post
-            userId={post.userId}
-            id={post.id}
+            author={post.author}
+            postComments={post.comments}
             title={post.title}
             body={post.body}
           />
