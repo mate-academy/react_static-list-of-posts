@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './PostList.scss';
 import { Post } from '../Post';
-import { postType } from '../type';
+import { PostType } from '../type';
 
 export const PostList = ({ postsList }) => (
   <div className="posts">
@@ -13,5 +13,5 @@ export const PostList = ({ postsList }) => (
 );
 
 PostList.propTypes = {
-  postsList: PropTypes.arrayOf(postType).isRequired,
+  postsList: PropTypes.arrayOf(PostType).isRequired,
 };

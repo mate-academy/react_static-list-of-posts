@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { User } from '../User';
 import { CommentList } from '../CommentList/CommentList';
 import './Post.scss';
-import { commentType, userType } from '../type';
+import { CommentType, UserType } from '../type';
 
 export const Post = ({
   title,
@@ -28,6 +28,6 @@ export const Post = ({
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: userType.isRequired,
-  comments: PropTypes.arrayOf(commentType).isRequired,
+  user: UserType.isRequired,
+  comments: PropTypes.arrayOf(CommentType).isRequired,
 };

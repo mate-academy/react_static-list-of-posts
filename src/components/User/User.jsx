@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './User.scss';
-// import { userType } from '../type';
 
 export const User = ({
   name,
