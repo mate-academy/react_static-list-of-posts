@@ -1,7 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Comment, commentType } from '../Comment/Comment';
+import { Comment } from '../Comment/Comment';
+import { commentType } from '../../Types';
 
 export function CommentList({ commentsForPost }) {
   return (

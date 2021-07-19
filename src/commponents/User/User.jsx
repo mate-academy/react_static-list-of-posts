@@ -1,9 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import users from '../../api/users';
+import { userType } from '../../Types';
 
-export const User = ({ userId }) => {
+export const User = ({ userId, users }) => {
   const { name, email, address } = users.find(
     uniqUser => uniqUser.id === userId,
   );
@@ -30,4 +30,5 @@ export const User = ({ userId }) => {
 
 User.propTypes = {
   userId: propTypes.number.isRequired,
+  users: propTypes.arrayOf(userType).isRequired,
 };

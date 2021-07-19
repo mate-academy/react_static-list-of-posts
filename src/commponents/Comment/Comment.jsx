@@ -1,5 +1,6 @@
 import React from 'react';
-import propTypes from 'prop-types';
+
+import { commentType } from '../../Types';
 
 export function Comment({ name, body, email }) {
   return (
@@ -12,12 +13,6 @@ export function Comment({ name, body, email }) {
     </>
   );
 }
-
-export const commentType = propTypes.shape({
-  name: propTypes.string.isRequired,
-  body: propTypes.string.isRequired,
-  email: propTypes.string.isRequired,
-});
 
 Comment.propTypes = {
   ...commentType.isRequired,

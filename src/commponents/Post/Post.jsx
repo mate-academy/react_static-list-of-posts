@@ -1,14 +1,13 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import comments from '../../api/comments';
-
 import { CommentList } from '../CommentList';
 import { User } from '../User';
+import { postType, commentType, userType } from '../../Types';
 
 import './Post.scss';
 
-export function Post({ post }) {
+export function Post({ post, comments, users }) {
   const commentsForPost = comments.filter(
     comment => comment.postId === post.id,
   );
@@ -24,7 +23,10 @@ export function Post({ post }) {
       </p>
 
       <div className="user post__user">
-        <User userId={post.userId} />
+        <User
+          userId={post.userId}
+          users={users}
+        />
       </div>
 
       <div className="comments post__comments">
@@ -34,13 +36,8 @@ export function Post({ post }) {
   );
 }
 
-export const postType = propTypes.shape({
-  userId: propTypes.number.isRequired,
-  id: propTypes.number.isRequired,
-  title: propTypes.string.isRequired,
-  body: propTypes.string.isRequired,
-});
-
 Post.propTypes = {
-  ...postType.isRequired,
+  post: postType.isRequired,
+  comments: propTypes.arrayOf(commentType).isRequired,
+  users: propTypes.arrayOf(userType).isRequired,
 };
