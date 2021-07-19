@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import { Comment } from '../Comment';
 
-import './CommentList.scss';
-
 export const CommentList = ({ comments }) => (
   <div className="list">
     <h3>

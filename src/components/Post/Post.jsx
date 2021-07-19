@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
 
-import './Post.scss';
-
 export const Post = ({
   title,
   body,
