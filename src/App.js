@@ -5,6 +5,7 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import { CommentList } from './components/CommentList';
 
 const App = () => (
   <div className="App">
@@ -14,6 +15,8 @@ const App = () => (
       <span>posts: </span>
       {posts.length}
     </p>
+
+    <CommentList post={posts} users={users} />
 
     <p>
       <span>comments: </span>
