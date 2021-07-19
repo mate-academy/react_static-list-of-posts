@@ -1,1 +1,6 @@
-// styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+}

@@ -1,0 +1,26 @@
+.comment-wrapper {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #657786;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.5;
+  transition-duration: 0.5s;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
+    -webkit-box-shadow: 0 0 45px 10px rgba(0,0,0,0.23);
+    box-shadow: 0 0 45px 10px rgba(0,0,0,0.23);
+  }
+}
