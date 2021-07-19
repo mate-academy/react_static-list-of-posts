@@ -1,0 +1,89 @@
+.post {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: repeat(3, auto);
+
+  &__user-info {
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 1 / -1 / 2;
+    border: 1px solid #000;
+    border-bottom: none;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 16px;
+    box-sizing: content-box;
+    grid-area: 1 / 2 / 2 / 3;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+
+  &__content {
+    padding: 16px;
+    grid-area: 2 / 2 / 3 / 3;
+    border-right: 1px solid #000;
+  }
+
+  &__counter {
+    display: block;
+    padding: 16px;
+    font-size: 20px;
+    color: #bbb;
+    font-weight: bold;
+    border-right: 1px solid #000;
+  }
+
+  &__image {
+    align-self: center;
+    height: 150px;
+    width: 150px;
+    margin: 16px 0 0;
+  }
+
+  &__subtitle {
+    align-self: center;
+    margin: 16px 0;
+  }
+
+  &__email {
+    display: block;
+    position: relative;
+    margin: 16px 8px;
+
+    &::before {
+      content: "Email:";
+      position: absolute;
+      top: -20px;
+      color: #bbb;
+      font-weight: bold;
+    }
+  }
+
+  &__address {
+    position: relative;
+    margin: 16px 8px;
+
+    &::before {
+      content: "Address:";
+      position: absolute;
+      top: -20px;
+      color: #bbb;
+      font-weight: bold;
+    }
+  }
+
+  &__zip {
+    position: relative;
+    margin: 16px 8px;
+
+    &::before {
+      content: "Zipcode:";
+      position: absolute;
+      top: -20px;
+      color: #bbb;
+      font-weight: bold;
+    }
+  }
+}
