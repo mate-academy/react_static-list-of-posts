@@ -3,18 +3,23 @@ import './PostList.scss';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
 
-export const PostList = ({ entries }) => (
+export const PostList = ({ posts }) => (
   <ul className="list">
-    {entries.map(entry => (
-      <li className="list__post" key={entry.id}>
-        <Post {...entry} />
+    {posts.map(post => (
+      <li className="list__post" key={post.id}>
+        <Post
+          title={post.title}
+          body={post.body}
+          user={post.user}
+          comments={post.comments}
+        />
       </li>
     ))}
   </ul>
 );
 
 PostList.propTypes = {
-  entries: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     }),

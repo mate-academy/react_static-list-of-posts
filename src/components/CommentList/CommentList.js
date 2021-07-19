@@ -7,7 +7,11 @@ export const CommentList = ({ comments }) => (
   <ul className="Comments-list">
     {comments.map(comment => (
       <li className="comment" key={comment.id}>
-        <Comment {...comment} />
+        <Comment
+          name={comment.name}
+          body={comment.body}
+          email={comment.email}
+        />
       </li>
     ))}
   </ul>

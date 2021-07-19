@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './App.scss';
-
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
@@ -17,7 +15,7 @@ const preparedPosts = posts.map(post => ({
 
 const App = () => (
   <div className="App">
-    <PostList entries={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 
