@@ -17,11 +17,9 @@ export const Post = ({ post }) => {
       <h2>
         <User user={user} />
       </h2>
-      <div>
-        <h3>
-          <CommentList comments={comments} />
-        </h3>
-      </div>
+      <h3>
+        <CommentList comments={comments} />
+      </h3>
     </div>
   );
 };
