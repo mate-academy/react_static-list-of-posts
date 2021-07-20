@@ -1,1 +1,6 @@
-// styles go here
+.App {
+  &__title {
+    padding-top: 15px;
+    text-align: center;
+  }
+}
