@@ -1,0 +1,10 @@
+.comment {
+  padding: 10px 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: black;
+  }
+}

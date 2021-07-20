@@ -1,1 +1,6 @@
-// styles go here
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
