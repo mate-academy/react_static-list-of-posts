@@ -4,7 +4,7 @@ import { CommentType } from '../ListTypes';
 export const Comment = ({ comment }) => (
   <>
     <p>
-      {`Name ${comment.name}`}
+      {`Name: ${comment.name}`}
     </p>
     <p>
       {` ${comment.body}`}

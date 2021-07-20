@@ -1,19 +1,26 @@
 import React from 'react';
 import { UserType } from '../ListTypes';
+import './User.css';
 
 export const User = ({ user }) => (
   <>
-    <p className="postList__user-name">
-      Name:
-      {user.name}
+    <p>
+      <span className="name">
+        Name:
+      </span>
+      {` ${user.name}`}
     </p>
-    <p className="postList__email">
-      Email:
-      {user.email}
+    <p>
+      <span className="name">
+        Email:
+      </span>
+      {` ${user.email}`}
     </p>
-    <p className="postList__address">
-      Name:
-      {`${user.address.city},
+    <p>
+      <span className="name">
+        Address:
+      </span>
+      {` ${user.address.city},
       ${user.address.street},
       ${user.address.suite}`}
     </p>
