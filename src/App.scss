@@ -1,1 +1,29 @@
-// styles go here
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: lemonchiffon;
+
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.8;
+  &__item {
+    display: block;
+    margin-bottom: 150px;
+    padding: 20px;
+
+    background-color: honeydew;
+    border: 1px solid gray;
+    border-radius: 30px;
+
+    list-style-image: url(./img/icon-16.png);
+    &:last-child {
+      margin-bottom: 50px;
+    }
+  }
+}
