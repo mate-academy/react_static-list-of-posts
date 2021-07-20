@@ -1,0 +1,6 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin: 40px 0;
+}
