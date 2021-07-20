@@ -3,26 +3,24 @@ import PropTypes from 'prop-types';
 
 import './User.scss';
 
-export const User = ({
-  name,
-  email,
-  address,
-}) => (
+export const User = ({ user }) => (
   <div className="info">
     <p className="info__name">
-      {name}
+      {user.name}
     </p>
-    <a href={`mailto: ${email}`} className="info__email-link">
-      {email}
+    <a href={`mailto: ${user.email}`} className="info__email-link">
+      {user.email}
     </a>
     <p className="info__address">
-      {`${address.city}, ${address.street}`}
+      {`${user.address.city}, ${user.address.street}`}
     </p>
   </div>
 );
 
 User.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  address: PropTypes.shape().isRequired,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape().isRequired,
+  }).isRequired,
 };

@@ -8,7 +8,7 @@ import './PostList.scss';
 export const PostList = ({ posts }) => (
   <div className="list">
     {posts.map(post => (
-      <Post {...post} key={post.id} />
+      <Post post={post} key={post.id} />
     ))}
   </div>
 );
