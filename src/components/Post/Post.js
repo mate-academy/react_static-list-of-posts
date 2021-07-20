@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import CommentList from '../CommentList/CommentList';
-import User from '../User/User';
+import { CommentList } from '../CommentList';
+import { User } from '../User';
+import { CommentTypes, UserTypes } from '../PropTypes';
 
-const Post = ({ title, body, user, comments }) => (
+export const Post = ({ title, body, user, comments }) => (
   <>
     <h2>{title}</h2>
     <p>{body}</p>
-    <User {...user} />
+    <User
+      name={user.name}
+      email={user.email}
+      address={user.address}
+    />
     <CommentList comments={comments} />
   </>
 );
@@ -16,8 +21,6 @@ const Post = ({ title, body, user, comments }) => (
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  user: PropTypes.shape().isRequired,
-  comments: PropTypes.shape().isRequired,
+  user: PropTypes.shape(UserTypes).isRequired,
+  comments: PropTypes.arrayOf(CommentTypes).isRequired,
 };
-
-export default Post;

@@ -1,7 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const User = ({ name, email, address }) => (
+import { UserTypes } from '../PropTypes';
+
+export const User = ({ name, email, address }) => (
   <div>
     <p>{name}</p>
     <p>{address.city}</p>
@@ -9,10 +10,4 @@ const User = ({ name, email, address }) => (
   </div>
 );
 
-User.propTypes = {
-  email: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  address: PropTypes.shape().isRequired,
-};
-
-export default User;
+User.propTypes = UserTypes;
