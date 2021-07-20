@@ -9,7 +9,7 @@ export function CommentList({ commentsForPost }) {
     <ul className="comments__list">
       {commentsForPost.map(comment => (
         <li key={comment.id} className="comments__item">
-          <Comment {...comment} />
+          <Comment comment={comment} />
         </li>
       ))}
     </ul>

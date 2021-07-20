@@ -1,25 +1,26 @@
 import React from 'react';
-import propTypes from 'prop-types';
 
 import { CommentList } from '../CommentList';
 import { User } from '../User';
-import { postType, commentType, userType } from '../../Types';
+import { postType } from '../../Types';
 
 import './Post.scss';
 
-export function Post({ post, commentsForPost, user }) {
+export function Post({ post }) {
+  const { title, body, user, commentsForPost } = post;
+
   return (
     <div className="post">
       <h2 className="post__title">
-        {post.title}
+        {title}
       </h2>
 
       <p className="post__body">
-        {post.body}
+        {body}
       </p>
 
       <div className="user post__user">
-        <User {...user} />
+        <User user={user} />
       </div>
 
       <div className="comments post__comments">
@@ -29,8 +30,4 @@ export function Post({ post, commentsForPost, user }) {
   );
 }
 
-Post.propTypes = {
-  post: postType.isRequired,
-  commentsForPost: propTypes.arrayOf(commentType).isRequired,
-  user: propTypes.arrayOf(userType).isRequired,
-};
+Post.propTypes = postType.isRequired;
