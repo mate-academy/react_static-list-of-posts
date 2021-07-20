@@ -16,16 +16,14 @@ Post.propTypes = {
   post: PropTypes.shape({
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    user: PropTypes.shape().isRequired,
-    comments: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        email: PropTypes.string.isRequired,
-        address: PropTypes.shape({
-          city: PropTypes.string.isRequired,
-          street: PropTypes.string.isRequired,
-        }).isRequired,
+    user: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      address: PropTypes.shape({
+        city: PropTypes.string.isRequired,
+        street: PropTypes.string.isRequired,
       }).isRequired,
-    ),
+    }).isRequired,
+    comments: PropTypes.arrayOf(),
   }).isRequired,
 };
