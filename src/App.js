@@ -12,9 +12,6 @@ const postsWithuser = posts.map(post => ({
   comments: comments.filter(coment => coment.postId === post.id),
 }));
 
-// eslint-disable-next-line no-console
-console.log(postsWithuser);
-
 const App = () => (
   <PostList posts={postsWithuser} />
 );
