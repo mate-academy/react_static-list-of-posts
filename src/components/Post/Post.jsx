@@ -10,7 +10,7 @@ export function Post({ postElement }) {
     body,
     user,
     comments,
-  } = { ...postElement };
+  } = postElement;
 
   return (
     <>

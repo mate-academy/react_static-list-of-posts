@@ -1,8 +1,8 @@
 import React from 'react';
+import { comentTypes } from '../../types';
 
-export function Coment({coment}) {
-
-  const { name, body, email } = { ...coment };
+export function Coment({ coment }) {
+  const { name, body, email } = coment;
 
   return (
     <>
@@ -12,3 +12,7 @@ export function Coment({coment}) {
     </>
   );
 }
+
+Coment.propTypes = {
+  coment: comentTypes.isRequired,
+};

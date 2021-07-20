@@ -7,7 +7,7 @@ export function PostList({ postList }) {
   return (
     <ul>
       {postList.map(el => (
-        <li>
+        <li key={el.id}>
           <Post postElement={el} />
         </li>
       ))}
