@@ -1,0 +1,11 @@
+.title::first-letter,
+.post__body::first-letter {
+  text-transform: uppercase;
+}
+
+.post {
+  padding: 10px 20px;
+  background-color: #eee;
+  border: 1px solid #8d8d8d;
+  border-radius: 16px;
+}
