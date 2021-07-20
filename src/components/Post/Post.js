@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User, TypeUser } from '../User';
 import { CommentList, TypeCommentList } from '../CommentList';
-
 import './Post.scss';
 
 export const Post = ({ title, body, user, comments }) => (

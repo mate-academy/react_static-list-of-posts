@@ -1,8 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import { CommentList } from './components/CommentList';
-// import { User } from './components/User/User';
-// import { Post } from './components/Post';
 import { PostList } from './components/PostList';
 import './App.scss';
 
