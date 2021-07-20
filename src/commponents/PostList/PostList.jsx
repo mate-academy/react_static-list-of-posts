@@ -8,15 +8,24 @@ import './PostList.scss';
 
 export const PostList = ({ posts, comments, users }) => (
   <ul className="postList">
-    {posts.map(post => (
-      <li key={post.id}>
-        <Post
-          post={post}
-          comments={comments}
-          users={users}
-        />
-      </li>
-    ))}
+    {posts.map((post) => {
+      const commentsForPost = comments.filter(
+        comment => comment.postId === post.id,
+      );
+      const user = users.find(
+        uniqUser => uniqUser.id === post.userId,
+      );
+
+      return (
+        <li key={post.id}>
+          <Post
+            post={post}
+            commentsForPost={commentsForPost}
+            user={user}
+          />
+        </li>
+      );
+    })}
   </ul>
 );
 

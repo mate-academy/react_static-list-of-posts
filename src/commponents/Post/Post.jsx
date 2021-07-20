@@ -7,11 +7,7 @@ import { postType, commentType, userType } from '../../Types';
 
 import './Post.scss';
 
-export function Post({ post, comments, users }) {
-  const commentsForPost = comments.filter(
-    comment => comment.postId === post.id,
-  );
-
+export function Post({ post, commentsForPost, user }) {
   return (
     <div className="post">
       <h2 className="post__title">
@@ -23,10 +19,7 @@ export function Post({ post, comments, users }) {
       </p>
 
       <div className="user post__user">
-        <User
-          userId={post.userId}
-          users={users}
-        />
+        <User {...user} />
       </div>
 
       <div className="comments post__comments">
@@ -38,6 +31,6 @@ export function Post({ post, comments, users }) {
 
 Post.propTypes = {
   post: postType.isRequired,
-  comments: propTypes.arrayOf(commentType).isRequired,
-  users: propTypes.arrayOf(userType).isRequired,
+  commentsForPost: propTypes.arrayOf(commentType).isRequired,
+  user: propTypes.arrayOf(userType).isRequired,
 };
