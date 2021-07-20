@@ -18,7 +18,14 @@ Post.propTypes = {
     body: PropTypes.string.isRequired,
     user: PropTypes.shape().isRequired,
     comments: PropTypes.arrayOf(
-      PropTypes.shape().isRequired,
-    ).isRequired,
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        address: PropTypes.shape({
+          city: PropTypes.string.isRequired,
+          street: PropTypes.string.isRequired,
+        }).isRequired,
+      }).isRequired,
+    ),
   }).isRequired,
 };

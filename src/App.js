@@ -9,14 +9,14 @@ import users from './api/users';
 import { PostList } from './components/PostList';
 
 const postsListAll = posts.map((post) => {
-  const postComponent = { ...post };
+  const postCopy = { ...post };
 
-  postComponent.user = users.find(user => user.id === post.userId);
-  postComponent.comments = comments.filter(
+  postCopy.user = users.find(user => user.id === post.userId);
+  postCopy.comments = comments.filter(
     comment => comment.postId === post.id,
   );
 
-  return postComponent;
+  return postCopy;
 });
 
 const App = () => (
