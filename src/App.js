@@ -5,28 +5,18 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import { CommentList } from './components/CommentList';
+import { PostList } from './components/PostList';
+
+const postList = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.userId),
+  comments: comments.filter(coment => coment.postId === post.id),
+}));
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
-
-    <CommentList post={posts} users={users} />
-
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
-
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
+    <PostList postList={postList} />
   </div>
 );
 

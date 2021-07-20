@@ -1,22 +1,14 @@
 import React from 'react';
+import { Coment } from '../Comment';
 
-export function CommentList({ post, users }) {
+export function CommentList({ comments }) {
   return (
-    post.map(el => (
-      <>
-        <p>{el.title}</p>
-        <p>
-          {users.find(use => use.id === el.userId).name}
-        </p>
-        <p>
-          {users.find(use => use.id === el.userId).email}
-        </p>
-        <p>
-          {users.find(use => use.id
-            === el.userId).address.suite}
-        </p>
-        <hr />
-      </>
-    ))
+    <ul>
+      {comments.map(coment => (
+        <li>
+          <Coment coment={coment} />
+        </li>
+      ))}
+    </ul>
   );
 }
