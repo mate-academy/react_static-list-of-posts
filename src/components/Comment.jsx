@@ -3,11 +3,20 @@ import PropTypes from 'prop-types';
 
 export const Comment = ({ comment }) => (
   <>
-    <span>{comment.name}</span>
+    <span>
+      <strong>{'Name: '}</strong>
+      {comment.name}
+    </span>
     <br />
-    <span>{comment.body}</span>
+    <span>
+      <strong>{'Comment: '}</strong>
+      {comment.body}
+    </span>
     <br />
-    <span>{comment.email}</span>
+    <span>
+      <strong>{'Email: '}</strong>
+      {comment.email}
+    </span>
   </>
 );
 
