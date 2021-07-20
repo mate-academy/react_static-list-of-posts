@@ -7,7 +7,7 @@ export const PostList = ({ posts }) => (
   <>
     {posts.map(post => (
       <div key={post.id} className="post">
-        <Post {...post} />
+        <Post post={post} />
       </div>
     ))}
   </>
