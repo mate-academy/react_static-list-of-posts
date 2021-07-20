@@ -1,0 +1,22 @@
+.post__paragraph {
+  color: darkmagenta;
+}
+
+.title-wrapper {
+  background-color: darkmagenta;
+  opacity: 0.5;
+  border-radius: 30px;
+}
+
+.title {
+  color: #fff;
+  padding: 10px;
+}
+
+.comments {
+  border-color: darkmagenta;
+  border-radius: 30px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+}
