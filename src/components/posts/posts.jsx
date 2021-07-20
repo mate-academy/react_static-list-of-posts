@@ -1,33 +1,34 @@
 import React from 'react';
-import posts from '../../api/posts';
-import comments from '../../api/comments';
-import users from '../../api/users';
+import PropTypes from 'prop-types';
+import { CommentList } from '../commentList/commentList';
 import { User } from '../user/user';
-import { Comment } from '../comment/comment';
-import './posts.scss';
 
-export const Posts = () => (
-  posts.map(post => (
-    <div className="post" key={post.id}>
-
-      <h2 className="title">{post.title}</h2>
-
-      <p className="post__body">
-        {post.body}
-      </p>
-
-      <User {...users.find(user => user.id === post.userId)} />
-
-      <ul className="comment">
-        {
-        comments.filter(comment => comment.postId === post.userId)
-          .map(comment => (
-            <li className="comment__item" key={comment.id}>
-              <Comment comment={comment} />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  ))
+export const Post = ({ title, body, user, comments }) => (
+  <>
+    <h2 className="title">{title}</h2>
+    <p className="post__body">{body}</p>
+    <User {...user} />
+    <CommentList comments={comments} />
+  </>
 );
+
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      street: PropTypes.string.isRequired,
+      suite: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  comments: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
+  }).isRequired,
+};
