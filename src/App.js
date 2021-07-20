@@ -6,14 +6,14 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const postsWithuser = posts.map(post => ({
+const postsWithUser = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId),
   comments: comments.filter(coment => coment.postId === post.id),
 }));
 
 const App = () => (
-  <PostList posts={postsWithuser} />
+  <PostList posts={postsWithUser} />
 );
 
 export default App;
