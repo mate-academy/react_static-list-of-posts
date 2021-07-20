@@ -1,10 +1,16 @@
 import React from 'react';
 
 import './App.scss';
-
+import { PostList } from './components/PostList/PostList';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+
+const PreparedData = posts.map(post => ({
+  ...post,
+  author: users.find(user => user.id === post.userId),
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
 
 const App = () => (
   <div className="App">
@@ -24,7 +30,9 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+    <PostList posts={PreparedData} />
   </div>
+
 );
 
 export default App;
