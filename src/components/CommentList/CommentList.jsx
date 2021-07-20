@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Comment from '../Comment/Comment';
+import { Comment } from '../Comment';
 
-function CommentList({ list }) {
+export function CommentList({ comments }) {
   return (
     <div className="post__comments">
       <p className="post__counter">
-        {`Comments: ${list.length}`}
+        {`Comments: ${comments.length}`}
       </p>
-      {list.map(comment => (
+      {comments.map(comment => (
         <div key={comment.id} className="comment">
           <Comment
             name={comment.name}
@@ -23,9 +23,7 @@ function CommentList({ list }) {
 }
 
 CommentList.propTypes = {
-  list: PropTypes.arrayOf({
+  comments: PropTypes.arrayOf({
     id: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-export default CommentList;

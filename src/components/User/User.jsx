@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import image from '../../images/user-photo.png';
 
-function User({ name, email, address }) {
+export function User({ name, email, address }) {
   return (
     <div className="post__user-info">
       <img
@@ -35,5 +35,3 @@ User.propTypes = {
     zipcode: PropTypes.string.isRequired,
   }).isRequired,
 };
-
-export default User;

@@ -2,26 +2,26 @@ import React from 'react';
 import './post.scss';
 import PropTypes from 'prop-types';
 
-import User from '../User/User';
-import CommentList from '../CommentList/CommentList';
+import { User } from '../User';
+import { CommentList } from '../CommentList';
 
-function Post({ author, postComments, title, body }) {
+export function Post({ user, comments, title, body }) {
   return (
     <>
       <h2 className="post__title">{title}</h2>
       <p className="post__content">{body}</p>
       <User
-        name={author.name}
-        email={author.email}
-        address={author.address}
+        name={user.name}
+        email={user.email}
+        address={user.address}
       />
-      <CommentList list={postComments} />
+      <CommentList comments={comments} />
     </>
   );
 }
 
 Post.propTypes = {
-  author: PropTypes.shape({
+  user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     address: PropTypes.shape({
@@ -31,7 +31,7 @@ Post.propTypes = {
       zipcode: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
-  postComments: PropTypes.shape({
+  comments: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
@@ -39,5 +39,3 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };
-
-export default Post;

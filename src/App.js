@@ -5,12 +5,12 @@ import './App.scss';
 import posts from './api/posts';
 import users from './api/users';
 import comments from './api/comments';
-import PostList from './components/PostList/PostList';
+import { PostList } from './components/PostList';
 
 const preparedPosts = posts.map((post) => {
   const newPost = { ...post };
 
-  newPost.author = users.find(user => post.userId === user.id);
+  newPost.user = users.find(user => post.userId === user.id);
   newPost.comments = comments.filter(comment => comment.postId === post.id);
 
   return newPost;

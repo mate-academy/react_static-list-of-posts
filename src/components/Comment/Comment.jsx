@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './comment.scss';
 
-function Comment({ name, email, body }) {
+export function Comment({ name, email, body }) {
   return (
     <>
       <div className="comment__container">
@@ -20,5 +20,3 @@ Comment.propTypes = {
   email: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };
-
-export default Comment;
