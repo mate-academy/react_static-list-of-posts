@@ -1,0 +1,11 @@
+.post {
+  height: 100%;
+  background-color: rgb(216, 240, 172);
+
+  border: 5px solid rgb(88, 85, 85);
+  border-radius: 10px;
+
+  &__title {
+    text-transform: uppercase;
+  }
+}

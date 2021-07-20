@@ -1,0 +1,9 @@
+.postList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(min-content, max-content));
+  height: 100%;
+  gap: 30px 15px;
+
+  list-style: none;
+}
