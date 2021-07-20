@@ -6,9 +6,9 @@ import './Post.scss';
 
 export const Post = ({ post }) => (
   <>
-    <User user={post.author} />
     <div className="post__wrap">
-      <h2 className="post__title">{post.title}</h2>
+      <User user={post.author} />
+      <h2 className="post__title">{`Headline:${post.title}`}</h2>
       <div className="post__content">{post.body}</div>
       <CommentsList comments={post.comments} />
     </div>
