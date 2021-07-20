@@ -3,15 +3,9 @@ import PropTypes from 'prop-types';
 
 export const Comment = ({ name, body, email }) => (
   <>
-    <h2>
-      {name}
-    </h2>
-    <p>
-      {body}
-    </p>
-    <p>
-      {email}
-    </p>
+    <p className="lead">{`Name: ${name}`}</p>
+    <p className="lead">{`Text: ${body}`}</p>
+    <p className="lead">{`E-mail: ${email}`}</p>
   </>
 );
 

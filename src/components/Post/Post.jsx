@@ -6,15 +6,13 @@ import { CommentTypes } from '../Comment';
 
 export const Post = ({ title, body, user, comments }) => (
   <>
-    <h1>{title}</h1>
-    <p>{body}</p>
-    <span>
-      <User
-        name={user.name}
-        email={user.email}
-        address={user.address}
-      />
-    </span>
+    <h2 className="display-5">{`Post: ${title}`}</h2>
+    <p className="lead">{`Text: ${body}`}</p>
+    <User
+      name={user.name}
+      email={user.email}
+      address={user.address}
+    />
     <CommentList comments={comments} />
   </>
 

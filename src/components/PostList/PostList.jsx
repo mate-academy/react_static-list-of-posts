@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Post, PostTypes } from '../Post';
 
 export const PostList = ({ posts }) => (
-  <ul>
+  <ul className="list-group">
     {posts.map(post => (
-      <li key={post.id}>
+      <li className="list-group-item" key={post.id}>
         <Post
           title={post.title}
           body={post.body}

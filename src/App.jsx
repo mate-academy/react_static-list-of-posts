@@ -15,7 +15,7 @@ const preparedPosts = posts.map(post => ({
 
 const App = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 className="display-3">Static list of posts</h1>
     <PostList posts={preparedPosts} />
   </div>
 );

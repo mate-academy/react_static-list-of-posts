@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Comment, CommentTypes } from '../Comment';
 
 export const CommentList = ({ comments }) => (
-  <ul>
+  <ul className="list-group">
+    <h3 className="display-6">Comment List</h3>
     {comments.map(comment => (
-      <li key={comment.id}>
+      <li className="list-group-item" key={comment.id}>
         <Comment
           name={comment.name}
           body={comment.body}
