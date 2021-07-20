@@ -1,0 +1,25 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid gray;
+  border-radius: 7px;
+
+  &__title {
+    align-self: center;
+    font-family: Arial, Helvetica, cursive;
+    font-size: 30px;
+  }
+
+  &__body {
+    background-color: bisque;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 50%;
+    align-self: center;
+    font-family: "Fuggles", cursive;
+    font-size: 40px;
+
+  }
+}
