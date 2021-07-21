@@ -1,0 +1,14 @@
+.title {
+  font-size: 25px;
+  line-height: 35px;
+  color: rgb(119, 27, 27);
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 20px;
+}
+
+.text::first-letter {
+  text-transform: uppercase;
+}
