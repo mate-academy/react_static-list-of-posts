@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ListGroup } from 'react-bootstrap';
-import { Post } from './Post';
+import { Post } from '../Post';
 
 export const PostList = ({ posts }) => (
   <ListGroup>

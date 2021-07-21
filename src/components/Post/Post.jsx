@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { User } from './User';
-import { CommentList } from './CommentList';
+import { User } from '../User/User';
+import { CommentList } from '../CommentList';
 
 export const Post = ({
   title,
