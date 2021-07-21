@@ -1,3 +1,1 @@
-import { Comment } from './Comment';
-
-export { Comment };
+export * from './Comment';

@@ -14,9 +14,7 @@
 }
 
 .comments {
-  border-color: darkmagenta;
+  border: 1px solid darkmagenta;
   border-radius: 30px;
-  border-width: 1px;
-  border-style: solid;
   padding: 10px;
 }
