@@ -34,9 +34,24 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   author: PropTypes.objectOf(
-    PropTypes.shape({}),
+    PropTypes.shape({
+      username: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      address: PropTypes.objectOf(
+        PropTypes.shape({
+          street: PropTypes.string.isRequired,
+          city: PropTypes.string.isRequired,
+        }),
+      ).isRequired,
+    }),
   ).isRequired,
   comments: PropTypes.arrayOf(
-    PropTypes.shape({}),
+    PropTypes.shape({
+      postId: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+    }),
   ).isRequired,
 };

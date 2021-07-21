@@ -8,7 +8,7 @@ import users from './api/users';
 
 import { PostList } from './components/PostList/PostList';
 
-const PreparedData = posts.map((post) => {
+const preparedData = posts.map((post) => {
   const copyPost = {
     ...post,
     author: users.find(user => user.id === post.userId),
@@ -20,7 +20,7 @@ const PreparedData = posts.map((post) => {
 
 const App = () => (
   <div className="App">
-    <PostList postsList={PreparedData} />
+    <PostList posts={preparedData} />
   </div>
 );
 

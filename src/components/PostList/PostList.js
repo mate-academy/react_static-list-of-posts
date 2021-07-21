@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { Post } from '../Post/Post';
 
-export const PostList = ({ postsList }) => (
+export const PostList = ({ posts }) => (
   <div className="posts">
-    {postsList.map(post => (
+    {posts.map(post => (
       <div className="posts__post" key={post.id}>
         <Post
           title={post.title}
@@ -19,11 +19,11 @@ export const PostList = ({ postsList }) => (
 );
 
 PostList.propTypes = {
-  postsList: PropTypes.arrayOf(
-    PropTypes.shape({}),
-  ),
-};
-
-PostList.defaultProps = {
-  postsList: [],
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
