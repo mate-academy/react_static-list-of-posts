@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TypeUser } from '../types';
 
 export const User = ({ user }) => {
   const { name, email } = user;
-  const userAddress = { ...user.address };
-  const { city, street, suite } = userAddress;
+  const { city, street, suite } = user.address;
 
   return (
     <div className="text-muted">
@@ -20,13 +19,5 @@ export const User = ({ user }) => {
 };
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      city: PropTypes.string.isRequired,
-      street: PropTypes.string.isRequired,
-      suite: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
+  user: TypeUser.isRequired,
 };
