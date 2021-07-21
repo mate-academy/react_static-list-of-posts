@@ -22,7 +22,5 @@ export const PostList = function PostList({ posts }) {
 };
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf({
-    PostType,
-  }).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.shape({PostType})).isRequired,
 };

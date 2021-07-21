@@ -16,9 +16,7 @@ export const Post = function Post({
           <div className="card-content">
             <p>
               <User
-                nameOfUser={user.name}
-                email={user.email}
-                address={user.address}
+                user={user}
               />
               <strong>{title}</strong>
               <p>
