@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
-import { typesPostList } from '../../types';
+import { TypesPostList } from '../../types';
 
 export function Post({ postElement }) {
   const {
@@ -24,5 +24,5 @@ export function Post({ postElement }) {
 }
 
 Post.propTypes = {
-  postElement: PropTypes.arrayOf(typesPostList).isRequired,
+  postElement: PropTypes.arrayOf(TypesPostList).isRequired,
 };

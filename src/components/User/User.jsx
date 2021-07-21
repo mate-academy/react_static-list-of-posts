@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { userTypes } from '../../types';
+import { UserTypes } from '../../types';
 
 export function User({ user }) {
   const { name, email, address } = user;
@@ -19,4 +19,4 @@ export function User({ user }) {
   );
 }
 
-User.propTypes = PropTypes.arrayOf(userTypes).isRequired;
+User.propTypes = PropTypes.arrayOf(UserTypes).isRequired;

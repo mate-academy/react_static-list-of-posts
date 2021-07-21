@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Coment } from '../Comment';
-import { comentTypes } from '../../types';
+import { ComentTypes } from '../../types';
 
 export function CommentList({ comments }) {
   return (
     <ul>
-      {comments.map(coment => (
-        <li key={coment.id}>
-          <Coment coment={coment} />
+      {comments.map(comment => (
+        <li key={comment.id}>
+          <Coment comment={comment} />
         </li>
       ))}
     </ul>
@@ -16,5 +16,5 @@ export function CommentList({ comments }) {
 }
 
 CommentList.propTypes = {
-  comments: PropTypes.arrayOf(comentTypes).isRequired,
+  comments: PropTypes.arrayOf(ComentTypes).isRequired,
 };

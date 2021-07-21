@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
-import { typesPostList } from '../../types';
+import { TypesPostList } from '../../types';
 
 export function PostList({ postList }) {
   return (
     <ul>
-      {postList.map(el => (
-        <li key={el.id}>
-          <Post postElement={el} />
+      {postList.map(post => (
+        <li key={post.id}>
+          <Post postElement={post} />
         </li>
       ))}
     </ul>
@@ -16,5 +16,5 @@ export function PostList({ postList }) {
 }
 
 PostList.propTypes = {
-  postList: PropTypes.arrayOf(typesPostList).isRequired,
+  postList: PropTypes.arrayOf(TypesPostList).isRequired,
 };
