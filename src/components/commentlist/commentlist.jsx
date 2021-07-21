@@ -5,12 +5,12 @@ import { TypeComment } from '../../type';
 
 import './commentlist.scss';
 
-export const CommentList = ({ filtered }) => (
+export const CommentList = ({ filteredComents }) => (
   <>
     <h2 className="commet-title">
       Сommentary:
     </h2>
-    {filtered.map(comment => (
+    {filteredComents.map(comment => (
       <div key={comment.id} className="item">
         <Comment {...comment} />
       </div>
@@ -19,7 +19,7 @@ export const CommentList = ({ filtered }) => (
 );
 
 CommentList.propTypes = {
-  filtered: PropTypes.arrayOf(
+  filteredComents: PropTypes.arrayOf(
     TypeComment.isRequired,
   ).isRequired,
 };

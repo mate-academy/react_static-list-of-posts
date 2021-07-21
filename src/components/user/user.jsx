@@ -23,12 +23,7 @@ export const User = ({ name, email, address }) => (
       <i>
         address
       </i>
-      {' - '}
-      {address.city}
-      {',  '}
-      {address.street}
-      {',  '}
-      {address.suite}
+      {` - ${address.city}, ${address.street}, ${address.suite}`}
     </p>
   </>
 );

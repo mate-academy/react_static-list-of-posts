@@ -9,15 +9,15 @@ import { PostList } from './components/postlist/postlist';
 
 const preparedPosts = posts.map((post) => {
   const user = users.find(person => person.id === post.userId);
-  const filtered = comments.filter(commentary => post.id === commentary.postId);
+  const filteredComent = comments.filter(comment => post.id === comment.postId);
 
   return {
     ...post,
     user,
-    filtered,
+    filteredComent,
   };
 });
 
-const App = () => <PostList preparedPosts={preparedPosts} />;
+const App = () => <PostList posts={preparedPosts} />;
 
 export default App;

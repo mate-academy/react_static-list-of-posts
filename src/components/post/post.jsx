@@ -6,7 +6,7 @@ import { TypeUser, TypeComment } from '../../type';
 
 import './post.scss';
 
-export const Post = ({ title, body, user, filtered }) => (
+export const Post = ({ title, body, user, filteredComent }) => (
   <>
     <h2 className="title">
       {title}
@@ -16,7 +16,7 @@ export const Post = ({ title, body, user, filtered }) => (
     </p>
     <User {...user} />
     <div>
-      <CommentList filtered={filtered} />
+      <CommentList filteredComents={filteredComent} />
     </div>
   </>
 );
@@ -25,7 +25,7 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   user: TypeUser.isRequired,
-  filtered: PropTypes.arrayOf(
+  filteredComent: PropTypes.arrayOf(
     TypeComment.isRequired,
   ).isRequired,
 };
