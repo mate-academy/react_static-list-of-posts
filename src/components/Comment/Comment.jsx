@@ -9,10 +9,10 @@ export const Comment = ({ name, body, email }) => (
   </>
 );
 
-export const CommentTypes = {
+export const CommentType = {
   name: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 };
 
-Comment.propTypes = CommentTypes;
+Comment.propTypes = CommentType;

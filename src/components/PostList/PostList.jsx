@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Post, PostTypes } from '../Post';
+import { Post, PostType } from '../Post';
 
 export const PostList = ({ posts }) => (
   <ul className="list-group">
@@ -18,5 +18,5 @@ export const PostList = ({ posts }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.shape(PostTypes)).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.shape(PostType)).isRequired,
 };
