@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Post } from '../Post';
+import { TypePost } from '../../types';
 
 export const PostList = ({ posts }) => (
   <>
@@ -25,10 +26,5 @@ export const PostList = ({ posts }) => (
 );
 
 PostList.propTypes = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  posts: PropTypes.arrayOf(TypePost).isRequired,
 };

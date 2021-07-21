@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { TypeUser } from '../../types';
 
 export const User = ({ user }) => (
   <>
@@ -16,18 +16,5 @@ export const User = ({ user }) => (
 );
 
 User.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      street: PropTypes.string.isRequired,
-      suite: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
-      zipcode: PropTypes.number.isRequired,
-      geo: PropTypes.shape({
-        lat: PropTypes.number.isRequired,
-        lng: PropTypes.number.isRequired,
-      }).isRequired,
-    }).isRequired,
-  }).isRequired,
+  user: TypeUser.isRequired,
 };

@@ -12,7 +12,7 @@ const unitedPost = posts.map(
     user: users.find(
       user => user.id === post.userId,
     ),
-    comment: comments.find(
+    comments: comments.filter(
       comment => comment.postId === post.id,
     ),
   }),

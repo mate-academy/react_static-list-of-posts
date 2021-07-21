@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { User } from '../User';
 import { CommentList } from '../CommentList';
+import { TypePost } from '../../types';
 
 export const Post = ({ post }) => (
   <>
@@ -30,7 +30,7 @@ export const Post = ({ post }) => (
           </div>
 
           <div className="card">
-            <CommentList comment={post.comment} />
+            <CommentList comments={post.comments} />
           </div>
         </div>
       </div>
@@ -39,12 +39,5 @@ export const Post = ({ post }) => (
 );
 
 Post.propTypes = {
-  post: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      body: PropTypes.string.isRequired,
-      user: PropTypes.object.isRequired,
-      comment: PropTypes.object.isRequired,
-    }),
-  ).isRequired,
+  post: TypePost.isRequired,
 };
