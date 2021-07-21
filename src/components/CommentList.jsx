@@ -7,7 +7,7 @@ import { Comment } from './Comment';
 export const CommentList = ({ comments }) => (
   <ListGroup>
     {comments.map(comment => (
-      <ListGroup.Item variant="primary" key={comment.id}>
+      <ListGroup.Item variant="info" key={comment.id}>
         <Comment
           name={comment.name}
           body={comment.body}
@@ -22,6 +22,8 @@ CommentList.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
+      body: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
 };

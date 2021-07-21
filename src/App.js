@@ -7,7 +7,6 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { comment } from 'postcss';
 
 const listOfPosts = posts.map(post => ({
   ...posts,

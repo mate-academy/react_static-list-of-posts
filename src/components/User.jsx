@@ -19,14 +19,16 @@ export const User = ({
         </Nav.Item>
       </Nav>
       <br />
-      <p>
-        {`${street} St., `}
-        {suite}
-        <br />
-        <strong>
+      <div>
+        <span>
+          {'Address: '}
           {city}
-        </strong>
-      </p>
+          {', '}
+          {street}
+          {', '}
+          {suite}
+        </span>
+      </div>
     </>
   );
 };
