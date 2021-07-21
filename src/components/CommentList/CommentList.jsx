@@ -21,6 +21,9 @@ CommentList.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
     }),
   ),
 };
