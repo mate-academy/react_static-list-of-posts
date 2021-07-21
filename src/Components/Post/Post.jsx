@@ -13,8 +13,12 @@ export const Post = ({
   comments,
 }) => (
   <div className="post">
-    <p className="post__title">{title}</p>
-    <p className="post__body">{body}</p>
+    <p className="post__title">
+      {title}
+    </p>
+    <p className="post__body">
+      {body}
+    </p>
     <User specificUser={user} />
     <CommentList comments={comments} />
   </div>
