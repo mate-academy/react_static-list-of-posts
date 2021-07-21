@@ -1,1 +1,47 @@
-// styles go here
+.posts {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__post {
+    padding: 25px;
+    border: 3px rgb(68, 68, 68) solid;
+    border-radius: 10px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__data {
+    padding: 5px;
+    padding-right: 30px;
+
+  }
+  
+  &__post-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__author {
+    padding: 5px;
+    border: 3px rgb(68, 68, 68) solid;
+    border-radius: 10px;
+  }
+
+  &__comments-list {
+    padding: 5px;
+  }
+
+  &__comment {
+    padding: 10px;
+    border-bottom: 1px rgb(255, 102, 102) solid;
+  }
+}
