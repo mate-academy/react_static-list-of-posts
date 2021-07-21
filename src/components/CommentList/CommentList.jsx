@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Coment } from '../Comment';
+import { Comment } from '../Comment';
 import { ComentTypes } from '../../types';
 
 export function CommentList({ comments }) {
@@ -8,7 +8,7 @@ export function CommentList({ comments }) {
     <ul>
       {comments.map(comment => (
         <li key={comment.id}>
-          <Coment comment={comment} />
+          <Comment comment={comment} />
         </li>
       ))}
     </ul>

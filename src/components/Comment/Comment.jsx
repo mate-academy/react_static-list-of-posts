@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComentTypes } from '../../types';
 
-export function Coment({ comment }) {
+export function Comment({ comment }) {
   const { name, body, email } = comment;
 
   return (
@@ -13,6 +13,6 @@ export function Coment({ comment }) {
   );
 }
 
-Coment.propTypes = {
+Comment.propTypes = {
   comment: ComentTypes.isRequired,
 };
