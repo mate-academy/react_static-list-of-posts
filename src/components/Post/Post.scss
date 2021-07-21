@@ -1,0 +1,16 @@
+.post {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    width: 90%;
+    align-self: center;
+  }
+
+  &__body {
+    text-align: left;
+    padding: 0 10px;
+  }
+}

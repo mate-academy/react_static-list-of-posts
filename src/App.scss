@@ -1,1 +1,19 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  padding: 20px;
+  background-color: tan;
+  width: 100vw;
+}

@@ -1,0 +1,12 @@
+.postList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.post {
+  background-color: #eee;
+  border: 1px solid #000;
+  border-radius: 5%;
+  width: 300px;
+}

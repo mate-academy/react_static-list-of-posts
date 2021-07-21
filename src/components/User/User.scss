@@ -1,0 +1,12 @@
+.post {
+
+  &__author,
+  &__author-email {
+    text-align: right;
+    padding: 0 10px;
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+}
