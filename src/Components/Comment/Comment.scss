@@ -1,0 +1,12 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__body {
+    background-color: hsl(60, 100%, 82%);
+    border-radius: 3px;
+    padding: 5px;
+
+  }
+}

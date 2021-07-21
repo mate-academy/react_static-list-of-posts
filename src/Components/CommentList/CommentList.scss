@@ -1,0 +1,12 @@
+.commentList {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 5px;
+
+  &__card {
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
