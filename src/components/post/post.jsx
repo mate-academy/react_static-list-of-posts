@@ -14,7 +14,7 @@ export const Post = ({ title, body, user, filteredComent }) => (
     <p className="text">
       {`${body}`}
     </p>
-    <User {...user} />
+    <User user={user} />
     <div>
       <CommentList filteredComents={filteredComent} />
     </div>

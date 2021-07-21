@@ -12,7 +12,7 @@ export const CommentList = ({ filteredComents }) => (
     </h2>
     {filteredComents.map(comment => (
       <div key={comment.id} className="item">
-        <Comment {...comment} />
+        <Comment comment={comment} />
       </div>
     ))}
   </>
