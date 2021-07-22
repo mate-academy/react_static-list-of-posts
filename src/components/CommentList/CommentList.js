@@ -19,10 +19,6 @@ export const CommentList = ({ comments }) => (
   </ol>
 );
 
-CommentList.defaultProps = {
-  comments: {},
-};
-
 CommentList.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
@@ -32,5 +28,5 @@ CommentList.propTypes = {
       email: PropTypes.string.isRequired,
       body: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
 };

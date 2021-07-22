@@ -14,7 +14,7 @@ export const PostList = ({ posts }) => (
         "
         key={post.id}
       >
-        <Post post={post} />
+        <Post {...post} />
       </li>
     ))}
   </ol>

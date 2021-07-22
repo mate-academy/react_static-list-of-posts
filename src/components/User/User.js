@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { UserType } from '../../types';
 
-export const User = ({ user }) => (
+export const User = ({ name, email, address }) => (
   <ul className="user list-group">
     <li
       className="
@@ -11,7 +11,7 @@ export const User = ({ user }) => (
       "
     >
       <strong>Name: </strong>
-      {user.name}
+      {name}
     </li>
     <li
       className="
@@ -21,7 +21,7 @@ export const User = ({ user }) => (
       "
     >
       <strong>Email: </strong>
-      {user.email}
+      {email}
     </li>
     <li
       className="
@@ -31,36 +31,10 @@ export const User = ({ user }) => (
       "
     >
       <strong>Address: </strong>
-      {`${user.address.street} ${user.address.suite}`
-        + `${user.address.city} ${user.address.zipcode}`}
+      {`${address.street} ${address.suite}`
+        + `${address.city} ${address.zipcode}`}
     </li>
   </ul>
 );
-User.defaultProps = ({
-  user: {},
-});
-User.propTypes = ({
-  user: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.shape({
-      street: PropTypes.string.isRequired,
-      suite: PropTypes.string.isRequired,
-      city: PropTypes.string.isRequired,
-      zipcode: PropTypes.string.isRequired,
-      geo: PropTypes.shape({
-        lat: PropTypes.string.isRequired,
-        lng: PropTypes.string.isRequired,
-      }),
-    }),
-    phone: PropTypes.string.isRequired,
-    website: PropTypes.string.isRequired,
-    company: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      catchPhrase: PropTypes.string.isRequired,
-      bs: PropTypes.string.isRequired,
-    }),
-  }),
-});
+
+User.propTypes = (UserType);

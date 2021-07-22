@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { CommentList } from '../CommentList/CommentList';
 import { User } from '../User/User';
-import { PostType } from '../../types';
+import { UserType, CommentType } from '../../types';
 
-export const Post = ({ post }) => (
+export const Post = ({ title, body, user, comments }) => (
   <ul className="list-group list-group-flush">
     <li
       className="
@@ -13,7 +15,7 @@ export const Post = ({ post }) => (
       "
     >
       <h1 className="title">
-        {post.title}
+        {title}
       </h1>
     </li>
     <li
@@ -23,7 +25,7 @@ export const Post = ({ post }) => (
         list-group-item-success
       "
     >
-      {post.body}
+      {body}
     </li>
     <li
       className="
@@ -32,7 +34,7 @@ export const Post = ({ post }) => (
         list-group-item-success
       "
     >
-      <User {...post} />
+      <User {...user} />
     </li>
     <li
       className="
@@ -41,10 +43,14 @@ export const Post = ({ post }) => (
         list-group-item-success
       "
     >
-      <CommentList {...post} />
+      <CommentList comments={comments} />
     </li>
   </ul>
 );
+
 Post.propTypes = {
-  post: PostType.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  user: PropTypes.shape(UserType).isRequired,
+  comments: PropTypes.shape(CommentType).isRequired,
 };
