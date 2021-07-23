@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ListGroup } from 'react-bootstrap';
-import { Comment } from '../Comment/Comment';
+import { Comment } from '../Comment';
 
 export const CommentList = ({ comments }) => (
   <ListGroup>

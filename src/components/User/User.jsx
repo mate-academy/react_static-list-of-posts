@@ -21,12 +21,11 @@ export const User = ({
       <br />
       <div>
         <span>
-          {'Address: '}
-          {city}
-          {', '}
-          {street}
-          {', '}
-          {suite}
+          {`Address:
+            ${address.street} street,
+            ${address.suite},
+            ${address.city} city
+          `}
         </span>
       </div>
     </>

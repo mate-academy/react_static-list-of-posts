@@ -8,7 +8,13 @@ export const PostList = ({ posts }) => (
   <ListGroup>
     {posts.map(post => (
       <ListGroup.Item key={post.id}>
-        <Post {...post} />
+        <Post
+          user={post.user}
+          userId={post.userId}
+          body={post.body}
+          title={post.title}
+          comments={post.comments}
+        />
       </ListGroup.Item>
     ))}
   </ListGroup>
