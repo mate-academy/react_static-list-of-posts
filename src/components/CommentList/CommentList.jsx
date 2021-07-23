@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Comment } from '../Comment/Comment';
+import { Comment } from '../Comment';
 
 export const CommentList = ({ comments }) => (
   <ol className="commentList list-group list-group-numbered">
@@ -13,7 +13,7 @@ export const CommentList = ({ comments }) => (
         "
         key={comment.id}
       >
-        <Comment {...comment} />
+        <Comment comment={comment} />
       </li>
     ))}
   </ol>

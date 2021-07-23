@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PostType } from '../../types';
-import { Post } from '../Post/Post';
+import { Post } from '../Post';
 
 export const PostList = ({ posts }) => (
   <ol className="list-group list-group-numbered">
@@ -14,7 +14,7 @@ export const PostList = ({ posts }) => (
         "
         key={post.id}
       >
-        <Post {...post} />
+        <Post post={post} />
       </li>
     ))}
   </ol>
