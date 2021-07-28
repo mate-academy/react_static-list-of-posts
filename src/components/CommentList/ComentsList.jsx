@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Comment } from '../Comment/Comment';
+import { Comment } from '../Comment';
 import './CommentList.scss';
 
 export const CommentsList = ({ comments }) => (

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes, { shape } from 'prop-types';
 import { User } from '../User/User';
-import { CommentsList } from '../CommentList/ComentsList';
+import { CommentsList } from '../CommentList';
 import './Post.scss';
 
 export const Post = ({ post }) => (
