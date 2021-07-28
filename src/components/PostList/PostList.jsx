@@ -17,5 +17,5 @@ PostList.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-  })).isRequired,
+  }).isRequired).isRequired,
 };
