@@ -19,5 +19,10 @@ User.propTypes = {
   user: shape({
     name: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    adress: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      zipcode: PropTypes.string.isRequired,
+    }),
   }).isRequired,
 };
