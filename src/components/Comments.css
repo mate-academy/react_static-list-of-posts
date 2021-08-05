@@ -1,0 +1,29 @@
+.comments {
+  width: 550px;
+  background-color: #dbd7d7;
+  border-radius: 10px;
+}
+
+.comments-header {
+  font-size: 20px;
+  background-color: #bf81b6;
+  margin: 20px 0 0;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.comment {
+  margin-bottom: 35px;
+}
+
+.comment-author {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 5px;
+}
+
+.comment-body {
+  padding: 10px 20px;
+  margin: 0;
+}
