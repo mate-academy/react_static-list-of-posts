@@ -9,8 +9,8 @@ import { TypeUser, TypeComment, TypePost } from '../types';
 
 export const Post = ({ post, author, comments }) => {
   const { title, body } = post;
-  const currentComments = comments
-    .filter(comment => comment.postId === post.id);
+  // const currentComments = comments
+  //   .filter(comment => comment.postId === post.id);
 
   return (
     <div className="post">
@@ -25,7 +25,7 @@ export const Post = ({ post, author, comments }) => {
         </span>
         <span className="author-email">{author.email}</span>
       </div>
-      <Comments list={currentComments} />
+      <Comments list={comments} />
     </div>
   );
 };

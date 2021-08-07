@@ -12,7 +12,7 @@ export const PostList = ({ users, comments, posts }) => (
           <Post
             post={post}
             author={users.find(user => user.id === post.userId)}
-            comments={comments}
+            comments={comments.filter(comment => comment.postId === post.id)}
           />
         ))
       }
