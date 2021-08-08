@@ -5,6 +5,16 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import { PostList } from './Components/PostList';
+
+const preparedPosts = [];
+
+posts.forEach((post) => {
+  const newPost = post;
+
+  newPost.user = users.find(user => user.id === post.userId);
+  preparedPosts.push(newPost);
+});
 
 const App = () => (
   <div className="App">
@@ -24,6 +34,8 @@ const App = () => (
       <span>Users: </span>
       {users.length}
     </p>
+
+    <PostList posts={preparedPosts} />
   </div>
 );
 
