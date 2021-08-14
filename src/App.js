@@ -14,16 +14,17 @@ const App = () => (
       <span>posts: </span>
       {posts.length}
     </p>
-
+    <Post post={...posts}/>
     <p>
       <span>comments: </span>
       {comments.length}
     </p>
-
+    <Comment comment={...comments} />
     <p>
       <span>Users: </span>
       {users.length}
     </p>
+    <User user={...users} />
   </div>
 );
 
