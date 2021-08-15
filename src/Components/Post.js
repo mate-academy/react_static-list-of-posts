@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { CommentList } from './CommentList';
 import { User } from './User';
 
-export const Post = ({ user, title, body, id }) => (
+export const Post = ({ user, title, body, id, comments }) => (
   <li>
     <div>
       <b>{'title - '}</b>
@@ -15,7 +15,7 @@ export const Post = ({ user, title, body, id }) => (
       {body}
     </div>
     <User {...user} />
-    <CommentList postId={id} />
+    <CommentList comments={comments} />
     <hr />
   </li>
 );
@@ -29,4 +29,9 @@ Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
+  comments: PropTypes.arrayOf(PropTypes.object),
+};
+
+Post.defaultProps = {
+  comments: 'no comments',
 };
