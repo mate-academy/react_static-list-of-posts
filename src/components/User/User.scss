@@ -1,0 +1,10 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+
+  &__title {
+    margin: 0;
+  }
+}
