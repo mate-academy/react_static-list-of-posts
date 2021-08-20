@@ -1,0 +1,10 @@
+
+.post {
+  padding: 10px;
+}
+
+.post:hover {
+  background-color: rgba(216, 215, 157, 0.6);
+  border: 1px solid rgba(2, 2, 2, 0.6);
+  border-radius: 10px;
+}

@@ -1,30 +1,29 @@
 import React from 'react';
-
-import './App.scss';
-
+import PostList from './Details/PostList';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const App = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
+import './App.scss';
 
-    <p>
-      <span>posts: </span>
-      {posts.length}
-    </p>
+const App = () => {
+  const unitedArray = posts.map(post => ({
+    ...post,
+    user: users.find(user => post.userId === user.id),
+  }));
 
-    <p>
-      <span>comments: </span>
-      {comments.length}
-    </p>
+  unitedArray.forEach((elem) => {
+    const post = elem;
 
-    <p>
-      <span>Users: </span>
-      {users.length}
-    </p>
-  </div>
-);
+    post.comments = comments.filter(comment => elem.id === comment.postId);
+  });
+
+  return (
+    <div className="App">
+      <h1 align="center">Static list of posts</h1>
+      <PostList supPosts={unitedArray} />
+    </div>
+  );
+};
 
 export default App;
