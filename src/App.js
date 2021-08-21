@@ -1,7 +1,6 @@
 import React from 'react';
 import PostList from './Details/PostList';
 import posts from './api/posts';
-import comments from './api/comments';
 import users from './api/users';
 
 import './App.scss';
@@ -11,12 +10,6 @@ const App = () => {
     ...post,
     user: users.find(user => post.userId === user.id),
   }));
-
-  unitedArray.forEach((elem) => {
-    const post = elem;
-
-    post.comments = comments.filter(comment => elem.id === comment.postId);
-  });
 
   return (
     <div className="App">

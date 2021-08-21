@@ -33,7 +33,6 @@ User.propTypes = {
       city: PropTypes.string.isRequired,
       street: PropTypes.string.isRequired,
       suite: PropTypes.string.isRequired,
-      zipcode: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

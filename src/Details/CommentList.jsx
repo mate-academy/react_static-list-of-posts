@@ -9,7 +9,7 @@ function CommentList({ comments }) {
       <ul>
         {comments.map(comment => (
           <li key={comment.id}>
-            <Comment comment={comment} />
+            <Comment {...comment} />
           </li>
         ))}
       </ul>
