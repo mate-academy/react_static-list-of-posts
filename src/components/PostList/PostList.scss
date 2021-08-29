@@ -1,0 +1,39 @@
+.container {
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.post {
+  border: 2px solid rgb(41, 204, 169);
+  border-radius: 6px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 26px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__userinfo {
+    margin-bottom: 20px;
+  }
+
+  &__comments {
+    padding: 20px;
+
+    &-title {
+      margin-bottom: 10px;
+    }
+  }
+}
