@@ -1,0 +1,13 @@
+.comments {
+  background-color: rgb(172, 172, 134);
+  border-radius: 20px;
+
+  &__list {
+    padding: 1px 20px;
+  }
+
+  &__item {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+}

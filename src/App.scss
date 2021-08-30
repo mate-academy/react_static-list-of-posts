@@ -3,10 +3,18 @@ ul {
 }
 
 li,
+h1,
 h2,
 h3,
 ul,
 p {
   margin: 0;
   padding: 0;
+}
+
+.App {
+  &__title {
+    text-align: center;
+    margin: 20px;
+  }
 }

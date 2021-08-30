@@ -19,6 +19,9 @@ const preparedPosts = posts.map(post => {
 
 const App: React.FC = () => (
   <div className="App">
+    <h1 className="App__title">
+      Posts
+    </h1>
     <PostList posts={preparedPosts} />
   </div>
 );
