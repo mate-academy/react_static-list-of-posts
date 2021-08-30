@@ -3,33 +3,42 @@ import { UserInfo } from './UserInfo';
 import { CommentList } from './CommentList';
 import { Post } from '../Types/Post';
 
-export const PostInfo: React.FC<Post> = ({
-  title,
-  body,
-  user,
-  comments,
-}) => (
-  <>
-    <div className="card-body text-dark">
-      <h5 className="card-title">{title}</h5>
+type Props = {
+  post: Post;
+};
 
-      <p className="card-text">
-        {body}
-      </p>
+export const PostInfo: React.FC<Props> = (props) => {
+  const { post } = props;
+  const {
+    title,
+    body,
+    user,
+    comments,
+  } = post;
 
-      { user && (
+  return (
+    <>
+      <div className="card-body text-dark">
+        <h5 className="card-title">{title}</h5>
+
         <p className="card-text">
-          <small className="text-muted">
-            <UserInfo {...user} />
-          </small>
+          {body}
         </p>
-      )}
-    </div>
 
-    { comments && (
-      <div className="card-footer">
-        <CommentList comments={comments} />
+        { user && (
+          <p className="card-text">
+            <small className="text-muted">
+              <UserInfo user={user} />
+            </small>
+          </p>
+        )}
       </div>
-    )}
-  </>
-);
+
+      { comments && (
+        <div className="card-footer">
+          <CommentList comments={comments} />
+        </div>
+      )}
+    </>
+  );
+};
