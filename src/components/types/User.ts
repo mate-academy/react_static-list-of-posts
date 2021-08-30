@@ -27,8 +27,3 @@ interface Company {
   catchPhrase: string;
   bs: string;
 }
-
-// export interface User {
-//   name: string;
-//   email: string;
-// }

@@ -1,34 +1,44 @@
 import React from 'react';
 
+import './PostInfo.scss';
 import { Post } from '../types/Post';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
-export const PostInfo: React.FC<Post> = ({
-  title,
-  body,
-  user,
-  usersComments,
-}) => (
-  <>
-    <div className="post__body">
-      <h3 className="post__title">{title}</h3>
+type Props = {
+  post: Post;
+};
 
-      <p className="post__text">{body}</p>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    body,
+    user,
+    usersComments,
+  } = post;
 
-      {user && (
-        <p className="post__userinfo">
-          <UserInfo {...user} />
-        </p>
-      )}
-    </div>
+  return (
+    <article className="post">
+      <div className="post__body">
+        <h3 className="post__title">{title}</h3>
 
-    <hr />
+        <p className="post__text">{body}</p>
 
-    {!!usersComments.length && (
-      <div className="post__comments">
-        <CommentList comments={usersComments} />
+        {user && (
+          <p className="post__userinfo">
+            <UserInfo user={user} />
+          </p>
+        )}
       </div>
-    )}
-  </>
-);
+
+      <hr />
+
+      {!!usersComments.length && (
+        <div className="post__comments">
+          <h3 className="post__comments-title">Comments:</h3>
+          <CommentList comments={usersComments} />
+        </div>
+      )}
+    </article>
+  );
+};
