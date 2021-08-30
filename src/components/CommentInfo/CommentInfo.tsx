@@ -24,7 +24,9 @@ const CommentInfo: React.FC<Props> = ({ comments }) => (
           <strong>
             Email:
           </strong>
-          {` ${email}`}
+          <span className="comments__email">
+            {` ${email}`}
+          </span>
           <br />
           <strong>
             Comment:
