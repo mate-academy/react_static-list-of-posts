@@ -3,15 +3,15 @@ import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
 type Props = {
-  reviews?: Comment[],
+  reviews: Comment[],
 };
 
 export const CommentList: React.FC<Props> = ({ reviews }) => (
   <div className="post__comments">
     <h5>Comments:</h5>
-    {reviews?.map(comment => (
+    {reviews.map(comment => (
       <div className="post__comment" key={comment.id}>
-        <CommentInfo {...comment} />
+        <CommentInfo comment={comment} />
       </div>
     ))}
   </div>
