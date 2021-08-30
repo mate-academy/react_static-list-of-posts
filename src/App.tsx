@@ -12,12 +12,12 @@ const preparedPosts = postsFromServer.map(post => {
     || null;
   const comments = commentsFromServer.filter(comment => (
     comment.postId === post.id
-  )) || null;
+  ));
 
   return {
     ...post,
     user,
-    comments,
+    comments: comments.length ? comments : null,
   };
 });
 
