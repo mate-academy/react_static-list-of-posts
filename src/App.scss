@@ -1,1 +1,74 @@
-// styles go here
+body {
+  font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.post {
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+  width: 40%;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px solid rgba(131, 118, 252, 0.445);
+  background-color: rgba(95, 158, 160, 0.3);
+
+  &__title {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+  }
+
+  &__body, .comment__body {
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  &__body {
+    font-size: 1.2rem;
+    background-color: rgb(174, 238, 240);
+  }
+}
+
+.username {
+  &::before {
+    content: '-';
+  }
+  font-weight: bold;
+}
+
+.user__info {
+  padding: 5px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.comment {
+  &__content {
+    background-color: rgba(197, 207, 212, 0.5);
+    margin: 5px;
+    border: rgba(255, 255, 255, 0.5) solid 2px;
+    padding: 8px 15px;
+  }
+  
+  &__list {
+    padding: 5px 20px;
+  }
+
+  &__name {
+    letter-spacing: .05rem;
+    font-size: larger;
+  }
+  &__body {
+    background-color: rgba(100, 148, 237, 0.3);
+  }
+}
