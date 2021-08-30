@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  padding: 15px;
+
+  &__name {
+    padding-left: 10px; 
+    color: rgba(92, 86, 86, 0.363)
+  }
+
+  &__email{
+    padding-left: 10px; 
+    color: rgba(92, 86, 86, 0.363)
+  }
+}

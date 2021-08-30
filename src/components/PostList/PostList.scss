@@ -1,0 +1,14 @@
+.posts-flex-container {  
+  display: flex;
+  width: 800px;
+  flex-direction: column;
+  gap: 30px
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px dotted #000;
+}
