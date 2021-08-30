@@ -1,1 +1,26 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+body,
+ul,
+li,
+p,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.title {
+  text-align: center;
+}
