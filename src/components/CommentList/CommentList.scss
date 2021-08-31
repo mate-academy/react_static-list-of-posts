@@ -1,0 +1,24 @@
+.comments {
+  border: 1px solid#6495ED;
+  border-radius: 8px;
+  padding: 20px;
+
+  &__title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  &__item {
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #0ff;
+  }
+}
