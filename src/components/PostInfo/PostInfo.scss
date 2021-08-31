@@ -1,0 +1,17 @@
+.post {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 700px;
+  background-color: rgb(185, 185, 189);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+  }
+}

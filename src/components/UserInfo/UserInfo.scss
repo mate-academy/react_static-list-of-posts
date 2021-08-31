@@ -1,0 +1,10 @@
+.user {
+  display: block;
+  border-bottom: 1px solid rgb(44, 42, 42);
+
+  &__info {
+    display: block;
+    width: 200px;
+    margin-left: 500px;
+  }
+}
