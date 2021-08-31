@@ -18,7 +18,6 @@ export const PostList: React.FC<Props> = (props) => {
           <PostInfo postItem={postItem} />
         </div>
       ))}
-      ;
     </div>
   );
 };
