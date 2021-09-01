@@ -1,0 +1,25 @@
+.post {
+
+  &__title {
+    text-transform: capitalize;
+    font-size: 28px;
+    color: rgb(49, 49, 41);
+    margin-bottom: 1rem;
+  }
+
+  &__body {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__user-name {
+    font-size: 24px;
+    color: rgb(49, 49, 41);
+  }
+
+  &__user-email {
+    text-transform: lowercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
