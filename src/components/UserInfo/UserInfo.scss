@@ -1,0 +1,13 @@
+.UserInfo {
+  &__email {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(26, 162, 252);
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
