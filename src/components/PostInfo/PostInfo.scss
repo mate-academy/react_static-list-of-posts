@@ -1,0 +1,28 @@
+.post {
+
+  &__title {
+    font-size: 25px;
+    color: rgba(12, 1, 1, 0.781);
+    align-self: center;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    padding: 20px;
+    
+    &::first-letter {
+      font-size: 30px;
+      color:rgb(60, 40, 134)
+    }
+  }
+
+  &__content {
+    font-size: 16px;
+    color: #000;
+
+    &::first-letter {
+      font-size: 18px;
+      color:rgb(60, 40, 134);
+      text-transform: uppercase;
+    }
+  }
+}
