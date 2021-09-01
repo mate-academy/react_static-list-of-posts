@@ -4,7 +4,7 @@ import { CommentList } from '../CommentList/CommentList';
 import { Post } from '../../types/Post';
 
 interface Props {
-  post: Post
+  post: Post;
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => {

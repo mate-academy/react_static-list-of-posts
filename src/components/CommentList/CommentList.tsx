@@ -4,7 +4,7 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { Comment } from '../../types/Comment';
 
 type Props = {
-  reviews: Comment[]
+  reviews: Comment[];
 };
 
 export const CommentList: React.FC<Props> = ({ reviews }) => (
