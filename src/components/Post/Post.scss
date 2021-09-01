@@ -1,0 +1,31 @@
+.container {
+  margin: 0 auto;
+  width: 80%;
+
+  &__post {
+    margin-bottom: 20px;
+  }
+}
+.post {
+  border: 1px solid #003a44;
+  border-radius: 10px;
+  background-color: #c2dde4;
+  padding: 20px;
+  
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__user {
+    margin-bottom: 15px;
+
+    &-name {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+}
