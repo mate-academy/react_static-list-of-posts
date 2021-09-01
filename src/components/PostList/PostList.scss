@@ -1,0 +1,10 @@
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+}
