@@ -1,0 +1,19 @@
+.comments {
+  padding: 15px 15px 0;
+  list-style: none;
+  border: 2px solid rgb(135, 135, 241);
+  border-radius: 25px;
+  background-color: rgba(135, 135, 241, 0.548);
+
+  &__item {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    background-color: lightyellow;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}
