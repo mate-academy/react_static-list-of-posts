@@ -7,9 +7,13 @@ export const PostInfo: React.FC<PostType> = ({
   title,
   body,
   user,
+  id,
   comments,
 }) => (
-  <div className="post">
+  <div
+    key={id}
+    className="post"
+  >
     <div className="post__content">
       <h2 className="post__title">
         {title}
