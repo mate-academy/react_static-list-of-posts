@@ -1,1 +1,18 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(224, 224, 224);
+}
+
+ul {
+  list-style: none;
+}
+
+.App {
+  &__title {
+    text-align: center;
+  }
+}

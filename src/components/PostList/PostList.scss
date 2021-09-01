@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+
+  &__item {
+    padding: 20px;
+    flex: 40%;
+
+    background: #f0f0f0;
+    border-radius: 20px;
+  }
+
+  &__post-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__post-top {
+    text-align: center;
+
+    border-bottom: 1px solid #8d8d8d;
+  }
+
+  &__post-bottom {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.5fr 2fr;
+  }
+
+  &__user-info {
+    padding: 10px;
+    border-right: 1px solid #8d8d8d;
+  }
+}
