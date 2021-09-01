@@ -1,0 +1,27 @@
+.CommentInfo {
+  padding: 20px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #000;
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+
+  &__from {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(26, 162, 252);
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
