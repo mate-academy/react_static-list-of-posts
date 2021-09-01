@@ -7,7 +7,9 @@ type Props = {
   posts: Post[];
 };
 
-export const PostList: React.FC<Props> = ({ posts }) => {
+export const PostList: React.FC<Props> = (props) => {
+  const { posts } = props;
+
   return (
     <ul>
       {posts.map(post => (

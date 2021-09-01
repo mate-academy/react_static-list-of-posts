@@ -9,7 +9,9 @@ type Props = {
   comments: Comment[];
 };
 
-export const CommentList: React.FC<Props> = ({ comments }) => {
+export const CommentList: React.FC<Props> = (props) => {
+  const { comments } = props;
+
   return (
     <div className="comments">
       <h2 className="comments__title">Comments</h2>
