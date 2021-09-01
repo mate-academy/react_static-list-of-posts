@@ -1,0 +1,11 @@
+.comments {
+  &__heading {
+    margin-left: 40px;
+  }
+  &__item {
+    width: 70%;
+    border: 1px dashed darkgrey;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}
