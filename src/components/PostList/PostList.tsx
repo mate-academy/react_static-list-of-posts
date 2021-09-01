@@ -3,7 +3,7 @@ import { Post } from '../../types/Post';
 import { PostInfo } from '../PostInfo';
 
 interface Props {
-  posts: Post[],
+  posts: Post[];
 }
 
 export const PostList: React.FC<Props> = ({ posts }) => (

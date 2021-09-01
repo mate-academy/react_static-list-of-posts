@@ -5,7 +5,7 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 interface Props {
-  post: Post
+  post: Post;
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
@@ -18,9 +18,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
   return (
     <div className="post__content">
-      {user
-        ? <UserInfo user={user} />
-        : <h2>Something went wrong...</h2>}
+      {user && <UserInfo user={user} />}
       <h3 className="post__title">{title}</h3>
       <p className="post__text">{body}</p>
       <CommentList reviews={reviews} />
