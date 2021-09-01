@@ -1,0 +1,15 @@
+.comment {
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 20px;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: rgb(139, 139, 139);
+  }
+}
