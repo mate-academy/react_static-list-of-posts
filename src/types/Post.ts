@@ -6,6 +6,6 @@ export interface Post {
   userId: number;
   title: string;
   body: string;
-  user: User | null;
+  user?: User;
   comments: Comment[];
 }
