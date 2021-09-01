@@ -1,0 +1,19 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+  list-style: none;
+  background: #eee;
+  border-radius: 24px;
+  padding: 36px;
+
+  &__item {
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #fff;
+  }
+
+  &__text {
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,11 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  &__item {
+    padding: 24px;
+    background-color: #ddd;
+    border-radius: 24px;
+  }
+}
