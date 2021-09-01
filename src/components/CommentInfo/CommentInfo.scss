@@ -1,0 +1,12 @@
+.comment-info {
+  padding-top: 10px;
+
+  &__name {
+    margin: 0 0 10px;
+  }
+
+  &__email {
+    margin-left: 10px;
+    font-style: italic;
+  }
+}

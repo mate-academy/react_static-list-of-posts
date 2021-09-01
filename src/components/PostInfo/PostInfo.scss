@@ -1,0 +1,16 @@
+.post {
+  &__main {
+    background-color: rgb(241, 220, 134);
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 0 16px;
+  }
+
+  &__comments {
+    margin: 0 auto;
+  }
+}

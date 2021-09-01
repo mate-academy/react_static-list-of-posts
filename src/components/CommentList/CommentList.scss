@@ -1,0 +1,10 @@
+.comments-list {
+  width: 90%;
+  border-left: 2px solid #ddd;
+  border-right: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+
+  &__list-item {
+    margin-top: 0;
+  }
+}
