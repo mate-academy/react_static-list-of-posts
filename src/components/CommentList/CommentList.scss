@@ -1,0 +1,22 @@
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  &__item {
+    padding: 5px;
+    background: #fff;
+    border-radius: 20px;
+
+    & :nth-child(1) {
+      text-align: center;
+      margin: 0;
+    }
+
+    & :nth-child(3) {
+      font-size: 14px;
+      text-align: end;
+    }
+  }
+}
