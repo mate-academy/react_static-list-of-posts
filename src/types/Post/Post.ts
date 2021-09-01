@@ -1,5 +1,5 @@
 import { User } from '../User/User'
-import { Comments } from '../Comments/Comments'
+import { Comments } from '../Comment/Comment'
 
 export interface Post {
   id: number,

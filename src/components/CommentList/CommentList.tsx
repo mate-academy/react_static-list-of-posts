@@ -1,5 +1,5 @@
 import React from 'react';
-import { Comments } from '../../types/Comments/Comments';
+import { Comments } from '../../types/Comment/Comment';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 interface Props {
@@ -12,8 +12,11 @@ export const CommentList: React.FC<Props> = (props) => {
   return (
     <>
       Comments:
-      {commentsForPost
-        .map((commentItem: Comments) => <CommentInfo commentItem={commentItem} />)}
+      {commentsForPost.map((commentItem: Comments) => (
+        <div className="comment" key="comment.id">
+          <CommentInfo commentItem={commentItem} />
+        </div>
+      ))}
     </>
   );
 };
