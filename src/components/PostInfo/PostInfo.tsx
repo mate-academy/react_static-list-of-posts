@@ -11,7 +11,10 @@ type Props = {
 export const PostInfo: React.FC<Props> = (props) => {
   const { postData } = props;
   const {
-    title, body, user, comments,
+    title,
+    body,
+    user,
+    comments,
   } = postData;
 
   return (
@@ -22,8 +25,7 @@ export const PostInfo: React.FC<Props> = (props) => {
       </h2>
       <p className="postInfo__body">{body}</p>
 
-      {(user
-      ) && (
+      {(user) && (
         <UserInfo
           name={user.name}
           username={user.username}
