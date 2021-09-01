@@ -1,5 +1,5 @@
 import React from 'react';
-import PostList from './components/PostsList/PostList';
+import { PostList } from './components/PostsList/PostList';
 import './App.scss';
 
 import posts from './api/posts';
@@ -17,7 +17,7 @@ const preparedPosts = posts.map(post => {
   };
 });
 
-const App: React.FC = () => (
+export const App: React.FC = () => (
   <div className="App">
     <h1 className="App__title">
       Posts
@@ -25,5 +25,3 @@ const App: React.FC = () => (
     <PostList posts={preparedPosts} />
   </div>
 );
-
-export default App;

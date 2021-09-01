@@ -6,7 +6,7 @@ type Props = {
   user: User;
 };
 
-const UserInfo: React.FC<Props> = ({ user }) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
   const {
     name,
     email,
@@ -24,5 +24,3 @@ const UserInfo: React.FC<Props> = ({ user }) => {
     </>
   );
 };
-
-export default UserInfo;
