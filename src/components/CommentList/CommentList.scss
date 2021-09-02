@@ -1,0 +1,11 @@
+.comments {
+  padding: 0;
+
+  &__item {
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: wheat;
+    padding: 10px;
+    border-radius: 25px;
+  }
+}

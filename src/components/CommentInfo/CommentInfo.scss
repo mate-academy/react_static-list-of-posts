@@ -1,0 +1,19 @@
+.comment__author {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.author {
+  &__name,
+  &__email {
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+}
+
+.comment__body {
+  padding: 0 10px;
+  margin: 0 auto;
+}
