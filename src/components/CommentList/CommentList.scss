@@ -1,0 +1,8 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    margin: 10px;
+  }
+}

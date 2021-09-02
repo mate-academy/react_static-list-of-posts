@@ -1,0 +1,11 @@
+.user {
+  display: flex;
+
+  &__name {
+    margin: 0 20px 20px 40px;
+  }
+
+  &__email {
+    color: rgb(148, 136, 136);
+  }
+}

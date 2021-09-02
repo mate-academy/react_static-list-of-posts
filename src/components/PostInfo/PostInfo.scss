@@ -1,0 +1,24 @@
+.post {
+  background: rgb(199, 190, 190);
+  border: 1px solid transparent;
+  border-radius: 20px;
+
+  &__title {
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(192, 89, 89);
+  }
+
+  &__body {
+    padding: 0 40px;
+  }
+
+  &__comments {
+    background: rgb(148, 136, 136);
+    width: 90vw;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
