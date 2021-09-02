@@ -5,8 +5,12 @@ type Props = {
   comment: Comment;
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => {
-  const { name, body, email } = comment;
+export const CommentInfo: React.FC<Props> = (props) => {
+  const {
+    name,
+    body,
+    email
+  } = props.comment;
 
   return (
     <>

@@ -7,14 +7,19 @@ type Props = {
   post: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => {
-  const { title, body, comments } = post;
+export const PostInfo: React.FC<Props> = (props) => {
+  const {
+    user,
+    title,
+    body,
+    comments
+  } = props.post;
 
   return (
     <div className="post-info">
       <div className="post-info__main">
-        {post.user
-          ? <UserInfo user={post.user} />
+        {user
+          ? <UserInfo user={user} />
           : 'User does not exist'}
 
         <h2 className="post-info__title">
