@@ -8,7 +8,7 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <section className="blog">
-    {posts?.map(post => (
+    {posts.map(post => (
       <article className="blog__post post" key={post.id}>
         <PostInfo post={post} />
       </article>
