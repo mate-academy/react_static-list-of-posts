@@ -10,15 +10,17 @@ export const CommentList: React.FC<Props> = (props) => {
   const { comments } = props;
 
   return (
-    <ul className="list-group">
-      Comments:
-      {
-        comments.map(comment => (
-          <li key={comment.id} className="list-group-item">
-            <CommentInfo comment={comment} />
-          </li>
-        ))
-      }
-    </ul>
+    <div className="container col-lg-6">
+      <ul className="list-group">
+        Comments:
+        {
+          comments.map(comment => (
+            <li key={comment.id} className="list-group-item">
+              <CommentInfo comment={comment} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   );
 };

@@ -13,9 +13,9 @@ export const CommentInfo: React.FC<Props> = (props) => {
       <blockquote>
         <header>
           {'comments by: '}
-          <small>
+          <strong>
             {comment.name}
-          </small>
+          </strong>
         </header>
         <p>
           {comment.body}
