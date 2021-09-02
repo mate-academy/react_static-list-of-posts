@@ -1,0 +1,30 @@
+.post {
+  padding: 0;
+
+  &__item {
+    padding: 15px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    background-color: rgb(247, 242, 185);
+    border-radius: 10px;
+  }
+
+  &__item-title {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(53, 53, 43);
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__item-body {
+    font-size: 25px;
+    color: rgb(53, 53, 43);
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
