@@ -1,0 +1,17 @@
+.comments {
+  list-style: none;
+  padding: 20px;
+  color: white;
+  background-color: dimgrey;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__item {
+    color: black;
+    margin-top: 20px;
+    padding: 2px 10px;
+    background-color: greenyellow;
+  }
+}

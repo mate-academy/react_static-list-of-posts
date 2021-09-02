@@ -1,0 +1,11 @@
+.post {
+  background-color: yellow;
+  margin: 20px;
+  padding: 20px;
+
+  &__user-info {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: lightcoral;
+  }
+}

@@ -4,9 +4,9 @@ import { PostInfo } from '../PostInfo';
 
 import './PostList.scss';
 
-type Props = {
+interface Props {
   preparedPosts: Post[];
-};
+}
 
 export const PostList: React.FC<Props> = ({ preparedPosts }) => (
   <>

@@ -10,7 +10,7 @@ interface Props {
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <ul className="comments">
-    <h2>Comments:</h2>
+    <h2 className="comments__title">Comments:</h2>
     {comments.map(comment => (
       <li key={comment.id} className="comments__item">
         <CommentInfo comment={comment} />
