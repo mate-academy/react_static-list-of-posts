@@ -1,16 +1,20 @@
 import React from 'react';
 import './CommentsList.scss';
-import { Comment, CommentInfo } from '../CommentInfo/CommentInfo';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
+import { Comment } from '../types/Comment';
 
 type Props = {
-  comments: Comment[] | null,
+  // eslint-disable-next-line react/require-default-props
+  comments?: Comment[],
 };
 
-export const CommentsList: React.FC<Props> = ({ comments }) => {
+export const CommentsList: React.FC<Props> = (props) => {
+  const { comments } = props;
+
   return (
-    <div>
+    <ul>
       <h3 className="comments-title">Comments:</h3>
-      {comments?.map(item => <CommentInfo comment={item} />)}
-    </div>
+      {comments?.map(item => <li key={item.id}><CommentInfo comment={item} /></li>)}
+    </ul>
   );
 };

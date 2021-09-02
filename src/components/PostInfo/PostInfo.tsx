@@ -1,17 +1,8 @@
 import React from 'react';
 import './PostInfo.scss';
-import { User, UserInfo } from '../UserInfo/UserInfo';
-import { Comment } from '../CommentInfo/CommentInfo';
+import { Post } from '../types/Post';
+import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentsList } from '../CommentsList/CommentsList';
-
-export interface Post {
-  userId: number,
-  id: number,
-  title: string,
-  body: string,
-  user: User | null,
-  comments: Comment[] | null,
-}
 
 type Props = {
   props: Post,

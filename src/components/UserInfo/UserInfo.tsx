@@ -1,10 +1,6 @@
 import React from 'react';
 import './UserInfo.scss';
-
-export interface User {
-  name: string,
-  email: string,
-}
+import { User } from '../types/User';
 
 type Props = {
   user: User | null,

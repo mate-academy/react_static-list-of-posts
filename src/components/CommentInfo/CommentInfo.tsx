@@ -1,17 +1,15 @@
 import React from 'react';
 import './CommentInfo.scss';
-
-export interface Comment {
-  name: string,
-  body: string,
-  email: string,
-}
+import { Comment } from '../types/Comment';
 
 type Props = {
-  comment: Comment | null;
+  // eslint-disable-next-line react/require-default-props
+  comment?: Comment;
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => {
+export const CommentInfo: React.FC<Props> = (props) => {
+  const { comment } = props;
+
   return (
     <div className="comment">
       {comment?.body}
