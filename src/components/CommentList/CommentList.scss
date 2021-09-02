@@ -1,0 +1,17 @@
+.comments {
+  padding: 10px;
+  border-radius: 30px;
+  background-color: rgb(161, 159, 122);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__item {
+    padding: 10px;
+
+    background-color: rgb(240, 235, 211);
+    border-radius: 30px;
+    border: 5px solid rgb(161, 159, 122);
+  }
+}
