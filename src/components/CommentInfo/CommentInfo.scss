@@ -1,0 +1,19 @@
+.comment {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #4B0082;
+
+  &__name {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__mail {
+    color: #FFF8DC;
+  }
+
+  &__body {
+    font-size: 25px;
+  }
+}
