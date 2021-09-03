@@ -1,1 +1,36 @@
-// styles go here
+li {
+  list-style-type: none;
+}
+
+.post {
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border: 2px solid #E1E1E1;
+  border-radius: 10px;
+  background-color: #F3F3F3;
+
+  &__info {
+    text-align: center;
+    border: 2px solid #E1E1E1;
+    border-radius: 10px;
+    background-color: #FCFCFC;
+  }
+
+  &__title {
+    padding: 10px;
+    margin: 20px auto;
+    max-width: max-content;
+    border: 2px solid #E1E1E1;
+    border-radius: 10px;
+  }
+}
+
+.user, .comment__list, .comment__item {
+  margin-top: 10px;
+  padding: 0 10px;
+  border: 2px solid #E1E1E1;
+  border-radius: 10px;
+  background-color: #FCFCFC;
+}
