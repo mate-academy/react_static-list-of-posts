@@ -1,0 +1,23 @@
+.PostInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-end;
+
+  border: 5px solid black;
+  border-radius: 10px;
+
+  gap: 10px;
+  
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+}
