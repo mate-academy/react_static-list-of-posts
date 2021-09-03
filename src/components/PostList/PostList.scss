@@ -1,0 +1,12 @@
+.list {
+  &__item {
+    list-style: none;
+  }
+
+  &__separator {
+    height: 1px;
+    width: 80%;
+    margin: 80px auto;
+    background-color: navy;
+  }
+}

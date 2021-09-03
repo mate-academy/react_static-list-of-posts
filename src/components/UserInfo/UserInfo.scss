@@ -1,0 +1,9 @@
+.user {
+  &__name,
+  &__email {
+    font-size: 18px;
+    color: crimson;
+    text-align: right;
+    margin-right: 100px;
+  }
+}
