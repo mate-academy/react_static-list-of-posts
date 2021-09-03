@@ -1,0 +1,11 @@
+.user-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 30px;
+  font-weight: 600;
+
+  &__title {
+    text-transform: capitalize;
+  }
+}
