@@ -11,16 +11,14 @@ export const PostList: React.FC<Props> = (props) => {
   const { posts } = props;
 
   return (
-    <>
-      <ul className="List">
-        {
-          posts.map(post => (
-            <li className="List__item" key={post.id}>
-              <PostInfo post={post} />
-            </li>
-          ))
-        }
-      </ul>
-    </>
+    <ul className="List">
+      {
+        posts.map(post => (
+          <li className="List__item" key={post.id}>
+            <PostInfo post={post} />
+          </li>
+        ))
+      }
+    </ul>
   );
 };

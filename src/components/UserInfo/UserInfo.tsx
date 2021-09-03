@@ -12,12 +12,12 @@ export const UserInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className="user__name">
+      <p className="user__name">
         {name}
-      </div>
-      <div className="user__email">
+      </p>
+      <p className="user__email">
         {email}
-      </div>
+      </p>
     </>
   );
 };

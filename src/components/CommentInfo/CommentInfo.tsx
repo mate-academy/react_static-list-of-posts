@@ -16,8 +16,13 @@ export const CommentInfo: React.FC<Props> = (props) => {
         <div className="author__name">
           {name}
         </div>
-        <div className="author__email">
-          {email}
+        <div>
+          <a
+            className="author__email"
+            href={`mailto:${email}`}
+          >
+            {email}
+          </a>
         </div>
       </div>
       <div className="comment__body">

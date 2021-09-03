@@ -19,17 +19,17 @@ export const PostInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className="item__title">
+      <h2 className="item__title">
         {title}
-      </div>
-      <div className="item__body">
+      </h2>
+      <p className="item__body">
         {body}
-      </div>
-      <div className="item__user user">
+      </p>
+      <p className="item__user user">
         {user && (
           <UserInfo user={user} />
         )}
-      </div>
+      </p>
       <div className="item__comments">
         <CommentList comments={commentsOfThisPost} />
       </div>
