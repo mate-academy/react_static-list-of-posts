@@ -1,1 +1,25 @@
-// styles go here
+body,
+h1,
+h2,
+h3,
+p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+}
+
+.App {
+  &__title {
+    text-align: center;
+    padding: 10px;
+  }
+}

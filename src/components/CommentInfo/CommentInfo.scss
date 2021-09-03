@@ -1,0 +1,18 @@
+.Info {
+  padding: 15px;
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__comment {
+    margin-bottom: 10px;
+  }
+}
