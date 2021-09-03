@@ -1,1 +1,52 @@
-// styles go here
+* {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.list {
+  width: 50%;
+  min-width: min-content;
+  margin:0 auto 20px;
+  padding: 10px;
+  border: 1px solid red;
+  background-color: palegoldenrod;
+  list-style-type: none;
+  border-radius: 10px;
+  &__title {
+    color: red;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__body, &__user-comment-body {
+    color: violet;
+    font-size:25px;
+    margin-bottom: 15px;
+  }
+
+  &__user-name,
+  &__user-email,
+  &__user-comment-name,
+  &__user-comment-email {
+    color: gray;
+    font-size: 20px;
+  }
+
+  &__user-email,
+  &__user-comment-email{
+    margin-bottom: 15px;
+  }
+
+  &__user-comment {
+    margin-bottom: 5px;
+    padding: 10px;
+    list-style-type: none;
+    background-color: brown;
+    border-radius: 5px;
+  }
+}
