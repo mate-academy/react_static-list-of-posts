@@ -2,6 +2,7 @@ import React from 'react';
 import { Post } from '../../react-app-env';
 import { CommentsList } from '../CommentsList/CommentsList';
 import { UserInfo } from '../UserInfo/UserInfo';
+import './PostInfo.scss';
 
 type Props = {
   post: Post;
@@ -18,19 +19,22 @@ export const PostInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      <h2>
+      <h2 className="list__title">
         {title}
       </h2>
-      <div>
+      <div className="user list__user">
         {user
         && <UserInfo user={user} />}
       </div>
-      <p>
+      <p className="list__body">
         {body}
       </p>
-      <div>
+      <span className="list__comments">
+        <h3 className="list__comments-title">
+          Comments:
+        </h3>
         <CommentsList comments={arrayOfComments} />
-      </div>
+      </span>
     </>
   );
 };
