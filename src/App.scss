@@ -1,1 +1,65 @@
-// styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+.list {
+  padding: 0 40px;
+}
+
+.post {
+  max-width: 900px;
+  margin-bottom: 20px;
+  
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
+  background-color: rgb(27, 25, 25);
+  list-style: none;
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 10px;
+  }
+}
+
+.comment {
+  margin-top: 20px;
+  padding: 20px 30px;
+
+  border-radius: 20px;
+  background-color: rgb(85, 79, 79);
+
+  &__list {
+    margin-top: 20px;
+
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: rgb(90, 90, 90);;
+  }
+
+  &__name {
+    font-size: 20px;
+  }
+
+  &__body {
+    margin-top: 10px;
+  }
+
+  &__email {
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 15px;
+  }
+}
