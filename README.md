@@ -3,7 +3,7 @@
   [DEMO LINK](https://MaksymBeliever.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
-## The task
+## The task 
 Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`, 
 `CommentList` and `CommentInfo` displaying posts with comments and user details.
 
