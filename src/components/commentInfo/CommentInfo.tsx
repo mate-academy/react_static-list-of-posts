@@ -1,4 +1,5 @@
 import React from 'react';
+import './commentInfo.scss';
 
 type Props = {
   comment: Comment;
