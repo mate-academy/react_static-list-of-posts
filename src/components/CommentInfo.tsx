@@ -9,11 +9,11 @@ const CommentInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      {comments.comment.map(x => (
-        <div>
-          <p>{x.name}</p>
-          <p>{x.email}</p>
-          <p className="comment">{x.body}</p>
+      {comments.comment.map(commentProperty => (
+        <div key={commentProperty.id}>
+          <p>{commentProperty.name}</p>
+          <p>{commentProperty.email}</p>
+          <p className="comment">{commentProperty.body}</p>
           <br />
           <br />
         </div>

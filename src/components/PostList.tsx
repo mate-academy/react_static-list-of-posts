@@ -12,19 +12,19 @@ export const PostList: React.FC<Prop> = (props) => {
 
   return (
     <ul>
-      {posts.map(x => (
+      {posts.map(post => (
         <li>
           <br />
           <p>
-            <UserInfo users={x} />
+            <UserInfo users={post} />
           </p>
           <hr />
           <p>
-            <PostInfo post={x} />
+            <PostInfo post={post} />
           </p>
           <hr />
           <p>
-            <CommentInfo comments={x} />
+            <CommentInfo comments={post} />
           </p>
           <hr />
           <hr />
