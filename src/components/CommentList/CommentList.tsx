@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CommentInfo from '../CommentInfo/index';
+import CommentInfo from '../CommentInfo';
 
 type Props = {
   comments: Comment[];
@@ -12,11 +12,7 @@ export const CommentList: React.FC<Props> = (props) => {
   return (
     <div>
       {comments.map(comment => (
-        <div key={comment.id}>
-          <div>
-            <CommentInfo {...comment} />
-          </div>
-        </div>
+        <CommentInfo key={comment.id} comments={comment} />
       ))}
     </div>
   );

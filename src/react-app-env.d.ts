@@ -10,7 +10,7 @@ interface Post {
   id: number;
   title: string;
   body: string;
-  user: User | null;
+  person: User | null;
   comment: Comment[] | null;
 }
 

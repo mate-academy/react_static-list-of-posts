@@ -1,25 +1,23 @@
 import React from 'react';
 
-import UserInfo from '../UserInfo/index';
-import CommentList from '../CommentList/index';
+import UserInfo from '../UserInfo';
+import CommentList from '../CommentList';
 
 type Props = {
   posts: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ posts }) => {
-  const {
-    title, body, user, comment,
-  } = posts;
+export const PostInfo: React.FC<Props> = (props) => {
+  const { posts } = props;
 
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{body}</p>
+      <h1>{posts.title}</h1>
+      <p>{posts.body}</p>
 
-      {user && (<UserInfo user={user} />)}
+      {posts.person && (<UserInfo user={posts.person} />)}
 
-      {comment && (<CommentList comments={comment} />)}
+      {posts.comment && (<CommentList comments={posts.comment} />)}
 
     </div>
   );
