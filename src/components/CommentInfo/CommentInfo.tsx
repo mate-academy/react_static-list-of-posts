@@ -14,8 +14,14 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
   return (
     <>
       <p className="comments__item">{body}</p>
-      <p className="comments__infoName">{`Author: ${name}`}</p>
-      <p className="comments__infoEmail">{`Email: ${email}`}</p>
+      <p className="comments__infoName">
+        <b>Author:</b>
+        {` ${name}`}
+      </p>
+      <p className="comments__infoEmail">
+        <b>Email:</b>
+        {` ${email}`}
+      </p>
     </>
   );
 };

@@ -9,8 +9,14 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <>
-      <p className="list__name">{`Author ${name} - ${username}`}</p>
-      <p className="list__email">{`Email: ${email}`}</p>
+      <p className="list__name">
+        <b>Author:</b>
+        {` ${name} - ${username}`}
+      </p>
+      <p className="list__email">
+        <b>Email:</b>
+        {` ${email}`}
+      </p>
     </>
   );
 };

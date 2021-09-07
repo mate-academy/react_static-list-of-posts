@@ -16,7 +16,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   } = post;
 
   return (
-    <>
+    <div className="list">
       <h3 className="list__postName">{title}</h3>
       <p className="list__post">{body}</p>
 
@@ -27,6 +27,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       }
       <h4 className="list__comments comments">Comments:</h4>
       <CommentList comments={comments} />
-    </>
+    </div>
   );
 };
