@@ -9,21 +9,15 @@ export const CommentInfo: React.FC<Props> = (props) => {
   const { comments } = props;
 
   return (
-    <div className="comment">
-      <p>
-        User name:
-        {' '}
-        {comments.name}
+    <div className="card card--comment">
+      <p className="card-text card-text--comment">
+        {`User name: ${comments.name}`}
       </p>
-      <p>
-        Comment:
-        {' '}
-        {comments.body}
+      <p className="card-text card-text--comment">
+        {`Comment: ${comments.body}`}
       </p>
-      <p>
-        Email address:
-        {' '}
-        {comments.email}
+      <p className="card-text card-text--comment">
+        {`Email address: ${comments.email}`}
       </p>
     </div>
   );

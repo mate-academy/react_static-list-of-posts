@@ -11,13 +11,13 @@ export const PostInfo: React.FC<Props> = (props) => {
   const { posts } = props;
 
   return (
-    <div>
-      <h1>{posts.title}</h1>
-      <p>{posts.body}</p>
+    <div className="card-body">
+      <h1 className="card-title">{`Title: ${posts.title}`}</h1>
+      <p className="card-text">{posts.body}</p>
 
       {posts.person && (<UserInfo user={posts.person} />)}
 
-      {posts.comment && (<CommentList comments={posts.comment} />)}
+      {posts.comments && (<CommentList comments={posts.comments} />)}
 
     </div>
   );

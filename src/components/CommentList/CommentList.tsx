@@ -10,7 +10,7 @@ export const CommentList: React.FC<Props> = (props) => {
   const { comments } = props;
 
   return (
-    <div>
+    <div className="comment-List">
       {comments.map(comment => (
         <CommentInfo key={comment.id} comments={comment} />
       ))}

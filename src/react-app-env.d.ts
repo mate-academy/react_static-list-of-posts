@@ -11,7 +11,7 @@ interface Post {
   title: string;
   body: string;
   person: User | null;
-  comment: Comment[] | null;
+  comments: Comment[] | null;
 }
 
 interface Comment {
