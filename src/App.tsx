@@ -1,7 +1,5 @@
 import React from 'react';
-import { PostList } from './components/PostList';
-
-import './App.scss';
+import { PostList } from './components/PostList/PostList';
 
 import posts from './api/posts';
 import comments from './api/comments';
