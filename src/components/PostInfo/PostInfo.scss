@@ -1,0 +1,20 @@
+.post {
+  &__box {
+    padding: 60px 30px;
+    background: rgb(100, 150, 140);
+    border-radius: 30px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 35px;
+    font-family: sans-serif;
+    color: #fff;
+  }
+
+  &__description {
+    margin-bottom: 100px;
+    text-align: center;
+    color: #fff;
+  }
+}
