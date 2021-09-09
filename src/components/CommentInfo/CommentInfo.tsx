@@ -13,9 +13,9 @@ export const CommentInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      <li>{name}</li>
-      <li>{body}</li>
-      <li>{email}</li>
+      <li className="list-group-item list-group-item-info">{name}</li>
+      <li className="list-group-item list-group-item-info">{body}</li>
+      <li className="list-group-item list-group-item-info">{email}</li>
     </>
   );
 };

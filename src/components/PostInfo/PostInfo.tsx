@@ -16,10 +16,10 @@ export const PostInfo: React.FC<Props> = (props) => {
 
   return (
     <>
-      <li>{title}</li>
-      <li>{body}</li>
-      <li><UserInfo user={user} /></li>
-      <li><CommentList comments={comments} /></li>
+      <li className="list-group-item list-group-item-primary">{title}</li>
+      <li className="list-group-item list-group-item-primary">{body}</li>
+      <li className="list-group-item list-group-item-primary"><UserInfo user={user} /></li>
+      <li className="list-group-item list-group-item-primary"><CommentList comments={comments} /></li>
     </>
   );
 };
