@@ -1,0 +1,13 @@
+.list-comment {
+  list-style: none;
+  background-color: lightblue;
+  border: 2px solid blue;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+}

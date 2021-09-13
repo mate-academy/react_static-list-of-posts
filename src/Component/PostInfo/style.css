@@ -1,0 +1,8 @@
+.list {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: azure;
+  padding: 10px;
+  margin-bottom: 10px;
+}
