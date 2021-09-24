@@ -8,8 +8,7 @@ type Props = {
   post: Post;
 };
 
-export const PostInfo: React.FC<Props> = (props) => {
-  const { post } = props;
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title,
     body,
