@@ -1,1 +1,14 @@
-// styles go here
+body,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.page {
+  &__title {
+    padding: 15px;
+    text-align: center;
+  }
+}
