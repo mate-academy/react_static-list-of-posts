@@ -1,0 +1,10 @@
+.comment {
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  padding-left: 20px;
+
+  border-radius: 6px;
+  background-color: rgb(240, 240, 240);
+}

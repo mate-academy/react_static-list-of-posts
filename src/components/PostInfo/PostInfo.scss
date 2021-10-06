@@ -1,0 +1,32 @@
+.post {
+  border: 2px solid rgb(41, 204, 169);
+  border-radius: 6px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 26px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__comments {
+    padding: 20px;
+    background-color: rgb(220, 220, 220);
+
+    &-title {
+      margin-bottom: 10px;
+    }
+  }
+}
