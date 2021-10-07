@@ -1,1 +1,12 @@
 // styles go here
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+}
