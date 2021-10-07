@@ -1,0 +1,11 @@
+.list {
+  list-style: none;
+
+  &__item {
+    border: 2px solid blue;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    margin-bottom: 5px;
+  }
+}
