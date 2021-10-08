@@ -1,0 +1,7 @@
+.list-comment-info {
+  border-bottom: 2px solid sienna;
+}
+
+.comment-item:last-of-type {
+  font-size: 20px;
+}
