@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserInfo } from '../Author/UserInfo';
-import { Comments } from '../Comments/Comments';
+import { CommentList } from '../Comments/CommentList';
 import { PreparedPost } from '../../types';
 
 type Props = {
@@ -15,6 +15,6 @@ export const PostInfo: React.FC<Props> = ({ data: preparedPost }) => (
       {`Body: ${preparedPost.body}`}
     </p>
     <UserInfo data={preparedPost.user} />
-    <Comments data={preparedPost.commentArray} />
+    <CommentList data={preparedPost.commentArray} />
   </li>
 );
