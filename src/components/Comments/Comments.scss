@@ -1,0 +1,46 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  &__title {
+    margin: 0;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.comment-post {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+
+  &--odd {
+    background-color: #eee;
+  }
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+
+  &__info {
+    &--name {
+      font-size: 12px;
+    }
+
+    &--email {
+      font-size: 12px;
+    }
+  }
+}

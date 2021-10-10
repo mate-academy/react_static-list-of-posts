@@ -1,0 +1,63 @@
+.author {
+  color: #fff;
+  padding: 10px 10px 20px;
+  background-color: red;
+  border-radius: 10px;
+
+  &__title {
+    margin-top: 0;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+
+  &__basics {
+    &--website {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  border-radius: 10px;
+  gap: 10px;
+  background-color: #fff;
+
+  &__icon {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+
+    &--phone {
+      background-image: url("../../img/Call-06.svg");
+    }
+
+    &--mail {
+      background-image: url("../../img/email.svg");
+    }
+  }
+}
+
+.content {
+  display: flex;
+  gap: 10px;
+}
+
+.image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-image: url("../../img/images.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

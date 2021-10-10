@@ -1,0 +1,14 @@
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  width: 270px;
+  margin: 0;
+}
