@@ -1,13 +1,13 @@
 import React from 'react';
 import { User } from '../../types';
 
-type PropsS = {
+type Props = {
   data: User | null;
 };
-export const Author: React.FC<PropsS> = ({ data: user }) => (
+export const UserInfo: React.FC<Props> = ({ data: user }) => (
   <div className="user">
     <h4 className="user__name">
-      {'Author: '}
+      {'UserInfo: '}
       {user ? user.name : 'unknown'}
       {' - '}
       <span>{user?.email}</span>

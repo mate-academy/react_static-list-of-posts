@@ -11,7 +11,7 @@ export const Comments: React.FC<Props> = ({ data: comments }) => (
       {comments.map((comment) => {
         return (
           <li className="comment-item" key={comment.id}>
-            {`Comment name: ${comment.name}`}
+            {`Comment email: ${comment.email}`}
           </li>
         );
       })}
