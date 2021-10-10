@@ -1,1 +1,29 @@
-// styles go here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+.post {
+  display: block;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #888;
+
+  &__body {
+    color: #999;
+  }
+}
+
+.user {
+  border: 1px solid #0aa;
+}
