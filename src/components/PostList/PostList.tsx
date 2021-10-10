@@ -13,7 +13,7 @@ export const PostList: React.FC<Props> = (({ posts = [] }) => (
   <ul className="posts-list">
     {posts.map((post) => {
       return post.user && (
-        <li className="posts-list__item item">
+        <li className={`posts-list__item item ${post.id}`}>
           <PostInfo title={post.title} body={post.body} />
           <UserInfo
             username={post.user.username}
