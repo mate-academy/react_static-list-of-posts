@@ -1,0 +1,31 @@
+.post {
+
+  &__comments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 500px;
+    background-color: #eee;
+    overflow-y: scroll;
+  }
+  
+  &__title {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  border-radius: 10px;
+
+  &__email {
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: grey;
+    color: #000;
+  }
+}
