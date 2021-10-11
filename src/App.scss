@@ -1,1 +1,59 @@
-// styles go here
+body {
+  background-color: #eaf0ce;
+  text-align: center;
+}
+
+.posts {
+  background-color: #eaf0ce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  color: #3f334d;
+  background-color: #c0c5c1;
+  max-width: 800px;
+  margin-bottom: 50px;
+  border: 5px solid #3f334d;
+  border-radius: 10px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__author {
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  &__body {
+    text-align: center;
+    margin: 20px;
+  }
+}
+
+.comment {
+  text-align: start;
+  list-style: none;
+  padding: 20px;
+
+  &__item {
+    border: 1px solid #7d8491;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: #3f334d;
+  }
+
+  &__body {
+    margin: 0 50px;
+  }
+}
