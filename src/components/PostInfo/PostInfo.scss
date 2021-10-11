@@ -1,0 +1,15 @@
+.post {
+  &__title {
+    text-align: center;
+    font-family: serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: midnightblue;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-size: 20px;
+    font-style: italic;
+  }
+}

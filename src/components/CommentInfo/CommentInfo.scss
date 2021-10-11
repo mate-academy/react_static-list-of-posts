@@ -1,0 +1,15 @@
+.comment {
+  &__name {
+    font-weight: 700;
+    color: navy;
+  }
+
+  &__body {
+    font-style: italic;
+    max-width: 75%;
+  }
+
+  &__email {
+    color: rebeccapurple;
+  }
+}
