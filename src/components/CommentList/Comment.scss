@@ -1,0 +1,16 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__body {
+    margin: 1rem 0 0.5rem;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  &__email {
+    font-size: 16px;
+    text-align: right;
+  }
+}
