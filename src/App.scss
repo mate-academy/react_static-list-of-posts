@@ -1,1 +1,52 @@
-// styles go here
+h1 {
+  text-align: center;
+}
+
+.list {
+  background-color: rgb(255, 254, 192);
+  margin: 50px;
+  border-radius: 30px;
+  padding: 0 20px 20px;
+  font-size: 20px;
+
+
+  &__postName {
+    background-color: rgb(160, 250, 146);
+    padding: 20px 50px;
+    border-radius: 30px;
+    transform: scale(1.07);
+    font-size: 25px;
+  }
+
+  &__comments {
+    font-size: 25px;
+  }
+
+  &__name {
+    padding-left: 40px;
+    font-size: 18px;
+  }
+
+  &__email{
+    padding-left: 40px;
+    font-size: 18px;
+  }
+}
+
+.comments {
+  &__body {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 0, 0);
+  }
+
+  &__infoName {
+    padding-left: 40px;
+    font-size: 18px;
+  }
+
+  &__infoEmail{
+    padding-left: 40px;
+    font-size: 18px;
+  }
+}
+
