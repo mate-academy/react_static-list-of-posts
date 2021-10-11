@@ -1,0 +1,12 @@
+.Post {
+  &__title {
+    text-align: center;
+  }
+
+  &__body {
+    background-color: #ff09;
+    padding: 5px;
+    border: olivedrab solid 1px;
+    border-radius: 5px;
+  }
+}
