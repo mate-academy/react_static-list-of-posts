@@ -1,0 +1,17 @@
+.post__user {
+  text-align: center;
+
+  &-name {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding-right: 5px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &-email {
+    color: #0e11d3be;
+  }
+}

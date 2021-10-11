@@ -1,0 +1,30 @@
+.comments {
+  margin-left: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  &__item {
+    text-align: center;
+    list-style: none;
+    border: 1px solid darkblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.comment {
+  &__name {
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  &__email {
+    color: #0e11d3be;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}
