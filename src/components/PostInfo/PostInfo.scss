@@ -1,0 +1,29 @@
+.PostInfo {
+  &__heading {
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #223;
+    border-radius: 30px;
+  }
+
+  &__text {
+    height: 300px;
+    display: flex;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 500px;
+    padding: 30px;
+
+    background-color: #334;
+    border-radius: 30px;
+
+    overflow: auto;
+  }
+}
