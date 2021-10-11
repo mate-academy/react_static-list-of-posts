@@ -1,0 +1,13 @@
+.post {
+  background-color: gray;
+  padding-bottom: 10px;
+
+  &__title {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
