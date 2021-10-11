@@ -1,0 +1,29 @@
+.post__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  border: 3px solid #000;
+  width: 800px;
+  padding: 10px 0;
+
+  &__tittle {
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  &__paragraph {
+    max-width: max-content;
+    text-align: center;
+    margin: 15px 10px;
+  }
+}
