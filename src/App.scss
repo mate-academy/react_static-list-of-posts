@@ -1,1 +1,65 @@
-// styles go here
+body {
+  background-color: #e0ffff;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  max-width: 800px;
+  margin-bottom: 50px;
+  border: 3px solid #000;
+  border-radius: 10px;
+
+  &__title {
+    color: darkblue;
+    text-align: center;
+  }
+
+  &__body {
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #111;
+    border-radius: 5px;
+  }
+}
+
+.author {
+  text-align: right;
+  margin-right: 10px;
+
+  &__name {
+    font-size: 20px;
+  }
+
+  &__email {
+    color: rgb(65, 170, 206);
+  }
+}
+
+.comments {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    border: 1px solid rgb(101, 101, 231);
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: rgb(10, 93, 121);
+  }
+
+  &__body {
+    margin: 5px;
+  }
+}
