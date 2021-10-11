@@ -1,1 +1,81 @@
-// styles go here
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(154, 155, 231);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #cdcdcd;
+  padding: 10px;
+  background-color: rgb(126, 107, 233);
+}
+
+.post {
+  background-color: rgb(126, 107, 233);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  color: #cdcdcd;
+
+  &__title,
+  &__body {
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__user-info {
+    background-color: rgb(110, 55, 238);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20%;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    flex-direction: column;
+    align-content: space-around;
+  }
+
+  &__comments {
+    background-color: rgb(151, 128, 250);
+    margin: 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &-user {
+      padding: 10px 20px;
+      color: #cdcdcd;
+      background-color: rgb(110, 55, 238);
+      border-radius: 5px;
+    }
+    &-text {
+      padding: 20px;
+      width: 60%;
+      &-title {
+        color: #cdcdcd;
+        font-size: 20px;
+        background-color: rgb(135, 87, 247);
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
