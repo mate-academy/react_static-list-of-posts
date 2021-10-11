@@ -1,0 +1,26 @@
+.UserInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-Foto {
+    width: 150px;
+  }
+
+  &-Name {
+    margin-bottom: 4px;
+  }
+
+  &-Email {
+    text-decoration: none;
+    padding: 8px;
+    background-color: rgb(83, 139, 223);
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
