@@ -10,23 +10,17 @@ import { PostTypes } from './types/PostTypes';
 
 import { PostList } from './components/PostList';
 
-const App: React.FC = () => {
-  const preparedPosts: PostTypes[] = posts.map(post => {
-    const currentUser = users.find(user => post.userId === user.id) || null;
+const preparedPosts: PostTypes[] = posts.map(post => ({
+  ...post,
+  user: users.find(user => post.userId === user.id) || null,
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
 
-    return {
-      ...post,
-      user: currentUser,
-      comments: comments.filter(({ postId }) => postId === post.id),
-    };
-  });
-
-  return (
-    <div className="App">
-      <h1 className="App__title">Static list of posts</h1>
-      <PostList posts={preparedPosts} />
-    </div>
-  );
-};
+const App: React.FC = () => (
+  <div className="App">
+    <h1 className="App__title">Static list of posts</h1>
+    <PostList posts={preparedPosts} />
+  </div>
+);
 
 export default App;
