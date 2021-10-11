@@ -1,0 +1,61 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+
+  border-radius: 2%;
+  background-color: rgba(88, 233, 177, 0.15);
+
+  &__title {
+    color: rgba(24, 109, 76, 0.9);
+    display: block;
+    height: 3em;
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+
+  &__body {
+    font-style: italic;
+    border-radius: 1rem;
+    background-color: rgba(88, 233, 177, 0.35);
+    padding: 0.5rem 1rem;
+  }
+
+  &__user-info {
+    padding-right: 0.5rem;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  &__comments {
+    margin-top: 1rem;
+    padding: 3%;
+    border: 2px rgba(88, 233, 177, 0.95) solid;
+    border-radius: 1rem;
+
+    &-title {
+      display: block;
+      margin: 0 0 1rem;
+      text-align: center;
+      color: rgba(52, 163, 121, 0.85);
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+
+    &-list {
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    &-item {
+      border: 2px white solid;
+      padding: 3%;
+      background-color: rgba(238, 252, 246, 0.93);
+      border-radius: 1rem;
+      box-shadow: 3px 3px 2px 1px rgba(88, 233, 177, 0.45);
+    }
+  }
+}
