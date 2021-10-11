@@ -1,1 +1,43 @@
-// styles go here
+body {
+  background-image: linear-gradient(45deg, #4dd32e, #e4527e);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.block {
+  width: 800px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgb(209, 198, 198);
+  padding: 10px;
+}
+
+.header {
+  text-align: center;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+}
+
+.text {
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  border: 1px solid grey;
+}
