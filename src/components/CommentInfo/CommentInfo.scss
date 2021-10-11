@@ -1,0 +1,39 @@
+.CommentInfo {
+  display: flex;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+
+  &--List {
+    margin: 0 auto;
+    padding: 0;
+
+    &_Style {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+
+    &_Item {
+      margin: 5px;
+      padding: 5px;
+      list-style: none;
+      width: 215px;
+      height: 200px;
+      background-color: #ee0;
+      border-radius: 10px;
+    }
+  }
+
+  &--Email {
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+  }
+}

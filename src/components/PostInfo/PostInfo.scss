@@ -1,0 +1,36 @@
+.PostInfo {
+  margin: 0;
+  padding: 0;
+
+  &--Title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 5px;
+    text-align: center;
+    background-color: #eaeaea;
+    border-radius: 10px;
+  }
+
+  &--List {
+    margin: 0;
+    padding: 15px;
+
+    &_Item {
+      margin-bottom: 25px;
+      padding: 15px;
+      list-style: none;
+      border: 2px solid #215487;
+      border-radius: 10px;
+      background-color: #a6c696;
+    }
+  }
+
+  &--Body {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+}
