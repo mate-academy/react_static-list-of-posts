@@ -1,0 +1,27 @@
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+  border: 1px solid black;
+
+  &__name {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  &__text {
+    width: 90%;
+    align-self: center;
+    border: 1px solid black;
+  }
+}

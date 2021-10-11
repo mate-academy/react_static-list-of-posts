@@ -1,0 +1,26 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  border: 4px solid black;
+  border-radius: 10px;
+
+  &__title {
+    font-size: 35px;
+  }
+
+  &__text {
+    align-self: center;
+    width: 80%;
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 10px;
+  }
+
+  &__user-email,
+  &__user-name {
+    margin: 0;
+    padding: 0;
+  }
+}
