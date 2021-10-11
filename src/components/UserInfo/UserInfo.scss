@@ -1,0 +1,12 @@
+.UserInfo {
+  display: flex;
+  justify-content: space-between;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    text-transform: lowercase;
+  }
+}

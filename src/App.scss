@@ -1,1 +1,25 @@
-// styles go here
+body {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.App {
+  background-color: #223;
+  &__heading {
+    margin: 0;
+    padding-top: 20px;
+
+    text-align: center;
+  }
+
+  &__post {
+    margin: 40px;
+    padding: 30px;
+
+    background-color: #556;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px 5px #0003;
+  }
+}

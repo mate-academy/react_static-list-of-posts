@@ -1,0 +1,13 @@
+.CommentList {
+  &__list {
+    margin: 0;
+    margin-left: 30px;
+    padding: 20px;
+
+    list-style: none;
+    background-color: #445;
+    border-radius: 30px;
+
+    overflow: auto;
+  }
+}

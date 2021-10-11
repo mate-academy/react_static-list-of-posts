@@ -1,0 +1,29 @@
+.CommentInfo {
+  background-color: #667;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+
+  border-radius: 30px;
+
+  &__autor-info {
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #334;
+    border-radius: 30px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    text-transform: lowercase;
+  }
+
+  &__body {
+    padding: 0 30px;
+  }
+}
