@@ -1,0 +1,23 @@
+.post-info {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    padding: 10px;
+    background-color: yellowgreen;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    min-height: 80px;
+    text-align: center;
+  }
+
+  &__comments {
+    height: 600px;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+}
