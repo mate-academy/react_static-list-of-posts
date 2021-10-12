@@ -21,7 +21,9 @@ const App: React.FC = () => {
   });
 
   return (
-    <PostList posts={prepearedPosts} />
+    <>
+      <PostList posts={prepearedPosts} />
+    </>
   );
 };
 
