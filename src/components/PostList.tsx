@@ -13,7 +13,7 @@ export const PostList: React.FC<Props> = ({ postList }) => {
   return (
     <ul className="postList">
       {postList.map(post => (
-        <li className="postList__Item">
+        <li key={post.id} className="postList__Item">
           <PostInfo post={post} />
           {post.user && (
             <UserInfo user={post.user} />
