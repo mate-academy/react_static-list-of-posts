@@ -1,1 +1,48 @@
-// styles go here
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  &__post {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40%;
+    border: 2px solid black;
+    box-shadow:  8px 6px 5px gray;
+    border-radius: 8px;
+
+    .post__user {
+      margin-bottom: 10px;
+      text-align: end;
+      font-style: italic;
+      font-weight: 600;
+    }
+    .post__title {
+      font-size: 30px;
+    }
+    .post__body {
+      font-size: 24px;
+    }
+  }
+}
+.comments {
+  &__comment {
+    text-align: start;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    .comment__name {
+      font-size: 20px;
+    }
+    .comment__body {
+      font-size: 16px;
+      font-style: italic;
+    }
+    .comment__mail {
+      text-align: end;
+    }
+  }
+}
