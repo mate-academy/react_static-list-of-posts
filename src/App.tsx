@@ -11,7 +11,7 @@ import { PostList } from './components/PostListProps';
 export const preparedPosts: Post[] = posts.map(post => {
   return {
     ...post,
-    user: users.find(user => user.id === post.id) || null,
+    user: users.find(user => user.id === post.userId) || null,
     comments: comments.filter(comment => comment.postId === post.id),
   };
 });
