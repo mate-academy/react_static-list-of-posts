@@ -1,0 +1,19 @@
+.CommentInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+
+  &-Name {
+    align-self: center;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &-Body {
+    margin-bottom: 8px;
+  }
+
+  &-Email {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,36 @@
+.PostInfo {
+  display: grid;
+  grid-template-areas: "user title title title title"
+    "user body body body body"
+    "comments comments comments comments comments";
+  border: 1px solid #888;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  padding: 16px;
+
+  &-User {
+    grid-area: user;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 16px;
+  }
+
+  &-Title {
+    font-size: 36px;
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
+    line-height: 2em;
+  }
+
+  &-Body {
+    grid-area: body;
+    font-size: 26px;
+    padding: 0 16px;
+  }
+
+  &-Comments {
+    grid-area: comments;
+  }
+}
