@@ -9,7 +9,7 @@ type Props = {
 export const UserInfo: React.FC<Props> = ({ users }) => (
   <div className="UserInfo">
     {users?.map(user => (
-      <div>
+      <div key={user.name}>
         <span className="UserInfo--Nick">
           {`${user.username}`}
         </span>

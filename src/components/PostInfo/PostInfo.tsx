@@ -12,7 +12,7 @@ export const PostInfo: React.FC<Props> = ({ newPosts }) => (
   <div className="PostInfo">
     <ul className="PostInfo--List">
       {newPosts.map(post => (
-        <li className="PostInfo--List_Item">
+        <li className="PostInfo--List_Item" key={post.id}>
           <h2 className="PostInfo--Title">{`${post.title}`}</h2>
           <div className="PostInfo--Body">
             {`${post.body}`}
