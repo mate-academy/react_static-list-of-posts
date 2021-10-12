@@ -5,8 +5,7 @@ import { Post } from '../types/Post';
 export const PostInfo: React.FC<{ post: Post; }> = ({ post }) => (
   <div className="post" key={post.id}>
     <h2 className="postTitle">
-      Post:
-      {' '}
+      {'Post: '}
       {post.title}
     </h2>
     <div className="postMain">
