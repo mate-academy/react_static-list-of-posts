@@ -1,5 +1,10 @@
-.App {
+* {
+  margin: 0;
+}
+
+.App {  
   &__title {
     text-align: center;
+    margin: 10px 0;
   }
 }

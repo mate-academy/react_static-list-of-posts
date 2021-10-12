@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './UserInfo.scss';
+
 type Props = {
   user: User;
 };
@@ -11,7 +13,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   } = user;
 
   return (
-    <>
+    <div className="User">
       <p className="User__name">
         <strong>Author: </strong>
         {name}
@@ -20,6 +22,6 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
         <strong>Email: </strong>
         {email}
       </p>
-    </>
+    </div>
   );
 };

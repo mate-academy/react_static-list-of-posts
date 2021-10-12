@@ -1,10 +1,14 @@
 .PostList {
+  padding: 0;
+  margin: auto 40px;
+
+
   &__post {
+    padding: 5%;
+    margin: 0 0 40px;
     list-style: none;
     border: olivedrab solid 1px;
     border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 5%;
     background-color: #ff08;
   }
 }

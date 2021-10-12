@@ -8,7 +8,6 @@ type Props = {
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const {
-    id,
     name,
     email,
     body,
@@ -16,19 +15,17 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
 
   return (
     <div className="Comment">
-      <li className="Comment__item" key={id}>
-        <p>
-          <strong>Author: </strong>
-          {name}
-        </p>
-        <p>
-          <strong>Email: </strong>
-          {email}
-        </p>
-        <p>
-          {body}
-        </p>
-      </li>
+      <p className="Comment__author">
+        <strong>Author: </strong>
+        {name}
+      </p>
+      <p className="Comment__mail">
+        <strong>Email: </strong>
+        {email}
+      </p>
+      <p className="Comment__text">
+        {body}
+      </p>
     </div>
   );
 };
