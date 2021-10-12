@@ -1,0 +1,7 @@
+.postList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  row-gap: 30px;
+  box-sizing: border-box;
+  justify-content: space-around;
+}

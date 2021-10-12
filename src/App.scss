@@ -1,22 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  box-sizing: border-box;
   &__title {
     text-align: center;
   }
-}
-
-.postList {
-  display: grid;
-  grid-template-columns: repeat (4, 300px);
-}
-
-.postInfo {
-  background-color: yellow;
-}
-
-.userInfo {
-  background-color: green;
-}
-
-.commentList {
-  background-color: red;
 }

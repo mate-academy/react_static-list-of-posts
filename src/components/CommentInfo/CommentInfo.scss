@@ -1,0 +1,17 @@
+.commentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid grey;
+  border-radius: 5%;
+  padding: 10px 0;
+  overflow: hidden;
+
+  &__name {
+    text-align: center;
+  }
+
+  &__email {
+    text-align: right;
+  }
+}

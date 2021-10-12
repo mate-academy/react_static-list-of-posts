@@ -1,0 +1,9 @@
+.userInfo {
+  &__author {
+    text-align: right;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
