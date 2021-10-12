@@ -1,1 +1,67 @@
-// styles go here
+body {
+  background-color: white;
+  font-family: "Lucida Sans",
+    "Lucida Sans Regular",
+    "Lucida Grande",
+    "Lucida Sans Unicode",
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.post {
+  margin: 0 auto;
+  background-color: rgb(145, 243, 96);
+  border: 1px solid rgb(50, 144, 4);
+  margin-bottom: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  width: 700px;
+
+  &__title {
+    text-align: center;
+    border: 1px solid rgb(50, 144, 4);
+  }
+
+  &__body {
+    text-align: center;
+  }
+}
+
+.writer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments {
+  padding: 50px;
+  list-style: circle;
+}
+
+.comment {
+  margin-bottom: 20px;
+  
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    text-align: right;
+    font-weight: bold;
+    text-decoration: overline;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    border: 1px solid rgb(50, 144, 4);
+    border-radius: 10px;
+    background-color: rgb(174, 243, 139);
+    padding: 10px;
+  }
+}
