@@ -1,1 +1,87 @@
-// styles go here
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: rgb(239, 245, 245);
+}
+
+li {
+  list-style: none;
+}
+
+.MainTitle {
+  text-align: center;
+}
+
+.PostList {
+  padding: 20px;
+  margin: 0;
+}
+
+.PostInfo {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(232, 233, 233);
+}
+
+.postTitle {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.postOfUser {
+  font-weight: 600;
+}
+
+.postText {
+  padding: 5px;
+  margin: 20px;
+}
+
+.postEmail {
+  font-style: italic;
+}
+
+.Comments {
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(217, 224, 235);
+}
+
+.commentsTitle {
+  margin-top: 10px;
+  font-size: 18px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.commentsList {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.commentItem {
+  margin: 5px;
+  background-color: rgb(217, 218, 235);
+}
+
+.commentInfo {
+  padding: 10px;
+}
+
+.commentTitle {
+  margin: 5px;
+  text-align: start;
+}
+
+.commentUser {
+  font-size: 16px;
+  font-style: italic;
+  text-align: end;
+}
+
+.commentText {
+  margin: 10px;
+}
