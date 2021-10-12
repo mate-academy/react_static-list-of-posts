@@ -1,0 +1,62 @@
+.App {
+  padding: 20px;
+
+  background-color: beige;
+
+  font-family: "Lucida Sans", Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 120%;
+  
+  &__header {
+    text-align: center;
+  }
+}
+
+.PostList {
+  list-style: none;
+
+  &__item {
+    padding: 16px;
+    margin-bottom: 16px;
+
+    border: 1px solid rgb(121, 121, 121);
+  }
+}
+
+.Post {
+  margin-bottom: 24px;
+
+  &__title {
+    font-weight: 700;
+  }
+  &__body {
+    font-size: 16px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+    &-author {
+      font-weight: 700;
+    }
+    &-email {
+      font-weight: 500;
+    }
+  }
+}
+
+.CommentList {
+  padding: 8px 8px 8px 48px;
+
+  &__item {
+    border: 1px dotted rgb(121, 121, 121);
+  }
+  &__author-info {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 16px;
+    color: grey;
+  }
+}
