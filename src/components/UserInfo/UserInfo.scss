@@ -1,0 +1,31 @@
+.UserInfo {
+  display: flex;
+  justify-content: end;
+  margin: 0 10px 25px 0;
+  padding: 0;
+
+  &--Nick {
+    margin: 0 25px;
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #f00;
+    border-radius: 5px;
+  }
+
+  &--Name {
+    margin: 0 25px;
+    padding: 0;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  &--Email {
+    margin: 0;
+    padding: 2px 8px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+  }
+}
