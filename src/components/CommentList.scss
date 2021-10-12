@@ -1,0 +1,12 @@
+.post__comments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.post__comments-title {
+  margin: 20px 0 0;
+  text-align: center;
+}

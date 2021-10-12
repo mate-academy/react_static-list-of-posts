@@ -1,0 +1,22 @@
+.post {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 500px;
+
+  padding: 10px;
+
+  border: 5px solid #666;
+  border-radius: 10px;
+}
+
+.post__title {
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.post__body {
+  margin: 0;
+  margin-bottom: 15px;
+}

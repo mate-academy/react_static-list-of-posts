@@ -1,0 +1,19 @@
+.post__comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__comment-title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.post__comment-body {
+  font-size: 14px;
+  text-align: center;
+}
+
+.post__comment-email {
+  color: #666;
+  text-align: center;
+}
