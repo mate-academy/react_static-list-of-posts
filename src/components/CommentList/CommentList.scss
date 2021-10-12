@@ -1,0 +1,20 @@
+.Comments {
+  padding: 20px 0;
+  background-color: rgba(152, 202, 51, 0.6);
+  border: rgb(152, 202, 51) solid 1px;
+  border-radius: 5px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    padding: 0;
+  }
+
+  &__item {
+    margin: 10px;
+    list-style: none;
+    border-bottom: olive solid 1px;
+  }
+}

@@ -1,0 +1,19 @@
+.Comment {
+  padding-bottom: 10px;
+
+  &__author {
+    margin-bottom: 5px;
+  }
+
+  &__mail {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    padding: 5px;
+    background-color: lightyellow;
+    opacity: 0.8;
+    border: none solid 1px;
+    border-radius: 10px;
+  }
+}
