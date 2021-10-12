@@ -1,1 +1,56 @@
-// styles go here
+.posts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  &__item {
+    width: 30%;
+    margin: 15px;
+
+    &-title {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &-body {
+      text-align: justify;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.user-info {
+  font-style: italic;
+  text-align: right;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid black;
+
+}
+
+.comment-info {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  margin-bottom: 10px;
+
+  &--email {
+    font-style: italic;
+    text-align: right;
+    padding: 10px 0;
+    margin-bottom: 5px;
+  }
+
+  &--title {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+}
