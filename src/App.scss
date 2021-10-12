@@ -1,1 +1,62 @@
-// styles go here
+.app {
+  margin: 0 auto;
+  width: 70vw;
+  padding: 50px;
+  background-color: #82c4e59c;
+  border-radius: 20px;
+}
+
+.list {
+  margin: 0;
+  padding: 10px;
+  background-color: #0088cc27;
+  border-radius: 5px;
+
+  &__item {
+    list-style-type: none;
+  }
+}
+
+.post-title {
+  color: #fff;
+
+  &::before {
+    content: "Topic: ";
+    color: #ffffff9f;
+  }
+}
+
+.post-body {
+  padding: 10px;
+  background-color: #ffffff9f;
+  border-radius: 10px;
+}
+
+.post-user {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+
+.comments-list {
+  padding: 10px;
+  background-color: #ffffff9f;
+  border-radius: 10px;
+  list-style-type: none;
+}
+
+.comment {
+  padding: 4px;
+  background-color: #ffffff27;
+  border-bottom: solid 1px black;
+}
+
+.comment-from {
+  color: #808080;
+}
+
+.comment-body {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
