@@ -1,1 +1,35 @@
-// styles go here
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commentList {
+  width: 500px;
+  list-style: none;
+
+  &__Item {
+    padding: 10px;
+    background-color: #ffb;
+    margin-bottom: 10px;
+  }
+}
+
+.postTitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 800px;
+
+  &__Item {
+    background-color: #cff;
+    margin-bottom: 20px;
+    padding: 30px;
+  }
+}
