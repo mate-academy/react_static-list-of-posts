@@ -1,0 +1,22 @@
+.post-container {
+  border: 2px solid #6495ed;
+  border-radius: 8px;
+
+  padding: 20px;
+
+  margin-bottom: 100px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #6495ed;
+  border-radius: 8px;
+
+  padding: 10px 20px;
+  row-gap: 10px;
+
+  &__title {
+    font-weight: 700;
+  }
+}
