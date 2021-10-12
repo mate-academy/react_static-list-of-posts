@@ -1,1 +1,18 @@
 // styles go here
+
+.App {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+  rgba(9,9,121,1) 16%, rgba(0,212,255,1) 100%);
+  
+  color: #fff;
+
+  &__title {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
