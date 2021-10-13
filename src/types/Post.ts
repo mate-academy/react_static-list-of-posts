@@ -2,9 +2,10 @@ import { Comment } from './Comment';
 import { User } from './User';
 
 export interface Post {
-  userName: User[];
-  commentText: Comment[];
-  body: string;
-  title: string;
+  userId: number;
   id: number;
+  title: string;
+  body: string;
+  userName: User[];
+  comments: Comment[];
 }

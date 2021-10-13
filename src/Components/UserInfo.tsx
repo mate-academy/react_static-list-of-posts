@@ -1,21 +1,19 @@
 import React from 'react';
-import { Post } from '../types/Post';
-import { CommentList } from './CommentList';
+import { User } from '../types/User';
 
-export type Props = {
-  post: Post;
+type Props = {
+  user: User[];
 };
 
-export const UserInfo: React.FC<Props> = ({ post }) => (
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="post__user user">
     <div className="user__name">
       <strong>Name: </strong>
-      {post.userName[0].name}
+      {user[0].name}
     </div>
     <div className="user__email">
       <strong>E-mail: </strong>
-      {post.userName[0].email}
+      {user[0].email}
     </div>
-    <CommentList {...post} />
   </div>
 );

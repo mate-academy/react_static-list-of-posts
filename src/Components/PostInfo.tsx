@@ -1,5 +1,11 @@
 import React from 'react';
-import { Props, UserInfo } from './UserInfo';
+import { Post } from '../types/Post';
+import { CommentList } from './CommentList';
+import { UserInfo } from './UserInfo';
+
+type Props = {
+  post: Post;
+};
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
@@ -9,6 +15,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     <div className="post__body">
       {post.body}
     </div>
-    <UserInfo post={post} />
+    <UserInfo user={post.userName} />
+    <CommentList {...post} />
   </>
 );

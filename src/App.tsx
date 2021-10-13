@@ -5,13 +5,15 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './Components/PostList';
+import { Post } from './types/Post';
+import { User } from './types/User';
 
 function capitalize(string: string) {
   return `${string.charAt(0).toUpperCase() + string.slice(1)}.`;
 }
 
-const preparedPosts = posts.map(item => {
-  const user = users.filter(person => item.userId === person.id);
+const preparedPosts: Post[] = posts.map(item => {
+  const user: User[] = users.filter(person => item.userId === person.id);
   const commentForId = comments.filter(comm => item.id === comm.postId);
   const comment = commentForId.map(comm => ({
     ...comm,
@@ -21,7 +23,7 @@ const preparedPosts = posts.map(item => {
 
   return {
     userName: user,
-    commentText: comment,
+    comments: comment,
     ...item,
     title: capitalize(item.title),
     body: capitalize(item.body),

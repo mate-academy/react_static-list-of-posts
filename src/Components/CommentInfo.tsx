@@ -1,7 +1,12 @@
 import React from 'react';
-import { Comment } from '../types/Comment';
 
-export const CommentInfo: React.FC<Comment> = ({ name, email, body }) => (
+type Props = {
+  name: string;
+  email: string;
+  body: string;
+};
+
+export const CommentInfo: React.FC<Props> = ({ name, email, body }) => (
   <li className="comments__field">
     <div className="comments__email">
       <strong>From: </strong>
