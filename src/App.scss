@@ -1,1 +1,50 @@
-// styles go here
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.postList {
+  list-style: none;
+
+  &__item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(40, 51, 202);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__post-author {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 30px;
+  }
+
+  &__commentList {
+    list-style: none;
+
+    &__name {
+    
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &__text {
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    &__email {
+      margin-bottom: 40px;
+    }
+  }
+}
