@@ -1,11 +1,11 @@
 export interface Comment {
-    postId: number;
-    id: number;
-    name: string;
-    email: string;
-    body: string;
-  }
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+}
 
-  export type CommentInfoProps = {
-    comments: Comment[];
-  }
+export type CommentInfoProps = {
+  comments: Comment[];
+};

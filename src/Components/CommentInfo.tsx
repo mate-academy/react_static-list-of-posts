@@ -13,20 +13,32 @@ export const CommentInfo: React.FC<CommentInfoProps> = ({ comments }) => (
       </thead>
       <tbody>
         <tr>
-          <td className="comments">{comments.map(
-            comment => <p className="comment-info">
-              {comment.name}</p>
-          )}
+          <td className="comments">
+            {comments.map(
+              comment => (
+                <p className="comment-info">
+                  {comment.name}
+                </p>
+              ),
+            )}
           </td>
-          <td className="comments body">{comments.map(
-            comment => <p className="comment-info">
-              {comment.body}</p>
-          )}
+          <td className="comments body">
+            {comments.map(
+              comment => (
+                <p className="comment-info">
+                  {comment.body}
+                </p>
+              ),
+            )}
           </td>
-          <td className="comments email">{comments.map(
-            comment => <p className="comment-info">
-              {comment.email}</p>
-          )}
+          <td className="comments email">
+            {comments.map(
+              comment => (
+                <p className="comment-info">
+                  {comment.email}
+                </p>
+              ),
+            )}
           </td>
         </tr>
       </tbody>

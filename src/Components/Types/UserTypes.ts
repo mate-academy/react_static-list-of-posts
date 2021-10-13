@@ -6,4 +6,4 @@ export interface User {
 
 export type UserInfoProps = {
   user: User;
-}
+};
