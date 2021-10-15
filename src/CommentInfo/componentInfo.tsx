@@ -2,10 +2,10 @@ import React from 'react';
 import { Comments } from '../types/Post';
 import './compInfo.scss';
 
-type Props5 = {
+type Props = {
   comment: Comments;
 };
-export const CommentInfo: React.FC<Props5> = ({ comment }) => {
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const {
     name, email, body,
   } = comment;

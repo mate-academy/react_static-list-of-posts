@@ -4,13 +4,13 @@ import { UserInfo } from '../UserInfo/userInfo';
 import { Post } from '../types/Post';
 import './postInfo.scss';
 
-type Props2 = {
-  posts2: Post;
+type Props = {
+  posts: Post;
 };
-export const PostInfo: React.FC<Props2> = ({ posts2 }) => {
+export const PostInfo: React.FC<Props> = ({ posts }) => {
   const {
     title, body, user, comments,
-  } = posts2;
+  } = posts;
 
   return (
     <>
@@ -24,7 +24,7 @@ export const PostInfo: React.FC<Props2> = ({ posts2 }) => {
           {body}
         </div>
         <div>{user && <UserInfo user={user} />}</div>
-        <div>{comments && <CommentList comments={comments} />}</div>
+        <div>{<CommentList comments={comments} />}</div>
       </div>
     </>
   );
