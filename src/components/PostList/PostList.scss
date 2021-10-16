@@ -1,0 +1,11 @@
+.post {
+
+  h2 {
+    text-align: center;
+    margin: 20px;
+  }
+  &__body {
+    font-size: 18px;
+    margin: 30px 20px;
+  }
+}
