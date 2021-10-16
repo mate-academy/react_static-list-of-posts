@@ -1,1 +1,19 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: #eee;
+}
+
+.title {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
