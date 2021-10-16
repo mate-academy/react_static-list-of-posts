@@ -7,8 +7,7 @@ type Props = {
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>
-    <p>{comment.name}</p>
+    <p className="title">{`${comment.name} (${comment.email})`}</p>
     <p>{comment.body}</p>
-    <p>{comment.email}</p>
   </>
 );
