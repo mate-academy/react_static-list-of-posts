@@ -1,0 +1,22 @@
+.comment {
+  margin: 0 20px;
+
+  &__name {
+    margin: 0 20px;
+    text-align: right;
+    margin-bottom: 15px;
+    color: blueviolet;
+  }
+
+  &__email {
+    margin: 0 20px;
+    text-align: right;
+    margin-bottom: 15px;
+  }
+
+  &__body {
+    width: 100%;
+    background-color: bisque;
+    border-radius: 5px;
+  }
+}
