@@ -1,4 +1,22 @@
 .Post {
-  border: 1px solid black;
-  margin-bottom: 20px;
+  &__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    color: #000;
+    font-size: 18px;
+  }
+
+  &__content {
+    margin-top: 20px;
+
+    .Post__title {
+      text-decoration: underline;
+      text-transform: lowercase;
+    }
+  }
 }

@@ -12,8 +12,11 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
       {user
         ? (
           <>
-            <span className="User__name">{ user?.name }</span>
-            <span className="User__email">{ user?.email }</span>
+            <div className="User__photo" />
+            <div className="User__data">
+              <div className="User__name">{ user?.name }</div>
+              <div className="User__email">{ user?.email }</div>
+            </div>
           </>
         ) : (
           <span className="User__not-found">User not found</span>

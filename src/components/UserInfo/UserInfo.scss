@@ -1,0 +1,23 @@
+.User {
+  color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+
+  &__photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 10px;
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  &__email {
+    font-size: 14px;
+  }
+}

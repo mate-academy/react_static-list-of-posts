@@ -1,0 +1,10 @@
+.Comment {
+  &__user {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    margin-right: 10px;
+  }
+}
