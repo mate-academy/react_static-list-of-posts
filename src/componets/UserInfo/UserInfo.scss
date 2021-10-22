@@ -1,0 +1,19 @@
+.post__author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.post-author__name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.post-author__email {
+  font-style: italic;
+  font-weight: 500;
+  color: rgb(48, 48, 48);
+}

@@ -1,0 +1,33 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post__item {
+  width: calc(25% - 10px);
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+@media (max-width: 1300px) {
+  .post__item {
+    width: calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .post__item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 700px) {
+  .post__item {
+    width: calc(100%);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
