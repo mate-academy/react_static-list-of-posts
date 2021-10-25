@@ -1,25 +1,25 @@
 import React from 'react';
 import './UserInfo.scss';
-import { IUser } from '../../types/Posts';
+import { User } from '../../types/Posts';
 
 type Props = {
-  user: IUser | null;
+  user: User | null;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
-    <div className="User">
+    <div className="user">
       {user
         ? (
           <>
-            <div className="User__photo" />
-            <div className="User__data">
-              <div className="User__name">{ user?.name }</div>
-              <div className="User__email">{ user?.email }</div>
+            <div className="user__photo" />
+            <div className="user__data">
+              <div className="user__name">{ user?.name }</div>
+              <div className="user__email">{ user?.email }</div>
             </div>
           </>
         ) : (
-          <span className="User__not-found">User not found</span>
+          <span className="user__not-found">User not found</span>
         )}
     </div>
   </>

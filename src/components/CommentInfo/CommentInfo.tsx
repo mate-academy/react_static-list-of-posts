@@ -1,22 +1,20 @@
 import React from 'react';
 import './CommentInfo.scss';
-import { IComment } from '../../types/Posts';
+import { Comment } from '../../types/Posts';
 
 type Props = {
-  comment: IComment;
+  comment: Comment;
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
-  <>
-    <div className="Comment">
-      <div className="Comment__user">
-        <span className="Comment__name">{ comment.name }</span>
-        <span className="Comment__email">{ comment.email }</span>
-      </div>
-
-      <p className="Comment__body">{ comment.body }</p>
-
-      <hr />
+  <div className="comment">
+    <div className="comment__user">
+      <span className="comment__name">{ comment.name }</span>
+      <span className="comment__email">{ comment.email }</span>
     </div>
-  </>
+
+    <p className="comment__body">{ comment.body }</p>
+
+    <hr />
+  </div>
 );

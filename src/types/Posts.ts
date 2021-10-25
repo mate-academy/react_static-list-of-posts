@@ -1,13 +1,13 @@
-export interface IPost {
+export interface Post {
   userId: number;
   id: number;
   title: string;
   body: string;
-  user: IUser | null;
-  commentList: IComment[];
+  user: User | null;
+  commentList: Comment[];
 }
 
-export interface IComment {
+export interface Comment {
   postId: number;
   id: number;
   name: string;
@@ -15,32 +15,32 @@ export interface IComment {
   body: string;
 }
 
-export interface IUser {
+export interface User {
   id: number;
   name: string;
   username: string;
   email: string;
-  address: IUserAddressInfo;
+  address: UserAddressInfo;
   phone: string;
   website: string;
-  company: IUserCompanyInfo;
+  company: UserCompanyInfo;
 }
 
-interface IUserCompanyInfo {
+interface UserCompanyInfo {
   name: string;
   catchPhrase: string;
   bs: string;
 }
 
-interface IUserAddressInfo {
+interface UserAddressInfo {
   street: string;
   suite: string;
   city: string;
   zipcode: string;
-  geo: IGeolocationUserInfo;
+  geo: GeolocationUserInfo;
 }
 
-interface IGeolocationUserInfo {
+interface GeolocationUserInfo {
   lat: string;
   lng: string;
 }
