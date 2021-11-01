@@ -7,9 +7,9 @@ type Props = {
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>
     <div>
-      {`${comment.name} `}
+      {comment.name}
       <span className="text-italic">
-        <b>Email: </b>
+        <b> Email: </b>
         {comment.email}
       </span>
     </div>

@@ -2,19 +2,16 @@ import React from 'react';
 
 import './App.scss';
 
-import getPosts from './api/posts';
-import getComments from './api/comments';
-import getUsers from './api/users';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
-const preparedPosts = getPosts.map(post => {
-  const user = getUsers.find(({ id }) => id === post.userId) || null;
-  const comments = getComments.filter(comment => comment.postId === post.id);
-
+const preparedPosts = postsFromServer.map(post => {
   return {
     ...post,
-    user,
-    comments,
+    user: usersFromServer.find(({ id }) => id === post.userId) || null,
+    comments: commentsFromServer.filter(comment => comment.postId === post.id),
   };
 });
 
