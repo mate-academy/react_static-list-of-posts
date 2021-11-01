@@ -1,0 +1,18 @@
+.post {
+  max-width: 700px;
+  border: 2px solid skyblue;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 15px;
+
+  &-title {
+    font-size: 22px;
+    text-align: center;
+    color: rgb(32, 104, 133);
+    border-bottom: 2px solid rgb(32, 104, 133);
+  }
+
+  &-body {
+    color: rgb(7, 132, 182);
+  }
+}
