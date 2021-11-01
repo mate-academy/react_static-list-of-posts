@@ -1,0 +1,11 @@
+.comment {
+  &-title {
+    display: block;
+    width: max-content;
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: -6px;
+    border-bottom: 1px solid rgb(17, 167, 92);
+  }
+}
