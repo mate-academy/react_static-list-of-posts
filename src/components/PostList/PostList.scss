@@ -1,5 +1,5 @@
 .post {
-  max-width: 600px;
+  max-width: 700px;
   border: 2px solid skyblue;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -14,14 +14,5 @@
 
   &-body {
     color: rgb(7, 132, 182);
-  }
-
-  &-userInfo {
-    margin-bottom: 20px;
-    color: rgb(7, 132, 182);
-  }
-
-  &-comments {
-    color: rgb(17, 167, 92);
   }
 }

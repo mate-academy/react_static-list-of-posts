@@ -1,11 +1,21 @@
 .comment {
-  &-title {
-    display: block;
-    width: max-content;
-    font-size: 18px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: -6px;
-    border-bottom: 1px solid rgb(17, 167, 92);
+  color: rgb(17, 167, 92);
+
+  &-post {
+    margin-bottom: 20px;
+
+    &--title {
+      display: block;
+      width: max-content;
+      font-size: 18px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: -6px;
+      border-bottom: 1px solid rgb(17, 167, 92);
+    }
+  }
+
+  &-post:last-child {
+    margin-bottom: 0;
   }
 }
