@@ -5,7 +5,6 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-// import { UserPreferences } from 'typescript';
 import { PostList } from './components/PostList';
 
 const preparedPosts = posts.map(post => (
