@@ -1,1 +1,13 @@
-// styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #caf0e4;
+
+  &__title {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
