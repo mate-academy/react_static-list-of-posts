@@ -1,0 +1,11 @@
+.post {
+  background-color: rgb(219, 73, 73);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+
+  &__user-info {
+    background-color: orange;
+    border-radius: 10px;
+  }
+}
