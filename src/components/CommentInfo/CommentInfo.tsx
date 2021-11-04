@@ -1,13 +1,12 @@
 import React from 'react';
 import './CommentInfo.scss';
+import { Comment } from '../../typedefs';
 
 type Props = {
-  name:string,
-  body:string,
-  email:string,
+  comment: Comment,
 };
 
-export const CommentInfo:React.FC<Props> = ({ name, body, email }) => {
+export const CommentInfo:React.FC<Props> = ({ comment }) => {
   return (
     <li className="comments--list__item">
       <p>
@@ -15,21 +14,21 @@ export const CommentInfo:React.FC<Props> = ({ name, body, email }) => {
           Name:
           &nbsp;
         </strong>
-        {name}
+        {comment.name}
       </p>
       <p>
         <strong>
           Comment:
           &nbsp;
         </strong>
-        {body}
+        {comment.body}
       </p>
       <p>
         <strong>
           Email:
           &nbsp;
         </strong>
-        {email}
+        {comment.email}
       </p>
     </li>
   );

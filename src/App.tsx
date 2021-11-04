@@ -12,22 +12,20 @@ import {
   Comment,
   Post,
   Prepared,
-} from './react-app-env';
+} from './typedefs';
 
 function getPreparedPosts(
   usersList: User[],
   commentList: Comment[],
   postsList: Post[],
 ):Prepared[] {
-  const result = postsList.map((post:Post) => {
+  return postsList.map((post:Post) => {
     return {
       ...post,
       user: usersList.find((user: User) => user.id === post.userId),
       comments: commentList.filter((comment: Comment) => comment.postId === post.id),
     };
   });
-
-  return result;
 }
 
 const preparedPosts = getPreparedPosts(users, comments, posts);

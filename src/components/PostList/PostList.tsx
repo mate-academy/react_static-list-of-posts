@@ -1,7 +1,7 @@
 import React from 'react';
 import './PostList.scss';
 import PostInfo from '../PostInfo';
-import { Prepared } from '../../react-app-env';
+import { Prepared } from '../../typedefs';
 
 type Props = {
   preparedPosts: Prepared[],

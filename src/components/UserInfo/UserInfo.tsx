@@ -1,16 +1,16 @@
 import React from 'react';
+import { User } from '../../typedefs';
 import './UserInfo.scss';
 
 type Props = {
-  name: string,
-  email: string,
+  user: User,
 };
 
-export const UserInfo: React.FC<Props> = ({ name, email }) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <div>
-      <p>{name}</p>
-      <p>{email}</p>
+      <p>{user.name}</p>
+      <p>{user.email}</p>
     </div>
   );
 };

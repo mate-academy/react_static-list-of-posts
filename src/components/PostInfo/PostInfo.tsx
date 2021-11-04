@@ -1,11 +1,11 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
-import { Prepared } from '../../react-app-env';
+import { Prepared } from '../../typedefs';
 import CommentList from '../CommentList';
 
 type Props = {
-  post: Prepared;
+  post: Prepared,
 };
 
 export const PostInfo:React.FC<Props> = ({ post }) => {
@@ -15,7 +15,7 @@ export const PostInfo:React.FC<Props> = ({ post }) => {
       <p>{post.title}</p>
       {post.user
         ? (
-          <UserInfo {...post.user} />
+          <UserInfo user={post.user} />
         )
         : null}
       <CommentList comments={post.comments} />
