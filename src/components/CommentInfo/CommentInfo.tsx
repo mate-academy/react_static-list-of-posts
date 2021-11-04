@@ -3,14 +3,14 @@ import { Comment } from '../../types/Comment';
 
 import './CommentInfo.scss';
 
-export const CommentInfo:React.FC<Comment> = ({ ...comment }) => (
+export const CommentInfo:React.FC<Comment> = ({ name, email, body }) => (
   <li className="commentInfo" key="comment.id">
     <strong>
-      {comment.name}
+      {name}
     </strong>
-    {` (${comment.email})`}
+    {` (${email})`}
     <p>
-      {comment.body}
+      {body}
     </p>
   </li>
 );
