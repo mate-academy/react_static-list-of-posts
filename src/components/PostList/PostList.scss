@@ -1,0 +1,18 @@
+.list {
+  list-style: none;
+  
+  &__item {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    &--title {
+      font-size: 20px;
+    }
+    &--title::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+
+}
