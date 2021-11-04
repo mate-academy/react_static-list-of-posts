@@ -5,26 +5,35 @@ import { Post } from '../../types/Post';
 
 import './PostInfo.scss';
 
-export const PostInfo: React.FC<Post> = ({
-  title, user, body, comments,
-}) => (
-  <li className="postInfo">
-    <h2>
-      {title}
-    </h2>
-    <h3>
-      { (user)
-        ? (<UserInfo {...user} />)
-        : null }
-    </h3>
+type Props = {
+  post: Post,
+};
 
-    <p>
-      {body}
-    </p>
+export const PostInfo: React.FC<Props> = (props) => {
+  const { post } = props;
+  const {
+    title, user, body, comments,
+  } = post;
 
-    { (comments)
-      ? comments.map(comment => (
-        <CommentInfo {...comment} />))
-      : 'Be the first to comment!'}
-  </li>
-);
+  return (
+    <li className="postInfo">
+      <h2>
+        {title}
+      </h2>
+      <h3>
+        { (user)
+          ? (<UserInfo userInfo={user} />)
+          : null }
+      </h3>
+
+      <p>
+        {body}
+      </p>
+
+      { (comments)
+        ? comments.map(comment => (
+          <CommentInfo commentInfo={comment} />))
+        : 'Be the first to comment!'}
+    </li>
+  );
+};

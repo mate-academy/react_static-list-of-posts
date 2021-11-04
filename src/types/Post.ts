@@ -1,4 +1,4 @@
-import { User } from './User';
+import { User } from './typedefs';
 import { Comment } from './Comment';
 
 export interface Post {
