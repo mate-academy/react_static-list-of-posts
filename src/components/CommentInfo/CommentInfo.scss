@@ -1,0 +1,20 @@
+.comment {
+  margin-bottom: 10px;
+
+  &__author {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    padding: 5px 10px;
+    border: 2px solid #a0a0a0;
+    border-radius: 12px;
+    background-color: #fff1f1;
+  }
+
+  &__contact {
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+  }
+}

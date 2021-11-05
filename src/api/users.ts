@@ -3,9 +3,9 @@
 const users = [
   {
     id: 1,
-    name: 'Leanne Graham',
-    username: 'Bret',
-    email: 'Sincere@april.biz',
+    name: 'Угадай, кто автор?',
+    username: 'Bart',
+    email: 'bizzzy0@gmail.com',
     address: {
       street: 'Kulas Light',
       suite: 'Apt. 556',
