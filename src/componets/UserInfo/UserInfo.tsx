@@ -1,12 +1,14 @@
 import { User } from '../../types/typesdef';
 
+import './UserInfo.scss';
+
 type Props = {
   author: User
 };
 
 export const UserInfo: React.FC<Props> = ({ author }) => (
-  <div>
-    <span>{`Author: ${author.name}`}</span>
-    <span>{`Email: ${author.email}`}</span>
+  <div className="UserInfo">
+    <div>{`Author: ${author.name}`}</div>
+    <div>{`Email: ${author.email}`}</div>
   </div>
 );

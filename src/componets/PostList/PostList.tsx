@@ -1,5 +1,6 @@
 import { PostFull } from '../../types/typesdef';
 import { PostInfo } from '../PostInfo/PostInfo';
+import './PostList.scss';
 
 type Props = {
   posts: PostFull[]
@@ -7,9 +8,9 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ posts }) => {
   return (
-    <ul>
+    <ul className="PostList">
       {posts.map(post => (
-        <li key={post.id}>
+        <li className="PostList__item" key={post.id}>
           <PostInfo post={post} />
         </li>
       ))}

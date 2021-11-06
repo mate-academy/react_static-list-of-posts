@@ -1,0 +1,20 @@
+.PostList {
+  list-style: none;
+  width: 60vw;
+
+  &__item {
+    margin-bottom: 80px;
+    padding: 10px 20px;
+
+    border-radius: 10px;
+    background-color: #e8f6ef;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px,
+      rgba(0, 0, 0, 0.23) 0 3px 6px;
+    transition: all 0.5s;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px,
+        rgba(0, 0, 0, 0.22) 0 15px 12px;
+    }
+  }
+}

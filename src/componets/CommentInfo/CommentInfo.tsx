@@ -1,4 +1,5 @@
 import { Comment } from '../../types/typesdef';
+import './CommentInfo.scss';
 
 type Props = {
   comment: Comment
@@ -12,10 +13,10 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
   } = comment;
 
   return (
-    <>
+    <div className="comment">
       <h4>{name}</h4>
       <p>{body}</p>
-      <div>{`Email: ${email}`}</div>
-    </>
+      <div className="comment__user-email">{`Email: ${email}`}</div>
+    </div>
   );
 };

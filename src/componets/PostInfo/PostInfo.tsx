@@ -2,6 +2,8 @@ import { PostFull } from '../../types/typesdef';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
+import './PostInfo.scss';
+
 type Props = {
   post: PostFull
 };
@@ -16,10 +18,10 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   } = post;
 
   return (
-    <article>
-      <h2>{`Article #${id}. ${title}`}</h2>
+    <article className="PostInfo">
+      <h2 className="PostInfo__title">{`Article #${id}. ${title}`}</h2>
 
-      <p>{body}</p>
+      <p className="PostInfo__text">{body}</p>
 
       {author && (
         <UserInfo author={author} />
