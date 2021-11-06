@@ -1,0 +1,20 @@
+.PostInfo {
+  font-size: 12px;
+  width: 600px;
+  border-radius: 10px;
+  background-color: #54c6be	;
+  margin-bottom: 20px;
+  
+  &__title {
+    padding: 10px;
+    margin: 0px;
+    font-size: 16px;
+    color: #e5243f;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-style: oblique;
+    padding-left: 10px;
+  }
+}
