@@ -1,0 +1,22 @@
+.Post {
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 18px;
+    padding: 12px;
+    background-color: lightgrey;
+    border-radius: 10px;
+  }
+
+  &__creds {
+    text-align: right;
+    font-size: 14px;
+  }
+
+  &__author {
+    font-style: italic;
+  }
+}
