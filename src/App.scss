@@ -1,1 +1,40 @@
-// styles go here
+.App {
+  text-align: center;
+}
+
+.post {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+}
