@@ -1,0 +1,15 @@
+.post {
+  &__item {
+    list-style-type: none;
+    border: 2px solid bisque;
+    margin: 10px;
+    padding: 10px;
+    background-color: bisque;
+    border-radius: 5px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: darkkhaki;
+  }
+}
