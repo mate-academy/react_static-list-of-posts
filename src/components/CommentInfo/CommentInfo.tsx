@@ -6,10 +6,14 @@ type Props = {
   comment: CommentType;
 };
 
-export const CommentInfo:React.FC <Props> = ({ comment }) => (
-  <li className="CommentInfo">
-    <p>{comment.name}</p>
-    <p>{comment.body}</p>
-    <p>{comment.email}</p>
-  </li>
-);
+export const CommentInfo:React.FC <Props> = ({ comment }) => {
+  const { name, body, email } = comment;
+
+  return (
+    <li className="CommentInfo">
+      <p>{name}</p>
+      <p>{body}</p>
+      <p>{email}</p>
+    </li>
+  );
+};
