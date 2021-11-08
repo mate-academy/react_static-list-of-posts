@@ -1,1 +1,13 @@
-// styles go here
+body {
+  background-color: #f65c51;
+}
+
+.App {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  &__title {
+    text-align: center;
+    color: #e5e5e5;
+  }
+}
