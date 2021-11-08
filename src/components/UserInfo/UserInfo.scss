@@ -1,0 +1,12 @@
+.user {
+  margin-bottom: 20px;
+
+  &__link {
+    align-self: flex-end;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}

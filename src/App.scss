@@ -1,1 +1,9 @@
-// styles go here
+.link {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(25, 25, 25);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
