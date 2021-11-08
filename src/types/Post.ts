@@ -1,10 +1,10 @@
-import { UserType } from './User';
-import { CommentType } from './Comment';
+import { User } from './User';
+import { Comment } from './Comment';
 
-export interface PostType {
+export interface Post {
   id: number;
   title: string;
   body: string;
-  user: UserType | null;
-  comments: CommentType[] | null;
+  user: User | null;
+  comments: Comment[] | null;
 }
