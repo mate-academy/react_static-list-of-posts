@@ -12,7 +12,7 @@ interface Props {
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    title, body, user, userComments,
+    title, body, user, comments,
   } = post;
 
   return (
@@ -20,7 +20,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <h2 className="PostInfo__title">{title}</h2>
       <article className="PostInfo__description">{body}</article>
       {user && <UserInfo user={user} />}
-      {userComments && <CommentList comments={userComments} />}
+      {comments.length > 0 && <CommentList comments={comments} />}
     </div>
   );
 };

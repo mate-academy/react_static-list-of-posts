@@ -6,12 +6,11 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const preparedPosts = posts.map(post => {
-  const user = users.find(person => person.id === post.userId) || null;
-  const userComments = comments.filter(comment => comment.postId === post.id);
-
-  return { ...post, user, userComments };
-});
+const preparedPosts = posts.map(post => ({
+  ...post,
+  user: users.find(person => person.id === post.userId) || null,
+  comments: comments.filter(comment => comment.postId === post.id),
+}));
 
 export const App: React.FC = () => (
   <div className="App">
