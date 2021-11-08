@@ -1,0 +1,14 @@
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  
+  &__name {
+    margin: 5px;
+  }
+
+  &__email {
+    margin: 5px;
+  }
+}
