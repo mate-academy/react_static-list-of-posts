@@ -1,7 +1,7 @@
-import { UserType } from '../types';
+import { User } from '../types';
 
 export type Props = {
-  user: UserType;
+  user: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
@@ -9,13 +9,9 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <div className="userInfo">
-      Written by
-      {' '}
-      {name}
+      {`Written by ${name}`}
       <br />
-      Contact info:
-      {' '}
-      {email}
+      {`Contact info:${email}`}
     </div>
   );
 };

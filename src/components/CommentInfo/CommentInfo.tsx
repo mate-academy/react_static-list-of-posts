@@ -13,7 +13,7 @@ export const CommentInfo: React.FC<Props> = ({ comm }) => {
         <img
           className="commentInfo__avatar"
           src="https://i.pinimg.com/564x/5f/8c/8b/5f8c8baac6245d7ee4087753bdedc113.jpg"
-          alt=""
+          alt="avatar of the user"
         />
         <div className="commentInfo__email">
           user email:

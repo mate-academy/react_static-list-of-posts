@@ -6,7 +6,7 @@ export interface Comment {
   body: string,
 }
 
-export interface UserType {
+export interface User {
   id: number,
   name: string,
   username: string,
@@ -38,6 +38,6 @@ export interface Post {
 }
 
 export interface PrepPost extends Post {
-  user: UserType | null,
-  prepComments: Comment[] | null,
+  user: User | null,
+  preparedComments: Comment[] | null,
 }

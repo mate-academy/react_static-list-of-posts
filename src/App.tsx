@@ -13,16 +13,16 @@ import comments from './api/comments';
 import users from './api/users';
 
 const preparedPosts = [...posts].map(post => {
-  const user = [...users].find(userkk => userkk.id === post.userId) || null;
-  const prepComments = [...comments].filter(comment => comment.postId === post.id) || null;
+  const foundUser = users.find(user => user.id === post.userId) || null;
+  const preparedComments = comments.filter(comment => comment.postId === post.id) || null;
 
-  return { user, prepComments, ...post };
+  return { user: foundUser, preparedComments, ...post };
 });
 
 const App: React.FC = () => (
   <div className="App">
     <div className="container">
-      <PostList prepPosts={preparedPosts} />
+      <PostList posts={preparedPosts} />
     </div>
   </div>
 );

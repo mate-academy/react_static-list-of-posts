@@ -3,23 +3,25 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
 export interface Props {
-  prepPost: PrepPost;
+  post: PrepPost;
 }
 
-export const PostInfo: React.FC<Props> = ({ prepPost }) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    title, body, user, prepComments,
-  } = prepPost;
+    title, body, user, preparedComments,
+  } = post;
 
   return (
     <div className="postInfo">
       <article className="postInfo__article">
         <h1>{title}</h1>
         <p>{body}</p>
-        <div className="postInfo__article-author">{user && <UserInfo user={user} />}</div>
+        <div className="postInfo__article-author">
+          {user && <UserInfo user={user} />}
+        </div>
       </article>
       <div className="postInfo__comments">
-        {prepComments && <CommentList prepComments={prepComments} />}
+        {preparedComments && <CommentList preparedComments={preparedComments} />}
       </div>
     </div>
   );
