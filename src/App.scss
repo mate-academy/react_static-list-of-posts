@@ -1,1 +1,13 @@
-// styles go here
+body {
+  margin: 0;
+}
+
+.App {
+  background-color: lightblue;
+
+  &__title {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+  }
+}

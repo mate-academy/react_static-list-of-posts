@@ -1,0 +1,16 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+
+  gap: 50px;
+  width: 50%;
+  margin: 0 auto;
+
+  &__item {
+    background-color: lightskyblue;
+    padding: 0 30px 30px;
+    border-radius: 50px;
+  }
+}

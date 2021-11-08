@@ -1,0 +1,36 @@
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  border-radius: 50px;
+  background-color: lightgreen;
+
+  transition: 300ms;
+
+  &:hover {
+    background-color: lightyellow;
+    color: mediumblue;
+  }
+
+  &__title {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0 0;
+
+    color: darkgreen;
+  }
+
+  &__email {
+    font-style: italic;
+    font-size: 18px;
+    margin: 20px 0 0;
+  }
+
+  &__text {
+    border-top: 3px solid darkgreen;
+    padding-top: 20px;
+    font-size: 18px;
+  }
+}
