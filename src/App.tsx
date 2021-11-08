@@ -11,14 +11,14 @@ import {
   User,
   Comment,
   Post,
-  Prepared,
+  PreparedPosts,
 } from './typedefs';
 
-function getPreparedPosts(
+function getPreparedPostsPosts(
   usersList: User[],
   commentList: Comment[],
   postsList: Post[],
-):Prepared[] {
+):PreparedPosts[] {
   return postsList.map((post:Post) => {
     return {
       ...post,
@@ -28,12 +28,12 @@ function getPreparedPosts(
   });
 }
 
-const preparedPosts = getPreparedPosts(users, comments, posts);
+const PreparedPostsPosts = getPreparedPostsPosts(users, comments, posts);
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={PreparedPostsPosts} />
   </div>
 );
 

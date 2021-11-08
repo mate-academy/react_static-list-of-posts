@@ -1,11 +1,11 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
-import { Prepared } from '../../typedefs';
+import { PreparedPosts } from '../../typedefs';
 import CommentList from '../CommentList';
 
 type Props = {
-  post: Prepared,
+  post: PreparedPosts,
 };
 
 export const PostInfo:React.FC<Props> = ({ post }) => {

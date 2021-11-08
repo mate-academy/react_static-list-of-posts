@@ -9,9 +9,10 @@
 
     &--title {
       font-size: 20px;
-    }
-    &--title::first-letter {
-      text-transform: uppercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
 
     &--body::first-letter {
