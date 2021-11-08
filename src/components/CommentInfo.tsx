@@ -1,11 +1,11 @@
 import React from 'react';
-import { Comments } from '../type/Post';
+import { Comment } from '../type/Post';
 
-type CommentInfoType = {
-  comment: Comments
-};
+interface Props {
+  comment: Comment
+}
 
-export const CommentInfo:React.FC<CommentInfoType> = ({ comment }) => (
+export const CommentInfo:React.FC<Props> = ({ comment }) => (
   <>
     {`Коментує: ${comment.name}:`}
     <div>{`Email: ${comment.email}`}</div>

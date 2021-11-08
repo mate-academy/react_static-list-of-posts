@@ -1,11 +1,11 @@
 import React from 'react';
-import { Users } from '../type/Post';
+import { User } from '../type/Post';
 
-type UserInfoType = {
-  user: Users | undefined,
-};
+interface Props {
+  user: User,
+}
 
-export const UserInfo:React.FC<UserInfoType> = ({ user }) => (
+export const UserInfo:React.FC<Props> = ({ user }) => (
   <>
     <div>{`Автор Публікації: ${user?.name}`}</div>
     <div>{`Email: ${user?.email}`}</div>

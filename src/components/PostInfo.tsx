@@ -1,10 +1,10 @@
 import React from 'react';
-import { Posts } from '../type/Post';
+import { Post } from '../type/Post';
 import { UserInfo } from './UserInfo';
 import { CommentList } from './CommentList';
 
 type PostInfoType = {
-  post: Posts
+  post: Post
 };
 
 export const PostInfo:React.FC<PostInfoType> = ({ post }) => (
@@ -13,7 +13,7 @@ export const PostInfo:React.FC<PostInfoType> = ({ post }) => (
       {`Стаття: №${post.id} ${post.title}`}
     </h3>
     <h4>{`Опис: ${post?.body}`}</h4>
-    <UserInfo user={post.user} />
-    <CommentList comments={post.comments} />
+    {post.user && <UserInfo user={post.user} />}
+    {post.comments && <CommentList comments={post.comments} />}
   </>
 );

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Comments } from '../type/Post';
+import { Comment } from '../type/Post';
 import { CommentInfo } from './CommentInfo';
 
-type CommentListType = {
-  comments: Comments[]
+type Props = {
+  comments: Comment[]
 };
 
-export const CommentList:React.FC<CommentListType> = ({ comments }) => (
+export const CommentList:React.FC<Props> = ({ comments }) => (
   <ul>
     {comments.map(comment => (
       <li key={comment.id} className="comment">

@@ -1,15 +1,15 @@
 import React from 'react';
-import { Posts } from '../type/Post';
+import { Post } from '../type/Post';
 import '../App.scss';
 import { PostInfo } from './PostInfo';
 
-type PostListItem = {
-  postItems: Posts[],
-};
+interface Props {
+  posts: Post[],
+}
 
-export const PostList: React.FC<PostListItem> = ({ postItems }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <ul>
-    {postItems.map(post => (
+    {posts.map(post => (
       <li key={post.id} className="app">
         <PostInfo post={post} />
       </li>

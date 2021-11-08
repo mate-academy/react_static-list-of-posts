@@ -1,13 +1,13 @@
-export interface Posts {
+export interface Post {
   userId: number,
   id: number,
   title: string,
   body: string,
-  user: Users | undefined,
-  comments: Comments[]
+  user: User | undefined,
+  comments: Comment[]
 }
 
-export interface Comments {
+export interface Comment {
   body: string,
   email: string,
   id: number,
@@ -15,7 +15,7 @@ export interface Comments {
   postId: number,
 }
 
-export interface Users {
+export interface User {
   id: number,
   name: string,
   username: string,
