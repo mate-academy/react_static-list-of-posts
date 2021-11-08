@@ -6,9 +6,9 @@ import { Post } from '../../types/Post';
 
 import './PostInfo.scss';
 
-type Props = {
+interface Props {
   post: Post;
-};
+}
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
