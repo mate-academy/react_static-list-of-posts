@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostInfo.scss';
-import { PostType } from '../../types/PostType';
+import { PostType } from '../../types/Post';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
@@ -23,7 +23,7 @@ export const PostInfo: React.FC <Props> = ({ post }) => {
 
       { user
         ? <UserInfo user={user} />
-        : null}
+        : null }
 
       <CommentList comments={comments} />
     </li>

@@ -1,6 +1,5 @@
 import React from 'react';
-import './PostList.scss';
-import { PostType } from '../../types/PostType';
+import { PostType } from '../../types/Post';
 import { PostInfo } from '../PostInfo/PostInfo';
 
 type Props = {

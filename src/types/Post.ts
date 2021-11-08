@@ -1,5 +1,5 @@
-import { UserType } from './UserType';
-import { CommentType } from './CommentType';
+import { UserType } from './User';
+import { CommentType } from './Comment';
 
 export interface PostType {
   id: number;

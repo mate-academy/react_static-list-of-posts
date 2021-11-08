@@ -1,6 +1,6 @@
 import React from 'react';
 import './CommentList.scss';
-import { CommentType } from '../../types/CommentType';
+import { CommentType } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 type Props = {
