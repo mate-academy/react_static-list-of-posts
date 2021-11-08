@@ -21,7 +21,7 @@ export const PostInfo: React.FC<Props> = (props) => {
         {title}
       </h2>
       <h3>
-        { (user)
+        { user
           ? (<UserInfo userInfo={user} />)
           : null }
       </h3>
@@ -30,7 +30,7 @@ export const PostInfo: React.FC<Props> = (props) => {
         {body}
       </p>
 
-      { (comments)
+      { comments.length
         ? comments.map(comment => (
           <CommentInfo commentInfo={comment} />))
         : 'Be the first to comment!'}
