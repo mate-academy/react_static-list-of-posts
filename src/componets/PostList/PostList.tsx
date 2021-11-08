@@ -1,10 +1,10 @@
-import { PostFull } from '../../types/typesdef';
+import { PostWithUserAndComments } from '../../types/typesdef';
 import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
 
-type Props = {
-  posts: PostFull[]
-};
+interface Props {
+  posts: PostWithUserAndComments[]
+}
 
 export const PostList: React.FC<Props> = ({ posts }) => {
   return (

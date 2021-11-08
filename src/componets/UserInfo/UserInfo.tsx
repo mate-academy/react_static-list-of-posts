@@ -2,9 +2,9 @@ import { User } from '../../types/typesdef';
 
 import './UserInfo.scss';
 
-type Props = {
+interface Props {
   author: User
-};
+}
 
 export const UserInfo: React.FC<Props> = ({ author }) => (
   <div className="UserInfo">

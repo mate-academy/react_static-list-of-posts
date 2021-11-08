@@ -19,7 +19,7 @@ export interface Comment {
   body: string,
 }
 
-export interface PostFull extends Post {
+export interface PostWithUserAndComments extends Post {
   author: User | null,
   comments: Comment[],
 }

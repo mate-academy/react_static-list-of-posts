@@ -1,12 +1,12 @@
-import { PostFull } from '../../types/typesdef';
+import { PostWithUserAndComments } from '../../types/typesdef';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 import './PostInfo.scss';
 
-type Props = {
-  post: PostFull
-};
+interface Props {
+  post: PostWithUserAndComments
+}
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
@@ -28,7 +28,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       )}
 
       <h3>Commets</h3>
-      <CommentList comments={comments} />
+      {comments.length && (<CommentList comments={comments} />)}
     </article>
   );
 };
