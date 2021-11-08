@@ -32,7 +32,7 @@ export const PostInfo: React.FC<Props> = (props) => {
 
       { comments.length
         ? comments.map(comment => (
-          <CommentInfo commentInfo={comment} />))
+          <CommentInfo commentInfo={comment} key={comment.id} />))
         : 'Be the first to comment!'}
     </li>
   );
