@@ -2,7 +2,7 @@ import { PreparedPost } from '../types';
 import { PostInfo } from './Postinfo';
 import './PostList.scss';
 
-type Props = {
+interface Props {
   posts: PreparedPost[],
 };
 
