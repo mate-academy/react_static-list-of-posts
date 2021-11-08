@@ -1,8 +1,8 @@
-import { Comments } from '../types/Post';
+import { Comment } from '../types/Post';
 
-type Props = {
-  comment: Comments
-};
+interface Props {
+  comment: Comment
+}
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>

@@ -1,9 +1,9 @@
 import { Post } from '../types/Post';
 import { PostInfo } from './PostInfo';
 
-type Props = {
+interface Props {
   postItems: Post[];
-};
+}
 
 export const PostList: React.FC<Props> = ({ postItems }) => (
   <ul className="post">

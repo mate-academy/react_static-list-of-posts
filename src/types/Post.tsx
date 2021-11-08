@@ -1,4 +1,4 @@
-export interface Comments {
+export interface Comment {
   postId: number;
   id: number;
   name: string;
@@ -42,5 +42,5 @@ export interface Post {
   title: string;
   body: string;
   user: User | undefined;
-  comments: Comments[];
+  comments: Comment[];
 }
