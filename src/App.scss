@@ -1,1 +1,47 @@
-// styles go here
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+body {
+  padding: 30px;
+  background-color: rgb(243, 200, 107);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(51, 47, 70);
+}
+
+.post {
+  max-width: 1000px;
+  margin: 0 auto 25px;
+  background-color: rgb(240, 186, 70);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.comment {
+  padding: 15px;
+  border-radius: 20px;
+  &_green {
+    background-color: rgb(130, 199, 121);
+  }
+  &_blue {
+    background-color: rgb(124, 137, 207);
+  }
+}
