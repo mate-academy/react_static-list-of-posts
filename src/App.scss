@@ -1,1 +1,18 @@
-// styles go here
+.app {
+  border-radius: 10px;
+  list-style: none;
+  border: 2px solid navy;
+  padding: 15px;
+  margin: 15px;
+  background-color: mintcream;
+}
+
+.comment {
+  list-style: none;
+  border: 1px solid dimgrey;
+  border-radius: 10px;
+  color: blue;
+  background-color: lightgray;
+  padding: 5px;
+  margin: 5px;
+}
