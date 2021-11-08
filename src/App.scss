@@ -1,1 +1,13 @@
-// styles go here
+body {
+  background-color: #b4b5b9;
+}
+
+.App {
+  margin: 0 auto;
+  font-family: sans-serif;
+
+  &__title {
+    text-align: center;
+    color: #f8ee90;
+  }
+}
