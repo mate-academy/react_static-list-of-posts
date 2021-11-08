@@ -20,11 +20,7 @@ export interface Comment {
   body: string,
 };
 
-export interface PreparedPosts {
-  userId: number,
-  id: number,
-  title: string,
-  body: string,
+export interface PreparedPosts extends Post {
   comments: Comment[],
   user?: User,
 }
