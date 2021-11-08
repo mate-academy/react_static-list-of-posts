@@ -14,6 +14,6 @@ export const PostInfo:React.FC<PostInfoType> = ({ post }) => (
     </h3>
     <h4>{`Опис: ${post?.body}`}</h4>
     {post.user && <UserInfo user={post.user} />}
-    {post.comments && <CommentList comments={post.comments} />}
+    {post.comments.length > 0 && <CommentList comments={post.comments} />}
   </>
 );
