@@ -1,0 +1,23 @@
+.comment {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__name {
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+  &__email {
+    font-size: 14px;
+    text-decoration: underline 1px;
+    margin: 0;
+  }
+
+  &__body {
+    font-size: 14px;
+    margin: 0 0 15px;
+  }
+}

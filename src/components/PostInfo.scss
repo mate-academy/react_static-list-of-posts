@@ -1,0 +1,14 @@
+.post {
+  padding: 5px 10px;
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 20px;
+
+  &__title {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  &__body {
+    font-size: 20px;
+  }
+}
