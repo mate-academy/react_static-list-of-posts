@@ -1,0 +1,36 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  gap: 10px;
+
+  &__item {
+    min-width: 300px;
+    max-width: 80%;
+  }
+
+  &__message {
+    background-color: rgba(0, 190, 253, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform ease-in-out 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 2px 2px 2px 1px rgb(50, 65, 65);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 20px;
+  }
+
+  &__title,
+  &__text {
+    max-width: 800px;
+  }
+}

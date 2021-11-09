@@ -1,1 +1,13 @@
-// styles go here
+.App {
+  text-align: center;
+}
+
+.link {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(25, 25, 25);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
