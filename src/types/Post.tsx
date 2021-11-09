@@ -42,5 +42,5 @@ export interface Post {
   title: string;
   body: string;
   user: User | undefined;
-  comments: Comment[] | [];
+  comments: Comment[];
 }
