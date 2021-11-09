@@ -23,9 +23,9 @@ export const PostInfo:React.FC<Props> = ({ post }) => {
         )
         : null}
       <div className="list__item--comment">
-        {post.comments ? 'Comments...' : 'No comments yet'}
+        {post.comments.length ? 'Comments...' : 'No comments yet'}
       </div>
-        {post.comments && <CommentList comments={post.comments} />}
+        {post.comments.length && <CommentList comments={post.comments} />}
     </li>
   );
 };
