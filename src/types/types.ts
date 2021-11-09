@@ -38,6 +38,6 @@ export interface User {
 }
 
 export interface PreparedPost extends Post {
-  user: (User | null);
+  user: User | null;
   comments: Comment[];
 }

@@ -1,4 +1,4 @@
-import { Post } from '../Post/Post';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { Comment } from '../../types/types';
 import './CommentList.scss';
 
@@ -10,7 +10,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="Comments">
     {comments.map(comment => {
       return (
-        <Post
+        <CommentInfo
           classes="Comments"
           body={comment.body}
           name={comment.name}

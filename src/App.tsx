@@ -6,7 +6,7 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 import { PreparedPost } from './types/types';
-import { PostInfo } from './components/PostInfo/PostInfo';
+import { PostList } from './components/PostList/PostList';
 
 const preparedPosts: PreparedPost[] = posts.map(post => {
   return {
@@ -18,9 +18,7 @@ const preparedPosts: PreparedPost[] = posts.map(post => {
 
 const App: React.FC = () => (
   <div className="App">
-    {preparedPosts.map(post => (
-      <PostInfo post={post} />
-    ))}
+    <PostList preparedPosts={preparedPosts} />
   </div>
 );
 

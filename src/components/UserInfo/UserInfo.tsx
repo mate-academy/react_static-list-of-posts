@@ -1,10 +1,10 @@
-import { Post } from '../Post/Post';
+import { Post } from '../BasicPost/BasicPost';
 import { User } from '../../types/types';
 
 type Props = {
   classes: string;
   body: string;
-  user: User | null;
+  user: User;
 };
 
 export const UserPost: React.FC<Props> = ({
@@ -12,12 +12,12 @@ export const UserPost: React.FC<Props> = ({
   body,
   user,
 }) => {
-  return user ? (
+  return (
     <Post
       classes={classes}
       body={body}
       name={user.name}
       email={user.email}
     />
-  ) : (<h2>User not found</h2>);
+  );
 };
