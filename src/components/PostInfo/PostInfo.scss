@@ -1,0 +1,15 @@
+.Post {
+  margin: 1.5em 0;
+  padding: 1em;
+  background-color: azure;
+  border: 2px solid lightcyan;
+  border-radius: 0.5em;
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+  &__body {
+    margin-bottom: 1em;
+  }
+}
