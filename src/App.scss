@@ -1,1 +1,78 @@
-// styles go here
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: burlywood;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.App__title {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.posts {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__item {
+    padding: 30px 20px;
+    margin-bottom: 50px;
+    border: 3px solid palegreen;
+    border-radius: 24px;
+    background: bisque;
+    &-title {
+      margin-bottom: 24px;
+    }
+    &-body {
+      margin-bottom: 24px;
+    }
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    &-name {
+      margin-right: 24px;
+    }
+    &-email {
+      color: blueviolet;
+    }
+  }
+}
+
+.comments {
+  background: khaki;
+  width: 800px;
+  margin-left: auto;
+  padding: 20px 30px;
+  border: 3px solid blueviolet;
+  border-radius: 30px;
+  &__item {
+    margin-bottom: 24px;
+    border-bottom: 2px solid red;
+  }
+  &__author {
+    &-email {
+      color: green;
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+  &__body {
+    margin-bottom: 16px;
+  }
+}
