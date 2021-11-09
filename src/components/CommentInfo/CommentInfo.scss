@@ -1,0 +1,22 @@
+.commentInfo {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &__avatar {
+    height: 80px;
+    margin-left: 20px;
+  }
+
+  &__email {
+    color: rgb(194, 126, 126);
+    font-size: 10px;
+    margin-left: 20px;
+  }
+}

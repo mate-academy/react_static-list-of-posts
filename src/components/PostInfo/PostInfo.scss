@@ -1,0 +1,16 @@
+.postInfo {
+  padding: 0 20px;
+  border: solid 1px rgb(81, 65, 126);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+
+    &-author {
+      align-self: flex-end;
+    }
+  }
+}

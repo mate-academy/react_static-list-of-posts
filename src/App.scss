@@ -1,1 +1,25 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+
+html {
+  background-color: rgb(235, 236, 252);
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  color: rgb(81, 65, 126);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+.App {
+  margin: 30px;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
