@@ -43,7 +43,7 @@ export interface User {
   company: Company,
 }
 
-export interface Posts extends Post {
+export interface PreparedPosts extends Post {
   user: User | undefined,
   comments: Comment[],
 }

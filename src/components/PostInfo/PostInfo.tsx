@@ -1,20 +1,20 @@
 import React from 'react';
-import { Posts } from '../../types/types';
+import { PreparedPosts } from '../../types/types';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 interface Props {
-  postItem: Posts,
+  post: PreparedPosts,
 }
 
-export const PostInfo: React.FC<Props> = ({ postItem }) => (
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <li className="post__item">
-    <h2 className="post__title">{postItem.title}</h2>
-    <p className="post__body">{postItem.body}</p>
-    {postItem.user ? <UserInfo user={postItem.user} /> : null }
+    <h2 className="post__title">{post.title}</h2>
+    <p className="post__body">{post.body}</p>
+    {post.user ? <UserInfo user={post.user} /> : null }
     <h2 className="comments__title">Comments</h2>
-    {postItem.comments
-      ? postItem.comments.map((comment) => <CommentInfo comment={comment} key={comment.id} />)
+    {(post.comments.length > 0)
+      ? post.comments.map((comment) => <CommentInfo comment={comment} key={comment.id} />)
       : 'Some comment..'}
   </li>
 );

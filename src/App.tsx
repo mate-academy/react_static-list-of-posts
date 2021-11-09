@@ -6,9 +6,9 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList/PostList';
-import { Posts } from './types/types';
+import { PreparedPosts } from './types/types';
 
-const PreparedPost: Posts[] = posts.map((post) => {
+const PreparedPost: PreparedPosts[] = posts.map((post) => {
   const postUser = users.find((person) => (person.id === post.userId));
   const commentsInPost = comments.filter((comment) => (comment.postId === post.id));
 
