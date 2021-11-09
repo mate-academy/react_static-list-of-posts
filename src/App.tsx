@@ -20,7 +20,7 @@ const App: React.FC = () => (
       <h1 className="header__title">Static list of posts</h1>
     </header>
     <section className="posts">
-      <PostList postItems={preparedPosts} />
+      <PostList posts={preparedPosts} />
     </section>
   </div>
 );

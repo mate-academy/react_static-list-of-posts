@@ -2,12 +2,12 @@ import { Post } from '../../typedefs';
 import { PostInfo } from '../PostInfo/PostInfo';
 
 type Props = {
-  postItems: Post[];
+  posts: Post[];
 };
 
-export const PostList:React.FC<Props> = ({ postItems }) => (
+export const PostList:React.FC<Props> = ({ posts }) => (
   <ul className="posts__list">
-    {postItems.map(post => (
+    {posts.map(post => (
       <li key="{post.id}" className="posts__item">
         <PostInfo post={post} />
       </li>
