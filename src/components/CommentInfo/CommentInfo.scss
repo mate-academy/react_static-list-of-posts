@@ -1,0 +1,16 @@
+.comments {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: gray;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    color: cadetblue;
+  }
+}

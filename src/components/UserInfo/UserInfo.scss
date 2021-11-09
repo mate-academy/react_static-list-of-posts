@@ -1,0 +1,16 @@
+.user {
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &__email {
+    text-transform: lowercase;
+    color: blue;
+  }
+}
