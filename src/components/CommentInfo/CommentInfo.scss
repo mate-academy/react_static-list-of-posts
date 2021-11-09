@@ -1,0 +1,17 @@
+.comment-info {
+  &__item {
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: beige;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+  
+  &__email {
+    color: blue;
+  }
+}
