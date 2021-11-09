@@ -6,9 +6,9 @@ interface Props {
   user: User | null;
 }
 
-export const UserInfo: React.FC<Props> = (props) => (props.user && (
+export const UserInfo: React.FC<Props> = ({ user }) => (user && (
   <>
-    <p className="user-info__username">{props.user.name}</p>
-    <p className="user-info__email">{props.user.email}</p>
+    <p className="user-info__username">{user.name}</p>
+    <p className="user-info__email">{user.email}</p>
   </>
 ));

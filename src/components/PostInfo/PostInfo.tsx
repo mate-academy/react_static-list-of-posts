@@ -2,23 +2,24 @@ import React from 'react';
 import { PreparedPost } from '../../types/types';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { UserInfo } from '../UserInfo/UserInfo';
-import './PostInfo.scss';
 
 export interface Prop {
   post: PreparedPost;
 }
 
-export const PostInfo: React.FC<Prop> = (props) => (
+export const PostInfo: React.FC<Prop> = ({ post }) => (
   <>
-    <h2>{props.post.title}</h2>
-    <p>{props.post.body}</p>
-    <UserInfo user={props.post.user} />
-    <ul>
-      {props.post.comments.map(comment => (
-        <li key={comment.id} className="post-info__item">
-          <CommentInfo comment={comment} />
-        </li>
-      ))}
-    </ul>
+    <h2>{post.title}</h2>
+    <p>{post.body}</p>
+    {post.user && <UserInfo user={post.user} />}
+    {post.comments.length ? (
+      <ul>
+        {post.comments.map(comment => <CommentInfo key={comment.id} comment={comment} />)}
+      </ul>
+    ) : (
+      <li>
+        No comments yet
+      </li>
+    )}
   </>
 );

@@ -4,12 +4,12 @@ import { PreparedPost } from '../../types/types';
 import './PostList.scss';
 
 interface Props {
-  postsArray: PreparedPost[];
+  posts: PreparedPost[];
 }
 
-export const PostList: React.FC<Props> = (props) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <ul className="postList">
-    {props.postsArray.map(post => (post.user && (
+    {posts.map(post => (post.user && (
       <li key={post.id} className="post-list__post">
         <PostInfo post={post} />
       </li>

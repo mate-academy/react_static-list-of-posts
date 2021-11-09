@@ -6,10 +6,10 @@ type Props = {
   comment: Comment;
 };
 
-export const CommentInfo: React.FC<Props> = (props) => (
-  <>
-    <p className="comment-info__name">{props.comment.name}</p>
-    <p>{props.comment.body}</p>
-    <p className="comment-info__email">{props.comment.email}</p>
-  </>
+export const CommentInfo: React.FC<Props> = ({ comment }) => (
+  <li className="comment-info__item">
+    <p className="comment-info__name">{comment.name}</p>
+    <p>{comment.body}</p>
+    <p className="comment-info__email">{comment.email}</p>
+  </li>
 );
