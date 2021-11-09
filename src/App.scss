@@ -1,1 +1,10 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+@import "./components/styles/header.scss";
+@import "./components/styles/posts.scss";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(199, 214, 214);
+}
