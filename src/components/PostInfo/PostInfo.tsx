@@ -1,9 +1,9 @@
-import { PrepPost } from '../types';
+import { PreparedPost } from '../types';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
 export interface Props {
-  post: PrepPost;
+  post: PreparedPost;
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => {

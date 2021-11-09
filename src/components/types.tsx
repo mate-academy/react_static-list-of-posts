@@ -37,7 +37,7 @@ export interface Post {
   body: string,
 }
 
-export interface PrepPost extends Post {
+export interface PreparedPost extends Post {
   user: User | null,
   preparedComments: Comment[] | null,
 }
