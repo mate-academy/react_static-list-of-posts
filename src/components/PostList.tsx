@@ -4,7 +4,7 @@ import './PostList.scss';
 
 interface Props {
   posts: PreparedPost[],
-};
+}
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <ul className="post-list">

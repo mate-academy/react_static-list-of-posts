@@ -3,7 +3,7 @@ import './UserInfo.scss';
 
 interface Props {
   user: User,
-};
+}
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="user-info">

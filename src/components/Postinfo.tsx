@@ -5,7 +5,7 @@ import './PostInfo.scss';
 
 interface Props {
   post: PreparedPost,
-};
+}
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <div className="post">
@@ -14,7 +14,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     {post.user && (
       <UserInfo user={post.user} />
     )}
-
-    <CommentList comments={post.comments} />
+    {post.comments.length === 0
+      ? (<p>0 comments</p>)
+      : (<CommentList comments={post.comments} />)}
   </div>
 );
