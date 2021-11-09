@@ -1,0 +1,29 @@
+.list {
+  list-style: none;
+  
+  &__item {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    &--title {
+      font-size: 20px;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &--body::first-letter {
+      text-transform: uppercase;
+    }
+
+    &--comment {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+}
