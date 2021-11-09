@@ -4,13 +4,13 @@ import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
 
 interface Props {
-  preparedPosts: Post[];
+  posts: Post[];
 }
 
-export const PostList: React.FC<Props> = ({ preparedPosts }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <ul className="posts">
     {
-      preparedPosts.map(post => (
+      posts.map(post => (
         <PostInfo key={post.id} post={post} />
       ))
     }

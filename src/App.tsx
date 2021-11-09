@@ -18,7 +18,7 @@ const preparedPosts = posts.map(post => (
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 
