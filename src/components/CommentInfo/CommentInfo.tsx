@@ -3,15 +3,16 @@ import { Post } from '../BasicPost/BasicPost';
 type Props = {
   classes: string;
   body: string;
-  name: string;
-  email: string;
+  comments: {
+    name: string;
+    email: string;
+  }
 };
 
 export const CommentInfo: React.FC<Props> = ({
   classes,
   body,
-  name,
-  email,
+  comments: { name, email },
 }) => {
   return (
     <Post

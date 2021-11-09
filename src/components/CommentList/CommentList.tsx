@@ -14,8 +14,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
           key={comment.id}
           classes="Comments"
           body={comment.body}
-          name={comment.name}
-          email={comment.email}
+          comments={comment}
         />
       );
     })}
