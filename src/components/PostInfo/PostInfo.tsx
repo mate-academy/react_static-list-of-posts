@@ -19,12 +19,8 @@ export const PostInfo: React.FC<Props> = ({ postInfo }) => {
         {`Post #${id}: ${title}`}
       </h3>
       <p>{body}</p>
-      {user && (
-        <div>
-          <p><UserInfo userInfo={user} /></p>
-          <p><CommentList commentList={comments} /></p>
-        </div>
-      )}
+      {user && <UserInfo userInfo={user} />}
+      {comments && <CommentList commentList={comments} />}
     </div>
   );
 };
