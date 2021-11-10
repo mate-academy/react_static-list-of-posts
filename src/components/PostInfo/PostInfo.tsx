@@ -25,7 +25,9 @@ export const PostInfo: React.FC <Props> = ({ post }) => {
         ? <UserInfo user={user} />
         : null }
 
-      <CommentList comments={comments} />
+      { comments
+        ? <CommentList comments={comments} />
+        : null }
     </li>
   );
 };
