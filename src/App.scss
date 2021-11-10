@@ -1,1 +1,14 @@
-// styles go here
+.page {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(162, 183, 192);
+  background-color: rgb(31, 31, 31);
+}
+
+.App {
+  margin: 20px;
+
+  &__title {
+    color: rgb(196, 196, 196);
+    text-align: center;
+  }
+}
