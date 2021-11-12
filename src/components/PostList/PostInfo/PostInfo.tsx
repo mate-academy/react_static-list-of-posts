@@ -3,7 +3,6 @@ import UserInfo from '../../UserInfo/UserInfo';
 import CommentList from '../../CommentList/CommentList';
 
 import './PostInfo.scss';
-import comments from '../../../api/comments';
 
 type Props = {
   postInfo: Post
@@ -22,7 +21,7 @@ const PostInfo: React.FC<Props> = ({ postInfo }) => {
         {postInfo.user && <UserInfo userInfo={postInfo.user} />}
       </div>
       <div>
-        { comments.length
+        { postInfo.comment.length
           ? <CommentList commentList={postInfo.comment} />
           : 'Set comment'}
       </div>

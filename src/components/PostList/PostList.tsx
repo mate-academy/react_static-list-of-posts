@@ -3,13 +3,13 @@ import PostInfo from './PostInfo/PostInfo';
 import { Post } from '../../types/types';
 
 type Props = {
-  postList: Post[]
+  posts: Post[]
 };
 
-const PostList: React.FC<Props> = ({ postList }) => {
+const PostList: React.FC<Props> = ({ posts }) => {
   return (
     <ul className="post-list">
-      {postList.map(post => (
+      {posts.map(post => (
         <li className="post-list__block" key={post.id}>
           <PostInfo postInfo={post} />
         </li>
