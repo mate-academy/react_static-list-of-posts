@@ -3,11 +3,11 @@ import './PostList.scss';
 import { PostInfo } from '../PostInfo/PostInfo';
 import { Post } from '../../types/Post';
 
-interface InputPostsList {
+interface Props {
   postsList: Post[],
 }
 
-export const PostList: React.FC<InputPostsList> = ({ postsList }) => (
+export const PostList: React.FC<Props> = ({ postsList }) => (
   <ul className="list">
     {
       postsList.map(post => (

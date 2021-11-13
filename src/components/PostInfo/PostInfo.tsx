@@ -4,11 +4,11 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { Post } from '../../types/Post';
 
-interface InputPost {
+interface Props {
   post: Post,
 }
 
-export const PostInfo: React.FC<InputPost> = ({ post }) => (
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
     <h2 className="title">
       {`Статья ${post.id}. ${post.title}`}
@@ -16,10 +16,16 @@ export const PostInfo: React.FC<InputPost> = ({ post }) => (
     <div className="text">
       {post.body}
     </div>
-    <UserInfo
-      name={post.user?.name}
-      email={post.user?.email}
-    />
+    {
+      post.user === undefined
+        ? <></>
+        : (
+          <UserInfo
+            name={post.user.name}
+            email={post.user.email}
+          />
+        )
+    }
     {
       post.comments.map(comment => (
         <CommentInfo

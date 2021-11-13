@@ -2,12 +2,12 @@ import React from 'react';
 
 import './UserInfo.scss';
 
-interface User {
-  name: string | undefined,
-  email: string | undefined,
+interface Props {
+  name: string,
+  email: string,
 }
 
-export const UserInfo: React.FC<User> = ({ name, email }) => (
+export const UserInfo: React.FC<Props> = ({ name, email }) => (
   <>
     <div className="contact">
       <div>

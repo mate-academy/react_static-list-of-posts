@@ -2,13 +2,13 @@ import React from 'react';
 
 import './CommentInfo.scss';
 
-interface Info {
+interface Props {
   name: string,
   body: string,
   email: string,
 }
 
-export const CommentInfo: React.FC<Info> = ({ name, body, email }) => (
+export const CommentInfo: React.FC<Props> = ({ name, body, email }) => (
   <>
     <div className="comment">
       <div className="comment__author">
