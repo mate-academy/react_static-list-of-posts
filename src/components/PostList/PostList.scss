@@ -1,0 +1,17 @@
+.list {
+  list-style: none;
+  padding: 10px 20px;
+
+  &__item {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 9px 18px rgba(37, 41, 49, 0.03);
+    border-radius: 16px;
+    transition: 1s;
+
+    &:hover {
+      box-shadow: 0 16px 24px rgba(255, 57, 166, 0.35);
+    }
+  }
+}
