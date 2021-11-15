@@ -1,0 +1,24 @@
+* {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.container {
+  margin: 60px 40px;
+  padding: 20px;
+  border: 1px solid rgb(110, 118, 125);
+}
+
+.title {
+  align-self: center;
+  font-family: monospace;
+  font-size: 24px;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+
+.text {
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
