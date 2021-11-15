@@ -14,11 +14,9 @@ const preparedPosts = posts.map(post => ({
 }));
 
 const App: React.FC = () => (
-  <>
-    <div className="App">
-      <PostList posts={preparedPosts} />
-    </div>
-  </>
+  <div className="App">
+    <PostList posts={preparedPosts} />
+  </div>
 );
 
 export default App;

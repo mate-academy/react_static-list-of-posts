@@ -7,14 +7,12 @@ type UserFields = {
 };
 
 export const UserInfo: React.FC<UserFields> = ({ name, email }) => (
-  <>
-    <div className="ccc">
-      <div className="name">
-        {name}
-      </div>
-      <div className="user-info">
-        {email}
-      </div>
+  <div className="ccc">
+    <div className="name">
+      {name}
     </div>
-  </>
+    <div className="user-info">
+      {email}
+    </div>
+  </div>
 );
