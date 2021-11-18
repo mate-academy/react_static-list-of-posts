@@ -12,7 +12,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => (
       <p>{comment.name}</p>
       <p>{comment.body}</p>
       <p>
-        <a href="..." className="comment__email">{comment.email}</a>
+        <a href={comment.email} className="comment__email">{comment.email}</a>
       </p>
     </div>
   </>

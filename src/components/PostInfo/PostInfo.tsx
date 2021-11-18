@@ -14,7 +14,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.title}
     </p>
     <p className="postBody">{post.body}</p>
-    {post.user ? <UserInfo person={post.user} /> : null}
-    {post.comment ? <CommentList comments={post.comment} /> : null}
+    {post.user && <UserInfo person={post.user} />}
+    {post.comment && <CommentList comments={post.comment} />}
   </>
 );
