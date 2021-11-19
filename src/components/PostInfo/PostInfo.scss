@@ -1,0 +1,24 @@
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+
+  &__main,
+  &__userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__main {
+    &__title {
+      text-transform: capitalize;
+    }
+
+    &__body {
+      color: rgb(34, 34, 34);
+      text-transform: capitalize;
+    }
+  }
+}
