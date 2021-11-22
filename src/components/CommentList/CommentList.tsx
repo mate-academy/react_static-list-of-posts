@@ -9,19 +9,19 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  const [isShownCommentsList, setCount] = useState(false);
+  const [setIsShownCommentsList, setCount] = useState(false);
 
   return (
     <ul className="comments">
       <button
         type="button"
         onClick={() => {
-          setCount(!isShownCommentsList);
+          setCount(!setIsShownCommentsList);
         }}
       >
         Comments of the user
       </button>
-      {isShownCommentsList && (
+      {setIsShownCommentsList && (
         <>
           {comments.map((comment: Comment) => (
             <li key={comment.id} className="comments__list">

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Comment } from '../../Types/Comment';
 
 export const CommentInfo: React.FC<Comment> = ({ name, body }) => {
-  const [isShownCommentsList, setCount] = useState(false);
+  const [setIsShownCommentsList, setCount] = useState(false);
 
   return (
     <div>
@@ -13,13 +13,13 @@ export const CommentInfo: React.FC<Comment> = ({ name, body }) => {
         <button
           type="button"
           onClick={() => {
-            setCount(!isShownCommentsList);
+            setCount(!setIsShownCommentsList);
           }}
         >
           read more
         </button>
       </p>
-      {isShownCommentsList && (
+      {setIsShownCommentsList && (
         <p>
           {body}
         </p>
