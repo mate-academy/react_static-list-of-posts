@@ -1,0 +1,22 @@
+.comments {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  &__list {
+    text-transform: capitalize;
+  }
+}
+
+button {
+  color: rgb(0, 0, 136);
+  margin: 0;
+  padding-left: 0;
+  background-color: #fff;
+  border-width: 0;
+
+  &:hover {
+    font-weight: 700;
+    cursor: pointer;
+  }
+}

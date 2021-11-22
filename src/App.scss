@@ -1,1 +1,30 @@
-// styles go here
+ul,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 12px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.App {
+  padding: 30px;
+  background-color: rgb(238, 238, 245);
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}
