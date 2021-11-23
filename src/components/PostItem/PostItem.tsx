@@ -19,7 +19,7 @@ export const PostItem: React.FC<Props> = ({ post }) => {
       <div className="PostItem__picture-container">
         <img
           className="PostItem__picture"
-          src="/images/image-placeholder.svg"
+          src="images/image-placeholder.svg"
           alt="React"
         />
       </div>
