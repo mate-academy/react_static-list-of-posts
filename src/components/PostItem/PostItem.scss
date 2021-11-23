@@ -1,0 +1,36 @@
+.PostItem {
+  &__title {
+    margin-bottom: 24px;
+
+    font-size: 32px;
+  }
+
+  &__body {
+    margin-bottom: 20px;
+
+    color: #3c527c;
+
+    text-align: justify;
+    line-height: 28px;
+  }
+
+  &__picture-container {
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 4px;
+
+    overflow: hidden;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
