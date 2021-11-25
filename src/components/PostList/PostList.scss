@@ -1,0 +1,14 @@
+.PostList {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__item {
+    width: 60%;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+
+    background-color: #fff;
+  }
+}

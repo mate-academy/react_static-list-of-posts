@@ -1,0 +1,31 @@
+.CommentItem {
+  padding: 40px;
+  border: 1px solid #e7e9ed;
+  border-radius: 5px;
+
+  transition: border-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #ffc0d5;
+  }
+
+  &__profile-picture {
+    width: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+  }
+
+  &__body {
+    margin-bottom: 16px;
+
+    text-align: justify;
+  }
+
+  &__email {
+    color: #648ff7;
+  }
+}

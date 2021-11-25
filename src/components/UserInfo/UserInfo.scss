@@ -1,0 +1,15 @@
+.UserInfo {
+  &__content {
+    margin-bottom: 36px;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    color: #648ff7;
+
+    font-size: 14px;
+  }
+}
