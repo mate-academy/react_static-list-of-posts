@@ -12,10 +12,17 @@ type Props = {
 };
 
 export const PostItem: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    body,
+    user,
+    comments,
+  } = post;
+
   return (
     <article className="PostItem">
-      <h2 className="PostItem__title">{post.title.toUpperCase()}</h2>
-      <p className="PostItem__body">{post.body}</p>
+      <h2 className="PostItem__title">{title.toUpperCase()}</h2>
+      <p className="PostItem__body">{body}</p>
       <div className="PostItem__picture-container">
         <img
           className="PostItem__picture"
@@ -23,8 +30,8 @@ export const PostItem: React.FC<Props> = ({ post }) => {
           alt="React"
         />
       </div>
-      {post.user && <UserInfo user={post.user} />}
-      <CommentsList comments={post.comments} />
+      {user && <UserInfo user={user} />}
+      <CommentsList comments={comments} />
     </article>
   );
 };
