@@ -9,20 +9,27 @@ type Props = {
 };
 
 const PostInfo: React.FC<Props> = ({ postInfo }) => {
+  const {
+    title,
+    body,
+    user,
+    comment,
+  } = postInfo;
+
   return (
     <>
       <h2 className="post-info__title">
-        {postInfo.title}
+        {title}
       </h2>
       <p className="post-info__body">
-        {postInfo.body}
+        {body}
       </p>
       <div className="post-info__userInfo">
-        {postInfo.user && <UserInfo userInfo={postInfo.user} />}
+        {user && <UserInfo userInfo={user} />}
       </div>
       <div>
-        { postInfo.comment.length
-          ? <CommentList commentList={postInfo.comment} />
+        { comment.length
+          ? <CommentList commentList={comment} />
           : 'Set comment'}
       </div>
     </>
