@@ -1,0 +1,11 @@
+.App__posts {
+  padding: 25px;
+
+  &-item {
+    position: relative;
+  }
+
+  &-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

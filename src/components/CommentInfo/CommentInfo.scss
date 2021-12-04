@@ -1,0 +1,50 @@
+@import "../../utils/variables";
+
+.comments {
+  border-radius: 15px;
+  margin-top: 30px;
+  background-color: $blockCommentBg;
+  padding: 15px;
+}
+
+.comment {
+  background-color: $commentBgColor;
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 15px;
+
+  transition: background-color 0.5s;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__body::first-letter {
+    text-transform: uppercase;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+  }
+
+  &__email {
+    color: inherit;
+    text-decoration: none;
+
+    transition: color 0.5s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $postBgColor;
+  }
+}
+
+.comment:not(:last-child) {
+  margin-bottom: 20px;
+}
