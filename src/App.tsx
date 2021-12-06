@@ -11,13 +11,13 @@ import { PostList } from './components/PostList';
 // styles
 import './App.scss';
 
-const preparedPosts = posts.map(post => {
-  return {
-    ...post,
-    user: users.find(user => user.id === post.id) || null,
-    comments: comments.filter(comment => comment.postId === post.id) || [],
-  };
-});
+import { PrepPost } from './types/prepPosts';
+
+const preparedPosts:PrepPost[] = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.id) || null,
+  comments: comments.filter(comment => comment.postId === post.id) || [],
+}));
 
 const App: React.FC = () => (
   <div className="App">
