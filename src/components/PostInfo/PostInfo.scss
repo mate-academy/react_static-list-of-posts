@@ -1,0 +1,19 @@
+.post {
+  max-width: 1000px;
+  padding: 40px;
+  margin: 30px auto;
+  border: 1px solid #425791;
+  border-radius: 2px;
+
+  &__title {
+    font-size: 36px;
+    color: #425791;
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    color: #425791;
+    font-size: 20px;
+  }
+}

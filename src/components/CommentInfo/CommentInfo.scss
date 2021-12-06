@@ -1,0 +1,25 @@
+.comments {
+  &__block {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #425791;
+    border-radius: 2px;
+    background-color: #425791;
+    color: rgb(255, 255, 255);
+  }
+
+  &__name {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  &__text {
+    color: rgb(221, 215, 215);
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__email {
+    font-size: 15px;
+  }
+}
