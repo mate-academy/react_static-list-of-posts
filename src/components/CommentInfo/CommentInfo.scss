@@ -1,0 +1,21 @@
+.comment {
+  margin: 10px auto;
+  padding: 10px;
+  width: 400px;
+  border: 1px solid;
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  &__email {
+    margin-bottom: 5px;
+    text-align: right;
+  }
+}
