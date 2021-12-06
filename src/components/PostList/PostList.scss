@@ -1,0 +1,19 @@
+.posts {
+  &__post {
+    display: grid;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 1200px;
+    background-color: rgb(254, 251, 251);
+    list-style: none;
+    box-shadow: 0 3px 15px 15px rgba(103, 102, 102, 0.07);
+
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 220px 1fr;
+    gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,1 +1,26 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0;
+}
+
+.app {
+  padding: 40px;
+  background-color: rgba(225, 225, 225, 0.65);
+
+  &__title {
+    padding: 20px;
+    text-align: center;
+    font-size: 42px;
+  }
+}

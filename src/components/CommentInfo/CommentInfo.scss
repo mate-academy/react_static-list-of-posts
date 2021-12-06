@@ -1,0 +1,25 @@
+.comments {
+  padding: 15px 60px;
+  list-style: square;
+
+  grid-row: 2/ 3;
+  grid-column: 2 / 3;
+
+  &__name {
+    font-size: 24px;
+  }
+
+  &__body {
+    font-size: 18px;
+    color: rgb(41, 43, 70);
+  }
+
+  &__email {
+    display: block;
+    padding: 5px 0;
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(85, 107, 47, 0.83);
+  }
+}
