@@ -1,0 +1,31 @@
+.user-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  line-height: 150%;
+  font-weight: 500;
+
+  &__picture {
+    --profilePictureSize: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: var(--profilePictureSize);
+    height: var(--profilePictureSize);
+    background-color: #639;
+    border-radius: 50%;
+
+    &::before {
+      content: "?";
+      position: absolute;
+      font-size: 36px;
+      color: #fff;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+  }
+}

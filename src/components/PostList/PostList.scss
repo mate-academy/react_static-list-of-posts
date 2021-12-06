@@ -1,0 +1,12 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+
+  &__item {
+    padding: 36px;
+    margin: 0 24px;
+    background-color: #eee;
+    border-radius: 24px;
+  }
+}

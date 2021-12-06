@@ -1,0 +1,10 @@
+.post-info {
+  &__title {
+    text-transform: capitalize;
+    margin: 16px 0;
+  }
+  
+  &__main {
+    margin-bottom: 48px;
+  }
+}
