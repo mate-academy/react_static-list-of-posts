@@ -1,1 +1,21 @@
-// styles go here
+$gray: #cac8c8;
+$white: #fff;
+$black: #000;
+
+@import "./components/UserInfo/userInfo.scss";
+@import "./components/PostInfo/postInfo.scss";
+@import "./components/CommentInfo/comments.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: $white;
+}
+
+.App {
+  background-color: $black;
+  padding: 20px;
+}

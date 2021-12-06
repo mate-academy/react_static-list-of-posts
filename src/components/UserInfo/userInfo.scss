@@ -1,0 +1,12 @@
+.user {
+  margin-bottom: 40px;
+
+  &__avatar {
+    width: 50px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

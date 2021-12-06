@@ -1,14 +1,28 @@
 import React from 'react';
 
+// api data
+import posts from './api/posts';
+import comments from './api/comments';
+import users from './api/users';
+
+// components
+import { PostList } from './components/PostList';
+
+// styles
 import './App.scss';
 
-// import posts from './api/posts';
-// import comments from './api/comments';
-// import users from './api/users';
+import { PrepPost } from './types/prepPosts';
+
+const preparedPosts:PrepPost[] = posts.map(post => ({
+  ...post,
+  user: users.find(user => user.id === post.id) || null,
+  comments: comments.filter(comment => comment.postId === post.id) || [],
+}));
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 style={{ textAlign: 'center' }}>Static list of posts</h1>
+    <PostList posts={preparedPosts} />
   </div>
 );
 

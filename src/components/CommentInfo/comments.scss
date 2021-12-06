@@ -1,0 +1,25 @@
+.comments {
+  &__block {
+    margin-top: 20px;
+    padding: 10px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $gray;
+    margin-bottom: 10px;
+  }
+
+  &__email {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}

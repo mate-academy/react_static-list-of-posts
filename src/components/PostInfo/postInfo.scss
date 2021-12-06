@@ -1,0 +1,25 @@
+.post {
+  max-width: 800px;
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid $gray;
+
+  &__title {
+    font-size: 36px;
+  }
+
+  &__photo {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: $gray;
+    font-size: 16px;
+  }
+
+  &__user {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}
