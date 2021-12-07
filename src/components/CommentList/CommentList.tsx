@@ -10,16 +10,18 @@ interface Props {
 const CommentList: React.FC<Props> = ({ comments }) => (
   <>
     <h4 className={style.commentsTitle}>Comments</h4>
-    <ul>
-      {comments.map(comment => (
-        <li>
-          <CommentInfo
-            key={comment.id}
-            comment={comment}
-          />
-        </li>
-      ))}
-    </ul>
+
+    {(comments.length > 0) ? (
+      <ul>
+        {comments.map(comment => (
+          <li key={comment.id}>
+            <CommentInfo comment={comment} />
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>0 comments</p>
+    )}
   </>
 );
 

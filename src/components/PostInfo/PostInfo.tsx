@@ -17,9 +17,7 @@ const PostInfo: React.FC<Props> = ({ post }) => (
       <UserInfo user={post.user} />
     )}
 
-    {post.comments.length === 0
-      ? (<p>0 comments</p>)
-      : (<CommentList comments={post.comments} />)}
+    <CommentList comments={post.comments} />
   </div>
 );
 
