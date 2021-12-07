@@ -1,0 +1,10 @@
+.comments {
+  font-size: 12px;
+  color: #444;
+
+  &__comment:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+}

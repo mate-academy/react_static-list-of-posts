@@ -1,1 +1,24 @@
-// styles go here
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.App {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  &__title {
+    padding: 30px;
+    font-size: 42px;
+    text-align: center;
+  }
+}

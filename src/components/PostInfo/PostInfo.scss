@@ -1,0 +1,28 @@
+
+.post {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 50px;
+
+  &__main {
+    padding: 50px 50px 74px;
+  }
+
+  &__author {
+    padding: 32px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #737aed;
+    color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+}

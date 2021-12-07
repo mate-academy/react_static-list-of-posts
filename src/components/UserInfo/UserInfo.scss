@@ -1,0 +1,9 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__email {
+    text-transform: lowercase;
+  }
+}
