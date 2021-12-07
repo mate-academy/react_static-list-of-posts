@@ -1,18 +1,11 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
-import { Comment } from '../../types/Comment';
-import { User } from '../../types/User';
 
 import './PostInfo.scss';
 import { CommentInfo } from '../CommentInfo';
+import { Post } from '../../types/Post';
 
-type Props = {
-  id: number;
-  title: string;
-  body: string;
-  user: User | null;
-  comments: Comment[] | null;
-};
+type Props = Post;
 
 export const PostInfo: React.FC<Props> = ({
   id, title, body, user, comments,
