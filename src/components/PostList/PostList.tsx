@@ -17,7 +17,7 @@ export const PostList: React.FC<Props> = ({ posts }) => {
           id={post.id}
           title={post.title}
           body={post.body}
-          user={post.user || null}
+          user={post.user}
           comments={post.comments}
         />
       ))}

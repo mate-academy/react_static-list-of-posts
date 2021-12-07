@@ -2,7 +2,7 @@ import React from 'react';
 import { UserInfo } from '../UserInfo';
 
 import './PostInfo.scss';
-import { CommentInfo } from '../CommentInfo';
+import { CommentsList } from '../CommentsList';
 import { Post } from '../../types/Post';
 
 type Props = Post;
@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Props> = ({
 
       {user && <UserInfo name={user.name} email={user.email} />}
 
-      {comments && <CommentInfo comments={comments} />}
+      {comments && <CommentsList comments={comments} />}
     </article>
   );
 };
