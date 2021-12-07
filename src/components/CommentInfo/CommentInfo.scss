@@ -1,0 +1,30 @@
+.comment {
+  margin: 10px auto;
+  padding: 10px;
+  width: 400px;
+  background: linear-gradient(#76bfa5, #5a9991);
+  border-radius: 20px;
+  transition: 0.8s;
+
+  &:hover {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: linear-gradient(#91eacb, #76c8bd);
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  &__email {
+    margin-bottom: 5px;
+    text-align: right;
+    text-decoration: underline;
+  }
+}
