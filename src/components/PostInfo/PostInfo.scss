@@ -1,10 +1,11 @@
 @import "../../utils/variables";
 
 .post {
+  padding: $postInternalPadding;
+
   background-color: $postBgColor;
   border: $borderOfPost;
   border-radius: 5px;
-  padding: $postInternalPadding;
 
   &__id {
     font-size: 1.2em;
@@ -13,8 +14,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       position: absolute;
       right: $postInternalPadding;
+
       height: 2em;
       width: 2em;
       background-color: #fff;

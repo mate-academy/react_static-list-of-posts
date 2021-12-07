@@ -22,16 +22,14 @@ export const PostInfo: React.FC<Props> = ({
       <div className="post__id-wrapper">
         <span className="post__id">{id}</span>
       </div>
+
       <h2 className="post__title">{title}</h2>
+
       <p className="post__body">{body}</p>
-      {user ? (
-        <UserInfo name={user.name} email={user.email} />
-      ) : null}
-      {comments ? (
-        <CommentInfo
-          comments={comments}
-        />
-      ) : null}
+
+      {user && <UserInfo name={user.name} email={user.email} />}
+
+      {comments && <CommentInfo comments={comments} />}
     </article>
   );
 };

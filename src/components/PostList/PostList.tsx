@@ -13,7 +13,7 @@ export const PostList: React.FC<Props> = ({ posts }) => {
     <div className="App__posts">
       {posts.map(post => (
         <PostInfo
-          key={Math.random()}
+          key={post.id}
           id={post.id}
           title={post.title}
           body={post.body}
