@@ -1,0 +1,33 @@
+.comment {
+  margin: 20px auto;
+  padding: 24px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: rgb(195, 191, 191);
+  box-shadow: 5px 5px 5px  rgb(141, 141, 141);
+
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgb(211, 211, 211);
+    box-shadow: none;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(116, 114, 114);
+  }
+
+  &__body {
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  &__email {
+    margin-bottom: 4px;
+    text-align: right;
+    color: rgb(66, 66, 66);
+  }
+}
