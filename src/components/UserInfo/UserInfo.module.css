@@ -1,0 +1,13 @@
+.userInfo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.userName {
+  color: darkblue;
+}
+
+.userEmail {
+  color: blue;
+  font-style: italic;
+}
