@@ -1,1 +1,35 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #aed6dc;
+
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #4a536b;
+}
+
+.App {
+  padding: 40px 0;
+
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

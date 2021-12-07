@@ -1,0 +1,13 @@
+.CommentList {
+  &__info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    width: 40px;
+  }
+}

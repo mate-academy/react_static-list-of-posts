@@ -1,0 +1,13 @@
+.Comments {
+  margin-bottom: 20px;
+  padding: 12px;
+
+  &__email {
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+
+  &__name {
+    color: rgb(214, 146, 160);
+  }
+}
