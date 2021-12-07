@@ -1,0 +1,27 @@
+.post {
+  margin: 0 auto 28px;
+  padding: 24px;
+  width: 500px;
+  border-radius: 10px;
+  background-color: rgb(211, 211, 211);
+  box-shadow: 5px 5px 5px  rgb(141, 141, 141);
+
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(66, 66, 66);
+  }
+
+  &__text {
+    margin: 0 28px 20px;
+    text-align: center;
+  }
+
+  &__author {
+    margin-bottom: 20px;
+    color: rgb(121, 118, 118);
+  }
+}

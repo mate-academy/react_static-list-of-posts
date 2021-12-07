@@ -1,1 +1,21 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  background-color: rgb(185, 184, 184);
+}
+
+.title {
+  margin: 28px 0;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(87, 86, 86);
+}
