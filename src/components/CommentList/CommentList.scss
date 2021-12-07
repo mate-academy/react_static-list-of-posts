@@ -1,0 +1,12 @@
+.comment {
+  font-size: 20px;
+
+  &__email {
+    color: rgb(24, 36, 53);
+  }
+
+  &__email:hover {
+    color: rgb(100, 99, 99);
+    cursor: pointer;
+  }
+}
