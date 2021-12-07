@@ -13,18 +13,15 @@ export const CommentInfo: React.FC<Props> = ({ comments }) => {
     <div className="comments">
       <div className="comments__container">
         {comments
-          ? comments.map((comment) => {
-            return (
-              <>
-                <div className="comments__comment" key={comment.id}>
-                  <h3 className="comments__name">{comment.name}</h3>
-                  <p className="comment__body">{comment.body}</p>
-                  <a href="email.com" className="comment__email">{comment.email}</a>
-                </div>
-              </>
-            );
-          })
-          : null}
+          && comments.map(({
+            id, name, body, email,
+          }) => (
+            <div className="comments__comment" key={id}>
+              <h3 className="comments__name">{name}</h3>
+              <p className="comment__body">{body}</p>
+              <a href="email.com" className="comment__email">{email}</a>
+            </div>
+          ))}
       </div>
     </div>
 
