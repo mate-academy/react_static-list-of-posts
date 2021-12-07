@@ -1,0 +1,17 @@
+.PostInfo {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
