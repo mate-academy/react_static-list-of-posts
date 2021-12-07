@@ -2,9 +2,9 @@ import React from 'react';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 import { CommentList } from '../CommentList/CommentList';
-import { PreaperedPost } from '../../types/PreaperedPost';
+import { PreparedPost } from '../../types/PreparedPost';
 
-type Props = PreaperedPost;
+type Props = PreparedPost;
 
 export const PostInfo: React.FC<Props> = (post) => {
   return (
