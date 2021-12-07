@@ -1,0 +1,8 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.posts {
+  &__author-email {
+    @include emailHover($post-title-bgc);
+  }
+}

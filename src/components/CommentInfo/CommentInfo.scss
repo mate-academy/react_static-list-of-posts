@@ -1,0 +1,21 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.posts {
+  &__comment-name {
+    margin-bottom: 5px;
+
+    font-size: 19px;
+    color: $comment-title-color;
+  }
+
+  &__comment-message {
+    margin-bottom: 5px;
+  }
+
+  &__comment-email {
+    text-align: right;
+
+    @include emailHover($post-title-bgc);
+  }
+}

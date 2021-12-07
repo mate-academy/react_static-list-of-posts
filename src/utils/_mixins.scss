@@ -1,0 +1,10 @@
+@mixin emailHover ($color) {
+  & > span {
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: $color;
+    }
+  }
+}

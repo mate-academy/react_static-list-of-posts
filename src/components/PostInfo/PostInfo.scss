@@ -1,0 +1,34 @@
+@import "../../utils/variables";
+
+.posts {
+  &__title {
+    grid-row: 1 / 4;
+
+    padding: 10px;
+    background-color: $post-title-bgc;
+    border-radius: 8px 0 0 8px;
+
+    font-size: 24px;
+    color: #fff;
+  }
+
+  &__author-post {
+    padding: 10px;
+  }
+
+  &__message {
+    margin-bottom: 8px;
+    font-size: 19px;
+  }
+
+  &__author {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: $post-border-color;
+  }
+}

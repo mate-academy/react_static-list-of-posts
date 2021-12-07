@@ -1,0 +1,15 @@
+@import "../../utils/variables";
+
+.posts {
+  list-style: none;
+
+  &__post {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+
+    margin-bottom: 10px;
+
+    border: 1px solid $post-border-color;
+    border-radius: 8px;
+  }
+}
