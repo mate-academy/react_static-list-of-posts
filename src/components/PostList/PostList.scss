@@ -1,0 +1,15 @@
+.fullPost {
+  &__container {
+    border: 2px dashed black;
+    background-color: honeydew;
+  }
+  
+  &__title {
+    font-size: 35px;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
