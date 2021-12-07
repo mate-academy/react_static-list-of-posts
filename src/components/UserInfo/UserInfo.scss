@@ -1,0 +1,15 @@
+.user {
+  font-size: 18px;
+  padding: 20px;
+
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+
+  background-color: rgba(238, 43, 43, 0.96);
+  color: rgb(254, 239, 218);
+
+  &__email {
+    font-size: 17px;
+    color: rgb(225, 203, 169);
+  }
+}
