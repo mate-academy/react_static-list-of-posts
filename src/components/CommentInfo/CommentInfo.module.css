@@ -1,0 +1,21 @@
+.comment {
+  border: 1px solid darkgray;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.commentContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.commentEmail {
+  color: blue;
+}
+
+.commentText {
+  margin-top: -5px;
+  text-align: center;
+}

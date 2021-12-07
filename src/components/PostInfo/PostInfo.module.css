@@ -1,0 +1,8 @@
+.postTitle,
+.postBody {
+  text-align: center;
+}
+
+.postBody {
+  font-size: 18px;
+}
