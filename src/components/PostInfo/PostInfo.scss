@@ -1,0 +1,22 @@
+.PostInfo {
+  &__user {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__userIcon {
+    width: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+}
