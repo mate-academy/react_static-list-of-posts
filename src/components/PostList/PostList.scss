@@ -1,0 +1,44 @@
+.post {
+  margin: 0 auto 40px;
+  padding: 20px;
+  width: 900px;
+  background-color: rgb(188, 229, 215);
+  //border: #118062 double 10px;
+  border-radius: 150px;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: rgb(172, 229, 213);
+    box-shadow:
+      1px 1px #53ea93,
+      2px 2px #53ea93,
+      3px 3px #53ea93,
+      4px 4px #53ea93,
+      5px 5px #53ea93,
+      6px 6px #53ea93,
+      7px 7px #53ea93;
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    text-shadow:
+      1px 1px white,
+      2px 2px #777;
+    color: #333;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &__user {
+    margin-bottom: 20px;
+  }
+}
