@@ -1,0 +1,21 @@
+.post__comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentsName {
+  color: rgb(216, 21, 21);
+  text-align: center;
+  font-size: 18px;
+}
+
+.commentsBody {
+  color: rgb(0, 255, 0);
+  font-size: 14px;
+  text-align: center;
+}
+
+.commentsEmail {
+  color: rgb(21, 17, 224);
+  text-align: center;
+}

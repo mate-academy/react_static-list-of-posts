@@ -1,6 +1,11 @@
 import { Comment } from '../types/Comment';
+import './CommentInfo.scss';
 
-export const CommentInfo: React.FC<{ comment: Comment; }> = ({ comment }) => (
+type Props = {
+  comment: Comment,
+};
+
+export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>
     <div className="commentsName">{comment.name}</div>
     <div className="commentsEmail">{comment.email}</div>
