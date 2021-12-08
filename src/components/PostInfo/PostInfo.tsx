@@ -7,11 +7,15 @@ import { User } from '../../types/User';
 type Post = {
   title: string,
   body:string,
-  user: User,
-  comments: Comments,
+  user: User | null,
+  comments: Comments[] | null,
 };
 
-export const PostInfo: React.FC<Post> = (post) => (
+type Props = {
+  post:Post,
+};
+
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
     {post.title}
     {post.body}

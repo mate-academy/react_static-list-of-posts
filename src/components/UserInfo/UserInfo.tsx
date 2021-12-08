@@ -1,19 +1,21 @@
 import { User } from '../../types/User';
 
 type Props = {
-  user: User,
+  user: User | null,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <>
-    <p>
-      Name:
-      {user.name}
-    </p>
+  user && (
+    <>
+      <p>
+        Name:
+        {user.name}
+      </p>
 
-    <p>
-      Email:
-      {user.email}
-    </p>
-  </>
+      <p>
+        Email:
+        {user.email}
+      </p>
+    </>
+  )
 );

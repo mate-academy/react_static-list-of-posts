@@ -1,22 +1,25 @@
 import { Comments } from '../../types/Comments';
 
 type Props = {
-  comments: Comments,
+  comments: Comments[] | null,
 };
 
 export const CommentInfo: React.FC<Props> = ({ comments }) => (
-  <>
-    <p>
-      {comments.name}
-    </p>
+  <ul>
+    {comments && comments.map(comment => (
+      <li key={comment.id}>
+        <p>
+          {comment.name}
+        </p>
 
-    <p>
-      {comments.email}
-    </p>
+        <p>
+          {comment.email}
+        </p>
 
-    <p>
-      {comments.body}
-    </p>
-
-  </>
+        <p>
+          {comment.body}
+        </p>
+      </li>
+    ))}
+  </ul>
 );

@@ -7,7 +7,7 @@ type Post = {
   title: string,
   body:string,
   user: User | null,
-  comments: Comments | null,
+  comments: Comments[] | null,
 };
 
 type Props = {
@@ -19,7 +19,7 @@ export const PostList: React.FC<Props> = ({ posts }) => (
     {posts.map(post => (
       post.user && post.comments && post.user && (
         <li key={post.id}>
-          <PostInfo title={post.title} body={post.body} user={post.user} comments={post.comments} />
+          <PostInfo post={post} />
         </li>
       )
     ))}
