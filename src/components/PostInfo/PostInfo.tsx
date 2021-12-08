@@ -9,9 +9,11 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
-    <div className="posts__user">
-      {post.user && <UserInfo user={post.user} />}
-    </div>
+    {post.user && (
+      <div className="posts__user">
+        <UserInfo user={post.user} />
+      </div>
+    )}
 
     <div className="posts__body">
       <h2 className="posts__title">
@@ -28,7 +30,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
         Comments
       </h3>
 
-      <CommentList comments={post.comments} />
+      {post.comments
+        ? <CommentList comments={post.comments} />
+        : 'No comments yet'}
     </div>
   </>
 );
