@@ -1,0 +1,13 @@
+.postInfo {
+  &__title {
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-size: 14px;
+    margin: 0 0 30px;
+    font-weight: 500;
+    color: rgb(70, 68, 68);
+  }
+}
