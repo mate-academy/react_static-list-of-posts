@@ -29,6 +29,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (max-width:650px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__user-text {
