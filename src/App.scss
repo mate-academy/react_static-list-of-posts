@@ -1,1 +1,62 @@
-// styles go here
+html {
+  background-color: #edede8;
+}
+
+body {
+  padding: 0;
+}
+
+.postList {
+  list-style-type: none;
+  padding-right: 30px;
+
+  &__item {
+    margin-bottom: 20px;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: #eeddd3;
+  }
+}
+
+.postInfo {
+  &__userIcon {
+    height: 34px;
+  }
+
+  &__body {
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #f0c9b3;
+    font-size: 18px;    
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+}
+
+.userInfo {
+  &__name {
+    color: #0B2027;
+  }
+
+  &__email {
+    color: #0B2027;
+  }
+}
+
+.comment {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: #d1c2c3;
+
+  &List {
+    border-radius: 20px;
+    padding: 30px;
+  
+    &__icon {
+      height: 20px;
+    }
+  }
+}
