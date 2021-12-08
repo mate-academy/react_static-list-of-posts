@@ -1,1 +1,24 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, sans-serif;
+}
+
+body,
+h1,
+h2,
+h4,
+p,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+
+  &__title {
+    text-align: center;
+  }
+}
