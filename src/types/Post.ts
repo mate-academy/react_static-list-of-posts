@@ -2,7 +2,7 @@ import { User } from './typedefs';
 import { Comment } from './Comment';
 
 export interface Post {
-  user: User | undefined,
+  user?: User,
   comments: Comment[],
   userId: number,
   id: number,

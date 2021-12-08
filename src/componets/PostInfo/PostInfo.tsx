@@ -20,11 +20,13 @@ export const PostInfo: React.FC<Props> = (props) => {
       <h2>
         {title}
       </h2>
-      <h3>
-        { user
-          ? (<UserInfo userInfo={user} />)
-          : null }
-      </h3>
+      {
+        user && (
+          <h3>
+            <UserInfo userInfo={user} />
+          </h3>
+        )
+      }
 
       <p>
         {body}
