@@ -1,1 +1,17 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;1,500&family=Josefin+Sans:wght@400;600&display=swap");
+
+body,
+h1,
+h2,
+h4 {
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.App__title {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
