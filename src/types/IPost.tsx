@@ -7,5 +7,5 @@ export interface IPost {
   title: string;
   body: string;
   user: IUser | null;
-  comments: IComment[] | null;
+  comments: IComment[];
 }

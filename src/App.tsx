@@ -12,7 +12,7 @@ const preparedPosts: IPost[] = posts.map((post) => {
   return {
     ...post,
     user: users.find(user => user.id === post.userId) || null,
-    comments: comments.filter(coment => coment.postId === post.id) || null,
+    comments: comments.filter(coment => coment.postId === post.id),
   };
 });
 
