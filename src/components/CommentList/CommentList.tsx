@@ -9,6 +9,7 @@ type Props = {
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <>
+    <h2 className="post__comments-caption">Comments</h2>
     {comments.map((comment) => {
       return (
         <ul key={comment.id}>

@@ -3,11 +3,24 @@ import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-type Props = Omit<Post, 'id' | 'title' | 'body'>;
+type Props = Omit<Post, 'id'>;
 
-export const PostInfo: React.FC<Props> = ({ user, comments }) => (
+export const PostInfo: React.FC<Props> = (
+  {
+    user, comments, body, title,
+  },
+) => (
   <>
-    {user && <UserInfo {...user} />}
+    {
+      user
+      && (
+        <UserInfo
+          user={user}
+          body={body}
+          title={title}
+        />
+      )
+    }
 
     <CommentList comments={comments} />
   </>

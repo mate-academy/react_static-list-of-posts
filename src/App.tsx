@@ -14,7 +14,7 @@ const preparedPosts: Post[] = posts.map((post) => ({
 
   comments: comments.filter((comment) => (
     comment.postId === post.userId
-  )) || [],
+  )),
 
   user: users.find((user) => (
     post.userId === user.id
