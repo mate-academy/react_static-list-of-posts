@@ -1,0 +1,15 @@
+.PostList {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #dad5ab;
+  }
+}

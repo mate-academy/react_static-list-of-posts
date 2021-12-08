@@ -1,0 +1,18 @@
+.UserInfo {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__email {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+}
