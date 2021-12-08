@@ -7,7 +7,6 @@ import users from './api/users';
 import comments from './api/comments';
 import { PostList } from './components/PostList/PostList';
 import { Post } from './types/types';
-// import users from './api/users';
 
 const preparedPosts: Post[] = posts.map(post => ({
   ...post,
