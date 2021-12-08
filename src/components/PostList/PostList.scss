@@ -1,0 +1,32 @@
+.postList {
+  background-color: wheat;
+  list-style-type: none;
+  display: grid;
+  grid-gap: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &__item {
+    background-color: white;
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    margin-bottom: 12px;
+  }
+
+  &__userInfo {
+    margin-bottom: 40px;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  &__commentsInfo {
+    display: grid;
+    grid-gap: 20px;
+  }
+}

@@ -1,0 +1,18 @@
+.comment {
+  padding: 10px;
+  background-color: lightgrey;
+  border-radius: 20px;
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+  }
+
+  &__email {
+    font-style: italic;
+    font-size: 20px;
+  }
+}
