@@ -13,7 +13,7 @@ const preparedPosts = posts.map((post) => {
 
   return {
     user: userLink || null,
-    comments: commentsArray || null,
+    comments: commentsArray,
     ...post,
   };
 });
