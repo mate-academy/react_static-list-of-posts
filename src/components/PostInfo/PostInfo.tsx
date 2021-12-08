@@ -29,13 +29,8 @@ export const PostInfo: React.FC<Props> = ({
             {body}
           </p>
         </div>
-        <UserInfo
-          name={user === null ? ' ' : user.name}
-          email={user === null ? ' ' : user.email}
-        />
-        <CommentList
-          commentList={comments === null ? [] : comments}
-        />
+        {user && (<UserInfo name={user.name} email={user.email} />)}
+        {comments && (<CommentList commentList={comments} />)}
       </div>
     </div>
   );
