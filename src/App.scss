@@ -1,1 +1,13 @@
-// styles go here
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.post {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.commentInfo {
+  margin: 10px 0;
+}
