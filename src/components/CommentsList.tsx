@@ -9,14 +9,13 @@ type Props = {
 
 export const CommentsList: React.FC<Props> = ({ comments }) => {
   return (
-    <section className="CommentList">
-      <div className="CommentList__info">
+    <section className="commentList">
+      <div className="commentList__info">
         <img
-          className="CommentList__icon"
-          src="./images/comments.svg"
+          className="commentList__icon"
+          src="./images/comment.svg"
           alt="Comments"
         />
-        <h3 className="CommentList__title">Comments:</h3>
       </div>
       {comments.map(comment => (
         <CommentInfo key={comment.id} comment={comment} />
