@@ -1,5 +1,5 @@
 import { IComments } from './IComments';
-import { IUsers } from './IUsers';
+import { IUsers } from './IUser';
 
 export interface IPost {
   userId: number;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IUsers } from '../../types/IUsers';
+import { IUsers } from '../../types/IUser';
 
 import './UserInfo.scss';
 
