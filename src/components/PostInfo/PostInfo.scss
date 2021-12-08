@@ -1,0 +1,24 @@
+.post {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 20px ;
+  
+  background-color: rgb(189, 253, 232);
+
+  &__image {
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-size: 18px;
+  }
+}
