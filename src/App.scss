@@ -1,1 +1,87 @@
-// styles go here
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(to left, #4b79a1, #283e51);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.post {
+  margin: 10px auto;
+  padding: 20px;
+
+  max-width: 800px;
+
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  background: white;
+
+  transition: transform 0.3s;
+
+  &__body {
+    margin-bottom: 50px;
+  }
+
+  &__comments {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.comment {
+  border: #4b79a1 solid 2px;
+  border-radius: 3px;
+
+  padding: 15px;
+
+  &__author-info {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+  }
+
+  &__user-img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.user-header {
+  display: flex;
+  gap: 5px;
+
+  align-self: center;
+
+  &__author-name {
+    &::after {
+      content: ",";
+    }
+  }
+
+  &__author-email {
+    position: relative;
+
+    &::after {
+      content: "|";
+      display: inline-block;
+      padding-left: 6px;
+    }
+  }
+}
