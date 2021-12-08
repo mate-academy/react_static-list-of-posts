@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Props> = ({
 
       {user && <UserInfo name={user.name} email={user.email} />}
 
-      {comments && <CommentsList comments={comments} />}
+      <CommentsList comments={comments} />
     </article>
   );
 };
