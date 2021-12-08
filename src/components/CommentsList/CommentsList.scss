@@ -1,0 +1,11 @@
+.CommentsList {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+}
