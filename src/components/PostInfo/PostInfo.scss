@@ -1,1 +1,20 @@
-// styles go here
+.post {
+  margin-bottom: 70px;
+  padding: 10px;
+
+  background-color: rgb(223, 223, 226);
+  border-radius: 20px;
+
+  &__author {
+    color: rgba(184, 28, 28, 0.73);
+  }
+
+  &__title {
+    color: rgba(165, 20, 20, 0.73);
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 15px;
+  }
+}
