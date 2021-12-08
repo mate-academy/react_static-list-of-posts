@@ -1,0 +1,24 @@
+.PostInfo {
+  width: 1100px;
+  margin: 0 auto 50px;
+  border: solid #ffdee9 3px;
+  border-radius: 20px;
+  color: #454545;
+
+  &__wrap {
+    padding: 0 50px 10px;
+  }
+}
+
+.PostInfoWrap {
+  &__title {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  &__desk {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+}
