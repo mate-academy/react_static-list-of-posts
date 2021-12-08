@@ -1,0 +1,24 @@
+.comment {
+  background-color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+
+  &__name {
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+  }
+
+  &__body {
+    padding: 0 10px;
+  }
+
+  &__email {
+    padding: 0 0 5px 15px;
+  }
+}
+
+.comment:hover {
+  cursor: pointer;
+  background-color: rgb(182, 179, 179);
+}

@@ -1,0 +1,22 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(165, 155, 132);
+  padding: 3px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+
+  &__name {
+    margin-left: 15px;
+  }
+
+  &__email {
+    margin-right: 15px;
+  }
+}
+
+.user:hover {
+  background-color: white;
+}
