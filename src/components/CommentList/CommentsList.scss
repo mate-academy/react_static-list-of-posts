@@ -1,0 +1,27 @@
+.comments {
+  &__heading {
+    color: #3d74aa;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__username {
+    color: #1c4966;
+    margin: 10px 0;
+  }
+
+  &__email {
+    font-size: 14px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}

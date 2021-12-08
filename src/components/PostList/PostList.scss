@@ -1,0 +1,43 @@
+.posts {
+  list-style: none;
+  padding: 0;
+  width: 70%;
+
+  &__item {
+    padding: 10px 30px 20px;
+    margin-bottom: 20px;
+    background-color: #cfd9ef;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      background-color: #c9d6e8;
+      box-shadow: 0px 0px 8px 0px rgba(50, 90, 121, 0.2);
+    }
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      display: block;
+      content: "";
+      background-color: #78a2cc;
+      width: 100px;
+      height: 1px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__email {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    color: #1c4966;
+  }
+}
