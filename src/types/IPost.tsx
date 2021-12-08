@@ -1,4 +1,4 @@
-import { IComments } from './IComment';
+import { IComment } from './IComment';
 import { IUser } from './IUser';
 
 export interface IPost {
@@ -7,5 +7,5 @@ export interface IPost {
   title: string;
   body: string;
   user: IUser | null;
-  comments: IComments[] | null;
+  comments: IComment[] | null;
 }

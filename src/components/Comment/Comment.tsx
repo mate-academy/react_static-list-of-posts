@@ -1,8 +1,8 @@
 import React from 'react';
-import { IComments } from '../../types/IComment';
+import { IComment } from '../../types/IComment';
 import './Comment.scss';
 
-type Props = Omit<IComments, 'postId' | 'id'>;
+type Props = Omit<IComment, 'postId' | 'id'>;
 
 export const Comment: React.FC<Props> = ({ name, body, email }) => {
   return (

@@ -1,11 +1,11 @@
 import React from 'react';
-import { IComments } from '../../types/IComment';
+import { IComment } from '../../types/IComment';
 import { Comment } from '../Comment/Comment';
 
 import './CommentList.scss';
 
 type Props = {
-  commentList: IComments[],
+  commentList: IComment[],
 };
 
 export const CommentList: React.FC<Props> = ({ commentList }) => {
