@@ -1,0 +1,15 @@
+.post {
+  &__user {
+    margin-bottom: 40px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50px;
+      content: "";
+      background-color: black;
+      height: 3px;
+      width: 100%;
+    }
+  }
+}

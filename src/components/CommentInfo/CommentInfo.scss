@@ -1,0 +1,12 @@
+.post {
+  &__comment {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    border-bottom: 2px dotted black ;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+  }
+}

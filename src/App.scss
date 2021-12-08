@@ -1,1 +1,30 @@
-// styles go here
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li{
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.app {
+  padding: 30px;
+  background-color: whitesmoke;
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+}
