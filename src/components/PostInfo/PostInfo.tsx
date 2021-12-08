@@ -1,6 +1,5 @@
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
-import comments from '../../api/comments';
 import { Comments } from '../../types/Comments';
 import { User } from '../../types/User';
 
@@ -21,6 +20,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     {post.body}
     <UserInfo user={post.user} />
     Comments:
-    {comments && (<CommentInfo comments={post.comments} />)}
+    {post.comments && (<CommentInfo comments={post.comments} />)}
   </>
 );
