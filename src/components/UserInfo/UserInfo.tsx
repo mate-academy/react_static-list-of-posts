@@ -1,9 +1,9 @@
 import React from 'react';
-import { IUsers } from '../../types/IUser';
+import { IUser } from '../../types/IUser';
 
 import './UserInfo.scss';
 
-type Props = Pick<IUsers, 'name' | 'email'>;
+type Props = Pick<IUser, 'name' | 'email'>;
 
 export const UserInfo: React.FC<Props> = ({ name, email }) => {
   return (
