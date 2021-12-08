@@ -1,0 +1,11 @@
+.posts {
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  &__post {
+    width: 800px;
+  }
+}
