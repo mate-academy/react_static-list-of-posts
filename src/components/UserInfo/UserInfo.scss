@@ -1,0 +1,12 @@
+.UserInfo {
+  &__name {
+    font-size: 18px;
+    padding-bottom: 3px;
+  }
+
+  &__email {
+    color: #dc6087;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,33 @@
+.CommentInfo {
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px 0 10px 50px;
+  background-color: #fff;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #ffdee9;
+    top: 0;
+    left: 0;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__desk {
+    padding: 3px 10px 3px 0;
+  }
+
+  &__email {
+    color: #dc6087;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}

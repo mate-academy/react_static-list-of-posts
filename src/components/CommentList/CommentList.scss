@@ -1,0 +1,12 @@
+.CommentList {
+  width: 1050px;
+  text-transform: uppercase;
+  color: #747474;
+  padding: 5px 0;
+
+  &__item {
+    text-transform: capitalize;
+    list-style: none;
+    padding-bottom: 30px;
+  }
+}
