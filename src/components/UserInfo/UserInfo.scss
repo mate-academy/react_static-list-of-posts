@@ -1,0 +1,8 @@
+.UserInfo {
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    color: #839d83;
+  }
+}
