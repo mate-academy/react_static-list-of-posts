@@ -14,11 +14,16 @@ export const PostInfo: React.FC<Props> = (
     {
       user
       && (
-        <UserInfo
-          user={user}
-          body={body}
-          title={title}
-        />
+        <div className="post__user">
+          <UserInfo
+            name={user.name}
+            email={user.email}
+          />
+          <div className="post__user-text">
+            <h2 className="post__title">{title}</h2>
+            <div className="post__body">{body}</div>
+          </div>
+        </div>
       )
     }
 
