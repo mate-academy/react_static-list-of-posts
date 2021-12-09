@@ -1,0 +1,22 @@
+.comment {
+  margin: 20px auto;
+  padding: 12px;
+  width: 400px;
+  border: 1px solid;
+  border-radius:  12px;
+
+  &__name {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  &__body {
+    margin-bottom: 12px;
+    font-style: Arial;
+  }
+
+  &__email {
+    margin-bottom: 4px;
+    text-align: end;
+  }
+}

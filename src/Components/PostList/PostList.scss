@@ -1,0 +1,25 @@
+.post {
+  margin: 0 auto 40px;
+  padding: 20px;
+  width: 40%;
+  border: 1px solid;
+  border-radius: 4px;
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 28px;
+  }
+
+  &__author {
+    margin-bottom: 20px;
+    border-bottom: 2px dashed;
+  }
+}
