@@ -1,8 +1,8 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo/UserInfo';
-import { CommentInfo } from '../CommentInfo/CommentInfo';
-import { Post } from '../../types/Post';
 
+import { CommentsList } from '../CommentsList/CommentsList';
+import { Post } from '../../types/Post';
 import './PostInfo.scss';
 
 type Props = {
@@ -31,11 +31,7 @@ export const PostInfo: React.FC<Props> = (props) => {
       <p>
         {body}
       </p>
-
-      { comments.length
-        ? comments.map(comment => (
-          <CommentInfo commentInfo={comment} key={comment.id} />))
-        : 'Be the first to comment!'}
+      <CommentsList comments={comments} />
     </li>
   );
 };
