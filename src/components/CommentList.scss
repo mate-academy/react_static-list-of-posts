@@ -1,0 +1,18 @@
+.CommentList {
+  margin: 40px 0;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  gap: 30px;
+  align-items: center;
+
+  &__item {
+    display: grid;
+    grid-template-rows: auto;
+    font-size: 15px;
+    background-color: rgb(187, 194, 159);
+    padding: 15px;
+    border-radius: 4px;
+  }
+}

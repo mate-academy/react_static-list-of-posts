@@ -1,0 +1,16 @@
+.PostList {
+  margin: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  gap: 30px;
+  align-items: center;
+
+  &__item {
+    display: grid;
+    grid-template-rows: auto;
+    background-color: rgb(216, 226, 178);
+    padding: 15px;
+    border-radius: 4px;
+  }
+} 

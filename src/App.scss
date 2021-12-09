@@ -1,1 +1,19 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+  font-size: 36px;
+    align-self: center;
+  }
+}
