@@ -1,0 +1,14 @@
+.post {
+  &__item {
+    // padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(240, 239, 239);
+    border: 3px solid black;
+    box-shadow: 0 0 10px black;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+  }
+}
