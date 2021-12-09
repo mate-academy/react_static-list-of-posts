@@ -22,7 +22,7 @@ const preparedPosts: PreparedPost[] = posts.map(
 const App: React.FC = () => (
   <div className="App">
     <h1 className="App__title">
-      Post list
+      Posts list
     </h1>
     <PostList readyPosts={preparedPosts} />
   </div>

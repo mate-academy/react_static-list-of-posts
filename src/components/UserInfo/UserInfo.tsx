@@ -20,15 +20,3 @@ export const UserInfo: React.FC<Props> = ({ userInfo }) => (
     </a>
   </p>
 );
-
-// export const UserInfo: React.FC<Props> = ({ userInfo }) => {
-//   const { name, email } = userInfo;
-
-//   return (
-//     <p className="post-list__list-item-user-info">
-//       {name}
-//       <br />
-//       {email}
-//     </p>
-//   );
-// };
