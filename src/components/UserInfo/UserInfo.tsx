@@ -3,7 +3,7 @@ import { User } from '../../typedefs/User';
 import '../PostList/PostList.scss';
 
 interface Props {
-  userInfo: User | undefined,
+  userInfo: Pick<User, 'email' | 'name'> | undefined,
 }
 
 export const UserInfo: React.FC<Props> = ({ userInfo }) => (

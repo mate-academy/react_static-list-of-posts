@@ -5,7 +5,7 @@ import { CommentList } from '../CommentList';
 import '../PostList/PostList.scss';
 
 interface Props {
-  singlePost: PreparedPost
+  singlePost: Omit<PreparedPost, 'userId' | 'id'>
 }
 
 export const PostInfo: React.FC<Props> = ({ singlePost }) => {

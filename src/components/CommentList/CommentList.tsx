@@ -4,7 +4,7 @@ import { CommentInfo } from '../CommentInfo';
 import { Comment } from '../../typedefs/Comment';
 
 interface Props {
-  postComments: Comment[]
+  postComments: Omit<Comment, 'postId'>[]
 }
 
 export const CommentList: React.FC<Props> = ({ postComments }) => (

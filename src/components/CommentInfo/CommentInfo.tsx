@@ -3,7 +3,7 @@ import { Comment } from '../../typedefs/Comment';
 import '../CommentList/CommentList.scss';
 
 interface Props {
-  singleComment: Comment
+  singleComment: Omit<Comment, 'id' | 'postId'>
 }
 
 export const CommentInfo: React.FC<Props> = ({ singleComment }) => {
