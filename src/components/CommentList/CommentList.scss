@@ -1,0 +1,16 @@
+.comment-list {
+  list-style: none;
+  padding-left: 0;
+
+  &__list-item {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  &__list-item-email {
+    color: gray;
+  }
+}

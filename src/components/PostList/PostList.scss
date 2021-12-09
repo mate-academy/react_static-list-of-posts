@@ -1,0 +1,19 @@
+.post-list {
+  padding: 10px 50px;
+
+  &__list-item {
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: darkgrey;
+    border-radius: 10px;
+    list-style: none;
+  }
+
+  &__list-item-name {
+    font-weight: bold;
+  }
+
+  &__list-item-user-info {
+    text-align: right;
+  }
+}
