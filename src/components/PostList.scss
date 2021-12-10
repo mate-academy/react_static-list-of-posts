@@ -1,5 +1,5 @@
 .PostList {
-  margin: 0 40px;
+  // margin: 0 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content:space-evenly;
@@ -7,9 +7,10 @@
   align-items: center;
 
   &__item {
+    width: 70%;
     display: grid;
     grid-template-rows: auto;
-    background-color: rgb(216, 226, 178);
+    background-color: rgb(218, 240, 236);
     padding: 15px;
     border-radius: 4px;
   }

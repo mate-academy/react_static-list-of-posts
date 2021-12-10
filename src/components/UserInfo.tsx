@@ -1,12 +1,14 @@
 import React from 'react';
-import { Post } from '../types/Post';
-// import { User } from '../types/User';
+import { User } from '../types/User';
+import './UserInfo.scss';
 
-type Props = Pick<Post, 'user'>;
+type Props = {
+  user: User;
+};
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <>
-    <h4 className="User__name">{user ? user.name : 'no name'}</h4>
-    <span className="User_email">{user ? user.email : 'no email'}</span>
-  </>
+  <div className="User">
+    <h4 className="User__name">{user.name}</h4>
+    <span className="User__email">{user.email}</span>
+  </div>
 );

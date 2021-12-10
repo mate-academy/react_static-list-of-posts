@@ -1,6 +1,17 @@
 .Post {
   display: grid;
   grid-template-rows: auto;
-  padding: 15px;
+  padding: 20px 15px 0;
   border-radius: 4px;
+  background-color: rgb(218, 240, 236);
+
+  &__container {
+    background-color: rgb(170, 170, 204);
+    padding: 0 20px 30px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
 }

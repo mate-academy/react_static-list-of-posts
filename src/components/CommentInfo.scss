@@ -1,0 +1,12 @@
+.Comment {
+  display: flex;
+  flex-direction: column;
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__email {
+    align-self: end;
+    padding-right: 40px;
+  }
+}
