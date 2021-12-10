@@ -1,0 +1,16 @@
+.CommentList {
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: rgb(218, 240, 236);
+
+
+  &__item {
+    width: 80%;
+    font-size: 14px;
+    background-color: rgb(206, 228, 231);
+    padding: 15px;
+    border-radius: 4px;
+  }
+}
