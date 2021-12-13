@@ -7,6 +7,6 @@ export interface PreparedPost {
   title: string;
   body: string;
 
-  user: User | undefined;
+  user?: User;
   comments: Comment[];
 }
