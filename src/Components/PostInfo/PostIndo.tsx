@@ -7,13 +7,18 @@ import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = InfoPost;
 
-export const PostInfo: React.FC<Props> = (post) => {
+export const PostInfo: React.FC<Props> = ({
+  title,
+  body,
+  user,
+  comments,
+}) => {
   return (
     <>
-      <h3 className="post__title">{post.title}</h3>
-      <p className="post__text">{post.body}</p>
-      {post.user && <UserInfo {...post.user} />}
-      <CommentList comments={post.comments} />
+      <h3 className="post__title">{title}</h3>
+      <p className="post__text">{body}</p>
+      {user && <UserInfo {...user} />}
+      <CommentList comments={comments} />
     </>
   );
 };

@@ -2,9 +2,9 @@ import React from 'react';
 
 import './CommentInfo.scss';
 
-import { Comment } from '../../Types/Comment';
+import { CommentInfoTypes } from '../../Types/CommentInfo';
 
-type Props = Omit<Comment, 'postId' | 'id'>;
+type Props = CommentInfoTypes;
 
 export const CommentInfo: React.FC<Props> = ({ name, body, email }) => {
   return (
