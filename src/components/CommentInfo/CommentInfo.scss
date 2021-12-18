@@ -1,0 +1,16 @@
+.comment__name {
+  display: inline-block;
+  margin-bottom: 0;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.comment__email {
+  text-transform: lowercase;
+}
+
+.comment__body {
+  margin: 4px 0 0;
+}
