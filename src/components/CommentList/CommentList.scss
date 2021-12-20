@@ -1,0 +1,8 @@
+.comment {
+  margin: 20px 0;
+  border: solid 2px green;
+
+  &--item {
+    border: solid 1px orangered;
+  }
+}
