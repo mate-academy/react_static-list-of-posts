@@ -1,0 +1,15 @@
+.post {
+  width: 450px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid rgb(132, 132, 255);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+    
+  }
+}

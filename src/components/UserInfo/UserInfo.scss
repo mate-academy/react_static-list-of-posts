@@ -1,0 +1,7 @@
+.listItem {
+  line-height: 2;
+
+  & > span {
+    font-weight: bold;
+  }
+}
