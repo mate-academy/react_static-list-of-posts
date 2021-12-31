@@ -72,9 +72,9 @@ const UserInfo: React.FC<PropUser> = ({ user }) => {
   return null;
 };
 
-const CommentInfo: React.FC<Comments> = ({ comments }) => {
+const CommentInfo: React.FC<Comments | any> = ({ comments }) => {
   if (comments !== undefined) {
-    return (comments.map(comment =>
+    return (comments.map((comment: any) =>
       <div className="PostList__comment-info">
         <h3>{comment.name}</h3>
         <p>{comment.body}</p>
