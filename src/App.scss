@@ -1,1 +1,14 @@
-// styles go here
+.PostList {
+  &__element {
+    background-color: #f00;
+    margin-bottom: 20px;
+  }
+
+  &__comment-info {
+    background-color: #0f0;
+  }
+
+  &__user-info {
+    background-color: #08f;
+  }
+}
