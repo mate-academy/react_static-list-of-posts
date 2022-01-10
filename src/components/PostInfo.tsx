@@ -6,11 +6,16 @@ import { Post } from '../types/Post';
 
 type Props = Omit<Post, 'id'>;
 
-export const PostInfo: React.FC<Props> = ({ ...post }) => (
+export const PostInfo: React.FC<Props> = ({
+  title,
+  body,
+  user,
+  comments,
+}) => (
   <>
-    <h2>{post.title}</h2>
-    <p>{post.body}</p>
-    <UserInfo user={post.user} />
-    <CommentList comment={post.comments} />
+    <h2>{title}</h2>
+    <p>{body}</p>
+    <UserInfo user={user} />
+    <CommentList comment={comments} />
   </>
 );

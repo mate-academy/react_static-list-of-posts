@@ -9,6 +9,10 @@ type Props = {
 
 export const CommentList: React.FC<Props> = ({ comment }) => (
   <ul>
-    <CommentInfo comment={comment} />
+    {comment.map(com => (
+      <li key={com.id}>
+        <CommentInfo comment={com} />
+      </li>
+    ))}
   </ul>
 );
