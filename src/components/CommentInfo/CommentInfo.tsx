@@ -1,6 +1,11 @@
 import React from 'react';
+import { Comment } from '../../Types/Types';
 
-export const CommentInfo = (props) => {
+type Props = {
+  comment: Comment;
+};
+
+export const CommentInfo:React.FC<Props> = (props) => {
   return (
     <div>
       <h4>{props.comment.name}</h4>
