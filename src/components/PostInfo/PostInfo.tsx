@@ -2,6 +2,7 @@ import React from 'react';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { PreparedPost } from '../../Types/Types';
+import './PostInfo.scss';
 
 type Props = {
   onePost: PreparedPost;
@@ -9,29 +10,34 @@ type Props = {
 
 export const PostInfo:React.FC<Props> = (props) => {
   return (
-    <div>
-      <h2>
-        {props.onePost.title}
-      </h2>
+    <div className="post">
+      <div className="post__head">
+        <h2 className="post__title">
+          {props.onePost.title}
+        </h2>
+        <div className="post__user">
+          {props.onePost.user ? (
+            <UserInfo user={props.onePost.user} />
+          ) : ('')}
+        </div>
+      </div>
 
-      {props.onePost.body}
-
-      {props.onePost.user ? (
-        <UserInfo user={props.onePost.user} />
-      ) : ('')}
+      <p className="post__paragraph">
+        {props.onePost.body}
+      </p>
 
       {props.onePost.comments ? (
-        <ul>
+        <ul className="post__commnets_list">
           <h3>Comments:</h3>
 
           {props.onePost.comments.map((comment) => (
-            <li key={comment.id}>
+            <li className="post__commnets_list_item" key={comment.id}>
               <CommentList oneComment={comment} />
             </li>
           ))}
         </ul>
       ) : (
-        <ul>
+        <ul className="post__commnets_list">
           No comments yet.
         </ul>
       )}

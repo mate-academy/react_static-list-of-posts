@@ -1,0 +1,17 @@
+.post_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post_list__title {
+  display: block;
+  text-align: center;
+}
+
+.post_list__item {
+  display: block;
+  border-radius: 10px;
+  border: 2px solid rgb(67, 104, 228);
+  padding: 10px;
+}
