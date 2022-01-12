@@ -1,0 +1,7 @@
+.UserInfo {
+  display: flex;
+  gap: 20px;
+  &__name {
+    font-weight: bold;
+  }
+}
