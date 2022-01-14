@@ -1,0 +1,10 @@
+.user {
+  &__name {
+    color: lightseagreen;
+    font-weight: bold;
+  }
+
+  &__email {
+    font-style: italic;
+  }
+}
