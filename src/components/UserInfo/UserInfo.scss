@@ -1,0 +1,10 @@
+.user {
+  position: absolute;
+
+  right: 30px;
+  top: 0;
+
+  &__name {
+    color: rgb(25, 25, 117);
+  }
+}

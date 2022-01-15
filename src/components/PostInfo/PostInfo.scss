@@ -1,0 +1,14 @@
+.post {
+  border: 2px solid salmon;
+  position: relative;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 20px;
+    color: rgb(150, 114, 184);
+  }
+}
+
