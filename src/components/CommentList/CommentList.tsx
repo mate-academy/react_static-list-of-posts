@@ -11,6 +11,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     comments && (
       <>
+        <p className="subtitle">Comments:</p>
         {comments.map(comment => (
           <ul className="content" key={comment.id}>
             <CommentInfo {...comment} />
