@@ -1,0 +1,10 @@
+.posts {
+  list-style-type: none;
+
+  &__post {
+    font-size: 20px;
+    border: 1px solid red;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}

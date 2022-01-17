@@ -1,0 +1,17 @@
+.comment_info {
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    color: #5ba;
+  }
+
+  &__email {
+    font-style: italic;
+    color: #ab5;
+
+    margin-bottom: 20px;
+  }
+}
