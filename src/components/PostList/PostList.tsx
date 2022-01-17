@@ -1,8 +1,6 @@
 import React from 'react';
 import { CommentList } from '../CommentList/CommentList';
-// import { preparedPosts } from '../../App';
 import { PostInfo } from '../PostInfo/PostInfo';
-// import { UserInfo } from '../UserInfo/UserInfo';
 
 interface Props {
   posts: Post[],
