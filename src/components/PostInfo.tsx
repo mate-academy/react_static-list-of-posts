@@ -11,12 +11,11 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     <span className="postTitle">
       {post.title}
     </span>
-
     <br />
     <span className="postBody">
       {post.body}
     </span>
-
+    <br />
     {(post.user) && <UserInfo user={post.user} />}
 
     <CommentList comments={post.comments} />
