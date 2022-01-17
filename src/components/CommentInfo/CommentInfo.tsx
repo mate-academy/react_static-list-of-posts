@@ -1,3 +1,5 @@
+import './CommentInfo.scss';
+
 type Props = {
   comment: PostComment;
 };
@@ -5,7 +7,7 @@ type Props = {
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>
     <span className="comment__name">{comment.name}</span>
-    <span className="comment__body">{comment.body}</span>
-    <span className="comment__email">{comment.email}</span>
+    <p className="comment__body">{comment.body}</p>
+    <p className="comment__email">{comment.email}</p>
   </>
 );
