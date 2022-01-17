@@ -5,13 +5,11 @@ type Props = {
   comment: Comment;
 };
 
-export const CommentInfo:React.FC<Props> = (props) => {
-  return (
-    <div>
-      <h4>{props.comment.name}</h4>
-      {' - '}
-      <a href={props.comment.email}>{props.comment.email}</a>
-      <p>{props.comment.body}</p>
-    </div>
-  );
-};
+export const CommentInfo:React.FC<Props> = ({ comment }) => (
+  <div>
+    <h4>{comment.name}</h4>
+    {' - '}
+    <a href={comment.email}>{comment.email}</a>
+    <p>{comment.body}</p>
+  </div>
+);
