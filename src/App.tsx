@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from 'react-bootstrap';
 
 import posts from './api/posts';
 import comments from './api/comments';
@@ -15,7 +16,7 @@ const preparedPosts: PrepearedPost[] = posts.map(post => ({
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <Card.Header as="h1">Static list of posts</Card.Header>
     <PostInfo posts={preparedPosts} />
   </div>
 );
