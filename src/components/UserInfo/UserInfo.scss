@@ -1,0 +1,13 @@
+.userInfo {
+  padding: 20px;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+
+  font-size: 25px;
+
+  &__email {
+    color: #00B;
+  }
+}
