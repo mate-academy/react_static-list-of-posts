@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-  comment: Comment,
+  comment: CommentToPost,
 }
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (

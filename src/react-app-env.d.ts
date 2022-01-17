@@ -6,7 +6,7 @@ interface Post {
   title: string,
   body: string,
   user: User | null,
-  comments: Comment[],
+  comments: CommentToPost[],
 }
 
 interface User {
@@ -16,7 +16,7 @@ interface User {
   email: string,
 }
 
-interface Comment {
+interface CommentToPost {
   postId: number,
   id: number,
   name: string,
