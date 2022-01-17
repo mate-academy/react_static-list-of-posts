@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const CommentInfo:React.FC<Props> = ({ comments }) => (
-  <ListGroup>
+  <ListGroup as="ul">
     {comments.map(comment => (
       <ListGroup.Item as="li" key={comment.id}>
         <Card.Title>{comment.name}</Card.Title>

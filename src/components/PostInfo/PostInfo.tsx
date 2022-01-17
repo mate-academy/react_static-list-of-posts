@@ -9,12 +9,13 @@ type Props = {
 };
 
 export const PostInfo:React.FC<Props> = ({ posts }) => (
-  <ListGroup>
+  <ListGroup as="ul">
     {posts.map(post => (
       <ListGroup.Item as="li" key={post.id}>
         <Card.Header as="h3">{post.title}</Card.Header>
         <Card.Text>{post.body}</Card.Text>
         {post.user && <UserInfo user={post.user} />}
+        <Card.Header as="h5">Comments of post below</Card.Header>
         {post.comments && <CommentInfo comments={post.comments} />}
       </ListGroup.Item>
     ))}
