@@ -1,0 +1,15 @@
+.posts {
+  max-width: 900px;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 40px;
+  background-color: rgb(180, 237, 255);
+
+  &__item {
+    list-style: none;
+    background-color: rgb(110, 209, 241);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+}

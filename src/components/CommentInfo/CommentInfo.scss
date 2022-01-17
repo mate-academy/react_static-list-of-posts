@@ -1,0 +1,14 @@
+.comment {
+  &__title {
+    color: rgb(92, 92, 92);
+  }
+
+  &__text {
+    color: gray;
+  }
+
+  &__mail {
+    font-style: italic;
+    font-size: 14px;
+  }
+}
