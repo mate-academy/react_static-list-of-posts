@@ -4,11 +4,10 @@ import { Card } from 'react-bootstrap';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import { PrepearedPost } from './types/PrepearedPost';
-import { PostInfo } from './components/PostInfo';
+import { PostList } from './components/PostList';
 import './App.scss';
 
-const preparedPosts: PrepearedPost[] = posts.map(post => ({
+const prepearedPosts: PrepearedPost[] = posts.map(post => ({
   ...post,
   user: users.find(user => post.userId === user.id) || null,
   comments: comments.filter(comment => comment.postId === post.id) || null,
@@ -17,7 +16,7 @@ const preparedPosts: PrepearedPost[] = posts.map(post => ({
 const App: React.FC = () => (
   <div className="App">
     <Card.Header as="h1">Static list of posts</Card.Header>
-    <PostInfo posts={preparedPosts} />
+    <PostList posts={prepearedPosts} />
   </div>
 );
 

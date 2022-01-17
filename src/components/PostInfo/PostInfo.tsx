@@ -1,23 +1,14 @@
 import React from 'react';
 import { ListGroup, Card } from 'react-bootstrap';
-import { PrepearedPost } from '../../types/PrepearedPost';
 import { UserInfo } from '../UserInfo';
-import { CommentInfo } from '../CommentInfo';
+import { CommentList } from '../CommentList';
 
-type Props = {
-  posts: PrepearedPost[]
-};
-
-export const PostInfo:React.FC<Props> = ({ posts }) => (
-  <ListGroup as="ul">
-    {posts.map(post => (
-      <ListGroup.Item as="li" key={post.id}>
-        <Card.Header as="h3">{post.title}</Card.Header>
-        <Card.Text>{post.body}</Card.Text>
-        {post.user && <UserInfo user={post.user} />}
-        <Card.Header as="h5">Comments of post below</Card.Header>
-        {post.comments && <CommentInfo comments={post.comments} />}
-      </ListGroup.Item>
-    ))}
-  </ListGroup>
+export const PostInfo:React.FC<PrepearedPost> = ({ ...post }) => (
+  <ListGroup.Item as="li" key={post.id}>
+    <Card.Header as="h3">{post.title}</Card.Header>
+    <Card.Text>{post.body}</Card.Text>
+    {post.user && <UserInfo {...post.user} />}
+    <Card.Header as="h5">Comments of post below</Card.Header>
+    {post.comments && <CommentList comments={post.comments} />}
+  </ListGroup.Item>
 );
