@@ -1,0 +1,25 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: 700;
+    color:orangered;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 0 20px;
+  }
+
+  &__email {
+    display: flex;
+    justify-content: end;
+    padding-right: 15px;
+  }
+}
