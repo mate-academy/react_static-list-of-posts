@@ -12,10 +12,7 @@ const preparedPosts: PreparedPost[] = posts.map((post) => {
   const correctComments = comments.filter((comment) => (comment.postId === post.id));
 
   const preparedPost = {
-    userId: post.userId,
-    id: post.id,
-    title: post.title,
-    body: post.body,
+    ...post,
     user: correctUser || null,
     comments: correctComments || null,
   };

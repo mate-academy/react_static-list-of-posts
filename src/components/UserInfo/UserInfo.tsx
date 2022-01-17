@@ -6,11 +6,9 @@ type Props = {
   user: User;
 };
 
-export const UserInfo:React.FC<Props> = (props) => {
-  return (
-    <div className="user_info">
-      <h4 className="user_info__name">{props.user.name}</h4>
-      <a href={props.user.email}>{props.user.email}</a>
-    </div>
-  );
-};
+export const UserInfo:React.FC<Props> = (props) => (
+  <div className="user_info">
+    <h4 className="user_info__name">{props.user.name}</h4>
+    <a href={`mailto:${props.user.email}`}>{props.user.email}</a>
+  </div>
+);

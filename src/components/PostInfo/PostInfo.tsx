@@ -8,36 +8,36 @@ type Props = {
   onePost: PreparedPost;
 };
 
-export const PostInfo:React.FC<Props> = (props) => {
+export const PostInfo:React.FC<Props> = ({ onePost }) => {
   return (
     <div className="post">
       <div className="post__head">
         <h2 className="post__title">
-          {props.onePost.title}
+          {onePost.title}
         </h2>
         <div className="post__user">
-          {props.onePost.user ? (
-            <UserInfo user={props.onePost.user} />
+          {onePost.user ? (
+            <UserInfo user={onePost.user} />
           ) : ('')}
         </div>
       </div>
 
       <p className="post__paragraph">
-        {props.onePost.body}
+        {onePost.body}
       </p>
 
-      {props.onePost.comments ? (
-        <ul className="post__commnets_list">
+      {onePost.comments ? (
+        <ul>
           <h3>Comments:</h3>
 
-          {props.onePost.comments.map((comment) => (
-            <li className="post__commnets_list_item" key={comment.id}>
+          {onePost.comments.map((comment) => (
+            <li key={comment.id}>
               <CommentList oneComment={comment} />
             </li>
           ))}
         </ul>
       ) : (
-        <ul className="post__commnets_list">
+        <ul>
           No comments yet.
         </ul>
       )}
