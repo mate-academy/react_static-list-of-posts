@@ -1,0 +1,15 @@
+.post-list {
+  background-color: rgb(243, 243, 243);
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.post {
+  margin-bottom: 100px;
+  list-style-type: none;
+
+  &:first-child {
+    margin-top: 50px;
+    padding-top: 40px;
+  }
+}
