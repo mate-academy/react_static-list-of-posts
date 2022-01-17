@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       )
     }
     {
-      null || post.comments.map(comment => (
+      post.comments && post.comments.map(comment => (
         <CommentList comment={comment} key={comment.id} />
       ))
     }
