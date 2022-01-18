@@ -6,15 +6,13 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <>
-    <div className="content">
-      <h2 className="title is-2">{post.title}</h2>
-      {post.user
-        && <UserInfo user={post.user} />}
+  <div className="content">
+    <h2 className="title is-2">{post.title}</h2>
+    {post.user
+      && <UserInfo user={post.user} />}
 
-      <p>{post.body}</p>
-      {post.comments.length !== 0
-        && <CommentList comments={post.comments} />}
-    </div>
-  </>
+    <p>{post.body}</p>
+    {post.comments.length !== 0
+      && <CommentList comments={post.comments} />}
+  </div>
 );
