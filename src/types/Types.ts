@@ -3,7 +3,7 @@ export interface User {
   email: string
 }
 
-export interface Comments {
+export interface Comment {
   postId: number,
   id: number,
   name: string,
@@ -17,5 +17,5 @@ export interface Post {
   title: string,
   body: string,
   user: User | null,
-  comments: Comments[]
+  comments: Comment[]
 }
