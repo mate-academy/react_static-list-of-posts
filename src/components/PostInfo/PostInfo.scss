@@ -1,0 +1,11 @@
+.post {
+  &__title {
+    color: lightcoral;
+    text-shadow: lightskyblue 2px 2px;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-size: 25px;
+  }
+}
