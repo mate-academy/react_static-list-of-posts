@@ -1,4 +1,3 @@
-import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
@@ -14,7 +13,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
         && <UserInfo user={post.user} />}
 
       <p>{post.body}</p>
-      {post.comments
+      {post.comments.length !== 0
         && <CommentList comments={post.comments} />}
     </div>
   </>

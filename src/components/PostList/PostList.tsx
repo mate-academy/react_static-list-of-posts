@@ -1,4 +1,3 @@
-import { Post } from '../../types/Post';
 import { PostInfo } from '../PostInfo';
 
 type Props = {
