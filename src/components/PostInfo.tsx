@@ -8,11 +8,11 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
-    <span className="postTitle">
+    <span className="post__title">
       {post.title}
     </span>
     <br />
-    <span className="postBody">
+    <span className="post__body">
       {post.body}
     </span>
     <br />

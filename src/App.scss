@@ -4,37 +4,38 @@
   background-color: rgb(252, 200, 200);
   padding: 10px;
   margin-bottom: 10px;
+
+  &__title {
+    background-color: lightcoral;
+  }
+
+  &__body {
+    background-color: rgb(174, 236, 174);
+  }
+
+  &__username {
+    color: rgb(183, 0, 255);
+  }
+
+  &__useremail {
+    color: red;
+  }
+
+  &__comments {
+    padding: 5px;
+    background-color: rgb(138, 236, 236);
+  }
+
+  &__commentName {
+    background-color: rgb(101, 136, 252);
+  }
+
+  &__commentBody {
+    background-color: rgb(180, 115, 241);
+  }
+
+  &__commentEmail {
+    color: red;
+  }
 }
 
-.postTitle {
-  background-color: lightcoral;
-}
-
-.postBody {
-  background-color: rgb(174, 236, 174);
-}
-
-.username {
-  color: rgb(183, 0, 255);
-}
-
-.useremail {
-  color: red;
-}
-
-.comments {
-  padding: 5px;
-  background-color: rgb(138, 236, 236);
-}
-
-.commentName {
-  background-color: rgb(101, 136, 252);
-}
-
-.commentBody {
-  background-color: rgb(180, 115, 241);
-}
-
-.commentEmail {
-  color: red;
-}
