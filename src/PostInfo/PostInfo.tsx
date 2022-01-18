@@ -8,8 +8,8 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ preparedPost }) => (
   <div>
-    <h2>{preparedPost.title}</h2>
-    <p>{preparedPost.body}</p>
+    <h2 className="Post__title">{preparedPost.title}</h2>
+    <p className="Post__body">{preparedPost.body}</p>
     {preparedPost.user && (<UserInfo user={preparedPost.user} />)}
     <CommentList comments={preparedPost.comment} />
   </div>

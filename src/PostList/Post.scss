@@ -1,0 +1,21 @@
+.Post {
+  list-style: none;
+  font-size: 16px;
+  border: 2px solid goldenrod;
+  box-sizing: border-box;
+  width: 600px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+
+  &__title {
+    display: flex;
+    text-align: center;
+    font-size: 22px;
+    color: gray;
+  }
+
+  &__body {
+    font-size: 18px;
+    background-color: khaki;
+  }
+}
