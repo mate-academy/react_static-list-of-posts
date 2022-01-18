@@ -1,4 +1,4 @@
-export const CommentInfo: React.FC<Coment> = ({
+export const CommentInfo: React.FC<CommentItem> = ({
   name,
   body,
   email,

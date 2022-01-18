@@ -1,4 +1,4 @@
-interface Coment {
+interface CommentItem {
   postId: number,
   id: number,
   name: string,
