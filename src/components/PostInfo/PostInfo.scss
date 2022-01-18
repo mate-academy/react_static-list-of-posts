@@ -1,0 +1,26 @@
+.post {
+
+  &__head {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__title {
+    display: flex;
+    width: 800px;
+  }
+
+  &__paragraph {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
