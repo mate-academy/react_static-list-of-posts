@@ -1,12 +1,12 @@
 .comments {
   list-style: none;
+
   &__item {
     padding: 10px 20px;
     background-color: rgb(180, 237, 255);
     margin-bottom: 10px;
     margin-left: 20px;
     border-radius: 20px;
-
     box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.404) inset;
   }
 }
