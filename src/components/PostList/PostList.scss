@@ -1,0 +1,10 @@
+.posts {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+
+  &__item {
+    border: 1px solid black;
+    padding: 20px;
+  }
+}

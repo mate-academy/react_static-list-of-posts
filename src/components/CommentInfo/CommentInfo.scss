@@ -1,0 +1,14 @@
+.commentInfo {
+  &__name {
+    font-size: 40px;
+  }
+
+  &__text {
+    color: green;
+  }
+
+  &__email {
+    text-decoration: underline;
+    color: blue;
+  }
+}
