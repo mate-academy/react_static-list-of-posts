@@ -2,7 +2,7 @@ import React from 'react';
 
 export const UserInfo: React.FC<User> = ({ name, email }) => (
   <>
-    <b className="Post__user">{name}</b>
-    <p className="Post__email">{email}</p>
+    <p className="post__user"><b>{name}</b></p>
+    <p className="post__email">{email}</p>
   </>
 );

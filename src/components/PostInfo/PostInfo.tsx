@@ -9,8 +9,8 @@ export const PostInfo:React.FC<Post> = ({
   comments,
 }) => (
   <>
-    <h2 className="Post__title">{title}</h2>
-    <p className="Post__text">{body}</p>
+    <h2 className="post__title">{title}</h2>
+    <p className="post__text">{body}</p>
     {user && <UserInfo {...user} />}
     <CommentList preparedComments={comments} />
   </>
