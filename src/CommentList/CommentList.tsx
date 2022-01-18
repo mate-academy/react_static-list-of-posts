@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  <p>
+  <p className="comment">
     {comments.map(comment => (
       <CommentInfo comment={comment} />
     ))}
