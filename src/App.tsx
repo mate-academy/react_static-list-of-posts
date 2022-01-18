@@ -3,7 +3,6 @@ import React from 'react';
 import './App.scss';
 
 import { PostList } from './components/PostList/PostList';
-import { Post } from './types/Post';
 
 import postsServer from './api/posts';
 import commentsServer from './api/comments';
@@ -18,7 +17,7 @@ const preparedPosts: Post[] = postsServer.map(post => ({
 const App: React.FC = () => (
   <div className="app">
     <h1 className="app__title">Static list of posts</h1>
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 

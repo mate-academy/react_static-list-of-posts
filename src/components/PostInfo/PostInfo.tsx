@@ -1,4 +1,3 @@
-import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
