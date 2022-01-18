@@ -1,0 +1,25 @@
+.post {
+  display: block;
+  max-width: 500px;
+  background-color: rgb(252, 200, 200);
+  padding: 10px;
+  margin-bottom: 10px;
+
+  &__title {
+    margin: 0;
+    background-color: lightcoral;
+  }
+
+  &__body {
+    margin: 0;
+    background-color: rgb(174, 236, 174);
+  }
+
+  &__author {
+    color: rgb(183, 0, 255);
+  }
+
+  &__authorEmail {
+    color: red;
+  }
+}

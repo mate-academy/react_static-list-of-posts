@@ -1,0 +1,18 @@
+.comment {
+  padding: 5px;
+  background-color: rgb(138, 236, 236);
+
+  &__name {
+    margin: 0;
+    background-color: rgb(101, 136, 252);
+  }
+
+  &__body {
+    margin: 0;
+    background-color: rgb(180, 115, 241);
+  }
+
+  &__email {
+    color: red;
+  }
+}
