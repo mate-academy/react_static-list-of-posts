@@ -1,0 +1,12 @@
+.item {
+  &-name,
+  &-email {
+    font-size: smaller;
+    text-decoration: bold;
+    color: grey;
+  }
+
+  &-body {
+    padding-top: 5px;
+  }
+}
