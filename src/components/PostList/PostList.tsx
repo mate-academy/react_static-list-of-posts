@@ -9,7 +9,7 @@ type Posts = {
 export const PostList: React.FC<Posts> = ({ posts }) => (
   <>
     {posts.map(post => (
-      <div className="post__list">
+      <div key={post.id} className="post__list">
         <PostInfo post={post} />
       </div>
     ))}
