@@ -1,0 +1,13 @@
+.userInfo {
+  font-size: 40px;
+
+  &__name {
+    padding: 20px 10px 20px 0;
+  }
+
+  &__email {
+    text-decoration: underline;
+    color: blue;
+    padding: 20px 0;
+  }
+}
