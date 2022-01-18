@@ -22,5 +22,5 @@ export interface Comment {
 
 export interface PreparedPost extends Post {
   user: User | null;
-  comments: Comment[] | null;
+  comments: Comment[];
 }

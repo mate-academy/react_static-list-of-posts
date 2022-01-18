@@ -14,7 +14,7 @@ const preparedPosts: PreparedPost[] = posts.map((post) => {
   const preparedPost = {
     ...post,
     user: correctUser || null,
-    comments: correctComments || null,
+    comments: correctComments,
   };
 
   return preparedPost;

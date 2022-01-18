@@ -14,23 +14,23 @@ export const PostInfo:React.FC<Props> = ({ onePost }) => (
       <h2 className="post__title">
         {onePost.title}
       </h2>
-      <div className="post__user">
-        {onePost.user ? (
+      {onePost.user && (
+        <div className="post__user">
           <UserInfo user={onePost.user} />
-        ) : ('')}
-      </div>
+        </div>
+      )}
     </div>
 
     <p className="post__paragraph">
       {onePost.body}
     </p>
 
-    {onePost.comments ? (
-      <CommentList comments={onePost.comments} />
-    ) : (
-      <ul>
-        No comments yet.
-      </ul>
-    )}
+    {onePost.comments.length > 0
+      ? <CommentList comments={onePost.comments} />
+      : (
+        <ul>
+          No comments yet.
+        </ul>
+      )}
   </div>
 );
