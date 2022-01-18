@@ -13,10 +13,14 @@ export const PostInfo: React.FC<Post> = ({
     <div className="ui segment">
       <h1 className="header">{title}</h1>
       <p className="description">{body}</p>
-      {user && <UserInfo {...user} />}
+      {user && (
+        <UserInfo {...user} />
+      )}
     </div>
     <div className="ui secondary segment">
-      {comments && <CommentList comments={comments} />}
+      {comments && (
+        <CommentList comments={comments} />
+      )}
     </div>
   </div>
 );
