@@ -1,1 +1,13 @@
-// styles go here
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.app {
+  &__title {
+    width: max-content;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}

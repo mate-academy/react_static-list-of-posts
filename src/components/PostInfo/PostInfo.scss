@@ -1,0 +1,14 @@
+.post {
+  &__title {
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    color: darkblue;
+    text-align: center;
+  }
+
+  &__body {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
