@@ -4,8 +4,16 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = ({ name, email }) => (
-  <div className="subtitle is-flex is-justify-content-space-between">
-    <a href="#user">{`User: ${name}`}</a>
-    <a href="#email">{`Email: ${email}`}</a>
+  <div className="
+    is-flex is-justify-content-space-between
+    is-size-4
+    has-text-weight-medium"
+  >
+    <a href="#user" className="subtitle">
+      {`User: ${name}`}
+    </a>
+    <a href="#email" className="subtitle">
+      {`Email: ${email}`}
+    </a>
   </div>
 );

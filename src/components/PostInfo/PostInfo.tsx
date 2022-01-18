@@ -16,7 +16,7 @@ export const PostInfo: React.FC<Props> = ({
 }) => (
   <>
     <div className="header">
-      <h1 className="card-header-title">{title}</h1>
+      <h1 className="card-header-title is-uppercase">{title}</h1>
       <p className="card-content">{body}</p>
       {userInfo
         ? (

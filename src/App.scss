@@ -7,6 +7,10 @@ body {
   width: 800px;
   margin: 0 auto 20px;
   padding: 30px;
+
+  &-content {
+    color: #000;
+  }
 }
 
 .comments {
