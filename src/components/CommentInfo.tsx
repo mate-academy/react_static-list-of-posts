@@ -6,15 +6,13 @@ type Props = {
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>
-    <span className="post__commentName">
+    <h5 className="comment__name">
       {comment.name}
-    </span>
-    <br />
-    <span className="post__commentBody">
+    </h5>
+    <p className="comment__body">
       {comment.body}
-    </span>
-    <br />
-    <span className="post__commentEmail">
+    </p>
+    <span className="comment__email">
       {comment.email}
     </span>
   </>

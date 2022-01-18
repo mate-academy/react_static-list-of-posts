@@ -6,11 +6,11 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
-    <span className="post__username">
+    <span className="post__author">
       {user.name}
     </span>
     <br />
-    <span className="post__useremail">
+    <span className="post__authorEmail">
       {user.email}
     </span>
   </>
