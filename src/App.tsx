@@ -12,7 +12,7 @@ import usersServer from './api/users';
 const preparedPosts: Post[] = postsServer.map(post => ({
   ...post,
   user: usersServer.find(user => user.id === post.userId) || null,
-  comments: commentsServer.filter(comment => comment.postId === post.id) || null,
+  comments: commentsServer.filter(comment => comment.postId === post.id),
 }));
 
 const App: React.FC = () => (
