@@ -1,16 +1,16 @@
 type Props = {
-  comment: Comment;
+  commentary: Commentary;
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => (
+export const CommentInfo: React.FC<Props> = ({ commentary }) => (
   <div className="comment">
     <div className="content">
-      <span className="author">{comment.email}</span>
+      <span className="author">{commentary.email}</span>
       <div className="metadata">
-        <span className="date">{comment.name}</span>
+        <span className="date">{commentary.name}</span>
       </div>
       <div className="text">
-        {comment.body}
+        {commentary.body}
       </div>
     </div>
   </div>

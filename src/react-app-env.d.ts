@@ -5,7 +5,7 @@ interface Post {
   id: number;
   title: string;
   body: string;
-  comments: Comment[] | null;
+  commentaries: Commentary[];
   user: User | null;
 }
 
@@ -15,7 +15,7 @@ interface User {
   email: string;
 }
 
-interface Comment {
+interface Commentary {
   postId: number;
   id: number;
   name: string;

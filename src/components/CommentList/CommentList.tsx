@@ -2,19 +2,20 @@ import './CommentList.scss';
 import { CommentInfo } from '../CommentInfo/CommetInfo';
 
 type Props = {
-  comments: Comment[] | null;
+  commentaries: Commentary[];
 };
 
-export const CommentList: React.FC<Props> = ({ comments }) => (
+export const CommentList: React.FC<Props> = ({ commentaries }) => (
   <div className="ui comments">
     <h3 className="ui dividing header">Comments</h3>
-    <ul className="comment-list">
-      {comments && (
-        comments.map(comment => (
-          <li key={comment.id} className="comment-list__item">
-            <CommentInfo comment={comment} />
+    {commentaries && (
+      <ul className="comment-list">
+        {commentaries.map(commentary => (
+          <li key={commentary.id} className="comment-list__item">
+            <CommentInfo commentary={commentary} />
           </li>
-        )))}
-    </ul>
+        ))}
+      </ul>
+    )}
   </div>
 );

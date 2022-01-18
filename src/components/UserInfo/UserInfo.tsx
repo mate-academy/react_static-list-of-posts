@@ -7,7 +7,7 @@ type Props = {
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="user-info">
     <div className="ui black image label">
-      {user.name}
+      <span>{user.name}</span>
       <div className="detail">{user.email}</div>
     </div>
   </div>

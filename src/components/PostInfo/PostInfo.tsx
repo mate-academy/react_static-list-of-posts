@@ -2,7 +2,7 @@ import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
-  post: Post
+  post: Post;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
@@ -18,6 +18,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
         {post.body}
       </p>
     </div>
-    <CommentList comments={post.comments} />
+    <CommentList commentaries={post.commentaries} />
   </div>
 );

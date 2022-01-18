@@ -9,8 +9,8 @@ import usersFromServer from './api/users';
 
 const preparedPosts: Post[] = postsFromServer.map(post => ({
   ...post,
-  comments: commentsFromServer.filter(c => c.postId === post.id) as Comment[],
-  user: usersFromServer.find(u => u.id === post.userId) || null,
+  commentaries: commentsFromServer.filter(commentary => commentary.postId === post.id),
+  user: usersFromServer.find(user => user.id === post.userId) || null,
 }));
 
 const App: React.FC = () => (
