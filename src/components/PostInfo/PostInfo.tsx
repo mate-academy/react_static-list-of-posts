@@ -15,7 +15,7 @@ export const PostInfo: React.FC<PreparedPost> = ({
       <h2 className="subtitle">{title}</h2>
       <p>{body}</p>
     </div>
-    <UserInfo user={user} />
-    {comments && <CommentList comments={comments} />}
+    {user && <UserInfo user={user} />}
+    <CommentList comments={comments} />
   </div>
 );
