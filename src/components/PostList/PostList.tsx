@@ -3,7 +3,7 @@ import './PostList.scss';
 import { PostInfo } from '../PostInfo';
 
 type Props = {
-  posts: Post[];
+  posts: PreparedPost[];
 };
 
 export const PostList: React.FC<Props> = ({ posts }) => (

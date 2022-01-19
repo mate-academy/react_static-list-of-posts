@@ -7,7 +7,7 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const preparedPosts: Post[] = posts.map(post => ({
+const preparedPosts: PreparedPost[] = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId) || null,
   comments: comments.filter(comment => comment.postId === post.id),

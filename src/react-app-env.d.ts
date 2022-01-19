@@ -18,6 +18,9 @@ interface Post {
   id: number;
   title: string;
   body: string;
+}
+
+interface PreparedPost extends Post {
   user: User | null;
   comments: CommentItem[];
 }

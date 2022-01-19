@@ -4,7 +4,7 @@ import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
 type Props = {
-  post: Post;
+  post: PreparedPost;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
