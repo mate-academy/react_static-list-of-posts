@@ -1,0 +1,16 @@
+.comment-info {
+  font-size: 0.8rem;
+  border: 1px solid black;
+  border-radius: 10px;
+
+  padding-left: 5px;
+  margin: 0 50px 10px 0;
+}
+
+.comment-info__name {
+  font-weight: bold;
+}
+
+.comment-info_email {
+  color: grey;
+}
