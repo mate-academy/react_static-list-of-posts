@@ -10,12 +10,12 @@ export const PostInfo: React.FC<PreparedPost> = ({
   user,
   comments,
 }) => (
-  <div className="">
+  <div>
     <div className="block">
       <h2 className="subtitle">{title}</h2>
-      <p className="">{body}</p>
+      <p>{body}</p>
     </div>
     <UserInfo user={user} />
-    <CommentList comments={comments} />
+    {comments && <CommentList comments={comments} />}
   </div>
 );
