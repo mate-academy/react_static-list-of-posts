@@ -1,1 +1,16 @@
-// styles go here
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+
+  background-color: #34495e;
+  color: #f8f9f9;
+}
+
+.app {
+  &__title {
+    width: max-content;
+    margin: 0;
+    padding: 40px 0 0 40px;
+  }
+}
