@@ -20,8 +20,3 @@ export interface Post {
   title: string;
   body: string;
 }
-
-export interface PrepearedPosts extends Post {
-  user: User | null,
-  comments: Comment[],
-}

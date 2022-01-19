@@ -15,7 +15,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <h5 className="card-subtitle mb-2 text-muted shadow-sm p-3 mb-5 bg-white rounded">
         {`"${post.body}"`}
       </h5>
-      <UserInfo user={post.user} />
+      {post.user && (
+        <UserInfo user={post.user} />
+      )}
     </div>
     <CommentList comments={post.comments} />
   </div>
