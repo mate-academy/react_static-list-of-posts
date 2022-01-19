@@ -6,13 +6,6 @@ interface User {
   email: string,
 }
 
-interface Post {
-  userId: number,
-  id: number,
-  title: string,
-  body: string,
-}
-
 interface PostComment {
   postId: number,
   id: number,
@@ -21,7 +14,11 @@ interface PostComment {
   body: string,
 }
 
-interface PreparedPost extends Post {
+interface PreparedPost {
+  userId: number,
+  id: number,
+  title: string,
+  body: string,
   user: User | null,
   comments: PostComment[] | null,
 }

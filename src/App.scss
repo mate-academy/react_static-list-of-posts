@@ -1,1 +1,15 @@
-// styles go here
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  &__title {
+    text-align: center;
+  }
+
+  &__post-list {
+    margin: 0 auto;
+  }
+}

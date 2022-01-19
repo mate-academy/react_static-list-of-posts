@@ -1,13 +1,22 @@
 import React from 'react';
+import { ListGroup, Toast } from 'react-bootstrap';
+import './CommentInfo.scss';
 
-type Props = {
-  postComment: PostComment,
-};
-
-export const CommentInfo: React.FC<Props> = ({ postComment }) => (
-  <li key={postComment.id}>
-    <p>{postComment.name}</p>
-    <p>{postComment.body}</p>
-    <a href={`mailto:${postComment.email}`}>{postComment.email}</a>
-  </li>
+export const CommentInfo: React.FC<PostComment> = ({
+  id,
+  name,
+  body,
+  email,
+}) => (
+  <ListGroup.Item as="li" key={id}>
+    <Toast className="comment-info">
+      <Toast.Header closeButton={false}>
+        <strong className="me-auto">{name}</strong>
+      </Toast.Header>
+      <Toast.Body>{body}</Toast.Body>
+      <Toast.Header closeButton={false}>
+        <a href={`mailto:${email}`}>{email}</a>
+      </Toast.Header>
+    </Toast>
+  </ListGroup.Item>
 );

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.scss';
 
 import posts from './api/posts';
@@ -15,7 +14,7 @@ const preparedPosts: PreparedPost[] = posts.map(post => ({
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 className="page__title">Static list of posts</h1>
     <PostList posts={preparedPosts} />
   </div>
 );

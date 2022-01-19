@@ -1,16 +1,27 @@
 import React from 'react';
+import { ListGroup, Card } from 'react-bootstrap';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
+import './PostInfo.scss';
 
-type Props = {
-  post: PreparedPost,
-};
-
-export const PostInfo: React.FC<Props> = ({ post }) => (
-  <li key={post.id}>
-    <p>{post.title}</p>
-    <UserInfo user={post.user} />
-    <p>{post.body}</p>
-    <CommentList postComments={post.comments} />
-  </li>
+export const PostInfo: React.FC<PreparedPost> = ({
+  id,
+  title,
+  user,
+  body,
+  comments,
+}) => (
+  <>
+    <ListGroup.Item as="li" key={id}>
+      <Card>
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{body}</Card.Text>
+          <UserInfo user={user} />
+        </Card.Body>
+        <CommentList postComments={comments} />
+      </Card>
+    </ListGroup.Item>
+    <div className="post-info__bottom"> </div>
+  </>
 );
