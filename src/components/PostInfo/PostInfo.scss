@@ -1,0 +1,13 @@
+.post {
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    border-bottom: solid 1px #f8f9f9;
+    font-size: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,12 @@
+.comments {
+  list-style: none;
+
+  &__item {
+    padding: 10px 20px;
+    width: 80%;
+    background-color: #5d6d7e;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 0 15px 15px;
+  }
+}
