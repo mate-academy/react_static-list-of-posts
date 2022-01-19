@@ -1,0 +1,15 @@
+.comment {
+  border: 1px solid #000;
+  padding: 10px;
+  margin-right: 10px;
+
+  &__body {
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  &__email {
+    font-weight: 500;
+    font-style: italic;
+  }
+}
