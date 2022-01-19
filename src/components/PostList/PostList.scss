@@ -1,0 +1,11 @@
+.posts {
+  width: 50vw;
+  padding: 40px;
+
+  &__item {
+    list-style: none;
+    background-color: #212f3d;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+}
