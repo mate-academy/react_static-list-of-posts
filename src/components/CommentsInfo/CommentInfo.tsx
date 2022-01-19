@@ -1,13 +1,13 @@
 type Props = {
-  name: string,
-  body: string,
-  email: string,
+  comment: PostComment,
 };
 
 export const CommentInfo: React.FC<Props> = ({
-  name,
-  body,
-  email,
+  comment: {
+    name,
+    body,
+    email,
+  },
 }) => (
   <div className="card-content comments">
     <div className="card-content">{body}</div>

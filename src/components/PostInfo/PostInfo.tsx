@@ -20,10 +20,7 @@ export const PostInfo: React.FC<Props> = ({
       <p className="card-content">{body}</p>
       {userInfo
         ? (
-          <UserInfo
-            name={userInfo.name}
-            email={userInfo.email}
-          />
+          <UserInfo user={userInfo} />
         )
         : 'User was not foung'}
     </div>
