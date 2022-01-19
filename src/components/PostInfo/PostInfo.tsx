@@ -2,6 +2,7 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
 import { Post } from '../../types/Post';
+import './PostInfo.scss';
 
 type Props = {
   post: Post;
