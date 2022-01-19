@@ -1,1 +1,13 @@
-// styles go here
+.App {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  width: 40rem;
+  margin: 20px auto;
+
+  &-pad {
+    padding-bottom: 50px;
+  }
+}
