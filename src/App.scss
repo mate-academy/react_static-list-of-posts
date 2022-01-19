@@ -1,1 +1,9 @@
-// styles go here
+.app {
+  padding: 40px;
+  display: block;
+
+  &__title {
+    text-align: center;
+  }
+}
+
