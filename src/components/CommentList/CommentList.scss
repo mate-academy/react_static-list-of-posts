@@ -1,0 +1,13 @@
+.comment-list {
+  &__title {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+
+  &__sign-up {
+    margin-left: 20px;
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+  }
+}
