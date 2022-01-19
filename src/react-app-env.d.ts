@@ -1,6 +1,6 @@
 /// <reference types="react-scripts" />
 
-interface PostWithUser extends Post {
+interface PostWithUser {
   user: User | null;
   comments: Comment[];
   userId: number;
