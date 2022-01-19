@@ -31,6 +31,15 @@
     color: #1a5757;
   }
 
+  &_line::after {
+    display: block;
+    margin-top: 10px;
+    content: "";
+    background: white;
+    border-radius: 2px;
+    height: 1px;
+  }
+
   &_comment-name {
     font-size: 18px;
     font-weight: bold;

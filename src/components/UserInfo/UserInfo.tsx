@@ -9,7 +9,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
     <div>
       <span className="post_user-name">{user.name}</span>
       <br />
-      <div className="post_user-email">{user.email}</div>
+      <div className="post_user-email post_line">{user.email}</div>
     </div>
   )
 );
