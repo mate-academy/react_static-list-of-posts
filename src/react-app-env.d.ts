@@ -39,8 +39,10 @@ interface Address {
   suite: string;
   city: string;
   zipcode: string;
-  geo: {
-    lat: string;
-    lng: string;
-  };
+  geo: Geo;
+}
+
+interface Geo {
+  lat: string;
+  lng: string;
 }
