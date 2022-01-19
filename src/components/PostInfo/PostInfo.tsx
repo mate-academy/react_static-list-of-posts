@@ -7,8 +7,8 @@ interface Props {
 
 export const PostInfo:React.FC<Props> = ({ post }) => (
   <>
-    <h2 className="Post-item__title">{post.title}</h2>
-    <div Post-item__body>{post.body}</div>
+    <h2>{post.title}</h2>
+    <div>{post.body}</div>
     {post.user && (
       <UserInfo user={post.user} />
     )}
