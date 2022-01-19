@@ -20,5 +20,5 @@ interface PreparedPost {
   title: string,
   body: string,
   user: User | null,
-  comments: PostComment[] | null,
+  comments: PostComment[],
 }

@@ -9,7 +9,7 @@ import { PostList } from './components/PostList';
 const preparedPosts: PreparedPost[] = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId) || null,
-  comments: comments.filter(comment => comment.postId === post.id) || null,
+  comments: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App: React.FC = () => (

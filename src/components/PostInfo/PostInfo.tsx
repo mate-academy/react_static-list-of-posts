@@ -5,19 +5,18 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo: React.FC<PreparedPost> = ({
-  id,
   title,
   user,
   body,
   comments,
 }) => (
   <>
-    <ListGroup.Item as="li" key={id}>
+    <ListGroup.Item as="li">
       <Card>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{body}</Card.Text>
-          <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </Card.Body>
         <CommentList postComments={comments} />
       </Card>

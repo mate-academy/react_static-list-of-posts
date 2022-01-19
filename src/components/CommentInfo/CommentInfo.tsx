@@ -3,12 +3,11 @@ import { ListGroup, Toast } from 'react-bootstrap';
 import './CommentInfo.scss';
 
 export const CommentInfo: React.FC<PostComment> = ({
-  id,
   name,
   body,
   email,
 }) => (
-  <ListGroup.Item as="li" key={id}>
+  <ListGroup.Item as="li">
     <Toast className="comment-info">
       <Toast.Header closeButton={false}>
         <strong className="me-auto">{name}</strong>
