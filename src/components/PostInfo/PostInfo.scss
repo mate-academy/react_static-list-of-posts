@@ -1,0 +1,62 @@
+.post {
+  text-align: center;
+  padding: 16px;
+  border: 2px solid #a4e7e7;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgb(161, 165, 164);
+  background-color: #55c1c1;
+
+  &_title {
+    margin: 12px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+
+  &_body {
+    margin: 12px 0;
+    font-size: 18px;
+    color: white;
+  }
+
+  &_user-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a5757;
+  }
+
+  &_user-email {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #1a5757;
+  }
+
+  &_line::after {
+    display: block;
+    margin-top: 10px;
+    content: "";
+    background: white;
+    border-radius: 2px;
+    height: 1px;
+  }
+
+  &_comment-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+
+  &_comment-body {
+    margin: 6px 0 4px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: white;
+  }
+
+  &_comment-email {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #1a5757;
+  }
+}
