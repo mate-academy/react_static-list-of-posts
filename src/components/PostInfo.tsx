@@ -18,7 +18,7 @@ export const PostInfo: React.FC<Post> = ({
       )}
     </div>
     <div className="ui secondary segment">
-      {comments && (
+      {comments.length !== 0 && (
         <CommentList comments={comments} />
       )}
     </div>
