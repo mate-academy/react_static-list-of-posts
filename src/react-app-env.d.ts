@@ -7,7 +7,7 @@ interface User {
   email: string,
 }
 
-interface Comment {
+interface PostComment {
   postId: number,
   id: number,
   name: string,
@@ -21,5 +21,5 @@ interface Post {
   title: string,
   body: string,
   user: User | null,
-  comments: Comment[],
+  comments: PostComment[],
 }
