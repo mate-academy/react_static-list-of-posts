@@ -1,0 +1,13 @@
+.Post-item {
+
+  &__title {
+    color: red;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+  }
+
+}
