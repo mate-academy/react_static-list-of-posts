@@ -6,16 +6,16 @@ interface User {
   email: string;
 }
 
-interface Posts {
+interface Post {
   userId: number;
   id: number;
   title: string;
   body: string;
   user: User | null;
-  comments: Comments[] | null;
+  comments: Commentary[];
 }
 
-interface Comments {
+interface Commentary {
   postId: number;
   id: number;
   name: string;

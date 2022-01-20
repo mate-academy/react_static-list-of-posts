@@ -4,7 +4,7 @@ import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
 
 type Test = {
-  post: Posts[];
+  post: Post[];
 };
 
 export const PostList: React.FC<Test> = ({ post }) => (
