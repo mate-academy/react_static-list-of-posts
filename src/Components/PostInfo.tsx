@@ -14,7 +14,7 @@ export const PostInfo: React.FC<Post> = ({
       {user && <UserInfo {...user} />}
     </div>
     <div className="ui secondary segment">
-      {comments && <CommentList comments={comments} />}
+      <CommentList comments={comments} />
     </div>
   </div>
 );
