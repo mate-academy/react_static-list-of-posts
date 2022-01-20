@@ -1,5 +1,5 @@
 import React from 'react';
-import { preparedPosts } from './api/PreparedPosts';
+import { preparedPosts } from './api/preparedPosts';
 import 'bulma/css/bulma.min.css';
 import './App.scss';
 import { PostList } from './components/PostList';
