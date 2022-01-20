@@ -10,7 +10,7 @@ import './App.scss';
 const prepearedPosts: PrepearedPost[] = posts.map(post => ({
   ...post,
   user: users.find(user => post.userId === user.id) || null,
-  comments: comments.filter(comment => comment.postId === post.id) || null,
+  comments: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App: React.FC = () => (

@@ -22,5 +22,5 @@ interface PostComment {
 
 interface PrepearedPost extends Post {
   user: User | null,
-  comments: PostComment[] | null,
+  comments: PostComment[],
 }
