@@ -7,8 +7,13 @@ import './PostInfo.scss';
 export const PostInfo: React.FC<{ post: Post; }> = ({ post }) => (
   <li className="App__list-item" key={post.id}>
     <h1>{post.title}</h1>
-    {post.user && <UserInfo user={post.user} />}
+    {post.user && (
+      <UserInfo
+        name={post.user.name}
+        email={post.user.email}
+      />
+    )}
     <h3>{post.body}</h3>
-    {post.comments.map(comment => <CommentInfo comment={comment} />)}
+    {post.comments.map(comment => <CommentInfo comment={comment} key={comment.id} />)}
   </li>
 );

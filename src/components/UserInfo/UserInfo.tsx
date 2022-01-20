@@ -1,9 +1,9 @@
 import React from 'react';
 import { User } from '../types/User';
 
-export const UserInfo: React.FC<{ user: User; }> = ({ user }) => (
+export const UserInfo: React.FC<User> = ({ name, email }) => (
   <h3>
-    {user.name}
-    {user.email}
+    {name}
+    {email}
   </h3>
 );

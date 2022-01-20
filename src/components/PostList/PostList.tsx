@@ -5,7 +5,7 @@ import { Post } from '../types/Post';
 export const PostList: React.FC<{ poosts: Post[]; }> = ({ poosts }) => (
   <ul className="App__list">
     {poosts.map(post => (
-      <PostInfo post={post} />
+      <PostInfo post={post} key={post.id} />
     ))}
   </ul>
 );
