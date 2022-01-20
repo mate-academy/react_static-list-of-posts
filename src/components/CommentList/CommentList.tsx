@@ -4,7 +4,7 @@ import { ListGroup, Card } from 'react-bootstrap';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 type Props = {
-  comments: PostComment[] | null,
+  comments: PostComment[],
 };
 
 export const CommentList: React.FC<Props> = ({

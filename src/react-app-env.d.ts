@@ -8,8 +8,9 @@ interface Post {
 }
 
 interface User {
-  name: string,
-  email: string,
+  id: number;
+  name: string;
+  email: string;
 }
 
 interface PostComment {
@@ -22,5 +23,5 @@ interface PostComment {
 
 interface PreparedPost extends Post{
   user: User | null,
-  comments: Coment[] | null,
+  comments: PostComment[],
 }

@@ -6,9 +6,9 @@ type Props = {
   preparedPosts: PreparedPost[],
 };
 
-export const PostList: React.FC<Props> = ({ preparedPosts }) => (
+export const PostList: React.FC<Props> = ({ preparedPosts = [] }) => (
   <ListGroup as="ul">
-    {preparedPosts.map((post: PreparedPost) => (
+    {preparedPosts?.map((post) => (
       <ListGroup.Item as="li" key={post.id}>
         <PostInfo post={post} />
       </ListGroup.Item>

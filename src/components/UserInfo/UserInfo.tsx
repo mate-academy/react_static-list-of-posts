@@ -1,7 +1,7 @@
 import React from 'react';
 
 type Props = {
-  user: User | null,
+  user: User,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
@@ -9,9 +9,9 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
     <span>
       <b>
         {'Owner: '}
-        {user?.name}
+        {user.name}
         {' Email: '}
-        {user?.email}
+        {user.email}
       </b>
     </span>
   </>

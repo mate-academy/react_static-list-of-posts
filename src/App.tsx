@@ -11,16 +11,14 @@ const preparedPosts = posts.map((post: Post) => (
   {
     ...post,
     user: users.find(user => post.userId === user.id) || null,
-    comments: comments.filter(comment => post.id === comment.postId) || null,
+    comments: comments.filter(comment => post.id === comment.postId),
   }
 ));
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList
-      preparedPosts={preparedPosts}
-    />
+    <PostList preparedPosts={preparedPosts} />
   </div>
 );
 

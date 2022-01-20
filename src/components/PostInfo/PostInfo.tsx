@@ -15,9 +15,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     <p>
       {post.body}
     </p>
-    <UserInfo
-      user={post.user}
-    />
+    {post.user && <UserInfo user={post.user} /> }
     <CommentList
       comments={post.comments}
     />
