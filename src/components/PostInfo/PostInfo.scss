@@ -1,0 +1,17 @@
+.PostInfo {
+  background-color: lightgoldenrodyellow;
+  &__title {
+    text-align: center;
+  }
+
+  &__body {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+  }
+
+  &__user {
+    text-align: center;
+    color: blue;
+  }
+}
