@@ -1,0 +1,12 @@
+.commentList {
+  border: 2px solid black;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  width: 50%;
+
+  &__item {
+    border: 2px solid black;
+    border-radius: 18px;
+    padding: 0 15px;
+  }
+}

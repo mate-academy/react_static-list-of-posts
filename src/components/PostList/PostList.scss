@@ -1,0 +1,24 @@
+.postList {
+  background-color: rgb(245, 222, 179);
+  border: 5px solid black;
+  border-radius: 32px;
+
+  &__item {
+    display: flex;
+    background-color: rgb(245, 222, 159);
+    border: 2px solid black;
+    border-radius: 26px;
+    margin-bottom: 25px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+  }
+
+  &__user {
+    align-self: flex-end;
+  }
+}
