@@ -9,6 +9,6 @@ export const PostInfo:React.FC<PrepearedPost> = ({ ...post }) => (
     <Card.Text>{post.body}</Card.Text>
     {post.user && <UserInfo {...post.user} />}
     <Card.Header as="h5">Comments of post below</Card.Header>
-    {post.comments && <CommentList comments={post.comments} />}
+    {post.comments.length > 0 && <CommentList comments={post.comments} />}
   </ListGroup.Item>
 );
