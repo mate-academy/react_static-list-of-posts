@@ -6,9 +6,6 @@ import { PostList } from './components/PostList';
 
 const preparedPosts = getPreparedPosts();
 
-// eslint-disable-next-line no-console
-console.log(preparedPosts);
-
 const App: React.FC = () => (
   <div className="App">
     <PostList posts={preparedPosts} />
