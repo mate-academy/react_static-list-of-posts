@@ -11,6 +11,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     {post.user === null ? '' : <UserInfo user={post.user} />}
     <p><strong>{`Post title: ${post.title}`}</strong></p>
     <p>{`Post body: ${post.body}`}</p>
-    {post.comments === null ? '' : <CommentList comments={post.comments} />}
+    {(post.comments.length > 0) ? <CommentList comments={post.comments} /> : ''}
   </div>
 );
