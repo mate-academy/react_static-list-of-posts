@@ -1,14 +1,12 @@
 import React from 'react';
-
+import { preparedPosts } from './api/preparedPosts';
+import 'bulma/css/bulma.min.css';
 import './App.scss';
-
-// import posts from './api/posts';
-// import comments from './api/comments';
-// import users from './api/users';
+import { PostList } from './components/PostList';
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <PostList posts={preparedPosts} />
   </div>
 );
 

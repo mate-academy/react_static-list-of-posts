@@ -1,1 +1,20 @@
-// styles go here
+body {
+  margin: 30px;
+  font-size: 20px;
+}
+
+.card {
+  width: 800px;
+  margin: 0 auto 20px;
+  padding: 30px;
+
+  &-content {
+    color: #000;
+  }
+}
+
+.comments {
+  width: 600px;
+  background-color: #f4f6f7;
+  margin-top: 20px;
+}
