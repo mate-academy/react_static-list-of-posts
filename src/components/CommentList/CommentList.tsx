@@ -3,13 +3,13 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
 type Prop = {
-  comments: PostComment[] | null,
+  comments: PostComment[],
 };
 
 export const CommentList: React.FC<Prop> = ({ comments }) => {
   return (
     <ul className="commentList">
-      {comments?.map(comment => (
+      {comments.map(comment => (
         <CommentInfo comment={comment} />
       ))}
     </ul>

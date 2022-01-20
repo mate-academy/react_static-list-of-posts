@@ -12,7 +12,7 @@ export const PostInfo: React.FC<Prop> = ({ post }) => {
       <div className="postList__content">
         <h2 className="postList__title">{post.title}</h2>
         <p className="postList__text">{post.body}</p>
-        <UserInfo user={post.user} />
+        {post.user ? <UserInfo user={post.user} /> : ''}
       </div>
       <CommentList comments={post.comments} />
     </li>

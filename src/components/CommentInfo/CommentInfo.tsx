@@ -1,7 +1,7 @@
 import React from 'react';
 
 type Prop = {
-  comment: PostComment | null,
+  comment: PostComment,
 };
 
 export const CommentInfo: React.FC<Prop> = ({ comment }) => {

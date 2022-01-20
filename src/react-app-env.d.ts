@@ -38,7 +38,7 @@ interface Post {
   title: string,
   body: string,
   user: User | null,
-  comments: PostComment[] | null,
+  comments: PostComment[],
 }
 
 interface PreparedPost {
