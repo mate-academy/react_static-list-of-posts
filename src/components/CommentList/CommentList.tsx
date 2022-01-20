@@ -1,23 +1,22 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { ListGroup, Card } from 'react-bootstrap';
+
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 type Props = {
-  comments: Coment[] | null,
+  comments: PostComment[] | null,
 };
 
 export const CommentList: React.FC<Props> = ({
   comments,
 }) => (
-  <>
-    {comments?.map((comment: Coment) => (
-      <Card as="li" key={comment.id}>
-        <CommentInfo
-          name={comment.name}
-          body={comment.body}
-          email={comment.email}
-        />
+  <ListGroup as="ul">
+    {comments?.map((postComment: PostComment) => (
+      <Card as="li" key={postComment.id}>
+        <Card.Body>
+          <CommentInfo postComment={postComment} />
+        </Card.Body>
       </Card>
     ))}
-  </>
+  </ListGroup>
 );

@@ -12,7 +12,7 @@ interface User {
   email: string,
 }
 
-interface Coment {
+interface PostComment {
   postId: number,
   id: number,
   name: string,

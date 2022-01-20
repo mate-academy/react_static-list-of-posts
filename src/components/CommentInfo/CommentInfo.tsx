@@ -2,25 +2,19 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 type Props = {
-  name: string,
-  body: string,
-  email: string,
+  postComment: PostComment,
 };
 
-export const CommentInfo: React.FC<Props> = ({
-  name,
-  body,
-  email,
-}) => (
+export const CommentInfo: React.FC<Props> = ({ postComment }) => (
   <>
-    <Card.Header>
-      {name}
-    </Card.Header>
-    <Card.Subtitle className="comment_email">
-      {email}
-    </Card.Subtitle>
+    <Card.Title>
+      {postComment.name}
+    </Card.Title>
+    <Card.Link href={`mailto:${postComment.email}`}>
+      {postComment.email}
+    </Card.Link>
     <Card.Text>
-      {body}
+      {postComment.body}
     </Card.Text>
   </>
 );

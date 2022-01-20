@@ -4,31 +4,22 @@ import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
-  title: string,
-  body: string,
-  user: User | null,
-  comments: Coment[] | null,
+  post: PreparedPost,
 };
 
-export const PostInfo: React.FC<Props> = ({
-  title,
-  body,
-  user,
-  comments,
-}) => (
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
     <h2>
-      {title}
+      {post.title}
     </h2>
     <p>
-      {body}
+      {post.body}
     </p>
     <UserInfo
-      name={user?.name}
-      email={user?.email}
+      user={post.user}
     />
     <CommentList
-      comments={comments}
+      comments={post.comments}
     />
   </>
 );
