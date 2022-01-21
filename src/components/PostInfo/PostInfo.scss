@@ -6,13 +6,14 @@
   font-family: Arial, Helvetica, sans-serif;
 
   margin-bottom: 15px;
+
+  &__title {
+    padding-left: 20px;
+  }
+
+  &__body {
+    padding-top: 0;
+    padding-left: 20px;
+  }
 }
 
-.post-info__title {
-  padding-left: 20px;
-}
-
-.post-info__body {
-  padding-top: 0;
-  padding-left: 20px;
-}

@@ -5,12 +5,14 @@
 
   padding-left: 5px;
   margin: 0 50px 10px 0;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &_email {
+    color: grey;
+  }
 }
 
-.comment-info__name {
-  font-weight: bold;
-}
 
-.comment-info_email {
-  color: grey;
-}

@@ -12,7 +12,7 @@ export const PostInfo: React.FC<Post> = ({
   <div className="post-info">
     <h1 className="post-info__title">{title}</h1>
     <p className="post-info__body">{body}</p>
-    {user && (<UserInfo user={user} />)}
+    {user && <UserInfo user={user} />}
     <CommentsList postComments={comments} />
   </div>
 );

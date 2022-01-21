@@ -6,7 +6,6 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList/PostList';
-// import { Post } from './react-app-env';
 
 const preparedPosts: Post[] = posts.map(post => ({
   ...post,
