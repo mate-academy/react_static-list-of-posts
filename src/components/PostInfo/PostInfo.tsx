@@ -16,13 +16,11 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     <p className="post-info__text">
       {post.body}
     </p>
+    {post.user && (
+      <UserInfo user={post.user} />
+    )}
     {
-      post.user && (
-        <UserInfo user={post.user} />
-      )
-    }
-    {
-      post.comments && post.comments.map(comment => (
+      post.comments.length > 0 && post.comments.map(comment => (
         <CommentList comment={comment} key={comment.id} />
       ))
     }
