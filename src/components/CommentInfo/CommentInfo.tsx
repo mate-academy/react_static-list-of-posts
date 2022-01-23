@@ -2,7 +2,7 @@ import React from 'react';
 import './CommentInfo.scss';
 
 type CommentProps = {
-  comment: CommentTypes,
+  comment: CommentType,
 };
 
 export const CommentInfo: React.FC<CommentProps> = ({ comment }) => (

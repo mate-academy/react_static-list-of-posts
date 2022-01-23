@@ -3,7 +3,7 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
 type CommentsProps = {
-  comments: CommentTypes[]
+  comments: CommentType[],
 };
 
 export const CommentList: React.FC<CommentsProps> = ({ comments }) => (
@@ -14,5 +14,4 @@ export const CommentList: React.FC<CommentsProps> = ({ comments }) => (
       </div>
     ))}
   </>
-
 );

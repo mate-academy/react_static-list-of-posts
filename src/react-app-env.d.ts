@@ -4,11 +4,11 @@ interface Post {
   id: number,
   title: string,
   body: string,
-  comments: CommentTypes[],
+  comments: CommentType[],
   user: User | undefined,
 }
 
-interface CommentTypes {
+interface CommentType {
   postId: number,
   id: number,
   name: string,

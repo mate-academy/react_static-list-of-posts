@@ -9,7 +9,7 @@ type PostProps = {
 
 export const PostInfo: React.FC<PostProps> = ({ post }) => (
   <>
-    <UserInfo user={post.user} />
+    {post.user && <UserInfo user={post.user} />}
     <p className="post__title">{post.title}</p>
     <p className="post__body">{post.body}</p>
     <p className="post__comments-title">Comments</p>
