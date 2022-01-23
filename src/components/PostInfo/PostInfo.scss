@@ -1,0 +1,16 @@
+.post {
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(72, 72, 72);
+  }
+  &__body {
+    text-align: center;
+    font-size: 18px;
+  }
+  &__comments-title{
+    text-align: center;
+    font-size: 36px;
+  }
+}

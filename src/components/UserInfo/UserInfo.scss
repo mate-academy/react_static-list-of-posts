@@ -1,0 +1,10 @@
+.user {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    font-size: 26px;
+    font-weight: 600;
+  }
+}
