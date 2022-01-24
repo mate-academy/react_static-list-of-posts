@@ -1,0 +1,9 @@
+.comments {
+  background-color: red;
+  opacity: 0.9;
+
+  &__comment {
+    background-color: royalblue;
+    opacity: 0.8;
+  }
+}
