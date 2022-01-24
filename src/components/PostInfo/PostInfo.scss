@@ -1,0 +1,15 @@
+.postInfo {
+  text-align: center;
+
+  &__title {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  &__body {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
+  }
+}

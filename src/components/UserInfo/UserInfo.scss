@@ -1,0 +1,13 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__name {
+    font-size: 24px;
+  }
+
+  &__email {
+    font-size: 20px;
+  }
+}
