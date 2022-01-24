@@ -11,6 +11,6 @@ export const PostInfo: React.FC<Props> = ({ preparedPost }) => (
     <h2 className="Post__title">{preparedPost.title}</h2>
     <p className="Post__body">{preparedPost.body}</p>
     {preparedPost.user && (<UserInfo user={preparedPost.user} />)}
-    <CommentList comments={preparedPost.comment} />
+    <CommentList comments={preparedPost.comments} />
   </div>
 );

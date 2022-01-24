@@ -3,7 +3,7 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './Comment.scss';
 
 type Props = {
-  comments: Comments[];
+  comments: PostComment[];
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
