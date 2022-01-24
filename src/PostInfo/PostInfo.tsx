@@ -4,15 +4,15 @@ import { CommentList } from '../CommentList/CommentList';
 import './PostInfo.scss';
 
 type Props = {
-  preparedPost: Post,
+  post: Post,
 };
 
-export const PostInfo: React.FC<Props> = ({ preparedPost }) => (
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <div className="post">
-    <h2 className="post__title">{preparedPost.title}</h2>
-    <p className="post__body">{preparedPost.body}</p>
-    <span className="post__user-info">{preparedPost.user && (<UserInfo user={preparedPost.user} />)}</span>
+    <h2 className="post__title">{post.title}</h2>
+    <p className="post__body">{post.body}</p>
+    <span className="post__user-info">{post.user && (<UserInfo user={post.user} />)}</span>
     <h3>Comments:</h3>
-    <CommentList comments={preparedPost.comments} />
+    <CommentList comments={post.comments} />
   </div>
 );

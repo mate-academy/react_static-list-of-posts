@@ -11,11 +11,11 @@ interface Post {
 interface User {
   name: string,
   email: string,
-
 }
 
-interface Comments {
+interface Comment {
   name: string,
   body: string,
   email: string,
+  id: number,
 }
