@@ -1,0 +1,14 @@
+.comment {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__email {
+    font-size: 12px;
+    color: rgb(19, 70, 14);
+  }
+}
