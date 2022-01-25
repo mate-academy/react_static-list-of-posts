@@ -1,0 +1,12 @@
+.User{
+  font-style: italic;
+  color:gray;
+  display: flex;
+  justify-content: space-between;
+  &__email{
+    &::before{
+      content:'✉';
+      margin-right: 8px;
+    }
+  }
+}
