@@ -1,0 +1,17 @@
+.Posts{
+  max-width: 1480px;
+  list-style: none;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  &__item{
+    width: 85%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px 5px gray;
+    margin-bottom: 20px;
+  }
+}

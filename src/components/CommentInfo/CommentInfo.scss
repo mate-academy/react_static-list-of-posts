@@ -1,0 +1,23 @@
+.Comment{
+  &__name{
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  &__body{
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+  &__email{
+    font-style: italic;
+    color: gray;
+    text-align: right;
+    &::before{
+      content:'✉';
+      margin-right: 8px;
+    }
+  }
+  &::first-letter{
+    text-transform: uppercase;
+  }
+}

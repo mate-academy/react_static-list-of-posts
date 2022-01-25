@@ -1,0 +1,17 @@
+.Post{
+  &__title{
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+  &__text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+}
