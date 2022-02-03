@@ -20,9 +20,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <UserInfo user={post.user} />
     )}
     {
-      post.comments.length > 0 && post.comments.map(comment => (
-        <CommentList comment={comment} key={comment.id} />
-      ))
+      post.comments.length > 0 && <CommentList comments={post.comments} />
     }
   </div>
 );
