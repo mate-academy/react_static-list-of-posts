@@ -1,0 +1,21 @@
+.comments {
+  margin-bottom: 20px;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
+
+  &:hover {
+    background-color: rgb(200, 223, 230);
+  }
+
+  &__text {
+    margin-top: 50px;
+  }
+
+  &__email {
+    margin-top: -10px;
+    text-decoration: underline;
+  }
+}
