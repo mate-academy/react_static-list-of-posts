@@ -1,0 +1,31 @@
+.item__title {
+  width: 80%;
+  font-size: 25px;
+  text-align: center;
+  margin: 0 auto 20px;
+  font-weight: bold;
+}
+
+.item__body {
+  font-size: 18px;
+  max-width: 80%;
+  margin: 0 auto 50px;
+}
+
+.item__user {
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 25px;
+}
+
+.item__comments {
+  background-color: gainsboro;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+.user {
+  font-size: 22px;
+}
