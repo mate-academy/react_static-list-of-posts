@@ -9,13 +9,15 @@ type Prop = {
 
 export const PostInfo: React.FC<Prop> = ({ props }) => {
   return (
-    props.map((prop: Post) => (
-      <div key={prop.id} className="post">
-        <h2>{prop.title}</h2>
-        {prop.user && <UserInfo user={prop.user} />}
-        <div>{prop.body}</div>
-        {prop.comments && <CommentInfo postComments={prop.comments} />}
-      </div>
-    ))
+    <>
+      {props.map((prop: Post) => (
+        <div key={prop.id} className="post">
+          <h2>{prop.title}</h2>
+          {prop.user && <UserInfo user={prop.user} />}
+          <div>{prop.body}</div>
+          {prop.comments && <CommentInfo postComments={prop.comments} />}
+        </div>
+      ))}
+    </>
   );
 };
