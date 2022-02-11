@@ -1,0 +1,11 @@
+.comments-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__item {
+    padding: 5px 10px;
+    border: 2px solid salmon;
+  }
+}
