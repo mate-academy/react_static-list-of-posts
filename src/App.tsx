@@ -1,6 +1,5 @@
 import React from 'react';
 import PostList from './components/PostList';
-import { Post } from './types/Post';
 
 import './App.scss';
 
@@ -8,7 +7,7 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const preparedPosts: Post[] = posts.map(post => {
+const preparedPosts = posts.map(post => {
   const user = users.find(u => u.id === post.userId);
   const postComments = comments.filter(c => c.postId === post.id);
 
