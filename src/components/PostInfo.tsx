@@ -1,18 +1,6 @@
 import React from 'react';
-import { PostList } from './components/PostList';
-
-import './App.scss';
-
-import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
-
-interface Post {
-  userId: number,
-  id: number,
-  title: string,
-  body: string,
-}
+import { UserInfo } from './UserInfo';
+import { CommentList } from './CommentList';
 
 interface Comment {
   postId: number,
@@ -55,16 +43,19 @@ type PreparePost = {
   autorComments: Comment | undefined,
 };
 
-const preparedPosts: PreparePost[] = [...posts].map((post: Post) => {
-  return {
-    ...post,
-    autor: users.find((user) => user.id === post.userId),
-    autorComments: comments.find((comment) => comment.postId === post.id),
-  };
-});
+type Prepared = {
+  post: PreparePost | undefined;
+};
 
-export const App: React.FC = () => (
-  <PostList
-    posts={preparedPosts}
-  />
-);
+export const PostInfo: React.FC<Prepared> = ({ post = {} }) => {
+  return (
+    <>
+      <UserInfo
+        info={post.autor}
+      />
+      <CommentList
+        comments={post.autorComments}
+      />
+    </>
+  );
+};
