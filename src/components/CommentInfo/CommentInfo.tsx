@@ -7,7 +7,7 @@ type Props = {
 const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>
     <h3>{comment.name}</h3>
-    <h4>{comment.body}</h4>
+    <p>{comment.body}</p>
     <h3>{comment.email}</h3>
   </>
 );

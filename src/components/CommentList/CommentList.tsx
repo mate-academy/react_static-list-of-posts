@@ -12,7 +12,7 @@ const CommentList: React.FC<Props> = ({ comments }) => (
     <h3>Comments:</h3>
     <ul className="comments-list">
       {comments.map(comment => (
-        <li className="comments-list__item">
+        <li className="comments-list__item" key={comment.name}>
           <CommentInfo comment={comment} />
         </li>
       ))}
