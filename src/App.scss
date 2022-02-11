@@ -4,19 +4,25 @@ body {
 }
 
 .App {
+  &__title {
+    text-align: center;
+  }
+}
+
+.post-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 15px;
-  align-items: center;
   justify-content: center;
 }
 
 .post {
-  width: 80%;
-  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 300px;
+  max-width: 768px;
+  padding: 5px;
   gap: 10px;
   justify-content: space-between;
   border-radius: 15px;
@@ -28,15 +34,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  font-size: 1.1rem;
+  font-style: italic;
 
-  & * {
-    font-size: 1.1rem;
-    font-style: italic;
-  }
 }
 
 .comment {
   padding: 5px;
   background-color: #10a39c85;
   border-radius: 15px;
+
+  &__info {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    font-style: italic;
+  }
 }
