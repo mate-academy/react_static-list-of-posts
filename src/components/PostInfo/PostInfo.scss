@@ -1,0 +1,50 @@
+.postInfo {
+  box-sizing: border-box;
+  background-color: cadetblue;
+  border-radius: 20px;
+
+  padding: 30px;
+
+  &__mainInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+    width: 100%;
+
+    &--user {
+      width: 250px;
+    }
+
+    &--content {
+      &-title {
+        margin: 0;
+        padding-bottom: 15px;
+
+        font-size: 30px;
+      }
+
+      &-body {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__commentLink {
+    float: right;
+    text-decoration: none;
+    font-size: 18px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__comments {
+    display: none;
+  }
+}
