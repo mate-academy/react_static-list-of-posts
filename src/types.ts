@@ -29,7 +29,6 @@ export interface Post {
   body: string;
   user: User | null;
   comments: Comment[] | [];
-  // imageURL: string;
 }
 
 export interface Comment {

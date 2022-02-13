@@ -1,6 +1,6 @@
 .postList {
   list-style: none;
-  
+
   &__item {
     margin-top: 50px;
   }
@@ -27,8 +27,9 @@
   &__title {
     padding: 10px 10px 15px;
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
+    color: #7edc9b;
   }
 
   &__userInfo {
