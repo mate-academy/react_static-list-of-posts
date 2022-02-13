@@ -1,0 +1,18 @@
+.commentInfo {
+  background-color: darkslategray;
+  color: white;
+  padding: 10px;
+
+  border-radius: 20px;
+
+  &__body {
+    font-size: 16px;
+    height: auto;
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+}
