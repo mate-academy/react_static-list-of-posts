@@ -1,0 +1,17 @@
+.comment-list {
+  padding: 20px;
+  list-style: none;
+  background-color: rgb(185, 203, 216);
+  border-radius: 10px;
+
+  &__item {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color:  rgb(223, 236, 245);
+    border-radius: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
