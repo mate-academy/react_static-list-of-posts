@@ -1,1 +1,63 @@
-// styles go here
+.App {
+  &__title {
+    text-align: center;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list {
+  &__item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: yellowgreen;
+    border-radius: 10px;
+  }
+}
+
+.post {
+  &__user{
+    margin-bottom: 10px;
+  }
+
+}
+
+.comments-list {
+  &__item {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: green;
+    margin-bottom: 5px;
+  }
+}
+
+.comment {
+  &__author {
+    margin-bottom: 10px;
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &__name {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(192, 255, 203);
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  &__email {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(192, 255, 203);
+    font-weight: bold;
+  }
+}
