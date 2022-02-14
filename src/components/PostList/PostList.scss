@@ -1,0 +1,15 @@
+.post-list {
+  list-style: none;
+
+  &__item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 4px solid rgb(185, 203, 216) ;
+    border-radius: 10px;
+    background-color: rgb(194, 223, 241);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

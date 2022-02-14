@@ -1,0 +1,12 @@
+.user {
+  &__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkolivegreen;
+  }
+
+  &__email {
+    padding-top: 10px;
+    color: blue;
+  }
+}
