@@ -1,1 +1,81 @@
-// styles go here
+.app {
+  &__title {
+    min-width: 768px;
+    text-align: center;
+    line-height: 90px;
+    height: 90px;
+    background-color: pink;
+  }
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  width: 768px;
+
+  list-style: none;
+
+  &__title{
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+  }
+
+  &__body {
+    font-size: 24px;
+    font-style: italic;
+  }
+
+  &__item {
+    margin-bottom: 48px;
+    padding: 24px;
+    background-color: #ddccf8;
+  }
+
+  &__user-name {
+    text-align: end;
+    padding-right: 24px;
+    padding-bottom: 8px;
+  }
+
+  &__user-email{
+    text-align: end;
+    padding-right: 24px;
+    padding-bottom: 12px;
+  }
+
+  &__comment-title {
+    font-size: 22px;
+  }
+
+  &__comment {
+    margin-bottom: 12px;
+    padding: 20px;
+    border: 1px solid #000;
+  }
+
+  &__commentator-name {
+    font-weight: bold;
+  }
+
+  &__commentator-email {
+    margin-bottom: 12px;
+  }
+
+  &__commentator-content {
+    margin: 0 40px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px #aaa3a3;
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(116%);
+    }
+  }
+}
