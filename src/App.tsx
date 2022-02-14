@@ -1,14 +1,15 @@
+/* eslint-disable no-console */
 import React from 'react';
+import posts from './api/posts';
 
 import './App.scss';
 
-// import posts from './api/posts';
-// import comments from './api/comments';
-// import users from './api/users';
+import { PostList } from './components/PostList/PostList';
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 className="post__main-title">Facebook (almost)</h1>
+    <PostList posts={posts} />
   </div>
 );
 

@@ -1,1 +1,54 @@
-// styles go here
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.post {
+  background-color: pink;
+
+  &__main-title {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+    display: block;
+
+    font-size: 20px;
+  }
+
+  &__content {
+    padding: 20px;
+    display: block;
+    background-color: rgb(162, 162, 206);
+  }
+
+  &__coment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(241, 204, 210);
+  }
+
+  &__coment-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: aliceblue;
+    background-color: rgb(111, 102, 119);
+  }
+}
+
