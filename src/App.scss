@@ -1,9 +1,9 @@
 .app {
   &__title {
     min-width: 768px;
+    height: 90px;
     text-align: center;
     line-height: 90px;
-    height: 90px;
     background-color: pink;
   }
 }
@@ -19,8 +19,8 @@
 
   &__title{
     margin: 0 auto;
-    text-align: center;
     width: 50%;
+    text-align: center;
   }
 
   &__body {
