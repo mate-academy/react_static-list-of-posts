@@ -1,1 +1,19 @@
 // styles go here
+$color: yellow;
+
+body {
+  background-color: rgb(110, 171, 241);
+  padding: 20px;
+}
+
+.card {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+}
+
+.bold {
+  font-weight: bold;
+}
