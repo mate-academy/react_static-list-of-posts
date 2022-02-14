@@ -3,7 +3,7 @@ import { Post } from '../../types/Post';
 import CommentList from '../CommentList';
 import UserInfo from '../UserInfo';
 
-type Props = Post;
+type Props = Omit<Post, 'id'>;
 
 export const PostInfo: React.FC<Props> = ({
   title,

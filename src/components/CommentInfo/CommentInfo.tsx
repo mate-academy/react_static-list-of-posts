@@ -3,7 +3,7 @@ import { Comment } from '../../types/Comment';
 
 import './CommentInfo.scss';
 
-type Props = Comment;
+type Props = Omit<Comment, 'id'>;
 
 export const CommentInfo: React.FC<Props> = ({ email, name, body }) => (
   <>
