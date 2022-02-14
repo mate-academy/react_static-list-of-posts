@@ -1,1 +1,19 @@
-// styles go here
+* {
+  box-sizing: border-box;
+
+  &::selection {
+    background-color: #ccc;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
