@@ -1,0 +1,14 @@
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 10px;
+
+  &__item {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+}

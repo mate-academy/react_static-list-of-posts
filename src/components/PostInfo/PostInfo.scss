@@ -1,0 +1,12 @@
+.postInfo {
+
+  &__title {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    color: brown;
+  }
+}

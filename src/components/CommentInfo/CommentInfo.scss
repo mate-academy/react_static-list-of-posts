@@ -1,0 +1,30 @@
+.commentInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: #eee;
+
+  &__item {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    list-style-type: none;
+  }
+
+  &__name {
+    font-size: 24px;
+    color: darkgreen;
+  }
+
+  &__mail {
+    font-size: 20px;
+    color:darkblue;
+    text-decoration: none;
+  }
+
+  &__body {
+    margin-left: 40px;
+  }
+}
