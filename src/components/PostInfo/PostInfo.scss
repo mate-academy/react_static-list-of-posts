@@ -1,0 +1,29 @@
+.post {
+  padding: 40px;
+  margin: 20px;
+  background-color: pink;
+  border: 5px solid rgb(247, 119, 140);
+  border-radius: 20px;
+
+  &__title {
+    padding: 5px;
+    background-color: gray;
+    border-radius: 20px;
+    color: white;
+  }
+
+  &__body {
+    padding: 10px;
+    border: 5px solid rgb(250, 105, 130);
+    border-radius: 20px;
+  }
+
+  &__comments {
+    &--title {
+      padding: 5px;
+      background-color: gray;
+      border-radius: 20px;
+      color: white;
+    }
+  }
+}
