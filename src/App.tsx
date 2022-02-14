@@ -8,7 +8,7 @@ import users from './api/users';
 import { Post, User, Comment } from './types';
 import { PostInfo } from './components/PostInfo/PostInfo';
 
-const preparedPosts = [...posts].map((post: Post) => {
+const preparedPosts = posts.map((post: Post) => {
   const postCopy: Post = { ...post };
 
   postCopy.user = users
@@ -26,7 +26,7 @@ const App: React.FC = () => (
       Static list of posts
     </h1>
     <div className="post-wrapper">
-      <PostInfo props={preparedPosts} />
+      <PostInfo posts={preparedPosts} />
     </div>
   </div>
 );
