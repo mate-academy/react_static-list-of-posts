@@ -1,0 +1,8 @@
+.list {
+  list-style-type: none;
+  padding: 0 40px;
+  &__item {
+    border-radius: 30px;
+    background-color: aqua;
+  }
+}

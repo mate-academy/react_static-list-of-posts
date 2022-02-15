@@ -1,0 +1,12 @@
+.comments {
+  color: #001919;
+  border: 3px solid #001919;
+  margin: 10px;
+  border-radius: 20px;
+  &__list {
+    padding: 5px;
+    & > p {
+      color: #384332;
+    }
+  }
+}
