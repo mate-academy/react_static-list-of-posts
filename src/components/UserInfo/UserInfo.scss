@@ -1,0 +1,13 @@
+.UserInfo {
+  display: flex;
+  gap: 15px;
+
+  &__name {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  &__email {
+    text-decoration: underline;
+  }
+}
