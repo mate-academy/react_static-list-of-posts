@@ -1,6 +1,7 @@
 import React from 'react';
 import { Post } from '../types/Post';
 import { PostInfo } from './PostInfo';
+import './Post.scss';
 
 type Props = {
   preparedPosts: Post[],

@@ -1,1 +1,7 @@
-// styles go here
+.App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &__title {
+    text-align: center;
+  }
+}
