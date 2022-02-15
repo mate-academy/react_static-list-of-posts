@@ -1,0 +1,23 @@
+.comment-list {
+  padding: 20px;
+  list-style: none;
+  background-color: gainsboro;
+  box-shadow: inset rgba(0,0,0,.5) -3px -3px 8px,
+   inset rgba(255,255,255,.9) 3px 3px 8px,
+   rgba(0,0,0,.8) 3px 3px 8px -3px;
+  border-radius: 10px;
+
+  &__item {
+    padding: 40px;
+    margin-bottom: 35px;
+    background-color:  whitesmoke;
+    box-shadow: inset rgba(0,0,0,.5) -3px -3px 8px,
+   inset rgba(255,255,255,.9) 3px 3px 8px,
+   rgba(0,0,0,.8) 3px 3px 8px -3px;
+    border-radius: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

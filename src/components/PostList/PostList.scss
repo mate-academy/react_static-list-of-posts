@@ -1,0 +1,17 @@
+.post-list {
+  list-style: none;
+
+  &__item {
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: inset rgba(0,0,0,.5) -3px -3px 8px,
+   inset rgba(255,255,255,.9) 3px 3px 8px,
+   rgba(0,0,0,.8) 3px 3px 8px -3px;;
+    border-radius: 10px;
+    background-color: #faf9f9;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
