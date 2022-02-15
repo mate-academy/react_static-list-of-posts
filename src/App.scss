@@ -1,1 +1,21 @@
 // styles go here
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #373737;
+  font-family: 'Mukta', sans-serif;
+
+  &__head {
+    color: aqua;
+    border: 3px solid aqua;
+    padding: 10px;
+  }
+}

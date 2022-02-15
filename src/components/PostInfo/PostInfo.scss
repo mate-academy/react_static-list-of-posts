@@ -1,0 +1,16 @@
+.info {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  &__items {
+    padding: 15px;
+    &-frame {
+      background-color: #10A5F5;
+      border-radius: 15px;
+      color: #373737;
+      & > div {
+        padding: 20px;
+      }
+    }
+  }
+}
