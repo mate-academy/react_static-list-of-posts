@@ -3,21 +3,21 @@ import { Post } from '../../types';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
-type Prop = {
+type Props = {
   posts: Post[],
 };
 
-export const PostInfo: React.FC<Prop> = ({ posts }) => {
+export const PostInfo: React.FC<Props> = ({ posts }) => {
   return (
-    <>
+    <ul className="PostInfo">
       {posts.map((prop: Post) => (
-        <div key={prop.id} className="post">
+        <li key={prop.id} className="post">
           <h2>{prop.title}</h2>
           {prop.user && <UserInfo user={prop.user} />}
           <div>{prop.body}</div>
           {prop.comments && <CommentList postComments={prop.comments} />}
-        </div>
+        </li>
       ))}
-    </>
+    </ul>
   );
 };

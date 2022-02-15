@@ -11,9 +11,9 @@ function randomDate(start: Date, end: Date) {
 
 export const CommentList: React.FC<Prop> = ({ postComments }) => {
   return (
-    <>
+    <ul className="CommentList">
       {postComments.map((comment: Comment) => (
-        <div key={comment.id} className="comment">
+        <li key={comment.id} className="comment">
           <h3>{comment.name}</h3>
           <div className="comment__info">
             <div>
@@ -24,8 +24,8 @@ export const CommentList: React.FC<Prop> = ({ postComments }) => {
             </div>
           </div>
           <p>{comment.body}</p>
-        </div>
+        </li>
       ))}
-    </>
+    </ul>
   );
 };

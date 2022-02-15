@@ -16,15 +16,29 @@ body {
   justify-content: center;
 }
 
-.post {
+.CommentList {
   display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.PostInfo {
+  display: flex;
+  padding: 5px;
+  margin: 0;
   flex-direction: column;
   align-items: center;
   min-width: 300px;
   max-width: 768px;
-  padding: 5px;
-  gap: 10px;
+  gap: 25px;
   justify-content: space-between;
+  list-style: none;
+}
+
+.post {
   border-radius: 15px;
   background-color: #20b2aa80;
 }
