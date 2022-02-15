@@ -8,7 +8,7 @@ import comments from './api/comments';
 import users from './api/users';
 
 const preparedPosts = posts.map(post => {
-  const user = users.find(u => u.id === post.userId);
+  const user = users.find(person => person.id === post.userId);
   const postComments = comments.filter(comment => comment.postId === post.id);
 
   if (!user) {
