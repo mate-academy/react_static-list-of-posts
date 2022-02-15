@@ -1,1 +1,84 @@
-// styles go here
+.App {
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #a0a057;
+  }
+}
+
+.post {
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    max-width: 600px;
+  }
+  &__body {
+    color: #fff;
+    max-width: 600px;
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  &__item {
+    padding: 10px;
+    background-color: rgb(63, 152, 207);
+    margin-bottom: 5px;
+    width: min-content;
+    min-height: 100px;
+  }
+}
+
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  background-color: #fff;
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #fff;
+    font-weight: bold;
+    margin-right: 5px;
+    height: 40px;
+    width: 300px;
+  }
+
+  &__email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #fff;
+    font-weight: bold;
+    width: 300px;
+  }
+}
+
+.item {
+  font-weight: 600;
+}
