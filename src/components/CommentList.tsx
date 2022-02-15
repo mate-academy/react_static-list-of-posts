@@ -9,16 +9,22 @@ interface Comment {
 }
 
 type CommentType = {
-  comments: Comment | undefined;
+  comment: Comment;
 };
 
-export const CommentList: React.FC<CommentType> = ({ comments = {} }) => {
+export const CommentList: React.FC<CommentType> = ({ comment }) => {
+  const {
+    name,
+    body,
+    email,
+  } = comment;
+
   return (
     <div className="commentList">
-      <h3 className="commentList__name">{comments.name}</h3>
-      <p className="commentList__body">{comments.body}</p>
-      <a href={comments.email} className="commentList__email">
-        {comments.email}
+      <h3 className="commentList__name">{name}</h3>
+      <p className="commentList__body">{body}</p>
+      <a href={email} className="commentList__email">
+        {email}
       </a>
     </div>
   );

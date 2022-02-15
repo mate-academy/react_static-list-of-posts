@@ -1,61 +1,36 @@
 import React from 'react';
 import { UserInfo } from './UserInfo';
 import { CommentList } from './CommentList';
-
-interface Comment {
-  postId: number,
-  id: number,
-  name: string,
-  email: string,
-  body: string,
-}
-
-interface User {
-  id: number,
-  name: string,
-  username: string,
-  email: string,
-  address: {
-    street: string,
-    suite: string,
-    city: string,
-    zipcode: string,
-    geo: {
-      lat: string,
-      lng: string,
-    },
-  },
-  phone: string,
-  website: string,
-  company: {
-    name: string,
-    catchPhrase: string,
-    bs: string,
-  },
-}
+import { User, Comment } from './interface';
 
 type PreparePost = {
   userId: number,
   id: number,
   title: string,
   body: string,
-  autor: User | undefined,
-  autorComments: Comment | undefined,
+  autor: User,
+  autorComments: Comment[],
 };
 
 type Prepared = {
-  post: PreparePost | undefined;
+  post: PreparePost;
 };
 
-export const PostInfo: React.FC<Prepared> = ({ post = {} }) => {
+export const PostInfo: React.FC<Prepared> = ({ post }) => {
+  const { autor, autorComments } = post;
+
   return (
     <>
       <UserInfo
-        info={post.autor}
+        info={autor}
       />
-      <CommentList
-        comments={post.autorComments}
-      />
+      {autorComments.map((comment) => {
+        return (
+          <CommentList
+            comment={comment}
+          />
+        );
+      })}
     </>
   );
 };

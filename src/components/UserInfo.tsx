@@ -1,38 +1,16 @@
 import React from 'react';
-
-interface User {
-  id: number,
-  name: string,
-  username: string,
-  email: string,
-  address: {
-    street: string,
-    suite: string,
-    city: string,
-    zipcode: string,
-    geo: {
-      lat: string,
-      lng: string,
-    },
-  },
-  phone: string,
-  website: string,
-  company: {
-    name: string,
-    catchPhrase: string,
-    bs: string,
-  },
-}
+import { User } from './interface';
 
 type Information = {
-  info: User | undefined;
+  // eslint-disable-next-line react/require-default-props
+  info?: User;
 };
 
-export const UserInfo: React.FC<Information> = ({ info = {} }) => {
+export const UserInfo: React.FC<Information> = ({ info }) => {
   return (
     <div className="userInfo">
-      <p>{info.name}</p>
-      <a href={info.email}>{info.email}</a>
+      <p>{info && info.name}</p>
+      <a href={info && info.email}>{info && info.email}</a>
     </div>
   );
 };
