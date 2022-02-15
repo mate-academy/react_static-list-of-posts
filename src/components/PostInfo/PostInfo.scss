@@ -1,0 +1,10 @@
+.info {
+  background-color:darkseagreen;
+  padding:50px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+  &__body, &__title {
+    color:aliceblue
+  }
+}
