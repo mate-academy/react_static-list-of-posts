@@ -1,0 +1,16 @@
+.post {
+  list-style-type: none;
+  padding: 20px;
+
+  &__list {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: beige;
+  }
+
+  &__name {
+    margin: 0;
+  }
+}
