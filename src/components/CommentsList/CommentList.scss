@@ -1,0 +1,9 @@
+.comments{
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    border-bottom: 2px solid rgb(250, 105, 130);
+  }
+}
