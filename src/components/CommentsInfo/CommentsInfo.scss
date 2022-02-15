@@ -1,0 +1,20 @@
+.comments {
+  &__body {
+    padding: 20px;
+    background-color: coral;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom:50px;
+    color:white;
+    max-width: 400px;
+  }
+
+  &__email {
+    margin-bottom: 60px;
+    color:darkslategray;
+  }
+
+  &__name {
+    color: khaki;
+  }
+}
