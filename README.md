@@ -15,3 +15,4 @@ Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`,
 - The `UserInfo` accepts a `user` object and renders at least a `name` and an
   `email`
 - The `CommentInfo` should show a `name`, a `body` and an `email`
+
