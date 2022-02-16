@@ -1,0 +1,20 @@
+.post-list {
+  list-style: none;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border: 4px solid midnightblue;
+  border-radius: 12px;
+  background-color: #c4d5da;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
