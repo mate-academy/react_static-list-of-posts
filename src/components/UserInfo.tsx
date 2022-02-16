@@ -2,8 +2,7 @@ import React from 'react';
 import { User } from './interface';
 
 type Information = {
-  // eslint-disable-next-line react/require-default-props
-  info?: User;
+  info: User;
 };
 
 export const UserInfo: React.FC<Information> = ({ info }) => {

@@ -13,23 +13,15 @@ type PreparePost = {
   id: number,
   title: string,
   body: string,
-  autor: User,
-  autorComments: Comment[],
+  autor: User | null,
+  postComments: Comment[],
 };
 
-const preparedPosts: PreparePost[] = posts.map((post) => {
-  const userAutoor = users.find((user) => user.id === post.userId);
-
-  if (userAutoor === undefined) {
-    throw new Error();
-  }
-
-  return {
-    ...post,
-    autor: userAutoor,
-    autorComments: comments.filter((comment) => comment.postId === post.id),
-  };
-});
+const preparedPosts: PreparePost[] = posts.map((post) => ({
+  ...post,
+  autor: users.find((user) => user.id === post.userId) || null,
+  postComments: comments.filter((comment) => comment.postId === post.id),
+}));
 
 const App: React.FC = () => (
   <PostList posts={preparedPosts} />

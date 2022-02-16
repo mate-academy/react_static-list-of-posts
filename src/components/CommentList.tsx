@@ -9,23 +9,21 @@ interface Comment {
 }
 
 type CommentType = {
-  comment: Comment;
+  comments: Comment[];
 };
 
-export const CommentList: React.FC<CommentType> = ({ comment }) => {
-  const {
-    name,
-    body,
-    email,
-  } = comment;
-
+export const CommentList: React.FC<CommentType> = ({ comments }) => {
   return (
-    <div className="commentList">
-      <h3 className="commentList__name">{name}</h3>
-      <p className="commentList__body">{body}</p>
-      <a href={email} className="commentList__email">
-        {email}
-      </a>
-    </div>
+    <ul className="commentList">
+      {comments.map((comment) => (
+        <li key={comment.id}>
+          <h3 className="commentList__name">{comment.name}</h3>
+          <p className="commentList__body">{comment.body}</p>
+          <a href={comment.email} className="commentList__email">
+            {comment.email}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };

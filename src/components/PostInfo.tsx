@@ -8,8 +8,8 @@ type PreparePost = {
   id: number,
   title: string,
   body: string,
-  autor: User,
-  autorComments: Comment[],
+  autor: User | null,
+  postComments: Comment[],
 };
 
 type Prepared = {
@@ -17,20 +17,20 @@ type Prepared = {
 };
 
 export const PostInfo: React.FC<Prepared> = ({ post }) => {
-  const { autor, autorComments } = post;
+  const {
+    autor,
+    postComments,
+    title,
+    body,
+  } = post;
 
   return (
     <>
-      <UserInfo
-        info={autor}
-      />
-      {autorComments.map((comment) => {
-        return (
-          <CommentList
-            comment={comment}
-          />
-        );
-      })}
+      <h2>{title}</h2>
+      <p>{body}</p>
+      {autor && <UserInfo info={autor} />}
+
+      <CommentList comments={postComments} />
     </>
   );
 };

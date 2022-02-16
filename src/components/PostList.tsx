@@ -7,8 +7,8 @@ type PreparePost = {
   id: number,
   title: string,
   body: string,
-  autor: User,
-  autorComments: Comment[],
+  autor: User | null,
+  postComments: Comment[],
 };
 
 type Prepared = {
