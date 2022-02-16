@@ -1,0 +1,16 @@
+.comment {
+
+  &__name {
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  &__body {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  &__email{
+    font-weight: bold;
+  }
+}
