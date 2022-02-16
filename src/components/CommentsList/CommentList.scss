@@ -1,0 +1,19 @@
+.comment-list {
+  padding: 20px;
+
+  list-style: none;
+  border-radius: 8px;
+  background-color: midnightblue;
+}
+
+.comment {
+  margin-bottom: 10px;
+  padding: 10px;
+
+  background-color: antiquewhite;
+  border-radius: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
