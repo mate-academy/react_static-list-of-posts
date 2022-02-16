@@ -8,7 +8,7 @@ import './PostInfo.scss';
 type Props = {
   title: string,
   body: string,
-  user: User,
+  user: User | null,
   comment: Comment[],
 };
 
