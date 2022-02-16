@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Prepared> = ({ post }) => {
   return (
     <>
       <UserInfo
-        info={autor}
+        user={autor}
       />
       {autorComments.map((comment) => {
         return (
