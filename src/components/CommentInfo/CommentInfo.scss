@@ -1,0 +1,16 @@
+.comment {
+  &_name {
+    font-size: 16px;
+    color: rgb(211, 85, 39);
+    text-transform: uppercase;
+  }
+
+  &_body {
+    color: rgb(28, 6, 110);
+  }
+
+  &_email {
+    color: rgb(28, 6, 110);
+    text-decoration: underline;
+  }
+}

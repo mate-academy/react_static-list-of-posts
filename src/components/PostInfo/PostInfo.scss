@@ -1,0 +1,18 @@
+.post {
+  border: 1px solid rgba(129, 107, 209, 0.1);
+  border-bottom: 4px solid rgba(129, 107, 209, 0.3);
+  border-right: 4px solid rgba(129, 107, 209, 0.3);
+  border-radius: 15px;
+  padding: 5px;
+  background-color: rgba(129, 107, 209, 0.1);
+  
+
+  &_title {
+    color: rgb(28, 6, 110);
+    text-transform: uppercase;
+  }
+
+  &_body {
+    font-size: 20px;
+  }
+}

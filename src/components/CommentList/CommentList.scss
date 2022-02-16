@@ -1,0 +1,16 @@
+.comment {
+  &_list {
+    list-style: none;
+    padding: 0;
+    margin: 5px 10px;
+  }
+  
+  &_item {
+    background-color: rgba(240, 219, 30, 0.07);
+    border-bottom: 4px solid rgba(240, 219, 30, 0.4);
+    border-right: 4px solid rgba(240, 219, 30, 0.4);
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 8px;
+  }
+}
