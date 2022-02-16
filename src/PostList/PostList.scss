@@ -1,0 +1,32 @@
+.post__item {
+  border-radius: 5px;
+  border: 1px solid dodgerblue;
+  background: linear-gradient(
+    90deg,
+    rgba(131,58,180,1) 1%, rgba(0,139,255,1) 51%,
+    rgba(84,69,252,0.38) 100%);
+  list-style: none;
+  padding: 10px;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: cornflowerblue;
+  margin: 5px;
+}
+
+.user_vs_post {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-comment {
+  text-align: center;
+}
