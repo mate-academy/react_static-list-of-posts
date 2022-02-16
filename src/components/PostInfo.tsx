@@ -29,7 +29,6 @@ export const PostInfo: React.FC<Prepared> = ({ post }) => {
       <h2>{title}</h2>
       <p>{body}</p>
       {autor && <UserInfo info={autor} />}
-
       <CommentList comments={postComments} />
     </>
   );
