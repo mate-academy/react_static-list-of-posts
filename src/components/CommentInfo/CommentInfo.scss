@@ -1,0 +1,13 @@
+.comment-item {
+  color: #fff;
+  padding: 25px;
+  border-bottom: 10px solid #fff;
+  background-color: #487549;
+  border-radius: 10px;
+
+  &__email {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #abba82;
+  }
+}
