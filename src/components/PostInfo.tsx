@@ -24,13 +24,11 @@ export const PostInfo: React.FC<Prepared> = ({ post }) => {
       <UserInfo
         user={autor}
       />
-      {autorComments.map((comment) => {
-        return (
-          <CommentList
-            comment={comment}
-          />
-        );
-      })}
+      {autorComments.map((comment) => (
+        <CommentList
+          comment={comment}
+        />
+      ))}
     </>
   );
 };
