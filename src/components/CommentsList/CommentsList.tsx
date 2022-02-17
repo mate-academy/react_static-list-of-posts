@@ -1,11 +1,10 @@
-// import { Props } from '../PostList/PostList';
 import { Comment } from '../../types';
 import './CommentsList.scss';
 
 export type Props = {
   commentsItems: Comment[];
 };
-export const CommentsList: React.FC<Props> = ({ commentsItems = [] }) => (
+export const CommentsList: React.FC<Props> = ({ commentsItems }) => (
   <ul className="commentList">
     {commentsItems.map(commentsItem => (
       <li className="commentList__item" key={commentsItem.id}>

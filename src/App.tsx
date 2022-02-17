@@ -10,8 +10,7 @@ import { PostList } from './components/PostList/PostList';
 const App: React.FC = () => {
   const preparedPosts = posts.map((post) => ({
     ...post,
-    user: users.find((user) => user.id === post.userId)
-    || null,
+    user: users.find((user) => user.id === post.userId) || null,
     comments: comments.filter((comment) => post.id === comment.postId),
   }));
 
