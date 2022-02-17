@@ -1,1 +1,17 @@
 // styles go here
+body {
+  background-color: #191919;
+  color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 10px auto;
+}

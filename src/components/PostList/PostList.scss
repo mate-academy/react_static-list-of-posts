@@ -1,0 +1,38 @@
+.postList {
+  list-style: none;
+
+  &__item {
+    margin-top: 50px;
+  }
+}
+
+.post {
+  &__item {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    background: #28282B;
+    padding: 10px;
+    margin-bottom: 20px;
+    list-style: none;
+  }
+
+  &__body {
+    border-bottom: 1px solid #555;
+    padding: 10px 10px 15px;
+  }
+
+  &__title {
+    padding: 10px 10px 15px;
+    margin: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #7edc9b;
+  }
+
+  &__userInfo {
+    padding: 10px 10px 15px;
+  }
+}

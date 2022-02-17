@@ -1,0 +1,26 @@
+.commentList {
+  font-size: 15px;
+
+  &__item {
+    background: #28282B;
+    padding: 10px;
+    margin-bottom: 20px;
+    list-style: none;
+  }
+  &__userInfo {
+    border-bottom: 1px solid #555;
+    padding: 10px 10px 15px;
+    display: flex;
+    align-items: center;
+  }
+  &__userName {
+    color: #76daff;
+    margin-right: 10px;
+  }
+  &__userEmail {
+    color: #999;
+  }
+  &__userBody {
+    padding: 10px 10px 15px;
+  }
+}
