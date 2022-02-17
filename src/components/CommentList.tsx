@@ -1,12 +1,5 @@
 import React from 'react';
-
-interface Comment {
-  postId: number,
-  id: number,
-  name: string,
-  email: string,
-  body: string,
-}
+import { Comment } from './interface';
 
 type CommentType = {
   comments: Comment[];

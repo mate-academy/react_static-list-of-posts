@@ -1,15 +1,6 @@
 import React from 'react';
 import { PostInfo } from './PostInfo';
-import { User, Comment } from './interface';
-
-type PreparePost = {
-  userId: number,
-  id: number,
-  title: string,
-  body: string,
-  autor: User | null,
-  postComments: Comment[],
-};
+import { PreparedPost } from './interface';
 
 type Prepared = {
   posts: PreparedPost[];

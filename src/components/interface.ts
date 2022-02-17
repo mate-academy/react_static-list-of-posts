@@ -19,3 +19,12 @@ export interface User {
   username: string,
   email: string,
 }
+
+export type PreparedPost = {
+  userId: number,
+  id: number,
+  title: string,
+  body: string,
+  autor: User | null,
+  postComments: Comment[],
+};
