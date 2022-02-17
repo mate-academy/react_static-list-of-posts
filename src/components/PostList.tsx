@@ -12,7 +12,7 @@ type PreparePost = {
 };
 
 type Prepared = {
-  posts: PreparePost[];
+  posts: PreparedPost[];
 };
 
 export const PostList: React.FC<Prepared> = ({ posts }) => {
