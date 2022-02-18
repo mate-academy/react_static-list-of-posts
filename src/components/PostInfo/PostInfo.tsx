@@ -1,22 +1,20 @@
-import React from 'react';
-import { Post } from '../../types/Post';
-import CommentList from '../CommentList';
-import UserInfo from '../UserInfo';
+import { PreparedPost } from '../../types/PreparedPost';
+import CommentList from '../CommentList/CommentList';
+import UserInfo from '../UserInfo/UserInfo';
 
-type Props = Omit<Post, 'id'>;
+import './PostInfo.scss';
 
-export const PostInfo: React.FC<Props> = ({
-  title,
-  body,
-  user,
-  comments,
-}) => (
+type Props = {
+  preparedPost: PreparedPost;
+};
+
+const PostInfo: React.FC<Props> = ({ preparedPost }) => (
   <>
-    <h2 className="post__title">{title}</h2>
-    <div className="user">
-      <UserInfo user={user} />
-    </div>
-    <p className="post__body">{body}</p>
-    <CommentList comments={comments} />
+    <h2 className="post-title">{preparedPost.title}</h2>
+    <p className="post-body">{preparedPost.body}</p>
+    <UserInfo user={preparedPost.user} />
+    <CommentList comments={preparedPost.comments} />
   </>
 );
+
+export default PostInfo;

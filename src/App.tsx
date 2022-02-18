@@ -1,31 +1,30 @@
 import React from 'react';
-import PostList from './components/PostList';
 
 import './App.scss';
 
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
+import PostList from './components/PostList/PostList';
 
 const preparedPosts = posts.map(post => {
-  const user = users.find(u => u.id === post.userId);
-  const postComments = comments.filter(c => c.postId === post.id);
+  const postUser = users.find(user => user.id === post.userId);
 
-  if (!user) {
-    throw new Error('User not found.');
+  if (!postUser) {
+    throw new Error('no user found');
   }
 
   return {
     ...post,
-    user,
-    comments: postComments,
+    user: postUser,
+    comments: comments.filter(comment => comment.postId === post.id),
   };
 });
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList posts={preparedPosts} />
+    <PostList preparedPosts={preparedPosts} />
   </div>
 );
 

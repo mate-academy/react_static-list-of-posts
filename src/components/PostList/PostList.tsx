@@ -1,24 +1,20 @@
-import React from 'react';
-import { Post } from '../../types/Post';
-import PostInfo from '../PostInfo';
+import { PreparedPost } from '../../types/PreparedPost';
+import PostInfo from '../PostInfo/PostInfo';
 
 import './PostList.scss';
 
 type Props = {
-  posts: Post[],
+  preparedPosts: PreparedPost[];
 };
 
-export const PostList: React.FC<Props> = ({ posts }) => (
-  <ul className="post-list">
-    {posts.map(post => (
-      <li className="post" key={post.id}>
-        <PostInfo
-          title={post.title}
-          body={post.body}
-          user={post.user}
-          comments={post.comments}
-        />
+const PostList: React.FC<Props> = ({ preparedPosts }) => (
+  <ul className="postList">
+    {preparedPosts.map(preparedPost => (
+      <li className="postList__item" key={preparedPost.title}>
+        <PostInfo preparedPost={preparedPost} />
       </li>
     ))}
   </ul>
 );
+
+export default PostList;
