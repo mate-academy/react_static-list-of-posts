@@ -1,0 +1,11 @@
+.postList {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+
+  &__item {
+    padding: 20px 40px;
+    border: 3px solid rosybrown;
+  }
+}
