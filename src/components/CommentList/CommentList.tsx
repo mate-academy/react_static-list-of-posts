@@ -4,11 +4,11 @@ import { Comment } from '../../types/Comments';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 type Props = {
-  comments: Comment[] | undefined | null;
+  comments: Comment[];
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  return comments ? (
+  return (
     <ul className="post__coment-list">
       {comments.map(el => (
         <li className="post__coment-content" key={el.id}>
@@ -16,8 +16,5 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
         </li>
       ))}
     </ul>
-  )
-    : (
-      <div>No Comments yet...</div>
-    );
+  );
 };
