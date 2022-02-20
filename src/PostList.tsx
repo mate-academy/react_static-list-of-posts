@@ -1,7 +1,7 @@
 import { PostInfo } from './PostInfo';
 import { Post } from './Type';
 
-export type Props = {
+type Props = {
   posts: Post[]
 };
 
