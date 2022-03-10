@@ -1,0 +1,24 @@
+.post {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    width: 1000px;
+    border: 2px solid brown;
+    background-color: rgb(253, 234, 209);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+    &:hover {
+      box-shadow: 9px 13px 11px 2px burlywood;
+      cursor: pointer;
+    }
+  }
+}
