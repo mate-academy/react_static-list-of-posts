@@ -1,0 +1,22 @@
+.CommentInfo {
+  padding: 5px 0 5px 10px;
+  border-left: 1px solid #999;
+
+  &__email {
+    display: block;
+    margin-bottom: 3px;
+
+    color: #444;
+  }
+
+  &__name {
+    margin: 0;
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  &__body {
+    display: block;
+    margin: 0 0 0 5px;
+  }
+}

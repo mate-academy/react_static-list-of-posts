@@ -1,0 +1,15 @@
+.PostInfo {
+  padding: 10px;
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__body {
+    margin: 0 0 15px 10px;
+  }
+
+  &__userInfo {
+    margin-bottom: 10px;
+  }
+}
