@@ -1,1 +1,30 @@
-// styles go here
+.title {
+  color: red;
+}
+
+.body {
+  color: yellowgreen;
+}
+
+.user {
+  color: blue;
+}
+
+.comment-section {
+  background-color: lightgray;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 5px;
+
+  &--name {
+    color: goldenrod;
+  }
+
+  &--body {
+    font-style: italic;
+  }
+
+  &--email {
+    font-size: large;
+  }
+}
