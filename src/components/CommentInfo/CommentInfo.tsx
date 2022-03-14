@@ -1,23 +1,23 @@
 import React from 'react';
-import { IComment } from '../../types/Comment';
+import { Comment } from '../../types/Comment';
 import './CommentInfo.scss';
 
 type CommentInfoProps = {
-  comment: IComment,
+  comment: Comment,
 };
 
 export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => (
-  <div className="CommentInfo">
-    <span className="CommentInfo__email">
+  <div className="commentInfo">
+    <span className="commentInfo__email">
       {'Email: '}
       {comment.email}
     </span>
 
-    <strong className="CommentInfo__name">
+    <strong className="commentInfo__name">
       {comment.name}
     </strong>
 
-    <p className="CommentInfo__body">
+    <p className="commentInfo__body">
       {comment.body}
     </p>
 

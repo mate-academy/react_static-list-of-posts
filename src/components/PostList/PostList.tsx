@@ -1,17 +1,17 @@
 import React from 'react';
-import { IPostRequired } from '../../types/IPost';
+import { PostRequired } from '../../types/Post';
 import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
 type PostListProps = {
-  posts: IPostRequired[],
+  posts: PostRequired[],
 };
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => (
-  <ul className="PostList">
+  <ul className="postList">
     {
       posts.map(post => (
-        <li key={post.id} className="PostList__item">
+        <li key={post.id} className="postList__item">
           <PostInfo post={post} />
         </li>
       ))

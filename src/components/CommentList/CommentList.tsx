@@ -1,19 +1,19 @@
 import React from 'react';
-import { IComment } from '../../types/Comment';
+import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type CommentListProps = {
-  comments: IComment[],
+  comments: Comment[],
 };
 
 export const CommentList: React.FC<CommentListProps> = ({ comments }) => (
-  <div className="CommentList">
-    <h3 className="CommentList__title">Comments:</h3>
+  <div className="commentList">
+    <h3 className="commentList__title">Comments:</h3>
 
-    <ul className="CommentList__list">
+    <ul className="commentList__list">
       {comments.map(comment => (
-        <li key={comment.id} className="CommentList__item">
+        <li key={comment.id} className="commentList__item">
           <CommentInfo comment={comment} />
         </li>
       ))}

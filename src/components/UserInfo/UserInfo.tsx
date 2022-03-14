@@ -1,17 +1,17 @@
 import React from 'react';
-import { IUser } from '../../types/User';
+import { User } from '../../types/User';
 import './UserInfo.scss';
 
 type UserInfoProps = {
-  user: IUser,
+  user: User,
   addClassName?: string,
 };
 
 export const UserInfo: React.FC<UserInfoProps> = ({ user, addClassName }) => (
-  <div className={`UserInfo ${addClassName}`}>
-    <strong className="UserInfo__name">{user.name}</strong>
+  <div className={`userInfo ${addClassName}`}>
+    <strong className="userInfo__name">{user.name}</strong>
     {' '}
-    <span className="UserInfo__email">
+    <span className="userInfo__email">
       {'( '}
       {user.email}
       {' )'}
