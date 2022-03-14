@@ -1,5 +1,5 @@
 # React static list of posts
-- [DEMO LINK](https://<andr1yk>.github.io/react_static-list-of-posts/)
+- [DEMO LINK](https://andr1yk.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## The task
