@@ -7,14 +7,14 @@ import { PostList } from './api/components/PostList';
 
 const preparedPosts = posts.map(post => ({
   ...post,
-  user: users.find(user => post.userId === user.id),
-  comment: comments.find(comment => post.id === comment.postId),
+  user: users.find(user => post.userId === user.id) || null,
+  comments: comments.filter(comment => post.id === comment.postId),
 }));
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList posts={preparedPosts} />
+    <PostList posts={preparedPosts} comments={[]} />
   </div>
 );
 

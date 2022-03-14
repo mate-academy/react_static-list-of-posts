@@ -38,7 +38,7 @@ export interface User {
 
 export interface Post {
   body: string;
-  comment: Comment;
+  comments: Comment[];
   id: number;
   title: string;
   user: User | null;

@@ -1,17 +1,18 @@
 import { UserInfo } from './UserInfo';
-import { CommentInfo } from './CommentInfo';
+import { CommentList } from './CommentList';
+// import { Post, User } from '../../react-app-env';
 import { Post, User, Comment } from './Interfaces';
 
 type Props = {
   post: Post;
   user: User;
-  comment: Comment;
+  comments: Comment[];
 };
 
 export const PostInfo: React.FC<Props> = ({
   post,
   user,
-  comment,
+  comments,
 }) => (
   <>
     <h1 className="title">
@@ -21,6 +22,6 @@ export const PostInfo: React.FC<Props> = ({
       {post.body}
     </p>
     {user && <UserInfo user={user} />}
-    {comment && <CommentInfo comment={comment} />}
+    <CommentList comments={comments} />
   </>
 );

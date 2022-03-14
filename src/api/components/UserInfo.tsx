@@ -1,5 +1,7 @@
 import { User } from './Interfaces';
 
+// import { User } from '../../react-app-env';
+
 type Props = {
   user: User | null;
 };

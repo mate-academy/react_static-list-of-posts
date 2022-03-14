@@ -1,11 +1,11 @@
-import { Post } from './Interfaces';
+import { Post, Comment } from './Interfaces';
 import { PostInfo } from './PostInfo';
-import { CommentList } from './CommentList';
+import comments from '../comments';
+// import { Post } from '../../react-app-env';
 
 type Props = {
   posts: Post[];
-  // user: User;
-  // comment: Comment;
+  comments: Comment[];
 };
 
 export const PostList: React.FC<Props> = ({ posts = [] }) => (
@@ -17,11 +17,10 @@ export const PostList: React.FC<Props> = ({ posts = [] }) => (
             <PostInfo
               post={post}
               user={post.user}
-              comment={post.comment}
+              comments={comments}
             />
           )}
         </li>
-        <CommentList comment={post.comment} />
       </>
     ))}
   </ul>
