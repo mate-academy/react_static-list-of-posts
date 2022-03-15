@@ -1,0 +1,12 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    text-align: center;
+  }
+  &__text {
+    text-align: center;
+  }
+}
