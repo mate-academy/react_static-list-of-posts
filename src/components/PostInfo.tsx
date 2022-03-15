@@ -23,7 +23,7 @@ export const PostInfo: React.FC<Props> = ({
         )}
     </div>
     <div className="comments">
-      {comments
+      {!!comments.length
         && (
           <CommentsList comments={comments} />
         )}
