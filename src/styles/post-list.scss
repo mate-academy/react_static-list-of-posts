@@ -1,0 +1,10 @@
+.post-list {
+  list-style: none;
+  &__item {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #03e3fc;
+  }
+}
