@@ -1,11 +1,10 @@
 import { UserInfo } from './UserInfo';
 import { CommentList } from './CommentList';
-import { Post, User, Comment } from './Interfaces';
 
 type Props = {
   post: Post;
   user: User;
-  comments: Comment[];
+  comments: PostComment[];
 };
 
 export const PostInfo: React.FC<Props> = ({

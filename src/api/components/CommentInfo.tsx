@@ -1,7 +1,5 @@
-import { Comment } from './Interfaces';
-
 type Props = {
-  comment: Comment;
+  comment: PostComment;
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (

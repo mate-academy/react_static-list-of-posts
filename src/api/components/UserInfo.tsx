@@ -1,5 +1,3 @@
-import { User } from './Interfaces';
-
 type Props = {
   user: User | null;
 };

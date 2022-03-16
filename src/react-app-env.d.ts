@@ -1,6 +1,6 @@
 /// <reference types="react-scripts" />
 
-export interface Comment {
+interface PostComment {
   body: string;
   email: string;
   id: number;
@@ -8,39 +8,16 @@ export interface Comment {
   postId: number;
 }
 
-interface Company {
-  bs: string;
-  catchPhrase: string;
-  name: string;
-}
-
-interface Geo {
-  lat: string;
-  lng: string;
-}
-
-interface Address {
-  street: string;
-  suite: string;
-  city: string;
-  zipcode: string;
-  geo: Geo;
-}
-
-export interface User {
+interface User {
   id: number;
   name: string;
   username: string;
   email: string;
-  address: Address;
-  phone: string;
-  website: string;
-  company: Company;
 }
 
-export interface Post {
+interface Post {
   body: string;
-  comments: Comment;
+  comments: PostComment[];
   id: number;
   title: string;
   user: User | null;
