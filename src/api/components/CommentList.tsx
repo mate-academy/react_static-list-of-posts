@@ -1,5 +1,4 @@
 import { Comment } from './Interfaces';
-// import { Comment } from '../../react-app-env';
 import { CommentInfo } from './CommentInfo';
 
 type Props = {

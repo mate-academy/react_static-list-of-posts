@@ -1,11 +1,8 @@
-import { Post, Comment } from './Interfaces';
+import { Post } from './Interfaces';
 import { PostInfo } from './PostInfo';
-import comments from '../comments';
-// import { Post } from '../../react-app-env';
 
 type Props = {
   posts: Post[];
-  comments: Comment[];
 };
 
 export const PostList: React.FC<Props> = ({ posts = [] }) => (
@@ -17,7 +14,7 @@ export const PostList: React.FC<Props> = ({ posts = [] }) => (
             <PostInfo
               post={post}
               user={post.user}
-              comments={comments}
+              comments={post.comments}
             />
           )}
         </li>
