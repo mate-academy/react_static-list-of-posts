@@ -25,10 +25,12 @@ export const PostInfo: React.FC<Props> = ({
     <p>
       {body}
     </p>
-    <UserInfo
-      name={user ? user.name : ''}
-      email={user ? user.email : ''}
-    />
+    {user && (
+      <UserInfo
+        name={user.name}
+        email={user.email}
+      />
+    )}
     <br />
     <div className="comment_list">
       <CommentList
