@@ -3,14 +3,10 @@ import { CommentList } from './CommentList';
 
 type Props = {
   post: Post;
-  user: User;
-  comments: PostComment[];
 };
 
 export const PostInfo: React.FC<Props> = ({
   post,
-  user,
-  comments,
 }) => (
   <>
     <h1 className="title">
@@ -19,7 +15,11 @@ export const PostInfo: React.FC<Props> = ({
     <p className="body">
       {post.body}
     </p>
-    {user && <UserInfo user={user} />}
-    <CommentList comments={comments} />
+    <div>
+      {post.user && <UserInfo user={post.user} />}
+    </div>
+    <div>
+      <CommentList comments={post.comments} />
+    </div>
   </>
 );

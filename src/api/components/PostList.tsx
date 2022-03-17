@@ -10,11 +10,7 @@ export const PostList: React.FC<Props> = ({ posts = [] }) => (
       <>
         <li key={post.id}>
           {post.user && (
-            <PostInfo
-              post={post}
-              user={post.user}
-              comments={post.comments}
-            />
+            <PostInfo post={post} />
           )}
         </li>
       </>
