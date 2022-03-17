@@ -17,8 +17,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     {
       post.user && (
         <UserInfo
-          name={post.user.name}
-          email={post.user.email}
+          user={post.user}
         />
       )
     }

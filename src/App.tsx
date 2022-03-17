@@ -5,14 +5,14 @@ import './App.scss';
 import PostList from './components/PostList';
 
 import posts from './api/posts';
-import comment from './api/comments';
+import comments from './api/comments';
 import users from './api/users';
 
 const preperedPosts = posts.map(post => {
   const user = users.find(person => person.id === post.userId) || null;
-  const comments = comment.filter(comm => comm.postId === post.id);
+  const filteredComments = comments.filter(comment => comment.postId === post.id);
 
-  return { ...post, user, comments };
+  return { ...post, user, filteredComments };
 });
 
 const App: React.FC = () => (
