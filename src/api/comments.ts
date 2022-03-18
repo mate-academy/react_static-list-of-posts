@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-
 const comments = [
   {
     postId: 1,
