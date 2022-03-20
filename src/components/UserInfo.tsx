@@ -4,8 +4,7 @@ import { User } from '../types/User';
 type Props = User;
 
 export const UserInfo: React.FC<Props> = ({
-  name,
-  email,
+  name, email,
 }) => {
   return (
     <div className="user">

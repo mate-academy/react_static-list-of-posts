@@ -10,9 +10,8 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
   <>
     {comments.map(comment => (
       <CommentInfo
-        name={comment.name}
-        body={comment.body}
-        email={comment.email}
+        key={comment.id}
+        comment={comment}
       />
     ))}
   </>
