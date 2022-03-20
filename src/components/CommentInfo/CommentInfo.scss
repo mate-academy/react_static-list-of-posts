@@ -1,0 +1,40 @@
+.comments {
+  list-style: none;
+  margin-bottom: -40px;
+}
+
+.comment {
+  margin: 0 0 25px;
+  padding: 0 0 15px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__name {
+    margin: 0 0 15px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    text-align: justify;
+    margin: 0 0 15px;
+  }
+
+  &__email {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    color: #888;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: #af2b2b;
+    }
+  }
+}
