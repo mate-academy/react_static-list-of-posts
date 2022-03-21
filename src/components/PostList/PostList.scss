@@ -1,0 +1,14 @@
+.post-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__item {
+    margin-bottom: 24px;
+    padding: 24px;
+    width: 90%;
+    background-color: lightcyan;
+    border-radius: 12px;
+  }
+}

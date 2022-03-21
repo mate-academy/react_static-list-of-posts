@@ -1,0 +1,22 @@
+.comments {
+  margin-left: auto;
+  width: 95%;
+}
+
+.comments-list {
+  list-style: none;
+  &--title {
+    position: relative;
+    margin-bottom: 24px;
+
+    &::after {
+      position: absolute;
+      bottom: -8px;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: rosybrown;
+    }
+  }
+}

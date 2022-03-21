@@ -1,1 +1,24 @@
 // styles go here
+@font-face {
+  font-family: 'Fredoka', sans-serif;
+  src: url();
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color:lightblue;
+}
+
+.App {
+  &__title {
+    text-align: center;
+    margin: 48px auto;
+  }
+}

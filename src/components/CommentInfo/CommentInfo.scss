@@ -1,0 +1,28 @@
+.comment-item {
+  margin-left: auto;
+  position: relative;
+  width: 95%;
+  margin-bottom: 18px;
+
+  &:not(:last-child):after {
+    position: absolute;
+    bottom: -12px;
+    display: block;
+    content:"";
+    width: 100%;
+    height: 1px;
+    background-color: #888;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+  }
+
+  &__body {
+    margin-bottom: 8px;
+  }
+
+  &__email {
+    text-align: right;
+  }
+}
