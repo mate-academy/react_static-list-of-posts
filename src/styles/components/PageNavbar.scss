@@ -1,0 +1,25 @@
+.PageNavbar {
+  padding: 10px 0;
+  letter-spacing: -1.5px;
+  line-height: 125%;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__button {
+    font-weight: 500;
+    color: #575757;
+  }
+
+  &__date {
+    font-size: 1.25rem;
+
+    &-weekday {
+      font-size: 1rem;
+      font-weight: 400;
+      color: lightgrey;
+    }
+  }
+}

@@ -1,15 +1,20 @@
 import React from 'react';
-
 import './App.scss';
+import { PostList } from './components/PostList';
+import { getPreparedPosts } from './api/helpers';
+import { PageNavbar } from './components/PageNavbar';
 
-// import posts from './api/posts';
-// import comments from './api/comments';
-// import users from './api/users';
-
-const App: React.FC = () => (
+export const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <header>
+      <PageNavbar
+        brandTitle="YourPosts"
+        requestSample="post"
+      />
+    </header>
+
+    <main>
+      <PostList posts={getPreparedPosts()} />
+    </main>
   </div>
 );
-
-export default App;
