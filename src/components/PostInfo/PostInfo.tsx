@@ -5,7 +5,7 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 type Props = {
-  post: Pick<Post, 'user' | 'comments'>;
+  post: Omit<Post, 'id'>;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
@@ -14,6 +14,17 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <div className="PostInfo__author">
         <UserInfo user={post.user} />
       </div>
+
+      <div className="PostInfo__content">
+      </div>
+        <Card.Title>
+          {post.title}
+        </Card.Title>
+
+        <Card.Subtitle>
+          {post.body}
+        </Card.Subtitle>
+
 
       <CommentList comments={post.comments} />
     </Card.Body>

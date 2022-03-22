@@ -1,1 +1,7 @@
 @import "./styles/style";
+
+.App {
+  &__main {
+    padding: 0 20px;
+  }
+}

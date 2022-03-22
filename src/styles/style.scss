@@ -1,5 +1,6 @@
-@import "./reset";
-@import "./normalize";
+@import "./utils/vars";
+@import "./utils/reset";
+@import "./utils/normalize";
 
 @import "./components/UserInfo";
 @import "./components/CommentInfo";

@@ -13,7 +13,9 @@ export const App: React.FC = () => (
       />
     </header>
 
-    <main>
+    <main
+      className="App__main d-flex justify-content-center"
+    >
       <PostList posts={getPreparedPosts()} />
     </main>
   </div>

@@ -1,0 +1,22 @@
+.UserInfo {
+  width: max-content;
+  padding: 12px 12px 5px 10px;
+  background-color: $c-light-gray;
+  box-shadow: $bsh-variant-1;
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__fullName {
+    line-height: 50%;
+    margin: 0;
+  }
+
+  &__email {
+    padding: 0;
+    font-size: 14px;
+    text-decoration: none;
+  }
+}
