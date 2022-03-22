@@ -11,7 +11,10 @@ export const PostList: React.FC<Props> = ({ posts }) => (
     <ul className="PostList__list">
       {
         posts.map(post => (
-          <li className="PostList__item" key={post.id}>
+          <li
+            className="PostList__list-item"
+            key={post.id}
+          >
             <PostInfo post={post} />
           </li>
         ))

@@ -1,8 +1,26 @@
 .CommentInfo {
   max-width: 75vw;
-  text-wrap: normal;
+  @extend %bs-primary;
 
   &__name {
     margin: 0;
+    padding-bottom: 5px;
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 50%;
+  }
+
+  &__email {
+    display: block;
+    border-bottom: 2px solid $c-sky-blue;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  &__body {
+    margin-top: 5px;
+    color: $c-dark-gray;
+    line-height: 110%;
   }
 }

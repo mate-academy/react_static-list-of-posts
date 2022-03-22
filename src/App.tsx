@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import { PostList } from './components/PostList';
-import { getPreparedPosts } from './api/helpers';
+import { getPreparedPosts } from './addons/helpers';
 import { PageNavbar } from './components/PageNavbar';
 
 export const App: React.FC = () => (

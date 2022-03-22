@@ -1,3 +1,13 @@
 .CommentList {
   padding-left: 25px;
+
+  &__title {
+    margin-top: 5px;
+  }
+
+  &__list {
+    &-item {
+      margin-bottom: 5px;
+    }
+  }
 }

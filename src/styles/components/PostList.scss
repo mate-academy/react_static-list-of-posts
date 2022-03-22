@@ -1,5 +1,11 @@
 .PostList {
-  padding: 20px;
+  padding: 5px 40px;
   width: max-content;
-  box-shadow: $bsh-variant-1;
+  @extend %bs-primary;
+
+  &__list {
+    &-item {
+      margin-bottom: 10px;
+    }
+  }
 }

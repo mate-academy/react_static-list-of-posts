@@ -1,6 +1,7 @@
-import posts from './posts';
-import comments from './comments';
-import users from './users';
+import posts from '../api/posts';
+import comments from '../api/comments';
+import users from '../api/users';
+
 import { Comment } from '../types/Comment';
 import { Post } from '../types/Post';
 

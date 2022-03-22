@@ -11,7 +11,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
 
   return (
     <Card className="CommentInfo">
-      <Card.Body className="CommentInfo__container">
+      <Card.Body>
         <Card.Title className="CommentInfo__name">
           {comment.name}
         </Card.Title>

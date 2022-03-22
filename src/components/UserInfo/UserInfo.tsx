@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { User } from '../../types/User';
+
 import avatar from '../../images/avatar.png';
 
 type Props = {

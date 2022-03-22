@@ -1,5 +1,6 @@
-import ReactDOM from 'react-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+import ReactDOM from 'react-dom';
 import { App } from './App';
 
 ReactDOM.render(

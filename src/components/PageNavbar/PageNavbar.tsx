@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../styles/components/PageNavbar.scss';
 import {
   Button,
@@ -7,7 +6,9 @@ import {
   Form,
   FormControl,
 } from 'react-bootstrap';
-import { PageDate } from '../../api/time';
+
+import React from 'react';
+import { PageDate } from '../../addons/time';
 
 type Props = {
   brandTitle: string;
@@ -24,7 +25,11 @@ export const PageNavbar: React.FC<Props> = ({
       <Container className="d-flex justify-content-between">
         <Navbar.Brand
           href="#"
-          className="PageNavbar__title d-flex align-items-center"
+          className="
+            PageNavbar__title
+            d-flex
+            align-items-center
+            "
         >
           {`${brandTitle} | `}
 
@@ -52,7 +57,10 @@ export const PageNavbar: React.FC<Props> = ({
             aria-label="Search"
           />
 
-          <Button className="PageNavbar__button me-2" variant="light">
+          <Button
+            className="PageNavbar__button me-2"
+            variant="light"
+          >
             Search
           </Button>
         </Form>

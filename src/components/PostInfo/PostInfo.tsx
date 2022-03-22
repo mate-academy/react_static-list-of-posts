@@ -10,21 +10,18 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <Card className="PostInfo">
-    <Card.Body className="PostInfo__container">
-      <div className="PostInfo__author">
-        <UserInfo user={post.user} />
-      </div>
+    <Card.Body>
+      <UserInfo user={post.user} />
 
       <div className="PostInfo__content">
-      </div>
-        <Card.Title>
+        <Card.Title className="PostInfo__title">
           {post.title}
         </Card.Title>
 
-        <Card.Subtitle>
+        <Card.Subtitle className="PostInfo__body">
           {post.body}
         </Card.Subtitle>
-
+      </div>
 
       <CommentList comments={post.comments} />
     </Card.Body>
