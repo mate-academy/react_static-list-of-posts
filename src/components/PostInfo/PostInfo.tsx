@@ -1,15 +1,15 @@
 import React from 'react';
-import { Users } from '../../types/Users';
+import { User } from '../../types/User';
 import { UserInfo } from '../UserInfo';
-import { Comments } from '../../types/Comments';
+import { Comment } from '../../types/Comment';
 import { CommentsList } from '../CommentsList';
 import './PostInfo.scss';
 
 type Props = {
   title: string;
   body: string;
-  user: Users | undefined;
-  comments: Comments[];
+  user: User | undefined;
+  comments: Comment[];
 };
 
 export const PostInfo: React.FC<Props> = ({

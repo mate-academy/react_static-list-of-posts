@@ -1,10 +1,10 @@
 import React from 'react';
 import './UserInfo.scss';
 
-import { Users } from '../../types/Users';
+import { User } from '../../types/User';
 
 type Props = {
-  user: Users | undefined;
+  user: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
@@ -14,8 +14,8 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
     </h2>
 
     <p className="user-info__email">
-      <a href={`mailto:${user?.email}`} className="user-info__email--link">
-        {user?.email}
+      <a href={`mailto:${user.email}`} className="user-info__email--link">
+        {user.email}
       </a>
     </p>
   </div>
