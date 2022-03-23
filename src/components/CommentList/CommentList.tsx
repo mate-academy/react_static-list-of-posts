@@ -12,7 +12,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
     Comments:
     <ol className="Comment__list">
       {comments && comments.map(comment => (
-        <li className="Comment__item">
+        <li className="Comment__item" key={comment.id}>
           <CommentInfo comment={comment} />
         </li>
       ))}
