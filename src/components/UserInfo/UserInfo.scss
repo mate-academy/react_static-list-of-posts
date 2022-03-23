@@ -1,0 +1,13 @@
+.User {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+
+  &__profile-photo {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    background-color: black;
+  }
+}

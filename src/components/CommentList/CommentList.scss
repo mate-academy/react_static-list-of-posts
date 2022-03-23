@@ -1,0 +1,32 @@
+.Comment {
+  font-weight: bold;
+
+  &__list {
+    list-style: none;
+    padding: 30px;
+    display: grid;
+    gap: 30px;
+  }
+
+  &__item {
+    display: grid;
+    padding: 15px;
+    gap: 5px;
+
+    border: 2px solid black;
+  }
+
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__text {
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+
+  &__mail {
+    font-size: 0.5em;
+    font-weight: bold;
+  }
+}

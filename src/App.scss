@@ -1,1 +1,15 @@
-// styles go here
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;600&display=swap');
+
+
+body,
+h1,
+h2,
+h3,
+h6 {
+  margin: 0;
+}
+
+.App {
+  font-family: 'M PLUS 1', sans-serif;
+  background-color: black;
+}

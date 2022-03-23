@@ -1,0 +1,24 @@
+.Post {
+  padding: 50px;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    gap: 50px;
+  }
+
+  &__item {
+    padding: 20px;
+    background-color: aquamarine;
+
+    display: grid;
+    gap: 20px;
+  }
+
+  &__text {
+    font-weight: 300;
+  }
+}
