@@ -6,6 +6,6 @@ export const readyPosts = posts.map(post => {
   return {
     ...post,
     user: users.find(user => user.id === post.userId) || null,
-    comments: comments.filter(comment => comment.postId === post.id) || null,
+    comments: comments.filter(comment => comment.postId === post.id) || [],
   };
 });
