@@ -17,7 +17,7 @@ Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`,
 1. The `CommentInfo` should show a `name`, a `body` and an `email`
 
 REQUIREMENTS:
-   - `preparedPosts` array should contain `data-cy="post-info"` attribute
+   - `preparedPosts` list should contain `data-cy="post-info"` attribute
    - `title` of each `post` in `PostInfo` should contain `data-cy="post-title"` attribute
    - `body` of each `post` in `PostInfo` should contain `data-cy="post-body"` attribute
    - `name` of the user in `UserInfo` should contain `data-cy="name"` attribute

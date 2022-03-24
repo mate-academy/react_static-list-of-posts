@@ -1,93 +1,69 @@
-'use strict';
-
-const posts = require('../../src/api/posts.ts');
-const users = require('../../src/api/users.ts');
-const comments = require('../../src/api/comments.ts');
+import posts from '../../src/api/posts.ts'
+import users from '../../src/api/users.ts'
+import comments from '../../src/api/comments.ts'
 
 describe('Page', () => {
   before(() => {
     cy.visit('/');
   });
 
-  it('contsins 100 posts', () => {
-    cy.get('[data-cy="post-info"]').should('have.length', 100);
+  it('consists of 100 posts', () => {
+    cy.getByDataCy('post-info').should('have.length', 100);
   });
 
   it('contains posts with 5 comments for each', () => {
-    for (let i = 0; i < posts.default.length; i++) {
-      cy.get('[data-cy="post-info"]')
-        .eq(i)
-        .find('[data-cy="comments-list"]')
-        .children().should('have.length', 5);
-    }
+    cy.getByDataCy('post-info')
+      .eq(0)
+      .find('[data-cy="comments-list"]')
+      .children().should('have.length', 5);
   });
 
   it('contains posts of each user with their names', () => {
-    for (let i = 0; i < users.default.length; i++) {
-      cy.get('[data-cy="post-info"]')
-        .eq(i * 10)
-        .find('[data-cy="name"]')
-        .should('contain', users.default[i].name);
-    }
+    cy.getByDataCy('post-info')
+      .eq(1)
+      .find('[data-cy="name"]')
+      .should('contain', users[0].name);
   });
 
   it('contains posts of each user with their emails', () => {
-    for (let i = 0; i < users.default.length; i++) {
-      cy.get('[data-cy="post-info"]')
-        .eq(i * 10)
-        .find('[data-cy="email"]')
-        .should('contain', users.default[i].email);
-    }
+    cy.getByDataCy('post-info')
+      .eq(2)
+      .find('[data-cy="email"]')
+      .should('contain', users[0].email);
   });
 
   it('contains posts with title', () => {
-    for (let i = 0; i < posts.default.length; i++) {
-      cy.get('[data-cy="post-info"]')
-      .eq(i)
+    cy.getByDataCy('post-info')
+      .eq(3)
       .find('[data-cy="post-title"]')
-      .should('contain', posts.default[i].title);
-    }
+      .should('contain', posts[3].title);
   });
 
   it('contains posts with body', () => {
-    for (let i = 0; i < posts.default.length; i++) {
-      cy.get('[data-cy="post-info"]')
-      .eq(i)
+    cy.getByDataCy('post-info')
+      .eq(4)
       .find('[data-cy="post-body"]')
-      .should('contain', posts.default[i].body);
-    }
+      .should('contain', posts[4].body);
   });
 
   it('contains comments with bodies', () => {
-    for (let i = 0; i < 5; i++) {
-      const num = Math.floor(Math.random() * 100);
-
-      cy.get('[data-cy="post-info"]')
-      .eq(num)
+    cy.getByDataCy('post-info')
+      .eq(0)
       .find('[data-cy="comment-body"]')
-      .eq(i).should('contain', comments.default[(num * 5) + i].body);
-    }
+      .eq(0).should('contain', comments[0].body);
   });
 
   it('contains comments with name of publisher', () => {
-    for (let i = 0; i < 5; i++) {
-      const num = Math.floor(Math.random() * 100);
-
-      cy.get('[data-cy="post-info"]')
-      .eq(num)
+    cy.getByDataCy('post-info')
+      .eq(0)
       .find('[data-cy="comment-name"]')
-      .eq(i).should('contain', comments.default[(num * 5) + i].name);
-    }
+      .eq(0).should('contain', comments[0].name);
   });
 
   it('contains comments with email of publisher', () => {
-    for (let i = 0; i < 5; i++) {
-      const num = Math.floor(Math.random() * 100);
-
-      cy.get('[data-cy="post-info"]')
-      .eq(num)
+    cy.getByDataCy('post-info')
+      .eq(0)
       .find('[data-cy="comment-email"]')
-      .eq(i).should('contain', comments.default[(num * 5) + i].email);
-    }
+      .eq(0).should('contain', comments[0].email);
   });
 });
