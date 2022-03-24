@@ -8,62 +8,59 @@ describe('Page', () => {
   });
 
   it('consists of 100 posts', () => {
-    cy.getByDataCy('post-info').should('have.length', 100);
+    cy.getByDataCy('post-info')
+      .should('have.length', posts.length);
   });
 
   it('contains posts with 5 comments for each', () => {
     cy.getByDataCy('post-info')
-      .eq(0)
-      .find('[data-cy="comments-list"]')
-      .children().should('have.length', 5);
+      .selectElement('comments-list')
+      .children()
+      .should('have.length', 5);
   });
 
   it('contains posts of each user with their names', () => {
     cy.getByDataCy('post-info')
-      .eq(1)
-      .find('[data-cy="name"]')
+      .selectElement('name', 1)
       .should('contain', users[0].name);
   });
 
   it('contains posts of each user with their emails', () => {
     cy.getByDataCy('post-info')
-      .eq(2)
-      .find('[data-cy="email"]')
+      .selectElement('email', 2)
       .should('contain', users[0].email);
   });
 
   it('contains posts with title', () => {
     cy.getByDataCy('post-info')
-      .eq(3)
-      .find('[data-cy="post-title"]')
+      .selectElement('post-title', 3)
       .should('contain', posts[3].title);
   });
 
   it('contains posts with body', () => {
     cy.getByDataCy('post-info')
-      .eq(4)
-      .find('[data-cy="post-body"]')
+      .selectElement('post-body', 4)
       .should('contain', posts[4].body);
   });
 
   it('contains comments with bodies', () => {
     cy.getByDataCy('post-info')
+      .selectElement('comment-body')
       .eq(0)
-      .find('[data-cy="comment-body"]')
-      .eq(0).should('contain', comments[0].body);
+      .should('contain', comments[0].body);
   });
 
   it('contains comments with name of publisher', () => {
     cy.getByDataCy('post-info')
+      .selectElement('comment-name')
       .eq(0)
-      .find('[data-cy="comment-name"]')
-      .eq(0).should('contain', comments[0].name);
+      .should('contain', comments[0].name);
   });
 
   it('contains comments with email of publisher', () => {
     cy.getByDataCy('post-info')
+      .selectElement('comment-email')
       .eq(0)
-      .find('[data-cy="comment-email"]')
-      .eq(0).should('contain', comments[0].email);
+      .should('contain', comments[0].email);
   });
 });
