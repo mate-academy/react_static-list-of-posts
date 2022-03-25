@@ -1,0 +1,16 @@
+.post {
+  border: 1px solid rgb(147, 147, 218);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(182, 204, 238);
+  margin: 10px auto;
+  max-width: 800px;
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+}
