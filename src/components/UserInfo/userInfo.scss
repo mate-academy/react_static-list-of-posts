@@ -1,0 +1,11 @@
+.user-info {
+  text-align: right;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    font-style: italic;
+  }
+}
