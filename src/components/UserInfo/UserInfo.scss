@@ -1,0 +1,18 @@
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #000;
+  background-color: lightgray;
+  margin: 0 10px;
+  
+  &__name {
+    font-style: italic;
+    align-self: center;
+  }
+
+  &__email {
+    font-style: italic;
+    align-self: center;
+  }
+}
