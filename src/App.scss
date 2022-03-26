@@ -1,1 +1,11 @@
-// styles go here
+body {
+  padding: 0;
+  margin: 0;
+  background-color: purple;
+}
+
+.mainTitle {
+  display: flex;
+  justify-content: center;
+  color: burlywood
+}
