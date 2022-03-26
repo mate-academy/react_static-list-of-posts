@@ -1,0 +1,7 @@
+.post__title {
+  margin-bottom: 0;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
