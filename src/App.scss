@@ -1,1 +1,38 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inconsolata", monospace;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+div,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.app {
+  padding: 30px 60px;
+  background-color: #444;
+
+  &__title {
+    margin: 0 auto;
+    max-width: 1024px;
+    
+    margin-bottom: 30px;
+    color: #c2fff5;
+  }
+}
