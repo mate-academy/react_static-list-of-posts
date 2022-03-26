@@ -1,0 +1,15 @@
+.posts {
+  background-color: rgb(46, 207, 167);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 0;
+
+  &__post {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(134, 255, 227);
+  }
+}

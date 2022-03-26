@@ -1,0 +1,16 @@
+.post {
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+
+  &__user {
+    text-align: right;
+  }
+}

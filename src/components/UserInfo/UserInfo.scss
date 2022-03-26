@@ -1,0 +1,10 @@
+.user {
+  &__name {
+    margin: 0;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: gray;
+  }
+}
