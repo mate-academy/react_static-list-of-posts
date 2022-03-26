@@ -1,1 +1,15 @@
-// styles go here
+body {
+  background-color: lightblue;
+}
+
+.App {
+  background-color: rgb(228, 252, 172);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  box-shadow: 0 0 10px;
+  border-radius: 15px;
+  padding: 20px;
+}
