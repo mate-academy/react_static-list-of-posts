@@ -19,15 +19,7 @@ export interface Comment {
   body: string;
 }
 
-export interface AllPosts extends Post {
+export type AllPosts = Post & {
   user?: User;
   comments?: Comment[];
-}
-
-/**
- *    postId: 1,
-    id: 1,
-    name: 'id labore ex et quam laborum',
-    email: 'Eliseo@gardner.biz',
-    body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo ne
- */
+};

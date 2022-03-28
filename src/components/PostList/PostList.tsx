@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { AllPosts } from '../../types';
 import { PostInfo } from '../PostInfo/PostInfo';
 
-interface Props {
+type Props = {
   posts: AllPosts[];
-}
+};
 
 export const PostList: FC<Props> = ({ posts }) => (
   <>

@@ -13,9 +13,9 @@ export const UserInfo: FC<Props> = ({ user }) => {
       </h4>
       <a
         className="UserInfo__email"
-        href={`{mailto:${user?.email}}`}
+        href={`{mailto:${user.email}}`}
       >
-        {user?.email}
+        {user.email}
       </a>
     </div>
   );
