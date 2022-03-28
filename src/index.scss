@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background-color: whitesmoke;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: lowercase;
+  color: #4879c7;
+}
+
+ul {
+  padding: 0;
+}
