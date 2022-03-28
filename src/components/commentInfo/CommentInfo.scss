@@ -1,0 +1,24 @@
+.comment {
+  &_title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &_name {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &_mail {
+    text-decoration: none;
+    color: black;
+
+    margin-bottom: 20px;
+  }
+
+  &_body {
+    text-transform: uppercase;
+  }
+}

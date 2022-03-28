@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 import './App.scss';
 import { User } from './components/types/User';
-import { Comments } from './components/types/comments';
-import { Posts, FullPost } from './components/types/Posts';
+import { Comment } from './components/types/comment';
+import { Post, FullPost } from './components/types/Post';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
@@ -11,8 +11,8 @@ import usersFromServer from './api/users';
 import { PostList } from './components/PostList/PostList';
 
 function preparedPosts(
-  posts: Posts[],
-  comments: Comments[],
+  posts: Post[],
+  comments: Comment[],
   users: User[],
 ): FullPost[] {
   return posts.map((post) => ({
@@ -25,7 +25,5 @@ function preparedPosts(
 const preparePosts = preparedPosts(postsFromServer, commentsFromServer, usersFromServer);
 
 export const App: FC = () => (
-  <>
-    <PostList posts={preparePosts} />
-  </>
+  <PostList posts={preparePosts} />
 );

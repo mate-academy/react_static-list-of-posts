@@ -1,7 +1,8 @@
 import { FC } from 'react';
-import { FullPost } from '../types/Posts';
+import { FullPost } from '../types/Post';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../commentList/CommentList';
+import './PostInfo.scss';
 
 interface Props {
   post: FullPost;

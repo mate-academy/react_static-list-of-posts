@@ -1,0 +1,17 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  margin: 15px 20px 20px 0;
+
+  &_name {
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &_mail {
+    text-decoration: none;
+    color: black;
+  }
+}
