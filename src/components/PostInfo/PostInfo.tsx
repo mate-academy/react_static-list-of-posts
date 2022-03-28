@@ -19,7 +19,7 @@ export const PostInfo: FC<Props> = ({ post }) => {
         {post.user && <UserInfo user={post.user} />}
       </article>
 
-      {post.comments?.length && <CommentList comments={post.comments} />}
+      {!!post.comments?.length && <CommentList comments={post.comments} />}
     </div>
   );
 };
