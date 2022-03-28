@@ -1,0 +1,52 @@
+.post {
+  &__title {
+    display: block;
+
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 23px;
+    background-color: rgba(32, 96, 246, 0.1);
+
+    font-family: "Arial Black", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2060f6;
+  }
+
+  &__body {
+    padding: 20px 5px;
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #121212;
+    background-color: aliceblue;
+  }
+
+  &__comments {
+    display: block;
+    padding: 20px;
+    background: rgba(148, 188, 225, 0.2);
+    box-shadow: 0 9px 18px rgba(48, 28, 52, 0.1);
+    border-radius: 16px;
+
+    font-size: 14px;
+  }
+}
+
+.comments {
+  &__item {
+    display: block;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: rgba(148, 188, 225, 0.2);
+    box-shadow: 0 9px 18px rgba(48, 28, 52, 0.1);
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+}

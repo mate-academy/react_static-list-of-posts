@@ -1,0 +1,23 @@
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 20px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: aliceblue;
+    box-shadow: 0 9px 18px rgba(37, 41, 49, 0.1);
+    border-radius: 16px;
+  }
+}
