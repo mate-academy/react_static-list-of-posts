@@ -19,7 +19,7 @@ export interface Comment {
   body: string;
 }
 
-export type AllPosts = Post & {
+export type AllPost = Post & {
   user?: User;
   comments?: Comment[];
 };

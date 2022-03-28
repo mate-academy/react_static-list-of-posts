@@ -1,5 +1,5 @@
 import {
-  AllPosts,
+  AllPost,
   Comment,
   Post,
   User,
@@ -12,7 +12,7 @@ function createPosts(
   posts: Post[],
   users: User[],
   comments: Comment[],
-): AllPosts[] {
+): AllPost[] {
   return posts.map((post) => ({
     ...post,
     user: users.find(user => user.id === post.userId),

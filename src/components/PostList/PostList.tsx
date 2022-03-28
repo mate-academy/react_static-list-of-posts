@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { AllPosts } from '../../types';
+import { AllPost } from '../../types';
 import { PostInfo } from '../PostInfo/PostInfo';
 
 type Props = {
-  posts: AllPosts[];
+  posts: AllPost[];
 };
 
 export const PostList: FC<Props> = ({ posts }) => (

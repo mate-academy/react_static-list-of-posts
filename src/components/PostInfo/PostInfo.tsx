@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
-import { AllPosts } from '../../types';
+import { AllPost } from '../../types';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 type Props = {
-  post: AllPosts;
+  post: AllPost;
 };
 
 export const PostInfo: FC<Props> = ({ post }) => {
@@ -18,7 +18,7 @@ export const PostInfo: FC<Props> = ({ post }) => {
 
         {post.user && <UserInfo user={post.user} />}
       </article>
-
+      {/* without ? -> error - Object is possibly 'undefined'.ts(2532) */}
       {!!post.comments?.length && <CommentList comments={post.comments} />}
     </div>
   );
