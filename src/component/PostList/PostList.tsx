@@ -6,13 +6,13 @@ import { PreparedPost } from '../../types/PreparedPost';
 import { PostInfo } from '../PostInfo';
 
 interface Props {
-  preparedPosts: PreparedPost[]
+  posts: PreparedPost[]
 }
 
-export const PostList: React.FC<Props> = ({ preparedPosts }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="container">
     <ul className="posts">
-      {preparedPosts.map((post) => (
+      {posts.map((post) => (
         <li
           key={post.id}
           className="posts__item post"
