@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { Comment } from '../../types';
 import './CommentInfo.scss';
 
-interface Props {
+type Props = {
   comment: Comment;
-}
+};
 
 export const CommentInfo: FC<Props> = ({ comment }) => {
   return (

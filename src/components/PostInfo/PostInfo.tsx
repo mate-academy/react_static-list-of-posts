@@ -1,13 +1,13 @@
 import { FC } from 'react';
+
 import { AllPosts } from '../../types';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
-// import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
-interface Props {
+type Props = {
   post: AllPosts;
-}
+};
 
 export const PostInfo: FC<Props> = ({ post }) => {
   return (

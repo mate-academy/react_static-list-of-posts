@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { User } from '../../types';
 
-interface Props {
+type Props = {
   user: User;
-}
+};
 
 export const UserInfo: FC<Props> = ({ user }) => {
   return (
