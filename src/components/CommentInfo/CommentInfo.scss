@@ -1,0 +1,17 @@
+.CommentInfo {
+  &__comment {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-style: italic;
+    color: #111;
+  }
+
+  &__email {
+    font-size: 14px;
+  }
+}
