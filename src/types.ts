@@ -21,5 +21,5 @@ export interface Comment {
 
 export type AllPost = Post & {
   user?: User;
-  comments?: Comment[];
+  comments: Comment[];
 };

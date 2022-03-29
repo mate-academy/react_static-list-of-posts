@@ -18,8 +18,8 @@ export const PostInfo: FC<Props> = ({ post }) => {
 
         {post.user && <UserInfo user={post.user} />}
       </article>
-      {/* without ? -> error - Object is possibly 'undefined'.ts(2532) */}
-      {!!post.comments?.length && <CommentList comments={post.comments} />}
+
+      {!!post.comments.length && <CommentList comments={post.comments} />}
     </div>
   );
 };
