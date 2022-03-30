@@ -3,7 +3,7 @@ import { Comment } from './Comment';
 
 export interface Post {
   user: User | null;
-  comment: Comment[] | null;
+  comments: Comment[] | null;
   userId: number;
   id: number;
   title: string;

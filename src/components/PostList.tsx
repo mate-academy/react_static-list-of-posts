@@ -17,7 +17,7 @@ export const PostList: React.FC<Props> = ({ listOfPosts }) => (
           body={itemPost.body}
         />
 
-        {itemPost.user && itemPost.user
+        {itemPost.user
           ? (
             <UserInfo
               email={itemPost.user.email}
@@ -31,9 +31,9 @@ export const PostList: React.FC<Props> = ({ listOfPosts }) => (
           )}
         <ul>
           <h3>Comments:</h3>
-          {itemPost.comment && itemPost.comment
+          {itemPost.comments
             ? (
-              itemPost.comment.map((itemComment) => (
+              itemPost.comments.map((itemComment) => (
                 <li key={itemComment.id}>
                   <CommentList comment={itemComment} />
                 </li>

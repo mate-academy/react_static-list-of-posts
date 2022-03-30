@@ -8,19 +8,17 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 
-const preparedPosts: Post[] = [];
-
-posts.forEach((post) => {
+const preparedPosts: Post[] = posts.map((post) => {
   const currentUser = users.find((user) => user.id === post.userId);
-  const currentComment = comments.filter((comment) => comment.postId === post.id);
+  const currentComments = comments.filter((comment) => comment.postId === post.id);
 
   const preparedPost: Post = {
     user: currentUser || null,
-    comment: currentComment || null,
+    comments: currentComments || null,
     ...post,
   };
 
-  preparedPosts.push(preparedPost);
+  return preparedPost;
 });
 
 const App: React.FC = () => (
