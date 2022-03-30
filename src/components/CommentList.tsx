@@ -1,6 +1,7 @@
 import React from 'react';
 import { Comment } from '../types';
 import { CommentInfo } from './CommentInfo';
+import './CommentList.scss';
 
 interface Props {
   comments: Comment[];

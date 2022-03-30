@@ -1,0 +1,13 @@
+.PostInfo {
+  &__title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  &__body {
+    font-weight: 300;
+    padding-right: 300px;
+    margin-bottom: 30px;
+  }
+}

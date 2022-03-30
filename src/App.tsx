@@ -8,7 +8,7 @@ import {
 } from './types';
 import { PostList } from './components/PostList';
 
-function prepare(posts: Post[], comments: Comment[], users: User[]): PreparedPost[] {
+function preparePosts(posts: Post[], comments: Comment[], users: User[]): PreparedPost[] {
   return posts.map((post) => ({
     ...post,
     user: users.find((user) => user.id === post.userId),
@@ -16,7 +16,7 @@ function prepare(posts: Post[], comments: Comment[], users: User[]): PreparedPos
   }));
 }
 
-const preparedPosts = prepare(postsFromServer, commentsFromServer, usersFromServer);
+const preparedPosts = preparePosts(postsFromServer, commentsFromServer, usersFromServer);
 
 export const App: React.FC = () => (
   <div className="App">

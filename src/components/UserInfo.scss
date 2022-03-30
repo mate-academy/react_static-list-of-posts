@@ -1,0 +1,25 @@
+.UserInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #aaa;
+    color: transparent;
+    border-radius: 50%;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__email {
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    color: gray;
+  }
+}

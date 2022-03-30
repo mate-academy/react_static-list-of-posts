@@ -1,6 +1,7 @@
 import React from 'react';
 import { PreparedPost } from '../types';
 import { PostInfo } from './PostInfo';
+import './PostItem.scss';
 
 interface Props {
   posts: PreparedPost[];
