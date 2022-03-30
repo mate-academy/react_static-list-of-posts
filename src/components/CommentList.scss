@@ -1,15 +1,16 @@
-[data-cy="comments-list-li"] {
+.comments__list__li {
   padding: 7px 20px;
   margin-bottom: 10px;
   border-radius: 5px;
   border-left: 10px solid blue;
   font-size: 20px;
   letter-spacing: 2px;
-  transition: 0.3s all linear;
+  transition-duration: 0.4s;
+  transition-property: border-left, border-right;
   list-style-image: url(../image/s.png);
 }
 
-[data-cy="comments-list-li"]:hover {
+.comments__list__li:hover {
   border-left: 10px solid transparent;
   border-right: 10px solid yellow;
 }

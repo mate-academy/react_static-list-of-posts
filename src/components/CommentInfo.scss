@@ -1,8 +1,8 @@
-[data-cy="comment-email"] {
+.comment__email {
   color: blue;
 }
 
-[data-cy="comment-email"]:hover {
+.comment__email:hover {
   color: rgb(241, 13, 13);
   font-weight: bold;
   cursor: pointer;

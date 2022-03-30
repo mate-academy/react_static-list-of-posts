@@ -5,14 +5,14 @@ import { Comment } from '../types/CommentsTypes';
 import './CommentList.scss';
 
 type Props = {
-  all: Comment,
+  allComments: Comment,
 };
 
-export const CommentList: React.FC<Props> = ({ all }) => (
+export const CommentList: React.FC<Props> = ({ allComments }) => (
   <>
     <ul data-cy="comments-list">
-      <li data-cy="comments-list-li">
-        <CommentInfo {...all} />
+      <li data-cy="comments-list-li" className="comments__list__li">
+        <CommentInfo {...allComments} />
       </li>
     </ul>
   </>

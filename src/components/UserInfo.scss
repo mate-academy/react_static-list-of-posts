@@ -1,8 +1,8 @@
-[data-cy="email"] {
+.email {
   color: blue;
 }
 
-[data-cy="email"]:hover {
+.email:hover {
   color: rgb(241, 13, 13);
   font-weight: bold;
   cursor: pointer;
