@@ -12,7 +12,7 @@ const preparedPosts: Post[] = posts.map((post) => {
   const copy = {
     ...post,
     user: users.find(user => user.id === post.userId) || null,
-    comment: comments.find(comment => comment.postId === post.userId) || null,
+    comment: comments.filter(comment => comment.postId === post.id) || null,
   };
 
   return copy;

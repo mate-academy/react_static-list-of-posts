@@ -8,7 +8,7 @@ type Props = {
   title: string,
   body: string,
   user: User | null,
-  comment: Comment | null;
+  comment: Comment[] | null;
 };
 
 export const PostInfo: React.FC<Props> = ({
