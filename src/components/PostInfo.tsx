@@ -8,20 +8,20 @@ type Props = {
   title: string,
   body: string,
   user: User | null,
-  comment: Comment[] | null;
+  comments: Comment[] | null;
 };
 
 export const PostInfo: React.FC<Props> = ({
   title,
   body,
   user,
-  comment,
+  comments,
 }) => (
   <>
     <h2 data-cy="post-title">{title}</h2>
     <em data-cy="post-body">{body}</em>
     <br />
     {user && <UserInfo {...user} />}
-    {comment && <CommentList allComments={comment} />}
+    {comments && <CommentList allComments={comments} />}
   </>
 );
