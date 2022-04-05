@@ -1,0 +1,21 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin: 20px 0;
+  padding: 10px;
+
+  color: #046d2b;
+  border: 1px solid #046d2b;
+  border-radius: 5px;
+
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__email {
+    font-size: 16px;
+  }
+}

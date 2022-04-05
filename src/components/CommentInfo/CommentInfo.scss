@@ -1,0 +1,26 @@
+.comment {
+  display: grid;
+  gap: 10px;
+
+  background-color: #c1dae2;
+  border-radius: 10px;
+
+  padding: 10px;
+
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #29332d;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-size: 14px;
+    color: #29332d;
+  }
+
+  &__email {
+    font-size: 14px;
+    color: #a32d01;
+  }
+}
