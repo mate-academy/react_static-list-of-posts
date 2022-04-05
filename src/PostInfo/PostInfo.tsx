@@ -11,7 +11,7 @@ type Props = {
 const PostInfo:React.FC<Props> = ({ post }) => {
   return (
     <>
-      <UserInfo user={post.user} />
+      <UserInfo user={post.user ? post.user : null} />
       <div>
         <div className="postInfo__title">{post.title}</div>
         <div>{post.body}</div>

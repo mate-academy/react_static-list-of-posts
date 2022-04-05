@@ -1,15 +1,23 @@
-import users from './api/users';
-import comments from './api/comments';
-
 export type Post = {
   userId: number,
   id: number,
   title: string,
   body: string,
-  user: User,
-  comments: Comment[] | null,
+  user: User | null,
+  comments: Comment[],
 };
 
-export type Comment = typeof comments[0];
+export type Comment = {
+  postId: number,
+  id: number,
+  name: string,
+  email: string,
+  body: string,
+};
 
-export type User = typeof users[0] | null;
+export type User = {
+  id: number,
+  name: string,
+  username: string,
+  email: string,
+};

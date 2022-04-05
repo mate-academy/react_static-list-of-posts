@@ -9,9 +9,9 @@ type Props = {
 
 const PostList: React.FC<Props> = ({ preparedPosts }) => {
   return (
-    <div>
-      {preparedPosts.map(e => <div key={e.id} className="postList"><PostInfo post={e} /></div>)}
-    </div>
+    <ul>
+      {preparedPosts.map(post => <li key={post.id} className="postList"><PostInfo post={post} /></li>)}
+    </ul>
   );
 };
 
