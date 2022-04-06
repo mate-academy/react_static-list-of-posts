@@ -11,7 +11,9 @@ const CommentList:React.FC<Props> = ({ comments }) => {
   return (
     <div>
       COMMENTS
-      {comments ? comments.map(comment => <div key={comment.id}><CommentInfo comment={comment} /></div>) : ''}
+      {comments && comments.map(comment => (
+        <CommentInfo key={comment.id} comment={comment} />
+      ))}
     </div>
   );
 };

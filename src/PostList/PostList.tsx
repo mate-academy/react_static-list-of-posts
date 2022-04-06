@@ -4,13 +4,17 @@ import PostInfo from '../PostInfo/PostInfo';
 import './PostList.scss';
 
 type Props = {
-  preparedPosts: Post[],
+  posts: Post[],
 };
 
-const PostList: React.FC<Props> = ({ preparedPosts }) => {
+const PostList: React.FC<Props> = ({ posts }) => {
   return (
     <ul>
-      {preparedPosts.map(post => <li key={post.id} className="postList"><PostInfo post={post} /></li>)}
+      {posts.map(post => (
+        <li key={post.id} className="postList">
+          <PostInfo post={post} />
+        </li>
+      ))}
     </ul>
   );
 };
