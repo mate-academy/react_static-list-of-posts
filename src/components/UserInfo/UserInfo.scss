@@ -1,0 +1,28 @@
+.user {
+  text-align: center;
+  margin: 0 0 40px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #d83535;
+    display: inline-block;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+  }
+
+  &__email {
+    text-decoration: none;
+    color: #888;
+    transition: color 0.3s linear;
+
+    &:hover {
+      color: #af2b2b;
+    }
+  }
+}

@@ -1,1 +1,32 @@
-// styles go here
+:root {
+  background-color: #ccc;
+  color: #373838;
+  font-size: 18px;
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.App {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    margin: 25px 0;
+    color: #252525;
+  }
+}
