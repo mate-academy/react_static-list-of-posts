@@ -8,13 +8,10 @@ type Props = {
 
 const UserInfo:React.FC<Props> = ({ user }) => {
   return (
-    <>
-      <div className="userInfo">
-        <div>{user?.name}</div>
-        <div>{user?.email}</div>
-      </div>
-
-    </>
+    <div className="userInfo">
+      <div>{user?.name}</div>
+      <div>{user?.email}</div>
+    </div>
   );
 };
 

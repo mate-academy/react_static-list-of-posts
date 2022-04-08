@@ -11,7 +11,7 @@ type Props = {
 const PostInfo:React.FC<Props> = ({ post }) => {
   return (
     <>
-      {post.user && <UserInfo user={post.user} /> }
+      {post.user && <UserInfo user={post.user} />}
       <div>
         <div className="postInfo__title">{post.title}</div>
         <div>{post.body}</div>
