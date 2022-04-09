@@ -1,1 +1,14 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightcoral;
+  padding: 20px;
+}
+
+.App {
+  &__title {
+    text-align: center;
+  }
+}
