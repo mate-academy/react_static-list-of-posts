@@ -1,0 +1,17 @@
+.post {
+  &_title {
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &_body {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 20px;
+  }
+}

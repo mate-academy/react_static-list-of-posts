@@ -1,0 +1,19 @@
+.comments {
+  max-width: 1024px;
+  margin: 0 auto;
+
+  &_title {
+    text-align: left;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &_list {
+    list-style-type: none;
+  }
+
+  &_item {
+    margin-bottom: 20px;
+  }
+}

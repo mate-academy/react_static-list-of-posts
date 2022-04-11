@@ -1,0 +1,13 @@
+.posts {
+  margin: 0 auto;
+  max-width: 1200px;
+
+  &_list {
+    display: grid;
+    grid-gap: 25px;
+  }
+
+  &_item {
+    background-color: rgb(190, 178, 4);
+  }
+}
