@@ -1,6 +1,6 @@
 # React static list of posts
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)
+  [DEMO LINK](https://romafanasiev.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## The task
@@ -21,7 +21,7 @@ REQUIREMENTS:
    - `title` of each `post` in `PostInfo` should contain `data-cy="post-title"` attribute
    - `body` of each `post` in `PostInfo` should contain `data-cy="post-body"` attribute
    - `name` of the user in `UserInfo` should contain `data-cy="name"` attribute
-   - `email` of the user in `UserInfo` should contain `data-cy="email"` attribute
+   - `email` of the user in `UserInfo` should contain `ddata-cy="name"` attribute
    - `name` of the user in `CommentInfo` should contain `data-cy="comment-name"` attribute
    - `body` of the user in `CommentInfo` should contain `data-cy="comment-body"` attribute
    - `email` of the user in `CommentInfo` should contain `data-cy="comment-email"` attribute
