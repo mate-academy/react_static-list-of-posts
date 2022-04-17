@@ -1,0 +1,11 @@
+.comment {
+  width: max-content;
+  border: 1px solid black;
+  margin: 10px 0;
+  padding: 15px;
+  max-width: 750px;
+
+  &__text {
+    padding: 20px 20px 0;
+  }
+}

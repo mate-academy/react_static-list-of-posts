@@ -1,0 +1,20 @@
+.comments {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  &:last-child {
+    margin-bottom: 50px;
+  }
+
+  &::after {
+    content: "";
+    height: 2px;
+    width: 1500px;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    bottom: -20px;
+  }
+}
