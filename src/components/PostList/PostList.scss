@@ -1,0 +1,13 @@
+.post {
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #131212;
+    border-radius: 15px;
+  }
+}

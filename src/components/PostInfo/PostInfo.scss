@@ -1,0 +1,16 @@
+.post {
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #a30115;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  &__body {
+    font-size: 18px;
+    color: #131212;
+    text-align: justify;
+  }
+}
