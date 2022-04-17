@@ -1,0 +1,28 @@
+.post {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+
+  &__user-info {
+    margin-top: 0.5rem;
+  }
+
+  &__body {
+    padding: 0.5rem 0.5rem 0;
+  }
+
+  &__comments-toggle {
+    background: none;
+    border: none;
+    margin-left: auto;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

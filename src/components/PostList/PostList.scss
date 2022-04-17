@@ -1,0 +1,13 @@
+.post-list {
+  list-style-type: none;
+  width: 66%;
+
+  &__post {
+    padding: 0.5rem;
+    border: 1px solid;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

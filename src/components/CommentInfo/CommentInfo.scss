@@ -1,0 +1,16 @@
+.comment-info {
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__user-info {
+    margin: 0.25rem 0 0;
+    color: #808080;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+  }
+
+  &__body {
+    padding: 0 0.5rem;
+  }
+}
