@@ -1,0 +1,14 @@
+.post-list {
+  list-style-type: none;
+  padding: 0 20% ;
+
+  &__post {
+    padding-left: 1rem;
+    background-color: white;
+    border: 1px solid lightgray;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

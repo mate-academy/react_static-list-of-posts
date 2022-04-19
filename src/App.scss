@@ -1,1 +1,22 @@
-// styles go here
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: linear-gradient(135deg, floralwhite 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, floralwhite 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, floralwhite 25%, transparent 25%),
+    linear-gradient(45deg, floralwhite 25%, transparent 25%);
+  background-size: 100px 100px;
+  background-color: ghostwhite;
+  
+}
+
+h1 {
+  position: relative;
+  left: 20%;
+}
+
+.App {
+  padding: 20px;
+}
