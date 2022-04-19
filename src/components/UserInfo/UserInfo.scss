@@ -1,0 +1,11 @@
+.user-info {
+  color: gray;
+
+  &__email {
+    text-transform: lowercase;
+  }
+}
+
+a:link {
+  color: gray;
+}

@@ -1,0 +1,26 @@
+.comment-info {
+  &__title {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__user-info {
+    margin: 0.25rem 0 0;
+    color: gray;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+  }
+
+  &__body {
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

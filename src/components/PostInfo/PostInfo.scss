@@ -1,0 +1,35 @@
+.post {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 0;
+    
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__user-info {
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+  }
+
+  &__body {
+    padding: 0.3rem 1rem 0;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__comments-toggle {
+    background: none;
+    border: none;
+    margin-left: auto;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
