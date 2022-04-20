@@ -1,0 +1,17 @@
+.post__info {
+  list-style-image: url(../image/e.png);
+}
+
+.post__info__list {
+  padding: 7px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-top: 10px solid blue;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: border-bottom 0.3s linear;
+}
+
+.post__info__list:hover {
+  border-bottom: 10px solid yellow;
+}
