@@ -1,1 +1,34 @@
-// styles go here
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+div,
+ul {
+  margin: 0;
+}
+
+body {
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
+  color: #333;
+  background-color: #344f10;
+}
+
+.App {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  &__title {
+    line-height: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #344f10;
+    text-decoration: underline;
+  }
+}

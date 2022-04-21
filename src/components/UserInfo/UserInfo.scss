@@ -1,0 +1,13 @@
+.userInfo {
+  margin-bottom: 40px;
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  &__email {
+    font-weight: 400;
+    text-decoration: underline;
+  }
+}
