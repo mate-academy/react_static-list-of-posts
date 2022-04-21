@@ -1,0 +1,14 @@
+.postInfo {
+  margin-bottom: 150px;
+  border-bottom: 5px #344f10 solid;
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #344f10;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+}

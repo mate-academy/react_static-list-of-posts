@@ -1,0 +1,27 @@
+.commentInfo {
+  margin-bottom: 50px;
+  border: 2px solid #344f10;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__name {
+    margin: 20px;
+    color: #344f10;
+  }
+
+  &__email {
+    margin: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  &__text {
+    margin: 20px;
+    text-align: justify;
+  }
+}
