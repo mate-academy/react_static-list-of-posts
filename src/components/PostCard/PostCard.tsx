@@ -23,9 +23,9 @@ export const PostCard: React.FC<Props> = ({ post }) => {
       </h2>
 
       <div className="PostCard__body">
-        <p className="PostCard__content" data-cy="post-body">
+        <pre className="PostCard__content" data-cy="post-body">
           {content}
-        </p>
+        </pre>
 
         <div className="PostCard__authorSegment">
           <AuthorLink user={user} />
