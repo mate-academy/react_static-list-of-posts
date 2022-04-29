@@ -10,13 +10,15 @@ import { PostList } from './components/PostList';
 export const preparedPosts = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId) || null,
-  comment: comments.find(comment => comment.postId === post.userId) || null,
+  comment: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList posts={preparedPosts} />
+    <div className="App__posts">
+      <PostList posts={preparedPosts} />
+    </div>
   </div>
 );
 

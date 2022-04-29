@@ -1,26 +1,25 @@
 import React from 'react';
 import { Comment } from '../User';
-import './Comment.scss';
 
 type Props = {
-  comment: Comment | null;
+  comment: Comment;
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {
   return (
     <div className="CommentInfo">
       <p className="CommentInfo__item" data-cy="comment-name">
-        {comment ? comment.name : null}
+        {comment.name}
       </p>
 
       <p className="CommentInfo__item" data-cy="comment-body">
         <span>
-          {comment ? comment.body : null}
+          {comment.body}
         </span>
       </p>
 
       <p className="CommentInfo__item" data-cy="comment-email">
-        {comment ? comment.email : null}
+        {comment.email}
       </p>
     </div>
   );

@@ -1,3 +1,14 @@
-.UserInfo {
-  width: 200px;
+.PostInfo {
+  width: 500px;
+  height: 500px;
+  overflow-y: scroll;
+  background-color: burlywood;
+  border: 5px solid rebeccapurple;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 50px;
+}
+
+.PostInfo__name {
+  border: 2px solid black;
 }

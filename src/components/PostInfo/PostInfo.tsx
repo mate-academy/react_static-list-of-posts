@@ -2,7 +2,6 @@ import React from 'react';
 import { PreparedPosts } from '../User';
 import { CommentList } from '../Comment/CommentList';
 import { UsersInfo } from '../UsersInfo/UsersInfo';
-import comments from '../../api/comments';
 import './PostInfo.scss';
 
 type Props = {
@@ -11,24 +10,30 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   return (
-    <div className="UserInfo">
-      <p className="UserInfo__item" data-cy="post-title">
-        {post?.title}
+    <div className="PostInfo">
+      <p className="PostInfo__name" data-cy="post-title">
+        {post?.title.toUpperCase()}
       </p>
 
-      <p className="UserInfo__item" data-cy="post-body">
+      <p className="PostInfo__item" data-cy="post-body">
         <span>
           {post?.body}
         </span>
       </p>
 
-      <p className="UserInfo__item">
+      <p className="PostInfo__item">
         <UsersInfo user={post.user} />
       </p>
 
-      <p className="UserInfo__item">
-        <CommentList comment={comments} />
-      </p>
+      <h3>
+        Comments
+      </h3>
+
+    {post.comment &&
+      (<p className="PostInfo__item">
+        <CommentList comment={post.comment} />
+      </p>)
+    }
     </div>
   );
 };
