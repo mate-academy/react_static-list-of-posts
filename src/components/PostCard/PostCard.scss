@@ -1,0 +1,39 @@
+@import "../../vars";
+
+.PostCard {
+  &__title {
+    margin: 0;
+    padding: 24px 18px;
+
+    text-align: right;
+    text-transform: uppercase;
+    color: $black;
+
+    background-color: $red;
+    border-radius: 16px 16px 0 0;
+  }
+
+  &__body {
+    padding: 12px;
+
+    background-color: $black;
+    border-radius: 0 0 18px 18px;
+  }
+
+  &__content {
+    margin: 0 0 12px;
+    padding: 8px;
+
+    color: $white;
+    font-size: 20px;
+    line-height: 150%;
+
+    background-color: $gray;
+    border-radius: 8px;
+  }
+
+  &__authorSegment {
+    width: max-content;
+    margin: 0 0 12px auto;
+  }
+}

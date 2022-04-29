@@ -1,0 +1,1 @@
+export { CommentCard } from './CommentCard';

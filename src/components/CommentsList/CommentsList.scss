@@ -1,0 +1,27 @@
+@import "../../vars";
+
+.CommentsList {
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  max-height: 300px;
+  overflow-y: auto;
+
+  list-style: none;
+  border-radius: 8px;
+  background-color: $gray;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: $paleGray;
+  }
+}

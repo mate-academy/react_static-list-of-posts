@@ -1,14 +1,24 @@
 import React from 'react';
+import { LinkedPost } from './types/LinkedPost';
+import { PostList } from './components/PostList';
 
 import './App.scss';
 
-// import posts from './api/posts';
-// import comments from './api/comments';
-// import users from './api/users';
+import posts from './api/posts';
+import comments from './api/comments';
+import users from './api/users';
+
+const linkedPosts: LinkedPost[] = posts.map(post => (
+  {
+    ...post,
+    user: users.find(({ id }) => id === post.userId) || null,
+    comments: comments.filter(({ postId }) => postId === post.id),
+  }
+));
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <PostList posts={linkedPosts} />
   </div>
 );
 
