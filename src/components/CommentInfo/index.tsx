@@ -1,10 +1,7 @@
 import './style.scss';
+import { Comment } from '../../types/Comment';
 
-type Props = {
-  name: string;
-  body: string;
-  email: string;
-};
+type Props = Omit<Comment, 'postId' | 'id'>;
 
 export const CommentInfo: React.FC<Props> = ({ name, body, email }) => (
   <div className="Comment">

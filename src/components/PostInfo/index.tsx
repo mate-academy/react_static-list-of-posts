@@ -1,15 +1,9 @@
-import { User } from '../../types/User';
-import { Comment } from '../../types/Comment';
+import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './style.scss';
 
-type Props = {
-  title: string;
-  body: string;
-  user?: User;
-  comments: Comment[];
-};
+type Props = Omit<Post, 'id' | 'userId'>;
 
 export const PostInfo: React.FC<Props> = ({
   title,
