@@ -1,1 +1,13 @@
 // styles go here
+html {
+  font-family: Helvetica, sans-serif;
+  background-color: rgb(93, 163, 209);
+  padding: 50px;
+}
+
+.App {
+  &__title {
+    text-align: center;
+    color: rgb(119, 7, 7);
+  }
+}

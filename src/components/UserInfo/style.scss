@@ -1,0 +1,9 @@
+.User {
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+
+  &__email {
+    font-style: italic;
+  }
+}
