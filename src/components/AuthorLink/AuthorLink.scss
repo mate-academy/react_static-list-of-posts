@@ -1,0 +1,38 @@
+@import "../../vars";
+
+.AuthorLink {
+  text-decoration: none;
+  color: inherit;
+
+  &__username {
+    display: inline-block;
+    padding: 4px 8px;
+
+    color: $red;
+
+    border: 2px solid $red;
+    border-radius: 8px 0 0 8px;
+    background-color: transparent;
+  }
+
+  &__email {
+    display: inline-block;
+    padding: 4px 8px;
+
+    color: $black;
+
+    border: 2px solid $red;
+    border-radius: 0 8px 8px 0;
+    background-color: $red;
+  }
+
+  &--anonymous &__username {
+    padding: 4px 8px;
+
+    color: $black;
+
+    border: 2px solid $red;
+    border-radius: 8px;
+    background-color: $red;
+  }
+}

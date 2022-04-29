@@ -1,1 +1,15 @@
-// styles go here
+body {
+  margin: 0;
+
+  background: linear-gradient(-90deg, #ffca8c 0%, #ff6060 100%);
+}
+
+.App {
+  min-height: calc(100vh - 48px);
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  padding: 48px;
+}

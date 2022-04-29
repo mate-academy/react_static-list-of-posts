@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
+import { User } from '../types/User';
 
-const users = [
+const users: User[] = [
   {
     id: 1,
     name: 'Leanne Graham',

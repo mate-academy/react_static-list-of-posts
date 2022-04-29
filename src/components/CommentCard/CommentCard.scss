@@ -1,0 +1,40 @@
+@import "../../vars";
+
+.CommentCard {
+  &__title {
+    padding-left: 8px;
+    margin: 0 0 4px;
+
+    font-weight: normal;
+    color: $white;
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  &__body {
+    padding: 8px;
+
+    background: #161616;
+    border: 2px solid $paleGray;
+    border-radius: 8px;
+  }
+
+  &__content {
+    color: $lightGray;
+
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  &__email {
+    padding: 4px;
+    margin: 0 0 0 auto;
+    width: max-content;
+
+    font-size: 12px;
+    color: $black;
+
+    background: $paleGray;
+    border-radius: 6px;
+  }
+}
