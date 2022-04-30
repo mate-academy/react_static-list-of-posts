@@ -8,7 +8,7 @@ type PostListArray = {
 };
 
 export const PostList: React.FC<PostListArray> = ({ postList }) => (
-  <ul data-cy="post-info" className="PostList">
+  <ul className="PostList">
     {
       postList.map((post) => (
         <PostInfo

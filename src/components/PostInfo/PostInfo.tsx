@@ -11,7 +11,7 @@ export const PostInfo: React.FC<PreparedPost> = ({
   user,
   comments,
 }) => (
-  <li key={id} className="PostInfo">
+  <li key={id} className="PostInfo" data-cy="post-info">
     <div className="PostInfo__block">
       <h2 data-cy="post-title" className="PostInfo__title">{title}</h2>
 

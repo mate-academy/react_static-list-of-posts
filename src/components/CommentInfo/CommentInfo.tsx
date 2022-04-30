@@ -8,7 +8,7 @@ export const CommentInfo: React.FC<Comment> = ({
   email,
   body,
 }) => (
-  <li key={id} className="CommentInfo">
+  <li key={id} className="CommentInfo" data-cy="comments-list">
     <h3 data-cy="comment-name" className="CommentInfo__title">
       {name}
     </h3>
