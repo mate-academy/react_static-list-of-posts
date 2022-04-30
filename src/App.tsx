@@ -2,13 +2,31 @@ import React from 'react';
 
 import './App.scss';
 
-// import posts from './api/posts';
-// import comments from './api/comments';
-// import users from './api/users';
+import posts from './api/posts';
+import comments from './api/comments';
+import users from './api/users';
+import {
+  Comment,
+  User,
+  PreparedPost,
+  Post,
+} from './types/types';
+import { PostList } from './components/PostList/PostList';
+
+const preparedPosts: PreparedPost[] = posts.map((item: Post) => (
+  {
+    ...item,
+    user: users.find((person: User) => (item.userId === person.id)),
+    comments: comments.filter((comment: Comment) => (
+      item.id === comment.postId
+    )),
+  }
+));
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 className="App__header">Static list of posts</h1>
+    <PostList postList={preparedPosts} />
   </div>
 );
 
