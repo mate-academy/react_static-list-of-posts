@@ -1,0 +1,18 @@
+.CommentInfo {
+  padding: 10px 20px;
+  background: #ffe5df7f;
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  &__email {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  &__text {
+    font-size: 13px;
+  }
+}
