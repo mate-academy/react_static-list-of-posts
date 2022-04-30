@@ -12,9 +12,9 @@
   &__email {
     padding-bottom: 10px;
   }
-}
 
-.comment:hover {
-  background-color: rgb(151, 143, 143);
-  cursor: pointer;
+  &:hover {
+    background-color: rgb(151, 143, 143);
+    cursor: pointer;
+  }
 }

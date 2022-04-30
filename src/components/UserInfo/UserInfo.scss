@@ -12,9 +12,9 @@
   &__name {
     font-weight: bold;
   }
-}
 
-.user:hover {
-  background-color: rgb(73, 73, 73);
-  cursor: pointer;
+  &:hover {
+    background-color: rgb(73, 73, 73);
+    cursor: pointer;
+  }
 }

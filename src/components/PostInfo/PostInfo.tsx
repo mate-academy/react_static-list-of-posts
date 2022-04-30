@@ -13,7 +13,7 @@ export const PostInfo: React.FC<Props> = ({
     <>
       <h4 data-cy="post-title" className="post__title">{title}</h4>
       <p data-cy="post-body" className="post__text">{body}</p>
-      {user && <UserInfo {...user} />}
+      {user && <UserInfo name={user.name} email={user.email} />}
       <CommentList comments={comments} />
     </>
   );
