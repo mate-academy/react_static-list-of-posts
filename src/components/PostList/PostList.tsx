@@ -1,6 +1,6 @@
 import React from 'react';
 import { PreparedPost } from '../../types/types';
-import { PostInfo } from '../PostInfo/PostInfo';
+import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
 type PostListArray = {

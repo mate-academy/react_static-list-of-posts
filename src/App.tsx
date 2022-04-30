@@ -11,7 +11,7 @@ import {
   PreparedPost,
   Post,
 } from './types/types';
-import { PostList } from './components/PostList/PostList';
+import { PostList } from './components/PostList';
 
 const preparedPosts: PreparedPost[] = posts.map((item: Post) => (
   {

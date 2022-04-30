@@ -1,7 +1,7 @@
 import React from 'react';
 import { PreparedPost } from '../../types/types';
-import { CommentList } from '../CommentList/CommentList';
-import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo: React.FC<PreparedPost> = ({
