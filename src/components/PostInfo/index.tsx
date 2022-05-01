@@ -1,1 +1,1 @@
-export * from './PostInfo';
+export { PostInfo } from './PostInfo';
