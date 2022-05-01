@@ -12,16 +12,14 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <>
-    <section className="post__block" data-cy="post-info">
-      <h2 className="post__title" data-cy="post-title">
-        {post.title}
-      </h2>
-      <p className="post__body" data-cy="post-body">
-        {post.body}
-      </p>
-      <UserInfo user={post.user} />
-    </section>
+  <div className="post__info" data-cy="post-info">
+    <h2 className="post__title" data-cy="post-title">
+      {post.title}
+    </h2>
+    <p className="post__body" data-cy="post-body">
+      {post.body}
+    </p>
+    <UserInfo user={post.user} />
     <CommentList comments={post.comments} />
-  </>
+  </div>
 );

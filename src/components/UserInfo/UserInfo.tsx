@@ -10,7 +10,7 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <p className="user-info">
-    <span className="user-info__title">User:</span>
+    <span className="user-info__title">Author:</span>
     <span data-cy="name">
       {` ${user?.name}`}
     </span>
