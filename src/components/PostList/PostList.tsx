@@ -12,7 +12,7 @@ export const PostList: React.FC<Props> = ({ posts }) => (
   <>
     {
       posts.map((post) => (
-        <section className="post" key={post.id} data-cy="post-info">
+        <section className="post" key={post.id}>
           <PostInfo post={post} />
         </section>
       ))

@@ -13,7 +13,7 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
-    <section className="post__block">
+    <section className="post__block" data-cy="post-info">
       <h2 className="post__title" data-cy="post-title">
         {post.title}
       </h2>
