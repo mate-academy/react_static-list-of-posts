@@ -12,7 +12,11 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
   <p className="user-info">
     <span className="user-info__title">Author:</span>
     <span data-cy="name">
-      {` ${user?.name}`}
+      {
+        user
+          ? ` ${user.name}`
+          : 'anonymous'
+      }
     </span>
     <a className="user-info__link" href={`mailto:${user?.email}`} data-cy="email">Email</a>
   </p>
