@@ -11,10 +11,10 @@ type Props = {
 };
 
 export const PostList: React.FC<Props> = ({ posts }) => (
-  <div className="post-list" data-cy="post-info">
+  <div className="post-list">
     {
       posts.map((post) => (
-        <section className="post" key={post.id}>
+        <section className="post" key={post.id} data-cy="post-info">
           <PostInfo post={post} />
         </section>
       ))
