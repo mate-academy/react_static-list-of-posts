@@ -1,0 +1,12 @@
+.user {
+  font-size: 12px;
+  text-align: right;
+
+  &__name {
+    font-family: "Arial Black", sans-serif;
+  }
+
+  &__email {
+    font-weight: normal;
+  }
+}

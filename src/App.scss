@@ -1,1 +1,28 @@
-// styles go here
+html {
+  font-family: Open Sans,sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 150%;
+}
+
+body {
+  margin: 0;
+  background-color: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+.App {
+  &__title {
+    margin: 15px 0;
+    text-align: center;
+  }
+}
