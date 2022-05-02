@@ -1,0 +1,17 @@
+.comment {
+  background-color: lightgrey;
+  border-radius: 15px;
+  margin: 20px;
+
+  &__name {
+    padding-top: 20px;
+  }
+
+  &__email {
+    padding-bottom: 20px;
+
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
