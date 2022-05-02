@@ -6,7 +6,7 @@ export interface Post {
 }
 
 export interface User {
-  id?: number;
+  id: number;
   name: string;
   email: string;
 }
@@ -19,11 +19,7 @@ export interface Comment {
   body: string;
 }
 
-export interface PreparedPost {
-  userId?: number;
-  id: number;
-  title: string;
-  body: string;
-  user?: User | null;
+export interface PreparedPost extends Post {
+  user: User | null;
   comments: Comment[];
 }

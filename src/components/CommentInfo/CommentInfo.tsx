@@ -3,12 +3,11 @@ import { Comment } from '../../types/types';
 import './CommentInfo.scss';
 
 export const CommentInfo: React.FC<Comment> = ({
-  id,
   name,
   email,
   body,
 }) => (
-  <li key={id} className="CommentInfo" data-cy="comments-list">
+  <li className="CommentInfo">
     <h3 data-cy="comment-name" className="CommentInfo__title">
       {name}
     </h3>

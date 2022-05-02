@@ -5,13 +5,12 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo: React.FC<PreparedPost> = ({
-  id,
   title,
   body,
   user,
   comments,
 }) => (
-  <li key={id} className="PostInfo" data-cy="post-info">
+  <li className="PostInfo" data-cy="post-info">
     <div className="PostInfo__block">
       <h2 data-cy="post-title" className="PostInfo__title">{title}</h2>
 
@@ -22,11 +21,12 @@ export const PostInfo: React.FC<PreparedPost> = ({
           (user)
             ? (
               <UserInfo
+                id={user.id}
                 name={user.name}
                 email={user.email}
               />
             )
-            : null
+            : 'No data about user'
         }
       </div>
     </div>

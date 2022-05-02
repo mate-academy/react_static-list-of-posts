@@ -12,6 +12,8 @@ export const PostList: React.FC<PostListArray> = ({ postList }) => (
     {
       postList.map((post) => (
         <PostInfo
+          key={post.id}
+          userId={post.userId}
           id={post.id}
           title={post.title}
           body={post.body}
