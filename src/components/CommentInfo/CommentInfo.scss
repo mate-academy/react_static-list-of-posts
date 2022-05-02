@@ -1,0 +1,12 @@
+.commentInfo {
+  border: 2px solid blue;
+  border-radius: 10px;
+  background-color: gray;
+
+  color: black;
+
+  &__author-link {
+    text-decoration: none;
+    color: black;
+  }
+}

@@ -1,0 +1,12 @@
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(32, 31, 31);
+  color: white;
+
+  &__email {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
