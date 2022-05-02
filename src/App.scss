@@ -1,1 +1,20 @@
-// styles go here
+html {
+  font-family: "Times New Roman", Times, serif;
+  font-size: medium;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  background-color: aquamarine;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 40px;
+  &__title {
+    text-transform: uppercase;
+    color: green;
+    text-align: center;
+  }
+}
