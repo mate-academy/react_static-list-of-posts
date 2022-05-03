@@ -1,6 +1,6 @@
 import React from 'react';
 import { Post } from './types/Post';
-import { PostList } from './components/PostList/index';
+import { PostList } from './components/PostList/PostList';
 
 import './App.scss';
 
