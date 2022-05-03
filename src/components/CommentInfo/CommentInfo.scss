@@ -1,0 +1,8 @@
+.comment {
+  display: grid;
+  gap: 10px;
+  
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
