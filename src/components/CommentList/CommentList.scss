@@ -1,0 +1,29 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    padding: 20px;
+    background-color: rgb(149, 212, 241);
+    border-radius: 20px;
+  }
+
+  &__item-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__item-body {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  &__item-email {
+    font-size: 12px;
+  }
+}
