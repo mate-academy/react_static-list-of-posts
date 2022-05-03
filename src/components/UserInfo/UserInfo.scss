@@ -1,0 +1,20 @@
+.user {
+  max-width: 1140px;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  transition: background-color 0.3s ease;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &:hover {
+    background-color: rgb(73, 73, 73);
+    cursor: pointer;
+  }
+}
