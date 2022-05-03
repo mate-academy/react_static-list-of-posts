@@ -1,1 +1,22 @@
-// styles go here
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.posts {
+  width: 700px;
+  margin: 0 auto;
+}
