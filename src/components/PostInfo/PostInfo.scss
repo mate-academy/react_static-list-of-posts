@@ -1,0 +1,13 @@
+.Post {
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 0 20px;
+
+  &__title {
+    color: darkblue;
+  }
+
+  &__body {
+    font-size: 22px;
+  }
+}
