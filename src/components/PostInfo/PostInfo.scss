@@ -1,0 +1,14 @@
+.post {
+  &-title {
+    font-size: 48px;
+    color: green;
+  }
+
+  &-text {
+    font-size: 20px;
+  }
+
+  &-comments {
+    color: rgb(22, 191, 22);
+  }
+}
