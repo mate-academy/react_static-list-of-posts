@@ -1,0 +1,11 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  color: gray;
+
+  &__contact-link {
+    text-decoration: none;
+    color: gray;
+  }
+}
