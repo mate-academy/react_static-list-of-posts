@@ -1,38 +1,42 @@
-.postTitle {
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+.post {
+  &__title {
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__body {
+    margin-bottom: 15px;
+  }
 }
 
-.postBody {
-  margin-bottom: 15px;
-}
-
-.userInfo {
+.user {
   display: flex;
   justify-content: space-around;
   margin-bottom: 15px;
+
+  &__title {
+    font-weight: bold;
+  }
 }
 
-.userTitle {
-  font-weight: bold;
-}
+.comments {
+  &__title {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
 
-.commentTitle {
-  margin-bottom: 15px;
-  font-weight: bold;
-}
+  &__list {
+    list-style-type: none;
+  }
 
-.commentsList {
-  list-style-type: none;
-}
-
-.commentsItem {
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #e1e1e1;
-  border: 1px solid #333;
-  border-radius: 10px;
-  font-size: 12px;
+  &__item {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e1e1e1;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 12px;
+  }
 }

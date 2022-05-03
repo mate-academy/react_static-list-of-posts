@@ -1,4 +1,4 @@
-.postList {
+.posts-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -14,11 +14,13 @@
   @media (min-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-.postItem {
-  padding: 20px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  background-color: #c3c3c3;
+  &__item {
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      to left top, #9c9c9c, #adadad,
+      #bebebe, #cfcfcf, #e1e1e1);
+  }
 }

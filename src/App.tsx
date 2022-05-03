@@ -16,13 +16,11 @@ const preparedPosts: Post[] = posts.map((post) => ({
   comments: comments.filter((comment) => comment.postId === post.id),
 }));
 
-const App: React.FC = () => (
+export const App: React.FC = () => (
   <div className="app">
-    <h1 className="appTitle">Static list of posts</h1>
+    <h1 className="app__title">Static list of posts</h1>
     <PostList
       preparedPosts={preparedPosts}
     />
   </div>
 );
-
-export default App;

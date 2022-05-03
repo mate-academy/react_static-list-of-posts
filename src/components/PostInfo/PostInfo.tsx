@@ -26,16 +26,16 @@ export const PostInfo:React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className="postTitle" data-cy="post-title">
+      <div className="post__title" data-cy="post-title">
         {title}
       </div>
 
-      <div className="postBody" data-cy="post-body">
+      <div className="post__body" data-cy="post-body">
         {body}
       </div>
 
-      <div className="userInfo">
-        <div className="userTitle">Autor: </div>
+      <div className="post__user user">
+        <div className="user__title">Autor: </div>
         {user && (
           <UserInfo
             name={user.name}
@@ -44,16 +44,21 @@ export const PostInfo:React.FC<Props> = (props) => {
         )}
       </div>
 
-      <div className="commentTitle">Comments:</div>
-      <ul className="commentsList" data-cy="comments-list">
-        {comments && comments.map((comment: Comment) => (
-          <li key={comment.id} className="commentsItem">
-            <CommentInfo
-              comment={comment}
-            />
-          </li>
-        ))}
-      </ul>
+      <div className="post__comments comments">
+        <div className="comments__title">Comments:</div>
+        <ul
+          className="comments__list"
+          data-cy="comments-list"
+        >
+          {comments && comments.map((comment: Comment) => (
+            <li key={comment.id} className="comments__item">
+              <CommentInfo
+                comment={comment}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
