@@ -15,7 +15,7 @@ import comments from './api/comments';
 const preparedPosts: Post[] = posts.map(
   (post: Omit<Post, 'user' | 'commentsArr'>) => ({
     ...post,
-    user: users.find((user: User) => user.id === post.userId) || null,
+    user: users.find((user: User) => user.id === post.userId),
     commentsArr: comments.filter((comment: Comment) => {
       return comment.postId === post.id;
     }),

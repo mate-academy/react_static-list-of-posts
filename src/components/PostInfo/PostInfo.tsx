@@ -1,8 +1,11 @@
 import React from 'react';
-import { Post } from '../../types/Post';
+
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+
 import './PostInfo.scss';
+
+import { Post } from '../../types/Post';
 
 type Props = {
   post: Post;
@@ -18,8 +21,12 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.body}
     </p>
 
-    <UserInfo user={post.user} />
+    {post.user && (
+      <UserInfo user={post.user} />
+    )}
 
-    <CommentList comments={post.commentsArr} />
+    {post.commentsArr && (
+      <CommentList comments={post.commentsArr} />
+    )}
   </>
 );
