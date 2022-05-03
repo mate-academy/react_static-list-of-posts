@@ -1,0 +1,14 @@
+.posts {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 20px;
+    background-color: #facade;
+    list-style: none;
+    border-radius: 20px;
+  }
+}

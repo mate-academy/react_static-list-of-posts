@@ -1,0 +1,15 @@
+.comment {
+  &__name::first-letter,
+  &__body::first-letter {
+    text-transform: uppercase;
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__email {
+    text-decoration: none;
+    color: gray;
+  }
+}

@@ -1,0 +1,21 @@
+.comments {
+  margin-top: 30px;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    padding: 10px;
+    background-color: #faece5;
+    border: 1px solid #faece5;
+    border-radius: 10px;
+    list-style: none;
+  }
+}
