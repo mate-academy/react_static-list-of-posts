@@ -24,8 +24,8 @@ const preparedPosts: PreparedPost[] = posts.map((item: Post) => (
 ));
 
 const App: React.FC = () => (
-  <div className="App">
-    <h1 className="App__header">Static list of posts</h1>
+  <div className="app">
+    <h1 className="app__header">Static list of posts</h1>
     <PostList postList={preparedPosts} />
   </div>
 );

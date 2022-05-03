@@ -10,13 +10,13 @@ export const PostInfo: React.FC<PreparedPost> = ({
   user,
   comments,
 }) => (
-  <li className="PostInfo" data-cy="post-info">
-    <div className="PostInfo__block">
-      <h2 data-cy="post-title" className="PostInfo__title">{title}</h2>
+  <li className="postInfo" data-cy="post-info">
+    <div className="postInfo__block">
+      <h2 data-cy="post-title" className="postInfo__title">{title}</h2>
 
-      <p data-cy="post-body" className="PostInfo__body">{body}</p>
+      <p data-cy="post-body" className="postInfo__body">{body}</p>
 
-      <div className="PostInfo__user">
+      <div className="postInfo__user">
         {
           (user)
             ? (

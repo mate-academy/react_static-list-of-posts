@@ -8,7 +8,7 @@ type CommentListType = {
 };
 
 export const CommentList: React.FC<CommentListType> = ({ comments }) => (
-  <ul className="CommentList" data-cy="comments-list">
+  <ul className="commentList" data-cy="comments-list">
     {
       comments.map(comment => (
         <CommentInfo
