@@ -1,0 +1,19 @@
+.comments-list {
+  padding: 0;
+  list-style: none;
+
+  &__title {
+    padding-left: 20px;
+  }
+
+  &__comment {
+    margin-bottom: 20px;
+    padding: 5px 20px 20px 40px;
+    border-radius: 5px;
+
+    &:nth-of-type(2n + 1) {
+      background-color: #d9d9d9;
+    }
+
+  }
+}

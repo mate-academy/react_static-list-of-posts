@@ -1,0 +1,14 @@
+.user-info {
+  margin-bottom: 50px;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid rgb(211, 219, 224);
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__link {
+    margin-left: 30px;
+  }
+}

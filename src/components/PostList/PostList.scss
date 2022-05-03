@@ -1,0 +1,16 @@
+.post {
+  margin-bottom: 20px;
+  padding: 20px 20px 5px;
+
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 5px 5px 18px -4px rgb(175, 174, 174);
+
+  &__title {
+    margin: 0;
+  }
+
+  &__body {
+    margin-bottom: 30px;
+  }
+}
