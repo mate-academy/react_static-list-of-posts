@@ -1,12 +1,12 @@
-html {
+.page {
   font-family: "Times New Roman", Times, serif;
   font-size: medium;
   font-weight: 400;
-}
 
-body {
-  margin: 0;
-  background-color: aquamarine;
+  &__body {
+    margin: 0;
+    background-color: aquamarine;
+  }
 }
 
 .App {
