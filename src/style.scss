@@ -1,0 +1,45 @@
+
+.ul_styles_reset {
+  list-style: none;
+  margin: 0;
+}
+
+.post__wrapper {
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: auto;
+  font-family: "Roboto Light", sans-serif;
+  font-size: 16px;
+  &-items {
+    border: 1px solid red;
+    width: 45%;
+    padding: 20px;
+    margin-bottom: 40px;
+    line-height: 28px;
+  }
+  &-item__comment {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_info {
+  width: 80%;
+  margin: auto;
+}
+
+.span_style {
+  font-weight: bold;
+  margin-right: 10px;
+}
