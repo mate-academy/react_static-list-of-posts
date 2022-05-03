@@ -1,0 +1,14 @@
+.user {
+  &__name,
+  &__email {
+    display: inline-block;
+  }
+
+  &__email {
+    color: rgb(52, 52, 52);
+  }
+
+  &__name {
+    margin-right: 10px;
+  }
+}
