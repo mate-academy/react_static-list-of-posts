@@ -1,0 +1,16 @@
+.Comment {
+  &__title {
+    color: rgb(136, 14, 14);
+    font-size: 28px;
+  }
+
+  &__content {
+    font-size: 20px;
+  }
+
+  &__email {
+    font-style: italic;
+    color: rgb(233, 227, 219);
+    font-size: 20px;
+  }
+}
