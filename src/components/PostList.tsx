@@ -1,5 +1,4 @@
 import React from 'react';
-import comments from '../api/comments';
 import { Post } from '../types/Post';
 import { PostInfo } from './PostInfo';
 
@@ -17,7 +16,7 @@ export const PostList: React.FC<Props> = ({ posts }) => {
               title={post.title}
               body={post.body}
               user={post.user}
-              comments={comments}
+              commentsList={post.commentsList}
             />
           </li>
         );

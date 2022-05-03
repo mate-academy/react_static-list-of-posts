@@ -10,7 +10,7 @@ export const PostInfo: React.FC<Props> = ({
   title,
   body,
   user,
-  comments,
+  commentsList,
 }) => {
   return (
     <>
@@ -24,7 +24,7 @@ export const PostInfo: React.FC<Props> = ({
         {user && <UserInfo name={user.name} email={user.email} />}
       </div>
       <CommentList
-        comments={comments}
+        comments={commentsList}
       />
     </>
   );
