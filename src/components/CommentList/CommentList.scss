@@ -1,0 +1,17 @@
+.commentList {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    margin-left: 15px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
