@@ -1,0 +1,17 @@
+.userInfo {
+  &__name {
+    font-size: 2rem;
+    color: #111;
+    border: 1px dotted black;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
+  }
+  &__email {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+  }
+}
