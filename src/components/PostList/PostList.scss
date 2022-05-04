@@ -1,0 +1,12 @@
+.postList {
+  list-style: none;
+
+  &__item {
+    box-sizing: content-box;
+    padding: 0 50px;
+    border: 1px solid;
+    margin-bottom: 40px;
+    color: #111;
+    background-color: #aaa;
+  }
+}

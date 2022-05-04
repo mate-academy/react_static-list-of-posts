@@ -1,1 +1,25 @@
 // styles go here
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: #555;
+  &__title {
+    text-align: center;
+    box-sizing: content-box;
+    padding: 30px;
+    letter-spacing: 5px;
+    background-color: #888;
+    color: white;
+  }
+}
