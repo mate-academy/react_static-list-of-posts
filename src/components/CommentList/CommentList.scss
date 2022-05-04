@@ -1,0 +1,12 @@
+.comments-list {
+  padding: 0;
+
+  &__title {
+    padding-left: 20px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+  }
+}
