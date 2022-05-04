@@ -29,11 +29,12 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         Comments
       </h3>
 
-    {post.comment &&
-      (<p className="PostInfo__item">
-        <CommentList comment={post.comment} />
-      </p>)
-    }
+      {post.comment
+      && (
+        <p className="PostInfo__item">
+          <CommentList comment={post.comment} />
+        </p>
+      )}
     </div>
   );
 };
