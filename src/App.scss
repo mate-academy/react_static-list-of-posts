@@ -1,1 +1,16 @@
-// styles go here
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(37, 37, 37);
+  color: rgb(214, 214, 214);
+}
+
+.App {
+  width: 960px;
+  margin: 0 auto;
+  background-color: rgb(130, 130, 131);
+  border-radius: 30px;
+  &__title {
+    font-size: 38px;
+    text-align: center;
+  }
+}
