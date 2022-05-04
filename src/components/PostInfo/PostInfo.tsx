@@ -18,6 +18,6 @@ export const PostInfo:React.FC<Props> = ({ post }) => (
     </p>
     {post.user && <UserInfo user={post.user} />}
     <h3>Comments:</h3>
-    {post.comment && <CommentList comment={post.comment} />}
+    {post.comments && <CommentList comments={post.comments} />}
   </div>
 );
