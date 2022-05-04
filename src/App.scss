@@ -1,1 +1,29 @@
-// styles go here
+h1,
+h2,
+p,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 50px;
+  background-color: #cd5c5c;
+}
+
+html {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+}

@@ -1,0 +1,33 @@
+.card {
+  font-size: 24px;
+  background-color: #8fbc8f;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
+    rgba(0, 0, 0, 0.12) 0 -12px 30px,
+    rgba(0, 0, 0, 0.12) 0 4px 6px,
+    rgba(0, 0, 0, 0.17) 0 12px 13px,
+    rgba(0, 0, 0, 0.09) 0 -3px 5px;
+
+  &:nth-child(2n) {
+    background-color: white;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    color: #1a1c1f;
+    font-weight: 500;
+  }
+
+  &__content {
+    color: #444c53;
+    font-style: italic;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
