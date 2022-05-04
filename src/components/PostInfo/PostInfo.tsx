@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { Post } from '../../types/Post';
-import { Comment } from '../../types/Comment';
 
-import { CommentInfo } from '../CommentInfo';
+import { CommentsList } from '../CommentsList';
 import { UserInfo } from '../UserInfo';
 
 import './PostInfo.scss';
@@ -44,21 +43,11 @@ export const PostInfo:React.FC<Props> = (props) => {
         )}
       </div>
 
-      <div className="post__comments comments">
-        <div className="comments__title">Comments:</div>
-        <ul
-          className="comments__list"
-          data-cy="comments-list"
-        >
-          {comments && comments.map((comment: Comment) => (
-            <li key={comment.id} className="comments__item">
-              <CommentInfo
-                comment={comment}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+      {comments && (
+        <CommentsList
+          comments={comments}
+        />
+      )}
     </>
   );
 };

@@ -20,23 +20,3 @@
     font-weight: bold;
   }
 }
-
-.comments {
-  &__title {
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-
-  &__list {
-    list-style-type: none;
-  }
-
-  &__item {
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #e1e1e1;
-    border: 1px solid #333;
-    border-radius: 10px;
-    font-size: 12px;
-  }
-}
