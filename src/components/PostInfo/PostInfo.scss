@@ -1,0 +1,22 @@
+.post {
+  &__title {
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__body {
+    margin-bottom: 15px;
+  }
+}
+
+.user {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+
+  &__title {
+    font-weight: bold;
+  }
+}

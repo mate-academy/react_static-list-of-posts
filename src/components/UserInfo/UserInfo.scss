@@ -1,0 +1,9 @@
+.user__email-link {
+  text-decoration: none;
+  color: #000;
+  transition: hover 0.3s ease-in-out;
+
+  &:hover {
+    color: darkslategrey;
+  }
+}

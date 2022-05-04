@@ -1,0 +1,26 @@
+.posts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 20px;
+
+  list-style-type: none;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-image: linear-gradient(
+      to left top, #9c9c9c, #adadad,
+      #bebebe, #cfcfcf, #e1e1e1);
+  }
+}

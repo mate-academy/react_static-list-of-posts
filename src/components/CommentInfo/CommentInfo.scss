@@ -1,0 +1,18 @@
+.comment {
+  display: grid;
+  gap: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__email-link {
+    text-decoration: none;
+    color: #000;
+    transition: hover 0.3s ease-in-out;
+
+    &:hover {
+      color: darkslategrey;
+    }
+  }
+}
