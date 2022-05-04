@@ -1,0 +1,14 @@
+.post {
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: rgb(118, 0, 0);
+
+    &__body {
+      color: rgb(247, 144, 144);
+    }
+  }
+}

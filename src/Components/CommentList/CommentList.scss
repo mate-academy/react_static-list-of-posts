@@ -1,0 +1,9 @@
+.comment-list {
+  padding: 0;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(233, 117, 117);
+  }
+}
