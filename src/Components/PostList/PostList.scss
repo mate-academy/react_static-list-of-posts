@@ -1,0 +1,18 @@
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+
+  &__item {
+    border: 2px solid rgb(230, 45, 45);
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgb(247, 154, 154);
+    cursor: pointer;
+
+    transition: all 1s;
+
+    &:hover {
+      box-shadow: 1px 5px 5px rgb(194, 9, 9);
+    }
+  }
+}
