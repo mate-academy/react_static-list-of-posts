@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './CommentInfo.scss';
+
 type Props = {
   name: string,
   body: string,

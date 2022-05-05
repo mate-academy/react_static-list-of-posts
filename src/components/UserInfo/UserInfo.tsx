@@ -1,5 +1,7 @@
 import React from 'react';
-import { User } from '../Types/User';
+import { User } from '../../Types/User';
+
+import './UserInfo.scss';
 
 type Props = {
   user: User | null;

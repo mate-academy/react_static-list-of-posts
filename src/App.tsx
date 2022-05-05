@@ -10,7 +10,7 @@ import { Comment } from './Types/Comment';
 import { Post } from './Types/Post';
 import { User } from './Types/User';
 
-import { PostList } from './components/PostList';
+import { PostList } from './components/PostList/PostList';
 
 const preparedPosts: Post[] = posts.map((post) => ({
   ...post,
