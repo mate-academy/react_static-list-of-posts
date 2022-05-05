@@ -10,7 +10,7 @@ import comments from './api/comments';
 const preparedPosts = posts.map((post) => {
   const user = users.find((currentUser) => (
     currentUser.id === post.userId
-  ) || null);
+  )) || null;
   const comment = comments.filter((currentComment) => (
     currentComment.postId === post.id
   ));

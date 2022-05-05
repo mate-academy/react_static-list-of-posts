@@ -21,11 +21,13 @@ export const PostInfo: React.FC<Props> = (props) => {
         {post.body}
       </p>
 
-      {
-        post.user
-        && <UserInfo user={post.user} />
-      }
-      <CommentList comments={post.comment} />
+      {post.user
+        && (<UserInfo user={post.user} />
+        )}
+      {post.comment
+        && (
+          <CommentList comments={post.comment} />
+        )}
     </>
   );
 };
