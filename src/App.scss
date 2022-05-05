@@ -1,1 +1,19 @@
-// styles go here
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.postList {
+  background-image: linear-gradient(
+    to right, #7c63c7, #9f68c3, #b970be, #ce7bb9, #df87b6
+  );
+}

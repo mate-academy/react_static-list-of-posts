@@ -1,0 +1,18 @@
+.post {
+  padding: 10px;
+  border: 6px solid white;
+
+  &__info {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-image: linear-gradient(
+      to right, #c0aff7, #d5b4f0, #e5bbe9, #efc3e4, #f5cde2
+    );
+
+    &-user {
+      background-image: linear-gradient(
+        to left, #f1f1ff, #ffecfb, #ffe9e9, #ffecd5, #f4f5cd
+      );
+    }
+  }
+}
