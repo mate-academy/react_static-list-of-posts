@@ -1,0 +1,13 @@
+.post {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #708090;
+
+  border: 2px solid black;
+  border-radius: 10px;
+
+  &__body {
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+}
