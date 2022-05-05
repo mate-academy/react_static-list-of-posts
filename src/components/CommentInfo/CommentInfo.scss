@@ -1,0 +1,11 @@
+.comment {
+  &__name {
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  &__email {
+    margin-bottom: 5px;
+    color: rgba(55, 117, 211, 0.8);
+  }
+}
