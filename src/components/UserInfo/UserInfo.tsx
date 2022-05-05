@@ -5,16 +5,16 @@ import './UserInfo.scss';
 import { User } from '../../types/interfaces';
 
 type Props = {
-  user: User | null,
+  user: User,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="user-info">
     <p className="user-info__name" data-cy="name">
-      {`Name: ${user ? user.name : null}`}
+      {`Name: ${user.name}`}
     </p>
     <p className="user-info__email" data-cy="email">
-      {`Email: ${user ? user.email : null}`}
+      {`Email: ${user.email}`}
     </p>
   </div>
 );

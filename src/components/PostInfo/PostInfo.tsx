@@ -14,7 +14,15 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.title}
     </h2>
     <p className="post__user">
-      <UserInfo user={post.user} />
+      {
+        (post.user)
+          ? (
+            <UserInfo
+              user={post.user}
+            />
+          )
+          : 'No user data'
+      }
     </p>
     <p className="post__body" data-cy="post-body">
       {post.body}
