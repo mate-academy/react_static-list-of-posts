@@ -1,7 +1,7 @@
 .card {
   font-size: 24px;
   background-color: #8fbc8f;
-  margin-bottom: 30px;
+  margin: 50px;
   padding: 20px 10px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px,
@@ -11,7 +11,7 @@
     rgba(0, 0, 0, 0.09) 0 -3px 5px;
 
   &:nth-child(2n) {
-    background-color: white;
+    background-color: #fff;
   }
 
   &__header {
@@ -24,10 +24,11 @@
   }
 
   &__content {
-    color: #444c53;
-    font-style: italic;
-    background-color: aliceblue;
-    padding: 20px;
+    font-family: "Libre Bodoni", serif;
+    color: #0a0a0af3;
+    background-color: #cd5c5c;
+    padding: 10px 30px;
+    margin: 0 100px;
     border-radius: 5px;
   }
 }

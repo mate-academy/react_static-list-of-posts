@@ -1,4 +1,4 @@
-import { Post } from '../../types/post';
+import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
