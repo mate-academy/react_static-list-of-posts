@@ -1,0 +1,10 @@
+.UserInfo {
+  &__link {
+    text-decoration: none;
+    color: rgb(177, 175, 175);
+
+    &:hover {
+      color: aquamarine;
+    }
+  }
+}
