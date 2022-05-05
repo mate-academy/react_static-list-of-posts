@@ -12,11 +12,11 @@ export const PostInfo: React.FC<Props> = ({
   comments,
 }) => (
   <>
-    <h2 className="post__title">{title}</h2>
+    <h2 className="post__title" data-cy="post-title">{title}</h2>
     <div className="user">
       <UserInfo user={user} />
     </div>
-    <p className="post__body">{body}</p>
+    <p className="post__body" data-cy="post-body">{body}</p>
     <CommentList comments={comments} />
   </>
 );
