@@ -1,0 +1,13 @@
+.postInfo {
+
+  &__title {
+    align-self: flex-start;
+    margin-bottom: 5px;
+  }
+
+  &__body {
+    background-color: #f8f8ff;
+    color: black;
+    border-radius: 5px;
+  }
+}

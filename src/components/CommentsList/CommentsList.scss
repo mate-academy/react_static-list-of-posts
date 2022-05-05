@@ -1,0 +1,15 @@
+.commentList {
+  background-color: #fffafa;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 5px;
+
+  &__item {
+    list-style: none;
+    border-bottom: 1px solid black;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
