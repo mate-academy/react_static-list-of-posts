@@ -10,7 +10,7 @@ type Props = {
 export const PostList: React.FC<Props> = ({ posts }) => (
   <ul data-cy="post-info" className="post-list">
     {posts.map(post => (
-      <li key={post.id} className="post-list__item post">
+      <li key={post.id} className="post-list__item">
         <PostInfo
           post={post}
         />

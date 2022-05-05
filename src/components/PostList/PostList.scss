@@ -1,1 +1,13 @@
-// styles go here
+.post-list {
+  width: 70%;
+  margin: 50px auto;
+  padding: 20px 30px;
+  list-style: none;
+
+  &__item {
+    padding: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 10px 4px #a8a8a8;
+    background-color: whitesmoke;
+  }
+}
