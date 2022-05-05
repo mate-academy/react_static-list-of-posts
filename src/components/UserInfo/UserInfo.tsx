@@ -5,11 +5,11 @@ import { User } from '../../types/Users';
 import './UserInfo.scss';
 
 type Props = {
-  user: User | null,
+  user: User,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <p className="userInfo">
+  <span className="userInfo">
     <h3 className="userInfo__name">
       {
         user
@@ -23,5 +23,5 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
     >
       Email
     </a>
-  </p>
+  </span>
 );

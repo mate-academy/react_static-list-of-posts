@@ -6,7 +6,7 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentsList.scss';
 
 type Props = {
-  comments: Comment[] | null,
+  comments: Comment[],
 };
 
 export const CommentsList: React.FC<Props> = ({ comments }) => (
@@ -14,7 +14,9 @@ export const CommentsList: React.FC<Props> = ({ comments }) => (
     <p className="commentList__title">Comments:</p>
     {comments
       ? comments.map(comment => (
-        <CommentInfo comment={comment} />
+        <li className="commentList__item" key={comment.id}>
+          <CommentInfo comment={comment} />
+        </li>
       ))
       : 'No comments yet'}
   </ul>

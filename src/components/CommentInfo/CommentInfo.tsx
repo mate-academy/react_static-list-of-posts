@@ -2,14 +2,12 @@ import React from 'react';
 
 import { Comment } from '../../types/Comments';
 
-import './CommentsInfo.scss';
-
 type Props = {
   comment: Comment,
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
-  <li className="commentInfo" key={comment.id}>
+  <>
     <h3 className="commentInfo__title">
       {comment.name}
     </h3>
@@ -19,5 +17,5 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => (
     <p className="commentInfo__body">
       {comment.body}
     </p>
-  </li>
+  </>
 );

@@ -15,7 +15,7 @@ import { User } from './types/Users';
 const preparedPosts: Post[] = posts.map(post => ({
   ...post,
   comment: comments.filter((comment: Comment) => comment.postId
-  === post.id) || null,
+  === post.id),
   user: users.find((user: User) => post.userId === user.id) || null,
 }));
 
