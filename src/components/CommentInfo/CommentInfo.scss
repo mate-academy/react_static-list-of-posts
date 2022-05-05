@@ -1,0 +1,18 @@
+.commentInfo {
+  border: 2px solid black;
+  border-radius: 12px;
+  margin-bottom: 10px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      padding-left: 10px;
+    }
+
+    &--email {
+      margin: 0 0 5px 1px;
+    }
+  }
+}
