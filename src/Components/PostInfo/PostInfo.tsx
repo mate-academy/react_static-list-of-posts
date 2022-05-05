@@ -9,9 +9,6 @@ interface Props {
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
-  // eslint-disable-next-line
-  console.log(post.comment);
-
   return (
     <div className="post">
       <h2 data-cy="post-title" className="post__title">
