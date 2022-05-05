@@ -1,0 +1,18 @@
+.comment-list {
+  padding: 20px;
+  list-style: none;
+  border: 5px solid rgb(107, 51, 51);
+  background-color: #f8f1f1;
+
+  &__title {
+    font-size: large;
+    padding-left: 20px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid blue;
+  }
+}
