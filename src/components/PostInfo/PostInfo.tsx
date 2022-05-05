@@ -18,10 +18,14 @@ export const PostInfo: React.FC<Props> = (props) => {
     <>
       <h2 className="post__title" data-cy="post-title">{post.title}</h2>
       <p className="post__body" data-cy="post-body">
-        {post?.body}
+        {post.body}
       </p>
-      <UserInfo user={post.user} />
-      <CommentList comment={post.comment} />
+
+      {
+        post.user
+        && <UserInfo user={post.user} />
+      }
+      <CommentList comments={post.comment} />
     </>
   );
 };

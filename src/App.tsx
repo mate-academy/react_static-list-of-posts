@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 
-import { PostList } from './components/PostList/PostList';
+import { PostList } from './components/PostList';
 
 import posts from './api/posts';
 import users from './api/users';
@@ -10,7 +10,7 @@ import comments from './api/comments';
 const preparedPosts = posts.map((post) => {
   const user = users.find((currentUser) => (
     currentUser.id === post.userId
-  ));
+  ) || null);
   const comment = comments.filter((currentComment) => (
     currentComment.postId === post.id
   ));
