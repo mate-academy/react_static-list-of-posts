@@ -10,18 +10,23 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <div className="postInfo">
-    <h2 className="postInfo__title">
-      {post.title}
-    </h2>
-    <div className="postInfo__body">
-      <article className="postInfo__content">
-        {post.body}
-      </article>
-      <UserInfo user={post.user} />
-      <div className="postInfo__commentsSection">
-        <CommentList comments={post.comments} />
+  <>
+    (!post.user)
+    ?
+    <div className="postInfo">
+      <h2 className="postInfo__title">
+        {post.title}
+      </h2>
+      <div className="postInfo__body">
+        <article className="postInfo__content">
+          {post.body}
+        </article>
+        <UserInfo user={post.user} />
+        <div className="postInfo__commentsSection">
+          <CommentList comments={post.comments} />
+        </div>
       </div>
     </div>
-  </div>
+    : null
+  </>
 );
