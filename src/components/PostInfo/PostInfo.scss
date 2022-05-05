@@ -1,0 +1,28 @@
+.PostInfo {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: #827397;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__block {
+    border: 5px solid #4d4c7d;
+    padding: 0 0 20px 20px;
+  }
+
+  &__title {
+    color: #e9d5da;
+  }
+
+  &__user {
+    display: flex;
+    gap: 10px;
+    background-color: #e9d5da;
+    margin-right: 20px;
+    padding: 5px;
+  }
+}
