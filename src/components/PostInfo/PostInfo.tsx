@@ -3,6 +3,7 @@ import { ReadyPosts } from '../../types/ReadyPosts';
 import { UsersInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
+import Comments from '../../public/Comments.png';
 
 type Props = {
   post: ReadyPosts,
@@ -32,19 +33,26 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </div>
 
       <p>
-        <UsersInfo user={post.user} />
+        {
+          (post.user)
+            ? (
+              <UsersInfo
+                user={post.user}
+              />
+            )
+            : 'No user'
+        }
       </p>
 
       <img
-      // eslint-disable-next-line
-        src="https://img.icons8.com/external-flaticons-lineal-flat-icons/64/000000/external-comments-customer-feedback-flaticons-lineal-flat-icons.png"
+        src={Comments}
         alt="img"
       />
 
       {post.comment
       && (
         <p>
-          <CommentList comment={post.comment} />
+          <CommentList comments={post.comment} />
         </p>
       )}
     </div>

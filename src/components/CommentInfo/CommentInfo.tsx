@@ -1,6 +1,7 @@
 import React from 'react';
 import { Comment } from '../../types/ReadyPosts';
 import './CommentInfo.scss';
+import Email from '../../public/email.png';
 
 type Props = {
   comment: Comment;
@@ -37,8 +38,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
       >
         <img
           className="UserInfo__image"
-          // eslint-disable-next-line
-          src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/64/000000/external-email-communication-nawicon-detailed-outline-nawicon-2.png"
+          src={Email}
           alt="IconEmail"
         />
         <p className="commentInfo__item-text">

@@ -1,9 +1,10 @@
 import React from 'react';
 import { User } from '../../types/ReadyPosts';
 import './UserInfo.scss';
+import Email from '../../public/email.png';
 
 type Props = {
-  user: User | null;
+  user: User;
 };
 
 export const UsersInfo: React.FC<Props> = ({ user }) => {
@@ -15,7 +16,7 @@ export const UsersInfo: React.FC<Props> = ({ user }) => {
         alt="IconName"
       />
       <p className="UserInfo__item">
-        {user ? user.name : null}
+        {user.name}
       </p>
 
       <img
@@ -24,17 +25,16 @@ export const UsersInfo: React.FC<Props> = ({ user }) => {
         alt="IconUserName"
       />
       <p className="UserInfo__item">
-        {user ? user.username : null}
+        {user.username}
       </p>
 
       <img
         className="UserInfo__image"
-        // eslint-disable-next-line
-        src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/64/000000/external-email-communication-nawicon-detailed-outline-nawicon-2.png"
+        src={Email}
         alt="IconEmail"
       />
       <p className="UserInfo__item">
-        {user ? user.email : null}
+        {user.email}
       </p>
     </div>
   );
