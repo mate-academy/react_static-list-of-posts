@@ -1,23 +1,23 @@
 import { Comment } from '../../types/Comment';
 
 type Props = {
-  comment: Comment;
+  comments: Comment;
 };
 
 export const CommentInfo: React.FC<Props> = (props) => {
   const {
-    comment,
+    comments,
   } = props;
 
   return (
     <>
       <span className="comment-info__name" data-cy="comment-name">
-        {comment.name}
+        {comments.name}
       </span>
       <p className="comment-info__body" data-cy="comment-body">
-        {comment.body}
+        {comments.body}
       </p>
-      <a className="comment-info__link" data-cy="comment-email" href={`mailto:${comment.email}`}>Email</a>
+      <a className="comment-info__link" data-cy="comment-email" href={`mailto:${comments.email}`}>Email</a>
     </>
   );
 };

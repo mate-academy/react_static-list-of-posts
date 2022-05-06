@@ -7,20 +7,16 @@ import posts from './api/posts';
 import users from './api/users';
 import comments from './api/comments';
 
-const preparedPosts = posts.map((post) => {
-  const user = users.find((currentUser) => (
-    currentUser.id === post.userId
-  )) || null;
-  const comment = comments.filter((currentComment) => (
-    currentComment.postId === post.id
-  ));
-
-  return {
+const preparedPosts = posts.map((post) => (
+  {
     ...post,
-    comment,
-    user: user || null,
-  };
-});
+    users: users.find((currentUser) => (
+      currentUser.id === post.userId
+    )),
+    comments: comments.filter((comment) => (
+      comment.postId === post.id
+    )),
+  }));
 
 export const App: React.FC = () => (
   <div className="app">

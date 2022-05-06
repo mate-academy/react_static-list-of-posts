@@ -23,7 +23,7 @@ export const CommentList: React.FC<Props> = (props) => {
             className="comment-list__item"
             key={everyComment.id}
           >
-            <CommentInfo comment={everyComment} />
+            <CommentInfo comments={everyComment} />
           </li>
         ))
       }
