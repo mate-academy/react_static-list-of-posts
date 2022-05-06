@@ -18,18 +18,15 @@ export const CommentList: React.FC<Props> = (props) => {
     <ul className="comment-list" data-cy="comments-list">
       <h3 className="comments-list__title">Comments:</h3>
       {
-        comments.map((everyComment) => (
-          <li
-            className="comment-list__item"
-            key={everyComment.id}
-          >
-            {
-              comments.length && (
-                <CommentInfo comments={everyComment} />
-              )
-            }
-          </li>
-        ))
+        comments.length && (
+          comments.map((everyComment) => (
+            <li
+              className="comment-list__item"
+              key={everyComment.id}
+            >
+              <CommentInfo comments={everyComment} />
+            </li>
+          )))
       }
     </ul>
   );
