@@ -17,7 +17,7 @@ export const PostInfo: React.FC<Props> = ({
       <UserInfo user={user} />
     </div>
     <p className="post__body" data-cy="post-body">{body}</p>
-    {comments && (
+    {comments.length > 0 && (
       <CommentList comments={comments} />
     )}
   </>
