@@ -9,7 +9,7 @@ import './App.scss';
 const preparedPosts = posts.map(post => (
   {
     ...post,
-    user: users.find(({ id }) => id === post.userId) || null,
+    user: users.find(({ id }) => id === post.userId) || undefined,
     comments: comments.filter(({ postId }) => postId === post.id),
   }
 ));
