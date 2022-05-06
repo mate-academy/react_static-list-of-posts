@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Props> = ({
       <UserInfo user={post.user} />
     )}
 
-    {post.comments && (
+    {post.comments.length > 0 && (
       <CommentList
         comments={post.comments}
       />
