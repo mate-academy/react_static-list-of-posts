@@ -1,0 +1,13 @@
+.postInfo {
+  border: 2px solid black;
+  border-radius: 5px;
+
+  &__content {
+    background-color: gray;
+  }
+
+  &__body {
+    border: 2px solid black;
+    border-radius: 3px;
+  }
+}
