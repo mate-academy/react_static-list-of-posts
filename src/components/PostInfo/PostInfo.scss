@@ -1,0 +1,15 @@
+.PostInfo {
+  border-left: 3px solid rgb(59, 59, 59);
+  padding: 15px;
+  margin-right: 10px;
+
+  &__title {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    background-color: rgb(45, 45, 45);
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+      1px 1px 5px rgba(255, 255, 255, 1);
+
+    padding: 15px;
+  }
+}
