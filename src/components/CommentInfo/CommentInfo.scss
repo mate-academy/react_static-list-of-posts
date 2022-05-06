@@ -1,0 +1,18 @@
+.comment-info {
+  background-color: aliceblue;
+  max-width: 500px;
+  margin: 0 auto 15px;
+  padding: 10px;
+
+  &__name {
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  &__body {
+    max-width: 500px;
+    padding-bottom: 5px;
+  }
+  &__email {
+    padding-bottom: 5px;
+  }
+}

@@ -1,0 +1,20 @@
+.post-info {
+  border: 3px solid black;
+  max-width: 700px;
+
+  padding: 25px;
+  margin: 0 auto 30px;
+
+  &__title {
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+
+    padding-bottom: 5px;
+  }
+  &__body {
+    font-size: 20px;
+    margin: 0 auto 10px;
+    max-width: 500px;
+  }
+}

@@ -1,1 +1,7 @@
-// styles go here
+.App {
+  font-family: Roboto, sans-serif;
+
+  &-title {
+    text-align: center;
+  }
+}
