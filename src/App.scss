@@ -1,1 +1,8 @@
-// styles go here
+.app {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 20px;
+
+  &__title {
+    padding-left: 30px;
+  }
+}
