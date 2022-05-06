@@ -13,7 +13,7 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ commonArr }) => (
   <div>
-    {[...commonArr].map(post => {
+    {commonArr.map(post => {
       return (
         <div className="post" key={post.id} data-cy="post-info">
           <div className="post__info">
@@ -21,7 +21,8 @@ export const PostList: React.FC<Props> = ({ commonArr }) => (
               <PostInfo title={post.title} body={post.body} />
             </div>
             <div className="post__info-user">
-              <UserInfo name={post.user.name} email={post.user.email} />
+              {post.user
+              && <UserInfo name={post.user.name} email={post.user.email} />}
             </div>
           </div>
 
