@@ -1,0 +1,20 @@
+.comment-info {
+  padding: 10px 0;
+  border: 10px solid #840;
+  border-top: 0;
+  list-style-type: none;
+  width: 95%;
+
+  &__name,
+  &__body {
+    padding-left: 10px;
+  }
+}
+
+a {
+  padding-left: 10px;
+
+  &:hover {
+    color: yellow;
+  }
+}

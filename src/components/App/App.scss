@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans",
+    "Lucida Sans Regular",
+    "Lucida Grande",
+    "Lucida Sans Unicode",
+    Geneva,
+    Verdana,
+    sans-serif;
+  color: #da7;
+}
+
+body {
+  background-color: #da7;
+}
+
+.app {
+  &__title {
+    margin: 30px 20% 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #621;
+    border: 8px solid #621;
+    border-radius: 10px;
+    width: 60%;
+  }
+}

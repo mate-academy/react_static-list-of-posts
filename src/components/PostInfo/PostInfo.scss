@@ -1,0 +1,29 @@
+.post-info {
+  background-color: #621;
+  border: 10px solid #621;
+  border-radius: 10px;
+
+  &__title {
+    padding: 10px 20px;
+    background-color: #840;
+    border: 1px solid #840;
+    border-radius: 10px;
+  }
+
+  &__body,
+  &__user {
+    padding: 10px 20px 0;
+  }
+
+  &__comments {
+    padding: 10px 20px;
+    background: #840;
+    border: 1px solid #840;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s;
+  }
+}
