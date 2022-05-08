@@ -1,0 +1,15 @@
+.PostInfo {
+  width: 100%;
+  border: 1px solid rgb(38, 109, 241);
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+
+  &__comments {
+    padding: 10px;
+    background-color: rgb(121, 165, 246);
+  }
+}
+
+
