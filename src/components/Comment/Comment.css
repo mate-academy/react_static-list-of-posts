@@ -1,0 +1,11 @@
+.comment-wrapper {
+  background-color: rgb(209, 14, 209);
+  opacity: 0.5;
+  padding: 5px;
+  border-radius: 30px;
+  margin: 10px auto;
+}
+
+.comment-info {
+  color: #fff;
+}

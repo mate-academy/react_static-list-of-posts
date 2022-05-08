@@ -1,0 +1,11 @@
+.postList {
+  background-color: darkmagenta;
+  padding: 15px;
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 10px;
+}
