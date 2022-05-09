@@ -1,0 +1,36 @@
+.post-wrapper {
+  display: grid;
+  gap: 18px;
+  padding: 0 18px;
+  background-color: #fcf8f8;
+}
+
+.post {
+  &__title {
+    color: #e25544;
+  }
+
+  &__author {
+    font-weight: bold;
+    color: #424242;
+  }
+
+  &__author-email {
+    font-size: 14px;
+    font-style: italic;
+    color: #424242;
+  }
+
+  &__body {
+    color: #424242;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin: 18px auto 0;
+    background-color: #e25544;
+  }
+}
