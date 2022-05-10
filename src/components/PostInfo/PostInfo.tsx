@@ -16,7 +16,7 @@ export const PostInfo: React.FC<Props> = ({ props }) => (
     {props.user && (
       <UserInfo props={props.user} />
     )}
-    {props.comments && (
+    {(props.comments && props.comments.length) && (
       <CommentList props={props.comments} />
     )}
   </>
