@@ -1,0 +1,12 @@
+.user-info {
+  list-style-type: none;
+
+  &__name {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  &__email {
+    padding-bottom: 10px;
+  }
+}
