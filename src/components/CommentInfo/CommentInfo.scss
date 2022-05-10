@@ -1,0 +1,15 @@
+.commentInfo {
+  background-image: linear-gradient(
+    to left, #f1f1ff, #ffecfb, #ffe9e9, #ffecd5, #f4f5cd
+  );
+  margin-bottom: 4px;
+
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__email {
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+}

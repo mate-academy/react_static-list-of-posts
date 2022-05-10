@@ -1,0 +1,10 @@
+.userInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 5px;
+
+  &__email {
+    font-style: italic;
+  }
+}
