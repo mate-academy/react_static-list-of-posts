@@ -13,10 +13,15 @@
   left: 30%;
   width: 200px;
   height: 200px;
+  margin-right: 10px;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   cursor: pointer;
+
+  @media(max-width: 1240px) {
+    display: none;
+  }
 }
 
 .animated-mail {
