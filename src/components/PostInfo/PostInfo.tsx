@@ -25,6 +25,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <UserInfo user={post.user} />
     )}
 
-    <CommentList comments={post.commentsArr} />
+    {post.commentsArr.length > 0 && (
+      <CommentList comments={post.commentsArr} />
+    )}
   </>
 );
