@@ -1,0 +1,12 @@
+.comment-collection {
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 3px 3px 0;
+  font-weight: 400px;
+  padding: 5px;
+  font-size: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
