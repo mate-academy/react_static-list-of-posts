@@ -12,19 +12,18 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => (
       className="comment-info__name"
       data-cy="comment-name"
     >
-      {comment && `Name: ${comment.name}`}
+      {`Name: ${comment.name}`}
     </li>
     <li
       className="comment-info__body"
       data-cy="comment-body"
     >
-      {comment && `Body: ${comment.body}`}
+      {`Body: ${comment.body}`}
     </li>
     <li
-      // className="comment-info__name"
       data-cy="comment-email"
     >
-      {comment && <a href={`${comment.email}`}>{comment.email}</a>}
+      <a href={`${comment.email}`}>{comment.email}</a>
     </li>
   </ul>
 );
