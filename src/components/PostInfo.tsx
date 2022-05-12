@@ -5,14 +5,14 @@ import { CommentList } from './CommentList';
 import { Post } from './types/Post';
 
 type Props = {
-  posts: Post,
+  post: Post,
 };
 
-export const PostInfo: React.FC<Props> = ({ posts }) => (
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
-    <div className="postTitle">{posts.title}</div>
-    <div className="postBody">{posts.body}</div>
-    {posts.user && <UserInfo users={posts.user} />}
-    {posts.comment && <CommentList comment={posts.comment} />}
+    <div className="postTitle">{post.title}</div>
+    <div className="postBody">{post.body}</div>
+    {post.user && <UserInfo user={post.user} />}
+    {post.comments?.length && <CommentList comments={post.comments} />}
   </>
 );

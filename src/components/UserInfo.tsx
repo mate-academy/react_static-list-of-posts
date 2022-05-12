@@ -2,12 +2,12 @@ import React from 'react';
 import { User } from './types/User';
 
 type Props = {
-  users: User,
+  user: User,
 };
 
-export const UserInfo: React.FC<Props> = ({ users }) => (
+export const UserInfo: React.FC<Props> = ({ user }) => (
   <div className="user">
-    <div className="user__name">{`Name: ${users.name}`}</div>
-    <div className="user__email">{`Email: ${users.email}`}</div>
+    <div className="user__name">{`Name: ${user.name}`}</div>
+    <div className="user__email">{`Email: ${user.email}`}</div>
   </div>
 );

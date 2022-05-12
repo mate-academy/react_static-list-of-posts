@@ -11,12 +11,12 @@ import users from './api/users';
 const preparedPosts = posts.map((post) => ({
   ...post,
   user: users.find((user => user.id === post.userId)) || null,
-  comment: comments.filter((comment => comment.postId === post.id)) || null,
+  comments: comments.filter((comment => comment.postId === post.id)),
 }));
 
 const App: React.FC = () => (
   <div className="App">
-    <PostList post={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </div>
 );
 
