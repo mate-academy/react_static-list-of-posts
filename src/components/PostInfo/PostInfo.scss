@@ -1,0 +1,9 @@
+.post {
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    border: 1px solid black;
+    padding: 20px;
+  }
+}
