@@ -1,0 +1,16 @@
+.post {
+  background-color: green;
+  padding: 5px;
+
+  & > * {
+    margin: 0;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__body {
+    color: rgb(0, 0, 54);
+  }
+}

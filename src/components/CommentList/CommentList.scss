@@ -1,0 +1,11 @@
+.commentlist {
+  list-style-type: none;
+  background-color: #00acdc;
+  padding: 10px;
+
+  &__item {
+    border: 1px solid red;
+    margin-top: 2px;
+    padding: 5px;
+  }
+}
