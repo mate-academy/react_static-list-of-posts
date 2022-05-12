@@ -3,16 +3,17 @@ import CommentInfo from '../CommentInfo/CommentInfo';
 import { Comment } from '../../types/CommentI';
 
 type Props = {
-  comment: Comment[];
+  comments: Comment[];
 };
 
-const CommentList: React.FC<Props> = ({ comment }) => (
+const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="comment-list" data-cy="comments-list">
-    {comment.map(com => (
+    {comments.map(comment => (
       <CommentInfo
-        name={com.name}
-        email={com.email}
-        body={com.body}
+        name={comment.name}
+        email={comment.email}
+        body={comment.body}
+        key={comment.id}
       />
     ))}
   </div>

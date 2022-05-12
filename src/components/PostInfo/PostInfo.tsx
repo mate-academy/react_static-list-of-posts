@@ -23,7 +23,7 @@ const PostInfo: React.FC<Props> = ({
       <UserInfo user={user} />
     </p>
     <p>
-      <CommentList comment={comment} />
+      <CommentList comments={comment} />
     </p>
   </div>
 );
