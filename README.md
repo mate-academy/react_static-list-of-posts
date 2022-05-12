@@ -1,4 +1,5 @@
 # React static list of posts
+
 - Replace `<your_account>` with your Github username in the
   [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
@@ -25,11 +26,3 @@ Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`,
 1. The `CommentInfo` accepts a `comment` object and renders a `name`, a `body`, and an `email`.
    - Please, add `data-cy="comment-name"`, `data-cy="comment-body"`, and
    `data-cy="comment-email"` attributes to `name`, `body` and `email` elements.
-
-## REQUIREMENTS:
-
-
-   - `name` of the user in `CommentInfo` should contain `data-cy="comment-name"` attribute
-   - `body` of the user in `CommentInfo` should contain `data-cy="comment-body"` attribute
-   - `email` of the user in `CommentInfo` should contain `data-cy="comment-email"` attribute
-   - `ul` in `CommentList` should contain `data-cy="comments-list"` attribute
