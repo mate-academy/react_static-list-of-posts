@@ -1,5 +1,5 @@
-import { UserType } from "./UserType";
-import { CommentType } from "./CommentType";
+import { UserType } from './UserType';
+import { CommentType } from './CommentType';
 
 export interface PropType {
   id: number,
