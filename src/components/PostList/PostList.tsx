@@ -12,7 +12,7 @@ export const PostList: React.FC<Props> = ({ posts }) => (
   <fieldset>
     <legend>
       <mark>
-        This block is being rendered by&#160;
+        This block is rendered by&#160;
         <b>
           &#34;PostList&#34;
         </b>

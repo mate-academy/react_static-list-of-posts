@@ -16,7 +16,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
     </span>
     &#160;&#160;
     <mark>
-      ⬅️    This inline string is being rendered by&#160;
+      ⬅️    This inline string is rendered by&#160;
       <b>
         &#34;UserInfo&#34;
       </b>

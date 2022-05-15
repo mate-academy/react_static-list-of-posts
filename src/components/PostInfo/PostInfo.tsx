@@ -13,7 +13,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
   <fieldset>
     <legend>
       <mark>
-        This block is being rendered by&#160;
+        This block is rendered by&#160;
         <b>
           &#34;PostInfo&#34;
         </b>

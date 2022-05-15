@@ -12,7 +12,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
   <fieldset>
     <legend>
       <mark>
-        This comments section is being rendered by&#160;
+        This comments section is rendered by&#160;
         <b>
           &#34;CommentList&#34;
         </b>
