@@ -7,9 +7,20 @@ interface Props {
 }
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
-  <span>
-    {user.name}
+  <>
+    <span>
+      🚶
+      {user.name}
+      &#160;&#160;📧
+      <a href={`mailto:${user.email}`}>{user.email}</a>
+    </span>
     &#160;&#160;
-    {user.email}
-  </span>
+    <mark>
+      ⬅️    This inline string is being rendered by&#160;
+      <b>
+        &#34;UserInfo&#34;
+      </b>
+      &#160;component
+    </mark>
+  </>
 );

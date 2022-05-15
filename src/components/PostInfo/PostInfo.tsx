@@ -10,7 +10,16 @@ interface Props {
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <p>
+  <fieldset>
+    <legend>
+      <mark>
+        This block is being rendered by&#160;
+        <b>
+          &#34;PostInfo&#34;
+        </b>
+        &#160;component
+      </mark>
+    </legend>
     <hr />
     Title:&#160;&#160;
     <b>{post.title}</b>
@@ -21,10 +30,11 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     ) : 'incognito user'}
     <br />
     Body:&#160;&#160;
-    {post.body}
+    <i>
+      {post.body}
+    </i>
     <br />
     <hr />
-    Comments section:&#160;&#160;
     <CommentList comments={post.comments} />
-  </p>
+  </fieldset>
 );

@@ -15,7 +15,7 @@ const preparedPosts = posts.map(singlepost => ({
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1>This static list of posts does not contain any css styling!</h1>
     <PostList posts={preparedPosts} />
   </div>
 );
