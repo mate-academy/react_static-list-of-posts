@@ -8,11 +8,11 @@ interface Props {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
-    <span>
+    <span data-cy="name">
       🚶
       {user.name}
       &#160;&#160;📧
-      <a href={`mailto:${user.email}`}>{user.email}</a>
+      <a href={`mailto:${user.email}`} data-cy="email">{user.email}</a>
     </span>
     &#160;&#160;
     <mark>

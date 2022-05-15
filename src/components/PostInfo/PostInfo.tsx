@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     </legend>
     <hr />
     Title:&#160;&#160;
-    <b>{post.title}</b>
+    <b data-cy="post-title">{post.title}</b>
     <br />
     User:&#160;&#160;
     {post.user ? (
@@ -30,7 +30,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     ) : 'incognito user'}
     <br />
     Body:&#160;&#160;
-    <i>
+    <i data-cy="post-body">
       {post.body}
     </i>
     <br />

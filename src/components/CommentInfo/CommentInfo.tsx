@@ -20,14 +20,14 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => (
       </legend>
       <span>
         Title:&#160;&#160;
-        <b>
+        <b data-cy="comment-name">
           {comment.name}
         </b>
         &#160;&#160;&#160;&#160;&#160;&#160;📧
-        <a href={`mailto:${comment.email}`}>{comment.email}</a>
+        <a href={`mailto:${comment.email}`} data-cy="comment-email">{comment.email}</a>
         &#160;&#160;
         <br />
-        <i>
+        <i data-cy="comment-body">
           {comment.body}
         </i>
       </span>

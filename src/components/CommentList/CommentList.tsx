@@ -19,8 +19,12 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
         &#160;component
       </mark>
     </legend>
-    {comments.map((comment) => (
-      <CommentInfo comment={comment} />
-    ))}
+    <ul data-cy="comments-list">
+      {comments.map((comment) => (
+        <li key={comment.id}>
+          <CommentInfo comment={comment} />
+        </li>
+      ))}
+    </ul>
   </fieldset>
 );
