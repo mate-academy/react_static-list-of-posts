@@ -1,1 +1,15 @@
-// styles go here
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #051622;
+  color: #deb992;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.mainTitle {
+  margin: 12px 0;
+  text-align: center;
+}

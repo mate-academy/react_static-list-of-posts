@@ -1,0 +1,39 @@
+$mb-m: 30px;
+
+.postsListItem {
+  margin-bottom: 54px;
+
+  &Title {
+    margin-bottom: $mb-m;
+    font-size: 24px;
+  }
+
+  &Body {
+    position: relative;
+    margin-bottom: $mb-m;
+    font-size: 18px;
+
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      content: "";
+      width: 100%;
+      border-top: 1px solid rgba(222, 185, 146, 0.5);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      content: "";
+      width: 100%;
+      border-bottom: 1px solid rgba(222, 185, 146, 0.5);
+    }
+  }
+
+  &UserInfo {
+    font-size: 14px;
+    margin-bottom: $mb-m;
+  }
+}
