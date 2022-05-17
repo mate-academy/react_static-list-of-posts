@@ -6,8 +6,8 @@ export const UserInfo:React.FC<User> = ({
   email,
 }) => (
   <div className="user-info">
-    <strong data-cy="name" className="ures-info__name">{name}</strong>
+    <p data-cy="name" className="ures-info__name">{name}</p>
     {' '}
-    <small data-cy="email" className="user-info__email">{email}</small>
+    <p data-cy="email" className="user-info__email">{email}</p>
   </div>
 );
