@@ -1,5 +1,5 @@
 import React from 'react';
-import { PreparedPosts } from '../types/User';
+import { PreparedPosts } from '../../types/Types';
 import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
 

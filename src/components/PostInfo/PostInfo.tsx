@@ -1,6 +1,6 @@
 import React from 'react';
-import { PreparedPosts } from '../types/User';
-import { CommentList } from '../Comment/CommentList';
+import { PreparedPosts } from '../../types/Types';
+import { CommentList } from '../CommentList/CommentList';
 import { UsersInfo } from '../UsersInfo/UsersInfo';
 import './PostInfo.scss';
 
@@ -21,7 +21,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         </p>
 
         <UsersInfo user={post.user} />
-
       </div>
 
       <div className="PostInfo__comments">
@@ -29,7 +28,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {post.comment
         && (
           <p className="PostInfo__item">
-            <CommentList comment={post.comment} />
+            <CommentList comments={post.comment} />
           </p>
         )}
       </div>

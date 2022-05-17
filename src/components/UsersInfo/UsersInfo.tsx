@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from '../types/User';
+import { User } from '../../types/Types';
 import './UserInfo.scss';
 
 type Props = {
@@ -9,13 +9,18 @@ type Props = {
 export const UsersInfo: React.FC<Props> = ({ user }) => {
   return (
     <div className="UserInfo">
-      <p className="UserInfo__item" data-cy="name">
-        {user ? user.name : null}
-      </p>
+      {user ? (
+        <p className="UserInfo__item" data-cy="name">
+          {user.name}
+        </p>
+      ) : null}
 
-      <p className="UserInfo__item" data-cy="email">
-        {user ? user.email : null}
-      </p>
+      {user ? (
+        <p className="UserInfo__item" data-cy="email">
+          {user.email}
+        </p>
+      ) : null}
+
     </div>
   );
 };
