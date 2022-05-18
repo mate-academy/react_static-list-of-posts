@@ -7,7 +7,7 @@ import './App.scss';
 export const preparedPosts = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId) || null,
-  comment: comments.filter(comment => comment.postId === post.id),
+  comments: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App: React.FC = () => (

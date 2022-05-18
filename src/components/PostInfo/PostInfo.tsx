@@ -25,10 +25,10 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
       <div className="PostInfo__comments">
         <strong>COMMENTS:</strong>
-        {post.comment
+        {post.comments
         && (
           <p className="PostInfo__item">
-            <CommentList comments={post.comment} />
+            <CommentList comments={post.comments} />
           </p>
         )}
       </div>
