@@ -6,5 +6,5 @@ export interface PropType {
   title: string,
   body: string,
   user: UserType | null,
-  comments: CommentType[] | null,
+  comments: CommentType[],
 }
