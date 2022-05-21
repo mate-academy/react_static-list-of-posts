@@ -1,1 +1,40 @@
-//
+.PostInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: lightgray;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__description {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__description-header,
+  &__userdata-header,
+  &__comment-header {
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__description-body {
+    font-style: italic;
+  }
+
+  &__comment {
+    padding-top: 16px;
+  }
+}

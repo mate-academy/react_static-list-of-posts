@@ -1,1 +1,19 @@
-//
+.CommentInfo {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+
+  &__block {
+    display: flex;
+  }
+
+  &__block-title {
+    padding-right: 10px;
+    text-decoration: underline;
+  }
+}
+
+p,
+a {
+  margin: 2px 4px;
+}
