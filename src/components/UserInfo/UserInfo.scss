@@ -1,1 +1,13 @@
-//
+.UserInfo {
+  display: flex;
+  justify-content: space-between;
+
+  &__name {
+    display: flex;
+  }
+
+  &__name-title {
+    font-weight: 600;
+    margin: 0;
+  }
+}

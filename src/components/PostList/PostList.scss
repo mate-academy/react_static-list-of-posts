@@ -1,1 +1,7 @@
-//
+.PostList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
