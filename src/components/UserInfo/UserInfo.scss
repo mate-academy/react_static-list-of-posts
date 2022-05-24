@@ -1,1 +1,17 @@
-//
+.userInfo {
+  &__content {
+    display: grid;
+    gap: 10px 0;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  &__item {
+    font-size: 14px;
+  }
+}

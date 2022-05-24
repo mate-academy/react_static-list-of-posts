@@ -1,1 +1,13 @@
-// styles go here
+iframe {
+  pointer-events: none;
+}
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
