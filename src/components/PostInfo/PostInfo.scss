@@ -1,1 +1,24 @@
-//
+.postInfo {
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.4s;
+  height: fit-content;
+  &:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+}
+
+.postInfo__title {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.postInfo__text {
+  margin: 0;
+  margin-bottom: 16px;
+}

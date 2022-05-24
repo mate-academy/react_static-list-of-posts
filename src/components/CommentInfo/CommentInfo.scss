@@ -1,1 +1,27 @@
-//
+.commentInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.commentInfo__name {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.commentInfo__email {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.commentInfo__text {
+  font-size: 14px;
+  margin: 0;
+}
