@@ -12,13 +12,20 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__post">
-        <strong className="PostInfo__name" data-cy="post-title">
-          {post?.title.toUpperCase()}
-        </strong>
 
-        <p className="PostInfo__item" data-cy="post-body">
-          {post?.body}
-        </p>
+        {post.title
+        && (
+          <strong className="PostInfo__name" data-cy="post-title">
+            {post.title.toUpperCase()}
+          </strong>
+        )}
+
+        {post.body
+        && (
+          <p className="PostInfo__item" data-cy="post-body">
+            {post.body}
+          </p>
+        )}
 
         <UsersInfo user={post.user} />
       </div>
