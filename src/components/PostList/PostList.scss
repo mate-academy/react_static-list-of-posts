@@ -1,1 +1,13 @@
-//
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+
+}
+
+.posts {
+  display: grid;
+  gap: 30px 10px;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+}
