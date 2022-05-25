@@ -1,0 +1,26 @@
+.comments {
+  background-color: #66a4ac;
+  padding: 20px;
+  border-radius: 10px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    background-color: #c2dde4;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+.comment {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__email {
+    margin-bottom: 5px;
+  }
+}
