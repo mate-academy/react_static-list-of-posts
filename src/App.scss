@@ -1,1 +1,50 @@
-// styles go here
+.heading {
+  text-align: center;
+}
+
+.hello {
+  display: block;
+  background-color:rgba(100, 100, 255, 50%);
+  margin: 40px 40px;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.comments {
+  
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+    background-color: rgb(145, 145, 255);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px
+  }
+}
+
+.post {
+
+  &__title {
+
+  }
+
+  &__key {
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+  }
+}
+
+.user {
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+}
