@@ -1,0 +1,55 @@
+.CommentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__comment {
+    display: flex;
+    height: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    transition: all 1.5s ease;
+    box-shadow: 1px 1px 5px 0 rgb(1 1 1 / 15%);
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 2px 4px rgba(46, 41, 51, 20%),
+        0 5px 10px rgba(71, 63, 79, 30%);
+    }
+  }
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+
+    & img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+
+  }
+
+  &__email {
+    display: flex;
+    justify-content: flex-end;
+
+    & p {
+      font-size: 1.6rem;
+    }
+  }
+}

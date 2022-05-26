@@ -1,1 +1,16 @@
-// styles go here
+.App {
+  width: 100%;
+  max-width: 95rem;
+  padding: 2rem 0;
+
+  &__title {
+    padding: 2rem 0;
+    color: white;
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: white;
+    text-align: center;
+  }
+}
