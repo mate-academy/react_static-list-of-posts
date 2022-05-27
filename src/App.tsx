@@ -1,7 +1,3 @@
-import React from 'react';
-
-import './App.scss';
-
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
@@ -9,6 +5,7 @@ import {
   Comment, FullPost, Post, User,
 } from './react-app-env';
 import { PostList } from './components/PostList/PostList';
+import './App.scss';
 
 const App = () => {
   const preparedPosts = (
