@@ -1,1 +1,12 @@
-//
+.comments__item {
+  margin-top: 10px;
+  padding-bottom: 5px;
+  font-weight: normal;
+  border-bottom: 0.5px dotted #1d3557;
+
+  &-body {
+    display: block;
+    margin-top: 5px;
+    text-align: justify;
+  }
+}

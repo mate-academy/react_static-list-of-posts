@@ -1,1 +1,14 @@
-// styles go here
+.App {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 5px #6d6875;
+  background-color: #edede9;
+  color: #1d3557;
+  font-size: 14px;
+
+  &__header {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+  }
+}
