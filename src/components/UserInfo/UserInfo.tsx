@@ -9,11 +9,11 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
-    <div>
+    <div data-cy="user-name">
       {user.name}
     </div>
 
-    <div>
+    <div data-cy="user-email">
       {user.email}
     </div>
   </>

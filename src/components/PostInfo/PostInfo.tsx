@@ -11,14 +11,16 @@ type Props = {
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <>
     <div className="post">
-      <h2 className="post__subTitle">
+      <h2 className="post__subTitle" data-cy="post-title">
         {post.title}
       </h2>
-      <p className="post__info">
+      <p className="post__info" data-cy="post-body">
         {post.body}
       </p>
       <div className="post__userInfo">
-        {post.user && <UserInfo user={post.user} />}
+        <div data-cy="post-info">
+          {post.user && <UserInfo user={post.user} />}
+        </div>
       </div>
       <div className="post__comments">
         <CommentList comments={post.comments} />
