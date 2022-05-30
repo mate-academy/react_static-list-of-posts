@@ -1,1 +1,8 @@
 //
+.comment {
+  border: 1px solid black;
+
+  &__email {
+    font-style: italic;
+  }
+}

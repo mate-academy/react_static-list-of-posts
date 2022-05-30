@@ -1,1 +1,33 @@
-//
+.post {
+  background-color: wheat;
+  max-width: 400px;
+  padding: 40px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: underline;
+  }
+}
+
+.comment {
+  margin-bottom: 20px;
+  background-color: white;
+
+  &__name {
+    font-weight: bold;
+  }
+}
