@@ -1,1 +1,12 @@
 //
+.list {
+  &__item {
+    border-bottom: 1px dashed #000;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
