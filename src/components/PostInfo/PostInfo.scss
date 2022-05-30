@@ -1,1 +1,28 @@
 //
+.post {
+  border: 2px dotted black;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  &__subTitle {
+    color: black;
+    font-size: 32px;
+  }
+
+  &__info {
+    padding-left: 50px;
+    margin-bottom: 5px;
+  }
+
+  &__userInfo {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__comments {
+    color: rgb(241, 183, 112);
+    padding-left: 50px;
+  }
+}
