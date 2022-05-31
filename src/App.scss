@@ -1,1 +1,22 @@
-// styles go here
+body {
+  background-color: azure;
+
+  margin: 0;
+}
+
+ul,
+h1,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.app {
+  padding-top: 30px;
+}

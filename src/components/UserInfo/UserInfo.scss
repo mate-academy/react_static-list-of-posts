@@ -1,1 +1,9 @@
-//
+.user-data {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(57, 54, 54);
+
+  &__email {
+    margin-bottom: 20px;
+  }
+}
