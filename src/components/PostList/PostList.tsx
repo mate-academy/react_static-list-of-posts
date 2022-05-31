@@ -10,7 +10,9 @@ export const PostList: React.FC<Props> = ({ preparedPosts }) => (
   <>
     <div className="container is-widescreen">
       {preparedPosts.map(post => (
-        <PostInfo post={post} />
+        <div key={post.id}>
+          <PostInfo post={post} />
+        </div>
       ))}
     </div>
   </>

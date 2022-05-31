@@ -11,7 +11,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
     <ul className="message is-warning">
       <h3 className="message-header">comments:</h3>
       {comments.map(comment => (
-        <li className="box">
+        <li key={comment.id} className="box">
           <CommentInfo comment={comment} />
         </li>
       ))}
