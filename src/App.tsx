@@ -6,13 +6,23 @@ import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList/PostList';
+import {
+  FullPost, Post, User, Comment,
+} from './react-app-env';
 
-const preparedPosts: Post[] = posts.map(post => ({
-  ...post,
-  user: users.find(user => user.id === post.id),
-  comments: comments.filter(comment => comment.postId === post.id),
-}
-));
+const preparingPosts = (
+  postsList: Post[],
+  usersList: User[],
+  commentsList: Comment[],
+) => {
+  return postsList.map(post => ({
+    ...post,
+    user: usersList.find(user => user.id === post.userId),
+    comments: commentsList.filter(comment => comment.postId === post.id),
+  }));
+};
+
+const preparedPosts: FullPost[] = preparingPosts(posts, users, comments);
 
 const App: React.FC = () => (
   <div className="App">

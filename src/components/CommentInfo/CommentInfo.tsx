@@ -1,22 +1,22 @@
 import React from 'react';
-
 import './CommentInfo.scss';
+import { Comment } from '../../react-app-env';
 
 type Props = {
-  comment: Comments
+  comments: Comment
 };
-export const CommentInfo: React.FC<Props> = ({ comment}) => (
-  <>
+export const CommentInfo: React.FC<Props> = ({ comments }) => (
+  <div>
     <p data-cy="comment-name">
-      {comment.name}
+      {comments.name}
     </p>
 
     <p data-cy="comment-body">
-      {comment.body}
+      {comments.body}
     </p>
 
     <p data-cy="comment-email">
-      {comment.email}
+      {comments.email}
     </p>
-  </>
+  </div>
 );

@@ -1,22 +1,4 @@
-interface Post {
-  userId: number,
-  id: number,
-  title: string,
-  body: string,
-}
-
-interface User {
-  id: number,
-  name: string,
-  username: string,
-  email: string,
-  address: Address,
-  phone: string,
-  website: string,
-  company: Company,
-}
-
-interface Address {
+interface Adress {
   street: string,
   suite: string,
   city: string,
@@ -35,15 +17,33 @@ interface Company {
   bs: string,
 }
 
-interface Comments {
-  postId: number,
-  id: number,
-  name: string,
-  email: string,
-  body: number,
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: Adress;
+  phone: string;
+  website: string;
+  company: Company;
 }
 
-interface FullPost extends Post {
-  user: User | undefined,
-  comments: Comments[] | undefined,
+interface Comment {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+}
+
+interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+export interface FullPost extends Post {
+  user?: User | undefined,
+  comments?: Comments[] | undefined,
 }
