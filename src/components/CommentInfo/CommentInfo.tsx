@@ -1,10 +1,10 @@
 import React from 'react';
-import { Comments } from '../../react-app-env';
+import { Comment } from '../../react-app-env';
 
 import './CommentInfo.scss';
 
 interface Prop {
-  comment: Comments
+  comment: Comment
 }
 
 export const CommentInfo: React.FC<Prop> = ({ comment }) => (

@@ -4,7 +4,7 @@ import { Users } from '../../react-app-env';
 import './UserInfo.scss';
 
 interface Prop {
-  user: Users | undefined;
+  user: Users;
 }
 
 export const UserInfo: React.FC<Prop> = ({ user }) => (

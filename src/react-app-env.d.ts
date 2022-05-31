@@ -1,6 +1,6 @@
 /// <reference types="react-scripts" />
 
-export interface Comments {
+export interface Comment {
   postId: number,
   id: number,
   name: string,
@@ -8,7 +8,7 @@ export interface Comments {
   body: string,
 }
 
-export interface Posts {
+export interface Post {
   userId: number,
   id: number,
   title: string,
@@ -45,7 +45,7 @@ export interface Company {
   bs: string,
 }
 
-export interface PreparedPosts extends Posts {
+export interface PreparedPosts extends Post {
   user?: Users,
   comments: Comments[],
 }

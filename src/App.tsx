@@ -6,12 +6,12 @@ import './App.scss';
 import posts from './api/posts';
 import comments from './api/comments';
 import users from './api/users';
-import { Comments, Posts, PreparedPosts, Users } from './react-app-env';
+import { Comment, Post, PreparedPosts, Users } from './react-app-env';
 import { PostList } from './components/PostList/PostList';
 
 const preparedPosts = (
-  postss: Posts[],
-  commentss: Comments[],
+  postss: Post[],
+  commentss: Comment[],
   userss: Users[],
 ):PreparedPosts[] => {
   return postss.map(post => ({
