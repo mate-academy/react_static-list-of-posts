@@ -8,16 +8,16 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ currentPost }) => (
-  <div className="PostInfo">
-    <h3 className="PostInfo">{currentPost.title}</h3>
-    <p>{currentPost.body}</p>
+  <div className="PostInfo" data-cy="post-info">
+    <h3 className="PostInfo" data-cy="post-title">{currentPost.title}</h3>
+    <p data-cy="post-body">{currentPost.body}</p>
     <h4>User information:</h4>
     <ul>
-      <li>
+      <li data-cy="user-name">
         name:
         {currentPost.user?.name}
       </li>
-      <li>
+      <li data-cy="user-email">
         email:
         {currentPost.user?.email}
       </li>
