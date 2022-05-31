@@ -1,1 +1,9 @@
-//
+.PostInfo {
+  background-color: beige;
+  padding: 20px;
+  margin: 20px;
+
+  &__title {
+    text-align: center;
+  }
+}
