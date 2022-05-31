@@ -1,1 +1,16 @@
 //
+.post {
+  &__title {
+    padding: 5px;
+    width: 600px;
+    background-color: rgba(76, 196, 218, 0.6);
+    border-radius: 10%;
+  }
+
+  &__body {
+    padding: 5px;
+    width: 600px;
+    background-color: rgba(76, 196, 218, 0.6);
+    border-radius: 10%;
+  }
+}

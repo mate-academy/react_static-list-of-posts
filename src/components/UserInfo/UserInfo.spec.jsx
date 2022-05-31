@@ -5,6 +5,7 @@ import users from '../../api/users';
 
 describe('UserInfo component', () => {
   it('should accept a \'user\' object and render an \'email\'', () => {
+    // eslint-disable-next-line react/jsx-filename-extension
     mount(<UserInfo
       user={
         { email: users[0].email }

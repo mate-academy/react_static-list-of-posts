@@ -1,1 +1,15 @@
 //
+.post {
+  &__list {
+    list-style: decimal;
+    background-color: lightsteelblue;
+    padding: 30px;
+    width: 900px;
+    border: 4px solid lightseagreen;
+    border-radius: 50px;
+  }
+
+  &__item {
+    background-color: lightsteelblue;
+  }
+}

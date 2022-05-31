@@ -1,1 +1,16 @@
 //
+.post {
+  &__list__comments {
+    margin: 20px;
+    padding: 20px;
+    list-style: none;
+    background-color: darkgray;
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 40px;
+  }
+
+  &__item__comments {
+    color: darkslategray;
+  }
+}
