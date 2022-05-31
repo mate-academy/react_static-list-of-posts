@@ -1,1 +1,24 @@
 //
+.post {
+  &__comment-body {
+    padding: 10px;
+    margin: 10px;
+    box-sizing: content-box;
+    background-color: gray;
+    width: 500px;
+    color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+
+  &__comment-name {
+    padding: 10px;
+    margin: 10px;
+    box-sizing: content-box;
+    background-color: gray;
+    width: 500px;
+    color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+}
