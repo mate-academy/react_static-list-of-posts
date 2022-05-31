@@ -1,1 +1,15 @@
-//
+.post {
+  background-color: lightblue;
+  padding: 5px 15px;
+  margin: 15px 0;
+
+  &__title {
+    margin: 5px 0 0;
+  }
+
+  &__body {
+    margin: 0;
+    padding: 16px 0;
+    border-bottom: 2px solid black;
+  }
+}

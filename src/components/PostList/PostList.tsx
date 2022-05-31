@@ -1,6 +1,18 @@
 import React from 'react';
+import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
+import { PreparedPost } from '../../app.typedef';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+interface Props {
+  posts: PreparedPost[];
+}
+
+export const PostList: React.FC<Props> = ({ posts }) => (
+  <>
+    {posts.map(post => {
+      return (
+        <PostInfo post={post} />
+      );
+    })}
+  </>
 );
