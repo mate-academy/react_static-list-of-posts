@@ -3,11 +3,11 @@ import { mount } from '@cypress/react';
 import { CommentInfo } from './CommentInfo';
 import comments from '../../api/comments';
 
-describe(`CommentInfo component`, () => {
-  it(`should show a 'name'`, () => {
+describe('CommentInfo component', () => {
+  it('should show a \'name\'', () => {
     mount(<CommentInfo
       comment={
-        { name : comments[0].name }
+        { name: comments[0].name }
       }
     />);
 
@@ -15,10 +15,10 @@ describe(`CommentInfo component`, () => {
       .should('contain', comments[0].name);
   });
 
-  it(`should show a 'body'`, () => {
+  it('should show a \'body\'', () => {
     mount(<CommentInfo
       comment={
-        { body : comments[0].body }
+        { body: comments[0].body }
       }
     />);
 
@@ -26,10 +26,10 @@ describe(`CommentInfo component`, () => {
       .should('contain', comments[0].body);
   });
 
-  it(`should show an 'email'`, () => {
+  it('should show an \'email\'', () => {
     mount(<CommentInfo
       comment={
-        { email : comments[0].email }
+        { email: comments[0].email }
       }
     />);
 
