@@ -14,12 +14,9 @@ const preparedPosts = posts.map(post => {
   return { ...post, user, comments: result };
 });
 
-// eslint-disable-next-line no-console
-console.log(preparedPosts);
-
 const App: React.FC = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
+  <div className="App container">
+    <h1 className="subtitle is-1">Static list of posts</h1>
     <PostList postArray={preparedPosts} />
   </div>
 );

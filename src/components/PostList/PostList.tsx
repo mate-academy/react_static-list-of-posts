@@ -9,9 +9,15 @@ interface Prop {
 
 export const PostList: React.FC<Prop> = ({ postArray }) => (
   <div>
-    <ul>
+    <ul className="content">
       {postArray.map(post => (
-        <PostInfo post={post} />
+        <li
+          data-cy="post-info"
+          key={+`${post.id}`}
+          className="box message"
+        >
+          <PostInfo post={post} />
+        </li>
       ))}
     </ul>
   </div>

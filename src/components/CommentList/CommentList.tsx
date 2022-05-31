@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Comment } from '../../react-app-env';
 import './CommentList.scss';

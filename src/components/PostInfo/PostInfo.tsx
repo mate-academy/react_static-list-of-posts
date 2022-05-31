@@ -9,12 +9,17 @@ interface Props {
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <li data-cy="post-info" key={post.id}>
-    <h1 data-cy="post-title">{post.title}</h1>
+  <>
+    <h1
+      className="is-size-1 has-text-centered"
+      data-cy="post-title"
+    >
+      {post.title}
+    </h1>
     <div data-cy="post-body">
-      <p>{post.body}</p>
+      <p className="is-size-3">{post.body}</p>
       {post.user && <UserInfo user={post.user} />}
       <CommentList commetsArray={post.comments} />
     </div>
-  </li>
+  </>
 );
