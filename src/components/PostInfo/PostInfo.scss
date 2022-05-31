@@ -1,1 +1,8 @@
-//
+.posts {
+  &__post {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: rgba(rgb(58, 88, 224), 0.5);
+  }
+}
