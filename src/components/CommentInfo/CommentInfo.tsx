@@ -2,6 +2,14 @@ import React from 'react';
 
 import './CommentInfo.scss';
 
-export const CommentInfo: React.FC = () => (
-  <>Put the comment here</>
+import { Comment } from '../../types';
+
+interface Props {
+  comment: Comment
+}
+
+export const CommentInfo: React.FC<Props> = ({ comment }) => (
+  <>
+    {comment.name}
+  </>
 );
