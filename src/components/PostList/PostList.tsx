@@ -12,7 +12,7 @@ export const PostList: React.FC <Props> = (
     {props.prepared.map(prep => (
       <li key={prep.id}>
         <PostInfo {...prep} />
-        <UserInfo {...prep.user} />
+        <UserInfo {...prep} />
         <CommentList comms={prep.comments} />
       </li>
     ))}
