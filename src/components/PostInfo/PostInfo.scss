@@ -1,11 +1,39 @@
 .post {
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
   &__title {
     margin: 5px 0 0;
+    padding: 10px 50px;
+    background-color: #3e8ed0;
+    font-size: 2em;
+    color: #fff;
   }
 
   &__body {
     margin: 0;
-    padding: 16px 0;
-    border-bottom: 2px solid black;
+    padding: 32px 50px;
+    font-size: 1.25em;
+    color: #3e8ed0;
+  }
+
+  &__user {
+    margin: 0 50px 24px;
+    width: 12%;
+    padding: 16px 24px;
+    background-color: lightgray;
+    align-self: flex-end;
+  }
+
+  &__comments {
+    background-color: #3e8ed0;
+
+    &-title {
+      font-size: 2em;
+      margin: 14px 50px;
+      color: #fff;
+    }
   }
 }

@@ -1,12 +1,21 @@
 .comment {
-  border-bottom: 1px solid black;
+  width: 100%;
+  margin: 20px auto;
+
+  &__content {
+    font-size: 1.25em;
+    padding: 16px;
+    background-color: #eff5fb;
+  }
 
   &__name {
     margin: 5px 0 0;
+    font-size: 1.27em;
   }
 
   &__email {
     margin: 2px 0 0;
     font-size: 0.7em;
+    color: black;
   }
 }

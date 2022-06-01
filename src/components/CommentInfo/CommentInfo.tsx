@@ -9,8 +9,20 @@ interface Props {
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <div className="comment">
-    <h5 data-cy="comment-name" className="comment__name">{comment.name}</h5>
-    <h6 data-cy="comment-email" className="comment__email">{comment.email}</h6>
-    <p data-cy="comment-body">{comment.body}</p>
+    <div className="comment__content">
+      <h5 data-cy="comment-name" className="comment__name">
+        {comment.name}
+      </h5>
+      <p data-cy="comment-body">
+        {comment.body}
+      </p>
+      <a
+        href="email"
+        data-cy="comment-email"
+        className="comment__email"
+      >
+        {comment.email}
+      </a>
+    </div>
   </div>
 );

@@ -1,5 +1,8 @@
-.comment-list {
-  &__title {
-    margin: 5px 0 0;
+.comments-list {
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin: 0 50px;
   }
 }
