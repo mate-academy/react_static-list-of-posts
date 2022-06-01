@@ -9,8 +9,10 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <ul className="userInfo">
-    <li>{`Name: ${user.name}`}</li>
-    <li>
+    <li data-cy="user-name">
+      {`Name: ${user.name}`}
+    </li>
+    <li data-cy="user-email">
       {'Email: '}
       <a href="#dd">
         {user.email}
