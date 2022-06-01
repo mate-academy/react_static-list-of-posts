@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './App.scss';
 
 import postsFromServer from './api/posts';
@@ -9,7 +7,7 @@ import usersFromServer from './api/users';
 import {
   Comment, FullPost, Post, User,
 } from './react-app-env';
-import { PostInfo } from './components/PostInfo/PostInfo';
+import { PostList } from './components/PostList/PostList';
 
 const App = () => {
   const preparedPosts = (
@@ -32,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <PostInfo posts={post} />
+      <PostList posts={post} />
     </div>
   );
 };

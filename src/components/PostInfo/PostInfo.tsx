@@ -5,20 +5,16 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 type Props = {
-  posts: FullPost[];
+  post: FullPost;
 };
 
-export const PostInfo: React.FC<Props> = ({ posts }) => (
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <div data-cy="post-info" className="message is-primary">
-    {posts.map(post => (
-      <React.Fragment key={post.id}>
-        <div className="message-header">
-          <div>{post.title}</div>
-          <div>{post.body}</div>
-        </div>
-        {post.user && <UserInfo user={post.user} />}
-        <CommentList post={post} />
-      </React.Fragment>
-    ))}
+    <div className="message-header">
+      <div>{post.title}</div>
+      <div>{post.body}</div>
+    </div>
+    {post.user && <UserInfo user={post.user} />}
+    <CommentList comments={post.comments} />
   </div>
 );

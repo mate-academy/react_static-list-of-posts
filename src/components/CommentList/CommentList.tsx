@@ -1,16 +1,17 @@
 import React from 'react';
-import { FullPost } from '../../react-app-env';
+import { Comment } from '../../react-app-env';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
 type Props = {
-  post: FullPost;
+  comments: Comment[];
 };
 
-export const CommentList: React.FC<Props> = ({ post }) => (
+export const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="content is-normal">
     <ul>
-      {post.comments.map(comment => (
-        <li>{`${comment.name} --- ${comment.body}`}</li>
+      {comments.map(comment => (
+        <CommentInfo comment={comment} />
       ))}
     </ul>
   </div>
