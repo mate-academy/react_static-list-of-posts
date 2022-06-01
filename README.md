@@ -1,17 +1,17 @@
 # React static list of posts
 
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)
+  [DEMO LINK](https://Oleksandr-Ivanchenko.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## The task
-Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`, 
+Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`,
 `CommentList` and `CommentInfo` displaying posts with comments and user details.
 
 1. Create a `preparedPosts` array in the App with each `post` having a link to
   a `user` and `comments` array. And pass it to the `PostList`.
 
-1. The `PostInfo` accepts a `post` object (with `user` and `comments`  
+1. The `PostInfo` accepts a `post` object (with `user` and `comments`
   properties added before) and renders a `title`, a `body`, a `UserInfo` and a
   `CommentList`.
    - Please, add `data-cy="post-title"`, and `data-cy="post-body"` attributes
@@ -26,3 +26,22 @@ Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`,
 1. The `CommentInfo` accepts a `comment` object and renders a `name`, a `body`, and an `email`.
    - Please, add `data-cy="comment-name"`, `data-cy="comment-body"`, and
    `data-cy="comment-email"` attributes to `name`, `body` and `email` elements.
+   
+1. Создайте массив `preparedPosts` в приложении, в котором каждое `сообщение` имеет ссылку на
+  массив `пользователь` и `комментарии`. И передайте его в `PostList`.
+
+1. `PostInfo` принимает объект `post` (с `пользователем` и `комментариями`
+  свойства, добавленные ранее) и отображает `title`, `body`, `UserInfo` и
+  `Список комментариев`.
+   - Пожалуйста, добавьте атрибуты `data-cy="post-title"` и `data-cy="post-body"`
+   к элементам title и body.
+   - Пожалуйста, добавьте `data-cy="post-info"` в главный `div` компонента
+
+1. `UserInfo` принимает объект `user` и отображает как минимум `name` и
+  `электронная почта`.
+   - Пожалуйста, добавьте атрибуты `data-cy="user-name"` и `data-cy="user-email"`
+   к элементам `name` и `email`.
+
+1. `CommentInfo` принимает объект `comment` и отображает `name`, `body` и `email`.
+   - Пожалуйста, добавьте `data-cy="comment-name"`, `data-cy="comment-body"` и
+   Атрибуты `data-cy="comment-email"` для элементов `name`, `body` и `email`.

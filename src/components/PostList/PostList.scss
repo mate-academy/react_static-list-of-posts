@@ -1,1 +1,7 @@
-//
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  font-size: 12px;
+}
