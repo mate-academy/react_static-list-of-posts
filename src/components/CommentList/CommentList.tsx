@@ -7,11 +7,9 @@ interface Props {
   comments: Comment[];
 }
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  <>
+  <ul>
     {comments.map(comment => (
-      <ul key={comment.id}>
-        <CommentInfo comment={comment} />
-      </ul>
+      <CommentInfo comment={comment} />
     ))}
-  </>
+  </ul>
 );

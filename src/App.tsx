@@ -8,7 +8,7 @@ import { PostList } from './components/PostList/PostList';
 import './App.scss';
 
 const App = () => {
-  const preparedPosts = (
+  const getPreparedPosts = (
     posts: Post[],
     comments: Comment[],
     users: User[],
@@ -20,7 +20,7 @@ const App = () => {
     }));
   };
 
-  const posts = preparedPosts(
+  const posts = getPreparedPosts(
     postsFromServer,
     commentsFromServer,
     usersFromServer,
