@@ -1,1 +1,18 @@
-//
+.user {
+  padding-left: 10px;
+
+  &_name {
+    font-size: 24px;
+    color: rgb(34, 13, 4);
+  }
+
+  &_email {
+    font-style: italic;
+    color: rgb(17, 109, 78);
+    transition: color 0.5s;
+
+    &:hover {
+      color: rgb(226, 120, 14);
+    }
+  }
+}
