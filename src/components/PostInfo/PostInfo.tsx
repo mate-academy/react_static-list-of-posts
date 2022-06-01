@@ -27,6 +27,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     </h2>
     <p className="post_info_body" data-cy="post-body">{post.body}</p>
     {post.user && (<UserInfo user={post.user} />)}
-    <CommentList post={post} />
+    {post.comments && (<CommentList comments={post.comments} />)}
   </li>
 );

@@ -1,16 +1,16 @@
 import React from 'react';
-import { PreparedPosts } from '../../react-app-env';
+import { Comment } from '../../react-app-env';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
 interface Props {
-  post: PreparedPosts;
+  comments: Comment[];
 }
 
-export const CommentList: React.FC<Props> = ({ post }) => (
+export const CommentList: React.FC<Props> = ({ comments }) => (
   <ul className="comment_list">
-    {post.comments?.map(comment => (
-      <CommentInfo comment={comment} />
+    {comments?.map(comment => (
+      <CommentInfo key={comment.id} comment={comment} />
     ))}
   </ul>
 );

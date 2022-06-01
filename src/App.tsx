@@ -15,7 +15,7 @@ import {
   User,
 } from './react-app-env';
 
-const makingArray = (
+const getPreparedPosts = (
   postsIncome: Post[],
   commentsIncome: Comment[],
   usersIncome: User[],
@@ -28,7 +28,7 @@ const makingArray = (
   }))
 );
 
-const preparedPosts = makingArray(posts, comments, users);
+const preparedPosts = getPreparedPosts(posts, comments, users);
 
 const App: React.FC = () => (
   <div className="App">
