@@ -2,6 +2,7 @@ import React from 'react';
 import './PostInfo.scss';
 import { UnitedPost } from '../../react-app-env';
 import { CommentList } from '../CommentList/CommentList';
+import { UserInfo } from '../UserInfo/UserInfo';
 
 type Props = {
   currentPost: UnitedPost;
@@ -13,14 +14,7 @@ export const PostInfo: React.FC<Props> = ({ currentPost }) => (
     <p data-cy="post-body">{currentPost.body}</p>
     <h4>User information:</h4>
     <ul>
-      <li data-cy="user-name">
-        name:
-        {currentPost.user?.name}
-      </li>
-      <li data-cy="user-email">
-        email:
-        {currentPost.user?.email}
-      </li>
+      <UserInfo currentUser={currentPost.user} />
     </ul>
     <h4>Comments:</h4>
     <CommentList comments={currentPost.comments} />
