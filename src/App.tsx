@@ -8,9 +8,8 @@ import users from './api/users';
 import { Posts } from './types/Posts';
 import { Comments } from './types/Comments';
 import { Users } from './types/Users';
-import { PostInfo } from './components/PostInfo/PostInfo';
 import { PrepearedPost } from './types/PrepearedPosts';
-import { UserInfo } from './components/UserInfo/UserInfo';
+import { PostList } from './components/PostList/PostList';
 
 function prepearingPosts(
   post: Posts[],
@@ -37,14 +36,13 @@ const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
     <div className="container posts__container">
-      <PostInfo post={prepearedPosts[0]} />
-      <PostInfo post={prepearedPosts[1]} />
-      <PostInfo post={prepearedPosts[2]} />
-    </div>
-    <div className="container users__container">
-      <UserInfo user={users[0]} />
-      <UserInfo user={users[1]} />
-      <UserInfo user={users[2]} />
+      {prepearedPosts.map(el => {
+        return (
+          <div>
+            <PostList post={el} />
+          </div>
+        );
+      })}
     </div>
   </div>
 );
