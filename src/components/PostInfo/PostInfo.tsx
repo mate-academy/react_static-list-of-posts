@@ -2,7 +2,6 @@ import React from 'react';
 import { PreparedPosts } from '../../react-app-env';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
-import './PostInfo.scss';
 
 interface Props {
   post: PreparedPosts

@@ -1,7 +1,6 @@
 import React from 'react';
 import { PreparedPosts } from '../../react-app-env';
 import { PostInfo } from '../PostInfo/PostInfo';
-import './PostList.scss';
 
 interface Prop {
   postArray: PreparedPosts[]

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Comment } from '../../react-app-env';
 
-import './CommentInfo.scss';
 
 interface Props {
   comment: Comment
