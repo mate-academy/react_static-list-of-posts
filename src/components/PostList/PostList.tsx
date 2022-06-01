@@ -7,13 +7,11 @@ type Props = {
 };
 
 export const PostList: React.FC<Props> = ({ preparedPosts }) => (
-  <>
-    <div className="container is-widescreen">
-      {preparedPosts.map(post => (
-        <div key={post.id}>
-          <PostInfo post={post} />
-        </div>
-      ))}
-    </div>
-  </>
+  <div className="container is-widescreen">
+    {preparedPosts.map(post => (
+      <div key={post.id}>
+        <PostInfo post={post} />
+      </div>
+    ))}
+  </div>
 );
