@@ -13,9 +13,9 @@ export const PostInfo: React.FC<Props> = ({ currentPost }) => (
     <h3 className="PostInfo" data-cy="post-title">{currentPost.title}</h3>
     <p data-cy="post-body">{currentPost.body}</p>
     <h4>User information:</h4>
-    <ul>
+    {currentPost.user && (
       <UserInfo currentUser={currentPost.user} />
-    </ul>
+    )}
     <h4>Comments:</h4>
     <CommentList comments={currentPost.comments} />
   </div>
