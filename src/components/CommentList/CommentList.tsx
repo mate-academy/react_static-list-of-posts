@@ -11,11 +11,14 @@ interface Props {
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="comment-list">
     <h4 className="comment-list__title">Comments</h4>
-
-    {comments.map(comment => {
-      return (
-        <CommentInfo comment={comment} />
-      );
-    })}
+    <ul>
+      {comments.map(comment => {
+        return (
+          <li key={comment.id}>
+            <CommentInfo comment={comment} />
+          </li>
+        );
+      })}
+    </ul>
   </div>
 );
