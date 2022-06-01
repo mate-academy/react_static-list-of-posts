@@ -1,6 +1,6 @@
 import React from 'react';
 import { Comments } from '../../app.typedefs';
-import { CommentInfo } from '../CommentInfo/CommentInfo';
+import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Props = {

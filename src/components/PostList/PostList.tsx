@@ -1,6 +1,6 @@
 import React from 'react';
 import { PreparedPosts } from '../../app.typedefs';
-import { PostInfo } from '../PostInfo/PostInfo';
+import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
 type Props = {
@@ -12,7 +12,10 @@ export const PostList: React.FC<Props> = ({ preparedPosts }) => (
     {
       preparedPosts.map(preparedPost => {
         return (
-          <li key={preparedPost.id}>
+          <li
+            key={preparedPost.id}
+            className="post-list__item"
+          >
             <PostInfo preparedPost={preparedPost} />
           </li>
         );
