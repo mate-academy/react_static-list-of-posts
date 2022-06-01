@@ -37,7 +37,7 @@ export interface Comments {
   body: string;
 }
 
-export interface PreparedPosts extends Comments {
+export interface PreparedPosts extends Posts {
   user?: User | null;
-  post: Posts;
+  comment?: Comments | null;
 }
