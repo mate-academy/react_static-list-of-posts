@@ -4,5 +4,5 @@ import { Users } from './Users';
 
 export interface PrepearedPost extends Posts{
   user? : Users;
-  comments? : Comments[];
+  comment : Comments[];
 }

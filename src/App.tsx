@@ -8,26 +8,18 @@ import users from './api/users';
 import { Posts } from './types/Posts';
 import { Comments } from './types/Comments';
 import { Users } from './types/Users';
-import { PrepearedPost } from './types/PrepearedPosts';
 import { PostList } from './components/PostList/PostList';
 
 function prepearingPosts(
-  post: Posts[],
-  comment : Comments[],
-  user : Users[],
+  postsList: Posts[],
+  commentsList : Comments[],
+  usersList : Users[],
 ) {
-  const prepearePosts : PrepearedPost[] = [];
-
-  post.forEach(element => {
-    const result :PrepearedPost = element;
-
-    result.user = user.find(el => el.id === result.userId);
-    result.comments = comment.filter(el => result.id === el.postId);
-
-    prepearePosts.push(result);
-  });
-
-  return prepearePosts;
+  return (postsList.map(post => ({
+    ...post,
+    user: usersList.find(user => user.id === post.userId),
+    comment: commentsList.filter(comment => comment.postId === post.id) || [],
+  })));
 }
 
 const prepearedPosts = prepearingPosts(posts, comments, users);
@@ -36,13 +28,7 @@ const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
     <div className="container posts__container">
-      {prepearedPosts.map(el => {
-        return (
-          <div key={`${el.id}`}>
-            <PostList post={el} />
-          </div>
-        );
-      })}
+      <PostList post={prepearedPosts} />
     </div>
   </div>
 );

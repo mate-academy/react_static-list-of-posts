@@ -16,14 +16,10 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.body}
     </p>
     <div className="post__comments comment">
-      { (post.comments)
-        ? <CommentList postComments={post.comments} />
-        : ''}
+      <CommentList postComments={post.comment} />
     </div>
     <div className="post__author">
-      {(post.user)
-        ? <UserInfo user={post.user} />
-        : ''}
+      {(post.user) && <UserInfo user={post.user} /> }
     </div>
   </div>
 );
