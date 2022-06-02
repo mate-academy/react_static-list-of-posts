@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Props> = ({ preparedPost }) => (
 
       {
         preparedPost.comment && (
-          <CommentList comment={preparedPost.comment} />
+          <CommentList comments={preparedPost.comment} />
         )
       }
     </div>

@@ -4,11 +4,17 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Props = {
-  comment: Comments;
+  comments: Comments[];
 };
 
-export const CommentList: React.FC<Props> = ({ comment }) => (
-  <ul>
-    <CommentInfo comment={comment} />
+export const CommentList: React.FC<Props> = ({ comments }) => (
+  <ul className="comment-list__item">
+    {comments.map(comment => {
+      return (
+        <li key={comment.id}>
+          <CommentInfo comment={comment} />
+        </li>
+      );
+    })}
   </ul>
 );

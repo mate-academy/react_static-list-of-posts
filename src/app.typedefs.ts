@@ -39,5 +39,5 @@ export interface Comments {
 
 export interface PreparedPosts extends Posts {
   user?: User | null;
-  comment?: Comments | null;
+  comment?: Comments[] | null;
 }

@@ -8,9 +8,17 @@ type Props = {
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
-  <>
-    <li data-cy="comment-name">{`Comment name: ${comment.name}`}</li>
-    <li data-cy="comment-body">{`Comment body: ${comment.body}`}</li>
-    <li data-cy="comment-email">{`Comment email: ${comment.email}`}</li>
-  </>
+  <div className="comment">
+    <p data-cy="comment-name">
+      {`Comment name: ${comment.name}`}
+    </p>
+
+    <p data-cy="comment-body">
+      {`Comment body: ${comment.body}`}
+    </p>
+
+    <p data-cy="comment-email">
+      {`Comment email: ${comment.email}`}
+    </p>
+  </div>
 );
