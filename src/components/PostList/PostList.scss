@@ -1,1 +1,12 @@
-//
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  list-style: none;
+
+  &__item {
+    border: 5px solid #000;
+    background: radial-gradient(circle, rgba(251, 111, 63, 1) 0%,
+    rgba(91, 214, 91, 1) 51%);
+  }
+}

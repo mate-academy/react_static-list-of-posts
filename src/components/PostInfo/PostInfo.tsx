@@ -18,7 +18,9 @@ export const PostInfo: React.FC<Props> = ({ preparedPost }) => {
 
   return (
     <div className="post-info" data-cy="post-info">
-      <h2 data-cy="post-title">{title}</h2>
+      <h2 className="post-info__title" data-cy="post-title">
+        {title}
+      </h2>
       <p data-cy="post-body">{body}</p>
 
       {user && (
