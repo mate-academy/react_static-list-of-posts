@@ -1,1 +1,33 @@
-//
+.post {
+  width: 800px;
+  padding: 20px 30px;
+
+  background-color: aliceblue;
+  border: 2px solid transparent;
+  box-shadow: 10px 5px 5px rgb(197, 232, 232);
+
+  &__title {
+    margin-bottom: 40px;
+
+    font-size: 28px;
+    color: rgb(133, 179, 179);
+    text-transform: uppercase;
+  }
+
+  &__body {
+    margin-bottom: 15px;
+
+    font-size: 18px;
+    font-style: italic;
+    color: dimgray;
+  }
+
+  &__comments {
+    margin-bottom: 25px;
+
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(133, 179, 179);
+  }
+}

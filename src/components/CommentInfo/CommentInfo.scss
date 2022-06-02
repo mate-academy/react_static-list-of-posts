@@ -1,1 +1,26 @@
-//
+.comment {
+  padding: 10px 15px;
+  border: 2px solid rgb(197, 232, 232);
+
+  &__name {
+    margin-bottom: 15px;
+
+    color: rgb(133, 179, 179);
+    text-transform: uppercase;
+  }
+
+  &__email {
+    display: inline-block;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(57, 54, 54);
+  }
+
+  &__body {
+    font-size: 16px;
+    font-style: italic;
+    color: dimgray;
+  }
+}
