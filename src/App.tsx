@@ -38,7 +38,7 @@ const App: React.FC = () => (
     <div className="container posts__container">
       {prepearedPosts.map(el => {
         return (
-          <div>
+          <div key={`${el.id}`}>
             <PostList post={el} />
           </div>
         );

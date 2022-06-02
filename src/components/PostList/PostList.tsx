@@ -11,8 +11,6 @@ interface Props {
 export const PostList: React.FC<Props> = ({ post }) => (
   <>
     <PostInfo post={post} />
-    {(post.user)
-      ? <UserInfo user={post.user} />
-      : ''}
+    {(post.user) && <UserInfo user={post.user} /> }
   </>
 );

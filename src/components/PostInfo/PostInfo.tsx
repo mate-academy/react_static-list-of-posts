@@ -1,7 +1,7 @@
 import React from 'react';
 import { PrepearedPost } from '../../types/PrepearedPosts';
-import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { CommentList } from '../CommentList/CommentList';
+import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 interface Props {
@@ -21,15 +21,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
         : ''}
     </div>
     <div className="post__author">
-      <p className="post__author-name">
-        {post.user?.username}
-      </p>
-      <p className="post__author-email">
-        {post.user?.email}
-      </p>
+      {(post.user)
+        ? <UserInfo user={post.user} />
+        : ''}
     </div>
-    { (post.comments)
-      ? <CommentInfo singleComment={post.comments[0]} />
-      : ''}
   </div>
 );
