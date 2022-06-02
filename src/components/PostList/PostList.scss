@@ -1,1 +1,19 @@
 //
+.commentsList {
+  list-style: square;
+}
+
+.postList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &__item {
+    width: 350px;
+    padding: 10px;
+    border: 3px solid #574634;
+    border-radius: 5px;
+  }
+}
