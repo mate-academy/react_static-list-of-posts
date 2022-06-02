@@ -1,1 +1,6 @@
-//
+.comments {
+  &__comment {
+    border: 1px solid black;
+    list-style-type: none;
+  }
+}
