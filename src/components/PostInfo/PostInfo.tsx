@@ -1,5 +1,6 @@
 import React from 'react';
 import { PreparedPost } from '../../appTypeDefs';
+import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
@@ -19,10 +20,7 @@ export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
         <UserInfo user={user} />
         <p data-cy="post-body">{body}</p>
       </section>
-      <section className="Comment">
-        <h4>{`Comment By: ${user?.name}`}</h4>
-        <p>{user?.name}</p>
-      </section>
+      <CommentList postComments={post.postComments} />
     </article>
   );
 };

@@ -44,6 +44,6 @@ type Company = {
 };
 
 export interface PreparedPost extends Post {
-  comments?: Comment[];
+  postComments: PostComment[];
   user?: User;
 }
