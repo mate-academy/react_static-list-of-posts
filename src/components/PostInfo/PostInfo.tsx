@@ -1,5 +1,6 @@
 import React from 'react';
 import { PreparedPost } from '../../appTypeDefs';
+import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 interface PostInfoProps {
@@ -8,20 +9,20 @@ interface PostInfoProps {
 
 export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   const {
-    title, body, user, comments,
+    title, body, user,
   } = post;
 
   return (
-    <React.Fragment data-cy="post-info">
+    <article data-cy="post-info">
       <section className="Post">
         <h2 data-cy="post-title">{title}</h2>
-        <h4>{`Author: ${user}`}</h4>
+        <UserInfo user={user} />
         <p data-cy="post-body">{body}</p>
       </section>
       <section className="Comment">
-        <h4>{`Comment By: ${comments}`}</h4>
-        <p>{comments}</p>
+        <h4>{`Comment By: ${user?.name}`}</h4>
+        <p>{user?.name}</p>
       </section>
-    </React.Fragment>
+    </article>
   );
 };
