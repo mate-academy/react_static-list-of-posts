@@ -1,1 +1,8 @@
-//
+.user-info {
+  list-style: none;
+  padding-left: 30px;
+
+  &__name {
+    font-weight: bold;
+  }
+}
