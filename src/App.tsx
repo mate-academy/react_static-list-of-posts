@@ -22,7 +22,7 @@ export function preparePosts(
     user: users.find(user => (
       user.id === post.userId
     )) || null || undefined,
-    comment: comments.find(comment => (
+    comments: comments.filter(comment => (
       comment.postId === post.id
     )) || null || undefined,
   }));
@@ -36,8 +36,8 @@ export const preparedPosts = preparePosts(
 
 const App: React.FC = () => (
   <div className="App">
-    <PostList posts={preparedPosts} />
     <h1>Static list of posts</h1>
+    <PostList posts={preparedPosts} />
   </div>
 );
 
