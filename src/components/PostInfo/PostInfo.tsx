@@ -20,7 +20,9 @@ export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
         <UserInfo user={user} />
         <p data-cy="post-body">{body}</p>
       </section>
-      <CommentList postComments={post.postComments} />
+      <CommentList
+        postComments={post.postComments}
+      />
     </article>
   );
 };
