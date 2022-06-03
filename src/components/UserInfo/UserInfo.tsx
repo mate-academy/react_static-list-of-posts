@@ -9,6 +9,6 @@ interface UserInfoProps {
 export const UserInfo: React.FC<UserInfoProps> = ({ user }) => (
   <>
     <h4 data-cy="user-name">{`AUTHOR: ${user?.name} |`}</h4>
-    <span data-cy="user-email">{` EMAIL: ${user?.email}`}</span>
+    <h4 data-cy="user-email">{` EMAIL: ${user?.email}`}</h4>
   </>
 );
