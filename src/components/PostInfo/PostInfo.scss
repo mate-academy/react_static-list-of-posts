@@ -1,1 +1,23 @@
-//
+.post-info {
+  background-color: lightsteelblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    padding-left: 30px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    width: 70%;
+    padding-left: 30px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
