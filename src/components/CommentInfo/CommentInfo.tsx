@@ -8,9 +8,8 @@ interface CommentInfoProps {
 
 export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => (
   <>
-    <small>{`Post ID ${comment.postId}`}</small>
-    <h4>{`Comment: ${comment.name}`}</h4>
-    <h4>{`Email: ${comment.email}`}</h4>
-    <p>{comment.body}</p>
+    <h5 data-cy="comment-name">{`Comment: ${comment.name}`}</h5>
+    <h5 data-cy="comment-email">{`Email: ${comment.email}`}</h5>
+    <p data-cy="comment-body">{comment.body}</p>
   </>
 );
