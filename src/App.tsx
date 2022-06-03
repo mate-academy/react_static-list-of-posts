@@ -21,9 +21,9 @@ const preparePost = (posts: Post[], comms: Comment[], users: User[]) => {
 const preparedPosts = preparePost(postsFrom, commentsFrom, usersFrom);
 
 const App: React.FC = () => (
-  <div className="App">
-    <h1>Static list of posts</h1>
-    <ul>
+  <div className="app">
+    <h1 className="header">Static list of posts</h1>
+    <ul className="list">
       <PostList prepared={preparedPosts} />
     </ul>
   </div>

@@ -1,18 +1,14 @@
 import React from 'react';
 
 import './CommentInfo.scss';
-import { Comm } from '../../type';
+import { PropsComInfo } from '../../type';
 
-export const CommentInfo: React.FC <Comm> = ({
-  name,
-  body,
-  email,
-}) => (
+export const CommentInfo: React.FC <PropsComInfo> = ({ comInfo }) => (
   <>
-    {`The name of the comment: ${name}.`}
+    {`The name of the comment: ${comInfo.name}.`}
     {' '}
-    {`The body of the comment: ${body}.`}
+    {`The body of the comment: ${comInfo.body}.`}
     {' '}
-    {`Who left the comment: ${email}.`}
+    {`Who left the comment: ${comInfo.email}.`}
   </>
 );

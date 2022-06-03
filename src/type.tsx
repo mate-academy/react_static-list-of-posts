@@ -46,16 +46,22 @@ export type Prepared = {
   comments: Comment[],
 };
 
-export type Props = {
+export type PropsPrepared = {
   prepared: Prepared[];
 };
 
-export type ComObj = {
+export type PropsPost = {
+  post: Post;
+};
+
+export type PropsUser = {
+  user: User;
+};
+
+export type PropsCom = {
   comms: Comment[];
 };
 
-export type Comm = {
-  name: string | undefined,
-  email: string | undefined,
-  body?: string,
+export type PropsComInfo = {
+  comInfo: Comment;
 };

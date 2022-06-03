@@ -1,17 +1,16 @@
 import React from 'react';
 import './PostInfo.scss';
-import { Post } from '../../type';
+import { PropsPost } from '../../type';
 
-export const PostInfo: React.FC <Post> = ({
-  title,
-  body,
+export const PostInfo: React.FC <PropsPost> = ({
+  post,
 }) => (
   <>
     <div data-cy="post-info">
       <h3 data-cy="post-title">
-        {`Post title: ${title}`}
+        {`Post title: ${post.title}`}
       </h3>
-      <p data-cy="post-body">{`Post body: ${body}`}</p>
+      <p data-cy="post-body">{`Post body: ${post.body}`}</p>
     </div>
   </>
 );
