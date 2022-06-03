@@ -4,7 +4,7 @@ import {
   Post,
   PreparedPost,
   User,
-  Comment,
+  PostComment,
 } from './appTypeDefs';
 
 import postsFromServer from './api/posts';
@@ -14,7 +14,7 @@ import { PostList } from './components/PostList/PostList';
 
 export function preparePosts(
   posts: Post[],
-  comments: Comment[],
+  postComments: PostComment[],
   users: User[],
 ): PreparedPost[] {
   return posts.map(post => ({
@@ -22,8 +22,8 @@ export function preparePosts(
     user: users.find(user => (
       user.id === post.userId
     )) || null || undefined,
-    comments: comments.filter(comment => (
-      comment.postId === post.id
+    postComments: postComments.filter(postComment => (
+      postComment.postId === post.id
     )) || null || undefined,
   }));
 }

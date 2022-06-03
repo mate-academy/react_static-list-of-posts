@@ -8,6 +8,6 @@ interface UserInfoProps {
 
 export const UserInfo: React.FC<UserInfoProps> = ({ user }) => (
   <>
-    <h4>{`Author: ${user?.name} Email: ${user?.email}`}</h4>
+    <h4>{`AUTHOR: ${user?.name} | EMAIL: ${user?.email}`}</h4>
   </>
 );
