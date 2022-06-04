@@ -1,6 +1,15 @@
 import React from 'react';
+import { Comment } from '../../react-app-env';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
+interface Props {
+  comments: Comment[];
+}
+export const CommentList: React.FC<Props> = ({ comments }) => (
+  <ul>
+    {comments.map(comment => (
+      <CommentInfo comment={comment} />
+    ))}
+  </ul>
 );

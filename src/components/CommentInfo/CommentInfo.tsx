@@ -1,7 +1,15 @@
 import React from 'react';
-
+import { Comment } from '../../react-app-env';
 import './CommentInfo.scss';
 
-export const CommentInfo: React.FC = () => (
-  <>Put the comment here</>
+interface Props {
+  comment: Comment;
+}
+
+export const CommentInfo: React.FC<Props> = ({ comment }) => (
+  <>
+    <li data-cy="comment-name" key={comment.id}>{comment.name}</li>
+    <li data-cy="comment-body">{comment.body}</li>
+    <li data-cy="comment-email">{comment.email}</li>
+  </>
 );
