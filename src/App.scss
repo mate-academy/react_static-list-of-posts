@@ -1,1 +1,13 @@
-// styles go here
+.email {
+  color: blue;
+}
+
+.email::before {
+  content: "email:";
+  color: black;
+  margin-right: 10px;
+}
+
+.colorRed {
+  color: red;
+}
