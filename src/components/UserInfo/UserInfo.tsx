@@ -1,9 +1,9 @@
 import React from 'react';
-import { UsersFromServer } from '../../react-app-env';
+import { UserFromServer } from '../../react-app-env';
 import './UserInfo.scss';
 
 type Props = {
-  mainUser: UsersFromServer;
+  mainUser: UserFromServer;
 };
 
 export const UserInfo: React.FC<Props> = ({ mainUser }) => {

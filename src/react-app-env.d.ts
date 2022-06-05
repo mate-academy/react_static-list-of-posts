@@ -1,13 +1,13 @@
 /// <reference types="react-scripts" />
 
-export interface PostsFromServer {
+export interface PostFromServer {
   userId: number,
   id: number,
   title: string;
   body: string;
 }
 
-export interface CommentsFromServer {
+export interface CommentFromServer {
   postId: number;
   id: number;
   name: string;
@@ -15,7 +15,7 @@ export interface CommentsFromServer {
   body: string;
 }
 
-export interface UsersFromServer {
+export interface UserFromServer {
   id: number;
   name: string;
   username: string;
@@ -39,7 +39,7 @@ export interface UsersFromServer {
   },
 }
 
-export interface GeneralPosts extends PostsFromServer {
-  user: UsersFromServer | null;
-  comments: CommentsFromServer[] | null;
+export interface GeneralPosts extends PostFromServer {
+  user: UserFromServer | null;
+  comments: CommentsFromServer[];
 }

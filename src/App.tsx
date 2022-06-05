@@ -4,9 +4,9 @@ import comments from './api/comments';
 import users from './api/users';
 import { PostList } from './components/PostList';
 import {
-  PostsFromServer,
-  CommentsFromServer,
-  UsersFromServer,
+  PostFromServer,
+  CommentFromServer,
+  UserFromServer,
   GeneralPosts,
 } from './react-app-env';
 
@@ -14,9 +14,9 @@ import './App.scss';
 
 const App: React.FC = () => {
   const getNewPostList = (
-    postsList: PostsFromServer[],
-    commentsList: CommentsFromServer[],
-    usersList: UsersFromServer[],
+    postsList: PostFromServer[],
+    commentsList: CommentFromServer[],
+    usersList: UserFromServer[],
   ): GeneralPosts[] => {
     return postsList.map(post => ({
       ...post,
@@ -24,8 +24,7 @@ const App: React.FC = () => {
         .find(user => post.userId === user.id)
         || null,
       comments: commentsList
-        .filter(comment => post.id === comment.postId)
-        || null,
+        .filter(comment => post.id === comment.postId),
     }));
   };
 

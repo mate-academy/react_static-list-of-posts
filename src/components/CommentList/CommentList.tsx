@@ -1,15 +1,15 @@
 import React from 'react';
-import { CommentsFromServer } from '../../react-app-env';
+import { CommentFromServer } from '../../react-app-env';
 import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Props = {
-  commentsList: CommentsFromServer[];
+  commentList: CommentFromServer[];
 };
 
-export const CommentList: React.FC<Props> = ({ commentsList }) => (
+export const CommentList: React.FC<Props> = ({ commentList }) => (
   <ul className="commentList">
-    {commentsList.map(commentItem => (
+    {commentList.map(commentItem => (
       <CommentInfo comment={commentItem} key={commentItem.id} />
     ))}
   </ul>

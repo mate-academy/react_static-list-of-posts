@@ -1,9 +1,9 @@
 import React from 'react';
-import { CommentsFromServer } from '../../react-app-env';
+import { CommentFromServer } from '../../react-app-env';
 import './CommentInfo.scss';
 
 type Props = {
-  comment: CommentsFromServer;
+  comment: CommentFromServer;
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {

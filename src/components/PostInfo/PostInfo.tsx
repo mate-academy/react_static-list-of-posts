@@ -26,14 +26,14 @@ export const PostInfo: React.FC<Props> = ({ generalPost }) => {
         {body}
       </p>
 
-      <div className="postsListItemUserInfo">
-        {user && (
+      {user && (
+        <div className="postsListItemUserInfo">
           <UserInfo mainUser={user} />
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="postsListItemComments">
-        {comments && (<CommentList commentsList={comments} />)}
+        <CommentList commentList={comments} />
       </div>
     </li>
   );
