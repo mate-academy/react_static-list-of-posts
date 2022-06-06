@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  <ul className="list-group">
+  <ul data-cy="comment-list" className="list-group">
     <div className="p-2 fs-4 text-dark text-gradient fw-semibold mb-3">
       Comments:
     </div>

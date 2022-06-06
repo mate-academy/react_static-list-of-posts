@@ -12,8 +12,9 @@ type Props = {
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <>
     <div data-cy="user-name" className="fw-lighter fst-italic">
-      Posted by: {user.username}
+      Posted by: {user.name}
     </div>
+    <div className="fw-lighter fst-italic">{user.username}</div>
     <div
       data-cy="user-email"
       role="button"
