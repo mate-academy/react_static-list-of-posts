@@ -1,3 +1,5 @@
+.env
+LICENSE
 .idea
 .vscode
 build
