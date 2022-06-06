@@ -1,1 +1,9 @@
-//
+.CommentInfo {
+  border: 1px solid greenyellow;
+  margin: 5px 0;
+  padding: 10px;
+
+  &__description {
+    color: green;
+  }
+}

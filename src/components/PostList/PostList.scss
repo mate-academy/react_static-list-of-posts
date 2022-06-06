@@ -1,1 +1,10 @@
-//
+.PostList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  &__item {
+    width: 50%;
+  }
+}

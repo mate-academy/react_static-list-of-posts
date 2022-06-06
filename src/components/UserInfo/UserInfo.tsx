@@ -1,7 +1,23 @@
 import React from 'react';
 
 import './UserInfo.scss';
+import { User } from '../../react-app-env';
 
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
+type Props = {
+  currentUser: User,
+};
+
+export const UserInfo: React.FC<Props> = ({ currentUser }) => (
+  <>
+    <p data-cy="user-name">
+      name:
+      {' '}
+      {currentUser?.name}
+    </p>
+    <p data-cy="user-email">
+      email:
+      {' '}
+      {currentUser?.email}
+    </p>
+  </>
 );
