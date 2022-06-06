@@ -1,1 +1,14 @@
-//
+.post-info {
+  border: 5px solid #000;
+  margin-bottom: 10px;
+  background-color: rgb(240, 219, 219);
+
+  &__title {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    font-size: 30px;
+  }
+}
