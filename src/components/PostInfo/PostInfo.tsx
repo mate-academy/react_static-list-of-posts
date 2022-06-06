@@ -10,8 +10,14 @@ interface Props {
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <div data-cy="post-info">
-    <h2 data-cy="post-title">
+  <div
+    className="post-info"
+    data-cy="post-info"
+  >
+    <h2
+      className="post-info__title"
+      data-cy="post-title"
+    >
       {post.title}
     </h2>
     <p data-cy="post-body">
