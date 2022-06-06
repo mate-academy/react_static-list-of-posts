@@ -1,3 +1,7 @@
+export interface ListProp<T> {
+  list: Array<T>;
+}
+
 export interface Post {
   userId: number;
   id: number;

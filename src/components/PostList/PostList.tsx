@@ -1,17 +1,13 @@
 import React from 'react';
 import './PostList.scss';
-import { ExtendedPost } from '../../typedefs';
+import { ExtendedPost, ListProp } from '../../typedefs';
 import { PostInfo } from '../PostInfo/PostInfo';
 
-type Props = {
-  posts: ExtendedPost[];
-};
-
-export const PostList: React.FC<Props> = ({ posts }) => (
+export const PostList: React.FC<ListProp<ExtendedPost>> = (listProp) => (
   <ul>
-    {posts.map(post => (
+    {listProp.list.map(post => (
       <li key={post.id} className="post">
-        <PostInfo post={post} />
+        <PostInfo {...post} />
       </li>
     ))}
   </ul>

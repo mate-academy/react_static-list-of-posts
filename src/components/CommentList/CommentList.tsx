@@ -1,17 +1,13 @@
 import React from 'react';
-import { Comment } from '../../typedefs';
+import { Comment, ListProp } from '../../typedefs';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-type Props = {
-  comments: Comment[]
-};
-
-export const CommentList: React.FC<Props> = ({ comments }) => (
+export const CommentList: React.FC<ListProp<Comment>> = (listProp) => (
   <ul>
-    {comments.map(comment => (
-      <li>
-        <CommentInfo comment={comment} />
+    {listProp.list.map(comment => (
+      <li key={comment.id} className="comment">
+        <CommentInfo {...comment} />
       </li>
     ))}
   </ul>

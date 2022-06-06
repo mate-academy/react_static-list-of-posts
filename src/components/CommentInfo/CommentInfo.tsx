@@ -3,18 +3,14 @@ import { Comment } from '../../typedefs';
 
 import './CommentInfo.scss';
 
-type Props = {
-  comment: Comment
-};
-
-export const CommentInfo: React.FC<Props> = ({ comment }) => {
+export const CommentInfo: React.FC<Comment> = (comment) => {
   const { name, body, email } = comment;
 
   return (
     <div>
-      <p>{name}</p>
-      <p>{body}</p>
-      <p>{email}</p>
+      <p data-cy="comment-name">{name}</p>
+      <p data-cy="comment-body">{body}</p>
+      <p data-cy="comment-email">{email}</p>
     </div>
   );
 };
