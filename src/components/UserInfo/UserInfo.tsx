@@ -5,7 +5,7 @@ import './UserInfo.scss';
 import { User } from '../../types';
 
 interface Props {
-  user: User | null;
+  user: User;
 }
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
