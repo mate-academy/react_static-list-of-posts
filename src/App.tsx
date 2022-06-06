@@ -1,14 +1,32 @@
+/* eslint-disable object-curly-newline */
 import React from 'react';
 
 import './App.scss';
 
-// import posts from './api/posts';
-// import comments from './api/comments';
-// import users from './api/users';
+import posts from './api/posts';
+import comments from './api/comments';
+import users from './api/users';
+import { Comment, Post, PreparedPosts, Users } from './react-app-env';
+import { PostList } from './components/PostList/PostList';
+
+const preparedPosts = (
+  postss: Post[],
+  commentss: Comment[],
+  userss: Users[],
+):PreparedPosts[] => {
+  return postss.map(post => ({
+    ...post,
+    user: userss.find(user => user.id === post.userId),
+    comments: commentss.filter(comment => comment.postId === post.id),
+  }));
+};
+
+const postsPrepared = preparedPosts(posts, comments, users);
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
+    <PostList postsPrepared={postsPrepared} />
   </div>
 );
 
