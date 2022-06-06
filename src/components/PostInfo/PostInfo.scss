@@ -1,1 +1,10 @@
 //
+.post-info {
+  border: 5px dotted palevioletred;
+  margin-bottom: 30px;
+  padding: 10px;
+
+  &__title {
+    font-size: 26px;
+  }
+}
