@@ -1,1 +1,40 @@
-//
+.post {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 3px dotted red;
+  background-color: rgb(108, 180, 98);
+
+  &__title {
+    margin: 3px 4px;
+    padding: 10px 12px;
+    background-color: #367a09;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  &__body {
+    margin: 0;
+    padding: 30px 10px;
+    font-size: 1.25em;
+    color: #000;
+  }
+
+  &__user {
+    color: white;
+    width: 95%;
+    padding: 16px 24px;
+    background-color: rgb(101, 114, 12);
+    align-self: center;
+  }
+
+  &__comments {
+    background-color: #229f6f;
+
+    &-title {
+      font-size: 30px;
+      margin: 14px 25px;
+      color: #fff;
+    }
+  }
+}
