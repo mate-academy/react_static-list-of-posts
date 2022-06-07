@@ -1,1 +1,9 @@
-//
+.post-list {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    background-color: #eff5fb;
+    margin: 15px 0;
+  }
+}
