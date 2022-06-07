@@ -1,1 +1,13 @@
-//
+.post-list {
+  &__item {
+    padding: 16px;
+    border: 8px solid cornflowerblue;
+    border-bottom: none;
+    background-color: antiquewhite;
+    border-collapse: collapse;
+  }
+
+  &__item:last-child {
+    border-bottom: 8px solid cornflowerblue;
+  }
+}

@@ -1,1 +1,9 @@
-//
+.user-info {
+  &__item {
+    margin: 0;
+  }
+
+  &__item--last {
+    margin-bottom: 24px;
+  }
+}
