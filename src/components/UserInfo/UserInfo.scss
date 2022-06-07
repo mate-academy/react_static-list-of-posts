@@ -1,1 +1,12 @@
-//
+.user {
+  &__name {
+    margin: 5px 0 0;
+  }
+
+  &__email {
+    margin: 2px 0 0;
+    font-size: 0.75em;
+    color: black;
+    cursor: pointer;
+  }
+}
