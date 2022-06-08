@@ -8,11 +8,16 @@ interface Props {
   post: PreparedPosts;
 }
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
-  <>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    body,
+  } = post;
+
+  return (
     <div className="post" data-cy="post-info">
-      <h2 className="post__title" data-cy="post-title">{post.title}</h2>
-      <p className="post__body" data-cy="post-body">{post.body}</p>
+      <h2 className="post__title" data-cy="post-title">{title}</h2>
+      <p className="post__body" data-cy="post-body">{body}</p>
 
       <div className="post__user">
         {post.user && (
@@ -25,5 +30,5 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
         <CommentList comments={post.comments} />
       </div>
     </div>
-  </>
-);
+  );
+};
