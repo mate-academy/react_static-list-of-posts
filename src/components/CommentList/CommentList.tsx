@@ -14,7 +14,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
       <ul className="comment_list">
         {comments.map(message => (
           <li key={message.id} className="comment_item">
-            <CommentInfo {...message} />
+            <CommentInfo comment={message} />
           </li>
         ))}
       </ul>
