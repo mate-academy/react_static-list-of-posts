@@ -1,6 +1,20 @@
 import React from 'react';
 import './PostList.scss';
+import { PreparedPost } from '../../appTypeDefs';
+import { PostInfo } from '../PostInfo/PostInfo';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+interface PostListProps {
+  posts: PreparedPost[];
+}
+
+export const PostList: React.FC<PostListProps> = ({ posts }) => (
+  <>
+    {
+      posts.map(post => (
+        <article className="Article" key={post.id}>
+          <PostInfo post={post} />
+        </article>
+      ))
+    }
+  </>
 );
