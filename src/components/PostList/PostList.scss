@@ -1,1 +1,19 @@
-//
+.post {
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &_item {
+    width: 800px;
+    border: 2px solid rgb(109, 48, 20);
+    background-color: rgba(233, 243, 244, 0.75);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+}
