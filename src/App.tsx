@@ -21,23 +21,22 @@ export function preparePosts(
     ...post,
     user: users.find(user => (
       user.id === post.userId
-    )) || null || undefined,
+    )) || null,
     postComments: postComments.filter(postComment => (
       postComment.postId === post.id
-    )) || null || undefined,
+    )) || null,
   }));
 }
-
-export const preparedPosts = preparePosts(
-  postsFromServer,
-  commentsFromServer,
-  usersFromServer,
-);
 
 const App: React.FC = () => (
   <div className="App">
     <h1>Static list of posts</h1>
-    <PostList posts={preparedPosts} />
+    <PostList posts={preparePosts(
+      postsFromServer,
+      commentsFromServer,
+      usersFromServer,
+    )}
+    />
   </div>
 );
 
