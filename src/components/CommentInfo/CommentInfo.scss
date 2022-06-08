@@ -1,1 +1,12 @@
-//
+.comment-info {
+  border: 1px solid #000;
+  margin-bottom: 5px;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__email {
+    font-style: oblique;
+  }
+}
