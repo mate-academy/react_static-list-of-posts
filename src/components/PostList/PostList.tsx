@@ -10,7 +10,7 @@ export const PostList: React.FC<PostListProps> = ({ data = [] }) => (
     {data.map(item => (
       <li className="post-list__item">
         <PostInfo post={item} />
-        <UserInfo user={item.user} />
+        {item.user !== null && <UserInfo user={item.user} />}
         <CommentList comments={item.comments} />
       </li>
     ))}

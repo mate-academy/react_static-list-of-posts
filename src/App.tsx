@@ -15,7 +15,7 @@ const preparedPosts: PostData[] = posts.map(post => {
   return {
     ...post,
     user: postAuthor || null,
-    comments: postComments || null,
+    comments: postComments,
   };
 });
 
