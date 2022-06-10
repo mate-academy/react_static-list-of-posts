@@ -1,1 +1,13 @@
-//
+.user {
+  display: flex;
+  justify-content: space-between;
+
+  &__name {
+    font-style: italic;
+  }
+
+  &__email {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
