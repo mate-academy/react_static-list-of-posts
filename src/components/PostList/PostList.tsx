@@ -1,10 +1,10 @@
 import React from 'react';
 import './PostList.scss';
-import { PreparedPosts } from '../../types/interfaces';
+import { PreparedPost } from '../../types/interfaces';
 import { PostInfo } from '../PostInfo/PostInfo';
 
 type Props = {
-  postList: PreparedPosts[],
+  postList: PreparedPost[],
 };
 
 export const PostList: React.FC<Props> = ({ postList }) => (
