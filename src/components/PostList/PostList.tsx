@@ -8,7 +8,7 @@ import { CommentList } from '../CommentList/CommentList';
 export const PostList: React.FC<PostListProps> = ({ data = [] }) => (
   <ul className="post-list">
     {data.map(item => (
-      <li className="post-list__item">
+      <li key={item.id} className="post-list__item">
         <PostInfo post={item} />
         {item.user !== null && <UserInfo user={item.user} />}
         <CommentList comments={item.comments} />
