@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
+import { Comments } from '../types/interfaces';
 
-const comments = [
+const comments: Comments[] = [
   {
     postId: 1,
     id: 1,

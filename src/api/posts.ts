@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
+import { Posts } from '../types/interfaces';
 
-const posts = [
+const posts: Posts[] = [
   {
     userId: 1,
     id: 1,
