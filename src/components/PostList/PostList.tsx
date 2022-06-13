@@ -5,13 +5,13 @@ import { PostListProps } from '../../types/PostListProps';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
-export const PostList: React.FC<PostListProps> = ({ data = [] }) => (
+export const PostList: React.FC<PostListProps> = ({ posts = [] }) => (
   <ul className="post-list">
-    {data.map(item => (
-      <li key={item.id} className="post-list__item">
-        <PostInfo post={item} />
-        {item.user !== null && <UserInfo user={item.user} />}
-        <CommentList comments={item.comments} />
+    {posts.map(post => (
+      <li key={post.id} className="post-list__item">
+        <PostInfo post={post} />
+        {post.user && <UserInfo user={post.user} />}
+        <CommentList comments={post.comments} />
       </li>
     ))}
   </ul>
