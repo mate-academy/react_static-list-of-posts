@@ -1,1 +1,27 @@
-//
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 20px;
+
+  &__item {
+    background-color: #fff59e;
+    width: 400px;
+    padding: 20px;
+  }
+}
+
+.post {
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    font-size: 18px;
+  }
+}
