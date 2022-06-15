@@ -1,5 +1,7 @@
 import React from 'react';
 import { PostInfoProps } from '../../types/PostInfoProps';
+import { CommentList } from '../CommentList/CommentList';
+import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo: React.FC<PostInfoProps> = ({ post }) => (
@@ -10,5 +12,7 @@ export const PostInfo: React.FC<PostInfoProps> = ({ post }) => (
     <p className="post__body" data-cy="post-body">
       {post.body[0].toUpperCase() + post.body.slice(1)}
     </p>
+    {post.user && <UserInfo user={post.user} />}
+    <CommentList comments={post.comments} />
   </div>
 );
