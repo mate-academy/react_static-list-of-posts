@@ -5,12 +5,12 @@ import { PostInfo } from '../PostInfo/PostInfo';
 import { Post } from '../../react-app-env';
 
 type Props = {
-  preparedPosts: Post[];
+  posts: Post[];
 };
 
-export const PostList: React.FC<Props> = ({ preparedPosts }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <>
-    {preparedPosts.map(prep => (
+    {posts.map(prep => (
       <ul className="postCard" key={prep.id}>
         <PostInfo post={prep} />
       </ul>
