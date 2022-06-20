@@ -1,1 +1,31 @@
-// styles go here
+h1 {
+  text-align: center;
+}
+
+.post {
+  background-color: darkgray;
+  border-color: black;
+  border-radius: 20px;
+
+  padding: 10px;
+
+  &__list {
+    list-style: none;
+    padding: 0 50px;
+  }
+}
+
+.comment {
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    border: 1px solid blue;
+  }
+}
