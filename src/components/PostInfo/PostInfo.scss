@@ -1,1 +1,14 @@
-//
+.post-user::before {
+  content: "User:";
+  font-weight: 700;
+}
+
+.post-title {
+  font-size: 20px;
+}
+
+.post-title::before {
+  content: "Post name:";
+  margin-right: 10px;
+  font-weight: 700;
+}
