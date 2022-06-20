@@ -1,1 +1,29 @@
-// styles go here
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(20, 20, 20);
+  padding: 10px 50px;
+
+  &__title {
+    color: rgb(237, 235, 243);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__posts-list {
+    list-style: none;
+  }
+
+  &__post {
+    margin-bottom: 15px;
+  }
+
+  &__comment {
+    margin-bottom: 5px;
+  }
+}
+
