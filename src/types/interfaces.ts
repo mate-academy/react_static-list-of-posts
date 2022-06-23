@@ -44,6 +44,6 @@ export interface Comment {
 }
 
 export interface PreparedPost extends Post {
-  user?: User,
+  user: User | null,
   comments: Comment[]
 }

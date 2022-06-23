@@ -8,14 +8,12 @@ type Props = {
   post: PreparedPost;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => {
-  return (
-    <div data-cy="post-info">
-      <h2 data-cy="post-title">{post.title}</h2>
-      {post.user && <UserInfo user={post.user} />}
-      <CommentList comments={post.comments} />
-    </div>
-  );
-};
+export const PostInfo: React.FC<Props> = ({ post }) => (
+  <div data-cy="post-info">
+    <h2 data-cy="post-title">{post.title}</h2>
+    {post.user && <UserInfo user={post.user} />}
+    <CommentList comments={post.comments} />
+  </div>
+);
 
 export default PostInfo;
