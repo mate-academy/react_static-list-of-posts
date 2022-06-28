@@ -1,1 +1,42 @@
-// styles go here
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  background-color: rgb(240, 240, 240);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
