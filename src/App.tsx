@@ -9,13 +9,13 @@ import { PostList } from './components/PostList/PostList';
 
 const preparedPosts = posts.map(post => ({
   ...post,
-  user: users.find(user => user.id === post.userId),
+  user: users.find(user => user.id === post.userId) || null,
   comments: comments.filter(comment => comment.postId === post.id),
 }));
 
 const App: React.FC = () => (
   <div className="App">
-    <h1>Static list of posts</h1>
+    <h1 className="title">Static list of posts</h1>
     <PostList preparedPosts={preparedPosts} />
   </div>
 );

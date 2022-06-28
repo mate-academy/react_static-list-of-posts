@@ -7,8 +7,8 @@ import './PostInfo.scss';
 export const PostInfo: React.FC<Post> = ({
   title, body, user, comments,
 }) => (
-  <div data-cy="post-info">
-    <h2 data-cy="post-title">
+  <div data-cy="post-info" className="post">
+    <h2 data-cy="post-title" className="title">
       {title}
     </h2>
 
@@ -16,7 +16,9 @@ export const PostInfo: React.FC<Post> = ({
       {body}
     </p>
 
-    <UserInfo name={user.name} email={user.email} />
+    {user && (
+      <UserInfo name={user.name} email={user.email} />
+    )}
 
     <h3>
       Comments:

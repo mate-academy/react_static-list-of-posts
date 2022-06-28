@@ -4,6 +4,6 @@ import { User } from './User';
 export interface Post {
   title: string,
   body: string,
-  user: User,
+  user: User | null,
   comments: Comment[],
 }

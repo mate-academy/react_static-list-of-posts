@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const PostList: React.FC<Props> = ({ preparedPosts }) => (
-  <div>
+  <div className="posts">
     {preparedPosts.map(({
       title, body, user, comments,
     }) => (
