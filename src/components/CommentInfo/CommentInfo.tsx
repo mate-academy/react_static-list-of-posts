@@ -1,5 +1,4 @@
 import React from 'react';
-// import comments from '../../api/comments';
 import { Comment } from '../../types/Comment';
 
 import './CommentInfo.scss';

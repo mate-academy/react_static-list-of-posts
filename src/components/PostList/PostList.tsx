@@ -4,15 +4,13 @@ import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
 
 type Props = {
-  preparedPosts: Post[],
+  posts: Post[],
 };
 
-export const PostList: React.FC<Props> = ({ preparedPosts }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="posts">
-    {preparedPosts.map(({
-      title, body, user, comments,
-    }) => (
-      <PostInfo title={title} body={body} user={user} comments={comments} />
+    {posts.map((post) => (
+      <PostInfo key={post.id} {...post} />
     ))}
   </div>
 );
