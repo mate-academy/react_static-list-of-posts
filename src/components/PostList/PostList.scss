@@ -1,1 +1,12 @@
-//
+.posts {
+  list-style: none;
+  display: flex;
+  flex-direction:  column;
+  gap: 10px;
+
+  &__item {
+    padding: 20px;
+    background-color: yellow;
+    border-radius: 20px;
+  }
+}
