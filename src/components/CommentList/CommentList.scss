@@ -1,1 +1,19 @@
-//
+.comments {
+
+  &__title {
+    margin-bottom: 14px;
+    font-size: 24px;
+  }
+
+  &__list {
+    list-style: none;
+
+    &-item {
+      margin-bottom: 12px;
+      padding: 14px;
+      border: transparent;
+      border-radius: 24px;
+      background-color: wheat;
+    }
+  }
+}
