@@ -1,1 +1,23 @@
-//
+.comments-list {
+  height: 200px;
+  overflow-y: scroll;
+  list-style: none;
+  background-color: beige;
+  border: 1px solid burlywood;
+  border-radius: 10px;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 1px;
+      background-color: burlywood;
+      transform: translate(-17px);
+    }
+  }
+}

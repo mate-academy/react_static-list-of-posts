@@ -1,1 +1,39 @@
-//
+.comment {
+  padding: 20px 0;
+  &__head {
+    display: flex;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: dimgrey;
+    line-height: 30px;
+    transition: 0.3s;
+
+    &::after {
+      content: ":";
+      margin-right: 20px;
+    }
+
+    &:hover {
+      color: olive;
+      transition: 0.3s;
+    }
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__body {
+    margin: 0;
+    font-size: 18px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
