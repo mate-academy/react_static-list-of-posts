@@ -1,1 +1,19 @@
-//
+.posts {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: khaki;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    transition: all 1000ms;
+  }
+
+  &__item:hover {
+    transform: scale(0.9);
+  }
+}
