@@ -1,1 +1,19 @@
-//
+.PostList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 800px;
+  margin: 0 auto;
+
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+
+    border: 1px solid #000;
+    border-radius: 12px;
+  }
+}

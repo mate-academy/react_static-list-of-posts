@@ -1,1 +1,13 @@
-//
+.CommentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__name {
+    display: inline-block;
+  }
+
+  &__email {
+    font-size: 14px;
+  }
+}
