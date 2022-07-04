@@ -1,1 +1,12 @@
-//
+.comment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__email {
+    font-size: 12px;
+  }
+  &__title {
+    font-weight: 500;
+  }
+}

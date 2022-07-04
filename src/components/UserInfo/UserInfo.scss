@@ -1,1 +1,18 @@
-//
+.user-info {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+  }
+
+  &__username {
+    font-style: italic;
+  }
+
+  &__email {
+    font-size: 12px;
+  }
+}
