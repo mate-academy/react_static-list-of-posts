@@ -1,1 +1,11 @@
-//
+.post {
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__body {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
