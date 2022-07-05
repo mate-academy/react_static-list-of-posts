@@ -1,4 +1,5 @@
 import React from 'react';
+import capitalizeFirstLetter from '../../functions/capitalizeFirstLetter';
 import { PreparedPost } from '../../types/PreparedPost';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo/UserInfo';
@@ -16,11 +17,11 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
 
     <div className="post__shifted">
       <h2 className="post__title" data-cy="post-title">
-        {post.title[0].toUpperCase() + post.title.slice(1)}
+        {capitalizeFirstLetter(post.title)}
       </h2>
 
       <p className="post__body" data-cy="post-body">
-        {post.body[0].toUpperCase() + post.body.slice(1)}
+        {capitalizeFirstLetter(post.body)}
       </p>
     </div>
 

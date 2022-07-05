@@ -19,9 +19,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
     <div>
       <div className="user-info__username">
         {user.username}
-        {' [ '}
-        <span data-cy="user-name">{user.name}</span>
-        {' ] '}
+        <span data-cy="user-name">{` [${user.name}]`}</span>
       </div>
 
       <a

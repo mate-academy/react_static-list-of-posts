@@ -1,4 +1,5 @@
 import React from 'react';
+import capitalizeFirstLetter from '../../functions/capitalizeFirstLetter';
 import { Comment } from '../../types/Comment';
 
 import './CommentInfo.scss';
@@ -18,11 +19,11 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => (
     </a>
 
     <h4 className="comment-info__title" data-cy="comment-name">
-      {comment.name[0].toUpperCase() + comment.name.slice(1)}
+      {capitalizeFirstLetter(comment.name)}
     </h4>
 
     <p data-cy="comment-body">
-      {comment.body[0].toUpperCase() + comment.body.slice(1)}
+      {capitalizeFirstLetter(comment.body)}
     </p>
   </div>
 );
