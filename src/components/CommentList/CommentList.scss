@@ -1,1 +1,16 @@
-//
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__comment {
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+
+    transition: border-color 200ms;
+    &:hover {
+      border-color: #5089c6;
+    }
+  }
+}

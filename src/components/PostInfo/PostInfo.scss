@@ -1,1 +1,32 @@
-//
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  max-width: 1024px;
+  padding: 30px;
+
+  border-radius: 20px;
+  background-color: #fefefe;
+
+  transition: transform 200ms, box-shadow 200ms;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+  }
+
+  &__shifted {
+    margin-left: 50px;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  &__comments-title {
+    font-weight: 500;
+  }
+}
