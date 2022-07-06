@@ -1,1 +1,8 @@
-//
+.posts {
+  list-style: none;
+
+  &__container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}

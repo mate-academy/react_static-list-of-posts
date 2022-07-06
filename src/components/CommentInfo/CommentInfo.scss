@@ -1,1 +1,14 @@
-//
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: justify;
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__email {
+    text-decoration: none;
+  }
+}
