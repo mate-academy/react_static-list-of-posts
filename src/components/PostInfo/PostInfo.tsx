@@ -9,9 +9,22 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <article className="post" data-cy="post-info">
-    <h2 className="post__title" data-cy="post-title">{post.title}</h2>
-    <p className="post__text" data-cy="post-body">{post.body}</p>
+    <h2
+      className="post__title"
+      data-cy="post-title"
+    >
+      {post.title}
+    </h2>
+
+    <p
+      className="post__text"
+      data-cy="post-body"
+    >
+      {post.body}
+    </p>
+
     <UserInfo user={post.user} />
+
     <CommentList comments={post.comments} />
   </article>
 );
