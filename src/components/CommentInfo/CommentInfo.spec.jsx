@@ -7,6 +7,7 @@ import comments from '../../api/comments';
 
 describe('CommentInfo component', () => {
   it('should show a \'name\'', () => {
+    // eslint-disable-next-line react/jsx-filename-extension
     mount(<CommentInfo
       comment={
         { name: comments[0].name }
