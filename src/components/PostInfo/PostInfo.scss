@@ -1,1 +1,9 @@
-//
+.postInfo {
+  padding: 20px;
+  border-bottom: 3px solid black;
+
+  &__item {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
