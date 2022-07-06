@@ -5,6 +5,10 @@ import './CommentList.scss';
 
 export const CommentList: React.FC<{ list: Comment[] }> = ({ list }) => (
   <ul className="commentList">
-    {list.map(com => <li key={com.id}><CommentInfo comment={com} /></li>)}
+    {list.map(com => (
+      <li key={com.id}>
+        <CommentInfo comment={com} />
+      </li>
+    ))}
   </ul>
 );

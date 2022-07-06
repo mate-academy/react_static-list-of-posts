@@ -2,7 +2,11 @@
   padding: 20px;
   border-bottom: 3px solid black;
 
-  &__item {
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__info {
     font-size: 20px;
     text-transform: uppercase;
   }

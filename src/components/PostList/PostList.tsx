@@ -6,7 +6,9 @@ import './PostList.scss';
 export const PostList: React.FC<{ list: Post[] }> = ({ list }) => (
   <div className="postList">
     {list.map(post => (
-      <div key={post.id}><PostInfo post={post} /></div>
+      <div key={post.id}>
+        <PostInfo post={post} />
+      </div>
     ))}
   </div>
 );
