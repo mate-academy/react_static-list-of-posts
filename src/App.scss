@@ -1,1 +1,10 @@
-// styles go here
+.app {
+  padding: 15px;
+  background-color: gray;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
