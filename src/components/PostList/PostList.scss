@@ -1,1 +1,11 @@
-//
+.postList {
+  border: 1px solid transparent;
+  background-color: rgb(238, 243, 224);
+  border-radius: 15px;
+  margin-bottom: 10px;
+  list-style-type: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
