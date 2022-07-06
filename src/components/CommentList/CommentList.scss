@@ -1,1 +1,11 @@
-//
+.comments {
+  display: flex;
+  background-color: antiquewhite;
+  justify-content: center;
+  align-items: center;
+  width: 50vh;
+
+  &__list {
+    list-style: disc;
+  }
+}
