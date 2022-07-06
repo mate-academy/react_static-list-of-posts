@@ -1,1 +1,12 @@
-//
+.post-title {
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.post-body {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(199, 199, 199);
+  font-weight: bold;
+  border-radius: 10px;
+}
