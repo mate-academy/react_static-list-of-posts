@@ -1,1 +1,8 @@
-//
+.postInfo {
+  width: 50vh;
+
+  &__title,
+  &__body {
+    text-align: center;
+  }
+}
