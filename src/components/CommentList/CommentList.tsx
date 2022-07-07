@@ -7,16 +7,16 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  <div>
+  <>
     {comments.map((comment) => (
-      <div>
-        <span>
+      <div key={comment.name}>
+        <div>
           {comment.name}
-        </span>
-        <span>
+        </div>
+        <div>
           {comment.body}
-        </span>
+        </div>
       </div>
     ))}
-  </div>
+  </>
 );
