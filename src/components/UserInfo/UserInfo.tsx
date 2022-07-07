@@ -2,7 +2,7 @@ import React from 'react';
 import { User } from '../../api/types/User';
 
 type Props = {
-  user: User | null,
+  user: User | undefined,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
