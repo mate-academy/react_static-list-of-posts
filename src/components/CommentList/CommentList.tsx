@@ -1,6 +1,19 @@
 import React from 'react';
+
+import { Comment } from '../../api/types/Comment';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
+type Props = {
+  comments: Comment[] | undefined;
+};
+
+export const CommentList: React.FC<Props> = ({ comments }) => (
+  <ol className="message">
+    {comments?.map(comment => (
+      <li key={comment.id} className="message-body">
+        <CommentInfo comment={comment} />
+      </li>
+    ))}
+  </ol>
 );
