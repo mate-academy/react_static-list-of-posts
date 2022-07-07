@@ -1,1 +1,99 @@
 //
+.posts__item {
+  margin: 20px auto;
+  padding: 0 0 40px;
+  width: 80%;
+
+  border-bottom: 10px dotted lightblue;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 3px pink;
+}
+
+.posts__title {
+  margin: 20px 0;
+  padding: 10px;
+
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+
+  background-color: beige;
+  border-radius: 10px 10px 0 0;
+}
+
+.posts__body {
+  box-sizing: border-box;
+  margin: 0 20px 50px;
+  padding: 10px;
+
+  font-size: 18px;
+}
+
+.posts__body::first-letter {
+  padding: 2px;
+  font-size: 42px;
+}
+
+.posts__author {
+  margin: 10px;
+  padding: 10px;
+  width: max-content;
+
+  color: rgb(83, 83, 83);
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px lightblue;
+}
+
+.posts__comment {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.posts__content {
+  display: block;
+  margin: 0 0 20px;
+
+  background-color: rgba(219, 174, 141, 0.2);
+  border-radius: 10px;
+  border: 2px solid lightgray;
+}
+
+.posts__comment-title {
+  margin: 10px auto;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  border-radius: 0 0 10px 10px;
+  color: rgb(0, 0, 0);
+}
+
+.posts__comment-mail {
+  margin: 0 10px;
+  padding: 10px;
+  width: max-content;
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(83, 83, 83);
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
+
+.posts__main-title {
+  margin: 20px 0;
+  padding: 10px;
+
+  text-transform: uppercase;
+  background-color: rgb(188, 188, 188);
+}
+
+.posts__bottom {
+  padding: 20px;
+  margin-bottom: 20px;
+}
