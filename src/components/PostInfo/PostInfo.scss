@@ -1,1 +1,8 @@
-//
+.post {
+  display: flex;
+
+  &__flex {
+    max-width: 30%;
+    margin-right: 30px;
+  }
+}
