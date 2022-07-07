@@ -1,1 +1,18 @@
-//
+
+.post {
+  margin: 20px 30px;
+  padding: 10px;
+
+  font-family: sans-serif;
+  font-weight: 500;
+  color: #60436b;
+  background-color: #db8ed3;
+  border-radius: 15px;
+
+  transition: all 1s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
