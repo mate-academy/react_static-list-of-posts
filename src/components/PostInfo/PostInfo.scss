@@ -1,1 +1,19 @@
-//
+.post__item {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  &-title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: yellowgreen;
+  }
+
+  &-body {
+    text-align: center;
+    font-weight: bold;
+  }
+}

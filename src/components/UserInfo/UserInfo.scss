@@ -1,1 +1,11 @@
-//
+.user {
+  font-size: 20px;
+
+  &__userName {
+    color: greenyellow;
+  }
+
+  &__userEmail {
+    color: blue;
+  }
+}

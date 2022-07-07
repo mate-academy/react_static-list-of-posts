@@ -1,1 +1,10 @@
-//
+.comment {
+
+  &__commentName {
+    text-decoration: underline;
+  }
+
+  &__commentEmail {
+    color: blue;
+  }
+}
