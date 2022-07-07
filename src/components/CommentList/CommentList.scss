@@ -1,1 +1,7 @@
-//
+.comments-list {
+  padding: 10px;
+
+  &__item {
+    list-style: none;
+  }
+}

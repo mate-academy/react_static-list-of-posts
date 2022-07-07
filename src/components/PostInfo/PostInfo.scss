@@ -1,1 +1,11 @@
-//
+.post {
+  &__title {
+    margin-bottom: 10px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  &__body {
+    text-align: right;
+  }
+}
