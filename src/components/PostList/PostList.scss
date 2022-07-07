@@ -1,1 +1,20 @@
-//
+.posts {
+  &__item {
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 30px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: rgba(31, 135, 255, 0.1);
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1f87ff,
+      2px 5px 16px #0b325e,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: inset -1px 3px 8px 5px #1f87ff,
+      2px 5px 16px #0b325e,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+
+  &__list {
+    padding: 0;
+  }
+}
