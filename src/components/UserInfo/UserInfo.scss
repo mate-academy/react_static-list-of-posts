@@ -1,1 +1,25 @@
-//
+.user {
+  font-size: 20px;
+  
+  text-align: center;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  &-email {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ff6262;
+    font-weight: bold;
+
+    &:hover {
+      color: #ff4747;
+    }
+  }
+}
