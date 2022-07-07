@@ -1,1 +1,15 @@
-//
+.user {
+  margin-bottom: 20px;
+  text-align: right;
+  font-weight: bold;
+
+  &__name {
+    font-size: 24px;
+    font-style: italic;
+  }
+
+  &__email {
+    font-size: 20px;
+    text-decoration: none;
+  }
+}

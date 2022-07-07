@@ -1,1 +1,16 @@
-//
+.comment {
+  padding: 10px;
+
+  &__head {
+    padding: 0 0 16px 16px;
+    font-weight: bold;
+  }
+
+  &__name {
+    font-size: 20px;
+  }
+
+  &__email {
+    text-decoration: none;
+  }
+}
