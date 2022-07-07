@@ -1,1 +1,28 @@
-//
+.author-info {
+  margin-left: 38px;
+  margin-bottom: 50px;
+  width: 180px;
+  padding: 10px;
+  background-color: seagreen;
+  border-radius: 20px;
+}
+
+.author {
+  color: lightgoldenrodyellow;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: underline seagreen;
+  border: 3px solid white;
+}
+
+.email {
+  font-size: 14px;
+  text-decoration: underline dotted black;
+
+  &--author {
+    word-wrap: break-word;
+    text-align: center;
+    padding-left: 16px;
+  }
+}

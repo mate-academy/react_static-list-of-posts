@@ -1,1 +1,22 @@
-//
+.post {
+  &__title {
+    padding: 30px 34px 6px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: initial;
+    font-size: 22px;
+
+    &::first-letter {
+      font-size: 33px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__body {
+    padding: 84px 75px;
+    background-color: #fff;
+    border-radius: 20px;
+    font-size: 16px;
+    font-style: italic;
+  }
+}

@@ -1,1 +1,18 @@
-//
+li {
+  list-style-type: none;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  background-color: seagreen;
+
+  &__list {
+    margin: auto;
+    margin-bottom: 48px;
+    padding: 0 40px 40px;
+    background-color: lightgoldenrodyellow;
+    border: 3px dashed black;
+    width: 46%;
+  }
+}
