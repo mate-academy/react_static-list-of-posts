@@ -1,1 +1,24 @@
-//
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  &__email {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ff6262;
+    font-weight: bold;
+
+    &:hover {
+      color: #ff4747;
+    }
+  }
+}
