@@ -1,1 +1,24 @@
-//
+.post-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 20px;
+
+  &__title {
+    font-size: 60px;
+    color: aqua;
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__comment-list {
+    background-color: bisque;
+    border-radius: 10px;
+  }
+}

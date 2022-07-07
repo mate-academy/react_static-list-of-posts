@@ -1,1 +1,6 @@
-//
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 50px;
+  list-style: none;
+}
