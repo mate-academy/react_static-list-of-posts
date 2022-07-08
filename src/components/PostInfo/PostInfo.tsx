@@ -10,7 +10,9 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
-  const { title, user, body, comments } = post;
+  const {
+    title, user, body, comments,
+  } = post;
 
   return (
     <li className="posts__post post" data-cy="post-info">
@@ -25,7 +27,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </p>
 
       <CommentList comments={comments} />
-  </li>
+    </li>
   );
-
 };
