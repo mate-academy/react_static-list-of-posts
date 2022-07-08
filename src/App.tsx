@@ -12,15 +12,15 @@ import { User } from './components/UserInfo/UserInfo';
 import { PostList } from './components/PostList/PostList';
 
 export interface PreparedPosts extends Post {
-  user: User;
+  user: User | null;
   comments: Comment[];
 }
 
-const preparedPosts:PreparedPosts[] = posts.map(post => ({
+const preparedPosts: PreparedPosts[] = posts.map(post => ({
   ...post,
   user: users.find(user => user.id === post.userId) || null,
   comments: comments.filter(comment => comment.postId === post.id),
-}) as PreparedPosts);
+}));
 
 const App: React.FC = () => (
   <div className="App">

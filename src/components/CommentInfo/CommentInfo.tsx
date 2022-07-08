@@ -7,9 +7,23 @@ export interface Comment {
   body: string,
 }
 
-export const CommentInfo: React.FC<Comment> = ({ name, body }) => (
+type Props = {
+  comments: Comment,
+};
+
+export const CommentInfo: React.FC<Props> = ({ comments }) => (
   <div className="comment">
-    <div className="comment-name" data-cy="comment-name">{name}</div>
-    <div className="comment-body" data-cy="comment-body">{body}</div>
+    <div
+      className="comment-name"
+      data-cy="comment-name"
+    >
+      {comments.name}
+    </div>
+    <div
+      className="comment-body"
+      data-cy="comment-body"
+    >
+      {comments.body}
+    </div>
   </div>
 );
