@@ -2,6 +2,16 @@ import React from 'react';
 
 import './UserInfo.scss';
 
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
+type Props = {
+  name: string;
+  email: string;
+};
+
+export const UserInfo: React.FC<Props> = ({ name, email }) => (
+  <>
+    <h3>{name}</h3>
+    <a href="mailto:{user.user.email}">{email}</a>
+  </>
 );
+
+export default UserInfo;
