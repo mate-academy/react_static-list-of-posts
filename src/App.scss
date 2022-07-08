@@ -1,1 +1,66 @@
-// styles go here
+* {
+  font-family: sans-serif;
+}
+
+.page__body {
+  background-color: rgb(214, 245, 245);
+}
+
+.posts {
+  padding: 20px;
+}
+
+.post {
+  background-color: rgb(232, 242, 247);
+  border: 3px solid rgb(84, 45, 175);
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  &_name {
+    border: 2px solid rgb(57, 92, 206);
+    border-radius: 5px;
+    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+  }
+}
+
+.postTitle {
+  text-transform: uppercase;
+}
+
+.coments {
+  list-style: none;
+}
+
+.comment {
+  border: 1px solid black;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px rgb(152, 156, 154);
+  margin-right: 40px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+}
+
+.user {
+  padding: 10px 0 10px 10px;
+}
+
+.name {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.email {
+  font-style: italic;
+}
