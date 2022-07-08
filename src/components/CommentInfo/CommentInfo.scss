@@ -1,1 +1,17 @@
 //
+.comment {
+  background-color: rgb(231, 171, 191);
+  &__name {
+
+    color: crimson;
+  }
+
+  &__body {
+    color: chocolate;
+  }
+
+  &__email {
+    color: orangered;
+    text-decoration: none;
+  }
+}

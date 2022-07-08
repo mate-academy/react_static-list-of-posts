@@ -1,1 +1,10 @@
 //
+.commentsList {
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin: 50px;
+    font-size: 20px;
+  }
+}
