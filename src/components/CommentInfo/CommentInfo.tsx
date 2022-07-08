@@ -7,20 +7,25 @@ type Props = {
   comment: Comment;
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => (
-  <li className="comments__comment comment" key={comment.id}>
-    <div className="comment__user user">
-      <p className="user__name" data-cy="comment-name">
-        {comment.name}
-      </p>
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
+  const { name, email, body } = comment;
 
-      <p className="user__email" data-cy="comment-email">
-        {comment.email}
-      </p>
-    </div>
+  return (
+    <li className="comments__comment comment">
+      <div className="comment__user user">
+        <p className="user__name" data-cy="comment-name">
+          {name}
+        </p>
 
-    <p className="comment__body" data-cy="comment-body">
-      {comment.body}
-    </p>
-  </li>
-);
+        <p className="user__email" data-cy="comment-email">
+          {email}
+        </p>
+      </div>
+
+      <p className="comment__body" data-cy="comment-body">
+        {body}
+      </p>
+    </li>
+  );
+
+};

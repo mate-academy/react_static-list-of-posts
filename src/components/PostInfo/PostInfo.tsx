@@ -9,22 +9,23 @@ type Props = {
   post: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
-  <li
-    className="posts__post post"
-    data-cy="post-info"
-    key={post.id}
-  >
-    <h2 className="post__content post__title" data-cy="post-title">
-      {post.title}
-    </h2>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const { title, user, body, comments } = post;
 
-    <UserInfo user={post.user} />
+  return (
+    <li className="posts__post post" data-cy="post-info">
+      <h2 className="post__content post__title" data-cy="post-title">
+        {title}
+      </h2>
 
-    <p className="post__content post__body" data-cy="post-body">
-      {post.body}
-    </p>
+      <UserInfo user={user} />
 
-    <CommentList comments={post.comments} />
+      <p className="post__content post__body" data-cy="post-body">
+        {body}
+      </p>
+
+      <CommentList comments={comments} />
   </li>
-);
+  );
+
+};
