@@ -1,1 +1,11 @@
-//
+.postAbout {
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 5px;
+
+  &__body {
+    font-size: 20px;
+  }
+}
