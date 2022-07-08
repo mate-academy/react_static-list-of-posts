@@ -1,7 +1,7 @@
 # React static list of posts
 
 - Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://.github.io/react_static-list-of-posts/)
+  [DEMO LINK](https://andrewkhorsun.github.io/react_static-list-of-posts/)
 - Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
 
 ## The task
