@@ -1,1 +1,14 @@
-//
+.card {
+  padding: 20px;
+  border: solid;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  &__list {
+    padding: 20px;
+  }
+
+  &__comments {
+    text-align: center;
+  }
+}

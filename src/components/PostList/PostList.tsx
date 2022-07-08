@@ -1,6 +1,18 @@
 import React from 'react';
+import { Post } from '../../Types/Post';
+import { PostInfo } from '../PostInfo/PostInfo';
 import './PostList.scss';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+type Props = {
+  posts: Post[],
+};
+
+export const PostList: React.FC<Props> = ({ posts }) => (
+  <div className="cards">
+    {posts.map(article => (
+      <PostInfo info={article} />
+    ))}
+  </div>
 );
+
+export default PostList;
