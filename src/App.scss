@@ -1,1 +1,22 @@
 // styles go here
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+
+    color: #926498;
+    cursor: pointer;
+    transition: all 1s;
+
+    &:hover {
+      color: #3d2f49;
+    }
+  }
+}
