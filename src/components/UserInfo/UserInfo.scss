@@ -1,1 +1,20 @@
-//
+.card__user-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card__email {
+  transition: 0.3s;
+  &:hover {
+    font-size: 24px;
+  }
+}
+
+.post-title {
+  text-align: center;
+}

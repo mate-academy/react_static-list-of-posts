@@ -1,1 +1,17 @@
-// styles go here
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+  padding: 50px;
+}
