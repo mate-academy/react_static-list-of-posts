@@ -10,9 +10,9 @@ export const PostInfo: React.FC <Props> = ({ post }) => (
     <h2 data-cy="post-title">
       <strong>{post.title}</strong>
     </h2>
-    <p data-cy="post-body">
+    <span data-cy="post-body">
       {post.body}
-    </p>
+    </span>
   </div>
 
 );

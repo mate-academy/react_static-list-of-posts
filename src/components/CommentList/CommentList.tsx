@@ -10,7 +10,9 @@ type Props = {
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <footer className="card-footer">
     {comments.map(comment => (
-      <CommentInfo comment={comment} />
+      <React.Fragment key={comment.id}>
+        <CommentInfo comment={comment} />
+      </React.Fragment>
     ))}
   </footer>
 );

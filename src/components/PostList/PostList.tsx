@@ -12,10 +12,8 @@ type Props = {
 export const PostList: React.FC<Props> = ({ posts }) => (
   <>
     {posts.map((post) => (
-      <div className="card">
-        { post.user
-          ? <UserInfo user={post.user} />
-          : null}
+      <div className="card" key={post.id}>
+        { post.user && <UserInfo user={post.user} />}
         <PostInfo post={post} />
         <CommentList comments={post.comments} />
       </div>
