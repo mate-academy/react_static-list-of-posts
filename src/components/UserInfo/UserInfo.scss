@@ -1,1 +1,13 @@
-//
+.user-info {
+  font-size: 30px;
+  padding-bottom: 20px;
+
+  &__email {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  &__name {
+    color: violet;
+  }
+}

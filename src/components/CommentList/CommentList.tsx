@@ -1,6 +1,16 @@
 import React from 'react';
+import { Comment } from '../../types/Comment';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
 import './CommentList.scss';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
+type Props = {
+  commentList: Comment [];
+};
+
+export const CommentList: React.FC<Props> = ({ commentList }) => (
+  <>
+    {commentList.map(comment => (
+      <CommentInfo comments={comment} key={comment.id} />
+    ))}
+  </>
 );

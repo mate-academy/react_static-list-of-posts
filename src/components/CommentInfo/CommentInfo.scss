@@ -1,1 +1,19 @@
-//
+.comment-info {
+  padding: 10px;
+  margin-bottom: 10px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  &__body {
+    color: cadetblue;
+    margin-bottom: 5px;
+  }
+
+  &__email {
+    color: blue;
+    text-decoration: underline;
+  }
+}
