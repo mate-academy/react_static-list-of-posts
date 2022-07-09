@@ -1,1 +1,14 @@
-//
+.post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+
+  &__title {
+    margin: 10px 0 0;
+    text-align: center;
+  }
+
+  &__body {
+    font-size: 18px;
+  }
+}

@@ -1,1 +1,7 @@
-//
+.user {
+  margin-bottom: 10px;
+
+  &__name {
+    margin: 0;
+  }
+}
