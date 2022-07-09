@@ -9,7 +9,8 @@ const preparedPosts = posts.map(post => {
   return {
     ...post,
     user: users.find(user => post.userId === user.id) || null,
-    comments: comments.filter(comment => post.id === comment.postId),
+    comments: comments
+      .filter(comment => post.id === comment.postId) as Comment[],
   };
 });
 
