@@ -1,1 +1,15 @@
-//
+.comment {
+
+  &__name {
+    margin-bottom: 5px;
+  }
+
+  &__body {
+    margin: 0 0 5px;
+  }
+
+  &____email {
+    display: block;
+    margin: 0;
+  }
+}
