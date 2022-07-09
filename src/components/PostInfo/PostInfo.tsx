@@ -9,14 +9,14 @@ type Props = {
   title: string;
   body:string;
   user: User | undefined;
-  comment: Comment[] | undefined;
+  comments: Comment[] | undefined;
 };
 
 export const PostInfo: React.FC<Props> = ({
   title,
   body,
   user,
-  comment,
+  comments,
 }) => (
   <>
     <span data-cy="post-title">{title}</span>
@@ -24,6 +24,6 @@ export const PostInfo: React.FC<Props> = ({
     {user ? (
       <UserInfo name={user.name} email={user.email} />
     ) : undefined}
-    <CommentList comment={comment} />
+    <CommentList comments={comments} />
   </>
 );

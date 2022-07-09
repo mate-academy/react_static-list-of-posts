@@ -6,10 +6,10 @@ import './PostList.scss';
 
 type Props = {
   postList: MergePostsUsers[];
-  comment: Comment[];
+  comments: Comment[];
 };
 
-export const PostList: React.FC<Props> = ({ postList = [], comment = [] }) => (
+export const PostList: React.FC<Props> = ({ postList = [], comments = [] }) => (
   <ul>
     {postList.map(post => (
       <li
@@ -18,10 +18,8 @@ export const PostList: React.FC<Props> = ({ postList = [], comment = [] }) => (
         data-cy="post-info"
       >
         <PostInfo
-          title={post.title}
-          body={post.body}
-          user={post.user}
-          comment={comment}
+          {...post}
+          comments={comments}
         />
       </li>
     ))}
