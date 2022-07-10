@@ -24,7 +24,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <h1 className="title">Static list of posts</h1>
+      <h1>Static list of posts</h1>
       <PostList preparedPosts={preparedPosts} />
     </div>
   );
