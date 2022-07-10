@@ -1,1 +1,7 @@
-//
+.commentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  border: 1px solid gold;
+  padding: 1em;
+}

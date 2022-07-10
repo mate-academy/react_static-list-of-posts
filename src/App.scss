@@ -1,32 +1,12 @@
-.App__title {
-  text-align: center;
+.app {
+  padding: 15px;
+  background-color: gainsboro;
+  border: 1px solid gold;
 }
 
-.PostInfo {
-  margin: 10px auto;
-  width: 90%;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: lightgray;
-  padding: 1em;
-
-  &__title {
-    margin: 0;
-  }
-
-  &__header {
-    margin-bottom: 1em;
-  }
-}
-
-.UserInfo {
-  font-weight: bold;
-}
-
-.CommentList {
+.title {
+  color: aqua;
   display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
+  font-size: 40px;
+  justify-content: center;
 }
