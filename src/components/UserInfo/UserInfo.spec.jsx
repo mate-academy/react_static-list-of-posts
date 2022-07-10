@@ -3,28 +3,46 @@
 import React from 'react';
 import { mount } from '@cypress/react';
 import { UserInfo } from './UserInfo';
-import users from '../../api/users';
 
-describe('UserInfo component', () => {
-  it('should accept a \'user\' object and render an \'email\'', () => {
-    mount(<UserInfo
-      user={
-        { email: users[0].email }
-      }
-    />);
+describe('UserInfo', () => {
+  it('should show a user.name', () => {
+    const user1 = {
+      id: 1,
+      name: 'Leanne Graham',
+      username: 'Bret',
+      email: 'Sincere@april.biz',
+    };
 
-    cy.getByDataCy('user-email')
-      .should('contain', users[0].email);
+    mount(<UserInfo user={user1} />);
+
+    cy.get('.UserInfo').should('have.text', 'Leanne Graham');
   });
 
-  it('should accept a \'user\' object and render a \'name\'', () => {
-    mount(<UserInfo
-      user={
-        { name: users[0].name }
-      }
-    />);
+  it('should have a link with mailto: user.email', () => {
+    const user1 = {
+      id: 1,
+      name: 'Leanne Graham',
+      username: 'Bret',
+      email: 'Sincere@april.biz',
+    };
 
-    cy.getByDataCy('user-name')
-      .should('contain', users[0].name);
+    mount(<UserInfo user={user1} />);
+
+    cy.get('.UserInfo').should('have.attr', 'href', 'mailto:Sincere@april.biz');
+  });
+
+  it('should work for another user', () => {
+    const user2 = {
+      id: 2,
+      name: 'Ervin Howell',
+      username: 'Antonette',
+      email: 'Shanna@melissa.tv',
+    };
+
+    mount(<UserInfo user={user2} />);
+
+    cy.get('.UserInfo')
+      .should('have.text', 'Ervin Howell')
+      .should('have.attr', 'href', 'mailto:Shanna@melissa.tv');
   });
 });

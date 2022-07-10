@@ -2,39 +2,32 @@ import posts from '../../src/api/posts.ts'
 import users from '../../src/api/users.ts'
 import comments from '../../src/api/comments.ts'
 
-const page = {
-  post() {
-    return cy.getByDataCy('post-info')
-      .eq(0);
-  }
-}
-
 describe('Page', () => {
   before(() => {
     cy.visit('/');
   });
 
-  it('should contain 100 posts', () => {
-    cy.getByDataCy('post-info')
+  it('should contain all the posts', () => {
+    cy.get('.PostInfo')
       .should('have.length', posts.length);
   });
 
-  it('should contain posts with 5 comments for each', () => {
-    cy.getByDataCy('comment-list')
+  it('should contain the first post user', () => {
+    const post = posts[0];
+    const user = users.find(user => user.id === post.userId);
+
+    cy.get('.PostInfo .UserInfo')
+      .eq(0)
+      .should('have.text', user.name);
+  });
+
+  it('should contain the first post comments', () => {
+    const post = posts[0];
+    const postComments = comments.filter(comment => comment.postId === post.id);
+
+    cy.get('.CommentList')
       .eq(0)
       .children()
-      .should('have.length', 5);
-  });
-
-  it('should contain posts with the name of publisher', () => {
-    page.post()
-      .find('[data-cy="user-name"]')
-      .should('contain', users[0].name);
-  });
-
-  it('should contain posts with the email of publisher', () => {
-    page.post()
-      .find('[data-cy="user-email"]')
-      .should('contain', users[0].email);
+      .should('have.length', postComments.length);
   });
 });

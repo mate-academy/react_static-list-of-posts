@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-const comments = [
+export default [
   {
     postId: 1,
     id: 1,
@@ -35,41 +35,6 @@ const comments = [
     name: 'vero eaque aliquid doloribus et culpa',
     email: 'Hayden@althea.biz',
     body: 'harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et',
-  },
-  {
-    postId: 2,
-    id: 6,
-    name: 'et fugit eligendi deleniti quidem qui sint nihil autem',
-    email: 'Presley.Mueller@myrl.com',
-    body: 'doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in',
-  },
-  {
-    postId: 2,
-    id: 7,
-    name: 'repellat consequatur praesentium vel minus molestias voluptatum',
-    email: 'Dallas@ole.me',
-    body: 'maiores sed dolores similique labore et inventore et\nquasi temporibus esse sunt id et\neos voluptatem aliquam\naliquid ratione corporis molestiae mollitia quia et magnam dolor',
-  },
-  {
-    postId: 2,
-    id: 8,
-    name: 'et omnis dolorem',
-    email: 'Mallory_Kunze@marie.org',
-    body: 'ut voluptatem corrupti velit\nad voluptatem maiores\net nisi velit vero accusamus maiores\nvoluptates quia aliquid ullam eaque',
-  },
-  {
-    postId: 2,
-    id: 9,
-    name: 'provident id voluptas',
-    email: 'Meghan_Littel@rene.us',
-    body: 'sapiente assumenda molestiae atque\nadipisci laborum distinctio aperiam et ab ut omnis\net occaecati aspernatur odit sit rem expedita\nquas enim ipsam minus',
-  },
-  {
-    postId: 2,
-    id: 10,
-    name: 'eaque et deleniti atque tenetur ut quo ut',
-    email: 'Carmen_Keeling@caroline.name',
-    body: 'voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas dolores velit et non\naut quia necessitatibus\nnostrum quaerat nulla et accusamus nisi facilis',
   },
   {
     postId: 3,
@@ -3502,5 +3467,3 @@ const comments = [
     body: 'perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis',
   },
 ];
-
-export default comments;
