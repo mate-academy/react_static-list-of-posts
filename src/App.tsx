@@ -1,46 +1,18 @@
 import React from 'react';
-
 import './App.scss';
+import { PostList } from './components/PostList/PostList';
+import { Post, Comment, User } from './types';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import posts from './api/posts';
+import comments from './api/comments';
+import users from './api/users';
 
-export const App: React.FC = () => (
-  <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+const App: React.FC = () => {
+  const preparedPosts: Post[] = posts.map((post) => {
+    const user: User | undefined = users.find(u => {
+      return u.id === post.userId;
+    });
 
-    <div className="PostList">
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">qui est esse</h3>
-
-          {' Posted by  '}
-
-          <a className="UserInfo" href="mailto:Sincere@april.biz">
-            Leanne Graham
-          </a>
-        </div>
-
-        <p className="PostInfo__body">
-          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae
-          ea dolores neque fugiat blanditiis voluptate porro vel nihil
-          molestiae ut reiciendis qui aperiam non debitis possimus qui neque
-          nisi nulla
-        </p>
-
-        <hr />
-
-        <b>No comments yet</b>
-      </div>
-
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">
-            doloremque illum aliquid sunt
-          </h3>
-
-          {' Posted by  '}
 
           <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
             Patricia Lebsack
