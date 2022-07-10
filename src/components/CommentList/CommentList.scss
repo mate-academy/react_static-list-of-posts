@@ -1,1 +1,11 @@
-//
+.comments {
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e6fcff;
+    border-radius: 15px;
+  }
+}
