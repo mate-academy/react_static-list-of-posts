@@ -1,1 +1,20 @@
 //
+.post {
+  &__title {
+    text-align: center;
+  }
+
+  &__title:first-letter {
+    text-transform: capitalize;
+  }
+
+  &__body::first-letter {
+    text-transform: capitalize;
+  }
+
+  &__comment {
+    background-color: rgb(123, 170, 209);
+    border-radius: 10px;
+    padding: 0 15px;
+  }
+}

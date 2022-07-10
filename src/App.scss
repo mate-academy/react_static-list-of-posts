@@ -1,1 +1,21 @@
 // styles go here
+.App {
+  padding: 0 20px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__posts {
+    padding: 0px;
+    list-style-type: none;
+  }
+
+  &__post {
+    border: 1px solid bisque;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(201, 206, 210);
+    padding: 5px;
+  }
+}
