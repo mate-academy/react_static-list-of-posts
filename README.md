@@ -1,28 +1,18 @@
 # React static list of posts
+This task is similar to [Static list of todos](https://github.com/mate-academy/react_static-list-of-todos#react-static-list-of-todos)
+but you should do everything yourself
 
-- Replace `<your_account>` with your Github username in the
-  [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/)
-- Follow the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+- don't change classes in the given markup (tests use them)
+- create all required types in `./src/types/`
+- prepare `posts` by adding a `user` and `comments` to each `post` (each
+  comment has a `postId`)
+- split the App into components based on given css classes
+- `List` components should take an array of something and render 1 `Info`
+ component per item
+- `Info` components should take 1 object and render its data
 
-## The task
-Implement an application with 5 components `PostList`, `PostInfo`, `UserInfo`, 
-`CommentList` and `CommentInfo` displaying posts with comments and user details.
-
-1. Create a `preparedPosts` array in the App with each `post` having a link to
-  a `user` and `comments` array. And pass it to the `PostList`.
-
-1. The `PostInfo` accepts a `post` object (with `user` and `comments`  
-  properties added before) and renders a `title`, a `body`, a `UserInfo` and a
-  `CommentList`.
-   - Please, add `data-cy="post-title"`, and `data-cy="post-body"` attributes
-   to `title` and `body` elements.
-   - Please, add `data-cy="post-info"` to the main `div` of the component
-
-1. The `UserInfo` accepts a `user` object and renders at least a `name` and an
-  `email`.
-   - Please, add `data-cy="user-name"` and `data-cy="user-email"` attributes
-   to `name` and `email` elements.
-
-1. The `CommentInfo` accepts a `comment` object and renders a `name`, a `body`, and an `email`.
-   - Please, add `data-cy="comment-name"`, `data-cy="comment-body"`, and
-   `data-cy="comment-email"` attributes to `name`, `body` and `email` elements.
+## Instructions
+- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline)
+- Use [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
+- Open 1 more terminal and run tests with `npm test` to ensure your solutions is correct
+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/) and add it to PR description
