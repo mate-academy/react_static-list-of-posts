@@ -1,1 +1,10 @@
-// styles go here
+h2,
+h3 {
+  margin: 0;
+}
+
+.app {
+  &__title {
+    text-align: center;
+  }
+}

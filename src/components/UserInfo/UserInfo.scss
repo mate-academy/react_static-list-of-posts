@@ -1,1 +1,8 @@
-//
+.user-info {
+  display: flex;
+  justify-content: space-between;
+
+  &-email {
+    color: black;
+  }
+}
