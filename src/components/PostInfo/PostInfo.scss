@@ -1,1 +1,17 @@
-//
+.postInfo {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: lightgray;
+  padding: 1em;
+
+  &__title {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  // &__header {
+  //   margin-bottom: 1em;
+  // }
+}
