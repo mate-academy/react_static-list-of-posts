@@ -23,8 +23,6 @@ export const PostInfo: React.FC<Post> = ({
       <UserInfo name={user.name} email={user.email} />)}
     <p className="post__body" data-cy="post-body">{body}</p>
     <h2 className="post__comment-title"> Comments: </h2>
-    {comments
-      ? <CommentList comments={comments} />
-      : ''}
+    {comments <CommentList comments={comments} />}
   </div>
 );
