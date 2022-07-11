@@ -19,9 +19,8 @@ export const PostInfo: React.FC<Post> = ({
     <h1 className="post__title" data-cy="post-title">
       {title}
     </h1>
-    {user
-      ? <UserInfo name={user.name} email={user.email} />
-      : ''}
+    {user && (
+      <UserInfo name={user.name} email={user.email} />)}
     <p className="post__body" data-cy="post-body">{body}</p>
     <h2 className="post__comment-title"> Comments: </h2>
     {comments
