@@ -1,1 +1,14 @@
-//
+.user {
+  margin: 20px;
+  text-align: right;
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__email {
+    font-style: italic;
+    text-decoration: none;
+    color: #000;
+  }
+}

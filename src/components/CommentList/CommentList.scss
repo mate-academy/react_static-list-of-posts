@@ -1,1 +1,21 @@
-//
+.comments {
+  border: 1px solid #f2f0f0;
+  border-radius: 20px;
+  box-shadow: 5px 10px 18px #888;
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &-list {
+    list-style: none;
+
+    &__item {
+      margin-bottom: 10px;
+      padding: 20px;
+
+      border: 1px solid #000;
+      border-radius: 20px;
+    }
+  }
+}

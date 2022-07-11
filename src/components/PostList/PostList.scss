@@ -1,1 +1,20 @@
-//
+.post-list {
+  &__item {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 1200px;
+
+    list-style: none;
+    background-color: #f2f0f0;
+
+    border: 1px solid #f2f0f0;
+    border-radius: 20px;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 5px 10px 18px #888;
+    }
+  }
+}

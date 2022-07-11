@@ -1,1 +1,19 @@
-//
+.comment {
+  &__title {
+    margin-bottom: 10px;
+    width: max-content;
+    font-weight: bold;
+    border-bottom: 2px solid darkorange;
+  }
+
+  &__body {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  &__email {
+    text-decoration: none;
+    font-style: italic;
+    color: #000;
+  }
+}

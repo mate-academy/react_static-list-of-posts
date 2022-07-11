@@ -1,1 +1,21 @@
-// styles go here
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.App {
+  &__body {
+    background-color: lightgray;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 20px;
+  }
+}
