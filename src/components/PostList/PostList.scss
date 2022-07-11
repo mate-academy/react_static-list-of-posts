@@ -1,1 +1,7 @@
-//
+.post-list {
+  background-color: rgba(107, 14, 84, 0.22);
+
+  &__item {
+    background: linear-gradient(#e664647d, #9198e573);
+  }
+}
