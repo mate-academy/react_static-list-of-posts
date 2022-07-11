@@ -1,3 +1,8 @@
+body {
+  background-color: rgba(107, 14, 84, 0.22);
+
+}
+
 .App__title {
   text-align: center;
 }
@@ -7,7 +12,13 @@
   width: 90%;
   border: 1px solid #000;
   border-radius: 8px;
-  background-color: lightgray;
+  background-color: rgba(233, 233, 233, 0.52);
+  background-image: linear-gradient(white 2px, transparent 2px),
+    linear-gradient(90deg, white 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, 0.81) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.81) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
   padding: 1em;
 
   &__title {

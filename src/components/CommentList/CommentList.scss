@@ -1,1 +1,14 @@
-//
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    border-left: 2px solid rgba(107, 14, 84, 0.98);
+    padding-left: 10px;
+    background-color: rgba(107, 14, 84, 0.22);
+  }
+}
