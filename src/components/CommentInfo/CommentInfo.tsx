@@ -3,7 +3,7 @@ import React from 'react';
 import './CommentInfo.scss';
 
 type Props = {
-  comment: Comment,
+  comment: PostComment,
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (

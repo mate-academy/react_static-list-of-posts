@@ -5,7 +5,7 @@ interface User {
   email: string,
 }
 
-interface Comment {
+interface PostComment {
   postId: number,
   id: number,
   name: string,
@@ -19,5 +19,5 @@ interface PreparedPost {
   title: string,
   body: string,
   author: User | null,
-  postComments: Comment[],
+  postComments: PostComment[],
 }

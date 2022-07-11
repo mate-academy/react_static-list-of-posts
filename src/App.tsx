@@ -10,9 +10,9 @@ import { PostList } from './components/PostList/PostList';
 
 const preparedPosts = posts.map(post => {
   const author = users
-    .find(userOfUsers => userOfUsers.id === post.userId) as User;
+    .find(userOfUsers => userOfUsers.id === post.userId) || null;
   const postComments = comments
-    .filter(comment => post.id === comment.postId) as Comment[];
+    .filter(comment => post.id === comment.postId);
 
   return { ...post, author, postComments };
 });
