@@ -3,9 +3,23 @@ import { User } from '../../type';
 
 import './UserInfo.scss';
 
-export const UserInfo: React.FC<{ user: User }> = ({ user }) => (
-  <div className="userInfo">
-    <p className="userInfo__item" data-cy="user-name">{user.name}</p>
-    <p className="userInfo__item" data-cy="user-email">{user.email}</p>
-  </div>
+type Props = {
+  user: User | null,
+};
+
+export const UserInfo: React.FC<Props> = ({ user }) => (
+  <ul className="user">
+    {user && (
+      <>
+        <p className="user__userName" data-cy="user-name">
+          {user.name}
+        </p>
+
+        <p className="user__userEmail" data-cy="user-email">
+          {user.email}
+        </p>
+      </>
+
+    )}
+  </ul>
 );
