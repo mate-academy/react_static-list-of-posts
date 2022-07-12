@@ -5,22 +5,19 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import './PostInfo.scss';
 
 type Props = {
-  info: Post;
+  postInfo: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ info }) => (
+export const PostInfo: React.FC<Props> = ({ postInfo }) => (
   <div className="card" data-cy="post-info">
-    <h2 data-cy="post-title">{info.title}</h2>
-    <p data-cy="post-body">{info.body}</p>
-    {info.user && (
+    <h2 data-cy="post-title">{postInfo.title}</h2>
+    <p data-cy="post-body">{postInfo.body}</p>
+    {postInfo.user && (
       <UserInfo
-        name={info.user.name}
-        email={info.user.email}
+        name={postInfo.user.name}
+        email={postInfo.user.email}
       />
     )}
-    {/* <UserInfo user={info.user} /> */}
-    <CommentInfo comment={info.comment} />
+    <CommentInfo comments={postInfo.comments} />
   </div>
 );
-
-export default PostInfo;

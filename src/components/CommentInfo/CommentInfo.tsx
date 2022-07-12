@@ -5,17 +5,17 @@ import { Comment } from '../../Types/Comment';
 import './CommentInfo.scss';
 
 type Props = {
-  comment: Comment[];
+  comments: Comment[];
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => (
+export const CommentInfo: React.FC<Props> = ({ comments }) => (
   <ol className="card__list">
     <h3 className="card__comments">Comments:</h3>
-    {comment.map(comments => (
-      <li key={comments.id}>
-        <h3>{comments.name}</h3>
-        <p>{comments.body}</p>
-        <a href="mailto:{comments.email}">{comments.email}</a>
+    {comments.map(comment => (
+      <li key={comment.id}>
+        <h3>{comment.name}</h3>
+        <p>{comment.body}</p>
+        <a href="mailto:{comments.email}">{comment.email}</a>
       </li>
     ))}
   </ol>
