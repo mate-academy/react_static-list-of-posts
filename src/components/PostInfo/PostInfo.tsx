@@ -8,9 +8,9 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <div className="PostInfo">
+  <div className="PostList__PostInfo PostInfo">
     <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+      <h2 className="PostInfo__title">{post.title}</h2>
 
       {' Posted by  '}
 
