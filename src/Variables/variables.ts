@@ -10,8 +10,8 @@ const mergeTodosUsers = (
 ) => {
   return postsFromServer.map(post => ({
     ...post,
-    user: userList.find(user => user.id === post.userId),
-    comment: commentsList.find(comment => comment.postId === post.id),
+    user: userList.find(user => user.id === post.userId) || null,
+    comment: commentsList.filter(comment => comment.postId === post.id) || null,
   }));
 };
 

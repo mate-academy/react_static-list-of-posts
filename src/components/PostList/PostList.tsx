@@ -1,15 +1,14 @@
 import React from 'react';
 import { PostInfo } from '../PostInfo/PostInfo';
-import { MergePostsUsers, Comment } from '../../interfaces/interfaces';
+import { MergePostsUsers } from '../../interfaces/interfaces';
 
 import './PostList.scss';
 
 type Props = {
   postList: MergePostsUsers[];
-  comments: Comment[];
 };
 
-export const PostList: React.FC<Props> = ({ postList = [], comments = [] }) => (
+export const PostList: React.FC<Props> = ({ postList = [] }) => (
   <ul>
     {postList.map(post => (
       <li
@@ -18,8 +17,7 @@ export const PostList: React.FC<Props> = ({ postList = [], comments = [] }) => (
         data-cy="post-info"
       >
         <PostInfo
-          {...post}
-          comments={comments}
+          post={post}
         />
       </li>
     ))}

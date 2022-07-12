@@ -18,8 +18,8 @@ export interface MergePostsUsers {
   id: number,
   title: string;
   body: string;
-  user: User | undefined;
-  comment: Comment | undefined;
+  user: User | null;
+  comment: Comment[] | null;
 }
 
 export interface User {
