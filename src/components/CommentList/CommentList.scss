@@ -1,1 +1,11 @@
-//
+.CommentsList__item {
+  background-color: rgb(176, 188, 248);
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.CommentsList__item:first-child {
+  margin-top: 10px;
+}

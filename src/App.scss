@@ -1,1 +1,21 @@
-// styles go here
+body,
+h1,
+h2,
+h3,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: rgb(251, 252, 157);
+
+  &__title {
+    text-align: center;
+    color: rgb(41, 9, 171);
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+}
