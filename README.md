@@ -1,6 +1,6 @@
 # React Static List of Posts
 
-> [React + Typescript cheatsheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
+> [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
 
 This task is similar to [Static List of TODOs](https://github.com/mate-academy/react_static-list-of-todos#react-static-list-of-todos), but you should do everything yourself:
 
