@@ -1,1 +1,9 @@
-//
+.post {
+  padding: 5px 10px;
+  border: 2px solid rgb(175, 175, 175);
+  border-radius: 20px;
+
+  &__body {
+    font-size: 20px;
+  }
+}
