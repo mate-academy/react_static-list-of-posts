@@ -1,28 +1,24 @@
-import { Comment } from '../../types/comment';
-import { Post } from '../../types/post';
-import { User } from '../../types/user';
+import { PreparePost } from '../../types/PreparePost';
 
 import { PostInfo } from '../PostInfo';
 
 type Props = {
-  posts: Post[];
-  users: User[];
-  comments: Comment[];
+  posts: PreparePost[];
 };
 
-export const PostList: React.FC<Props> = ({ posts, users, comments }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <>
     {posts.map((post => (
       <PostInfo
         key={post.id}
         post={post}
-        user={users.find(({ id }) => id === post.userId) || {
+        user={post.user || {
           id: 0,
           name: 'unfound',
           username: 'unfound',
           email: 'unfound',
         }}
-        comments={comments}
+        comments={post.comments}
       />
     )))}
   </>

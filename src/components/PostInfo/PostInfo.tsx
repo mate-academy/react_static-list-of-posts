@@ -28,7 +28,7 @@ export const PostInfo: React.FC<Props> = ({ post, user, comments }) => (
     </p>
 
     <CommentList
-      comments={comments.filter(({ postId }) => postId === post.id)}
+      comments={comments}
     />
   </div>
 );
