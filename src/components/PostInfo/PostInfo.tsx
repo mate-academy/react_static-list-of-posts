@@ -1,36 +1,30 @@
 import React from 'react';
 import './PostInfo.scss';
-
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
+import { User } from '../../types/types';
 
 type Props = {
-  post: Post,
+  title: string,
+  body: string,
+  user: User | null,
+  comments: Comment[],
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => {
-  const {
-    title,
-    body,
-    user,
-    comments,
-  } = post;
-
-  return (
-    <div className="post" data-cy="post-info">
-      <div className="post__flex">
-        <h1 className="post__title" data-cy="post-title">
-          {title}
-        </h1>
-
-        <p className="post__body" data-cy="post-body">
-          {body}
-        </p>
-
+export const PostInfo: React.FC<Props> = ({
+  title,
+  body,
+  user,
+  comments,
+}) => (
+  <>
+    <div data-cy="post-info">
+      <h2 data-cy="post-title">{title}</h2>
+      <div data-cy="post-body">{body}</div>
+      <div>
         <UserInfo user={user} />
       </div>
-
       <CommentList comments={comments} />
     </div>
-  );
-};
+  </>
+);

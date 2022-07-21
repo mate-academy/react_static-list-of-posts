@@ -1,19 +1,21 @@
 import React from 'react';
+import { User } from '../../types/types';
 
 import './UserInfo.scss';
 
 type Props = {
-  user: User,
+  user: User | null,
 };
 
-export const UserInfo: React.FC<Props> = ({ user }) => (
-  <div className="user">
-    <p className="user__name" data-cy="user-name">
-      {user.name}
-    </p>
+export const UserInfo: React.FC<Props> = ({ user }) => {
+  if (!user) {
+    return null;
+  }
 
-    <p className="user__email" data-cy="user-email">
-      {user.email}
-    </p>
-  </div>
-);
+  return (
+    <>
+      <div data-cy="user-name">{`Name: ${user.name}`}</div>
+      <div data-cy="user-email">{`Email: ${user.email}`}</div>
+    </>
+  );
+};
