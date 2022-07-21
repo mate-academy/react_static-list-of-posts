@@ -1,18 +1,16 @@
 import React from 'react';
+import { Comment } from '../../types/Comment';
 
 import './CommentInfo.scss';
 
 type Props = {
-  name: string,
-  email: string,
-  body: string,
+  comment: Comment
 };
 
-export const CommentInfo: React.FC<Props> = ({ name, email, body }) => (
-  <>
-    <h3 data-cy="comment-name">{name}</h3>
-    <p data-cy="comment-email">{email}</p>
-    <p data-cy="comment-body">{body}</p>
-  </>
-
+export const CommentInfo: React.FC<Props> = ({ comment }) => (
+  <div className="comments">
+    <h4 className="comments__name">{comment.name}</h4>
+    <p className="comments__body">{comment.body}</p>
+    <p className="comments__email">{comment.email}</p>
+  </div>
 );
