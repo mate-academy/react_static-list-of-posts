@@ -12,13 +12,6 @@ export const PostList: React.FC<Props> = ({ posts }) => (
       <PostInfo
         key={post.id}
         post={post}
-        user={post.user || {
-          id: 0,
-          name: 'unfound',
-          username: 'unfound',
-          email: 'unfound',
-        }}
-        comments={post.comments}
       />
     )))}
   </>

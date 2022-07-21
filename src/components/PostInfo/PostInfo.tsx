@@ -1,6 +1,4 @@
-import { Comment } from '../../types/comment';
-import { Post } from '../../types/post';
-import { User } from '../../types/user';
+import { PreparePost } from '../../types/PreparePost';
 
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
@@ -8,19 +6,20 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 type Props = {
-  post: Post;
-  user: User;
-  comments: Comment[];
+  post: PreparePost;
 };
 
-export const PostInfo: React.FC<Props> = ({ post, user, comments }) => (
+export const PostInfo: React.FC<Props> = ({ post }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{post.title}</h3>
+      {post.user && (
+        <>
+          {' Posted by  '}
+          <UserInfo user={post.user} />
+        </>
+      )}
 
-      {' Posted by  '}
-
-      <UserInfo user={user} />
     </div>
 
     <p className="PostInfo__body">
@@ -28,7 +27,7 @@ export const PostInfo: React.FC<Props> = ({ post, user, comments }) => (
     </p>
 
     <CommentList
-      comments={comments}
+      comments={post.comments}
     />
   </div>
 );
