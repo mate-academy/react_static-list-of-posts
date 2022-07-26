@@ -1,6 +1,3 @@
-// export const UserInfo: React.FC = () => (
-//   <>Put the user here</>
-// );
 import { Users } from '../../../types/Users';
 
 type Props = {
