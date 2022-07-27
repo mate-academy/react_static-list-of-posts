@@ -1,8 +1,7 @@
-// import comments from '../../api/comments';
 import { Comment } from '../../types/Comment';
 
 type Props = {
-  comment: Comment;
+  comment: Comment,
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
@@ -17,7 +16,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => (
           className="CommentInfo__email"
           href={`mailto:${comment.email}`}
         >
-          {comment.name}
+          {comment.email}
         </a>
       </div>
 

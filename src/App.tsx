@@ -18,7 +18,7 @@ function getUser(userId: number): User | null {
 }
 
 function getCommentList(postId:number):Comment[] | null {
-  let commentList:Comment[] = [];
+  let commentList: Comment[] = [];
 
   commentList = commentsFromServer.filter(comment => (
     comment.postId === postId
