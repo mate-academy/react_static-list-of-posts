@@ -30,9 +30,6 @@ const posts: Post[] = postsFromServer.map(post => ({
   comments: getComments(post.id),
 }));
 
-// eslint-disable-next-line
-console.log(posts);
-
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
