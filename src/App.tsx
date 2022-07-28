@@ -11,9 +11,11 @@ import { Post } from './types/Post';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 
-const getUser = (userId: number): User | null => (
-  usersFromServer.find(user => user.id === userId) || null
-);
+const getUser = (userId: number): User | null => {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  return foundUser || null;
+};
 
 const getComments = (id: number): Comment[] => (
   commentsFromServer.filter(comment => comment.postId === id)
