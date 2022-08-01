@@ -2,17 +2,18 @@ import React from 'react';
 import { Comment } from '../../types/Comment';
 
 type Props = {
-  comment: Comment
+  comment: Comment,
+  key: number,
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => (
-  <div className="CommentInfo">
+export const CommentInfo: React.FC<Props> = ({ comment, key }) => (
+  <div className="CommentInfo" key={key}>
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">
         {comment.name}
       </strong>
 
-      {' by '}
+      by
 
       <a
         className="CommentInfo__email"
