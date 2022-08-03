@@ -2,9 +2,33 @@ import React from 'react';
 
 import './App.scss';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+
+import { Post } from './types/Post';
+import { Comment } from './types/Comment';
+import { User } from './types/User';
+
+function getComments(postId: number): Comment[] {
+  return commentsFromServer
+    .filter(comment => comment.id === postId);
+}
+
+function getUser(userId: number): User | null {
+  return usersFromServer
+    .find(user => user.id === userId) || null;
+}
+
+const posts: Post[] = postsFromServer.map(post => (
+  {
+    ...post,
+    comments: getComments(post.id),
+    user: getUser(post.userId),
+  }
+));
+
+console.log(posts);
 
 export const App: React.FC = () => (
   <section className="App">
