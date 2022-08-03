@@ -1,6 +1,8 @@
 import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
+import './CommentList.scss';
+
 interface Props {
   comments: Comment[];
 }
