@@ -11,7 +11,7 @@ export const CommentList: React.FC<ReceivedComments> = ({ comments }) => (
     {(comments !== null && comments.length !== 0)
       ? (
         comments.map(comment => (
-          <CommentInfo comment={comment} />
+          <CommentInfo comment={comment} key={comment.id} />
         ))
       ) : (
         <b>No comments yet</b>

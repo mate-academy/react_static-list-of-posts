@@ -8,7 +8,7 @@ interface ReceivedPosts {
 export const PostList: React.FC<ReceivedPosts> = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => (
-      <PostInfo post={post} />
+      <PostInfo post={post} key={post.id} />
     ))}
   </div>
 );
