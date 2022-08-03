@@ -16,17 +16,17 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-function getComment(postId: number): Comment[] | [] {
-  const foundComment = commentsFromServer
+function getComment(postId: number): Comment[] {
+  const foundComment = [...commentsFromServer]
     .filter(comment => comment.postId === postId);
 
-  return foundComment || [];
+  return foundComment;
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
-  comment: getComment(post.id),
+  comments: getComment(post.id),
 }));
 
 // eslint-disable-next-line no-console
