@@ -1,7 +1,7 @@
-import { Comments } from '../../types/Comments';
+import { Comment } from '../../types/Comments';
 
 type Props = {
-  comment: Comments
+  comment: Comment
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {

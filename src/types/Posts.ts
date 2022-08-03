@@ -1,11 +1,11 @@
-import { Comments } from './Comments';
-import { Users } from './Users';
+import { Comment } from './Comments';
+import { User } from './Users';
 
-export type Posts = {
+export type Post = {
   userId: number,
   id: number,
   title: string,
   body: string
-  user: Users | null,
-  comments: Comments[]
+  user: User | null,
+  comments: Comment[]
 };
