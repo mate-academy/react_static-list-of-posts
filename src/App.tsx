@@ -11,11 +11,11 @@ import { User } from './types/user';
 import { Comment } from './types/comment';
 import { Posts } from './types/postsAll';
 
-function getComment(id: number): Comment[] | [] {
+function getComment(id: number): Comment[] {
   const foundComment = commentsFromServer
     .filter(coment => coment.postId === id);
 
-  return foundComment || [];
+  return foundComment;
 }
 
 function getUser(userId: number): User | null {
