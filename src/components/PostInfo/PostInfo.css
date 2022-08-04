@@ -5,14 +5,12 @@
   border-radius: 8px;
   background-color: lightgray;
   padding: 1em;
-
-  &__title {
-    margin: 0;
-  }
-
-  &__header {
-    margin-bottom: 1em;
-  }
+}
+.PostInfo__title {
+  margin: 0;
+}
+.PostInfo__header {
+  margin-bottom: 1em;
 }
 
 .CommentList {
@@ -22,3 +20,5 @@
   background-color: #eee;
   padding: 1em;
 }
+
+/*# sourceMappingURL=PostInfo.css.map */
