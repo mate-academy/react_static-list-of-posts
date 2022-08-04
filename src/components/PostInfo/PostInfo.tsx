@@ -3,7 +3,7 @@ import { Post } from '../../Type/post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
-import './CommentList.scss';
+import '../CommentList/CommentList.scss';
 
 type Props = {
   post: Post,
