@@ -15,7 +15,7 @@ describe('CommentInfo component', () => {
       body: 'ut dolorum nostrum id quia aut est\nfuga est inventore vel eligendi explicabo quis consectetur\naut occaecati repellat id natus quo est\nut blanditiis quia ut vel ut maiores ea',
     };
 
-    mount(<CommentInfo comment={comment} />);
+    mount(<CommentInfo comments={comment} />);
 
     cy.get('.CommentInfo__name')
       .should('have.text', 'fugit labore quia mollitia quas deserunt nostrum sunt');
@@ -30,7 +30,7 @@ describe('CommentInfo component', () => {
       body: 'ut dolorum nostrum id quia aut est\nfuga est inventore vel eligendi explicabo quis consectetur\naut occaecati repellat id natus quo est\nut blanditiis quia ut vel ut maiores ea',
     };
 
-    mount(<CommentInfo comment={comment} />);
+    mount(<CommentInfo comments={comment} />);
 
     cy.get('.CommentInfo__email')
       .should('have.text', 'Veronica_Goodwin@timmothy.net')
@@ -46,7 +46,7 @@ describe('CommentInfo component', () => {
       body: 'ut dolorum nostrum id quia aut est\nfuga est inventore vel eligendi explicabo quis consectetur\naut occaecati repellat id natus quo est\nut blanditiis quia ut vel ut maiores ea',
     };
 
-    mount(<CommentInfo comment={comment} />);
+    mount(<CommentInfo comments={comment} />);
 
     cy.get('.CommentInfo__body')
       .should('have.text', 'ut dolorum nostrum id quia aut est\nfuga est inventore vel eligendi explicabo quis consectetur\naut occaecati repellat id natus quo est\nut blanditiis quia ut vel ut maiores ea');
