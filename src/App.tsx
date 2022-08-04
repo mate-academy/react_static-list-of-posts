@@ -17,14 +17,14 @@ function getUserById(userId: number): User | null {
   return foundUser || null;
 }
 
-function getCommentsById(postId: number): Comment[] {
+function getCommentsByPostId(postId: number): Comment[] {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
-  comments: getCommentsById(post.id),
+  comments: getCommentsByPostId(post.id),
 }));
 
 export const App: React.FC = () => (
