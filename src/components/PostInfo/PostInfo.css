@@ -6,9 +6,11 @@
   background-color: lightgray;
   padding: 1em;
 }
+
 .PostInfo__title {
   margin: 0;
 }
+
 .PostInfo__header {
   margin-bottom: 1em;
 }
