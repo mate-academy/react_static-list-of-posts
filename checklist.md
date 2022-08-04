@@ -127,3 +127,15 @@ GOOD EXAMPLE:
   {`Sum of ${a} and ${b} is ${a + b}`}
 </p>
 ```
+
+5. [CODE STYLE] - If you are searching some entity by some filter, specify it in function/method name
+
+BAD EXAMPLE:
+```jsx
+const getCat = (catId: number) => cats.find(cat => cat.id === catId);
+```
+
+GOOD EXAMPLE:
+```jsx
+const getCatById = (catId: number) => cats.find(cat => cat.id === catId);
+```
