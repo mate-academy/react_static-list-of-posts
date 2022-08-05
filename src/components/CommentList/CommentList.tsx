@@ -7,7 +7,7 @@ type Props = {
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="CommentList">
-    {comments
+    {comments?.length
       ? comments.map(el => <CommentInfo comment={el} key={el.id} />)
       : (
         <>
