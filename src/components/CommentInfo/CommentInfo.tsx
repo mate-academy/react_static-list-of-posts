@@ -13,13 +13,13 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
 
-        {' by '}
+        by
 
         <a
           className="CommentInfo__email"
           href={`mailto:${email}`}
         >
-          Telly_Lynch@karl.co.uk
+          {email}
         </a>
       </div>
 
