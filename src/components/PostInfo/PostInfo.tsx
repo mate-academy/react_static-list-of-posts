@@ -3,7 +3,6 @@ import { Post } from '../../Type/post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
-import '../CommentList/CommentList.scss';
 
 type Props = {
   post: Post,
@@ -34,12 +33,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           {body}
         </p>
         <hr />
-
-        <div className="CommentList">
-          {comments.length
-            ? <CommentList comments={comments} />
-            : 'No comments yet'}
-        </div>
+        {comments.length
+          ? <CommentList comments={comments} />
+          : 'No comments yet'}
       </div>
     </>
   );
