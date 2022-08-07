@@ -27,7 +27,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     {
       post.comments.length
         ? <CommentList comments={post.comments} />
-        : <b>{' '}</b>
+        : <b>No comments yet</b>
     }
   </div>
 );
