@@ -1,3 +1,9 @@
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
+import { User } from '../../Types/User';
+
+export const UserInfo: React.FC<User> = ({ name, email }) => (
+  <>
+    <a className="UserInfo" href={email}>
+      {name}
+    </a>
+  </>
 );
