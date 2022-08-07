@@ -5,6 +5,6 @@ export interface Post {
   id: number,
   title: string,
   body: string,
-  comment: Comment[],
+  comment: Comment[] | null,
   user: User | null
 }
