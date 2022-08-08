@@ -9,7 +9,7 @@ import usersFromServer from './api/users';
 import { Post } from './types/Post';
 import { User } from './types/User';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
@@ -17,9 +17,9 @@ function getUser(userId: number): User | null {
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
+  user: getUserById(post.userId),
   comments: commentsFromServer
-    .filter(comment => comment.postId === post.id) || null,
+    .filter(comment => comment.postId === post.id),
 }));
 
 export const App: React.FC = () => (

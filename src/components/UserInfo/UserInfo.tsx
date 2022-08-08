@@ -2,7 +2,7 @@ import { User } from '../../types/User';
 import './UserInfo.scss';
 
 interface ReceivedUser {
-  user: User | null;
+  user: User;
 }
 
 export const UserInfo: React.FC<ReceivedUser> = ({ user }) => (

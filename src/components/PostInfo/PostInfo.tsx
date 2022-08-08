@@ -16,7 +16,7 @@ export const PostInfo: React.FC<ReceivedPost> = ({ post }) => (
 
       {' Posted by  '}
 
-      <UserInfo user={post.user} />
+      {(post.user) && <UserInfo user={post.user} />}
     </div>
 
     <p className="PostInfo__body">

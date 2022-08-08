@@ -3,7 +3,7 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 interface ReceivedComments {
-  comments: Comment[] | null;
+  comments: Comment[];
 }
 
 export const CommentList: React.FC<ReceivedComments> = ({ comments }) => (
