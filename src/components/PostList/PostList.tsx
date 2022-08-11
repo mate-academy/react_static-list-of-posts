@@ -12,7 +12,7 @@ export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => (
       <div className="PostInfo">
-        <PostInfo {...post} />
+        <PostInfo {...post} key={post.id} />
       </div>
     ))}
   </div>
