@@ -17,10 +17,9 @@ export const PostInfo: React.FC<Props> = ({ todo }) => (
         </h3>
 
         {' Posted by  '}
+
         {todo.user && (
-          <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
-            <UserInfo user={todo.user} />
-          </a>
+          <UserInfo user={todo.user} />
         )}
 
       </div>
