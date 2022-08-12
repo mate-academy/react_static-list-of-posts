@@ -8,28 +8,32 @@ type Props = {
 
 const commentNo = <b>No comments yet</b>;
 
-export const PostInfo: React.FC<Props> = ({ todo }) => (
-  <>
+export const PostInfo: React.FC<Props> = ({ todo }) => {
+  const {
+    title, body, user, comments,
+  } = todo;
+
+  return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
-          {todo.title}
+          {title}
         </h3>
 
         {' Posted by  '}
 
-        {todo.user && (
-          <UserInfo user={todo.user} />
+        {user && (
+          <UserInfo user={user} />
         )}
 
       </div>
 
       <p className="PostInfo__body">
-        {todo.body}
+        {body}
       </p>
 
-      {todo.comments.length !== 0
-        ? <CommentList comments={todo.comments} />
+      {comments.length !== 0
+        ? <CommentList comments={comments} />
         : (
           <>
             <hr />
@@ -37,5 +41,5 @@ export const PostInfo: React.FC<Props> = ({ todo }) => (
           </>
         )}
     </div>
-  </>
-);
+  );
+};
