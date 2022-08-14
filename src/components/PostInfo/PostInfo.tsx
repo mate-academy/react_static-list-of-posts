@@ -18,38 +18,36 @@ export const PostInfo: React.FC<Props> = ({
   user,
   comments,
 }) => (
-  <>
-    <div className="PostInfo">
-      <div className="PostInfo__header">
-        <h3 className="PostInfo__title">
-          {title}
-        </h3>
+  <div className="PostInfo">
+    <div className="PostInfo__header">
+      <h3 className="PostInfo__title">
+        {title}
+      </h3>
 
-        {' Posted by  '}
+      {' Posted by  '}
 
-        {user && (
-          <UserInfo
-            key={user.id}
-            name={user.name}
-            email={user.email}
-          />
-        )}
-      </div>
-
-      <p className="PostInfo__body">
-        {body}
-      </p>
-
-      {(comments.length
-        ? (<CommentList comments={comments} />)
-        : (
-          <>
-            <hr />
-
-            <b>No comments yet</b>
-          </>
-        )
+      {user && (
+        <UserInfo
+          key={user.id}
+          name={user.name}
+          email={user.email}
+        />
       )}
     </div>
-  </>
+
+    <p className="PostInfo__body">
+      {body}
+    </p>
+
+    {(comments.length
+      ? (<CommentList comments={comments} />)
+      : (
+        <>
+          <hr />
+
+          <b>No comments yet</b>
+        </>
+      )
+    )}
+  </div>
 );
