@@ -5,17 +5,13 @@ type Props = {
   comments: Comment[]
 };
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  if (comments.length > 0) {
-    return (
-      <div className="CommentList">
-        {comments.map((com) => (
-          <CommentInfo key={com.id} comment={com} />
-        ))}
-      </div>
-    );
-  }
-
-  return (
+  return comments.length > 0 ? (
+    <div className="CommentList">
+      {comments.map((com) => (
+        <CommentInfo key={com.id} comment={com} />
+      ))}
+    </div>
+  ) : (
     <>
       <hr />
       <b>No comments yet</b>
