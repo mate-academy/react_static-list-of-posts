@@ -7,7 +7,10 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 export const PostInfo: React.FC<Post> = ({
-  title, body, user, comment,
+  title,
+  body,
+  user,
+  comment,
 }) => (
   <>
     <div className="PostInfo__header">
@@ -23,8 +26,10 @@ export const PostInfo: React.FC<Post> = ({
     </p>
 
     <hr />
-    {comment ? (
-      <CommentList comments={comments} />
-    ) : <b>No comments yet</b>}
+    {comment
+      ? (
+        <CommentList comments={comments} />
+      )
+      : <b>No comments yet</b>}
   </>
 );
