@@ -6,8 +6,6 @@ type Props = {
   todo: Posts;
 };
 
-const commentNo = <b>No comments yet</b>;
-
 export const PostInfo: React.FC<Props> = ({ todo }) => {
   const {
     title, body, user, comments,
@@ -33,13 +31,8 @@ export const PostInfo: React.FC<Props> = ({ todo }) => {
       </p>
 
       {comments.length !== 0
-        ? <CommentList comments={comments} />
-        : (
-          <>
-            <hr />
-            {commentNo}
-          </>
-        )}
+        ? (<CommentList comments={comments} />)
+        : (<b>No comments yet</b>)}
     </div>
   );
 };
