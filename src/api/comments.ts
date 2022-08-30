@@ -58,20 +58,6 @@ export default [
     body: 'fuga eos qui dolor rerum\ninventore corporis exercitationem\ncorporis cupiditate et deserunt recusandae est sed quis culpa\neum maiores corporis et',
   },
   {
-    postId: 3,
-    id: 14,
-    name: 'et officiis id praesentium hic aut ipsa dolorem repudiandae',
-    email: 'Nathan@solon.io',
-    body: 'vel quae voluptas qui exercitationem\nvoluptatibus unde sed\nminima et qui ipsam aspernatur\nexpedita magnam laudantium et et quaerat ut qui dolorum',
-  },
-  {
-    postId: 3,
-    id: 15,
-    name: 'debitis magnam hic odit aut ullam nostrum tenetur',
-    email: 'Maynard.Hodkiewicz@roberta.com',
-    body: 'nihil ut voluptates blanditiis autem odio dicta rerum\nquisquam saepe et est\nsunt quasi nemo laudantium deserunt\nmolestias tempora quo quia',
-  },
-  {
     postId: 4,
     id: 16,
     name: 'perferendis temporibus delectus optio ea eum ratione dolorum',

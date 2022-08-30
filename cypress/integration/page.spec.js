@@ -1,6 +1,4 @@
-import posts from '../../src/api/posts.ts'
-import users from '../../src/api/users.ts'
-import comments from '../../src/api/comments.ts'
+/* eslint-disable max-len */
 
 describe('Page', () => {
   before(() => {
@@ -8,26 +6,26 @@ describe('Page', () => {
   });
 
   it('should contain all the posts', () => {
-    cy.get('.PostInfo')
-      .should('have.length', posts.length);
+    cy.get('.PostInfo').should('have.length', 20);
   });
 
-  it('should contain the first post user', () => {
-    const post = posts[0];
-    const user = users.find(user => user.id === post.userId);
+  it('should rended posts in the correct order', () => {
+    cy.get('.PostInfo__title').eq(0)
+      .should('have.text', 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit');
 
-    cy.get('.PostInfo .UserInfo')
-      .eq(0)
-      .should('have.text', user.name);
+    cy.get('.PostInfo__title').eq(19)
+      .should('have.text', 'aut amet sed');
   });
 
-  it('should contain the first post comments', () => {
-    const post = posts[0];
-    const postComments = comments.filter(comment => comment.postId === post.id);
+  it('should add corresponding users', () => {
+    cy.get('.UserInfo').should('have.length', 20);
+    cy.get('.UserInfo').eq(0).should('have.text', 'Leanne Graham');
+    cy.get('.UserInfo').eq(19).should('have.text', 'Clementina DuBuque');
+  });
 
-    cy.get('.CommentList')
-      .eq(0)
-      .children()
-      .should('have.length', postComments.length);
+  it('should add corresponding comments', () => {
+    cy.get('.PostInfo').eq(0).find('.CommentInfo').should('have.length', 5);
+    cy.get('.PostInfo').eq(1).find('.CommentInfo').should('not.exist');
+    cy.get('.PostInfo').eq(2).find('.CommentInfo').should('have.length', 3);
   });
 });

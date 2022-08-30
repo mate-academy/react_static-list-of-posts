@@ -15,11 +15,13 @@ export const App: React.FC = () => (
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
 
-          {' Posted by  '}
+          <p>
+            {' Posted by  '}
 
-          <a className="UserInfo" href="mailto:Sincere@april.biz">
-            Leanne Graham
-          </a>
+            <a className="UserInfo" href="mailto:Sincere@april.biz">
+              Leanne Graham
+            </a>
+          </p>
         </div>
 
         <p className="PostInfo__body">
@@ -31,7 +33,7 @@ export const App: React.FC = () => (
 
         <hr />
 
-        <b>No comments yet</b>
+        <b data-cy="NoCommentsMessage">No comments yet</b>
       </div>
 
       <div className="PostInfo">
@@ -40,11 +42,13 @@ export const App: React.FC = () => (
             doloremque illum aliquid sunt
           </h3>
 
-          {' Posted by  '}
+          <p>
+            {' Posted by  '}
 
-          <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
-            Patricia Lebsack
-          </a>
+            <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
+              Patricia Lebsack
+            </a>
+          </p>
         </div>
 
         <p className="PostInfo__body">
