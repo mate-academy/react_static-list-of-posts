@@ -9,7 +9,7 @@ type Props = {
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
   if (!comments.length) {
-    return null;
+    return <p>No comments yet</p>;
   }
 
   return (
