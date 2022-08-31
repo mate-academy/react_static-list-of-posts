@@ -5,7 +5,7 @@ type Props = {
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
-  <div className="CommentInfo">
+  <li className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">{comment.name}</strong>
 
@@ -22,5 +22,5 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => (
     <div className="CommentInfo__body">
       {comment.body}
     </div>
-  </div>
+  </li>
 );
