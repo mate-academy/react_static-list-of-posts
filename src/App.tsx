@@ -10,12 +10,10 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getComments(postId: number): Comment[] | null {
-  const comments = commentsFromServer.filter(comment => (
+function getComments(postId: number): Comment[] {
+  return commentsFromServer.filter(comment => (
     comment.postId === postId
   ));
-
-  return comments.length > 0 ? comments : null;
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
