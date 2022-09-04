@@ -22,7 +22,7 @@ export const PostInfo: React.FC<Props> = ({
         {title}
       </h3>
 
-      <UserInfo user={user} />
+      { user && <UserInfo user={user} /> }
     </div>
 
     <p className="PostInfo__body">
