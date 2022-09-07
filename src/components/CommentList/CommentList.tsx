@@ -11,13 +11,15 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  comments.length ? (
-    <div className="CommentList">
-      {comments.map(comment => (
-        <CommentInfo comment={comment} key={comment.id} />
-      ))}
-    </div>
-  ) : (
-    <b data-cy="NoCommentsMessage">No comments yet</b>
-  )
+  <>
+    {comments.length ? (
+      <div className="CommentList">
+        {comments.map(comment => (
+          <CommentInfo comment={comment} key={comment.id} />
+        ))}
+      </div>
+    ) : (
+      <b data-cy="NoCommentsMessage">No comments yet</b>
+    )}
+  </>
 );
