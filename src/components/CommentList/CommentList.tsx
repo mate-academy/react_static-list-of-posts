@@ -1,5 +1,13 @@
-import React from 'react';
+import './CommentList.scss';
+import { CommentInfo } from '../CommentInfo';
+import { CommentsT } from '../../types';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
+type Props = {
+  comments: CommentsT
+};
+
+export const CommentList: React.FC<Props> = ({ comments }) => (
+  <div className="CommentList">
+    <CommentInfo comments={comments} />
+  </div>
 );
