@@ -4,15 +4,21 @@ import { User } from '../types/User';
 import './UserInfo.scss';
 
 type Props = {
-  user: User | null,
+  user: User,
 };
 
-export const UserInfo: React.FC<Props> = ({ user }) => user && (
+export const UserInfo: React.FC<Props> = ({
+  user,
+  user: {
+    name,
+    email,
+  },
+}) => user && (
   <p>
     {' Posted by  '}
 
-    <a className="UserInfo" href={user.email}>
-      {user.name}
+    <a className="UserInfo" href={email}>
+      {name}
     </a>
   </p>
 );
