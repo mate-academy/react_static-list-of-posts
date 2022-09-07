@@ -12,29 +12,31 @@ import { CommentFromServer } from './types/CommentFromServer';
 import { UserFromServer } from './types/UserFromServer';
 import { PostList } from './components/PostList';
 
-function preparePosts(
-  posts: PostFromServer[],
-  comments: CommentFromServer[],
+function getUserById(
+  post: PostFromServer,
   users: UserFromServer[],
-): Post[] {
-  return posts.map((post) => (
-    {
-      ...post,
-      user: users.find((user) => (
-        post.userId === user.id
-      )) || null,
-      comments: comments.filter((comment) => (
-        comment.postId === post.id
-      )),
-    }
+): UserFromServer | null {
+  return users.find((user) => (
+    post.userId === user.id
+  )) || null;
+}
+
+function getCommentsById(
+  post: PostFromServer,
+  comments: CommentFromServer[],
+): CommentFromServer[] {
+  return comments.filter((comment) => (
+    comment.postId === post.id
   ));
 }
 
-const preparedPosts = preparePosts(
-  postsFromServer,
-  commentsFromServer,
-  usersFromServer,
-);
+const preparedPosts: Post[] = postsFromServer.map((post) => (
+  {
+    ...post,
+    user: getUserById(post, usersFromServer),
+    comments: getCommentsById(post, commentsFromServer),
+  }
+));
 
 export const App: React.FC = () => (
   <section className="App">
