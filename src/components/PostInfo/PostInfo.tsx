@@ -32,7 +32,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           { user ? (
             <UserInfo user={user} />
           ) : (
-            'user not found'
+            'anonymous'
           )}
         </p>
       </div>
@@ -40,6 +40,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <p className="PostInfo__body">
         {body}
       </p>
+
+      <hr />
 
       <CommentList comments={comments} />
     </div>
