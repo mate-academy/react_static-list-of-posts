@@ -6,16 +6,16 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 type Props = {
-  post: Posts;
+  posts: Posts;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => {
+export const PostInfo: React.FC<Props> = ({ posts }) => {
   const {
     title,
     body,
     user,
     comments,
-  } = post;
+  } = posts;
 
   return (
     <div className="PostInfo">
@@ -37,7 +37,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
       <hr />
       {comments && (
-        <CommentList comments={comments} />)}
+        <CommentList comment={comments} />)}
     </div>
   );
 };
