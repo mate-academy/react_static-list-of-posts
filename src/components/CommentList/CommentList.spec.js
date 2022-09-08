@@ -39,7 +39,7 @@ describe('CommentList component', () => {
         },
       ];
 
-      mount(<CommentList comments={comments} />);
+      mount(<CommentList comment={comments} />);
     });
 
     it('should contain all comments', () => {
@@ -57,7 +57,7 @@ describe('CommentList component', () => {
 
   describe('', () => {
     it('should not have comments if received an empty array', () => {
-      mount(<CommentList comments={[]} />);
+      mount(<CommentList comment={[]} />);
 
       cy.get('.CommentInfo').should('not.exist');
     });
