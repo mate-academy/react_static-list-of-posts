@@ -13,6 +13,7 @@ iframe {
   border-radius: 8px;
   background-color: lightgray;
   padding: 1em;
+  list-style: none;
 
   &__title {
     margin: 0;
@@ -21,16 +22,4 @@ iframe {
   &__header {
     margin-bottom: 1em;
   }
-}
-
-.UserInfo {
-  font-weight: bold;
-}
-
-.CommentList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
 }
