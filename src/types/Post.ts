@@ -8,7 +8,7 @@ export interface Post {
   body: string;
 }
 
-export interface PostFromServer extends Post {
+export interface PostforRender extends Post {
   user: User | null;
   comments: Comment[];
 }

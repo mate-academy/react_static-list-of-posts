@@ -1,26 +1,24 @@
 import React from 'react';
-
 import './App.scss';
 import { PostList } from './components/PostList';
-
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
-import { Post, PostFromServer } from './types/Post';
+import { Post, PostforRender } from './types/Post';
 
 export function getPostByID(
   posts: Post[],
   users: User[],
-  commentsData: Comment[],
-): PostFromServer[] {
+  comments: Comment[],
+): PostforRender[] {
   return posts.map((post) => ({
     ...post,
     user: users.find((user) => (
       user.id === post.userId
     )) || null,
-    comments: commentsData.filter((comment) => (
+    comments: comments.filter((comment) => (
       comment.postId === post.id
     )) || null,
   }));

@@ -1,11 +1,10 @@
-import React from 'react';
 import './PostInfo.scss';
-import { PostFromServer } from '../../types/Post';
+import { PostforRender } from '../../types/Post';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  post: PostFromServer;
+  post: PostforRender;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { PostInfo } from '../PostInfo';
-import { PostFromServer } from '../../types/Post';
+import { PostforRender } from '../../types/Post';
 
 type Props = {
-  posts: PostFromServer[];
+  posts: PostforRender[];
 };
 
 export const PostList: React.FC<Props> = ({ posts }) => (
