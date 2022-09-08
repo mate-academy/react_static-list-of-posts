@@ -30,28 +30,6 @@ const posts:Posts[] = postsFromServer.map(post => ({
   comments: getComments(post.id),
 }));
 
-// export function getPostByID(
-//   posts: Posts,
-//   users: Users[],
-//   commentsData: Comments[],
-// ): Posts[] {
-//   return posts.map((post) => ({
-//     ...post,
-//     user: users.find((user) => (
-//       user.id === post.userId
-//     )) || null,
-//     comments: commentsData.filter((comment) => (
-//       comment.postId === post.id
-//     )) || null,
-//   }));
-// }
-
-// const postsToRender = getPostByID(
-//   postsFromServer,
-//   usersFromServer,
-//   commentsFromServer,
-// );
-
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>

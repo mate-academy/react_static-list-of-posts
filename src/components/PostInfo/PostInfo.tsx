@@ -25,7 +25,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         </h3>
         <p>
           {' Posted by  '}
-          {/* {user && (<UserInfo user={user} />)} */}
           {user
             ? (<UserInfo user={user} />)
             : ('anonymous')}
@@ -39,9 +38,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <hr />
       {comments && (
         <CommentList comments={comments} />)}
-      {/* {comments?.length
-        ? <CommentList comments={comments} />
-        : <b data-cy="NoCommentsMessage">No comments yet</b>} */}
     </div>
   );
 };
