@@ -13,7 +13,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title,
     comments,
-    userId,
     body,
   } = post;
 
@@ -25,7 +24,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <p>
           {' Posted by  '}
           <UserInfo
-            key={userId}
             user={post?.user}
           />
         </p>
