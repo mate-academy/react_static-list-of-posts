@@ -29,8 +29,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
               <UserInfo
                 user={user}
               />
-            )
-            : (
+            ) : (
               'non-user generated content'
             )}
 
@@ -42,11 +41,10 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </p>
 
       <hr />
-      {comments.length
+      {!!comments.length
         ? (
           <CommentList comments={comments} />
-        )
-        : (
+        ) : (
           <b data-cy="NoCommentsMessage">
             No comments yet
           </b>
