@@ -37,7 +37,7 @@ export const PostInfo: React.FC<Props> = ({ posts }) => {
 
       <hr />
       {comments && (
-        <CommentList comment={comments} />)}
+        <CommentList comments={comments} />)}
     </div>
   );
 };
