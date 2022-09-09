@@ -1,6 +1,6 @@
 import React from 'react';
 import { Post } from '../../types/Post';
-// import { CommentList } from '../CommentList';
+import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 interface Props {
@@ -9,10 +9,10 @@ interface Props {
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    // userId,
     title,
     body,
     user,
+    comments,
   } = post;
 
   return (
@@ -34,7 +34,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
       <hr />
 
-      {/* <CommentList> */}
+      <CommentList comments={comments} />
     </div>
   );
 };
