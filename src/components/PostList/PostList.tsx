@@ -1,14 +1,36 @@
 import React from 'react';
 
-import { Post } from '../../types/Post';
-
 import { PostInfo } from '../PostInfo';
 
-type Props = {
-  posts: Post[],
-};
+import { User } from '../../types/User';
+import { Post } from '../../types/Post';
+import { Comment } from '../../types/Comment';
 
-export const PostList: React.FC<Props> = ({ posts }) => (
+import postsFromServer from '../../api/posts';
+import commentsFromServer from '../../api/comments';
+import usersFromServer from '../../api/users';
+
+function getUser(userId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  return foundUser || null;
+}
+
+function getComments(postId: number): Comment[] | null {
+  const foundComm = commentsFromServer.filter(
+    comment => comment.postId === postId,
+  );
+
+  return foundComm.length > 0 ? foundComm : null;
+}
+
+export const posts: Post[] = postsFromServer.map(post => ({
+  ...post,
+  user: getUser(post.userId),
+  comments: getComments(post.id),
+}));
+
+export const PostList: React.FC = () => (
   <div className="PostList">
     {posts.map(post => (
       <PostInfo key={post.id} post={post} />
