@@ -31,7 +31,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </p>
 
       <hr />
-
     </div>
   );
 };

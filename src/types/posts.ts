@@ -10,5 +10,5 @@ export interface Posts {
 
 export interface PostsToRender extends Posts {
   user: User | null;
-  comments: Comments[] | null;
+  comments: Comments[];
 }
