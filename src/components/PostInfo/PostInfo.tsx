@@ -29,7 +29,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          { user ? (
+          {user ? (
             <UserInfo user={user} />
           ) : (
             'anonymous'
