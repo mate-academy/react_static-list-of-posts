@@ -41,7 +41,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </p>
 
       <hr />
-      {!!comments.length
+      {comments.length
         ? (
           <CommentList comments={comments} />
         ) : (
