@@ -10,7 +10,7 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function comments(postId: number): Comment[] | null {
+function getComments(postId: number): Comment[] | null {
   const commentFind = commentsFromServer.filter(message => (
     message.postId === postId
   ));
@@ -20,7 +20,7 @@ function comments(postId: number): Comment[] | null {
     : null;
 }
 
-function user(userId: number): User | null {
+function getUser(userId: number): User | null {
   const postUser = usersFromServer.find(person => (
     person.id === userId
   ));
@@ -30,8 +30,8 @@ function user(userId: number): User | null {
 
 const post: Post[] = postsFromServer.map(poost => ({
   ...poost,
-  comments: comments(poost.id),
-  user: user(poost.userId),
+  comments: getComments(poost.id),
+  user: getUser(poost.userId),
 }));
 
 export const App: React.FC = () => (
