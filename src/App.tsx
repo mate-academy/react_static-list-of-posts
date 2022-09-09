@@ -12,16 +12,16 @@ import { User } from './components/types/User';
 import { Post } from './components/types/Post';
 
 function getComments(postId: number): Comment[] | null {
-  const foundComment =  commentsFromServer
+  const foundComment = commentsFromServer
     .filter((comment) => comment.postId === postId);
 
   return foundComment.length > 0 ? foundComment : null;
 }
 
 function getUser(id: number): User | null {
-  const foundUser =  usersFromServer.find((user) => user.id === id);
+  const foundUser = usersFromServer.find((user) => user.id === id);
 
-  return foundUser || null
+  return foundUser || null;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
@@ -33,6 +33,6 @@ export const posts: Post[] = postsFromServer.map(post => ({
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={posts}/>
+    <PostList posts={posts} />
   </section>
 );
