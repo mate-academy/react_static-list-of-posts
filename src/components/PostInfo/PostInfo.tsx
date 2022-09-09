@@ -14,6 +14,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
     title,
     comments,
     body,
+    user,
   } = post;
 
   return (
@@ -23,9 +24,16 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
         <p>
           {' Posted by  '}
-          <UserInfo
-            user={post?.user}
-          />
+          {user
+            ? (
+              <UserInfo
+                user={user}
+              />
+            )
+            : (
+              'non-user generated content'
+            )}
+
         </p>
       </div>
 
