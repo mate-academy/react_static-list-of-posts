@@ -11,21 +11,15 @@ import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
 function getCommentsById(postId: number):Comment[] {
-  const userWithComment = commentsFromServer.filter(comment => {
-    const result = postId === comment.postId;
-
-    return result;
-  });
+  const userWithComment = commentsFromServer.filter(
+    comment => postId === comment.postId,
+  );
 
   return userWithComment || [];
 }
 
 function getUsersById(userId: number):User | null {
-  const userWithPost = usersFromServer.find(user => {
-    const result = user.id === userId;
-
-    return result;
-  });
+  const userWithPost = usersFromServer.find(user => user.id === userId);
 
   return userWithPost || null;
 }
