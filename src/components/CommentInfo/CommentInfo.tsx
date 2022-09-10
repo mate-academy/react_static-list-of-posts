@@ -5,31 +5,29 @@ type Props = {
   comment: CommentFromServer;
 };
 
-export const CommentInfo: React.FC<Props> = ({
-  comment: {
-    name,
-    email,
-    body,
-  },
-}) => (
-  <div className="CommentInfo">
-    <div className="CommentInfo__title">
-      <strong className="CommentInfo__name">
-        {name}
-      </strong>
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
+  const { name, email, body } = comment;
 
-      {' by '}
+  return (
+    <div className="CommentInfo">
+      <div className="CommentInfo__title">
+        <strong className="CommentInfo__name">
+          {name}
+        </strong>
 
-      <a
-        className="CommentInfo__email"
-        href={`mailto:${email}`}
-      >
-        {email}
-      </a>
+        {' by '}
+
+        <a
+          className="CommentInfo__email"
+          href={`mailto:${email}`}
+        >
+          {email}
+        </a>
+      </div>
+
+      <div className="CommentInfo__body">
+        {body}
+      </div>
     </div>
-
-    <div className="CommentInfo__body">
-      {body}
-    </div>
-  </div>
-);
+  );
+};
