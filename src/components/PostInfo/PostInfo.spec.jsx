@@ -1,6 +1,4 @@
 /* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
-
 import React from 'react';
 import { mount } from '@cypress/react';
 import { PostInfo } from './PostInfo';
@@ -52,7 +50,8 @@ describe('PostInfo', () => {
     });
 
     it('should have a correct title', () => {
-      cy.get('.PostInfo__title').should('have.text', 'et ea vero quia laudantium autem');
+      cy.get('.PostInfo__title')
+        .should('have.text', 'et ea vero quia laudantium autem');
     });
 
     it('should have a user', () => {
@@ -61,7 +60,8 @@ describe('PostInfo', () => {
 
     it('should contain all comments', () => {
       cy.get('.CommentInfo').should('have.length', 3);
-      cy.get('.CommentInfo__name').eq(0).should('have.text', 'esse autem dolorum');
+      cy.get('.CommentInfo__name')
+        .eq(0).should('have.text', 'esse autem dolorum');
       cy.get('.CommentInfo__name').eq(2).should('have.text', 'culpa eius tempora sit consequatur neque iure deserunt');
     });
 
@@ -83,6 +83,7 @@ describe('PostInfo', () => {
         userId: 2,
         id: 11,
         title: 'et ea vero quia laudantium autem',
+        // eslint-disable-next-line max-len
         body: 'delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi',
         user: user2,
         comments: [],
