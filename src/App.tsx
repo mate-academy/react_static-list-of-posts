@@ -6,12 +6,16 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
-import { Comment } from './Types/comments';
-import { Post } from './Types/posts';
-import { User } from './Types/users';
+import { Comment } from './Types/Comments';
+import { Post } from './Types/Posts';
+import { User } from './Types/Users';
 
-function comments(postId: number): Comment[] {
-  return commentsFromServer.filter(com => com.postId === postId);
+function comments(postId: number): Comment[] | null {
+  const commentFinder = commentsFromServer.filter(com => com.postId === postId);
+
+  return commentFinder.length > 0
+    ? commentFinder
+    : null;
 }
 
 function user(userId: number): User | null {
