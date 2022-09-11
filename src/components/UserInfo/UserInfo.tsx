@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from '../../Types/Users';
+import { User } from '../../Types/users';
 
 type Props = {
   user: User;
