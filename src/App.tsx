@@ -10,14 +10,14 @@ import { Post } from './types/post';
 import { Comment } from './types/comments';
 import { User } from './types/user';
 
-function getComments(postId: number): Comment[] | null {
-  const commentFind = commentsFromServer.filter(message => (
+function getComments(postId: number): Comment[] {
+  const comments = commentsFromServer.filter(message => (
     message.postId === postId
   ));
 
-  return commentFind.length > 0
-    ? commentFind
-    : null;
+  return comments.length > 0
+    ? comments
+    : [];
 }
 
 function getUser(userId: number): User | null {
