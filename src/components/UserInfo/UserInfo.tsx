@@ -1,5 +1,9 @@
-import React from 'react';
+import { User } from '../../Types/User';
 
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
+export const UserInfo = (usersArray: User[]) => (
+  usersArray.map(user => (
+    <a className="UserInfo" href={`mailto:${user.email}`} key={user.id}>
+      {user.name}
+    </a>
+  ))
 );
