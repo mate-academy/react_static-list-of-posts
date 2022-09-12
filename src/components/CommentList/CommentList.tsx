@@ -6,7 +6,7 @@ type Props = { comments: Comment[] };
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
   if (!comments.length) {
-    return <p>No comments yet</p>;
+    return <p data-cy="NoCommentsMessage">No comments yet</p>;
   }
 
   return (
