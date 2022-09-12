@@ -32,10 +32,9 @@ export const PostInfo: React.FC<Props> = ({ info }) => {
       <p className="PostInfo__body">
         {body}
       </p>
-      {comments && comments.map(
-        comment => (<CommentList key={comment.id} comments={comment} />
-        ),
-      )}
+      {comments && comments.map(comment => (
+        <CommentList key={comment.id} comments={comment} />
+      ))}
     </div>
   );
 };
