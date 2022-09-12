@@ -23,7 +23,7 @@ function getCommentsById(postId: number): Comment[] {
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUserById(post.id),
+  user: getUserById(post.userId),
   comments: getCommentsById(post.id),
 }));
 
