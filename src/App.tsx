@@ -8,9 +8,9 @@ import usersFromServer from './api/users';
 import { PostsT, UsersT, CommentsT } from './types';
 
 function getUserById(userId: number): UsersT | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
+  const foundUser = usersFromServer.find(user => user.id === userId) || null;
 
-  return foundUser || null;
+  return foundUser;
 }
 
 function getCommentById(postId: number): CommentsT[] | null {

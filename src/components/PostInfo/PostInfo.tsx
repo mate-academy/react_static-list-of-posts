@@ -25,16 +25,20 @@ export const PostInfo: React.FC<Props> = ({ info }) => {
         <p>
           {' Posted by  '}
 
-          {user ? <UserInfo user={user} /> : 'Anonymus'}
+          {user
+            ? <UserInfo user={user} />
+            : 'Anonymus'}
         </p>
       </div>
 
       <p className="PostInfo__body">
         {body}
       </p>
-      {comments && comments.map(comment => (
-        <CommentList key={comment.id} comments={comment} />
-      ))}
+      {comments?.length
+        ? comments.map(comment => (
+          <CommentList key={comment.id} comments={comment} />
+        ))
+        : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   );
 };
