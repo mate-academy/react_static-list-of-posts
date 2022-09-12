@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
-
+import './UserInfo.scss';
 import React from 'react';
 import { mount } from '@cypress/react';
 import { UserInfo } from './UserInfo';
