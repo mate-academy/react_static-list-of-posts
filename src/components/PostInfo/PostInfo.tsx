@@ -1,5 +1,4 @@
 import React from 'react';
-// import comments from '../../api/comments';
 import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
@@ -25,7 +24,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
         {user
           ? (<UserInfo user={user} />)
-          : ('anonymous')}
+          : 'anonymous'}
       </div>
 
       <p className="PostInfo__body">
