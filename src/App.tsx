@@ -1,22 +1,18 @@
 import React from 'react';
 import './App.scss';
 
-import postsFromServer from './api/posts';
-import commentsFromServer from './api/comments';
-import usersFromServer from './api/users';
-
 import { Comment } from './types/Comment';
 import { User } from './types/User';
 import { Post } from './types/Post';
 
 import { PostList } from './components/PostList';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
 
 function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
+  const foundUser = usersFromServer.find(user => user.id === userId) || null;
 
   return foundUser || null;
 }
