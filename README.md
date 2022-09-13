@@ -10,7 +10,6 @@ This task is similar to [Static List of TODOs](https://github.com/mate-academy/r
 - split the `App` into components based on given CSS blocks;
 - `List` components should take an array of corresponding objects and render one `Info` component per object;
 - `Info` components should take one object and render its data.
-
 ## Instructions
 
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
