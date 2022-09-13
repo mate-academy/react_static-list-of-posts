@@ -18,7 +18,7 @@ function getCommentById(postId: number) {
 const posts: PostWithComment[] = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
-  comment: getCommentById(post.id),
+  comments: getCommentById(post.id),
 }));
 
 export const App: React.FC = () => (

@@ -6,6 +6,6 @@ export interface PostWithComment {
   id: number;
   title: string;
   body: string;
-  comment: Comment[];
+  comments: Comment[];
   user: User | null;
 }
