@@ -19,7 +19,7 @@ describe('CommentInfo component', () => {
 
   it('should show a name', () => {
     cy.get('.CommentInfo__name')
-      .should('have.text', 'Comment name');
+      .should('have.text', 'Comment.ts name');
   });
 
   it('should show an email', () => {
