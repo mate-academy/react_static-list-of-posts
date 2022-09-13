@@ -10,7 +10,7 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const postUser = usersFromServer
     .find(user => user.id === userId);
 
@@ -23,7 +23,7 @@ const getComments: (postId: number) => Comment[] = postId => commentsFromServer
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   comments: getComments(post.id),
-  user: getUser(post.userId),
+  user: getUserById(post.userId),
 }));
 
 export const App: React.FC = () => (

@@ -15,5 +15,5 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
         <CommentInfo key={comment.id} comment={comment} />
       ))}
     </div>
-  ) || null
+  )
 );
