@@ -6,7 +6,7 @@ interface Post {
   id: number,
   title: string,
   body: string,
-  comments?: Array<Comment>,
+  comments: Comment[],
   user?: User,
 }
 
