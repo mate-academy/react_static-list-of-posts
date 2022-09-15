@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import './App.scss';
 
@@ -12,33 +13,19 @@ import { User } from './types/User';
 import { Post } from './types/Post';
 
 function getCommentsById(postId: number):Comment[] {
-  const userWithComment = commentsFromServer.filter(comment => {
-    const result = postId === comment.postId;
-
-    return result;
-  });
-
-  return userWithComment || [];
+  return commentsFromServer.filter(comment => (postId === comment.postId)) || [];
 }
 
 function getUsersById(userId: number):User | null {
-  const userWithPost = usersFromServer.find(user => {
-    const result = user.id === userId;
-
-    return result;
-  });
-
-  return userWithPost || null;
+  return usersFromServer.find(user => (userId === user.id)) || null;
 }
 
 const posts: Post[] = postsFromServer.map((post) => {
-  const result = {
+  return {
     ...post,
     comments: getCommentsById(post.id),
     user: getUsersById(post.userId),
   };
-
-  return result;
 });
 
 export const App: React.FC = () => (

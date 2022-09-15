@@ -9,13 +9,14 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  const noComment = <b data-cy="NoCommentsMessage">No comments yet</b>;
-  const commentary = comments
-    .map((comment) => <CommentInfo comment={comment} key={comment.id} />);
-
   return (
     <div className="CommentList">
-      {comments.length > 0 ? commentary : noComment}
+      {
+        comments.length > 0
+          // eslint-disable-next-line max-len
+          ? comments.map((comment) => <CommentInfo comment={comment} key={comment.id} />)
+          : <b data-cy="NoCommentsMessage">No comments yet</b>
+      }
     </div>
   );
 };
