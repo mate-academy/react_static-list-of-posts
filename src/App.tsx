@@ -13,7 +13,7 @@ import { User } from './types/User';
 import { Post } from './types/Post';
 
 function getCommentsById(postId: number):Comment[] {
-  return commentsFromServer.filter(comment => (postId === comment.postId)) || [];
+  return commentsFromServer.filter(comment => (postId === comment.postId));
 }
 
 function getUsersById(userId: number):User | null {
