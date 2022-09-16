@@ -1,5 +1,17 @@
 import React from 'react';
+import { PostTodo } from '../../types/PostTodo';
+import { PostInfo } from '../PostInfo';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+type PostTodoType = {
+  todoPost: PostTodo[],
+};
+
+export const PostList: React.FC<PostTodoType> = ({ todoPost }) => (
+  <>
+    <div className="PostList">
+      {todoPost.map((postInfoProp: PostTodo) => (
+        <PostInfo postInfoProp={postInfoProp} />
+      ))}
+    </div>
+  </>
 );
