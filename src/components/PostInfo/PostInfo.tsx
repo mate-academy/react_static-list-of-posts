@@ -20,7 +20,7 @@ export const PostInfo: React.FC<Post> = ({ postInfoProp }) => (
           {`Posted by ${postInfoProp.user.username}`}
 
           <a className="UserInfo" href={postInfoProp.user.email}>
-            {postInfoProp.user.name}
+            {` ${postInfoProp.user.name}` }
           </a>
         </p>
       </div>
