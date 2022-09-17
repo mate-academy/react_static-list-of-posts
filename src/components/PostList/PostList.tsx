@@ -1,10 +1,14 @@
+import { AllPosts } from '../../Types/Post';
 import { PostInfo } from '../PostInfo';
-import { Post } from '../../Types/Post';
 
-export const PostList = (postsArray: Post[]) => (
-  postsArray.map(post => (
-    <div className="PostList" key={post.id}>
-      {PostInfo(post)}
-    </div>
-  ))
+type Props = {
+  posts: AllPosts[];
+};
+
+export const PostList:React.FC<Props> = ({ posts }) => (
+  <div className="PostList">
+    {posts.map(post => (
+      <PostInfo key={post.id} post={post} />
+    ))}
+  </div>
 );

@@ -1,34 +1,46 @@
-import usersFromServer from '../../api/users';
-import commentsFromServer from '../../api/comments';
-
+import { AllPosts } from '../../Types/Post';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
-import { Post } from '../../Types/Post';
+type Props = {
+  post: AllPosts,
+};
 
-export const PostInfo = ({
-  userId,
-  id,
-  title,
-  body,
-}: Post) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">
-        {title}
-      </h3>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    body,
+    user,
+    comments,
+  } = post;
 
-      <p>
-        {' Posted by  '}
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">
+          {title}
+        </h3>
 
-        {UserInfo(usersFromServer.filter(user => user.id === userId))}
+        <p>
+          {' Posted by  '}
+          {user && <UserInfo user={user} />}
+        </p>
+      </div>
+
+      <p className="PostInfo__body">
+        {body}
       </p>
+
+      <hr />
+      {
+        comments.length
+          ? (
+            <CommentList comments={comments} />
+          )
+          : (
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          )
+      }
     </div>
-
-    <p className="PostInfo__body">
-      {body}
-    </p>
-
-    {CommentList(commentsFromServer.filter(comment => comment.postId === id))}
-  </div>
-);
+  );
+};
