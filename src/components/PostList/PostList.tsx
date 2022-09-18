@@ -1,23 +1,12 @@
 import React from 'react';
 import { PostInfo } from '../PostInfo';
-import posts from '../../api/posts';
-import users from '../../api/users';
-import comments from '../../api/comments';
+import { Post } from '../../types/Post';
 
-export const PostList: React.FC = () => (
+export const PostList: React.FC<{ posts: Array<Post> }> = ({ posts }) => (
   <div className="PostList">
-    {(posts.map((post: {
-      userId: number,
-      id: number,
-      title: string,
-      body: string,
-    }) => (
+    {(posts.map((post) => (
       <PostInfo
-        post={{
-          ...post,
-          user: users.find(user => user.id === post.userId),
-          comments: comments.filter(comment => comment.postId === post.id),
-        }}
+        post={post}
         key={post.id}
       />
     )))}

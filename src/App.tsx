@@ -1,15 +1,19 @@
 import React from 'react';
+import comments from './api/comments';
+import posts from './api/posts';
+import users from './api/users';
 
 import './App.scss';
 import { PostList } from './components/PostList';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
-
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList />
+    <PostList posts={posts.map((post) => ({
+      ...post,
+      user: users.find(user => user.id === post.userId) ?? null,
+      comments: comments.filter(comment => comment.postId === post.id),
+    }))}
+    />
   </section>
 );
