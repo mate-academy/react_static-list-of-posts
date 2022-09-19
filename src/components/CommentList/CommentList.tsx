@@ -1,7 +1,12 @@
 import React from 'react';
 import { CommentInfo } from '../CommentInfo';
-import { CommentsListProps } from './CommentsList.types';
 import './CommentList.scss';
+import { Comment } from '../../types/Comment';
+
+interface CommentsListProps {
+  comments: Array<Comment>;
+}
+
 
 export const CommentList: React.FC<CommentsListProps> = ({ comments }) => (
   <div className="CommentList">

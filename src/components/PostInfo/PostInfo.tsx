@@ -1,8 +1,12 @@
 import React from 'react';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
-import { PostInfoProps } from './PostInfo.types';
 import './PostInfo.scss';
+import { Post } from '../../types/Post';
+
+interface PostInfoProps {
+  post : Post
+}
 
 export const PostInfo: React.FC<PostInfoProps> = ({
   post: {
