@@ -15,7 +15,7 @@ import { Post } from './types/Post';
 
 const postsInfo: PostListType[] = postsFromServer
   .map((el: Post): PostListType => {
-    const resObj = {
+    const resObj: PostListType = {
       ...el,
       user: null,
       comments: [],
