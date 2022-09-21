@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { PostInfo } from '../PostInfo';
 
 import { PostListType } from '../../types/PostListType';
@@ -10,15 +9,15 @@ type PostListTypes = {
 
 export const PostList: React.FC<PostListTypes> = ({ posts }) => (
   <div className="PostList">
-    {posts.map(el => (
+    {posts.map(post => (
       <PostInfo
-        userId={el.userId}
-        id={el.id}
-        title={el.title}
-        body={el.body}
-        user={el.user}
-        comments={el.comments}
-        key={el.id}
+        userId={post.userId}
+        id={post.id}
+        title={post.title}
+        body={post.body}
+        user={post.user}
+        comments={post.comments}
+        key={post.id}
       />
     ))}
   </div>
