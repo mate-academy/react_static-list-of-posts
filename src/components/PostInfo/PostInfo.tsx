@@ -1,7 +1,8 @@
 import React from 'react';
-import { Post } from '../../types/post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+
+import { Post } from '../../types/Post';
 
 type Props = {
   post: Post;

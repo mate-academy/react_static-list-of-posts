@@ -2,15 +2,15 @@ import React from 'react';
 
 import './App.scss';
 
-import { User } from './types/user';
-import { Comment } from './types/comment';
-import { Post } from './types/post';
-
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 import { PostList } from './components/PostList';
+
+import { User } from './types/User';
+import { Comment } from './types/Comment';
+import { Post } from './types/Post';
 
 function getUser(userId: number): User {
   const foundUser = usersFromServer.find(

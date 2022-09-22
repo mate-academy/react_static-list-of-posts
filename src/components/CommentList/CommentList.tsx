@@ -1,6 +1,7 @@
 import React from 'react';
-import { Comment } from '../../types/comment';
 import { CommentInfo } from '../CommentInfo';
+
+import { Comment } from '../../types/Comment';
 
 type Props = {
   comments: Comment[];

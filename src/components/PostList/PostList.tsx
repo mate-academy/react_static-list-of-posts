@@ -1,7 +1,7 @@
 import React from 'react';
 import { PostInfo } from '../PostInfo';
 
-import { Post } from '../../types/post';
+import { Post } from '../../types/Post';
 
 type Props = {
   posts: Post[];
