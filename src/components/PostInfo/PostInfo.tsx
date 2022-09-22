@@ -2,11 +2,11 @@ import React from 'react';
 import { PostTodo } from '../../types/PostTodo';
 import { CommentList } from '../CommentList';
 
-type Post = {
+type PostProps = {
   postInfoProp: PostTodo,
 };
 
-export const PostInfo: React.FC<Post> = ({ postInfoProp }) => (
+export const PostInfo: React.FC<PostProps> = ({ postInfoProp }) => (
   <>
     <div className="PostInfo">
       <div className="PostInfo__header">

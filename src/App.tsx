@@ -19,7 +19,7 @@ function getComments(userId: number): Comment[] | [] {
   const foundComments = commentsFromServer
     .filter(comment => comment.postId === userId);
 
-  return foundComments || null;
+  return foundComments;
 }
 
 // get post if it exists
