@@ -5,15 +5,15 @@ import './UserInfo.scss';
 import { User } from '../../type/User';
 
 type Props = {
-  user: User | null,
+  user: User,
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
-  return user ? (
-    <a className="UserInfo" href={user.email}>
-      {user.name}
+  const { name, email } = user;
+
+  return (
+    <a className="UserInfo" href={email}>
+      {name}
     </a>
-  ) : (
-    null
   );
 };

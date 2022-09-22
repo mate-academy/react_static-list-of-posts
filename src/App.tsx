@@ -20,7 +20,7 @@ function findComments(post: Post) {
     comment.postId === post.id
   ));
 
-  if (listComments.length === 0) {
+  if (!listComments.length) {
     return null;
   }
 
