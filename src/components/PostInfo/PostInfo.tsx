@@ -6,36 +6,41 @@ type PostProps = {
   postInfoProp: PostTodo,
 };
 
-export const PostInfo: React.FC<PostProps> = ({ postInfoProp }) => (
-  <>
-    <div className="PostInfo">
-      <div className="PostInfo__header">
-        <h3 className="PostInfo__title">
-          {postInfoProp.post
-            ? postInfoProp.post.title
+export const PostInfo: React.FC<PostProps> = ({ postInfoProp }) => {
+  const { post, user, comment } = postInfoProp;
+
+  return (
+    <>
+      <div className="PostInfo">
+        <div className="PostInfo__header">
+          <h3 className="PostInfo__title">
+            {post
+              ? post.title
+              : ''}
+          </h3>
+
+          <p>
+            {`Posted by ${user.username}`}
+
+            <a className="UserInfo" href={user.email}>
+              {` ${user.name}` }
+            </a>
+          </p>
+        </div>
+
+        <p className="PostInfo__body">
+          {post
+            ? post.body
             : ''}
-        </h3>
-
-        <p>
-          {`Posted by ${postInfoProp.user.username}`}
-
-          <a className="UserInfo" href={postInfoProp.user.email}>
-            {` ${postInfoProp.user.name}` }
-          </a>
         </p>
+
+        <hr />
+
+        {comment
+          ? <CommentList comments={comment} />
+          : <b data-cy="NoCommentsMessage">No comments yet</b>}
       </div>
-
-      <p className="PostInfo__body">
-        {postInfoProp.post
-          ? postInfoProp.post.body
-          : ''}
-      </p>
-
-      <hr />
-
-      {postInfoProp.comment
-        ? <CommentList comments={postInfoProp.comment} />
-        : <b data-cy="NoCommentsMessage">No comments yet</b>}
-    </div>
-  </>
-);
+    </>
+  );
+}
+;
