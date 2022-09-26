@@ -11,7 +11,6 @@ export const PostList: React.FC<Props> = ({ posts }) => (
       <PostInfo
         key={post.id}
         post={post}
-
       />
     ))}
   </div>
