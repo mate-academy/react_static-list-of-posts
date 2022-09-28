@@ -9,7 +9,7 @@ type PostTodoType = {
 export const PostList: React.FC<PostTodoType> = ({ todoPost }) => (
   <>
     <div className="PostList">
-      {todoPost.map((postInfoProp: PostTodo) => (
+      {todoPost.map((postInfoProp) => (
         <PostInfo postInfoProp={postInfoProp} />
       ))}
     </div>

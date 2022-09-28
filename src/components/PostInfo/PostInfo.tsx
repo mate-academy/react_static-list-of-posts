@@ -42,5 +42,4 @@ export const PostInfo: React.FC<PostProps> = ({ postInfoProp }) => {
       </div>
     </>
   );
-}
-;
+};
