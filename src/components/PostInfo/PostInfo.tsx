@@ -23,7 +23,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {' Posted by  '}
 
         {user
-          ? (<UserInfo user={user} />)
+          ? <UserInfo user={user} />
           : 'anonymous'}
       </div>
 
