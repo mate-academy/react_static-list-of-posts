@@ -1,15 +1,18 @@
 import React from 'react';
-import { PostInfo } from "../PostInfo";
-import {Post} from "../../types/Post";
+import { PostInfo } from '../PostInfo';
+import { Post } from '../../types/Post';
 
 type Props = {
   posts: Post[]
-}
+};
 
 export const PostList: React.FC<Props> = ({ posts }) => (
-  <div className="PostList">
+  <ul className="PostList">
     {posts.map((post: Post) => (
-      <PostInfo post={post} />
+      <li key={post.id}>
+        <PostInfo post={post} />
+      </li>
     ))}
-  </div>
+
+  </ul>
 );

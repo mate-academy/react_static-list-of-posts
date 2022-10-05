@@ -5,24 +5,23 @@ import './App.scss';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import {PostList} from "./components/PostList";
-import {Post} from "./types/Post";
+import { PostList } from './components/PostList';
+import { Post } from './types/Post';
 
 function getUserForPost(userId: number) {
   return usersFromServer.find(user => user.id === userId);
 }
 
 function getCommentsForPost(targetPostId: number) {
-  const comments = commentsFromServer.filter(comment => comment.postId === targetPostId);
-
-  return comments.length === 0 ? [] : comments;
+  return commentsFromServer
+    .filter(comment => comment.postId === targetPostId);
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUserForPost(post.userId),
   comments: getCommentsForPost(post.id),
-}))
+}));
 
 export const App: React.FC = () => (
   <section className="App">

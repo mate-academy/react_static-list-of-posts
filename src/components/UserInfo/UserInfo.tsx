@@ -1,10 +1,10 @@
 import React from 'react';
-import {User} from "../../types/User";
-import "./UserInfo.scss";
+import { User } from '../../types/User';
+import './UserInfo.scss';
 
 type Props = {
-  user: User | undefined,
-}
+  user?: User,
+};
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
   return user ? (
@@ -13,7 +13,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
     </a>
   ) : (
     <span className="UserInfo">
-      {'Anonymous'}
+      Anonymous
     </span>
-  )
+  );
 };
