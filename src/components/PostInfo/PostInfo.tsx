@@ -10,7 +10,7 @@ type Props = {
   post: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }, { key }) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title,
     body,
@@ -20,10 +20,7 @@ export const PostInfo: React.FC<Props> = ({ post }, { key }) => {
 
   return (
     <>
-      <div
-        className="PostInfo"
-        key={key}
-      >
+      <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">{title}</h3>
 
