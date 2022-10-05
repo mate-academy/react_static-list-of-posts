@@ -7,11 +7,11 @@ type CommentProps = {
 
 export const CommentInfo: React.FC<CommentProps> = ({ comment }) => {
   const {
-    id, name, email, body,
+    name, email, body,
   } = comment;
 
   return (
-    <div className="CommentInfo" key={id}>
+    <li className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
 
@@ -28,6 +28,6 @@ export const CommentInfo: React.FC<CommentProps> = ({ comment }) => {
       <div className="CommentInfo__body">
         {body}
       </div>
-    </div>
+    </li>
   );
 };
