@@ -6,9 +6,7 @@ export interface PostFromServer {
   id: number;
   title: string;
   body: string;
-}
-
-export interface Post extends PostFromServer {
   user: UserFromServer | null;
   comments: CommentFromServer[] | null;
 }
+
