@@ -9,4 +9,3 @@ export interface PostFromServer {
   user: UserFromServer | null;
   comments: CommentFromServer[] | null;
 }
-

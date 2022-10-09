@@ -18,6 +18,7 @@ function comments(postId: number): CommentFromServer[] | null {
     ? commentFinder
     : null;
 }
+
 function user(userId: number): UserFromServer | null {
   const postUser = usersFromServer.find(human => human.id === userId);
 
@@ -30,12 +31,10 @@ const postsRender: PostFromServer[] = postsFromServer.map(poost => ({
   user: user(poost.userId),
 }));
 
-
-
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList posts={postsRender}/>
+    <PostList posts={postsRender} />
   </section>
 );
