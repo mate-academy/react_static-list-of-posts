@@ -1,9 +1,9 @@
 export interface CommentTypes {
-  postId?: number,
-  id?: number,
-  name?: string,
-  email?: string,
-  body?: string
+  postId: number,
+  id: number,
+  name: string,
+  email: string,
+  body: string
 }
 
 export interface UserTypes {
@@ -22,7 +22,7 @@ export interface PostTypes {
 
 export interface CombinedPosts extends PostTypes{
   comments: Array<CommentTypes>,
-  user?: UserTypes,
+  user: UserTypes,
 }
 
 export interface PostListProps {
@@ -34,7 +34,7 @@ export interface PostInfoProps {
 }
 
 export interface UserInfoProps {
-  user?: UserTypes
+  user: UserTypes
 }
 
 export interface CommentListProps {
