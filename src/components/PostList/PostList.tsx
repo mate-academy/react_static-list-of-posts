@@ -1,5 +1,7 @@
 import React from 'react';
 
-export const PostList: React.FC = () => (
+import { PostListTypes } from '../../types';
+
+export const PostList: React.FC<PostListTypes> = () => (
   <>Put the list here</>
 );
