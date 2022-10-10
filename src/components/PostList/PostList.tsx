@@ -31,11 +31,8 @@ export const PostList: React.FC = () => (
   <div className="PostList">
     {posts.map(post => (
       <PostInfo
-        title={post.title}
-        body={post.body}
-        user={post.user}
+        post={post}
         key={post.id}
-        comments={post.comments}
       />
     ))}
   </div>
