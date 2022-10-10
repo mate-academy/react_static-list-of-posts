@@ -7,7 +7,9 @@ type UserProps = {
 
 export const UserInfo: React.FC<UserProps> = ({ user }) => {
   const {
-    name, username, email,
+    name,
+    username,
+    email,
   } = user;
 
   return (
