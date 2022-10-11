@@ -2,9 +2,27 @@ import React from 'react';
 
 import './App.scss';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import { User } from './types/User';
+import { Comments } from './types/Comments';
+
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+
+function getInfo<Info extends User | Comments>(
+  postId: number,
+  source: Info[],
+): Info | null {
+  const foundInfo = source.find(info => info.id === postId);
+
+  return foundInfo || null;
+}
+
+export const posts = postsFromServer.map(post => ({
+  ...post,
+  user: getInfo(post.id, usersFromServer),
+  comments: getInfo(post.id, commentsFromServer),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
