@@ -9,20 +9,28 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getInfo<Info extends User | Comment>(
-  postId: number,
-  source: Info[],
-): Info | null {
-  const foundInfo = source.find(info => info.id === postId);
+function getUser(postId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === postId);
 
-  return foundInfo || null;
+  return foundUser || null;
+}
+
+function getComments(postId: number): Comment[] | null {
+  const foundComments = commentsFromServer.filter(
+    comment => comment.postId === postId
+  );
+
+  return foundComments || null;
 }
 
 export const posts = postsFromServer.map(post => ({
   ...post,
-  user: getInfo(post.id, usersFromServer),
-  comment: getInfo(post.id, commentsFromServer),
+  user: getUser(post.id),
+  comments: getComments(post.id),
 }));
+
+// eslint-disable-next-line no-console
+console.log(posts);
 
 export const App: React.FC = () => (
   <section className="App">
