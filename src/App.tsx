@@ -3,13 +3,13 @@ import React from 'react';
 import './App.scss';
 
 import { User } from './types/User';
-import { Comments } from './types/Comments';
+import { Comment } from './types/Comment';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getInfo<Info extends User | Comments>(
+function getInfo<Info extends User | Comment>(
   postId: number,
   source: Info[],
 ): Info | null {
@@ -21,7 +21,7 @@ function getInfo<Info extends User | Comments>(
 export const posts = postsFromServer.map(post => ({
   ...post,
   user: getInfo(post.id, usersFromServer),
-  comments: getInfo(post.id, commentsFromServer),
+  comment: getInfo(post.id, commentsFromServer),
 }));
 
 export const App: React.FC = () => (
