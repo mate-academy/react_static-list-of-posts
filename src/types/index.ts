@@ -1,1 +1,1 @@
-export * from './propTypes';
+export * from './dataChecking';

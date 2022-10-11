@@ -20,27 +20,7 @@ export interface PostTypes {
   body: string,
 }
 
-export interface CombinedPosts extends PostTypes{
+export interface Data extends PostTypes{
   comments: Array<CommentTypes>,
   user: UserTypes,
-}
-
-export interface PostListProps {
-  posts: Array<CombinedPosts>
-}
-
-export interface PostInfoProps {
-  post: CombinedPosts
-}
-
-export interface UserInfoProps {
-  user: UserTypes
-}
-
-export interface CommentListProps {
-  comments: Array<CommentTypes>
-}
-
-export interface CommentInfoProps {
-  comment: CommentTypes
 }

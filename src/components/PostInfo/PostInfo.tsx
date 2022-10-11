@@ -1,23 +1,30 @@
 import React from 'react';
 
-import { PostInfoProps } from '../../types';
+// import { PostInfoProps } from '../../types';
+
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
+import { Data } from '../../types';
+
 import './PostInfo.scss';
 
-export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
+type Props = {
+  post: Data
+};
+
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title, body, comments, user,
   } = post;
 
   return (
-    <div className="PostInfo">
+    <>
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by '}
+          Posted by&nbsp;
 
           {user && <UserInfo user={user} />}
         </p>
@@ -38,6 +45,6 @@ export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
           )
           : <CommentList comments={comments || []} />
       }
-    </div>
+    </>
   );
 };
