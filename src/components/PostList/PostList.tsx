@@ -7,14 +7,12 @@ type Props = {
   posts: Array<Data>;
 };
 
-export const PostList: React.FC<Props> = ({ posts }) => (
-  <div className="PostList">
-    {
-      posts.map(post => (
-        <li className="PostInfo" key={post.id}>
-          <PostInfo post={post} />
-        </li>
-      ))
-    }
-  </div>
-);
+export const PostList: React.FC<Props> = ({ posts }) => {
+  const listItems = posts.map(post => <PostInfo post={post} key={post.id} />);
+
+  return (
+    <ul className="PostList">
+      {listItems}
+    </ul>
+  );
+};
