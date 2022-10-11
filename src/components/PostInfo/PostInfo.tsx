@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './PostInfo.scss';
+
 import { Post } from '../../types/Post';
 
 import { CommentList } from '../CommentList';
@@ -19,7 +21,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <p>
         {' Posted by  '}
 
-        <UserInfo user={post.user} />
+        {post.user && <UserInfo user={post.user} />}
       </p>
     </div>
 
@@ -27,14 +29,14 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.body}
     </p>
 
-    {post.comments.length
-      ? <CommentList comments={post.comments} />
-      : (
-        <>
-          <hr />
+    <hr />
 
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        </>
+    {post.comments.length
+      ? (
+        <CommentList comments={post.comments} />
+      )
+      : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
   </div>
 );
