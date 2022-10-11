@@ -13,3 +13,17 @@ raw_reports
 reports
 cypress/screenshots
 cypress/videos
+.editorconfig
+.env
+.eslintignore
+.eslintrc.js
+.github/workflows/lint.yml
+.github/workflows/test.yml
+.gitignore
+.stylelintignore
+.stylelintrc.js
+LICENSE
+cypress.json
+cypress/plugins/index.js
+cypress/support/index.d.ts
+cypress/support/index.js
