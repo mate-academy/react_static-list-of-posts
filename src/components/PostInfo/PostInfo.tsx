@@ -8,13 +8,6 @@ type Props = {
   post: Post,
 };
 
-const NoCommentsYet = () => (
-  <>
-    <hr />
-    <b data-cy="NoCommentsMessage">No comments yet</b>
-  </>
-);
-
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     userId,
@@ -42,9 +35,12 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {body}
       </p>
 
+      <hr />
+
       {
         (comments.length > 0 && <CommentList comments={comments} />)
-        || <NoCommentsYet />
+        || <b data-cy="NoCommentsMessage">No comments yet</b>
+
       }
 
     </div>
