@@ -10,15 +10,14 @@ import { Post } from './types/Post';
 
 import { PostList } from './components/PostList';
 
-function getUser(userId: number) {
-  return usersFromServer.find(user => user.id === userId) || null;
-}
+const getUser = (userId: number) => (
+  usersFromServer.find(user => user.id === userId) || null);
 
-function getComments(postId: number) {
-  return commentsFromServer.filter(
+const getComments = (postId: number) => (
+  commentsFromServer.filter(
     comment => comment.postId === postId,
-  );
-}
+  )
+);
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
