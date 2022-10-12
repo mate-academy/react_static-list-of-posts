@@ -33,12 +33,10 @@ export const PostInfo: FC<Probs> = ({
       {body}
     </p>
 
-    {
-      comments.length
-        ? <CommentList comments={comments} />
-        : (
-          <p data-cy="NoCommentsMessage">No comments</p>
-        )
-    }
+    {comments.length
+      ? <CommentList comments={comments} />
+      : (
+        <p data-cy="NoCommentsMessage">No comments</p>
+      )}
   </div>
 );

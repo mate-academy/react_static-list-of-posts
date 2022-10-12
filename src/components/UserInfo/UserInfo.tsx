@@ -6,12 +6,12 @@ type Probs = {
   user: User | undefined;
 };
 
-export const UserInfo: FC<Probs> = ({ user }) => {
-  return user
+export const UserInfo: FC<Probs> = ({ user }) => (
+  user
     ? (
       <a className="UserInfo" href={`mailto:${user.email}`}>
         {user.name}
       </a>
     )
-    : <p>No Info</p>;
-};
+    : <p>No Info</p>
+);
