@@ -6,6 +6,9 @@ export interface Post {
   id: number,
   title: string,
   body: string,
-  user: User | null,
-  comments: Comment[] | []
+}
+
+export interface ExtendedPost extends Post {
+  user?: User,
+  comments: Comment[]
 }
