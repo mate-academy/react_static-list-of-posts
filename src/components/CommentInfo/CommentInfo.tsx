@@ -18,7 +18,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
           {name}
         </strong>
 
-        {' by '}
+        by
 
         <a
           className="CommentInfo__email button is-primary is-light ml-1"
@@ -27,7 +27,6 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
           {email}
         </a>
       </div>
-
       <p className="CommentInfo__body is-size-6">
         {body}
       </p>

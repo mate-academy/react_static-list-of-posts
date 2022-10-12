@@ -1,6 +1,5 @@
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
-
 import { Post } from '../../types/Post';
 
 type Props = {
@@ -22,10 +21,12 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           {title}
         </h3>
 
-        <p className="is-flex is-align-items-center">
-          {' Posted by '}
-          {user && <UserInfo user={user} />}
-        </p>
+        {user && (
+          <p className="is-flex is-align-items-center">
+            Posted by
+            <UserInfo user={user} />
+          </p>
+        )}
       </div>
 
       <p className="PostInfo__body block is-size-5">
