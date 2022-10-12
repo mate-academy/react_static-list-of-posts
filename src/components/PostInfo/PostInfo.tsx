@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import { Post } from '../../types/Post';
+import { FullPost } from '../../react-app-env';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 type Probs = {
-  post: Post;
+  post: FullPost;
 };
 
 export const PostInfo: FC<Probs> = ({

@@ -1,8 +1,10 @@
 import postsFromServer from '../../api/posts';
 import commentsFromServer from '../../api/comments';
 import usersFromServer from '../../api/users';
+import { FullPost } from '../../react-app-env';
+import { Post } from '../../types/Post';
 
-const GetCommentsById = (postId: number) => (
+const getCommentsById = (postId: number) => (
   commentsFromServer.filter(comment => (
     comment.postId === postId
   ))
@@ -14,8 +16,8 @@ const getUserById = (id: number) => (
   ))
 );
 
-export const posts = postsFromServer.map(post => ({
+export const posts: FullPost[] = postsFromServer.map((post: Post) => ({
   ...post,
-  user: getUserById(post.userId),
-  comments: GetCommentsById(post.id),
+  user: getUserById(post.userId) || null,
+  comments: getCommentsById(post.id),
 }));

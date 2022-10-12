@@ -4,7 +4,7 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Probs = {
-  comments: Comment[] | [];
+  comments: Comment[];
 };
 
 export const CommentList: FC<Probs> = ({ comments }) => (

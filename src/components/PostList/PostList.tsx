@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { Post } from '../../types/Post';
+import { FullPost } from '../../react-app-env';
 import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
 type Probs = {
-  posts: Post[];
+  posts: FullPost[];
 };
 
 export const PostList: FC<Probs> = ({ posts }) => (

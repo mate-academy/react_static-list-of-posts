@@ -3,7 +3,7 @@ import { User } from '../../types/User';
 import './UserInfo.scss';
 
 type Probs = {
-  user: User | undefined;
+  user: User | null;
 };
 
 export const UserInfo: FC<Probs> = ({ user }) => (
