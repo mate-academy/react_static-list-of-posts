@@ -1,16 +1,14 @@
 import React from 'react';
 
-// import { PostInfoProps } from '../../types';
-
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
-import { Data } from '../../types';
+import { PostWithUser } from '../../types';
 
 import './PostInfo.scss';
 
 type Props = {
-  post: Data
+  post: PostWithUser
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {

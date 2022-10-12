@@ -1,4 +1,4 @@
-export interface CommentTypes {
+export interface Comment {
   postId: number,
   id: number,
   name: string,
@@ -6,21 +6,21 @@ export interface CommentTypes {
   body: string
 }
 
-export interface UserTypes {
+export interface User {
   id?: number,
   name?: string,
   username?: string,
   email?: string
 }
 
-export interface PostTypes {
+export interface Post {
   userId: number,
   id: number,
   title: string,
-  body: string,
+  body: string
 }
 
-export interface Data extends PostTypes{
-  comments: Array<CommentTypes>,
-  user: UserTypes,
+export interface PostWithUser extends Post {
+  comments: Comment[],
+  user: User
 }
