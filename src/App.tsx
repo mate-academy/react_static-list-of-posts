@@ -10,9 +10,9 @@ import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
 const getComments = (id: number) => (
-  commentsFromServer.filter((comment: Comment) => (
-    comment.postId === id
-  ))
+  commentsFromServer.filter(
+    (comment: Comment) => comment.postId === id,
+  )
 );
 
 const getUser = (userId: number) => (usersFromServer
