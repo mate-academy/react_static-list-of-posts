@@ -15,7 +15,7 @@ const preparePosts: InfoBlock[] = postsFromServer.map((post) => ({
   )),
   user: usersFromServer.find((user) => (
     user.id === post.userId
-  )),
+  )) || null,
 }));
 
 export const App: React.FC = () => (

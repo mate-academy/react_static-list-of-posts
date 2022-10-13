@@ -22,5 +22,5 @@ export interface Comment {
 
 export interface InfoBlock extends Post {
   comments: Comment[];
-  user?: User;
+  user?: User | null;
 }
