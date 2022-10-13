@@ -15,9 +15,7 @@
     margin-bottom: 1em;
   }
 
-  &__by {
-    &::after {
-      content: "\00a0";
-    }
+  &__by::after {
+    content: "\00a0";
   }
 }
