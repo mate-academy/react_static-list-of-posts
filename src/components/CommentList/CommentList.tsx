@@ -2,8 +2,9 @@ import React from 'react';
 import { CommentInfo } from '../CommentInfo';
 import { Comment } from '../../types/Comment';
 
-// eslint-disable-next-line max-len
-export const CommentList: React.FC<{ comments: Comment[] }> = ({ comments }) => (
+type Props = { comments: Comment[] };
+
+export const CommentList: React.FC<Props> = ({ comments }) => (
   <ul className="CommentList">
     {comments.map(comment => (
       <li key={comment.id}>

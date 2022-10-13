@@ -30,9 +30,7 @@ export const PostInfo: React.FC<{ post: Post }> = ({ post }) => {
       </p>
 
       {comments.length
-        ? (
-          <CommentList comments={comments} />
-        )
+        ? <CommentList comments={comments} />
         : (
           <>
             <hr />
