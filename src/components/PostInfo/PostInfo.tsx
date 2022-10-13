@@ -2,6 +2,7 @@ import React from 'react';
 import { FullPost } from '../../react-app-env';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import './PostInfo.scss';
 
 type Props = {
   post: FullPost;
