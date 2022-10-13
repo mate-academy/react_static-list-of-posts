@@ -1,39 +1,26 @@
 import React from 'react';
 
 import './App.scss';
-import {
-  Comment,
-  Post,
-  User,
-  InfoBlock,
-} from './type/types';
+import { InfoBlock } from './type/types';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
-const preparePosts = (
-  posts: Post[],
-  comments: Comment[],
-  users: User[],
-): InfoBlock[] => {
-  return posts.map((post) => ({
-    ...post,
-    comments: comments.filter((comment) => (comment.postId === post.id)),
-    user: users.find((user) => (user.id === post.userId)),
-  }));
-};
-
-const arrayPosts = preparePosts(
-  postsFromServer,
-  commentsFromServer,
-  usersFromServer,
-);
+const preparePosts: InfoBlock[] = postsFromServer.map((post) => ({
+  ...post,
+  comments: commentsFromServer.filter((comment) => (
+    comment.postId === post.id
+  )),
+  user: usersFromServer.find((user) => (
+    user.id === post.userId
+  )),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList infoBlocks={arrayPosts} />
+    <PostList infoBlocks={preparePosts} />
   </section>
 );
