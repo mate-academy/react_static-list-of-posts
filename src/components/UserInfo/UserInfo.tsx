@@ -10,14 +10,10 @@ export const UserInfo: React.FC<Props> = ({ user }) => (
   <p>
     {' Posted by  '}
 
-    {
-      user === undefined
-        ? ''
-        : (
-          <a className="UserInfo" href={`mailto:${user.email}`}>
-            {user.name}
-          </a>
-        )
-    }
+    {user && (
+      <a className="UserInfo" href={`mailto:${user.email}`}>
+        {user.name}
+      </a>
+    )}
   </p>
 );

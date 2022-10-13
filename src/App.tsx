@@ -17,16 +17,17 @@ const prepareUserData = (
   posts: Post[],
   comments: Comment[],
   users: User[],
-): PostData[] => {
-  return posts.map((post) => ({
-    ...post,
-    user: users.find((user) => user.id === post.userId),
-    comments: comments.filter((comment) => comment.postId === post.id),
-  }));
-};
+): PostData[] => posts.map((post) => ({
+  ...post,
+  user: users.find((user) => user.id === post.userId),
+  comments: comments.filter((comment) => comment.postId === post.id),
+}));
 
-// eslint-disable-next-line max-len
-const postData = prepareUserData(postsFromServer, commentsFromServer, usersFromServer);
+const postData = prepareUserData(
+  postsFromServer,
+  commentsFromServer,
+  usersFromServer,
+);
 // post (userId) -> user -> comment (postId);
 
 export const App: React.FC = () => (
