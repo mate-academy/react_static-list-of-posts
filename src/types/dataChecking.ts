@@ -7,10 +7,10 @@ export interface Comment {
 }
 
 export interface User {
-  id?: number,
-  name?: string,
-  username?: string,
-  email?: string
+  id: number,
+  name: string,
+  username: string,
+  email: string
 }
 
 export interface Post {
@@ -22,5 +22,5 @@ export interface Post {
 
 export interface PostWithUser extends Post {
   comments: Comment[],
-  user: User
+  user?: User
 }

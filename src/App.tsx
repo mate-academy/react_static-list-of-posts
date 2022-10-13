@@ -15,15 +15,17 @@ const getComments = (id: number) => (
   )
 );
 
-const getUser = (userId: number) => (usersFromServer
-  .find((user: User) => user.id === userId)
+const getUser = (userId: number) => (
+  usersFromServer.find(
+    (user: User) => user.id === userId,
+  )
 );
 
 const posts = postsFromServer.map((post: Post) => {
   return ({
     ...post,
     comments: getComments(post.id),
-    user: getUser(post.userId) || {},
+    user: getUser(post.userId),
   });
 });
 

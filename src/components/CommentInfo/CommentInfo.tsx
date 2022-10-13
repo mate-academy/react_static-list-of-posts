@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './CommentInfo.scss';
+
 import { Comment } from '../../types';
 
 type Props = {
@@ -18,7 +20,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
           {name}
         </strong>
 
-        &nbsp;by&nbsp;
+        <span className="CommentInfo__by">by</span>
 
         <a href={`mailto:${email}`} className="CommentInfo__email">
           {email}
