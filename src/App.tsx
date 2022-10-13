@@ -6,7 +6,10 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import {
-  Comment, Post, PostData, User,
+  Comment,
+  Post,
+  PostData,
+  User,
 } from './react-app-env';
 import { PostList } from './components/PostList';
 
@@ -15,13 +18,11 @@ const prepareUserData = (
   comments: Comment[],
   users: User[],
 ): PostData[] => {
-  return posts.map((post) => (
-    {
-      ...post,
-      user: users.find((user) => user.id === post.userId),
-      comments: comments.filter((comment) => comment.postId === post.id),
-    }
-  ));
+  return posts.map((post) => ({
+    ...post,
+    user: users.find((user) => user.id === post.userId),
+    comments: comments.filter((comment) => comment.postId === post.id),
+  }));
 };
 
 // eslint-disable-next-line max-len

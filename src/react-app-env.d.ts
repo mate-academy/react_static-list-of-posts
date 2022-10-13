@@ -24,5 +24,5 @@ export interface Post {
 
 export interface PostData extends Post {
   user: User | undefined;
-  comments: Comment[] | undefined;
+  comments: Comment[];
 }

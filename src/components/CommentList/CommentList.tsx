@@ -4,18 +4,15 @@ import { Comment } from '../../react-app-env';
 import { CommentInfo } from '../CommentInfo';
 
 interface Props {
-  comments: Comment[] | undefined;
+  comments: Comment[];
 }
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="CommentList">
-    {
-      comments === undefined
-        ? ''
-        : comments.map((comment) => (
-          <CommentInfo key={comment.id} comment={comment} />
-        ))
-    }
-
+    {!comments
+      ? ''
+      : comments.map((comment) => (
+        <CommentInfo key={comment.id} comment={comment} />
+      ))}
   </div>
 );
