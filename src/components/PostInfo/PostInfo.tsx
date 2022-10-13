@@ -8,22 +8,36 @@ type Props = {
   post: FullPost;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
-      <p>
-        {' Posted by:  '}
-        { post.user && (
-          <UserInfo user={post.user} key={post.user.id} />
-        )}
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    user,
+    body,
+    comments,
+  } = post;
+
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{title}</h3>
+        <p>
+          {' Posted by:  '}
+          { user && (
+            <UserInfo user={user} key={user.id} />
+          )}
+        </p>
+      </div>
+
+      <p className="PostInfo__body">
+        {body}
       </p>
+      { comments.length
+        ? <CommentList comments={comments} />
+        : (
+          <b className="CommentInfo" data-cy="NoCommentsMessage">
+            No comments yet
+          </b>
+        )}
     </div>
-
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    <CommentList comments={post.commentsList} />
-  </div>
-);
+  );
+};

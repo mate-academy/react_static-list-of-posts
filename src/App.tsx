@@ -19,8 +19,8 @@ const createPosts = (
 ) => {
   return posts.map(post => ({
     ...post,
-    commentsList: commentsList.filter(comments => comments.postId === post.id),
-    user: users.find(user => user.id === post.userId),
+    comments: commentsList.filter(comments => comments.postId === post.id),
+    user: users.find(user => user.id === post.userId) || null,
   }));
 };
 
