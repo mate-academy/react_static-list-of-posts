@@ -1,16 +1,36 @@
 import React from 'react';
 
-import { PreparedPost } from '../../types/PreparedPost';
 import { PostInfo } from '../PostInfo';
 import './PostList.scss';
 
-type Props = {
-  posts: PreparedPost[];
+import postsFromServer from '../../api/posts';
+import commentsFromServer from '../../api/comments';
+import usersFromServer from '../../api/users';
+import { Post } from '../../types/Post';
+import { User } from '../../types/User';
+import { PostComment } from '../../types/PostComment';
+
+const preparePosts = (
+  posts: Post[],
+  comments: PostComment[],
+  users: User[],
+) => {
+  return posts.map(post => ({
+    ...post,
+    user: users.find(user => user.id === post.userId) || null,
+    comments: comments.filter(comment => comment.postId === post.id),
+  }));
 };
 
-export const PostList: React.FC<Props> = ({ posts }) => (
+const preparedPosts = preparePosts(
+  postsFromServer,
+  commentsFromServer,
+  usersFromServer,
+);
+
+export const PostList: React.FC = () => (
   <div className="PostList">
-    {posts.map(post => (
+    {preparedPosts.map(post => (
       <PostInfo key={post.id} post={post} />
     ))}
   </div>
