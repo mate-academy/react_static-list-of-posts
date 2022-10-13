@@ -4,9 +4,11 @@ import { Comment } from '../../types/Comment';
 
 // eslint-disable-next-line max-len
 export const CommentList: React.FC<{ comments: Comment[] }> = ({ comments }) => (
-  <div className="CommentList">
+  <ul className="CommentList">
     {comments.map(comment => (
-      <CommentInfo comment={comment} key={comment.id} />
+      <li key={comment.id}>
+        <CommentInfo comment={comment} />
+      </li>
     ))}
-  </div>
+  </ul>
 );
