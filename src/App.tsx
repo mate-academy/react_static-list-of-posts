@@ -18,8 +18,8 @@ function findUser(userId:number):User | null {
 }
 
 function findComment(Id:number): Comment[] | [] {
-  const foundCommemt = commentsFromServer.filter(comment => (
-    comment.postId === Id));
+  const foundCommemt = commentsFromServer.filter(comments => (
+    comments.postId === Id));
 
   return foundCommemt;
 }
@@ -28,7 +28,7 @@ const posts: Post[] = postsFromServer.map((post) => {
   return {
     ...post,
     user: findUser(post.userId),
-    comment: findComment(post.id),
+    comments: findComment(post.id),
   };
 });
 
