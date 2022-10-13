@@ -6,6 +6,10 @@ iframe {
   text-align: center;
 }
 
+.PostList {
+  list-style: none;
+}
+
 .PostInfo {
   margin: 10px auto;
   width: 90%;
@@ -33,4 +37,6 @@ iframe {
   gap: 0.7em;
   background-color: #eee;
   padding: 1em;
+
+  list-style: none;
 }
