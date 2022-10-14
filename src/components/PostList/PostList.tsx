@@ -1,5 +1,18 @@
 import React from 'react';
+import { Post } from '../../types/Post';
+import { PostInfo } from '../PostInfo';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+type Posts = {
+  posts: Post[];
+};
+
+export const PostList: React.FC<Posts> = ({ posts = [] }) => (
+  <div className="PostList">
+    {posts.map((post) => (
+      <div className="PostInfo" key={post.id}>
+        <PostInfo post={post} />
+      </div>
+    ))}
+  </div>
+
 );
