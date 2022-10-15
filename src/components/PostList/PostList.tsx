@@ -8,13 +8,19 @@ type Posts = {
 
 export const PostList: React.FC<Posts> = ({ posts = [] }) => (
   <div className="PostList">
-    {posts.map((post) => (
-      <div className="PostInfo" key={post.id}>
+    {posts.map(({
+      id,
+      title,
+      user,
+      body,
+      comments,
+    }) => (
+      <div className="PostInfo" key={id}>
         <PostInfo
-          title={post.title}
-          user={post.user}
-          body={post.body}
-          comments={post.comments}
+          title={title}
+          user={user}
+          body={body}
+          comments={comments}
         />
       </div>
     ))}
