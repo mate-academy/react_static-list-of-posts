@@ -4,6 +4,7 @@ import './PostInfo.scss';
 
 import { Post } from '../../types/post';
 import { CommentList } from '../CommentList/CommentList';
+import { UserInfo } from '../UserInfo';
 
 type Props = {
   post: Post;
@@ -24,9 +25,8 @@ export const PostInfo: React.FC<Props> = ({
       <p>
         {' Posted by  '}
 
-        <a className="UserInfo" href={`"mailto:${user?.email}"`}>
-          {user?.name}
-        </a>
+        {user ? <UserInfo user={user} /> : ''}
+        
       </p>
     </div>
 
