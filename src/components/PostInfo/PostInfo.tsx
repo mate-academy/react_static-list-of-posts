@@ -5,8 +5,17 @@ import './PostInfo.scss';
 import { Post } from '../../types/post';
 import { CommentList } from '../CommentList/CommentList';
 
-export const PostInfo: React.FC<Post> = ({
-  title, body, user, comments,
+type Props = {
+  post: Post;
+};
+
+export const PostInfo: React.FC<Props> = ({
+  post: {
+    title,
+    body,
+    user,
+    comments,
+  },
 }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">

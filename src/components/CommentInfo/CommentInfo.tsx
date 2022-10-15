@@ -2,8 +2,16 @@ import React from 'react';
 
 import { Comment } from '../../types/comment';
 
-export const CommentInfo: React.FC<Comment> = ({
-  name, email, body,
+type Props = {
+  comment: Comment;
+};
+
+export const CommentInfo: React.FC<Props> = ({
+  comment: {
+    name,
+    email,
+    body,
+  },
 }) => (
   <li>
     <div className="CommentInfo">
