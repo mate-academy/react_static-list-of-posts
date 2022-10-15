@@ -1,36 +1,45 @@
 import React from 'react';
-import { Post } from '../../types/Post';
+import { Comment } from '../../types/Comment';
+import { User } from '../../types/User';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  post: Post;
+  title: string;
+  user: User | null;
+  body: string;
+  comments: Comment[] | null;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
+export const PostInfo: React.FC<Props> = ({
+  title,
+  user,
+  body,
+  comments,
+}) => (
   <>
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
-        { post.title }
+        { title }
       </h3>
 
       <p>
         {' Posted by  '}
 
-        {post.user && (
-          <UserInfo user={post.user} />
+        {user && (
+          <UserInfo name={user.name} email={user.email} />
         )}
       </p>
     </div>
 
     <p className="PostInfo__body">
-      { post.body }
+      { body }
     </p>
 
     <hr />
 
-    {post.comments ? (
-      <CommentList comments={post.comments} />
+    {comments ? (
+      <CommentList comments={comments} />
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     )}
