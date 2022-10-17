@@ -1,5 +1,51 @@
 import React from 'react';
+import { FullPost } from '../../Types/FullPost';
+import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
-export const PostInfo: React.FC = () => (
-  <>Put the post here</>
-);
+import './PostInfo.scss';
+
+type Props = {
+  post: FullPost;
+};
+
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    body,
+    user,
+    comments,
+  } = post;
+
+  return (
+    <li className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">
+          {title}
+        </h3>
+
+        {user && (
+          <p>
+            {'Posted by  '}
+
+            <UserInfo user={user} />
+          </p>
+        )}
+      </div>
+
+      <p className="PostInfo__body">
+        {body}
+      </p>
+
+      {comments.length
+        ? <CommentList comments={comments} />
+        : (
+          <>
+            <hr />
+
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        )}
+    </li>
+  );
+};
