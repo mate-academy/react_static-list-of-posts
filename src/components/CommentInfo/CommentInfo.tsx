@@ -32,4 +32,4 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
       </div>
     </div>
   );
-}
+};

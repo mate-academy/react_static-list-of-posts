@@ -41,4 +41,4 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   );
-}
+};

@@ -29,9 +29,11 @@ const preparedPosts = preparePosts(
 );
 
 export const PostList: React.FC = () => (
-  <div className="PostList">
+  <ul className="PostList">
     {preparedPosts.map(post => (
-      <PostInfo key={post.id} post={post} />
+      <li key={post.id}>
+        <PostInfo post={post} />
+      </li>
     ))}
-  </div>
+  </ul>
 );
