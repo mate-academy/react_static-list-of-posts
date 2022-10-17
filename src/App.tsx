@@ -9,24 +9,19 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 import { Post } from './components/types/Post';
-import { Comment } from './components/types/Comment';
-import { User } from './components/types/User';
 
-type GetComments = (postId: number) => Comment[] | [];
-type GetUser = (id: number) => User | null;
-
-export const getComments: GetComments = (postId): Comment[] => {
+export const getCommentsByPostId = (postId: number) => {
   return commentsFromServer.filter((comment) => comment.postId === postId);
 };
 
-export const getUser:GetUser = (userId) => {
+export const getUserByUserId = (userId: number) => {
   return usersFromServer.find((user) => user.id === userId) || null;
 };
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  comments: getComments(post.id),
-  user: getUser(post.userId),
+  comments: getCommentsByPostId(post.id),
+  user: getUserByUserId(post.userId),
 }));
 
 export const App: React.FC = () => (
