@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.scss';
 
-import { PostAllInfo } from './types/PostAllInfo';
+import { PostAllInfo } from './types/PreparedPost';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 import { Post } from './types/Post';
@@ -10,8 +10,6 @@ import { Post } from './types/Post';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-// import { post } from 'cypress/types/jquery';
-// import { PostInfo } from './components/PostInfo';
 
 import { PostList } from './components/PostList';
 

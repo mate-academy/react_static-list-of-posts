@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostAllInfo } from '../../types/PostAllInfo';
+import { PostAllInfo } from '../../types/PreparedPost';
 
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
@@ -12,20 +12,22 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <div className="PostInfo" key={post.id}>
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+    {post.user && (
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
 
-      <p>
-        {' Posted by  '}
+        <p>
+          {' Posted by  '}
 
-        {
-          post.user
-            ? <UserInfo user={post.user} />
-            : <p className="UserInfo">Unknown</p>
-        }
+          {
+            post.user
+              ? <UserInfo user={post.user} />
+              : <p className="UserInfo">Unknown</p>
+          }
 
-      </p>
-    </div>
+        </p>
+      </div>
+    )}
 
     <p className="PostInfo__body">
       {post.body}

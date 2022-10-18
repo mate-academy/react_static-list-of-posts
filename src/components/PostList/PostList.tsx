@@ -1,5 +1,5 @@
 import React from 'react';
-import { PostAllInfo } from '../../types/PostAllInfo';
+import { PostAllInfo } from '../../types/PreparedPost';
 import { PostInfo } from '../PostInfo';
 
 type Prop = {
