@@ -6,12 +6,13 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 import { Comment } from './types/comments';
+import { User } from './types/users';
 
 function getUser(postItem: StartPost) {
   const userItem = usersFromServer
     .find(userItemServer => userItemServer.id === postItem.userId);
 
-  return userItem || null;
+  return userItem || {};
 }
 
 function getComments(postItem: StartPost): Comment[] {
@@ -21,11 +22,21 @@ function getComments(postItem: StartPost): Comment[] {
   return commentsArr;
 }
 
-const posts: Post[] = postsFromServer.map(postItem => ({
-  ...postItem,
-  user: getUser(postItem) || null,
-  comments: getComments(postItem),
-}));
+const posts: Post[] = postsFromServer.map(postItem => {
+  const currentUser: User = {
+    id: 0,
+    name: '',
+    username: '',
+    email: '',
+    ...getUser(postItem),
+  };
+
+  return {
+    ...postItem,
+    user: currentUser,
+    comments: getComments(postItem),
+  };
+});
 
 export const App: React.FC = () => (
   <section className="App">
