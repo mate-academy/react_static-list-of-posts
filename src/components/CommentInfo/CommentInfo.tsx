@@ -3,7 +3,7 @@ import { Comment } from '../../types/Comment';
 
 type Props = {
   comment: Comment;
-}
+};
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <div className="CommentInfo">
