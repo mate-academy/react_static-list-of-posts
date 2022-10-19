@@ -6,7 +6,7 @@ export interface Post {
   title: string,
   body: string,
   user: User | null,
-  comments: Comment[] | [],
+  comments: Comment[],
 }
 
 export interface Comment {

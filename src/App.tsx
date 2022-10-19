@@ -9,8 +9,7 @@ import './App.scss';
 const posts: Post[] | [] = postsFromServer.map(post => ({
   ...post,
   user: usersFromServer.find(user => user.id === post.userId) || null,
-  comments: commentsFromServer
-    .filter(comment => comment.postId === post.id) || [],
+  comments: commentsFromServer.filter(comment => comment.postId === post.id),
 }));
 
 export const App: React.FC = () => (
