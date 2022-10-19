@@ -1,5 +1,16 @@
 import React from 'react';
 
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
+export type UserItem = {
+  name: string,
+  email: string,
+};
+
+export const UserInfo: React.FC<UserItem> = ({ name, email }) => (
+  <p>
+    {' Posted by  '}
+
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
+  </p>
 );
