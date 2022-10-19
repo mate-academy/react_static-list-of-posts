@@ -18,10 +18,10 @@ const getPosts = (
   comments: Comment[],
   users: User[],
 ) => (
-  posts.map((currPost: Post): PostAllInfo => ({
-    ...currPost,
-    user: users.find(user => user.id === currPost.userId) || null,
-    comments: comments.filter(comment => comment.postId === currPost.id),
+  posts.map((currentPost: Post): PostAllInfo => ({
+    ...currentPost,
+    user: users.find(user => user.id === currentPost.userId) || null,
+    comments: comments.filter(comment => comment.postId === currentPost.id),
   }))
 );
 
