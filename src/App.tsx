@@ -6,7 +6,6 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
-// import { post } from 'cypress/types/jquery';
 
 const collectedPost = postsFromServer.map((post) => ({
   ...post,
