@@ -9,7 +9,7 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-const PreparePosts = (
+const preparePosts = (
   posts: Post[],
   comments: Comment[],
   users: User[],
@@ -21,7 +21,7 @@ const PreparePosts = (
   }))
 );
 
-const PreparedPosts = PreparePosts(
+const preparedPosts = preparePosts(
   postsFromServer,
   commentsFromServer,
   usersFromServer,
@@ -30,6 +30,6 @@ const PreparedPosts = PreparePosts(
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={PreparedPosts} />
+    <PostList posts={preparedPosts} />
   </section>
 );
