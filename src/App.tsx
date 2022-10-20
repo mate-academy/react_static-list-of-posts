@@ -13,10 +13,10 @@ function getPostComments(id: number) {
 }
 
 function getPostUser(id: number) {
-  return usersFromServer.filter(user => user.id === id);
+  return usersFromServer.find(user => user.id === id);
 }
 
-export const posts = postsFromServer.map(post => ({
+const posts = postsFromServer.map(post => ({
   ...post,
   comments: getPostComments(post.id),
   user: getPostUser(post.userId),
@@ -25,6 +25,6 @@ export const posts = postsFromServer.map(post => ({
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={posts} />
+    <PostList postsArray={posts} />
   </section>
 );

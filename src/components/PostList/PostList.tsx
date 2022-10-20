@@ -8,8 +8,8 @@ import { CommentItem } from '../CommentInfo';
 import { UserItem } from '../UserInfo';
 
 type Props = {
-  posts: {
-    user: UserItem[],
+  postsArray: {
+    user: UserItem | undefined,
     title: string,
     body: string,
     id: number,
@@ -17,11 +17,15 @@ type Props = {
   }[]
 };
 
-export const PostList: React.FC<Props> = ({ posts }) => (
+export const PostList: React.FC<Props> = ({ postsArray }) => (
   <div className="PostList">
-    {posts.map((post) => (
+    {postsArray.map((post) => (
       <div className="PostInfo" key={post.id}>
-        <PostInfo {...post} />
+        <PostInfo
+          user={post.user}
+          body={post.body}
+          title={post.title}
+        />
 
         <hr />
 

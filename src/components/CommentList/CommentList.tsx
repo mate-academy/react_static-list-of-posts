@@ -1,8 +1,8 @@
 import React from 'react';
-import { CommentInfo, CommentItem } from '../CommentInfo';
+import { CommentInfo, CommentItem as Comment } from '../CommentInfo';
 
 type Props = {
-  comments: CommentItem[],
+  comments: Comment[],
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
@@ -10,7 +10,12 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
     {comments.length > 0
       ? (comments.map((comment) => (
         <div className="CommentInfo" key={comment.id}>
-          <CommentInfo {...comment} />
+          <CommentInfo
+            name={comment.name}
+            email={comment.email}
+            body={comment.body}
+            id={0}
+          />
         </div>
       )))
       : (<b data-cy="NoCommentsMessage">No comments yet</b>)}
