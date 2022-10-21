@@ -16,11 +16,7 @@ function getUser(post: Post): User | null {
     return person.id === post.userId;
   });
 
-  if (user !== undefined) {
-    return user;
-  }
-
-  return null;
+  return  user || null;
 }
 
 function getComments(post: Post): Comment[] {

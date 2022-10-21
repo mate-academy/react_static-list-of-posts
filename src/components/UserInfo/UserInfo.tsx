@@ -4,12 +4,12 @@ import { User } from '../../types/User';
 import './UserInfo.scss';
 
 type Props = {
-  user: User | null;
+  user: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <p>
-    {` Posted by ${user?.username}: `}
+    {` Posted by ${user.username}: `}
 
     <a className="UserInfo" href={`mailto:${user?.email}`}>
       {user?.name}
