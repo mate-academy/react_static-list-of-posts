@@ -1,5 +1,19 @@
 import React from 'react';
+import { FullPost } from '../../types/FullPost';
+import { PostInfo } from '../PostInfo';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+type Props = {
+  posts: FullPost[];
+};
+
+export const PostList: React.FC<Props> = ({ posts }) => (
+  <ul className="PostList">
+    {posts.map(post => (
+      <li key={post.id}>
+        <PostInfo
+          post={post}
+        />
+      </li>
+    ))}
+  </ul>
 );
