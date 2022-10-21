@@ -2,7 +2,7 @@ import React from 'react';
 
 import './CommentList.scss';
 import { CommentInfo } from '../CommentInfo';
-import { Comment } from '../../types/comment';
+import { Comment } from '../../types/comment.js';
 
 type Props = {
   comments: Comment[];
@@ -11,8 +11,8 @@ type Props = {
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <ul className="CommentList">
     {comments.map(comment => (
-      <li>
-        <CommentInfo comment={comment} key={comment.id} />
+      <li key={comment.id}>
+        <CommentInfo comment={comment} />
       </li>
     ))}
   </ul>
