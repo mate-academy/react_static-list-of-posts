@@ -6,14 +6,13 @@ import { CommentsInfo } from '../CommentInfo';
 
 import './CommentList.scss';
 
-type Props2 = {
+type Props = {
   commentsArr: Comment[] | null,
 };
 
-export const CommentsList: React.FC<Props2> = ({ commentsArr }) => (
+export const CommentsList: React.FC<Props> = ({ commentsArr }) => (
   <div className="CommentList">
-    {commentsArr !== null
-    && commentsArr.map(oneComment => (
+    {commentsArr && commentsArr.map(oneComment => (
       <div key={oneComment.id}>
         <CommentsInfo {...oneComment} />
       </div>

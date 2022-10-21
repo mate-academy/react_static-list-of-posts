@@ -5,14 +5,14 @@ import { PostInfo } from '../PostInfo';
 import { Post } from '../../types/Post';
 
 type Props = {
-  postsArr: Post[],
+  posts: Post[],
 };
 
-export const PostList: React.FC<Props> = ({ postsArr }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    {postsArr.map(onePost => (
+    {posts.map(onePost => (
       <div key={onePost.id}>
-        <PostInfo {...onePost} />
+        <PostInfo post={onePost} />
       </div>
     ))}
   </div>
