@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentInfo, CommentItem as Comment } from '../CommentInfo';
+import { CommentInfo, CommentInfoProps as Comment } from '../CommentInfo';
 
 type Props = {
   comments: Comment[],
@@ -21,5 +21,3 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
       : (<b data-cy="NoCommentsMessage">No comments yet</b>)}
   </div>
 );
-
-export {};

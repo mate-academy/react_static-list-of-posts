@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type CommentItem = {
+export type CommentInfoProps = {
   name: string,
   email: string,
   body: string,
@@ -8,7 +8,11 @@ export type CommentItem = {
   id: number,
 };
 
-export const CommentInfo: React.FC<CommentItem> = ({ name, email, body }) => (
+export const CommentInfo: React.FC<CommentInfoProps> = ({
+  name,
+  email,
+  body,
+}) => (
   <>
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">{name}</strong>

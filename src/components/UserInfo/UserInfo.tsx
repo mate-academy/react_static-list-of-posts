@@ -1,11 +1,11 @@
 import React from 'react';
 
-export type UserItem = {
+export type UserInfoProps = {
   name: string,
   email: string,
 };
 
-export const UserInfo: React.FC<UserItem> = ({ name, email }) => (
+export const UserInfo: React.FC<UserInfoProps> = ({ name, email }) => (
   <p>
     {' Posted by  '}
 

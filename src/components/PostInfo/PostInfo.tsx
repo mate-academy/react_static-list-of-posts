@@ -1,8 +1,8 @@
 import React from 'react';
-import { UserInfo, UserItem } from '../UserInfo';
+import { UserInfo, UserInfoProps } from '../UserInfo';
 
 type Props = {
-  user: UserItem | undefined,
+  user: UserInfoProps | undefined,
   body: string,
   title: string
 };
