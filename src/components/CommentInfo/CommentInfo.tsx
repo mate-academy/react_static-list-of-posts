@@ -1,16 +1,9 @@
 import React from 'react';
+import { Comment } from '../../type/type';
 
 export type CommentInfoProps = {
   comment: Comment
 };
-
-export interface Comment {
-  name: string,
-  email: string,
-  body: string,
-  // eslint-disable-next-line react/no-unused-prop-types
-  id: number,
-}
 
 export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
   const {

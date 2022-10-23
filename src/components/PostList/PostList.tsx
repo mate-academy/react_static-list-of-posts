@@ -4,16 +4,7 @@ import { CommentList } from '../CommentList';
 import { PostInfo } from '../PostInfo';
 
 // Types props
-import { Comment } from '../CommentInfo';
-import { User } from '../UserInfo';
-
-interface Post {
-  user: User,
-  title: string,
-  body: string,
-  id: number,
-  comments: Comment[],
-}
+import { Post } from '../../type/type';
 
 interface PostListProps {
   posts: Post[]
