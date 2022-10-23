@@ -1,8 +1,8 @@
 import React from 'react';
-import { UserInfo, UserInfoProps } from '../UserInfo';
+import { UserInfo, User } from '../UserInfo';
 
 type Props = {
-  user: UserInfoProps | undefined,
+  user: User | undefined,
   body: string,
   title: string
 };
@@ -14,8 +14,7 @@ export const PostInfo: React.FC<Props> = ({ user, body, title }) => (
 
       {user && (
         <UserInfo
-          name={user.name}
-          email={user.email}
+          user={user}
         />
       )}
     </div>

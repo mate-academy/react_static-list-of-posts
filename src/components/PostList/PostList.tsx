@@ -4,24 +4,24 @@ import { CommentList } from '../CommentList';
 import { PostInfo } from '../PostInfo';
 
 // Types props
-import { CommentInfoProps } from '../CommentInfo';
-import { UserInfoProps } from '../UserInfo';
+import { Comment } from '../CommentInfo';
+import { User } from '../UserInfo';
 
-type Props = {
-  user: UserInfoProps | undefined,
+interface Post {
+  user: User,
   title: string,
   body: string,
   id: number,
-  comments: CommentInfoProps[],
-};
-
-interface PostListProps {
-  postsArray: Props[]
+  comments: Comment[],
 }
 
-export const PostList: React.FC<PostListProps> = ({ postsArray }) => (
+interface PostListProps {
+  posts: Post[]
+}
+
+export const PostList: React.FC<PostListProps> = ({ posts }) => (
   <div className="PostList">
-    {postsArray.map((post) => (
+    {posts.map((post) => (
       <div className="PostInfo" key={post.id}>
         <PostInfo
           user={post.user}

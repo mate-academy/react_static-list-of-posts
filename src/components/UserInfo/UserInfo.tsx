@@ -1,16 +1,24 @@
 import React from 'react';
 
 export type UserInfoProps = {
-  name: string,
-  email: string,
+  user: User
 };
 
-export const UserInfo: React.FC<UserInfoProps> = ({ name, email }) => (
-  <p>
-    {' Posted by  '}
+export interface User {
+  name: string,
+  email: string,
+}
 
-    <a className="UserInfo" href={`mailto:${email}`}>
-      {name}
-    </a>
-  </p>
-);
+export const UserInfo: React.FC<UserInfoProps> = ({ user }) => {
+  const { name, email } = user;
+
+  return (
+    <p>
+      {' Posted by  '}
+
+      <a className="UserInfo" href={`mailto:${email}`}>
+        {name}
+      </a>
+    </p>
+  );
+};
