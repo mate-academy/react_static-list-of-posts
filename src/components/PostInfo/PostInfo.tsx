@@ -5,7 +5,6 @@ import './PostInfo.scss';
 import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
-import comments from '../../api/comments';
 
 type Props = {
   post: Post
