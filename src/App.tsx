@@ -17,7 +17,7 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-function getComment(postId: number): Comment[] | [] {
+function getCommentById(postId: number): Comment[] | [] {
   const foundComment = commentsFromServer
     .filter(comment => comment.postId === postId);
 
@@ -27,7 +27,7 @@ function getComment(postId: number): Comment[] | [] {
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
-  comments: getComment(post.id),
+  comments: getCommentById(post.id),
 }));
 
 export const App: React.FC = () => (
