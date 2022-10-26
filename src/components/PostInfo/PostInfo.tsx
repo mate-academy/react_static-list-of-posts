@@ -11,6 +11,7 @@ export const PostInfo: React.FC<Props> = ({ title, body }) => (
     <h1 data-cy="post-title">
       {title}
     </h1>
+
     <div data-cy="post-body" className="post-body">
       {body}
     </div>

@@ -16,6 +16,7 @@ const App: React.FC = () => (
 
   <div className="App">
     <h1>Static list of posts</h1>
+
     <div className="main">
       <PostList posts={postsPrepered} />
     </div>
