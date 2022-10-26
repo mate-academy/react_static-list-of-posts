@@ -14,9 +14,7 @@ export const PostInfo: React.FC<Props> = ({ user, body, title }) => (
       <h3 className="PostInfo__title">{title}</h3>
 
       {user && (
-        <UserInfo
-          user={user}
-        />
+        <UserInfo user={user} />
       )}
     </div>
 

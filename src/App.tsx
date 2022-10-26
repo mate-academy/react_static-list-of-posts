@@ -19,12 +19,12 @@ function getPostUser(id: number) {
 const posts = postsFromServer.map(post => ({
   ...post,
   comments: getPostComments(post.id),
-  user: getPostUser(post.userId),
+  user: getPostUser(post.userId) || undefined,
 }));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList postsArray={posts} />
+    <PostList posts={posts} />
   </section>
 );
