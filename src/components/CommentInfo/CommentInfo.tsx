@@ -1,5 +1,5 @@
 import React from 'react';
-import { Comment } from '../../types/Comment';  
+import { Comment } from '../../types/Comment';
 
 export const CommentInfo: React.FC<Comment> = ({ name, email, body }) => (
   <div className="CommentInfo">
