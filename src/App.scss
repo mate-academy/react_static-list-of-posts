@@ -1,1 +1,14 @@
 // styles go here
+.App {
+  background-color: pink;
+  text-align: center;
+}
+
+.main {
+  box-sizing: border-box;
+  background-color: white;
+  margin: 0 300px;
+  padding: 30px 40px;
+  border-radius: 15px;
+  border: #000 3px;
+}
