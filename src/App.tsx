@@ -9,11 +9,9 @@ import { User } from './types/UsersType';
 import { Post } from './types/PostsType';
 
 const getComments = (id: number): Comment[] => {
-  const foundComment = commentsFromServer.filter(
+  return commentsFromServer.filter(
     (comment) => comment.postId === id,
   );
-
-  return foundComment;
 };
 
 const getUser = (userId: number): User | null => {
