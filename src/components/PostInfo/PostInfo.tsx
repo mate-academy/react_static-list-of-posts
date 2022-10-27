@@ -5,7 +5,7 @@ import { Post } from '../../types/Post';
 export const PostInfo: React.FC<Post> = ({
   title, body, user, comments,
 }) => (
-  <div className="PostInfo">
+  <>
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{title}</h3>
 
@@ -23,5 +23,5 @@ export const PostInfo: React.FC<Post> = ({
     </p>
 
     <CommentList comments={comments} />
-  </div>
+  </>
 );

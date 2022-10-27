@@ -1,4 +1,7 @@
 import React from 'react';
+
+import './CommentList.scss';
+
 import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
@@ -18,10 +21,15 @@ export const CommentList: React.FC<Props> = (props) => {
   }
 
   return (
-    <div className="CommentList">
+    <ul className="CommentList">
       {props.comments.map(comment => (
-        <CommentInfo {...comment} />
+        <li
+          className="CommentInfo"
+          key={comment.id}
+        >
+          <CommentInfo {...comment} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
