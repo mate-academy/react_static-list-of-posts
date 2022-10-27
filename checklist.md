@@ -91,7 +91,7 @@ GOOD EXAMPLE:
 </div>
 ```
 
-ALSO GOOD EXAMPLE: 
+ALSO GOOD EXAMPLE:
 
 ```jsx
   <>
