@@ -1,9 +1,9 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
-import { User } from '../../type/type';
+import { User } from '../../types/User';
 
 type Props = {
-  user: User | undefined,
+  user: User,
   body: string,
   title: string
 };

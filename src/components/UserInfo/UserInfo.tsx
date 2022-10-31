@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from '../../type/type';
+import { User } from '../../types/User';
 
 export type UserInfoProps = {
   user: User

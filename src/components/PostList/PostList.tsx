@@ -4,7 +4,7 @@ import { CommentList } from '../CommentList';
 import { PostInfo } from '../PostInfo';
 
 // Types props
-import { Post } from '../../type/type';
+import { Post } from '../../types/Post';
 
 interface PostListProps {
   posts: Post[]
@@ -12,7 +12,7 @@ interface PostListProps {
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => (
   <div className="PostList">
-    {posts.map((post) => (
+    {posts.map((post) => post.user && (
       <div className="PostInfo" key={post.id}>
         <PostInfo
           user={post.user}
@@ -21,7 +21,6 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => (
         />
 
         <hr />
-
         <CommentList comments={post.comments} />
       </div>
     ))}
