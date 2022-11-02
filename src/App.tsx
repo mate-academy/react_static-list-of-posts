@@ -14,7 +14,7 @@ function getPostComments(id: number) {
 }
 
 function getPostUser(id: number) {
-  return usersFromServer.find(user => user.id === id);
+  return usersFromServer.find(user => user.id === id) || null;
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
