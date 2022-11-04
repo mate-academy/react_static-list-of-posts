@@ -8,10 +8,10 @@ type Comments = {
 };
 
 export const CommentList: React.FC<Comments> = ({ comments }) => (
-  <div className="CommentList">
+  <li className="CommentList">
     {comments.map(comment => (
       <CommentInfo key={comment.id} comment={comment} />
     ))}
 
-  </div>
+  </li>
 );

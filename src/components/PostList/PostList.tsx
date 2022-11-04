@@ -28,9 +28,9 @@ export const posts: Post[] = postsFromServer.map(post => ({
 }));
 
 export const PostList: React.FC = () => (
-  <div className="PostList">
+  <li className="PostList">
     {posts.map(post => (
       <PostInfo key={post.id} post={post} />
     ))}
-  </div>
+  </li>
 );
