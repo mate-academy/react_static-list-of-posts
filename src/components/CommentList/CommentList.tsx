@@ -16,10 +16,12 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
   }
 
   return (
-    <div className="CommentList">
+    <ul className="CommentList">
       {comments.map(comment => (
-        <CommentInfo comment={comment} key={comment.id} />
+        <li key={comment.id}>
+          <CommentInfo comment={comment} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
