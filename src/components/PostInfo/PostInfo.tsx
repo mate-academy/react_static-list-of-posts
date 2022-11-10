@@ -9,7 +9,10 @@ type Props = {
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    title, body, user, comments,
+    title,
+    body,
+    user,
+    comments,
   } = post;
 
   return (
