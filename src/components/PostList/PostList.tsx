@@ -8,17 +8,13 @@ interface Props {
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    <ul>
-      {posts.map((post: Post) => (
-        <li key={post.id}>
-          <PostInfo
-            title={post.title}
-            body={post.body}
-            id={post.id}
-            user={post.user}
-          />
-        </li>
-      ))}
-    </ul>
+    {posts.map((post) => (
+      <PostInfo
+        title={post.title}
+        body={post.body}
+        user={post.user}
+        comments={post.comments}
+      />
+    ))}
   </div>
 );

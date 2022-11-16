@@ -3,18 +3,26 @@ import { PostList } from './components/PostList';
 
 import { Post } from './types/Post';
 import { User } from './types/User';
+import { Comment } from './types/Comment';
 
 import postsFromServer from './api/posts';
 import usersFromServer from './api/users';
+import commentsFromServer from './api/comments';
 
 const getUser
-= (userId: number, arr: User[]): number => arr.findIndex(
+= (userId: number, arr: User[]): User | undefined => arr.find(
   user => user.id === userId,
+);
+
+const getComments
+= (id: number, arr: Comment[]): Comment[] => arr.filter(
+  comment => comment.postId === id,
 );
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: usersFromServer[getUser(post.userId, usersFromServer)],
+  user: getUser(post.userId, usersFromServer),
+  comments: getComments(post.id, commentsFromServer),
 }));
 
 export const App: React.FC = () => (
