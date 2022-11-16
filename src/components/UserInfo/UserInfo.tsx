@@ -1,5 +1,11 @@
-import React from 'react';
+import './UserInfo.scss';
 
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
+interface Props {
+  name: string,
+}
+
+export const UserInfo: React.FC<Props> = ({ name }) => (
+  <a className="UserInfo" href="mailto:Sincere@april.biz">
+    {name}
+  </a>
 );
