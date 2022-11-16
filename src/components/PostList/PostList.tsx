@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Post } from '../../types/Post';
-import { PostInfo } from '../PostInfo/PostInfo';
+import { PostInfo } from '../PostInfo';
 
 type Props = {
   list: Post[]
@@ -10,7 +10,7 @@ type Props = {
 export const PostList: React.FC<Props> = ({ list }) => (
   <div className="PostList">
     <ul>
-      {list.length && list.map(post => (
+      {list.map(post => (
         <li key={post.id}>
           <PostInfo post={post} />
         </li>

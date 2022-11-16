@@ -5,25 +5,29 @@ type Props = {
   info: Comment
 };
 
-export const CommentInfo: React.FC<Props> = ({ info }) => (
-  <li>
-    <div className="CommentInfo">
-      <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{info.name}</strong>
+export const CommentInfo: React.FC<Props> = ({ info }) => {
+  const { name, email, body } = info;
 
-        {' by '}
+  return (
+    <li>
+      <div className="CommentInfo">
+        <div className="CommentInfo__title">
+          <strong className="CommentInfo__name">{name}</strong>
 
-        <a
-          className="CommentInfo__email"
-          href="mailto:{one.email}"
-        >
-          {info.email}
-        </a>
+          {' by '}
+
+          <a
+            className="CommentInfo__email"
+            href="mailto:{one.email}"
+          >
+            {email}
+          </a>
+        </div>
+
+        <div className="CommentInfo__body">
+          {body}
+        </div>
       </div>
-
-      <div className="CommentInfo__body">
-        {info.body}
-      </div>
-    </div>
-  </li>
-);
+    </li>
+  );
+};
