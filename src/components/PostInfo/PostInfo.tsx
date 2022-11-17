@@ -26,7 +26,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {user && (
           <UserInfo user={user} />
         )}
-
       </div>
 
       <p className="PostInfo__body">
