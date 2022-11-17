@@ -11,7 +11,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <p>
-      {'Posted by  '}
+      &nbsp;Posted by&ensp;
 
       <a className="UserInfo" href={hrefMail}>
         {name}
