@@ -14,13 +14,13 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-export const getComments = (postId: number): Comment[] => {
+function getComments(postId: number): Comment[] {
   const foundComments = commentsFromServer.filter(
     comment => comment.postId === postId,
   );
 
   return foundComments;
-};
+}
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
