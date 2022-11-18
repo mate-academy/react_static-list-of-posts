@@ -7,28 +7,17 @@ import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
-import commentsFromServer from '../../api/comments';
-import usersFromServer from '../../api/users';
-
 type Props = {
   post: Post,
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    userId,
-    id,
     title,
     body,
+    user,
+    comments,
   } = post;
-
-  const neededComments = commentsFromServer.filter(comment => (
-    comment.postId === id
-  ));
-
-  const neededUser = usersFromServer.find(user => (
-    user.id === userId
-  ));
 
   return (
     <div className="PostInfo">
@@ -40,7 +29,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={neededUser} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
@@ -51,8 +40,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <hr />
 
       {
-        neededComments.length > 0
-          ? <CommentList comments={neededComments} />
+        comments?.length
+          ? <CommentList comments={comments} />
           : <b data-cy="NoCommentsMessage">No comments yet</b>
       }
 
