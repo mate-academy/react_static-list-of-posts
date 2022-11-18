@@ -9,18 +9,18 @@ import usersFromServer from './api/users';
 
 import './App.scss';
 
-const getUser = (userId: number) : Users | null => {
+const getUserById = (userId: number) : Users | null => {
   return (usersFromServer.find(user => user.id === userId) || null);
 };
 
-const getComment = (postId: number): Comments[] => {
+const getCommentByPostId = (postId: number): Comments[] => {
   return (commentsFromServer.filter(comment => comment.postId === postId));
 };
 
 const posts: Posts[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
-  comments: getComment(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentByPostId(post.id),
 }));
 
 export const App: React.FC = () => (
