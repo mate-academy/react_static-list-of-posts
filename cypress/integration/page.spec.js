@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-
 describe('Page', () => {
   before(() => {
     cy.visit('/');
