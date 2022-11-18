@@ -18,26 +18,21 @@ export const getComments = (postId: number): Comment[] => {
 export const CommentList: React.FC<Props> = ({ postId }) => {
   const comments = getComments(postId);
 
-  return (
-    (comments.length <= 0)
-      ? (
-        <>
-          <hr />
-
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        </>
-      )
-      : (
-        <div className="CommentList">
-          {comments.map((comment) => (
-            <CommentInfo
-              name={comment.name}
-              email={comment.email}
-              body={comment.body}
-              key={comment.id}
-            />
-          ))}
-        </div>
-      )
+  return comments.length <= 0 ? (
+    <>
+      <hr />
+      <b data-cy="NoCommentsMessage">No comments yet</b>
+    </>
+  ) : (
+    <div className="CommentList">
+      {comments.map((comment) => (
+        <CommentInfo
+          name={comment.name}
+          email={comment.email}
+          body={comment.body}
+          key={comment.id}
+        />
+      ))}
+    </div>
   );
 };
