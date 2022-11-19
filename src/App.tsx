@@ -1,7 +1,7 @@
 import React from 'react';
-import { Posts } from './types/Posts';
-import { Users } from './types/Users';
-import { Comments } from './types/Comments';
+import { Post } from './types/Post';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
@@ -9,15 +9,15 @@ import usersFromServer from './api/users';
 
 import './App.scss';
 
-const getUserById = (userId: number) : Users | null => {
+const getUserById = (userId: number) : User | null => {
   return (usersFromServer.find(user => user.id === userId) || null);
 };
 
-const getCommentByPostId = (postId: number): Comments[] => {
+const getCommentByPostId = (postId: number): Comment[] => {
   return (commentsFromServer.filter(comment => comment.postId === postId));
 };
 
-const posts: Posts[] = postsFromServer.map(post => ({
+const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getCommentByPostId(post.id),
