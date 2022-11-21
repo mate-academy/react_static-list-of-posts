@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.scss';
+
 import { User } from './types/user';
 import { Comment } from './types/comment';
 import { Post } from './types/post';
+import { PostList } from './components/PostList';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { PostList } from './components/PostList';
 
 function getUserById(userId: number): User | null {
   const neededUser = usersFromServer.find(user => user.id === userId);

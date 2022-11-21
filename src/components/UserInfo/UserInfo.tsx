@@ -12,12 +12,14 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   } = user;
 
   return (
-    <p>
-      {' Posted by  '}
+    <>
+      <p>
+        {' Posted by  '}
 
-      <a className="UserInfo" href={`mailto:${email}`}>
-        {name}
-      </a>
-    </p>
+        <a className="UserInfo" href={`mailto:${email}`}>
+          {name}
+        </a>
+      </p>
+    </>
   );
 };
