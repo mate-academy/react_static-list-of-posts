@@ -8,6 +8,7 @@ This task is similar to [Static List of TODOs](https://github.com/mate-academy/r
 - create all required types in `./src/types/`;
 - prepare `posts` by adding a `user` and `comments` to each `post` (each comment has a `postId`);
 - split the `App` into components based on given CSS blocks;
+  - styles from `App.scss` should be moved to separate files, as well. E.g.: `PostList.scss`;
 - `List` components should take an array of corresponding objects and render one `Info` component per object;
 - `Info` components should take one object and render its data.
 
