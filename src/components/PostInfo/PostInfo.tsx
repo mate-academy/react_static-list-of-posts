@@ -13,7 +13,12 @@ function extractComments(comments:Comment[], postId:number) {
     return (<CommentList comments={relevantComments} />);
   }
 
-  return (<b data-cy="NoCommentsMessage">No comments yet</b>);
+  return (
+    <>
+      <hr />
+      <b data-cy="NoCommentsMessage">No comments yet</b>
+    </>
+  );
 }
 
 type Props = {
@@ -29,17 +34,16 @@ export const PostInfo: React.FC<Props> = ({ post, users, comments }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
-        {CurrentUser
-          ? <UserInfo user={CurrentUser} />
-          : '' }
+        <h3 className="PostInfo__title">
+          {post.title}
+        </h3>
+
+        {CurrentUser && <UserInfo user={CurrentUser} />}
       </div>
 
       <p className="PostInfo__body">
         {post.body}
       </p>
-
-      <hr />
 
       {extractComments(comments, post.id)}
     </div>
