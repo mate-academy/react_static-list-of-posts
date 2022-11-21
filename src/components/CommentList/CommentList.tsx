@@ -4,11 +4,11 @@ import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
 type Props = {
-  comments: Comment[] | [];
+  comments: Comment[];
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  const neededComments = (comments.length !== 0)
+  const neededComments = comments.length !== 0
     ? (
       <div className="CommentList">
         {
@@ -22,7 +22,6 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
     : (
       <>
         <hr />
-
         <b data-cy="NoCommentsMessage">No comments yet</b>
       </>
     );
