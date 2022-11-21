@@ -6,19 +6,8 @@ import { User } from '../../types/user';
 import { Comment } from '../../types/comment';
 
 function extractComments(comments:Comment[], postId:number) {
-  const relevantComments = comments.filter((comment: Comment) => (
+  return comments.filter((comment: Comment) => (
     comment.postId === postId));
-
-  if (relevantComments.length) {
-    return (<CommentList comments={relevantComments} />);
-  }
-
-  return (
-    <>
-      <hr />
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    </>
-  );
 }
 
 type Props = {
@@ -30,6 +19,8 @@ type Props = {
 export const PostInfo: React.FC<Props> = ({ post, users, comments }) => {
   const CurrentUser = users.find((user: User) => (
     user.id === post.userId));
+
+  const relevantComments = extractComments(comments, post.id);
 
   return (
     <div className="PostInfo">
@@ -45,7 +36,16 @@ export const PostInfo: React.FC<Props> = ({ post, users, comments }) => {
         {post.body}
       </p>
 
-      {extractComments(comments, post.id)}
+      {
+        relevantComments.length > 0
+          ? <CommentList comments={relevantComments} />
+          : (
+            <>
+              <hr />
+              <b data-cy="NoCommentsMessage">No comments yet</b>
+            </>
+          )
+      }
     </div>
   );
 };
