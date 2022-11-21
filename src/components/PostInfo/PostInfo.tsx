@@ -24,7 +24,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
         {post.body}
       </p>
 
-      <CommentList postId={post.userId} />
+      <CommentList postId={post.id} />
     </div>
   </>
 );
