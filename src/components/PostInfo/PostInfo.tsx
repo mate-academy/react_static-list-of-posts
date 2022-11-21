@@ -21,19 +21,20 @@ export const PostInfo: React.FC<Props> = ({ post, users, comments }) => {
     user.id === post.userId));
 
   const relevantComments = extractComments(comments, post.id);
+  const { title, body } = post;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
-          {post.title}
+          {title}
         </h3>
 
         {CurrentUser && <UserInfo user={CurrentUser} />}
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       {
