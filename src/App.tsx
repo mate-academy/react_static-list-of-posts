@@ -8,16 +8,16 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { Post } from './types/Post';
 
-const getUserFromServer = (userId: number) => usersFromServer
+const getUserFromServerById = (userId: number) => usersFromServer
   .find(user => user.id === userId);
 
-const getCommentsFromServer = (postId: number) => commentsFromServer
+const getCommentsFromServerById = (postId: number) => commentsFromServer
   .filter(comment => comment.postId === postId);
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUserFromServer(post.userId) || null,
-  comments: getCommentsFromServer(post.id),
+  user: getUserFromServerById(post.userId) || null,
+  comments: getCommentsFromServerById(post.id),
 }));
 
 export const App: React.FC = () => (
