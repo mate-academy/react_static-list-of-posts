@@ -11,16 +11,11 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 function getUserById(userID: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userID);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userID) || null;
 }
 
 function getCommentsByPostId(postID: number): Comment[] {
-  const foundComments = (
-    commentsFromServer.filter(comment => comment.postId === postID));
-
-  return foundComments || null;
+  return commentsFromServer.filter(comment => comment.postId === postID);
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
