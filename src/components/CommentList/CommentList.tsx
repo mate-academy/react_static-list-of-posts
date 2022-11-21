@@ -1,38 +1,27 @@
 import React from 'react';
-import { CommentInfo } from '../CommentInfo';
-import commentsFromServer from '../../api/comments';
 import { Comment } from '../../types/Comment';
 
 type Props = {
-  postId: number,
+  comment: Comment
 };
 
-export const getComments = (postId: number): Comment[] => {
-  const foundComments = commentsFromServer.filter(
-    comment => comment.postId === postId,
-  );
+export const CommentList: React.FC<Props> = ({ comment }) => (
+  <div className="CommentInfo">
+    <div className="CommentInfo__title">
+      <strong className="CommentInfo__name">{comment.name}</strong>
 
-  return foundComments;
-};
+      {' by '}
 
-export const CommentList: React.FC<Props> = ({ postId }) => {
-  const comments = getComments(postId);
-
-  return comments.length <= 0 ? (
-    <>
-      <hr />
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    </>
-  ) : (
-    <div className="CommentList">
-      {comments.map((comment) => (
-        <CommentInfo
-          name={comment.name}
-          email={comment.email}
-          body={comment.body}
-          key={comment.id}
-        />
-      ))}
+      <a
+        className="CommentInfo__email"
+        href={`mailto:${comment.email}`}
+      >
+        {comment.email}
+      </a>
     </div>
-  );
-};
+
+    <div className="CommentInfo__body">
+      {comment.body}
+    </div>
+  </div>
+);
