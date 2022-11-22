@@ -15,23 +15,12 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
     comments,
   } = post;
 
-  const ifCommentsExist = comments.length !== 0
-    ? <CommentList comments={comments} />
-    : (
-      <>
-        <hr />
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </>
-    );
-
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by  '}
-
           {user && (
             <UserInfo user={user} />
           )}
@@ -42,7 +31,14 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {body}
       </p>
 
-      {ifCommentsExist}
+      {comments.length !== 0
+        ? <CommentList comments={comments} />
+        : (
+          <>
+            <hr />
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        )}
     </div>
   );
 };
