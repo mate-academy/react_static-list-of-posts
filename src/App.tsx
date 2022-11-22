@@ -11,24 +11,20 @@ import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
+function getUserById(userId: number): User | null {
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
-function getComment(id: number): Comment[] {
-  const foundComment = commentsFromServer.filter(comment => (
+function getCommentById(id: number): Comment[] {
+  return commentsFromServer.filter(comment => (
     comment.postId === id
   ));
-
-  return foundComment;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
-  comments: getComment(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentById(post.id),
 }));
 
 export const App: React.FC = () => (
