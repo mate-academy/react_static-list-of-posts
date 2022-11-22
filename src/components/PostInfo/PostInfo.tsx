@@ -26,7 +26,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         </h3>
 
         <p>
-          {' Posted by  '}
+          Posted by
 
           {user && <UserInfo key={user.id} user={user} />}
         </p>
