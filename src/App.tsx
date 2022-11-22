@@ -1,6 +1,9 @@
 import React from 'react';
 
 import './App.scss';
+import './components/CommentList/CommentList.scss';
+import './components/PostInfo/PostInfo.scss';
+import './components/UserInfo/UserInfo.scss';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
@@ -11,13 +14,13 @@ import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComment(commentId: number): Comment[] {
+function getCommentPostId(commentId: number): Comment[] {
   const foundComment = commentsFromServer
     .filter(comment => comment.postId === commentId);
 
@@ -26,8 +29,8 @@ function getComment(commentId: number): Comment[] {
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
-  comments: getComment(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentPostId(post.id),
 }));
 
 export const App: React.FC = () => (
