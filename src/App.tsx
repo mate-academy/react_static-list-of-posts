@@ -11,7 +11,7 @@ import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
 function getUserById(userId: number): User | null {
-  return usersFromServer.find(a => a.id === userId) || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommentById(commentId: number): Comment[] {
