@@ -11,20 +11,17 @@ import { Comment } from './types/Comment';
 import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommentsById(id: number): Comment[] {
-  const newComment = commentsFromServer
-    .filter(comment => comment.postId === id);
-
-  return newComment || null;
+  return commentsFromServer.filter(comment => comment.postId === id);
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
+  user: getUserById(post.userId),
   comments: getCommentsById(post.id),
 }));
 
