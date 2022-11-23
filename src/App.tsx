@@ -13,9 +13,7 @@ import { Comment } from './types/Comment';
 import { Post } from './types/Post';
 
 export function getUser(usersId: number):User | null {
-  const foundUser = usersFromServer.find(user => user.id === usersId);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === usersId) || null;
 }
 
 export function getComments(postId: number):Comment[] {
