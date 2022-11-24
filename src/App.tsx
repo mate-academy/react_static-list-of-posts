@@ -25,6 +25,7 @@ const fullPosts = postsFromServer.map((post) => {
   const fullPost : Post = { ...post };
 
   fullPost.comments = comments;
+
   if (user) {
     fullPost.user = user;
   }
