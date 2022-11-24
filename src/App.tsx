@@ -1,6 +1,8 @@
 import React from 'react';
 import { PostList } from './components/PostList';
 import { Post } from './types/Post';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
 
 import './App.scss';
 
@@ -8,29 +10,23 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-const getUser = (userId : number) => usersFromServer.find(
+const getUserById = (userId : number) : User | null => usersFromServer.find(
   (user) => user.id === userId,
-);
+) || null;
 
-const getComments = (postId : number) => commentsFromServer.filter(
-  (comment) => comment.postId === postId,
-);
+const getCommentsById = (postId : number) : Comment[] => commentsFromServer
+  .filter(
+    (comment) => comment.postId === postId,
+  );
 
 const fullPosts = postsFromServer.map((post) => {
-  const comments = getComments(post.id);
-  const user = getUser(post.userId);
+  const comments = getCommentsById(post.id);
+  const user = getUserById(post.userId);
   const fullPost : Post = { ...post };
 
   fullPost.comments = comments;
   if (user) {
-    const userForPost = {
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      username: user.username,
-    };
-
-    fullPost.user = userForPost;
+    fullPost.user = user;
   }
 
   return fullPost;
