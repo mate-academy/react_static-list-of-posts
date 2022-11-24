@@ -28,6 +28,7 @@ const fullPosts = postsFromServer.map((post) => {
 
     fullPost.user = userForPost;
   }
+
   return fullPost;
 });
 
