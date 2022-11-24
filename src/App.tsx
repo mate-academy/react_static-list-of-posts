@@ -8,9 +8,13 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-const getUser = (userId : number) => usersFromServer.find((user) => user.id === userId);
+const getUser = (userId : number) => usersFromServer.find(
+  (user) => user.id === userId,
+);
 
-const getComments = (postId : number) => commentsFromServer.filter((comment) => comment.postId === postId);
+const getComments = (postId : number) => commentsFromServer.filter(
+  (comment) => comment.postId === postId,
+);
 
 const fullPosts = postsFromServer.map((post) => {
   const comments = getComments(post.id);

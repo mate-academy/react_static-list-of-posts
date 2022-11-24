@@ -9,6 +9,11 @@ interface CommentListProps {
 
 export const CommentList: React.FC<CommentListProps> = ({ comments }) => (
   <div className="CommentList">
-    {comments.map((comment : Comment) => <CommentInfo key={comment.id} comment={comment} />)}
+    {comments.map((comment : Comment) => (
+      <CommentInfo
+        key={comment.id}
+        comment={comment}
+      />
+    ))}
   </div>
 );
