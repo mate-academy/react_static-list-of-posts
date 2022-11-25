@@ -1,42 +1,44 @@
 import React from 'react';
 import './PostInfo.scss';
 
-import { User } from '../../types/User';
-import { Comment } from '../../types/Comment';
+import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList/CommentList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  title: string;
-  body: string;
-  user: User | null;
-  comments: Comment[];
+  post: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({
-  title, body, user, comments,
-}) => (
-  <>
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">
-        {title}
-      </h3>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title, body, user, comments, id,
+  } = post;
 
-      <p>
-        {' Posted by  '}
-        {user && <UserInfo name={user.name} email={user.email} />}
-      </p>
-    </div>
+  return (
+    <li key={id}>
+      <div className="PostInfo">
+        <div className="PostInfo__header">
+          <h3 className="PostInfo__title">
+            {title}
+          </h3>
 
-    <p className="PostInfo__body">
-      {body}
-    </p>
+          <p>
+            {' Posted by  '}
+            {user && <UserInfo user={user} />}
+          </p>
+        </div>
 
-    <hr />
+        <p className="PostInfo__body">
+          {body}
+        </p>
 
-    {comments.length
-      ? <CommentList commentsList={comments} />
-      : <b data-cy="NoCommentMessage">No comments yet</b>}
+        <hr />
 
-  </>
-);
+        {comments.length
+          ? <CommentList commentsList={comments} />
+          : <b data-cy="NoCommentMessage">No comments yet</b>}
+
+      </div>
+    </li>
+  );
+};

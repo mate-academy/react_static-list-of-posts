@@ -12,17 +12,7 @@ export const PostList: React.FC<Props> = ({ posts = [] }) => (
 
   <ul className="PostList">
     {posts.map(post => (
-      <li
-        key={post.id}
-        className="PostInfo"
-      >
-        <PostInfo
-          title={post.title}
-          body={post.body}
-          user={post.user}
-          comments={post.comments}
-        />
-      </li>
+      <PostInfo post={post} />
     ))}
   </ul>
 );
