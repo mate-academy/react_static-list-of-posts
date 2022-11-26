@@ -14,13 +14,10 @@ export const PostInfo: React.FC<Props> = (props) => {
   const users = usersFromServer;
   const comments = commentsFromServer;
   const foundUser = users.find((user: User) => user.id === props.posts.userId);
-  const foundComment = comments.find(
-    (comment) => comment.postId === props.posts.id,
-  );
 
   return (
     <>
-      <div className="PostInfo">
+      <div className="PostInfo" key={props.posts.id}>
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">{props.posts.title}</h3>
 
@@ -34,7 +31,10 @@ export const PostInfo: React.FC<Props> = (props) => {
         <p className="PostInfo__body">
           {props.posts.body}
         </p>
-        <CommentList comment={foundComment} />
+        <CommentList
+          comments={comments}
+          postId={props.posts.id}
+        />
       </div>
     </>
   );

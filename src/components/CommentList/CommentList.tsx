@@ -3,25 +3,33 @@ import { Comments } from '../../types/Comments';
 import { CommentInfo } from '../CommentInfo';
 
 interface Props {
-  comment: Comments | undefined;
+  comments: Comments[];
+  postId: number | undefined;
 }
 
 export const CommentList: React.FC<Props> = (props) => {
-  if (props.comment === undefined) {
-    return (
-      <>
-        <hr />
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </>
-    );
-  }
+  // const found = props.comments.find(
+  //   (comment) => comment.postId !== props.postId,
+  // );
+
+  // if (found) {
+  //   return (
+  //     <>
+  //       <hr />
+  //       <b data-cy="NoCommentsMessage">No comments yet</b>
+  //     </>
+  //   );
+  // }
 
   return (
     <>
-
-      <div className="CommentList">
-        <CommentInfo comment={props.comment} />
-      </div>
+      {props.comments.filter(
+        comment => comment.postId === props.postId,
+      ).map((comment) => (
+        <div className="CommentList" key={comment.id}>
+          <CommentInfo comment={comment} />
+        </div>
+      ))}
     </>
   );
 };
