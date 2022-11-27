@@ -13,7 +13,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <p>
-      {' Posted by  '}
+      {' Posted by '}
 
       <a className="UserInfo" href={`malito:${email}`}>
         {name}
