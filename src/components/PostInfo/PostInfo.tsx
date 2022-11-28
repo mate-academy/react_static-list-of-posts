@@ -14,6 +14,9 @@ export const PostInfo: React.FC<Props> = (props) => {
   const users = usersFromServer;
   const comments = commentsFromServer;
   const foundUser = users.find((user: User) => user.id === props.posts.userId);
+  const found = comments.filter(
+    (comment) => comment.postId === props.posts.id,
+  );
 
   return (
     <>
@@ -31,10 +34,17 @@ export const PostInfo: React.FC<Props> = (props) => {
         <p className="PostInfo__body">
           {props.posts.body}
         </p>
-        <CommentList
-          comments={comments}
-          postId={props.posts.id}
-        />
+        { (found.length > 0) ? (
+          <CommentList
+            comments={found}
+          />
+        ) : (
+          <>
+            <hr />
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        ) }
+
       </div>
     </>
   );
