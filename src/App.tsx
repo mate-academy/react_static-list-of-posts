@@ -15,13 +15,9 @@ function getUser(userId: number): User | null {
   return usersFromServer.find((user) => user.id === userId) || null;
 }
 
-function getComment(postId: number): Comment[] | null {
+function getComment(postId: number): Comment[] {
   const foundComment = commentsFromServer.filter((comment) => (
     comment.postId === postId));
-
-  if (foundComment.length < 1) {
-    return null;
-  }
 
   return foundComment;
 }
