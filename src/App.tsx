@@ -12,19 +12,11 @@ import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
 function getUsersById(usersId: number): User | null {
-  const findUserById = usersFromServer.find(
-    user => user.id === usersId,
-  );
-
-  return findUserById || null;
+  return usersFromServer.find(user => user.id === usersId) || null;
 }
 
 function getCommentsById(idPost: number): Comments[] {
-  const filterCommentsById = commentsFromServer.filter(
-    comment => comment.postId === idPost,
-  );
-
-  return filterCommentsById;
+  return commentsFromServer.filter(comment => comment.postId === idPost);
 }
 
 const posts: Posts[] = postsFromServer.map(post => ({

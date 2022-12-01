@@ -6,24 +6,30 @@ type Prop = {
 };
 
 export const CommentInfo: React.FC<Prop> = ({ comment }) => {
+  const {
+    name,
+    email,
+    body,
+  } = comment;
+
   return (
-    <div className="CommentInfo">
+    <li className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{comment.name}</strong>
+        <strong className="CommentInfo__name">{name}</strong>
 
         {' by '}
 
         <a
           className="CommentInfo__email"
-          href={`malito:${comment.email}`}
+          href={`mailto:${email}`}
         >
-          {comment.email}
+          {email}
         </a>
       </div>
 
       <div className="CommentInfo__body">
-        {comment.body}
+        {body}
       </div>
-    </div>
+    </li>
   );
 };
