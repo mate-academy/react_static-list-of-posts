@@ -6,6 +6,6 @@ export interface Posts{
   id: number,
   title: string,
   body: string,
-  user: User | undefined,
+  user: User | null,
   comments: Comments[],
 }
