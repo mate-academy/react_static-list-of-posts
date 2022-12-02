@@ -12,11 +12,11 @@ import { User } from './types/User';
 
 import { PostList } from './components/PostList';
 
-function getComments(postId: number): Comment[] | null {
+function getComments(postId: number): Comment[] {
   const postComments
     = commentsFromServer.filter(comment => comment.postId === postId);
 
-  return postComments || null;
+  return postComments;
 }
 
 function getUser(userId: number): User | null {
