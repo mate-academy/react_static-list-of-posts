@@ -1,12 +1,10 @@
 import React from 'react';
-
 import './App.scss';
 import { PostList } from './components/PostList';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-// import { Post } from './types/Post';
 
 function getUser(userId:number) {
   const foundUser = usersFromServer.find(user => user.id === userId);
