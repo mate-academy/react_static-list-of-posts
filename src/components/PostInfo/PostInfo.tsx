@@ -1,39 +1,27 @@
-import {UserInfo} from '../UserInfo/UserInfo';
-import {CommentList} from '../CommentList/CommentList';
-// import { Users } from '../../types/Users';
-// import { Posts } from '../../types/Posts';
-// import users from '../../api/users';
-
-
-// type Props = {
-//   users: Users[];
-// };
+import React from 'react';
+import { Posts } from '../../types/Posts';
+import { UserInfo } from '../UserInfo/UserInfo';
+import { CommentList } from '../CommentList';
 
 type Props = {
-  post: Post;
+  post: Posts;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
-  <>
-    <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
-
-      {' Posted by  '}
-
-      <UserInfo />
+  <div className="post" data-cy="post-info">
+    <div className="post__wrapper">
+      <div className="post__user">
+        {post.user ? (<UserInfo user={post.user} />) : 'Unknown User'}
+      </div>
+      <div>
+        <h2 className="post__title" data-cy="post-title">
+          {post.title}
+        </h2>
+        <p className="post__text" data-cy="post-body">
+          {post.body}
+        </p>
+      </div>
     </div>
-
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    <hr />
-
-    {/* <b>No comments yet</b> */}
-
-    <CommentList  {}/>
-    </div>
-  </>
+    <CommentList comments={post.comments} />
+  </div>
 );
-

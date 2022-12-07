@@ -1,19 +1,17 @@
+import React from 'react';
 import { Users } from '../../types/Users';
 
 type Props = {
-  users: Users [];
+  user: Users;
 };
 
-export const UserInfo: React.FC<Props> = ({ users }) => (
-  <>
-    {users.map(user => (
-      <a
-        className="UserInfo"
-        href={`mailto:${user.email}`}
-        key={user.id}
-      >
-        {user.name}
-      </a>
-    ))}
-  </>
+export const UserInfo: React.FC<Props> = ({ user }) => (
+  <div className="user">
+    <h2 className="user__name" data-cy="user-name">
+      {user.name}
+    </h2>
+    <a href={`mailto:${user.email}`} className="user__email" data-cy="user-email">
+      {user.email}
+    </a>
+  </div>
 );
