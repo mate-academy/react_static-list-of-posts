@@ -1,5 +1,4 @@
 import React from 'react';
-import './CommentList.spec';
 import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 

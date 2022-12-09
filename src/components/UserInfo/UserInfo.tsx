@@ -1,5 +1,4 @@
 import React from 'react';
-import './UserInfo.spec';
 import { User } from '../../types/User';
 
 type Props = {
