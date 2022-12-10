@@ -7,21 +7,29 @@ type Props = {
   post: Posts;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
-  <div className="post" data-cy="post-info">
-    <div className="post__wrapper">
-      <div className="post__user">
-        {post.user ? (<UserInfo user={post.user} />) : 'Unknown User'}
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    user, title, body, comments,
+  } = post;
+
+  return (
+    <li key={post.id} className="post__item">
+      <div className="post" data-cy="post-info">
+        <div className="post__wrapper">
+          <div className="post__user">
+            {post.user ? (<UserInfo user={user} />) : 'Unknown User'}
+          </div>
+          <div>
+            <h2 className="post__title" data-cy="post-title">
+              {title}
+            </h2>
+            <p className="post__text" data-cy="post-body">
+              {body}
+            </p>
+          </div>
+        </div>
+        <CommentList comments={comments} />
       </div>
-      <div>
-        <h2 className="post__title" data-cy="post-title">
-          {post.title}
-        </h2>
-        <p className="post__text" data-cy="post-body">
-          {post.body}
-        </p>
-      </div>
-    </div>
-    <CommentList comments={post.comments} />
-  </div>
-);
+    </li>
+  );
+};

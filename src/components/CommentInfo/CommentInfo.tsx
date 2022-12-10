@@ -7,16 +7,22 @@ type Props = {
   comment: Comment;
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => (
-  <div className="comment">
-    <h3 className="comment__name" data-cy="comment-name">
-      {comment.name}
-    </h3>
-    <a href={`mailto:${comment.email}`} className="comment__email" data-cy="comment-email">
-      {comment.email}
-    </a>
-    <p className="comment__text" data-cy="comment-body">
-      {comment.body}
-    </p>
-  </div>
-);
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
+  const { name, email, body } = comment;
+
+  return (
+    <li key={comment.id} className="comments__text">
+      <div className="comment">
+        <h3 className="comment__name" data-cy="comment-name">
+          {name}
+        </h3>
+        <a href={`mailto:${email}`} className="comment__email" data-cy="comment-email">
+          {email}
+        </a>
+        <p className="comment__text" data-cy="comment-body">
+          {body}
+        </p>
+      </div>
+    </li>
+  );
+};
