@@ -7,8 +7,8 @@ type Posts = {
 
 export const PostList: React.FC<Posts> = ({ posts }) => (
   <>
-    {
-      posts.map(post => <PostInfo key={post.id} post={post} />)
-    }
+    {posts.map(post => (
+      <PostInfo key={post.id} post={post} />
+    ))}
   </>
 );
