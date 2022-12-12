@@ -1,10 +1,12 @@
 .PostInfo {
   margin: 10px auto;
-  width: 90%;
   border: 1px solid #000;
   border-radius: 8px;
-  background-color: lightgray;
+  width: 90%;
   padding: 1em;
+  
+  background-color: lightgray;
+  
   
   &__title {
     margin: 0;

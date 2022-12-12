@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { Post } from '../../types/Post';
-
 import './PostList.scss';
-
 import { PostInfo } from '../PostInfo';
 
 type Props = {
