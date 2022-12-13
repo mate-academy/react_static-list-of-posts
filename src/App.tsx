@@ -15,7 +15,7 @@ function findUserWithId(userId: number): User | null {
   return usersFromServer.find((user: User) => (user.id === userId)) || null;
 }
 
-function findComments(id: number): Comment[] {
+function findCommentsWithID(id: number): Comment[] {
   return commentsFromServer.filter((comment: Comment) => (
     comment.postId === id
   ));
@@ -24,7 +24,7 @@ function findComments(id: number): Comment[] {
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: findUserWithId(post.userId),
-  comments: findComments(post.id),
+  comments: findCommentsWithID(post.id),
 }));
 
 export const App: React.FC = () => (
