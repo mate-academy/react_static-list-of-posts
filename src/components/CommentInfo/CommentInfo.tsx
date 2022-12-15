@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Comment } from '../../types/comment';
 
 type Props = {
