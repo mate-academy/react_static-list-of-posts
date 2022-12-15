@@ -3,29 +3,15 @@ import { PostList } from './components/PostList';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { User } from './types/user';
-import { Comment } from './types/comment';
 
 export const App: React.FC = () => {
-  const posts: {
-    id: number,
-    title: string,
-    body: string,
-    user: User,
-    comments: Comment[]
-  }[] = postsFromServer.map(post => ({
-    id: post.id,
-    title: post.title,
-    body: post.body,
+  const posts = postsFromServer.map(post => ({
+    ...post,
     user: usersFromServer
-      .find(u => u.id === post.userId)
-      || {
-        name: 'unknown',
-        email: 'unknown',
-      },
+      .find(user => user.id === post.userId)
+      || null,
     comments: commentsFromServer
-      .filter(comment => comment.postId === post.id)
-      || [],
+      .filter(comment => comment.postId === post.id),
   }));
 
   return (
