@@ -14,7 +14,7 @@ export const CommentInfo: React.FC<Props> = ({ commentPosted }) => {
   } = commentPosted;
 
   return (
-    <div className="CommentInfo">
+    <li className="CommentInfo">
       <div className="CommentInfo__title">
         {name && (
           <strong className="CommentInfo__name">
@@ -40,6 +40,6 @@ export const CommentInfo: React.FC<Props> = ({ commentPosted }) => {
           {body}
         </div>
       )}
-    </div>
+    </li>
   );
 };
