@@ -17,15 +17,9 @@ function getUserById(userId: number): User | null {
 }
 
 function getCommentById(id: number): Comment[] {
-  const comments: Comment[] = [];
-
-  commentsFromServer.forEach(comment => {
-    if (id === comment.postId) {
-      comments.push(comment);
-    }
-  });
-
-  return comments;
+  return commentsFromServer.filter(comment => (
+    id === comment.postId
+  ));
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
