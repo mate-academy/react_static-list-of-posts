@@ -13,11 +13,11 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   } = post;
 
   return (
-    <li key={post.id} className="post__item">
+    <li className="post__item">
       <div className="post" data-cy="post-info">
         <div className="post__wrapper">
           <div className="post__user">
-            {post.user ? (<UserInfo user={user} />) : 'Unknown User'}
+            {user ? (<UserInfo user={user} />) : 'Unknown User'}
           </div>
           <div>
             <h2 className="post__title" data-cy="post-title">

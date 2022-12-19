@@ -13,7 +13,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
       <h2 className="user__name" data-cy="user-name">
         {name}
       </h2>
-      <a href={`mailto:${user.email}`} className="user__email" data-cy="user-email">
+      <a href={`mailto:${email}`} className="user__email" data-cy="user-email">
         {email}
       </a>
     </div>
