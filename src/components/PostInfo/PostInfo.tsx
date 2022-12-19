@@ -1,13 +1,14 @@
 import React from 'react';
-import './Postinfo.scss'
+
+import './PostInfo.scss';
 
 import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-    post: Post,
-}
+  post: Post,
+};
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
@@ -16,7 +17,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
     user,
     comments,
   } = post;
-  
+
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">

@@ -7,8 +7,8 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { User } from './types/User'
-import { Post } from './types/Post'
+import { User } from './types/User';
+import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 
 function getUserByUserId(userId: number): User | null {
