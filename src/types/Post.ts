@@ -2,10 +2,10 @@ import { User } from './User';
 import { Comment } from './Comment';
 
 export interface Post {
-  userId: number;
-  id: number;
   title: string;
   body: string;
+  id: number;
+  userId: number;
   comments: Comment[];
   user: User | null;
 }
