@@ -6,23 +6,23 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getUser(userId:number) {
+function getUserById(userId:number) {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComment(id:number) {
+function getCommentsById(id:number) {
   const foundArrComment = commentsFromServer.filter(user => user.postId === id);
 
-  return foundArrComment || null;
+  return foundArrComment;
 }
 
 export const posts = postsFromServer.map(post => {
   return {
     ...post,
-    user: getUser(post.userId),
-    comments: getComment(post.id),
+    user: getUserById(post.userId),
+    comments: getCommentsById(post.id),
   };
 });
 
