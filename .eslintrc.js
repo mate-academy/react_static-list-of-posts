@@ -9,7 +9,4 @@ module.exports = {
       assert: "either",
     }],
   },
-  settings: {
-    'import/ignore': ['react-native'],
-  }
 };
