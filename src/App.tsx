@@ -8,11 +8,8 @@ import usersFromServer from './api/users';
 
 import { Post } from './types/Post';
 
-const posts: Post[] = postsFromServer.map(post => ({
-  userId: post.userId,
-  id: post.id,
-  title: post.title,
-  body: post.body,
+export const posts: Post[] = postsFromServer.map(post => ({
+  ...post,
   comments: commentsFromServer
     .filter(comment => comment.postId === post.id),
   user: usersFromServer
