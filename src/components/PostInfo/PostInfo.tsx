@@ -1,25 +1,20 @@
 import './PostInfo.scss';
 
-import { Comments } from '../../types/comment';
-import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
-import { User } from '../../types/user';
+import { PreparedPost } from '../../types/prepearedPost';
+import { CommentList } from '../CommentList';
 
 type Props = {
-  title: string,
-  user: User | undefined,
-  body: string,
-  comment: Comments[],
+  post: PreparedPost
 };
 
-export const PostInfo: React.FC<Props> = (props) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    title,
     user,
+    title,
     body,
-    comment,
-
-  } = props;
+    comments,
+  } = post;
 
   return (
     <>
@@ -27,17 +22,7 @@ export const PostInfo: React.FC<Props> = (props) => {
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">{title}</h3>
 
-          <p>
-            {' Posted by  '}
-
-            {user && (
-              <UserInfo
-                userMail={user.email}
-                userName={user.name}
-              />
-            )}
-
-          </p>
+          {user && <UserInfo user={user} />}
         </div>
 
         <p className="PostInfo__body">
@@ -45,8 +30,7 @@ export const PostInfo: React.FC<Props> = (props) => {
         </p>
 
         <hr />
-
-        <CommentList comments={comment} />
+        <CommentList comments={comments} />
       </div>
     </>
   );

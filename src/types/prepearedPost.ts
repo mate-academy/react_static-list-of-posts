@@ -1,8 +1,11 @@
 import { Comments } from './comment';
-import { Post } from './post';
 import { User } from './user';
 
-export interface PreparedPost extends Post {
-  user?: User;
-  comments: Comments[];
+export interface PreparedPost {
+  userId: number,
+  id: number,
+  title: string,
+  body: string,
+  user?: User,
+  comments: Comments[],
 }

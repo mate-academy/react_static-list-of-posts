@@ -16,14 +16,10 @@ export const CommentList: React.FC<Props> = (props) => {
         ? <b data-cy="NoCommentsMessage">No comments yet</b>
         : (
           <div className="CommentList">
-            {comments.map(coment => (
-              <div className="CommentInfo" key={coment.id}>
+            {comments.map(comment => (
+              <div className="CommentInfo" key={comment.id}>
 
-                <CommentInfo
-                  name={coment.name}
-                  email={coment.email}
-                  body={coment.body}
-                />
+                <CommentInfo comment={comment} />
               </div>
             ))}
           </div>
