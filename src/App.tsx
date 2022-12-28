@@ -11,16 +11,17 @@ import { Post } from './types/post';
 import { PostList } from './components/PostList';
 
 const posts: Post[] = postsFromServer.map(post => {
-  const user = usersFromServer.find(postOwner => postOwner.id === post.userId)
+  const getUserById = usersFromServer
+    .find(postOwner => postOwner.id === post.userId)
   || null;
-  const comments = commentsFromServer.filter(comment => {
+  const getCommentsById = commentsFromServer.filter(comment => {
     return post.id === comment.postId;
   });
 
   return {
     ...post,
-    user,
-    comments,
+    user: getUserById,
+    comments: getCommentsById,
   };
 });
 
