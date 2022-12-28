@@ -12,13 +12,19 @@ import { PostList } from './components/PostList';
 import { Post } from './components/types/Post';
 
 function getProperUser(userId:number):User | null {
-  return (usersFromServer.find((person) => person.id === userId)) || null;
+  const user = (usersFromServer.find((person) => (
+    person.id === userId
+  )));
+
+  return user || null;
 }
 
 function getProperComment(postId:number):Comment[] {
-  return commentsFromServer.filter(
-    (comments) => comments.postId === postId,
+  const comments = commentsFromServer.filter(
+    (comment) => comment.postId === postId,
   );
+
+  return comments;
 }
 
 export const posts:Post[] = postsFromServer.map(post => ({
