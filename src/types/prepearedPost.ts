@@ -6,6 +6,6 @@ export interface PreparedPost {
   id: number,
   title: string,
   body: string,
-  user?: User,
-  comments: Comments[],
+  user?: User;
+  comments: Comments[];
 }

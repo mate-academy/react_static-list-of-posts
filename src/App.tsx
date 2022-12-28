@@ -9,8 +9,14 @@ import { PreparedPost } from './types/prepearedPost';
 import { PostList } from './components/PostList';
 
 const PreparedPosts: PreparedPost[] = postsFromServer.map(post => {
-  const user = usersFromServer.find(u => u.id === post.userId);
-  const comments = commentsFromServer.filter(com => com.postId === post.id);
+  const getUserById
+    = usersFromServer.find(userById => userById.id === post.userId);
+  const getCommentsById
+    = commentsFromServer.filter(commentsById => commentsById.postId
+      === post.id);
+
+  const user = getUserById;
+  const comments = getCommentsById;
 
   return {
     ...post,
