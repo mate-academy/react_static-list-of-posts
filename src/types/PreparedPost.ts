@@ -3,6 +3,6 @@ import { Post } from './Post';
 import { Comment } from './Comment';
 
 export interface PreparedPost extends Post {
-  user: User,
+  user?: User,
   comments: Comment[],
 }
