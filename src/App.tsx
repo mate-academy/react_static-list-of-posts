@@ -21,7 +21,7 @@ function getCommentsByPostId(postId: number): Comment[] | null {
   return comments || null;
 }
 
-const posts: Post[] = postsFromServer.map(post => ({
+export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getCommentsByPostId(post.id),
