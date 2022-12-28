@@ -8,16 +8,6 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  if (!comments) {
-    return (
-      <>
-        <hr />
-
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </>
-    );
-  }
-
   return (
     <div className="CommentList">
       {comments.map(comment => (
