@@ -9,19 +9,17 @@ import { PreparedPost } from './types/prepearedPost';
 import { PostList } from './components/PostList';
 
 const PreparedPosts: PreparedPost[] = postsFromServer.map(post => {
-  const getUserById
-    = usersFromServer.find(userById => userById.id === post.userId);
-  const getCommentsById
-    = commentsFromServer.filter(commentsById => commentsById.postId
-      === post.id);
+  const userById = () => usersFromServer.find(getUserById => (
+    getUserById.id === post.userId));
 
-  const user = getUserById;
-  const comments = getCommentsById;
+  const getCommentsByPostIdId = () => (
+    commentsFromServer.filter(getCommentsById => (
+      getCommentsById.postId === post.id)));
 
   return {
     ...post,
-    user,
-    comments,
+    user: userById(),
+    comments: getCommentsByPostIdId(),
   };
 });
 
