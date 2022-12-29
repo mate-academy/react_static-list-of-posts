@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Comments } from '../../types/Comments';
 
 type Props = {
@@ -20,7 +19,9 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
           {name}
         </strong>
 
-        {' by '}
+        <span>
+          by
+        </span>
 
         <a
           className="CommentInfo__email"
