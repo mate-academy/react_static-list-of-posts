@@ -1,1 +1,15 @@
-//
+.PostInfo {
+  margin: 10px auto;
+  width: 70%;
+  border: 1px solid #000;
+  background-color: #d3d3d3;
+  padding: 1em;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}
