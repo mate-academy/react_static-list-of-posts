@@ -1,5 +1,4 @@
 import React from 'react';
-import { PostList } from './components/PostList';
 import './App.scss';
 
 import postsFromServer from './api/posts';
@@ -7,6 +6,7 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 import { Post } from './types/Post';
+import { PostList } from './components/PostList';
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
