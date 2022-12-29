@@ -19,7 +19,7 @@ function getUserById(userId: number): User | undefined {
 
 function getCommentsById(postId: number): Comment[] {
   return commentsFromServer
-    .filter(comm => comm.postId === postId);
+    .filter(comment => comment.postId === postId);
 }
 
 export const posts: PreparedPost[] = postsFromServer
