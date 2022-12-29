@@ -10,9 +10,11 @@ import { Post } from './types/post';
 const getCommentsByPostId = (postId: number) => (
   commentsFromServer.filter(comment => (
     comment.postId === postId)));
+
 const getAuthorbyId = (userId: number) => (
   usersFromServer.find(user => user.id === userId) || null
 );
+
 const fullPostInfo: Post[] = postsFromServer.map(post => (
   {
     ...post,
@@ -24,8 +26,6 @@ const fullPostInfo: Post[] = postsFromServer.map(post => (
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList
-      postsList={fullPostInfo}
-    />
+    <PostList postsList={fullPostInfo} />
   </section>
 );

@@ -8,13 +8,13 @@ type PostDetails = {
   postInfo: Post;
 };
 
-export const PostInfo: React.FC<PostDetails> = (props) => {
+export const PostInfo: React.FC<PostDetails> = ({ postInfo }) => {
   const {
     title,
     body,
     author,
     comments,
-  } = props.postInfo;
+  } = postInfo;
 
   return (
     <>

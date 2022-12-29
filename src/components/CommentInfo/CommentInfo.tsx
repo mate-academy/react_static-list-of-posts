@@ -8,9 +8,11 @@ type Props = {
 };
 
 export const CommentInfo: React.FC<Props> = ({ commentInfo }) => {
-  const { name } = commentInfo;
-  const { email } = commentInfo;
-  const { body } = commentInfo;
+  const {
+    name,
+    email,
+    body,
+  } = commentInfo;
 
   return (
     <>
