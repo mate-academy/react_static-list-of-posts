@@ -10,8 +10,10 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getUserById(id: number): User | null {
-  return usersFromServer.find(user => user.id === id) || null;
+function getUserById(userId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  return foundUser || null;
 }
 
 function getCommentsByPostId(id: number): Comment[] {
