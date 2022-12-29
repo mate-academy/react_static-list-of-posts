@@ -11,9 +11,7 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 function getUserById(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommentsByPostId(id: number): Comment[] {
