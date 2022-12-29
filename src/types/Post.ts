@@ -6,6 +6,9 @@ export interface Post {
   id: number;
   title: string;
   body: string;
+}
+
+export interface PreparedPost extends Post {
   user: User | null;
   comments: Comment[];
 }
