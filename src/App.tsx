@@ -11,7 +11,7 @@ import { User } from './components/types/User';
 import { PostList } from './components/PostList';
 import { Post } from './components/types/Post';
 
-function getProperUser(userId:number):User | null {
+function getUserById(userId:number):User | null {
   const user = (usersFromServer.find((person) => (
     person.id === userId
   )));
@@ -19,7 +19,7 @@ function getProperUser(userId:number):User | null {
   return user || null;
 }
 
-function getProperComment(postId:number):Comment[] {
+function getCommentByPostId(postId:number):Comment[] {
   const comments = commentsFromServer.filter(
     (comment) => comment.postId === postId,
   );
@@ -29,8 +29,8 @@ function getProperComment(postId:number):Comment[] {
 
 export const posts:Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getProperUser(post.userId),
-  comments: getProperComment(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentByPostId(post.id),
 }));
 
 export const App: React.FC = () => (
