@@ -1,5 +1,5 @@
 import React from 'react';
-import { Post } from '../Types/Post';
+import { Post } from '../../Types/Post';
 import { PostInfo } from '../PostInfo/PostInfo';
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    {posts.map(post => (
+    {posts.map((post) => (
       <PostInfo key={post.id} post={post} />
     ))}
   </div>

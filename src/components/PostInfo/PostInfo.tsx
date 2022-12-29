@@ -1,5 +1,5 @@
 import React from 'react';
-import { Post } from '../Types/Post';
+import { Post } from '../../Types/Post';
 import { UserInfo } from '../UserInfo/UserInfo';
 import { CommentList } from '../CommentList/CommentList';
 
@@ -21,20 +21,20 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by  '}
-          {user && (<UserInfo user={user} />)}
+          {' Posted by '}
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
-      <p className="PostInfo__body">
-        {body}
-      </p>
+      <p className="PostInfo__body">{body}</p>
 
       <hr />
 
-      {post.comments.length === 0
-        ? <b data-cy="NoCommentsMessage">No comments yet</b>
-        : <CommentList comments={comments} />}
+      {post.comments.length === 0 ? (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      ) : (
+        <CommentList comments={comments} />
+      )}
     </div>
   );
 };
