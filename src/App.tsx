@@ -11,20 +11,20 @@ import { User } from './types/User';
 import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 
-function getUserId(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getCommentId(id: number): Comment[] {
+function getCommentById(id: number): Comment[] {
   return commentsFromServer.filter(comment => comment.postId === id);
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUserId(post.userId),
-  comments: getCommentId(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentById(post.id),
 }
 ));
 
