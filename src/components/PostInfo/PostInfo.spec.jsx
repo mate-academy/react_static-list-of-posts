@@ -2,6 +2,8 @@
 /* eslint-disable react/jsx-filename-extension */
 
 import React from 'react';
+
+import './PostInfo.scss';
 import { mount } from '@cypress/react';
 import { PostInfo } from './PostInfo';
 
