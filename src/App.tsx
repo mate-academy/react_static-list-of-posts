@@ -8,16 +8,23 @@ import './App.scss';
 import { PostList } from './components/PostList';
 import { Post } from './Types/post';
 
+const getComment = (id: number) => commentsFromServer
+  .filter((comment) => comment.postId === id);
+
+const getUser = (userId: number) => {
+  const unknownUser = {
+    name: 'unknown',
+    email: 'unknown',
+  };
+
+  return usersFromServer.find((user) => user.id === userId)
+    || unknownUser;
+};
+
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  comments: commentsFromServer
-    .filter(comment => comment.postId === post.id),
-  user: usersFromServer
-    .find(user => user.id === post.userId)
-    || {
-      name: 'unknown',
-      email: 'unknown',
-    },
+  comments: getComment(post.id),
+  user: getUser(post.userId),
 }));
 
 export const App: React.FC = () => (
