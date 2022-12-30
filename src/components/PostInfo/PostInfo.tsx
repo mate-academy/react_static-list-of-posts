@@ -3,6 +3,7 @@ import './PostInfo.scss';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import { PreparedPost } from '../../types/PreparedPost';
+import { NoComments } from '../CommentList/NoComments';
 
 type Props = {
   post: PreparedPost;
@@ -14,8 +15,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <h3 className="PostInfo__title">{post.title}</h3>
 
       <p>
-        {' Posted by  '}
-
+        <span> Posted by </span>
         {post.user && <UserInfo user={post.user} />}
       </p>
     </div>
@@ -24,15 +24,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.body}
     </p>
 
-    {
-      post.comments.length !== 0
-        ? <CommentList comments={post.comments} />
-        : (
-          <>
-            <hr />
-            <b data-cy="NoCommentsMessage">No comments yet</b>
-          </>
-        )
-    }
+    {post.comments.length !== 0
+      ? <CommentList comments={post.comments} />
+      : <NoComments />}
   </div>
 );
