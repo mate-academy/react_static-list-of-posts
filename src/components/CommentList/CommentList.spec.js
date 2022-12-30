@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { mount } from '@cypress/react';
+// eslint-disable-next-line
 import { CommentList } from './CommentList';
 
 describe('CommentList component', () => {
