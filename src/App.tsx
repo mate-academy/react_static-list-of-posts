@@ -3,7 +3,6 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 import { PostList } from './components/PostList';
-
 import { Comment } from './types/Comment';
 
 import './App.scss';

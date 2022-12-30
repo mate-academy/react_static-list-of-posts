@@ -7,5 +7,5 @@ export interface Post {
   title: string,
   body: string,
   user?: User,
-  comments: Comment[] | [],
+  comments: Comment[],
 }
