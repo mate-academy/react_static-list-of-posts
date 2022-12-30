@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-curly-newline */
 import React from 'react';
 
 import './PostInfo.scss';
@@ -16,7 +17,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <h3 className="PostInfo__title">{post.title}</h3>
 
       <p>
-        {' Posted by  '}
+        <span>Posted by </span>
 
         {post.user && <UserInfo user={post.user} />}
       </p>
@@ -30,11 +31,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
 
     {post.comments.length
       ? <CommentList comments={post.comments} />
-      : (
-        <>
-          <hr />
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        </>
-      )}
+      : <b data-cy="NoCommentsMessage">No comments yet</b>
+    }
   </div>
 );
