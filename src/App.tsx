@@ -5,22 +5,19 @@ import './App.scss';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { User } from './types/User';
-import { Comment } from './types/Comment';
-import { PreparedPost } from './types/PreparedPost';
 import { PostList } from './components/PostList/PostList';
 
-function getUserById(id: number): User | null {
+function getUserById(id: number) {
   const foundUser = usersFromServer.find(user => user.id === id);
 
   return foundUser || null;
 }
 
-function getCommentById(id: number): Comment[] {
+function getCommentById(id: number) {
   return commentsFromServer.filter(comment => comment.postId === id);
 }
 
-const posts: PreparedPost[] = postsFromServer.map(post => ({
+const posts = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getCommentById(post.id),
