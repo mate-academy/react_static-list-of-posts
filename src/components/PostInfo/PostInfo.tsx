@@ -9,7 +9,12 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
-  const { title, user, comments } = post;
+  const {
+    title,
+    user,
+    comments,
+    body,
+  } = post;
 
   return (
     <div className="PostInfo">
@@ -24,7 +29,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       {post.comments.length ? (
