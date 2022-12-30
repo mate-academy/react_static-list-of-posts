@@ -8,12 +8,15 @@ import usersFromServer from './api/users';
 import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
-const getUser = (userId: number) => usersFromServer
-  .find(user => user.id === userId)
-  || ({
+const getUser = (userId: number) => {
+  const unknownUser = {
     name: 'unknown',
     email: 'unknown',
-  });
+  };
+
+  return usersFromServer.find(user => user.id === userId)
+  || unknownUser;
+};
 
 const getComments = (id: number) => commentsFromServer
   .filter(comment => comment.postId === id);
