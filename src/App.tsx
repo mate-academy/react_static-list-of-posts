@@ -16,11 +16,11 @@ const getUser = (userId: number): User | null => {
   return foundUser || null;
 };
 
-const getComment = (postId: number): Comment[] | null => {
+const getComment = (postId: number): Comment[] => {
   const foundCommment = commentsFromServer
     .filter(comment => comment.postId === postId);
 
-  return foundCommment || null;
+  return foundCommment;
 };
 
 export const posts: Post[] = postsFromServer.map(post => ({
