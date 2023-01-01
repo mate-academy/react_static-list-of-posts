@@ -4,7 +4,7 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
-import { Comments } from './components/types/Comments';
+import { Comment } from './components/types/Comment';
 import { User } from './components/types/User';
 import { Post } from './components/types/Post';
 
@@ -12,7 +12,7 @@ function getUser(userId: number): User | null {
   return usersFromServer.find(user => user.id === userId) || null;
 }
 
-function getComments(postId: number): Comments[] {
+function getComments(postId: number): Comment[] {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
