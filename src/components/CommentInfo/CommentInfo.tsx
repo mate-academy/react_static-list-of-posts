@@ -8,22 +8,27 @@ type Props = {
 export const CommentInfo: React.FC<Props> = (
   { comment: { name, email, body } },
 ) => (
-  <div className="CommentInfo">
-    <div className="CommentInfo__title">
-      <strong className="CommentInfo__name">{name}</strong>
+  <div className="CommentInfo event">
+    <div className="content">
+      <div className="summary">
+        <a href={`mailto:${email}`} className="CommentInfo__email">{email}</a>
+        {' commented:'}
+        <br />
+        <p className="CommentInfo__name">
+          {name}
+        </p>
+      </div>
 
-      {' by '}
+      <div className="CommentInfo__body extra text">
+        {body}
+      </div>
 
-      <a
-        className="CommentInfo__email"
-        href={`mailto:${email}`}
-      >
-        {email}
-      </a>
-    </div>
-
-    <div className="CommentInfo__body">
-      {body}
+      <div className="meta">
+        <a className="reply" href="#reply">
+          <i className="reply icon" />
+          Reply
+        </a>
+      </div>
     </div>
   </div>
 );
