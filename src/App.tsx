@@ -5,8 +5,8 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { Post } from './types/Post';
 import { PostList } from './components/PostList';
+import { Post } from './types/Post';
 
 const getUser = (userId: number) => {
   const unknownUser = {
