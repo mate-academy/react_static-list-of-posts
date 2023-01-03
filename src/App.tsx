@@ -14,10 +14,10 @@ function getUserById(userId: number): User | null {
   return foundUser || null;
 }
 
-function getCommentsById(id: number): Comment[] | null {
+function getCommentsById(id: number): Comment[] {
   const comments = commentsFromServer.filter(comment => comment.postId === id);
 
-  return comments || null;
+  return comments;
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
