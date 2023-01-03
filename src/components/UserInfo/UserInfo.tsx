@@ -6,11 +6,18 @@ type UsersInfo = {
   user: User;
 };
 
-export const UserInfo: React.FC<UsersInfo> = ({ user }) => (
-  <a
-    className="UserInfo"
-    href={`mailto:${user.email}`}
-  >
-    {`${user.name}`}
-  </a>
-);
+export const UserInfo: React.FC<UsersInfo> = ({ user }) => {
+  const {
+    name,
+    email,
+  } = user;
+
+  return (
+    <a
+      className="UserInfo"
+      href={`mailto:${email}`}
+    >
+      {`${name}`}
+    </a>
+  );
+};
