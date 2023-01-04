@@ -128,7 +128,7 @@ GOOD EXAMPLE:
 </p>
 ```
 
-5. [CODE STYLE] - If you are searching some entity by some filter, specify it in function/method name
+6. [CODE STYLE] - If you are searching some entity by some filter, specify it in function/method name
 
 BAD EXAMPLE:
 ```jsx
