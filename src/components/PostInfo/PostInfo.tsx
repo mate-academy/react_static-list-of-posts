@@ -1,6 +1,7 @@
 import React from 'react';
 import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
+import { NoComments } from '../NoComments/NoComments';
 import { UserInfo } from '../UserInfo';
 
 import './PostInfo.scss';
@@ -25,7 +26,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         </h3>
 
         <p>
-          {' Posted by  '}
+          <span> Posted by </span>
 
           {user && (
             <UserInfo user={user} />
@@ -40,11 +41,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       {comments.length !== 0
         ? <CommentList comments={comments} />
         : (
-          <>
-            <hr />
-
-            <b data-cy="NoCommentsMessage">No comments yet</b>
-          </>
+          <NoComments />
         )}
     </div>
   );
