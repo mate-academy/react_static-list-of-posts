@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-
 export default [
   {
     postId: 1,

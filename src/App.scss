@@ -6,6 +6,10 @@ iframe {
   text-align: center;
 }
 
+.UserInfo {
+  font-weight: bold;
+}
+
 .PostInfo {
   margin: 10px auto;
   width: 90%;
@@ -21,10 +25,6 @@ iframe {
   &__header {
     margin-bottom: 1em;
   }
-}
-
-.UserInfo {
-  font-weight: bold;
 }
 
 .CommentList {
