@@ -2,6 +2,9 @@
 /* eslint-disable react/jsx-filename-extension */
 
 import React from 'react';
+
+import './CommentList.scss';
+
 import { mount } from '@cypress/react';
 import { CommentList } from './CommentList';
 
