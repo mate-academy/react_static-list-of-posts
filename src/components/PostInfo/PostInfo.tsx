@@ -4,15 +4,16 @@ import { Post } from '../../types/post';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  postInfo: Post;
+  post: Post;
 };
 
-export const PostInfo: React.FC<Props> = (props) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    postInfo,
-  } = props;
-
-  const { title, comments, user, body} = postInfo;
+    title,
+    comments,
+    user,
+    body,
+  } = post;
 
   return (
     <div className="PostInfo">
@@ -23,7 +24,7 @@ export const PostInfo: React.FC<Props> = (props) => {
           {' Posted by  '}
 
           <UserInfo
-            userInfo= {user}
+            userInfo={user}
           />
         </p>
       </div>
@@ -37,7 +38,7 @@ export const PostInfo: React.FC<Props> = (props) => {
       {comments.length === 0
         ? (<b data-cy="NoCommentsMessage">No comments yet</b>)
         : (
-          <CommentList commentList={comments} />
+          <CommentList comments={comments} />
         )}
 
     </div>
