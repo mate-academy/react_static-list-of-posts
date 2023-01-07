@@ -9,10 +9,10 @@ import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User {
-  const getUserById: any = usersFromServer.find(user => user.id === userId);
+function getUser(userId: number): User | null {
+  const getUserById = usersFromServer.find(user => user.id === userId);
 
-  return getUserById;
+  return getUserById || null;
 }
 
 export const posts: Post[] = postsFromServer.map((post) => {
