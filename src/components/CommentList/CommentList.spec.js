@@ -3,9 +3,9 @@
 
 import React from 'react';
 import { mount } from '@cypress/react';
-import { CommentList } from './CommentList';
+import { CommentsList } from './CommentList';
 
-describe('CommentList component', () => {
+describe('CommentsList component', () => {
   describe('', () => {
     beforeEach(() => {
       const comments = [
@@ -39,7 +39,7 @@ describe('CommentList component', () => {
         },
       ];
 
-      mount(<CommentList comments={comments} />);
+      mount(<CommentsList comments={comments} />);
     });
 
     it('should contain all comments', () => {
@@ -57,7 +57,7 @@ describe('CommentList component', () => {
 
   describe('', () => {
     it('should not have comments if received an empty array', () => {
-      mount(<CommentList comments={[]} />);
+      mount(<CommentsList comments={[]} />);
 
       cy.get('.CommentInfo').should('not.exist');
     });

@@ -1,0 +1,15 @@
+.CommentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  background-color: #eee;
+  padding: 1em;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
