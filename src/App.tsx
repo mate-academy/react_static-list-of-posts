@@ -10,14 +10,12 @@ import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
 function getUserById(userId: number): User | null {
-  const getUser = usersFromServer.find(user => user.id === userId);
-
-  return getUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
-function getCommentById(postId: number): Comment[] {
+function getCommentById(commentId: number): Comment[] {
   return commentsFromServer.filter(comment => (
-    postId === comment.postId
+    comment.postId === commentId
   ));
 }
 
