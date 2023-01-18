@@ -27,11 +27,7 @@ export const PostInfo: React.FC<Props> = ({ totalData }) => {
         <p>
           {' Posted by  '}
 
-          {user !== null ? (
-            <UserInfo currentUser={user} />
-          ) : (
-            null
-          )}
+          {user && <UserInfo currentUser={user} />}
 
         </p>
       </div>
@@ -41,14 +37,13 @@ export const PostInfo: React.FC<Props> = ({ totalData }) => {
       </p>
 
       <>
-        {arrayOfComments.length === 0 ? (
+        {arrayOfComments.length ? (
+          <CommentList comments={arrayOfComments} />
+        ) : (
           <>
             <hr />
-
             <b data-cy="NoCommentsMessage">No comments yet</b>
           </>
-        ) : (
-          <CommentList comments={arrayOfComments} />
         )}
       </>
 
