@@ -2,16 +2,55 @@ import React from 'react';
 
 import './App.scss';
 
-// import postsFromServer from './api/posts';
+import postsFromServer from './api/posts';
 // import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import usersFromServer from './api/users';
+import { User } from './types/User';
+import { Post } from './types/Post';
+
+function getUser(userId: number): User | null {
+  const founduser = usersFromServer.find(user => user.id === userId);
+
+  // if there is no user with a given userId
+  return founduser || null;
+}
+
+export const posts: Post[] = postsFromServer.map(post => ({
+  ...post,
+  user: getUser(post.userId),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
+    {
+      posts.map(post => (
+        <div className="PostInfo" key={post.id}>
+          <div className="PostInfo__header">
+            <h3 className="PostInfo__title">{post.title}</h3>
 
+            <p>
+              {' Posted by  '}
+
+              <a className="UserInfo" href={`mailto:${post.user?.email}`}>
+                {post.user?.name}
+              </a>
+            </p>
+          </div>
+
+          <p className="PostInfo__body">
+            {post.body}
+          </p>
+
+          <hr />
+
+          <b data-cy="NoCommentsMessage">No comments yet</b>
+        </div>
+      ))
+    }
     <div className="PostList">
-      <div className="PostInfo">
+
+      {/* <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
 
@@ -103,7 +142,7 @@ export const App: React.FC = () => (
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   </section>
 );
