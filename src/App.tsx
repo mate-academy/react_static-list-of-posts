@@ -1,31 +1,23 @@
 import React from 'react';
+
 import './App.scss';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { Post } from './Types/Post';
-import { User } from './Types/User';
-import { Comment } from './Types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
-  const userForPost = usersFromServer.find(user => (user.id === userId));
+const posts = postsFromServer.map(post => {
+  const neededUser = usersFromServer.find(user => user.id === post.userId);
+  const comments = commentsFromServer.filter(
+    comment => comment.postId === post.id,
+  );
 
-  return userForPost || null;
-}
+  const preparedPost:Post = { ...post, user: neededUser || null, comments };
 
-function getComment(postId: number): Comment[] {
-  return commentsFromServer.filter(comment => (comment.postId === postId));
-}
-
-const posts: Post[] = postsFromServer.map(post => (
-  {
-    ...post,
-    user: getUser(post.userId),
-    comments: getComment(post.id),
-  }
-));
+  return preparedPost;
+});
 
 export const App: React.FC = () => (
   <section className="App">
