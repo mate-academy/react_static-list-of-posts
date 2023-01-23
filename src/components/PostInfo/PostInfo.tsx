@@ -18,13 +18,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
     comments,
   } = post;
 
-  const noComments = <b data-cy="NoCommentsMessage">No comments yet</b>;
-  const yesComments = (
-    <div className="CommentList">
-      {comments && <CommentList comments={comments} />}
-    </div>
-  );
-
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -41,7 +34,13 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {body}
       </p>
 
-      {comments && comments.length > 0 ? yesComments : noComments }
+      {comments.length
+        ? (
+          <div className="CommentList">
+            {comments && <CommentList comments={comments} />}
+          </div>
+        )
+        : <b data-cy="NoCommentsMessage">No comments yet</b> }
     </div>
   );
 };
