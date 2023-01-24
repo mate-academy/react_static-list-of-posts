@@ -9,6 +9,6 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   const { name, email } = user;
 
   return (
-    user && <a className="UserInfo" href={email}>{name}</a>
+    user && <a className="UserInfo" href={`mailto:${email}`}>{name}</a>
   );
 };
