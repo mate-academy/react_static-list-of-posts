@@ -7,6 +7,7 @@ import './PostInfo.scss';
 interface Props {
   post: Post;
 }
+
 export const PostInfo: React.FC<Props> = ({
   post: {
     title, body, user, comments,
