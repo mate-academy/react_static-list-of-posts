@@ -22,11 +22,13 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           {title}
         </h3>
 
-        <p>
-          {' Posted by  '}
+        {user && (
+          <p>
+            {' Posted by  '}
 
-          {user && <UserInfo user={user} />}
-        </p>
+            <UserInfo user={user} />
+          </p>
+        )}
 
       </div>
 
@@ -34,15 +36,15 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {body}
       </p>
 
-      {comments?.length
-        ? (<CommentList comments={comments} />)
-        : (
-          <>
-            <hr />
+      {comments?.length ? (
+        <CommentList comments={comments} />
+      ) : (
+        <>
+          <hr />
 
-            <b data-cy="NoCommentsMessage">No comments yet</b>
-          </>
-        )}
+          <b data-cy="NoCommentsMessage">No comments yet</b>
+        </>
+      )}
     </div>
   );
 };
