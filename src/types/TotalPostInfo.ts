@@ -1,11 +1,8 @@
+import { Post } from './Post';
 import { User } from './User';
 import { Comment } from './Comment';
 
-export interface TotalPostInfo {
-  userId: number,
-  id: number,
-  title: string,
-  body: string,
+export interface TotalPostInfo extends Post {
   user: User | null,
   comments: Comment[],
 }

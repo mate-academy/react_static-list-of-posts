@@ -12,16 +12,11 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 function getComments(postId: number): Comment[] {
-  const foundComments
-    = commentsFromServer.filter(comment => comment.postId === postId);
-
-  return foundComments;
+  return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
 function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 export const totalPostInfo: TotalPostInfo[]
