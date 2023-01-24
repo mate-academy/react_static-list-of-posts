@@ -23,7 +23,7 @@ function getCommentByPost(postId: number): Comment[] | [] {
     comment => comment.postId === postId,
   );
 
-  return foundComment || [];
+  return foundComment;
 }
 
 const posts: Post[] = postsFromServer.map(post => ({
