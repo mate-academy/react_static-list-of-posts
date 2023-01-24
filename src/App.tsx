@@ -9,13 +9,13 @@ import { PostList } from './components/PostList';
 import { Comment } from './types/Comment';
 import { User } from './types/User';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => (user.id === userId));
 
   return foundUser || null;
 }
 
-function getComment(postId: number): Comment[] {
+function getComments(postId: number): Comment[] {
   const foundComment = commentsFromServer
     .filter(comment => (comment.postId === postId));
 
@@ -25,8 +25,8 @@ function getComment(postId: number): Comment[] {
 const posts: Post[] = postsFromServer.map(post => (
   {
     ...post,
-    user: getUser(post.userId),
-    comments: getComment(post.id),
+    user: getUserById(post.userId),
+    comments: getComments(post.id),
   }
 ));
 
