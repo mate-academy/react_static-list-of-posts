@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
@@ -12,9 +12,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <>
       {comments.map(comment => (
-        <Fragment key={comment.id}>
-          <CommentInfo comment={comment} />
-        </Fragment>
+        <CommentInfo comment={comment} key={comment.id} />
       ))}
     </>
   );

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Post } from '../../types/Post';
 import { PostInfo } from '../PostInfo';
 
@@ -6,14 +6,10 @@ type Props = {
   posts: Post[];
 };
 
-export const PostList: React.FC<Props> = ({ posts = [] }) => {
-  return (
-    <>
-      {posts.map(post => (
-        <Fragment key={post.id}>
-          <PostInfo post={post} />
-        </Fragment>
-      ))}
-    </>
-  );
-};
+export const PostList: React.FC<Props> = ({ posts = [] }) => (
+  <>
+    {posts.map(post => (
+      <PostInfo post={post} key={post.id} />
+    ))}
+  </>
+);
