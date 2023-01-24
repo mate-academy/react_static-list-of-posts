@@ -1,4 +1,4 @@
-.PostInfo {
+.post-info {
   margin: 10px auto;
   width: 90%;
   border: 1px solid #000;
@@ -8,6 +8,7 @@
 
   &__title {
     margin: 0;
+    width: 500px;
   }
 
   &__header {

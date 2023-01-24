@@ -32,8 +32,8 @@ const posts: Post[] = postsFromServer.map(post => ({
 }));
 
 export const App: React.FC = () => (
-  <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+  <section className="app">
+    <h1 className="app__title">Static list of posts</h1>
     <PostList posts={posts} />
   </section>
 );
