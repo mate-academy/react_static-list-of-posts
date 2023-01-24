@@ -6,13 +6,13 @@ import { Comment } from '../types/Comment';
 import { User } from '../types/User';
 import { Post } from '../types/Post';
 
-function getUser(userId:number): User | null {
+function getUserById(userId:number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComments(postId:number): Comment[] {
+function getCommentsByPostId(postId:number): Comment[] {
   const foundComments = commentsFromServer.filter(comment => (
     comment.postId === postId
   ));
@@ -22,6 +22,6 @@ function getComments(postId:number): Comment[] {
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
-  comments: getComments(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentsByPostId(post.id),
 }));
