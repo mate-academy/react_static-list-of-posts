@@ -8,13 +8,11 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  <>
-    <div className="CommentList">
-      <CommentInfo
-        name={comments.name}
-        email={comments.email}
-        body={comments.body}
-      />
-    </div>
-  </>
+  <div className="CommentList">
+    <CommentInfo
+      name={comments.name}
+      email={comments.email}
+      body={comments.body}
+    />
+  </div>
 );
