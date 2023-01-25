@@ -9,15 +9,13 @@ type Props = {
 };
 
 export const PostList: React.FC<Props> = ({ post }) => (
-  <>
-    <div className="PostList">
+  <div className="PostList">
 
-      { post.map(content => (
-        content.user
-        && (
-          <PostInfo {...content} />
-        )
-      ))}
-    </div>
-  </>
+    { post.map(content => (
+      content.user
+      && (
+        <PostInfo {...content} />
+      )
+    ))}
+  </div>
 );
