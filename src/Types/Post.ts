@@ -1,11 +1,11 @@
 import { Comments } from './Comments';
-import { Users } from './Users';
+import { User } from './User';
 
-export interface Posts {
+export interface Post {
   userId: number,
   id: number,
   title: string,
   body: string,
-  user: Users | null,
+  user: User | null,
   comments: Comments[],
 }
