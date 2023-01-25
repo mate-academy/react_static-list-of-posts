@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.scss';
+
 import { PostList } from './components/PostList';
 import { Comment } from './types/Comment';
 import { FullPost, Post } from './types/Post';
