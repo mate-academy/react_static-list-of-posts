@@ -19,10 +19,9 @@ const getUser = (userId: number): User | null => {
 };
 
 const getComments = (postId: number): Comment[] => {
-  const comments = commentsFromServer
-    .filter(comment => comment.postId === postId);
-
-  return comments;
+  return commentsFromServer.filter(comment => (
+    comment.postId === postId
+  ));
 };
 
 const posts: Post[] = postsFromServer.map(post => ({
