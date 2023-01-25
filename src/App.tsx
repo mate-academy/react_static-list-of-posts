@@ -17,11 +17,11 @@ function getUserById(userId: number): User | null {
   return foundUser || null;
 }
 
-function getCommentsById(postId: number): Comment[] | [] {
+function getCommentsById(postId: number): Comment[] {
   const foundComments = commentsFromServer
     .filter(comment => comment.postId === postId);
 
-  return foundComments || [];
+  return foundComments;
 }
 
 export const postsInfo: Post[] = postsFromServer.map(post => ({
