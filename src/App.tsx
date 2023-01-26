@@ -11,8 +11,8 @@ import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
 const preparePosts = (
-  posts: Post[], // userId
-  comments: Comment[], // postId
+  posts: Post[],
+  comments: Comment[],
   users: User[],
 ): PostComplete[] => {
   return posts.map((post) => ({
