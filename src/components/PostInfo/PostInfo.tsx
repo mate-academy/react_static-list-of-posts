@@ -24,21 +24,19 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           {title}
         </h3>
 
-        <p>
-          {user && (
-            <>
-              {' Posted by  '}
-              <UserInfo user={user} />
-            </>
-          )}
-        </p>
+        {user && (
+          <p>
+            {' Posted by  '}
+            <UserInfo user={user} />
+          </p>
+        )}
       </div>
 
       <p className="PostInfo__body">
         {body}
       </p>
 
-      {comments.length > 0
+      {comments.length
         ? <CommentList comments={comments} />
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
