@@ -20,7 +20,7 @@ function getComment(commentId: number): Comment[] {
   const foundComment
     = commentsFromServer.filter(comment => (comment.postId === commentId));
 
-    return foundComment || null;
+  return foundComment || null;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({

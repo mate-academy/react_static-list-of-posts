@@ -3,7 +3,7 @@ import { Comment } from '../../types/Comment';
 
 type Props = {
   comment: Comment;
-}
+};
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const {
@@ -11,6 +11,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
     email,
     body,
   } = comment;
+
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
@@ -30,5 +31,5 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
         {body}
       </div>
     </div>
-  )
+  );
 };

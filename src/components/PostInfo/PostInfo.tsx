@@ -5,7 +5,7 @@ import { UserInfo } from '../UserInfo';
 
 type Props = {
   post: Post;
-}
+};
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
@@ -14,6 +14,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
     user,
     comments,
   } = post;
+
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -35,8 +36,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
       {comments.length
         ? <CommentList comments={comments} />
-        : <b data-cy="NoCommentsMessage">No comments yet</b>
-      }
+        : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   );
 };
