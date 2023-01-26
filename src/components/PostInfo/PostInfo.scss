@@ -13,4 +13,9 @@
   &__header {
     margin-bottom: 1em;
   }
+
+  &_message {
+    display: block;
+    border-top-style: inset;
+  }
 }

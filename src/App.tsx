@@ -1,33 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
+import { PostList } from './components/PostList';
+import { posts } from './api/posts';
 
 import './App.scss';
 
-import postsFromServer from './api/posts';
-import commentsFromServer from './api/comments';
-import usersFromServer from './api/users';
-import { PostList } from './components/PostList';
-import { User } from './types/User';
-import { Comment } from './types/Comment';
-
-function getUser(id: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === id);
-
-  return foundUser || null;
-}
-
-function getComment(id: number): Comment[] {
-  return commentsFromServer.filter(
-    comment => id === comment.postId,
-  );
-}
-
-export const posts = postsFromServer.map(post => ({
-  ...post,
-  user: getUser(post.userId),
-  comments: getComment(post.id),
-}));
-
-export const App: React.FC = () => (
+export const App: FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
     <PostList posts={posts} />

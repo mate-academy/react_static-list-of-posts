@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 
-export default [
+import { Comment } from '../types';
+
+export const comments = [
   {
     postId: 1,
     id: 1,
@@ -3453,3 +3455,9 @@ export default [
     body: 'perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis',
   },
 ];
+
+export function getComment(postId: number): Comment[] {
+  return comments.filter(
+    comment => postId === comment.postId,
+  );
+}

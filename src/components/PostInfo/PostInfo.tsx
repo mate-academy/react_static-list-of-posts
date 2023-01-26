@@ -1,5 +1,5 @@
 import React from 'react';
-import { Post } from '../../types/Post';
+import { Post } from '../../types';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
@@ -17,34 +17,31 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   } = post;
 
   return (
-    <>
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">{title}</h3>
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{title}</h3>
 
-          <p>
-            {' Posted by  '}
-
-            {user && (
-              <UserInfo user={user} />
-            )}
-          </p>
-        </div>
-
-        <p className="PostInfo__body">
-          {body}
+        <p>
+          {user && (
+            <UserInfo user={user} />
+          )}
         </p>
-
-        {comments.length === 0 ? (
-          <>
-            <hr />
-
-            <b data-cy="NoCommentsMessage">No comments yet</b>
-          </>
-        ) : (
-          <CommentList comments={comments} />
-        )}
       </div>
-    </>
+
+      <p className="PostInfo__body">
+        {body}
+      </p>
+
+      {comments.length
+        ? (<CommentList comments={comments} />)
+        : (
+          <b
+            className="PostInfo_message"
+            data-cy="NoCommentsMessage"
+          >
+            No comments yet
+          </b>
+        )}
+    </div>
   );
 };
