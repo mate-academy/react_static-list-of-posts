@@ -1,7 +1,7 @@
 import postsFromServer from '../../api/posts';
 import usersFromServer from '../../api/users';
 import commentsFromServer from '../../api/comments';
-import { Comments } from '../../Types/Comments';
+import { Comment } from '../../Types/Comment';
 import { Post } from '../../Types/Post';
 import { User } from '../../Types/User';
 
@@ -11,7 +11,7 @@ const getUser = (userId: number): User | null => {
   return foundUser || null;
 };
 
-const getComment = (postId: number): Comments[] => {
+const getComment = (postId: number): Comment[] => {
   const foundComment = commentsFromServer.filter(comment => (
     comment.postId === postId));
 
