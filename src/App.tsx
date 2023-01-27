@@ -13,13 +13,11 @@ const makeFullPosts = (
   comments: CommentType[],
   users: UserType[],
 ) => {
-  return posts.map(post => (
-    {
-      ...post,
-      user: users.find(user => post.userId === user.id),
-      comments: comments.filter(comment => post.id === comment.postId),
-    }
-  ));
+  return posts.map(post => ({
+    ...post,
+    user: users.find(user => post.userId === user.id),
+    comments: comments.filter(comment => post.id === comment.postId),
+  }));
 };
 
 const fullPosts = makeFullPosts(
