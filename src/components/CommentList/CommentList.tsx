@@ -1,5 +1,14 @@
-import React from 'react';
+import { Comment } from '../../types/Comment';
+import { CommentInfo } from '../CommentInfo';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
+interface CommentArr {
+  commentsFromServer: Comment[];
+}
+
+export const CommentList = ({ commentsFromServer }: CommentArr) => (
+  <div className="CommentList">
+    {commentsFromServer.map((comment) => (
+      <CommentInfo key={comment.id} comment={comment} />
+    ))}
+  </div>
 );
