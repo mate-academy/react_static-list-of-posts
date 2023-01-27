@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import { User } from '../types';
+import { User } from '../types/User';
 
 export const users = [
   {

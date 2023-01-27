@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import { Comment } from '../types';
+import { Comment } from '../types/Comment';
 
 export const comments = [
   {
