@@ -12,21 +12,13 @@ import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
 function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
-function getComment(postId: number): Comment[] | null {
-  const foundComment = commentsFromServer.filter(
+function getComment(postId: number): Comment[] | [] {
+  return commentsFromServer.filter(
     comment => comment.postId === postId,
   );
-
-  if (foundComment.length > 0) {
-    return foundComment;
-  }
-
-  return null;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({

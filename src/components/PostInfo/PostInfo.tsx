@@ -38,9 +38,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
             {body}
           </p>
 
-          {comments && (
-            <CommentList comments={comments} />
-          )}
+          <CommentList comments={comments} message="No comments yet" />
         </div>
       )}
     </>
