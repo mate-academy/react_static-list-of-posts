@@ -1,5 +1,17 @@
 import React from 'react';
+import { PostInfo } from '../PostInfo';
+import { FullPostType } from '../../types/FullPost';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+import './PostList.scss';
+
+interface PostListPropsType {
+  posts: FullPostType[];
+}
+
+export const PostList: React.FC<PostListPropsType> = ({ posts }) => (
+  <div className="PostList">
+    {posts.map(post => (
+      <PostInfo post={post} key={post.id} />
+    ))}
+  </div>
 );
