@@ -1,22 +1,20 @@
 import React from 'react';
-import { CommentType } from '../../types/CommentType';
-import { UserType } from '../../types/UserType';
+import { PostType } from '../../types/PostType';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type PostInfoProps = {
-  user: UserType | null;
-  comments: CommentType[] | null;
-  title: string;
-  body: string;
+  post: PostType;
 };
 
-export const PostInfo: React.FC<PostInfoProps> = ({
-  user,
-  comments,
-  title,
-  body,
-}) => {
+export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
+  const {
+    user,
+    title,
+    comments,
+    body,
+  } = post;
+
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -25,13 +23,7 @@ export const PostInfo: React.FC<PostInfoProps> = ({
         <p>
           {' Posted by  '}
 
-          {user && (
-            <UserInfo
-              name={user.name}
-              email={user.email}
-              key={user.id}
-            />
-          )}
+          {user && <UserInfo user={user} /> }
         </p>
       </div>
 
@@ -40,9 +32,13 @@ export const PostInfo: React.FC<PostInfoProps> = ({
       </div>
 
       {comments?.length
-        ? comments.map(comment => (
-          <CommentList comment={comment} key={comment.id} />
-        ))
+        ? (
+          <>
+            <hr />
+
+            <CommentList comments={comments} />
+          </>
+        )
         : (
           <>
             <hr />

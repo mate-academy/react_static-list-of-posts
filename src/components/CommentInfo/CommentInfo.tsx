@@ -1,14 +1,12 @@
+import { CommentType } from '../../types/CommentType';
+
 type CommentInfoProps = {
-  name: string;
-  email: string;
-  body: string;
+  comment: CommentType;
 };
 
-export const CommentInfo: React.FC<CommentInfoProps> = ({
-  name,
-  email,
-  body,
-}) => {
+export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
+  const { name, email, body } = comment;
+
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
