@@ -14,13 +14,11 @@ const preparePosts = (
   posts: Post[],
   comments: Comment[],
   users: User[],
-): FullPost[] => {
-  return posts.map(post => ({
-    ...post,
-    comments: comments.filter(comment => comment.postId === post.id),
-    user: users.find(user => user.id === post.userId) || null,
-  }));
-};
+): FullPost[] => posts.map(post => ({
+  ...post,
+  comments: comments.filter(comment => comment.postId === post.id),
+  user: users.find(user => user.id === post.userId) || null,
+}));
 
 const preparedPosts = preparePosts(
   postsFromServer,
