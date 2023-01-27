@@ -1,6 +1,6 @@
 export interface User {
-  id?: number | undefined,
-  name?: string | undefined,
-  username?: string | undefined,
-  email?: string | undefined,
+  id: number,
+  name: string,
+  username: string,
+  email: string,
 }
