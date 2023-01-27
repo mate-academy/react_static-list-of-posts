@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 
-export default [
+import { User } from '../types/User';
+
+export const users = [
   {
     id: 1,
     name: 'Leanne Graham',
@@ -62,3 +64,9 @@ export default [
     email: 'Rey.Padberg@karina.biz',
   },
 ];
+
+export function getUser(id: number): User | null {
+  const foundUser = users.find(user => user.id === id);
+
+  return foundUser || null;
+}

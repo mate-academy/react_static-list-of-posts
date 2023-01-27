@@ -1,6 +1,9 @@
 /* eslint-disable max-len */
 
-export default [
+import { getUser } from './users';
+import { getComment } from './comments';
+
+export const postsList = [
   {
     userId: 1,
     id: 1,
@@ -122,3 +125,9 @@ export default [
     body: 'libero voluptate eveniet aperiam sed\nsunt placeat suscipit molestias\nsimilique fugit nam natus\nexpedita consequatur consequatur dolores quia eos et placeat',
   },
 ];
+
+export const posts = postsList.map(post => ({
+  ...post,
+  user: getUser(post.userId),
+  comments: getComment(post.id),
+}));

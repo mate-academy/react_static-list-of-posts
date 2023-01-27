@@ -1,1 +1,12 @@
-//
+.CommentInfo {
+
+  &__name {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  &__email {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
