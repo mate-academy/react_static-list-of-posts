@@ -21,7 +21,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   return (
     <>
       {user && (
-        <div className="PostInfo">
+        <li className="PostInfo">
           <div className="PostInfo__header">
             <h3 className="PostInfo__title">
               {title}
@@ -39,7 +39,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           </p>
 
           <CommentList comments={comments} message="No comments yet" />
-        </div>
+        </li>
       )}
     </>
   );
