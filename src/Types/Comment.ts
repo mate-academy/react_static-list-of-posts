@@ -1,5 +1,3 @@
-// import { User } from './User';
-
 export interface Comment {
   postId: number,
   id: number,
