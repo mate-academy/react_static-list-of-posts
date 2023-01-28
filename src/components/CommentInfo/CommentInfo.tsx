@@ -7,19 +7,23 @@ interface CommentInfoProps {
 export const CommentInfo = ({ comment }: CommentInfoProps) => {
   const { name, email, body } = comment;
 
-  return (
-    <div className="CommentInfo">
-      <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{name}</strong>
+  if (comment) {
+    return (
+      <div className="CommentInfo">
+        <div className="CommentInfo__title">
+          <strong className="CommentInfo__name">{name}</strong>
 
-        {' by '}
+          {' by '}
 
-        <a className="CommentInfo__email" href={email}>
-          {email}
-        </a>
+          <a className="CommentInfo__email" href={`mailto:${email}`}>
+            {email}
+          </a>
+        </div>
+
+        <div className="CommentInfo__body">{body}</div>
       </div>
+    );
+  }
 
-      <div className="CommentInfo__body">{body}</div>
-    </div>
-  );
+  return <b data-cy="NoCommentsMessage">No comments yet</b>;
 };

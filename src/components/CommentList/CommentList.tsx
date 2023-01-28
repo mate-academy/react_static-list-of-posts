@@ -2,12 +2,12 @@ import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
 interface CommentArr {
-  commentsFromServer: Comment[];
+  comments: Comment[];
 }
 
-export const CommentList = ({ commentsFromServer }: CommentArr) => (
+export const CommentList = ({ comments }: CommentArr) => (
   <div className="CommentList">
-    {commentsFromServer.map((comment) => (
+    {comments.map((comment) => (
       <CommentInfo key={comment.id} comment={comment} />
     ))}
   </div>
