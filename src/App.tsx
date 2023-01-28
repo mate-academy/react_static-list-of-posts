@@ -27,16 +27,13 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-const posts: Post[] = postsFromServer.map(post => {
-  const user: User | null = getUser(post.userId);
-  const comments: Comment[] | null = getComments(post.id);
-
-  return {
+const posts: Post[] = postsFromServer.map(post => (
+  {
     ...post,
-    user,
-    comments,
-  };
-});
+    user: getUser(post.userId),
+    comments: getComments(post.id),
+  }
+));
 
 export const App: React.FC = () => (
   <section className="App">
