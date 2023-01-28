@@ -1,4 +1,5 @@
 import React from 'react';
+import './PostList.scss';
 import { Post } from '../../types/Post';
 
 import { PostInfo } from '../PostInfo';
