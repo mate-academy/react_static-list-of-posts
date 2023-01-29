@@ -6,23 +6,23 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { Users } from './types/Users';
-import { Comments } from './types/Comments';
-import { Posts } from './types/Posts';
+import { User } from './types/User';
 
 import { PostList } from './components/PostList';
+import { Comment } from './types/Comment';
+import { Post } from './types/Post';
 
-function getUser(userId: number): Users | null {
+function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComments(id: number): Comments[] {
+function getComments(id: number): Comment[] {
   return commentsFromServer.filter(comment => comment.postId === id);
 }
 
-export const posts: Posts[] = postsFromServer.map(post => ({
+export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
   comments: getComments(post.id),
