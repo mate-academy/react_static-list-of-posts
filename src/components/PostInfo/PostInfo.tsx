@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
-import { Post } from '../../types/Post';
+import { Post } from '../../types';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 

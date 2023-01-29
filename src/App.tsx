@@ -6,9 +6,7 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { Post } from './types/Post';
-import { User } from './types/User';
-import { Comment } from './types/Comment';
+import { Post, User, Comment } from './types';
 
 import { PostList } from './components/PostList';
 
