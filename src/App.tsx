@@ -3,38 +3,32 @@ import './App.scss';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { Post } from './types/Post';
+
+import { FullPost, Post } from './types/Post';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
+const preparePosts = (
+  posts: Post[],
+  comments: Comment[],
+  users: User[],
+): FullPost[] => (
+  posts.map((post) => ({
+    ...post,
+    comments: comments.filter((comment) => comment.postId === post.id),
+    user: users.find((user) => user.id === post.userId) || null,
+  }))
+);
 
-  return foundUser || null;
-}
-
-function getComments(id: number): Comment[] {
-  const foundComments = commentsFromServer
-    .filter(comment => comment.postId === id);
-
-  return foundComments;
-}
-
-export const posts: Post[] = postsFromServer.map(post => ({
-  ...post,
-  user: getUser(post.userId),
-  comments: getComments(post.id),
-}));
+const preparedPosts = preparePosts(
+  postsFromServer,
+  commentsFromServer,
+  usersFromServer,
+);
 
 export const App: React.FC = () => (
   <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
-    <div className="PostList">
-      <PostList
-        posts={posts}
-      />
-    </div>
-
+    <PostList posts={preparedPosts} />
   </section>
 );

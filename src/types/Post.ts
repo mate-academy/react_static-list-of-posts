@@ -1,11 +1,14 @@
-import { User } from './User';
 import { Comment } from './Comment';
+import { User } from './User';
 
 export interface Post {
-  id: number,
-  userId: number,
-  title: string,
-  body: string,
-  user: User | null,
-  comments:Comment[],
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+export interface FullPost extends Post {
+  comments: Comment[];
+  user: User | null;
 }
