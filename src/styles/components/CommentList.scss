@@ -1,7 +1,9 @@
+@import '../utils/variables';
+
 .CommentList {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  background-color: #eee;
+  background-color: $color-white;
   padding: 1em;
 }

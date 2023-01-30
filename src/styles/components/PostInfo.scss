@@ -1,9 +1,11 @@
+@import '../utils/variables';
+
 .PostInfo {
   margin: 10px auto;
   width: 90%;
-  border: 1px solid #000;
+  border: 1px solid $color-black;
   border-radius: 8px;
-  background-color: lightgray;
+  background-color: $color-lightGray;
   padding: 1em;
 
   &__title {
