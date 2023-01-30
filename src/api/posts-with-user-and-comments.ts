@@ -7,9 +7,7 @@ import { User } from '../types/User';
 import { Post } from '../types/Post';
 
 function getUserById(userId:number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommentsByPostId(postId:number): Comment[] {
