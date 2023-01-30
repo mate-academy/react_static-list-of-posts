@@ -1,0 +1,18 @@
+@import '../utils/variables';
+
+.PostInfo {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid $color-black;
+  border-radius: 8px;
+  background-color: $color-lightGray;
+  padding: 1em;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}
