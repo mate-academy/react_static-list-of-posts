@@ -16,6 +16,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
     comments,
   } = post;
 
+  const hasComment = Boolean(comments.length > 0);
+
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -23,7 +25,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
         { user && (
           <p>
-            {' Posted by  '}
             <UserInfo user={user} />
           </p>
         )}
@@ -33,7 +34,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {body}
       </p>
 
-      {(comments.length > 0)
+      {/* {comments.length */}
+      {(hasComment)
         ? (<CommentList comments={comments} />)
         : (
           <>
