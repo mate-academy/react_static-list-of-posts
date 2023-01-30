@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { FullPost } from '../../types/FullPosts';
-
 import { PostInfo } from '../PostInfo';
 
 interface Props {

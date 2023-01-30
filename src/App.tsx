@@ -17,7 +17,7 @@ const preparePost = (
   posts: Posts[],
   comments: Comments[],
   users: Users[],
-) :FullPost[] => {
+): FullPost[] => {
   return posts.map(post => ({
     ...post,
     comments: comments.filter((comment) => comment.postId === post.id),
