@@ -9,9 +9,7 @@ import { PostList } from './components/PostList';
 import { User } from './types/User';
 
 function getUserById(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommentByPostId(postId: number): Comment[] {
