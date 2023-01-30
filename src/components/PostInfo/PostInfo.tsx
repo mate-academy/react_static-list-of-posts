@@ -9,34 +9,42 @@ import { UserInfo } from '../UserInfo';
 interface Prop {
   post: FullPost
 }
-export const PostInfo: React.FC<Prop> = ({ post }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">
-        {post.title}
-      </h3>
+export const PostInfo: React.FC<Prop> = ({ post }) => {
+  const {
+    title,
+    user,
+    body,
+    comments,
+  } = post;
 
-      <p>
-        {' Posted by  '}
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">
+          {title}
+        </h3>
 
-        {post.user
-          ? (<UserInfo user={post.user} />)
-          : 'incognito'}
+        <p>
+          {' Posted by  '}
+
+          {user
+            ? (<UserInfo user={user} />)
+            : 'incognito'}
+        </p>
+      </div>
+
+      <p className="PostInfo__body">
+        {body}
       </p>
+
+      {comments.length > 0
+        ? <CommentList comments={comments} />
+        : (
+          <>
+            <hr />
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        )}
     </div>
-
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    {post.comments.length > 0
-      ? <CommentList comments={post.comments} />
-      : (
-        <>
-          <hr />
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        </>
-      )}
-
-  </div>
-);
+  );
+};
