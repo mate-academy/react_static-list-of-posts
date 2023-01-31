@@ -10,9 +10,9 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-const getUserById = (userId : number) : User | null => usersFromServer.find(
-  (user) => user.id === userId,
-) || null;
+const getUserById = (userId: number): User | null => {
+  return usersFromServer.find((user) => user.id === userId) || null;
+};
 
 const getCommentsById = (postId : number) : Comment[] => commentsFromServer
   .filter(
