@@ -8,6 +8,6 @@ interface Props {
 
 export const PostList: React.FC<Props> = ({ fullPosts }) => (
   <div className="PostList">
-    {fullPosts.map((post) => <PostInfo post={post} />)}
+    {fullPosts.map((post) => <PostInfo post={post} key={post.id} />)}
   </div>
 );
