@@ -8,24 +8,29 @@ interface PostInfoProps {
   post: Post
 }
 
-export const PostInfo: React.FC<PostInfoProps> = ({ post }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
-      {post.user && (
-        <p>
-          {' Posted by  '}
-          <UserInfo user={post.user} />
-        </p>
-      )}
-    </div>
+export const PostInfo: React.FC<PostInfoProps> = ({ post }) =>
+{
+  const {title, user,comments} = post;
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{title}</h3>
+        {user && (
+          <p>
+            {' Posted by  '}
+            <UserInfo user={user} />
+          </p>
+        )}
+      </div>
 
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-    <hr />
-    {post.comments && post.comments.length > 0
-      ? <CommentList comments={post.comments} />
-      : <b data-cy="NoCommentsMessage">No comments yet</b>}
-  </div>
-);
+      <p className="PostInfo__body">
+        {post.body}
+      </p>
+      <hr />
+      {comments && comments.length > 0
+        ? <CommentList comments={comments} />
+        : <b data-cy="NoCommentsMessage">No comments yet</b>}
+    </div>
+  );
+}
+
