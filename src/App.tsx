@@ -17,17 +17,17 @@ const findUserById = (users: User[], id: number): FoundUser => (
   users.find((user) => id === user.id) || null
 );
 
-const filterCommentsById = (comments: Comment[], id: number) => (
+const getFilteredCommentsById = (comments: Comment[], id: number) => (
   comments.filter(({ postId }) => postId === id)
 );
 
 const posts = postsFromServer.map((post) => {
-  const { userId, id } = post;
+  const { userId, id: postId } = post;
 
   return {
     ...post,
     user: findUserById(usersFromServer, userId),
-    comments: filterCommentsById(commentsFromServer, id),
+    comments: getFilteredCommentsById(commentsFromServer, postId),
   };
 });
 
