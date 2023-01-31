@@ -2,19 +2,32 @@ import React from 'react';
 
 import './App.scss';
 
+import { User } from './types/User';
+import { Comment } from './types/Comment';
+
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 import { PostList } from './components/PostList';
 
+type FoundUser = User | null;
+
+const findUserById = (users: User[], id: number): FoundUser => (
+  users.find((user) => id === user.id) || null
+);
+
+const filterCommentsById = (comments: Comment[], id: number) => (
+  comments.filter(({ postId }) => postId === id)
+);
+
 const posts = postsFromServer.map((post) => {
   const { userId, id } = post;
 
   return {
     ...post,
-    user: usersFromServer.find((user) => userId === user.id),
-    comments: commentsFromServer.filter(({ postId }) => postId === id),
+    user: findUserById(usersFromServer, userId),
+    comments: filterCommentsById(commentsFromServer, id),
   };
 });
 
