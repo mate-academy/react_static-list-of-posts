@@ -10,9 +10,7 @@ import { PostList } from './components/PostList';
 import './App.scss';
 
 function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getComment(postId: number): Comment[] {
