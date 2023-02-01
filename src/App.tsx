@@ -21,16 +21,18 @@ function getUser(userId: number): UserType | null {
   return foundUser || null;
 }
 
-function getComm(postId: number): CommentType[] | null {
-  const foundComm = commentsFromServer.filter(comm => comm.postId === postId);
+function getComments(postId: number): CommentType[] {
+  const foundComments = (
+    commentsFromServer.filter(comm => comm.postId === postId)
+  );
 
-  return foundComm || null;
+  return foundComments;
 }
 
 export const posts: PostType[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
-  comments: getComm(post.id),
+  comments: getComments(post.id),
 }));
 
 export const App: React.FC = () => (

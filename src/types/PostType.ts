@@ -7,5 +7,5 @@ export interface PostType {
   title: string;
   body: string;
   user: UserType | null;
-  comments: CommentType[] | null;
+  comments: CommentType[];
 }
