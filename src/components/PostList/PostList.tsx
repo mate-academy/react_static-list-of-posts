@@ -7,9 +7,8 @@ type Props = {
   posts: Post[];
 };
 
-export const PostList: React.FC<Props> = ({ posts }) => {
-  const postList
-  = posts.length > 0 ? (
+export const PostList: React.FC<Props> = ({ posts }) => (
+  <div className="PostList">
     <ul>
       {posts.map((post) => (
         <li key={post.id}>
@@ -17,9 +16,5 @@ export const PostList: React.FC<Props> = ({ posts }) => {
         </li>
       ))}
     </ul>
-  ) : (
-    ''
-  );
-
-  return <div className="PostList">{postList}</div>;
-};
+  </div>
+);
