@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserInfo.scss';
 
 import { Post } from '../../types/Post';
 
