@@ -1,16 +1,39 @@
 import React from 'react';
-
 import './App.scss';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import { User } from './types/User';
+import { Post } from './types/Post';
+import { PostList } from './components/PostList';
+
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+
+function getUser(userId: number): User | null {
+  const foundUser = usersFromServer.find((user) => user.id === userId);
+
+  // if there is no user with a given userId
+  return foundUser || null;
+}
+
+export const posts: Post[] = postsFromServer.map((post) => ({
+  ...post,
+  user: getUser(post.userId),
+  comments: [...commentsFromServer]
+    .filter((comment) => comment.postId === post.id)
+    .map((comment) => ({
+      ...comment,
+      user: getUser(post.userId),
+    })),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <div className="PostList">
+    <PostList posts={posts} />
+
+    {/* <div className="PostList">
       <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
@@ -25,10 +48,9 @@ export const App: React.FC = () => (
         </div>
 
         <p className="PostInfo__body">
-          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae
-          ea dolores neque fugiat blanditiis voluptate porro vel nihil
-          molestiae ut reiciendis qui aperiam non debitis possimus qui neque
-          nisi nulla
+          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea
+          dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut
+          reiciendis qui aperiam non debitis possimus qui neque nisi nulla
         </p>
 
         <hr />
@@ -38,9 +60,7 @@ export const App: React.FC = () => (
 
       <div className="PostInfo">
         <div className="PostInfo__header">
-          <h3 className="PostInfo__title">
-            doloremque illum aliquid sunt
-          </h3>
+          <h3 className="PostInfo__title">doloremque illum aliquid sunt</h3>
 
           <p>
             {' Posted by  '}
@@ -104,6 +124,6 @@ export const App: React.FC = () => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
   </section>
 );
