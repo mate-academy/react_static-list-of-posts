@@ -1,29 +1,12 @@
 import React from 'react';
 import './App.scss';
 
-import { User } from './types/User';
 import { Post } from './types/Post';
-import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
+import { getUser } from './utils/getUser';
+import { getComments } from './utils/getComments';
 import postsFromServer from './api/posts';
-import commentsFromServer from './api/comments';
-import usersFromServer from './api/users';
-
-function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find((user) => user.id === userId);
-
-  // if there is no user with a given userId
-  return foundUser || null;
-}
-
-function getComments(postId: number): Comment[] | [] {
-  const comments = commentsFromServer.filter(
-    (comment) => comment.postId === postId,
-  );
-
-  return comments || [];
-}
 
 const posts: Post[] = postsFromServer.map((post) => ({
   ...post,
