@@ -1,4 +1,4 @@
-# React Static List of Posts
+# React Static List of Post
 
 > [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)
 
