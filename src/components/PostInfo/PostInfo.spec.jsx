@@ -48,7 +48,7 @@ describe('PostInfo', () => {
         comments,
       };
 
-      mount(<PostInfo post={postWithComments} />);
+      mount(<PostInfo post={postWithComments} user={user2} comments={comments} />);
     });
 
     it('should have a correct title', () => {
@@ -88,7 +88,7 @@ describe('PostInfo', () => {
         comments: [],
       };
 
-      mount(<PostInfo post={postWithoutComments} />);
+      mount(<PostInfo post={postWithoutComments} user={user2} comments={[]} />);
 
       cy.getByDataCy('NoCommentsMessage').should('exist');
       cy.get('.CommentInfo').should('not.exist');
@@ -128,7 +128,7 @@ describe('PostInfo', () => {
         comments: post1Comments,
       };
 
-      mount(<PostInfo post={otherPost} />);
+      mount(<PostInfo post={otherPost} user={user1} comments={post1Comments} />);
 
       cy.get('.PostInfo__title').should('have.text', 'ea molestias quasi exercitationem repellat qui ipsa sit aut');
       cy.get('.UserInfo').should('contain', 'Leanne Graham');
