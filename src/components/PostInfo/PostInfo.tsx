@@ -4,7 +4,7 @@ import { Post } from '../../types/Posts';
 import { Comment } from '../../types/Comments';
 import { User } from '../../types/Users';
 import { UserInfo } from '../UserInfo';
-import { CommentList } from '../CommentList';
+import { CommentList } from '../CommentList/CommentList';
 
 export interface PostWithComments extends Post {
   user: User;

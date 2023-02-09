@@ -1,6 +1,6 @@
 import React from 'react';
 import { Comment } from '../../types/Comments';
-import { CommentInfo } from '../CommentInfo';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
 
 export interface Allcoments {
   comments: Comment[];
