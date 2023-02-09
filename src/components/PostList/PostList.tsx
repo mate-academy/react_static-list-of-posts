@@ -30,7 +30,7 @@ export const PostList: React.FC<AllPosts> = ({ allPosts }) => {
   return (
     <div className="PostList">
       {postUserComent.map((postElem) => (
-        <PostInfo post={postElem} />
+        <PostInfo post={postElem} key={postElem.userId} />
       ))}
     </div>
   );

@@ -17,7 +17,7 @@ export const CommentList: React.FC<Allcoments> = ({ comments }) => {
           comments.map((elem: Comment) => (
             <>
               <div className="CommentList">
-                <CommentInfo comment={elem} />
+                <CommentInfo comment={elem} key={elem.postId} />
               </div>
             </>
           ))

@@ -13,6 +13,7 @@ export interface PostWithComments extends Post {
 
 export const PostInfo: React.FC<{ post: PostWithComments }> = ({ post }) => {
   const {
+    userId,
     title,
     body,
     user,
@@ -20,7 +21,7 @@ export const PostInfo: React.FC<{ post: PostWithComments }> = ({ post }) => {
   } = post;
 
   return (
-    <div className="PostInfo">
+    <div className="PostInfo" key={userId}>
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
           {title}
@@ -29,7 +30,7 @@ export const PostInfo: React.FC<{ post: PostWithComments }> = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          <UserInfo user={user} key={user.id} />
         </p>
       </div>
 
