@@ -2,8 +2,20 @@ import React from 'react';
 
 import { User } from '../../types/Users';
 
-export const UserInfo: React.FC<{ user: User }> = ({ user }) => (
-  <a className="UserInfo" key={user.id} href={`mailto:${user.email}`}>
-    {user.name}
-  </a>
-);
+interface Allusers {
+  user: User;
+}
+
+export const UserInfo: React.FC<Allusers> = ({ user }) => {
+  const {
+    id,
+    email,
+    name,
+  } = user;
+
+  return (
+    <a className="UserInfo" key={id} href={`mailto:${email}`}>
+      {name}
+    </a>
+  );
+};

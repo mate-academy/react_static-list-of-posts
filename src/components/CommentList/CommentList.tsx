@@ -9,19 +9,17 @@ export interface Allcoments {
 export const CommentList: React.FC<Allcoments> = ({ comments }) => {
   return (
     <>
-      {comments.length < 1
-        ? (
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        )
-        : (
-          comments.map((elem: Comment) => (
-            <>
-              <div className="CommentList">
-                <CommentInfo comment={elem} key={elem.postId} />
-              </div>
-            </>
-          ))
-        )}
+      {comments.length < 1 ? (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      ) : (
+        comments.map((elem: Comment) => (
+          <>
+            <div className="CommentList">
+              <CommentInfo comment={elem} key={elem.postId} />
+            </div>
+          </>
+        ))
+      )}
     </>
   );
 };

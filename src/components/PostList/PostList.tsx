@@ -17,7 +17,7 @@ export const PostList: React.FC<AllPosts> = ({ allPosts }) => {
   const postUserComent: PostWithComments[] = allPosts.map((elem: Post) => {
     const elemUser = users.find((user: User) => user.id === elem.userId);
     const comentElem: Comment[] = coments.filter(
-      (coment) => coment.postId === elem.userId,
+      (comment) => comment.postId === elem.id,
     );
 
     return {
