@@ -8,10 +8,10 @@ import { Comment } from './types/Comment';
 import { User } from './types/User';
 import { Post } from './types/Post';
 
-function getAuthor(id: number): User | undefined {
+function getAuthor(id: number): User | null {
   const author = usersFromServer.find(user => user.id === id);
 
-  return author || undefined;
+  return author || null;
 }
 
 function getComments(id: number): Comment[] {
