@@ -36,7 +36,7 @@ export const App: React.FC = () => {
   return (
     <section className="App">
       <h1 className="App__title">Static list of posts</h1>
-      <PostList arrObjects={listPosts} />
+      <PostList posts={listPosts} />
     </section>
   );
 };

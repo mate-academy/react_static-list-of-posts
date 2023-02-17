@@ -3,14 +3,14 @@ import { PostWithAllDate } from '../../types/postWithAllDate';
 import { PostInfo } from '../PostInfo';
 
 type Props = {
-  arrObjects: PostWithAllDate[]
+  posts: PostWithAllDate[]
 };
 
-export const PostList: React.FC<Props> = ({ arrObjects }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
     {
-      arrObjects && arrObjects.map((object: PostWithAllDate) => (
-        <PostInfo object={object} key={object.id} />
+      posts && posts.map((object: PostWithAllDate) => (
+        <PostInfo post={object} key={object.id} />
       ))
     }
   </div>

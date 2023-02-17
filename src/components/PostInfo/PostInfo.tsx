@@ -5,11 +5,11 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 type Props = {
-  object: PostWithAllDate
+  post: PostWithAllDate
 };
 
 export const PostInfo: React.FC<Props> = ({
-  object: {
+  post: {
     body,
     title,
     user,
