@@ -6,6 +6,6 @@ export interface Post {
   id: number,
   title: string,
   body: string,
-  user: User | undefined,
+  user: User | null,
   comment: Comment[],
 }
