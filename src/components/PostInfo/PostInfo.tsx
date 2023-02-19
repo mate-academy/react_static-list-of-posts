@@ -18,27 +18,34 @@ const showNoCommnets = () => (
   </>
 );
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
+export const PostInfo: React.FC<Props> = ({
+  post: {
+    title,
+    body,
+    user,
+    comments,
+  },
+}) => (
   <>
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">
-        {post.title}
+        {title}
       </h3>
 
       <p>
         {' Posted by  '}
 
-        {post.user && <UserInfo user={post.user} />}
+        {user && <UserInfo user={user} />}
       </p>
     </div>
 
     <p className="PostInfo__body">
-      {post.body}
+      {body}
     </p>
 
     {
-      post.comments.length > 0
-        ? <CommentList comments={post.comments} />
+      comments.length > 0
+        ? <CommentList comments={comments} />
         : showNoCommnets()
     }
   </>
