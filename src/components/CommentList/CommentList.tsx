@@ -4,14 +4,14 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Props = {
-  comment: Comment[];
+  comments: Comment[];
 };
-
-export const CommentList: React.FC<Props> = ({ comment }) => {
+// eslint-disable-next-line
+export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <div className="CommentList">
-      {comment.map(coment => (
-        <CommentInfo item={coment} key={coment.id} />
+      {comments.map(coment => (
+        <CommentInfo {...coment} key={coment.id} />
       ))}
     </div>
   );
