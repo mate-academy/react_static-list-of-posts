@@ -2,15 +2,11 @@ import React from 'react';
 
 type Props = {
   name: string;
-  email:string;
+  email: string;
   body: string;
 };
 
-export const CommentInfo: React.FC<Props> = ({
-  name,
-  email,
-  body,
-}) => (
+export const CommentInfo: React.FC<Props> = ({ name, email, body }) => (
   <div className="CommentInfo">
     <div className="CommentInfo_title">
       <strong className="CommentInfo_name">
