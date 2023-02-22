@@ -8,10 +8,12 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    {
-      posts && posts.map((object: PostWithAllDate) => (
-        <PostInfo post={object} key={object.id} />
-      ))
-    }
+    <ul>
+      {
+        posts && posts.map((object: PostWithAllDate) => (
+          <li><PostInfo post={object} key={object.id} /></li>
+        ))
+      }
+    </ul>
   </div>
 );
