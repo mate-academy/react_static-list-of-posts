@@ -11,7 +11,7 @@ import { Comment } from './types/Comment';
 import { User } from './types/User';
 import { Post } from './types/Post';
 
-const posts: Post[] = postsFromServer.map((post) => {
+const postsWithComments: Post[] = postsFromServer.map((post) => {
   const comments: Comment[] = commentsFromServer.filter(comment => {
     return comment.postId === post.id;
   });
@@ -30,6 +30,6 @@ const posts: Post[] = postsFromServer.map((post) => {
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={posts} />
+    <PostList posts={postsWithComments} />
   </section>
 );
