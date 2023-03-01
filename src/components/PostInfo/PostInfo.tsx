@@ -3,13 +3,7 @@ import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
-
-const showNoCommnets = () => (
-  <>
-    <hr />
-    <b data-cy="NoCommentsMessage">No comments yet</b>
-  </>
-);
+import { EmptyComments } from '../EmptyComments/EmptyComments';
 
 type Props = {
   post: Post;
@@ -41,7 +35,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       {
         comments.length
           ? <CommentList comments={comments} />
-          : showNoCommnets()
+          : <EmptyComments />
       }
     </div>
   );
