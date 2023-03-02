@@ -1,1 +1,9 @@
-//
+$grey-color: #eee;
+
+.CommentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  background-color: $grey-color;
+  padding: 1em;
+}
