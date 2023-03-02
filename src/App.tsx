@@ -34,9 +34,7 @@ export const App: React.FC = () => (
     </h1>
 
     <div className="PostList">
-      <PostList
-        posts={posts}
-      />
+      <PostList posts={posts} />
     </div>
   </section>
 );
