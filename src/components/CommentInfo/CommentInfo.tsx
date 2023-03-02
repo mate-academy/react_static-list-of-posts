@@ -28,6 +28,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
           {email}
         </a>
       </div>
+
       <div className="CommentInfo__body">
         {body}
       </div>
