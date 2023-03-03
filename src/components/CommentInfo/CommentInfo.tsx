@@ -26,5 +26,5 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
         {body}
       </div>
     </div>
-  )
-}
+  );
+};
