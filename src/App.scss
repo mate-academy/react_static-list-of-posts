@@ -27,6 +27,11 @@ iframe {
   font-weight: bold;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .CommentList {
   display: flex;
   flex-direction: column;
