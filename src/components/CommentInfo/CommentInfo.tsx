@@ -1,15 +1,14 @@
-import React from "react";
-import { Comment } from "../../types/Comment";
+import React from 'react';
+import { Comment } from '../../types/Comment';
 
 type CommentProps = {
   comment: Comment;
 };
 
 export const CommentInfo: React.FC<CommentProps> = ({
-  comment
+  comment,
 }) => {
-
-  const { name, email, body} = comment
+  const { name, email, body } = comment;
 
   return (
     <div className="CommentInfo">
@@ -18,7 +17,7 @@ export const CommentInfo: React.FC<CommentProps> = ({
           {name}
         </strong>
 
-        {" by "}
+        {' by '}
 
         <a className="CommentInfo__email" href={`mailto:${email}`}>
           {email}

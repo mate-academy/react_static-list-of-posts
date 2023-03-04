@@ -1,16 +1,18 @@
-import React from "react";
-import { Post } from "../../types/Post";
-import { CommentList } from "../CommentList";
-import { UserInfo } from "../UserInfo";
+import React from 'react';
+import { Post } from '../../types/Post';
+import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
 type PostProps = {
   post: Post;
 };
 
 export const PostInfo: React.FC<PostProps> = ({
-  post
+  post,
 }) => {
-  const { title, user, body, comments} = post;
+  const {
+    title, user, body, comments,
+  } = post;
   const isPostHaveComs = comments.length > 0;
 
   return (
@@ -21,7 +23,7 @@ export const PostInfo: React.FC<PostProps> = ({
         </h3>
 
         <p>
-          {" Posted by  "}
+          {' Posted by  '}
           <UserInfo user={user} />
         </p>
       </div>

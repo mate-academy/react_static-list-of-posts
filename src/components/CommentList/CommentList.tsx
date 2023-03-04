@@ -1,13 +1,13 @@
-import React from "react";
-import { Comment } from "../../types/Comment";
-import { CommentInfo } from "../CommentInfo";
+import React from 'react';
+import { Comment } from '../../types/Comment';
+import { CommentInfo } from '../CommentInfo';
 
 type CommentsProps = {
   comments: Comment[];
 };
 
 export const CommentList: React.FC<CommentsProps> = ({
-  comments
+  comments,
 }) => (
   <ul className="CommentList">
     {comments.map((comment) => (

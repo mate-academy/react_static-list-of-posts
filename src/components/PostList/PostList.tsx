@@ -5,10 +5,10 @@ import './PostList.scss';
 
 type PostsProps = {
   posts: Post[];
-}
+};
 
 export const PostList: React.FC<PostsProps> = ({
-  posts
+  posts,
 }) => (
   <ul className="PostList">
     {
