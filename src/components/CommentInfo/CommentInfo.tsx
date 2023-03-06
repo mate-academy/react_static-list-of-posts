@@ -12,7 +12,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const { body, email, name } = comment;
 
   return (
-    <div className="CommentInfo">
+    <li className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
 
@@ -29,6 +29,6 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
       <div className="CommentInfo__body">
         {body}
       </div>
-    </div>
+    </li>
   );
 };
