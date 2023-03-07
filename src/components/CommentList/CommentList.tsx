@@ -10,22 +10,22 @@ export const CommentList: React.FC<CommentListType> = ({
 
   return (
     <>
-      {commentsOnlyPost.length === 0
+      {commentsOnlyPost.length
         ? (
+          <ul className="CommentList">
+            {commentsOnlyPost.map(comment => (
+              <li className="CommentInfo" key={comment.id}>
+                <CommentInfo {...comment} />
+              </li>
+            ))}
+          </ul>
+        )
+        : (
           <>
             <hr />
 
             <b data-cy="NoCommentsMessage">No comments yet</b>
           </>
-        )
-        : (
-          <div className="CommentList">
-            {commentsOnlyPost.map(comment => (
-              <div className="CommentInfo" key={comment.id}>
-                <CommentInfo {...comment} />
-              </div>
-            ))}
-          </div>
         )}
     </>
   );

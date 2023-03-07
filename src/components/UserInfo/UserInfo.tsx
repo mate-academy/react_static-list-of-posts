@@ -5,7 +5,7 @@ export const UserInfo: React.FC<Pick<User, 'name' | 'email'>> = ({
   name,
   email,
 }) => (
-  <a className="UserInfo" href={email}>
+  <a className="UserInfo" href={`mailto:${email}`}>
     {name}
   </a>
 );

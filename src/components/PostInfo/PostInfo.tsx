@@ -19,14 +19,12 @@ export const PostInfo: React.FC<PostInfoType> = ({
           {' Posted by  '}
 
           {
-            person
-              ? (
-                <UserInfo
-                  name={person.name}
-                  email={person.email}
-                />
-              )
-              : null
+            person && (
+              <UserInfo
+                name={person.name}
+                email={person.email}
+              />
+            )
           }
         </p>
       </div>

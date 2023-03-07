@@ -10,7 +10,7 @@ export const PostList: React.FC<PostListType> = ({
 }) => (
   <>
     {posts.map(post => (
-      <div className="PostInfo" key={post.id}>
+      <li className="PostInfo" key={post.id}>
         <PostInfo
           title={post.title}
           body={post.body}
@@ -19,7 +19,7 @@ export const PostList: React.FC<PostListType> = ({
         />
 
         <CommentList comments={comments} id={post.id} />
-      </div>
+      </li>
     ))}
   </>
 );
