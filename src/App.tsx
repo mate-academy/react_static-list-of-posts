@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 
 import { PostList } from './components/PostList';
-import { User } from './types/User';
+import { User } from './types/User.js';
 import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 
