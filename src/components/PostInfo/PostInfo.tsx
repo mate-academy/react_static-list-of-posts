@@ -21,8 +21,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by  '}
-
+          <span>Posted by </span>
           {user && <UserInfo user={user} />}
         </p>
       </div>
@@ -30,7 +29,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <p className="PostInfo__body">
         {body}
       </p>
-
       <hr />
       {
         comments.length
