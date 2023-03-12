@@ -3,14 +3,10 @@ import { User } from '../../types/User';
 import './UserInfo.scss';
 
 export type Props = {
-  user: User | null;
+  user: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
-  if (!user) {
-    throw new Error('there are no user');
-  }
-
   const {
     name,
     email,
