@@ -16,19 +16,18 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   } = post;
 
   return (
-    <div className="PostInfo">
+    <li className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
         <p>
-          {' Posted by '}
-
+          <span>Posted by </span>
           {user && <UserInfo user={user} />}
         </p>
       </div>
 
       <p className="PostInfo__body">
-        { body }
+        {body}
       </p>
 
       <hr />
@@ -36,6 +35,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       {comments.length
         ? <CommentList comments={comments} />
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
-    </div>
+    </li>
   );
 };
