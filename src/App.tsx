@@ -15,7 +15,7 @@ function getUsersById(userId:number): User | null {
   return usersFromServer.find(user => user.id === userId) || null;
 }
 
-function getPostsById(postId:number):Comments[] | [] {
+function getPostsById(postId:number):Comments[] {
   return commentsFromServer.filter(comment => comment.postId === postId) || [];
 }
 
