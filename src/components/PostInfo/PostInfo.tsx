@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './PostInfo.scss';
+
 import { Post } from '../../types/Post';
 
 import { UserInfo } from '../UserInfo';
