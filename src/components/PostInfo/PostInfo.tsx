@@ -2,6 +2,7 @@ import React from 'react';
 import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
+import { CommentsEmpty } from '../CommentsEmpty';
 
 import './PostInfo.scss';
 
@@ -38,11 +39,8 @@ export const PostInfo: React.FC<Props> = (
 
     {comments.length > 0
       ? <CommentList comments={comments} />
-      : (
-        <b data-cy="NoCommentsMessage">
-          No comments yet
-        </b>
-      )}
+      : <CommentsEmpty />
+    }
   </div>
 
 );

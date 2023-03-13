@@ -19,8 +19,7 @@ const posts: Post[] = postsFromServer.map(post => {
     ({ postId }) => postId === post.id,
   );
 
-  const postCopy: Post
-  = {
+  const postCopy: Post = {
     ...post,
     user,
     comments,
