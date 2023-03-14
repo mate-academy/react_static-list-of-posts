@@ -1,5 +1,7 @@
 import React from 'react';
 import { User } from './types/User';
+import { Comment } from './types/Comment';
+import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
 import './App.scss';
@@ -14,15 +16,21 @@ const getUserById = (userId: number): User | null => {
   return foundUser || null;
 };
 
-const posts = postsFromServer.map(post => (
-  {
+const getCommentsByPostId = (postId: number): Comment[] => {
+  return commentsFromServer.filter(comment => (
+    comment.postId === postId
+  ));
+};
+
+const posts: Post[] = postsFromServer.map(post => {
+  const { userId, id } = post;
+
+  return {
     ...post,
-    user: getUserById(post.userId),
-    comments: commentsFromServer.filter(comment => (
-      comment.postId === post.id
-    )),
-  }
-));
+    user: getUserById(userId),
+    comments: getCommentsByPostId(id),
+  };
+});
 
 export const App: React.FC = () => (
   <section className="App">
