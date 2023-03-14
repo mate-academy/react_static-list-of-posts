@@ -1,6 +1,6 @@
 import React from 'react';
-import { PostInfo } from '../PostInfo';
 import { GlobalPost } from '../../types/GlobalPost';
+import { PostInfo } from '../PostInfo';
 
 type Props = {
   posts: GlobalPost[];

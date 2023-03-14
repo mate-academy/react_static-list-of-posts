@@ -1,8 +1,11 @@
-import { User } from './users';
-import { Comment } from './Comments';
-import { Post } from './Posts';
+import { User } from './User';
+import { Comment } from './Comment';
 
-export interface GlobalPost extends Post {
+export interface GlobalPost {
+  userId: number,
+  id: number,
+  title: string,
+  body: string,
   user: User | null,
   comments: Comment[],
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import './PostInfo.scss';
 import { GlobalPost } from '../../types/GlobalPost';
 
-import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
+import { CommentList } from '../CommentList';
 
 type Props = {
   post: GlobalPost;
