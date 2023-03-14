@@ -1,1 +1,28 @@
-//
+.PostInfo {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: rgb(186, 178, 207);
+  padding: 1em;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+
+  &__body {
+    font-size: larger;
+
+    padding: 1em;
+    text-align: justify;
+
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
+  }
+}

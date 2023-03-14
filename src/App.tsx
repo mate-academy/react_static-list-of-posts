@@ -8,27 +8,27 @@ import usersFromServer from './api/users';
 
 import { PostList } from './components/PostList';
 
-import { User } from './components/types/User';
-import { Comment } from './components/types/Comment';
-import { Post } from './components/types/PostInfo';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
+import { Post } from './types/PostInfo';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComments(postId: number): Comment[] {
+function getCommentsById(id: number): Comment[] {
   const foundComments = commentsFromServer
-    .filter(comment => comment.postId === postId);
+    .filter(comment => comment.postId === id);
 
   return foundComments;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
-  comment: getComments(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentsById(post.id),
 }));
 
 export const App: React.FC = () => (
