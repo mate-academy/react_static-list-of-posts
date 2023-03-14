@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './UserInfo.scss';
 import { User } from '../../types/users';
 
 type Props = {
