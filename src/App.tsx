@@ -3,13 +3,12 @@ import { PostList } from './components/PostList';
 
 import './App.scss';
 
-import { Post } from './types/Post';
-import { User } from './types/User';
-import { Comment } from './types/Comment';
-
-import postsFromServer from './api/posts';
-import commentsFromServer from './api/comments';
-import usersFromServer from './api/users';
+import { Post, Comment, User } from './types/index';
+import {
+  postsFromServer,
+  commentsFromServer,
+  usersFromServer,
+} from './api/index';
 
 function getUser(userId: number): User | null {
   const findUser = usersFromServer.find(user => user.id === userId);
@@ -18,11 +17,9 @@ function getUser(userId: number): User | null {
 }
 
 function getComment(postId: number): Comment[] {
-  const findComment = commentsFromServer.filter(
+  return commentsFromServer.filter(
     comment => comment.postId === postId,
   );
-
-  return findComment;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({

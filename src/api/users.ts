@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-export default [
+export const usersFromServer = [
   {
     id: 1,
     name: 'Leanne Graham',
