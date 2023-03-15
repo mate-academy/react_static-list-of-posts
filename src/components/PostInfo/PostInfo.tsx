@@ -2,16 +2,16 @@ import React from 'react';
 
 import './PostInfo.scss';
 
-import commentsFromServer from '../../api/comments';
 import { Post } from '../../types/post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 type Props = {
   post: Post;
+  posts: Post[];
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
+export const PostInfo: React.FC<Props> = ({ post, posts }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{post.title}</h3>
@@ -30,7 +30,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     <hr />
 
     {post.comment ? (
-      <CommentList comments={commentsFromServer} />
+      <CommentList posts={posts} />
     ) : (
       <b data-cy="NoCommentsMessage">No comments yet</b>
     )}
