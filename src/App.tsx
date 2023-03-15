@@ -11,7 +11,7 @@ import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function findUser(userId: number): User | null {
+function findUserById(userId: number): User | null {
   const user = usersFromServer.find(
     userFromServer => userFromServer.id === userId,
   );
@@ -19,17 +19,17 @@ function findUser(userId: number): User | null {
   return user || null;
 }
 
-function findComments(postIdd: number): Comment[] {
+function findCommentsById(postId: number): Comment[] {
   return commentsFromServer.filter(
-    (comment: Comment) => comment.postId === postIdd,
+    (comment: Comment) => comment.postId === postId,
   );
 }
 
 const posts = postsFromServer.map<Post>((post) => (
   {
     ...post,
-    user: findUser(post.userId),
-    comments: findComments(post.id),
+    user: findUserById(post.userId),
+    comments: findCommentsById(post.id),
   }
 ));
 

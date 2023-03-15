@@ -17,7 +17,6 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
     )
     : (
       <>
-
         <hr />
 
         <b data-cy="NoCommentsMessage">No comments yet</b>

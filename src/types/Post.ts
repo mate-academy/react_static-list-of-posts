@@ -9,8 +9,3 @@ export interface Post {
   user: User | null,
   comments: Comment[],
 }
-
-// { comments: Comment[];
-//   id: number; title: string; body: string; userId: number;
-//   user: User | null }[]
-// }
