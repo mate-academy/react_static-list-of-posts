@@ -8,11 +8,11 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   return usersFromServer.find((user) => user.id === userId) || null;
 }
 
-function getComments(postId: number): Comment[] {
+function getCommentsById(postId: number): Comment[] {
   return commentsFromServer.filter((comment) => (
     comment.postId === postId
   ));
@@ -21,8 +21,8 @@ function getComments(postId: number): Comment[] {
 export const posts: Post[] = postsFromServer.map((post) => {
   return {
     ...post,
-    user: getUser(post.userId),
-    comments: getComments(post.id),
+    user: getUserById(post.userId),
+    comments: getCommentsById(post.id),
   };
 });
 
