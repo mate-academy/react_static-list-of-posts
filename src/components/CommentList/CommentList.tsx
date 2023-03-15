@@ -1,5 +1,31 @@
 import React from 'react';
+import { Comment } from '../../types/Comment';
+import { CommentInfo } from '../CommentInfo';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
-);
+type Props = {
+  comments: Comment[];
+};
+
+export const CommentList: React.FC<Props> = ({ comments }) => {
+  const commentListContent = (
+    comments.map(comment => (
+      <CommentInfo
+        comment={comment}
+        key={comment.id}
+      />
+    )));
+
+  const commentListEmptyContent = (
+    <b data-cy="NoCommentsMessage">
+      No comments yet
+    </b>
+  );
+
+  return (
+    <div className="CommentList">
+      {comments.length
+        ? commentListContent
+        : commentListEmptyContent}
+    </div>
+  );
+};
