@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Post } from '../../types/Post';
 
-import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
 type Props = {
   post: Post;
@@ -25,7 +25,10 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <p>
           {' Posted by '}
 
-          <UserInfo user={user} />
+          {
+            user
+            && <UserInfo user={user} />
+          }
         </p>
       </div>
 
