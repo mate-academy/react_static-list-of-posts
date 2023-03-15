@@ -4,9 +4,9 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { Post } from './types/Post';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
+import { Post } from './types/Post';
 
 import { PostList } from './components/PostList';
 
