@@ -3,28 +3,28 @@ import React from 'react';
 import { Comment } from '../../types/comment';
 
 type Props = {
-  comment: Comment | null;
+  comment: Comment;
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">
-        {comment ? comment.name : null}
+        {comment.name}
       </strong>
 
       {' by '}
 
       <a
         className="CommentInfo__email"
-        href={`mailto:${comment ? comment.email : null}`}
+        href={`mailto:${comment.email}`}
       >
-        {comment ? comment.email : null}
+        {comment.email}
       </a>
     </div>
 
     <div className="CommentInfo__body">
-      {comment ? comment.body : null}
+      {comment.body}
     </div>
   </div>
 );
