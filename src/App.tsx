@@ -13,10 +13,7 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 function getUser(userId: number): Users | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  // if there is no user with a given userId
-  return foundUser || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getComments(id: number): Comments[] {
