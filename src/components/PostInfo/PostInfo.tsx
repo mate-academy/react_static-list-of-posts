@@ -6,16 +6,16 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  posts: Posts;
+  post: Posts;
 };
 
-export const PostInfo: React.FC<Props> = ({ posts }) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title,
     user,
     body,
     comments,
-  } = posts;
+  } = post;
 
   return (
     <>
