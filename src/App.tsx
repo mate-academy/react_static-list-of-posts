@@ -4,13 +4,13 @@ import './App.scss';
 
 import { PostList } from './components/PostList';
 
-import { Users, Posts, Comments } from './types/index';
+import { Users, Posts, Comments } from './types';
 
 import {
   postsFromServer,
   commentsFromServer,
   usersFromServer,
-} from './api/index';
+} from './api';
 
 function getComments(postId: number): Comments[] {
   const foundComments = commentsFromServer.filter(
