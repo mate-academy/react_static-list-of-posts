@@ -8,7 +8,6 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-
   comments.length
     ? (
       <div className="CommentList">
@@ -16,10 +15,6 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
       </div>
     )
     : (
-      <>
-        <hr />
-
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </>
+      <b data-cy="NoCommentsMessage">No comments yet</b>
     )
 );
