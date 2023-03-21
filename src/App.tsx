@@ -10,14 +10,10 @@ import usersFromServer from './api/users';
 
 import { PostList } from './components/PostList';
 
-function getUserById(userId: number): User {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
-  if (!foundUser) {
-    throw new Error('Invalid post: user not found.');
-  }
-
-  return foundUser;
+  return foundUser || null;
 }
 
 function getCommentsByPostId(id: number): Comment[] {
