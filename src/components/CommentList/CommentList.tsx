@@ -7,12 +7,10 @@ type CommentListProps = {
   comments: Comment[];
 };
 
-export const CommentList: React.FC<CommentListProps> = ({ comments }) => {
-  return (
-    <div className="CommentList">
-      {comments.map((comment) => (
-        <CommentInfo key={comment.id} comment={comment} />
-      ))}
-    </div>
-  );
-};
+export const CommentList: React.FC<CommentListProps> = ({ comments }) => (
+  <div className="CommentList">
+    {comments.map((comment) => (
+      <CommentInfo key={comment.id} comment={comment} />
+    ))}
+  </div>
+);
