@@ -1,12 +1,12 @@
 import React from 'react';
 import './PostInfo.scss';
-import { GlobalPost } from '../../types/GlobalPost';
+import { Post } from '../../types/Post';
 
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 type Props = {
-  post: GlobalPost;
+  post: Post;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
@@ -31,11 +31,11 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {body}
       </p>
 
-      {
-        comments.length > 0
-          ? <CommentList comments={comments} />
-          : <b data-cy="NoCommentsMessage">No comments yet</b>
-      }
+      <hr />
+
+      { comments.length > 0
+        ? <CommentList comments={comments} />
+        : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   );
 };
