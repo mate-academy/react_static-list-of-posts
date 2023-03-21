@@ -1,30 +1,28 @@
 import React from 'react';
 import './App.scss';
-import { Users } from './types/Users';
-import { Comments } from './types/Comments';
-import { Posts } from './types/Posts';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
+import { Post } from './types/Post';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
-function getUserById(userId: number): Users | null {
+function getUserByPostId(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getCommentsById(postId: number): Comments[] {
-  const foundComments = commentsFromServer
+function getCommentsById(postId: number): Comment[] {
+  return commentsFromServer
     .filter(comment => comment.postId === postId);
-
-  return foundComments;
 }
 
-export const posts: Posts[] = postsFromServer.map(post => ({
+export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUserById(post.userId),
+  user: getUserByPostId(post.userId),
   comments: getCommentsById(post.id),
 }));
 

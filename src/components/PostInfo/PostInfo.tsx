@@ -1,12 +1,12 @@
 import React from 'react';
 import './PostInfo.scss';
 
-import { Posts } from '../../types/Posts';
+import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  post: Posts;
+  post: Post;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
@@ -20,7 +20,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{title}</h3>
+        <h3 className="PostInfo__title">
+          {title}
+        </h3>
 
         <p>
           {' Posted by  '}
@@ -34,6 +36,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </p>
 
       <hr />
+
       {comments.length
         ? (<CommentList comments={comments} />)
         : (<b data-cy="NoCommentsMessage">No comments yet</b>)}

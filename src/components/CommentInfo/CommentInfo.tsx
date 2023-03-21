@@ -1,8 +1,8 @@
 import React from 'react';
-import { Comments } from '../../types/Comments';
+import { Comment } from '../../types/Comment';
 
 type Props = {
-  comment: Comments;
+  comment: Comment;
 };
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {
@@ -15,7 +15,9 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{name}</strong>
+        <strong className="CommentInfo__name">
+          {name}
+        </strong>
 
         {' by '}
 
