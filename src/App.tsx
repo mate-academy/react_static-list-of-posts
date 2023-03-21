@@ -10,13 +10,13 @@ import usersFromServer from './api/users';
 
 import './App.scss';
 
-function findUser(userId: number): User | null {
+function findUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function findComments(id: number): Comment[] {
+function findCommentsByUser(id: number): Comment[] {
   return commentsFromServer.filter((comment) => (
     comment.postId === id
   ));
@@ -24,8 +24,8 @@ function findComments(id: number): Comment[] {
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: findUser(post.userId),
-  comments: findComments(post.id),
+  user: findUserById(post.userId),
+  comments: findCommentsByUser(post.id),
 }));
 
 export const App: React.FC = () => (
