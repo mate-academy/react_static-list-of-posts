@@ -8,25 +8,21 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  const commentListContent = (
-    comments.map(comment => (
-      <CommentInfo
-        comment={comment}
-        key={comment.id}
-      />
-    )));
-
-  const commentListEmptyContent = (
-    <b data-cy="NoCommentsMessage">
-      No comments yet
-    </b>
-  );
-
   return (
     <div className="CommentList">
       {comments.length
-        ? commentListContent
-        : commentListEmptyContent}
+        ? (
+          comments.map(comment => (
+            <CommentInfo
+              comment={comment}
+              key={comment.id}
+            />
+          ))
+        ) : (
+          <b data-cy="NoCommentsMessage">
+            No comments yet
+          </b>
+        )}
     </div>
   );
 };
