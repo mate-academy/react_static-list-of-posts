@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-
 export default [
   {
     userId: 1,
