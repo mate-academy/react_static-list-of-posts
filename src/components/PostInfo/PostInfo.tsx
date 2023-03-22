@@ -17,7 +17,7 @@ export const PostInfo: React.FC<Props> = ({ posts }) => {
   } = posts;
 
   return (
-    <div className="PostInfo">
+    <li className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
           {title}
@@ -38,11 +38,11 @@ export const PostInfo: React.FC<Props> = ({ posts }) => {
 
       <hr />
 
-      {
-        comments.length === 0
-          ? <b data-cy="NoCommentsMessage">No comments yet</b>
-          : <CommentList comments={comments} />
-      }
-    </div>
+      {comments.length > 0 ? (
+        <CommentList comments={comments} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
+    </li>
   );
 };
