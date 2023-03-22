@@ -6,11 +6,11 @@ import usersFromServer from './api/users';
 import commentsFromServer from './api/comments';
 
 import { Posts } from './types/Posts';
-import { Users } from './types/Users';
+import { User } from './types/Users';
 import { Comments } from './types/Comments';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): Users | null {
+function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
