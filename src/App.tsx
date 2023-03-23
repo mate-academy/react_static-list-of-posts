@@ -18,7 +18,7 @@ function getUsersById(userId: number): User | null {
   return foundUser || null;
 }
 
-function getCommentsById(id: number): Comments[] {
+function getCommentsByPostId(id: number): Comments[] {
   return commentsFromServer.filter(comment => (
     comment.postId === id
   ));
@@ -30,13 +30,15 @@ export const posts: Post[] = postsFromServer.map(post => {
   return {
     ...post,
     user: getUsersById(userId),
-    comments: getCommentsById(id),
+    comments: getCommentsByPostId(id),
   };
 });
 
 export const App: React.FC = () => (
   <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+    <h1 className="App__title">
+      Static list of posts
+    </h1>
 
     <PostList posts={posts} />
   </section>

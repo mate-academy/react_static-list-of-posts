@@ -17,6 +17,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <p>
       {' Posted by '}
+
       <a className="UserInfo" href={`mailto:${email}`}>
         {name}
       </a>
