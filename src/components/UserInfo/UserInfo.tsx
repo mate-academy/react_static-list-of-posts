@@ -3,14 +3,14 @@ import { User } from '../../types/User';
 import './UserInfo.scss';
 
 type Props = {
-  author: User;
+  user: User;
 };
 
-export const UserInfo: React.FC<Props> = ({ author }) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
   const {
     email,
     name,
-  } = author;
+  } = user;
 
   return (
     <a className="UserInfo" href={`mailto:${email}`}>

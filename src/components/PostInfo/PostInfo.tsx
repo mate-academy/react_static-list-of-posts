@@ -1,19 +1,19 @@
 import React from 'react';
 
 import './PostInfo.scss';
-import { Fullpost } from '../../types/Fullpost';
+import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList/CommentList';
-import { UserInfo } from '../UserInfo/UserInfo';
+import { UserInfo } from '../UserInfo';
 
 type Props = {
-  post: Fullpost;
+  post: Post;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title,
     body,
-    author,
+    user,
     comments,
   } = post;
 
@@ -24,13 +24,13 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           {title}
         </h3>
 
-        <p>
-          {' Posted by  '}
+        {user && (
+          <p>
+            {' Posted by  '}
 
-          {author && (
-            <UserInfo author={author} />
-          )}
-        </p>
+            <UserInfo user={user} />
+          </p>
+        )}
       </div>
 
       <p className="PostInfo__body">
@@ -39,11 +39,12 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
       <hr />
 
-      {comments.length === 0 ? (
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      ) : (
-        <CommentList comments={comments} />
-      )}
+      {comments.length === 0
+        ? (
+          <b data-cy="NoCommentsMessage">No comments yet</b>
+        ) : (
+          <CommentList comments={comments} />
+        )}
     </div>
   );
 };

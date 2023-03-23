@@ -9,34 +9,32 @@ import usersFromServer from './api/users';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 import { Post } from './types/Post';
-import { Fullpost } from './types/Fullpost';
 import { PostList } from './components/PostList';
 
-function getAuthorById(authors: User[], postId: number) {
-  return authors.find((author) => author.id === postId);
+function getUserById(userId: number): User | null {
+  const foundUser = usersFromServer.find((user) => user.id === userId);
+
+  return foundUser || null;
 }
 
-function preparePosts(
-  posts: Post[],
-  comments: Comment[],
-  authors: User[],
-): Fullpost[] {
-  return posts.map((post) => ({
+function getCommentsByPostId(postId: number): Comment[] {
+  return commentsFromServer.filter((comment) => (
+    comment.postId === postId
+  ));
+}
+
+export const posts: Post[] = postsFromServer.map((post) => {
+  return {
     ...post,
-    author: getAuthorById(authors, post.id),
-    comments: comments.filter((comment) => comment.postId === post.id),
-  }));
-}
-
-const preparedPosts = preparePosts(
-  postsFromServer,
-  commentsFromServer,
-  usersFromServer,
-);
+    user: getUserById(post.userId),
+    comments: getCommentsByPostId(post.id),
+  };
+});
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={preparedPosts} />
+
+    <PostList posts={posts} />
   </section>
 );
