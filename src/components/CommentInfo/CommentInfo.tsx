@@ -3,11 +3,11 @@ import './CommentInfo.scss';
 
 import { Comment } from '../../types/Comment';
 
-interface CommentItem {
+interface Props {
   comment: Comment,
 }
 
-export const CommentInfo: React.FC<CommentItem> = ({ comment }) => {
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const {
     name,
     email,
@@ -17,7 +17,9 @@ export const CommentInfo: React.FC<CommentItem> = ({ comment }) => {
   return (
     <div className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{name}</strong>
+        <strong className="CommentInfo__name">
+          {name}
+        </strong>
 
         {' by '}
 
