@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './UserInfo.scss';
+
 import { User } from '../../types/User';
 
 type Props = {
@@ -13,8 +15,11 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   } = user;
 
   return (
-    <a className="UserInfo" href={`mailto:${email}`}>
-      {name}
-    </a>
+    <p>
+      {' Posted by '}
+      <a className="UserInfo" href={`mailto:${email}`}>
+        {name}
+      </a>
+    </p>
   );
 };

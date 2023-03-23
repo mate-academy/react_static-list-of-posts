@@ -12,13 +12,13 @@ import { Comments } from './types/Comments';
 
 import { PostList } from './components/PostList';
 
-function getUsers(userId: number): User | null {
+function getUsersById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComments(id: number): Comments[] {
+function getCommentsById(id: number): Comments[] {
   return commentsFromServer.filter(comment => (
     comment.postId === id
   ));
@@ -29,14 +29,15 @@ export const posts: Post[] = postsFromServer.map(post => {
 
   return {
     ...post,
-    user: getUsers(userId),
-    comments: getComments(id),
+    user: getUsersById(userId),
+    comments: getCommentsById(id),
   };
 });
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
+
     <PostList posts={posts} />
   </section>
 );
