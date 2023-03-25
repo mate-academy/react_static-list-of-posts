@@ -1,7 +1,7 @@
 import React from 'react';
 import { Comment } from '../../types/Comment';
 
-type PropsComment = {
+export type PropsComment = {
   comment: Comment;
 };
 

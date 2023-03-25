@@ -3,7 +3,7 @@ import { CommentInfo } from '../CommentInfo';
 import { Comment } from '../../types/Comment';
 import './CommentList.scss';
 
-type PropsCommentList = {
+export type PropsCommentList = {
   comments: Comment[];
 };
 
