@@ -1,19 +1,22 @@
 import React from 'react';
-import { Comment } from '../../types/Comment';
+import usersFromServer from '../../api/users';
+import commentsFromServer from '../../api/comments';
 import { Post } from '../../types/Post';
-import { User } from '../../types/User';
 import { PostInfo } from '../PostInfo';
 
 type Props = {
   posts: Post[];
-  users: User[];
-  comments: Comment[];
 };
 
-export const PostList: React.FC<Props> = ({ posts, users, comments }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => (
-      <PostInfo key={post.id} post={post} users={users} comments={comments} />
+      <PostInfo
+        key={post.id}
+        post={post}
+        users={usersFromServer}
+        comments={commentsFromServer}
+      />
     ))}
   </div>
 );

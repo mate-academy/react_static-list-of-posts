@@ -4,8 +4,6 @@ import './App.scss';
 import { PostList } from './components/PostList';
 
 import postsFromServer from './api/posts';
-import commentsFromServer from './api/comments';
-import usersFromServer from './api/users';
 
 export const App: React.FC = () => (
   <section className="App">
@@ -13,8 +11,6 @@ export const App: React.FC = () => (
 
     <PostList
       posts={postsFromServer}
-      users={usersFromServer}
-      comments={commentsFromServer}
     />
 
   </section>
