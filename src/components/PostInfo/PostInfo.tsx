@@ -1,8 +1,8 @@
 import React from 'react';
 import { Post, User } from '../../types/types';
-import users from '../../api/users';
 import { CommentList } from '../CommentList';
-import comments from '../../api/comments';
+import usersFromServer from '../../api/users';
+import commentsFromServer from '../../api/comments';
 
 function findUser(arrayUsers: User[], postId: number) {
   const user: User | undefined = arrayUsers.find((
@@ -32,7 +32,7 @@ export const PostInfo: React.FC<Post> = ({
           {' Posted by  '}
 
           <a className="UserInfo" href="mailto:Sincere@april.biz">
-            {findUser(users, userId)}
+            {findUser(usersFromServer, userId)}
           </a>
         </p>
       </div>
@@ -43,7 +43,7 @@ export const PostInfo: React.FC<Post> = ({
 
       <hr />
 
-      <CommentList list={comments} idOfPost={id} />
+      <CommentList list={commentsFromServer} idOfPost={id} />
     </div>
   </>
 );

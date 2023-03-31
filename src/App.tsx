@@ -11,9 +11,8 @@ export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList list={postsFromServer} />
-
     <div className="PostList">
+      <PostList list={postsFromServer} />
       <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>

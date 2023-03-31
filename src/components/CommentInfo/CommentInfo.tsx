@@ -1,5 +1,7 @@
 import React from 'react';
 import { Comment } from '../../types/types';
+import usersFromServer from '../../api/users';
+import { UserInfo } from '../UserInfo';
 
 type Props = {
   comment: Comment;
@@ -20,6 +22,7 @@ export const CommentInfo: React.FC<Props> = (props) => (
           href={`mailto:${props.comment.email}`}
         >
           {props.comment.email}
+          <UserInfo list={usersFromServer} />
         </a>
       </div>
 
