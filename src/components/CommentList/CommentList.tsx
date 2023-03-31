@@ -19,8 +19,12 @@ export const CommentList: React.FC<Props> = (props) => {
     );
   }
 
-  return props.list.map(
-    comment => comment.postId === props.idOfPost
-    && <CommentInfo comment={comment} key={comment.id} />,
+  return (
+    <>
+      {props.list.map(
+        comment => comment.postId === props.idOfPost
+        && <CommentInfo comment={comment} key={comment.id} />,
+      )}
+    </>
   );
 };
