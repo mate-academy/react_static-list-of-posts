@@ -7,14 +7,14 @@ export interface Post {
 
 export interface User {
   id: number;
-  name: string,
+  name: string;
   username: string;
   email: string;
 }
 
 export interface Comment {
-  postId: number,
-  id: number,
+  postId: number;
+  id: number;
   name: string;
   email: string;
   body: string;

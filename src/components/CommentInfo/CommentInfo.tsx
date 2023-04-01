@@ -1,33 +1,30 @@
 import React from 'react';
 import { Comment } from '../../types/types';
-import usersFromServer from '../../api/users';
-import { UserInfo } from '../UserInfo';
 
 type Props = {
   comment: Comment;
 };
 
-export const CommentInfo: React.FC<Props> = (props) => (
+export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <>
     <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">
-          {props.comment.name}
+          {comment.name}
         </strong>
 
         {' by '}
 
         <a
           className="CommentInfo__email"
-          href={`mailto:${props.comment.email}`}
+          href={`mailto:${comment.email}`}
         >
-          {props.comment.email}
-          <UserInfo list={usersFromServer} />
+          <>{comment.email}</>
         </a>
       </div>
 
       <div className="CommentInfo__body">
-        {props.comment.body}
+        {comment.body}
       </div>
     </div>
   </>

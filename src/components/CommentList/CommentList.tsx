@@ -1,30 +1,33 @@
 import React from 'react';
 import { Comment } from '../../types/types';
 import { CommentInfo } from '../CommentInfo';
+import './CommentList.scss';
 
 type Props = {
   list: Comment[];
   idOfPost: number;
 };
 
-export const CommentList: React.FC<Props> = (props) => {
-  const array = props.list.find(
-    comment => comment.postId === props.idOfPost
-    && <CommentInfo comment={comment} key={comment.id} />,
+export const CommentList: React.FC<Props> = ({ list, idOfPost }) => {
+  const array = list.filter(
+    comment => comment.postId === idOfPost,
   );
 
-  if (array === undefined) {
+  if (array.length > 0) {
     return (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
+      <ul className="CommentList">
+        {array.map(
+          comment => (
+            <li className="CommentItems">
+              <CommentInfo comment={comment} key={comment.id} />
+            </li>
+          ),
+        )}
+      </ul>
     );
   }
 
   return (
-    <>
-      {props.list.map(
-        comment => comment.postId === props.idOfPost
-        && <CommentInfo comment={comment} key={comment.id} />,
-      )}
-    </>
+    <b data-cy="NoCommentsMessage">No comments yet</b>
   );
 };
