@@ -14,7 +14,7 @@ function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
-};
+}
 
 function getComments(postID: number): Comments[] {
   const commentsArray = commentsFromServer.filter(
@@ -22,7 +22,7 @@ function getComments(postID: number): Comments[] {
   );
 
   return commentsArray;
-};
+}
 
 export const posts: Posts[] = postsFromServer.map(post => ({
   ...post,
