@@ -14,25 +14,21 @@ type Props = {
 export const PostInfo: React.FC<Props> = ({ post, users, comments }) => {
   const user: User | undefined
   = users.find(person => person.id === post.userId);
-  let commentSection: Comment[] | undefined
+  const commentSection: Comment[] | undefined
  = comments.filter(comment => comment.postId === post.id);
-
-  if (commentSection.length === 0) {
-    commentSection = undefined;
-  }
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{post.title}</h3>
 
-        {user && <UserInfo user={user} />}
+        {user && <UserInfo name={user.name} email={user.email} />}
 
         <p className="PostInfo__body">
           {post.body}
         </p>
 
-        {commentSection
+        {commentSection.length
           ? <CommentList comments={commentSection} />
           : (
             <>
