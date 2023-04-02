@@ -6,6 +6,6 @@ export interface Post {
   id: number;
   title: string;
   body: string;
-  comments: Comment[],
-  user: User | null,
+  comments: Comment[];
+  user: User | null;
 }

@@ -1,7 +1,9 @@
+$bg-color: #eee;
+
 .CommentList {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  background-color: #eee;
+  background-color: $bg-color;
   padding: 1em;
 }
