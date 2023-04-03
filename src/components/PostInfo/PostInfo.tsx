@@ -5,13 +5,21 @@ import usersFromServer from '../../api/users';
 import commentsFromServer from '../../api/comments';
 import { UserInfo } from '../UserInfo';
 
+function filterCommets(comments: Comment[], postOfId: number) {
+  return [...comments].filter(
+    comment => comment.postId === postOfId,
+  );
+}
+
 export const PostInfo: React.FC<Post> = ({
   title,
   body,
   userId,
   id,
-}) => (
-  <>
+}) => {
+  const filteredCommets: Comment[] = filterCommets(commentsFromServer, id);
+
+  return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
@@ -19,7 +27,11 @@ export const PostInfo: React.FC<Post> = ({
         <p>
           {' Posted by  '}
 
-          <UserInfo users={usersFromServer} userId={userId} key={userId} />
+          <UserInfo
+            users={usersFromServer}
+            userId={userId}
+            key={userId}
+          />
         </p>
       </div>
 
@@ -29,7 +41,11 @@ export const PostInfo: React.FC<Post> = ({
 
       <hr />
 
-      <CommentList list={commentsFromServer} idOfPost={id} />
+      <CommentList
+        list={filteredCommets}
+        idOfPost={id}
+        key={id}
+      />
     </div>
-  </>
-);
+  );
+};
