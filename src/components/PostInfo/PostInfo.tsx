@@ -17,7 +17,7 @@ export const PostInfo: React.FC<Post> = ({
   userId,
   id,
 }) => {
-  const filteredCommets: Comment[] = filterCommets(commentsFromServer, id);
+  const filteredCommets = filterCommets(commentsFromServer, id);
 
   return (
     <div className="PostInfo">
