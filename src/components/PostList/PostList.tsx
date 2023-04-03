@@ -1,5 +1,4 @@
 import React from 'react';
-// import posts from '../../api/posts';
 import { PostInfo } from '../PostInfo';
 import { Post } from '../../types/Post';
 
