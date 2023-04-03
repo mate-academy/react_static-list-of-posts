@@ -12,9 +12,8 @@ export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
     <ul style={{ listStyleType: 'none' }}>
       {posts.map(post => (
-        <li>
+        <li key={post.id}>
           <PostInfo
-            key={post.id}
             post={post}
             users={usersFromServer}
             comments={commentsFromServer}
