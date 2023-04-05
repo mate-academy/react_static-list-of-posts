@@ -6,19 +6,22 @@ type Props = {
   comment: Comment;
 };
 
-export const CommentInfo: React.FC<Props> = ({ comment }) => (
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
+  const { user, name, body } = comment;
 
-  <div className="CommentList">
-    <div className="CommentInfo">
-      <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{comment.name}</strong>
+  return (
+    <div className="CommentList">
+      <div className="CommentInfo">
+        <div className="CommentInfo__title">
+          <strong className="CommentInfo__name">{name}</strong>
 
-        {comment.user && <UserInfo user={comment.user} />}
-      </div>
+          {user && <UserInfo user={user} />}
+        </div>
 
-      <div className="CommentInfo__body">
-        {comment.body}
+        <div className="CommentInfo__body">
+          {body}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};

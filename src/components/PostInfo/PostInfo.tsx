@@ -7,20 +7,30 @@ type Props = {
   post: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    comments,
+    body,
+    user,
+    title,
+  } = post;
 
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
-      {post.user && <UserInfo user={post.user} />}
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{title}</h3>
+        {user && <UserInfo user={user} />}
+      </div>
+
+      <p className="PostInfo__body">
+        {body}
+      </p>
+
+      <hr />
+
+      {comments.length
+        ? <CommentList comments={comments} />
+        : <p>No comments yet</p>}
     </div>
-
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    <hr />
-    {post.comments.length ? <CommentList comments={post.comments} />
-      : <p>No comments yet</p>}
-  </div>
-);
+  );
+};

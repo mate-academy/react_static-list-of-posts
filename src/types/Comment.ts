@@ -1,4 +1,5 @@
 export interface Comment {
+  user: JSX.Element;
   postId: number,
   id: number,
   name: string,
