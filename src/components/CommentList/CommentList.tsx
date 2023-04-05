@@ -8,24 +8,18 @@ type Props = {
   comments: Comment[]
 };
 
-const commentListSending = (comments: Comment[]) => {
-  if (comments.length === 0) {
-    return <b data-cy="NoCommentsMessage">No comments yet</b>;
-  }
-
-  return comments.map((comment: Comment) => (
-    comment
-    && (
-      <CommentInfo
-        comment={comment}
-        key={comment.id}
-      />
-    )
-  ));
-};
-
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="CommentList">
-    {commentListSending(comments)}
+    {(comments.length === 0)
+      ? <b data-cy="NoCommentsMessage">No comments yet</b>
+      : comments.map((comment: Comment) => (
+        comment
+        && (
+          <CommentInfo
+            comment={comment}
+            key={comment.id}
+          />
+        )
+      ))}
   </div>
 );
