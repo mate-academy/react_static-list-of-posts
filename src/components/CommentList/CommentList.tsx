@@ -18,6 +18,7 @@ const commentListSending = (comments: Comment[]) => {
     && (
       <CommentInfo
         comment={comment}
+        key={comment.id}
       />
     )
   ));
