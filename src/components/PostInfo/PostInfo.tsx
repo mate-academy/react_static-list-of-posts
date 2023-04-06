@@ -20,7 +20,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   } = post;
 
   return (
-    <div className="PostInfo" key={id}>
+    <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
           {title}
