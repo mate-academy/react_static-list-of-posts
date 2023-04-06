@@ -8,14 +8,12 @@ import './PostInfo.scss';
 type Props = {
   post: Posts
 };
-export const PostInfo: React.FC<Props> = ({
-  post: {
-    title,
-    body,
-    user,
-    comments,
-  },
-}) => {
+
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title, body, user, comments,
+  } = post;
+
   const checkingСomments = comments.length
     ? <CommentList comments={comments} />
     : <b data-cy="NoCommentsMessage">No comments yet</b>;

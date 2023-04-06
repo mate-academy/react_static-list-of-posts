@@ -19,15 +19,11 @@ function getPostsById(postId:number):Comments[] {
   return commentsFromServer.filter(comment => comment.postId === postId) || [];
 }
 
-const postsArray: Posts[] = postsFromServer.map((post) => {
-  return (
-    {
-      ...post,
-      user: getUsersById(post.userId),
-      comments: getPostsById(post.id),
-    }
-  );
-});
+const postsArray: Posts[] = postsFromServer.map((post) => ({
+  ...post,
+  user: getUsersById(post.userId),
+  comments: getPostsById(post.id),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
