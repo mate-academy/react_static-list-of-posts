@@ -9,13 +9,15 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  <div className="CommentList">
-    {comments.map(curr => {
-      const { id } = curr;
+  <ul className="CommentList">
+    {comments.map(comment => {
+      const { id } = comment;
 
       return (
-        <CommentInfo key={id} comment={curr} />
+        <li key={id}>
+          <CommentInfo comment={comment} />
+        </li>
       );
     })}
-  </div>
+  </ul>
 );
