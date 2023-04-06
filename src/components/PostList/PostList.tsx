@@ -2,7 +2,6 @@ import React from 'react';
 import { PostInfo } from '../PostInfo';
 
 import { Post } from '../../types/Post';
-// import { type } from 'os';
 
 type Props = {
   list: Post[],

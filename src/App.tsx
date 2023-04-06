@@ -5,33 +5,29 @@ import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 
 import { PostList } from './components/PostList';
-
 import './App.scss';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-// import { post } from 'cypress/types/jquery';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
-  // if there is no user with a given userId
   return foundUser || null;
 }
 
-function getComment(postId: number): Comment[] | null {
+function getComment(postId: number): Comment[] {
   const foundComment = commentsFromServer.filter(comment => (
     comment.postId === postId));
 
-  // if there is no user with a given userId
-  return foundComment || null;
+  return foundComment;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
-  comment: getComment(post.id),
+  comments: getComment(post.id),
 }));
 
 export const App: React.FC = () => (
