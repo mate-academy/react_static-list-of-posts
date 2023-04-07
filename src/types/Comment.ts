@@ -1,5 +1,7 @@
+import { User } from './User';
+
 export interface Comment {
-  user: JSX.Element;
+  user: User,
   postId: number,
   id: number,
   name: string,
