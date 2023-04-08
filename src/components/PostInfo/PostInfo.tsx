@@ -1,12 +1,15 @@
 import React from 'react';
+
+import './PostInfo.scss';
+
 import { Post } from '../../types/Post';
+import { Comment } from '../../types/Comment';
+
+import commentsFromServer from '../../api/comments';
+import postsFromServer from '../../api/posts';
+
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
-import commentsFromServer from '../../api/comments';
-import { Comment } from '../../types/Comment';
-import postsFromServer from '../../api/posts';
-// import { posts } from '../../App';
-import './PostInfo.scss';
 
 function getPost(postId: number): Post | null {
   const foundPost = postsFromServer.find(post => post.id === postId);
