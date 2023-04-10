@@ -11,10 +11,7 @@ type Props = {
 export const PostList: React.FC<Props> = ({ postInfos }) => (
   <div className="PostList">
     {postInfos.map(postInfo => (
-      <PostInfo
-        key={postInfo.id}
-        post={postInfo}
-      />
+      <PostInfo key={postInfo.id} post={postInfo} />
     ))}
   </div>
 );
