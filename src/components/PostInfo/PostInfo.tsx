@@ -8,35 +8,35 @@ type Props = {
   post: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
-  <>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title, user, body, comments, userId,
+  } = post;
+
+  return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
-          {post.title}
+          {title}
         </h3>
-
         {
-          post.user
+          user
           && (
             <p>
               {' Posted by  '}
-
-              <UserInfo user={post.user} key={post.userId} />
+              <UserInfo user={user} key={userId} />
             </p>
           )
         }
       </div>
-
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
-
       {
-        post.comments.length
-          ? <CommentList comments={post.comments} />
+        comments.length
+          ? <CommentList comments={comments} />
           : <b data-cy="NoCommentsMessage">No comments yet</b>
       }
     </div>
-  </>
-);
+  );
+};
