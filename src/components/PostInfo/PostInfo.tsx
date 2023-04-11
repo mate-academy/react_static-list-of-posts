@@ -24,7 +24,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <p>
           {' Posted by  '}
 
-          {user && <UserInfo user={user} />}
+          {(user && <UserInfo user={user} />) || 'Anonymous'}
         </p>
       </div>
 
