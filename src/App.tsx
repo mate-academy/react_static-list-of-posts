@@ -11,22 +11,22 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-export function getComment(postId: number): Comment[] {
+export function filterCommentById(postId: number): Comment[] {
   const foundComment = commentsFromServer.filter(com => com.postId === postId);
 
-  return foundComment || null;
+  return foundComment;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
-  comments: getComment(post.id),
+  user: getUserById(post.userId),
+  comments: filterCommentById(post.id),
 }));
 
 export const App: React.FC = () => (
