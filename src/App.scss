@@ -1,36 +1,11 @@
+@import "../src/components/CommentList/CommentList.scss";
+@import "../src/components/UserInfo/UserInfo.scss";
+@import "../src/components/PostInfo/PostInfo.scss";
+
 iframe {
   display: none;
 }
 
 .App__title {
   text-align: center;
-}
-
-.PostInfo {
-  margin: 10px auto;
-  width: 90%;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: lightgray;
-  padding: 1em;
-
-  &__title {
-    margin: 0;
-  }
-
-  &__header {
-    margin-bottom: 1em;
-  }
-}
-
-.UserInfo {
-  font-weight: bold;
-}
-
-.CommentList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
 }
