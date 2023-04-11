@@ -3,28 +3,26 @@ import React from 'react';
 import './PostInfo.scss';
 
 import { Post } from '../../types/Post';
-import { Comment } from '../../types/Comment';
-
-import commentsFromServer from '../../api/comments';
-import postsFromServer from '../../api/posts';
 
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
-function getPost(postId: number): Post | null {
-  const foundPost = postsFromServer.find(post => post.id === postId);
+// function getPost(postId: number): Post | null {
+//   const foundPost = postsFromServer.find(post => post.id === postId);
 
-  return foundPost || null;
-}
-
-export const comments: Comment[] = commentsFromServer.map(comment => ({
-  ...comment,
-  post: getPost(comment.postId),
-}));
+//   return foundPost || null;
+// }
 
 type Props = {
   post: Post;
 };
+
+// export const comments: Comment[] = commentsFromServer
+//   .filter(comment => comment.post.id === postId);
+//   .map(comment => ({
+//   ...comment,
+//   post: getPost(comment.postId),
+// }));
 
 export const PostInfo: React.FC<Props> = ({ post }) => (
   <div className="PostInfo">
@@ -46,6 +44,13 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.body}
     </p>
 
-    <CommentList postId={post.id} comments={comments} />
+    <hr />
+
+    {
+      post.comments.length > 0
+        ? <CommentList comments={post.comments} />
+        : <b data-cy="NoCommentsMessage">No comments yet</b>
+    }
+
   </div>
 );

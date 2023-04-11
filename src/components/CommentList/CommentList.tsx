@@ -4,22 +4,15 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Props = {
-  postId: number,
   comments: Comment[],
 };
 
-export const CommentList: React.FC<Props> = ({ postId, comments }) => {
-  const postComments = comments.filter(comment => comment.post?.id === postId);
-
+export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <div className="CommentList">
-      {postComments.length > 0 ? (
-        postComments.map(comment => (
-          <CommentInfo comment={comment} key={comment.id} />
-        ))
-      ) : (
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      )}
+      {comments.map(comment => (
+        <CommentInfo comment={comment} key={comment.id} />
+      ))}
     </div>
   );
 };
