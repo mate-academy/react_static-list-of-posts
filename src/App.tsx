@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.scss';
+
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 import { Post } from './types/Post';
