@@ -1,13 +1,13 @@
 import React from 'react';
-import { Post } from '../../types/Post';
+import { ExtendedPost } from '../../types/ExtendedPost';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
-type PostInfoProps = {
-  post: Post;
+type Props = {
+  post: ExtendedPost;
 };
 
-export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title,
     body,
@@ -32,7 +32,6 @@ export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
       </p>
 
       <CommentList comments={comments} />
-
     </div>
   );
 };

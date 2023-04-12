@@ -1,12 +1,12 @@
 import React from 'react';
-import { Post } from '../../types/Post';
+import { ExtendedPost } from '../../types/ExtendedPost';
 import { PostInfo } from '../PostInfo';
 
-type PostListProps = {
-  posts: Post[];
+type Props = {
+  posts: ExtendedPost[];
 };
 
-export const PostList: React.FC<PostListProps> = ({ posts }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <ul className="PostList">
     {posts.map(post => (
       <PostInfo post={post} key={post.id} />
