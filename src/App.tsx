@@ -1,7 +1,5 @@
 import React from 'react';
-
 import './App.scss';
-
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
@@ -26,15 +24,17 @@ function getComments(postId: number): Comment[] {
   return foundComments;
 }
 
-export const posts: Post[] = postsFromServer.map((post) => ({
-  ...post,
-  user: getUser(post.userId),
-  comments: getComments(post.id),
-}));
+export const App: React.FC = () => {
+  const posts: Post[] = postsFromServer.map((post) => ({
+    ...post,
+    user: getUser(post.userId),
+    comments: getComments(post.id),
+  }));
 
-export const App: React.FC = () => (
-  <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={posts} />
-  </section>
-);
+  return (
+    <section className="App">
+      <h1 className="App__title">Static list of posts</h1>
+      <PostList posts={posts} />
+    </section>
+  );
+};
