@@ -1,6 +1,7 @@
 import React from 'react';
 import { PostInfo } from '../PostInfo';
 import { Post } from '../../types/Post';
+import './PostList.scss';
 
 type PostsProps = {
   posts: Post[];
