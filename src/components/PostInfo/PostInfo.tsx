@@ -1,9 +1,7 @@
 import React from 'react';
 
 import './PostInfo.scss';
-
 import { Post } from '../../types/Post';
-
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
@@ -19,10 +17,14 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       </h3>
 
       <p>
-        {' Posted by  '}
+        {post.user ? (
+          <>
+            {' Posted by  '}
 
-        {post.user && (
-          <UserInfo user={post.user} />
+            <UserInfo user={post.user} />
+          </>
+        ) : (
+          'Posted anonymously'
         )}
       </p>
     </div>
