@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Comments } from '../../types/Comment';
+import { Comment } from '../../types/Comment';
 
 interface CommentInfoProps {
-  comment: Comments
+  comment: Comment
 }
 
 export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
@@ -13,6 +13,7 @@ export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
     <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
+
         {' by '}
 
         <a
