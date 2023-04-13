@@ -11,14 +11,13 @@ import { PostList } from './components/PostList';
 function getUserById(userId: number): Users | null {
   const userName = usersFromServer.find((user) => user.id === userId) || null;
 
-  return userName || null;
+  return userName;
 }
 
 function getCommentsById(postId: number): Comment[] {
-  const commentsBody = commentsFromServer
-    .filter((comment) => {
-      return comment.postId === postId;
-    });
+  const commentsBody = commentsFromServer.filter((comment) => {
+    return comment.postId === postId;
+  });
 
   return commentsBody;
 }
