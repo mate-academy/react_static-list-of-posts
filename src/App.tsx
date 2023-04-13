@@ -6,10 +6,10 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { PreparedPosts } from './types/PreparedPosts';
+import { PreparedPost } from './types/PreparedPost';
 import { PostList } from './components/PostList';
 
-const preparedPosts: PreparedPosts[] = postsFromServer.map(
+const preparedPost: PreparedPost[] = postsFromServer.map(
   post => ({
     ...post,
     user: usersFromServer
@@ -22,6 +22,6 @@ const preparedPosts: PreparedPosts[] = postsFromServer.map(
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={preparedPosts} />
+    <PostList posts={preparedPost} />
   </section>
 );
