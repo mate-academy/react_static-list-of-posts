@@ -1,5 +1,5 @@
 import React from 'react';
-import { FullPost } from './types/FullPost';
+import { PreparedPost } from './types/PreparedPost';
 
 import './App.scss';
 
@@ -7,18 +7,29 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
-// import { post } from 'cypress/types/jquery';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
 
-const fullPosts: FullPost[] = postsFromServer.map(post => ({
+function getUser(id: number): User | null {
+  const foundedUser = usersFromServer.find(user => user.id === id);
+
+  return foundedUser || null;
+}
+
+function getComment(id: number): Comment[] {
+  return commentsFromServer.filter(({ postId }) => postId === id);
+}
+
+const preparedPost: PreparedPost[] = postsFromServer.map(post => ({
   ...post,
-  user: usersFromServer.find(({ id }) => id === post.userId),
-  comments: commentsFromServer.filter(({ postId }) => postId === post.id),
+  user: getUser(post.userId),
+  comments: getComment(post.id),
 }));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList fullPosts={fullPosts} />
+    <PostList preparedPost={preparedPost} />
 
   </section>
 );

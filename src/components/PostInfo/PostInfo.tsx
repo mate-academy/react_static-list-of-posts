@@ -1,16 +1,15 @@
 import React from 'react';
-import { FullPost } from '../../types/FullPost';
+import { PreparedPost } from '../../types/PreparedPost';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 interface Props {
-  post: FullPost;
+  post: PreparedPost;
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
-    id,
     title,
     body,
     user,
@@ -22,12 +21,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
-        <p key={id}>
-          {' Posted by  '}
-          {user && (
-            <UserInfo user={user} />
-          )}
-        </p>
+        {user && (
+          <UserInfo user={user} />
+        )}
       </div>
 
       <p className="PostInfo__body">
@@ -35,8 +31,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </p>
 
       <hr />
-      {comments.length > 0
-        ? (<CommentList comments={comments} />)
+      {comments.length
+        ? <CommentList comments={comments} />
         : (<b data-cy="NoCommentsMessage">No comments yet</b>)}
     </div>
   );
