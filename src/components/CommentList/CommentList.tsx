@@ -20,9 +20,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <div className="CommentList">
       {comments.map(comment => (
-        <React.Fragment key={comment.id}>
-          <CommentInfo comment={comment} />
-        </React.Fragment>
+        <CommentInfo comment={comment} />
       ))}
     </div>
   );

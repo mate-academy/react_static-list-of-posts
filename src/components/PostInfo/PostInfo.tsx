@@ -16,13 +16,17 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
   } = post;
 
   return (
-    <div className="PostInfo">
+    <div className="PostInfo" key={post.id}>
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
           {title}
         </h3>
 
-        <UserInfo user={user} />
+        {
+          user
+            ? <UserInfo user={user} />
+            : <span>unknown user</span>
+        }
       </div>
 
       <p className="PostInfo__body">
