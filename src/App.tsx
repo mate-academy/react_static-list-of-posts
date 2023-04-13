@@ -10,16 +10,16 @@ import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
+function getUser(id: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === id);
 
   return foundUser || null;
 }
 
 function getComments(postId: number): Comment[] {
-  const foundComments = commentsFromServer.filter((comment) => {
-    return comment.postId === postId;
-  });
+  const foundComments = commentsFromServer.filter((comment) => (
+    comment.postId === postId
+  ));
 
   return foundComments;
 }
