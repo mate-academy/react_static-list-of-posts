@@ -16,10 +16,6 @@ export const PostInfo: React.FC<PostProps> = ({ post }) => {
     comments,
   } = post;
 
-  if (user === null) {
-    return null;
-  }
-
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -31,7 +27,7 @@ export const PostInfo: React.FC<PostProps> = ({ post }) => {
 
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 

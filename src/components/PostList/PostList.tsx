@@ -8,6 +8,8 @@ type PostsProps = {
 
 export const PostList: React.FC<PostsProps> = ({ posts }) => (
   <div className="PostList">
-    {posts.map(post => <PostInfo post={post} key={post.id} />)}
+    {posts.map(post => (
+      <PostInfo post={post} key={post.id} />
+    ))}
   </div>
 );
