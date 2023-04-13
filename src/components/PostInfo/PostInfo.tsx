@@ -4,7 +4,7 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
-export interface Props {
+interface Props {
   post: CompletePost;
 }
 
@@ -35,7 +35,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <hr />
 
       <CommentList comments={comments} />
-
     </div>
   );
 };

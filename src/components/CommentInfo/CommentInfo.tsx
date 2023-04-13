@@ -1,7 +1,7 @@
 import React from 'react';
 import { Comment } from '../../types/Comment';
 
-export interface Props {
+interface Props {
   comment: Comment
 }
 

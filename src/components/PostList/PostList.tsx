@@ -2,17 +2,14 @@ import React from 'react';
 import { CompletePost } from '../../types/CompletePost';
 import { PostInfo } from '../PostInfo';
 
-export interface Props {
-  completePost: CompletePost[];
+interface Props {
+  posts: CompletePost[];
 }
 
-export const PostList: React.FC<Props> = ({ completePost }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <>
-    {completePost.map(post => (
-      <PostInfo
-        post={post}
-        key={post.id}
-      />
+    {posts.map(post => (
+      <PostInfo post={post} key={post.id} />
     ))}
   </>
 );

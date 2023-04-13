@@ -3,13 +3,13 @@ import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
-export interface Props {
+interface Props {
   comments: Comment[];
 }
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <div className="commentsList">
-    {comments.length < 1
+    {!comments.length
       ? <b data-cy="NoCommentsMessage">No comments yet</b>
       : comments.map(comment => (
         <CommentInfo
