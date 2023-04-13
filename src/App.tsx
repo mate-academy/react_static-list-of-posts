@@ -12,10 +12,10 @@ import { Post } from './types/Post';
 import { User } from './types/User';
 
 const getUser = (userId: number): User | null => usersFromServer
-  .find(u => u.id === userId) || null;
+  .find(user => user.id === userId) || null;
 
 const getComents = (postId: number): Comment[] => commentsFromServer
-  .filter(c => c.postId === postId);
+  .filter(comment => comment.postId === postId);
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
@@ -25,7 +25,10 @@ export const posts: Post[] = postsFromServer.map(post => ({
 
 export const App: React.FC = () => (
   <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+    <h1 className="App__title">
+      Static list of posts
+    </h1>
+
     <PostList posts={posts} />
   </section>
 );

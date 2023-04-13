@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { Post } from '../../types/Post';
 
@@ -26,13 +27,15 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
     <p className="PostInfo__body">
       {post.body}
     </p>
+
+    <hr />
+
     {post.comment.length
       ? <CommentList comments={post.comment} />
       : (
-        <>
-          <hr />
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        </>
+        <b data-cy="NoCommentsMessage">
+          No comments yet
+        </b>
       )}
   </div>
 );
