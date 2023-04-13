@@ -4,7 +4,7 @@ import { PostInfo } from '../PostInfo';
 
 type Props = {
   fullPost: FullPost[];
-}
+};
 
 export const PostList: React.FC<Props> = ({ fullPost }) => (
   <div className="PostList">
