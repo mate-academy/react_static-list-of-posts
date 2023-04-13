@@ -11,8 +11,7 @@ import { PostList } from './components/PostList';
 import { Comment } from './types/Comment';
 
 const getUser = (userId: number): User | null => {
-  return usersFromServer
-    .find(user => user.id === userId) || null;
+  return usersFromServer.find(user => user.id === userId) || null;
 };
 
 const getComments = (postId: number): Comment[] => {
@@ -20,13 +19,11 @@ const getComments = (postId: number): Comment[] => {
     .filter(comment => comment.postId === postId);
 };
 
-const posts: CompletePost[] = postsFromServer.map(
-  post => ({
-    ...post,
-    user: getUser(post.userId),
-    comments: getComments(post.id),
-  }),
-);
+const posts: CompletePost[] = postsFromServer.map(post => ({
+  ...post,
+  user: getUser(post.userId),
+  comments: getComments(post.id),
+}));
 
 export const App: React.FC = () => (
   <section className="App">

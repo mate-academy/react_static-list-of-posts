@@ -12,10 +12,7 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
     {!comments.length
       ? <b data-cy="NoCommentsMessage">No comments yet</b>
       : comments.map(comment => (
-        <CommentInfo
-          comment={comment}
-          key={comment.id}
-        />
+        <CommentInfo comment={comment} key={comment.id} />
       ))}
   </div>
 );
