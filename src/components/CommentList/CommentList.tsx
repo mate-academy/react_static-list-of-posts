@@ -2,11 +2,11 @@ import React from 'react';
 import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
-interface PropsCommentList {
+interface Props {
   comments: Comment[];
 }
 
-export const CommentList: React.FC<PropsCommentList> = ({ comments }) => {
+export const CommentList: React.FC<Props> = ({ comments }) => {
   const hasComments = comments.length > 0;
 
   return (
@@ -17,8 +17,7 @@ export const CommentList: React.FC<PropsCommentList> = ({ comments }) => {
             <CommentInfo key={comment.id} comment={comment} />
           )))
         : (
-          <b data-cy="NoCommentsMessage">No comments yet</b>
-        )}
+          <b data-cy="NoCommentsMessage">No comments yet</b>)}
     </div>
   );
 };
