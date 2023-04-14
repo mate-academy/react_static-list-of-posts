@@ -11,7 +11,8 @@ import { PreparedPost } from './types/PreparedPost';
 const preparedPosts: PreparedPost[] = postsFromServer.map((post) => ({
   ...post,
   user: usersFromServer
-    .find(({ id }) => id === post.userId) || null,
+    .find(({ id }) => id === post.userId)
+      || null,
   comments: commentsFromServer
     .filter(({ postId }) => postId === post.id),
 }));
@@ -20,6 +21,6 @@ export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </section>
 );
