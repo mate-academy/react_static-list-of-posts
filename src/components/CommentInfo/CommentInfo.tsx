@@ -1,3 +1,4 @@
+import React from 'react';
 import './CommentInfo.scss';
 import { Comment } from '../../types/Comment';
 
@@ -7,14 +8,13 @@ type Props = {
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const {
-    id,
     name,
     email,
     body,
   } = comment;
 
   return (
-    <div className="CommentInfo" key={id}>
+    <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
 
