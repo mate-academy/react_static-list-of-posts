@@ -1,15 +1,14 @@
 import React from 'react';
-
 import './App.scss';
 import postsFromServer from './api/posts';
-import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
+import commentsFromServer from './api/comments';
 import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
-export const posts: Post[] = postsFromServer.map((post) => ({
+export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: usersFromServer.find(user => user.id === post.id) || null,
+  user: usersFromServer.find(user => user.id === post.userId) || null,
   comments: commentsFromServer.filter(comment => comment.postId === post.id),
 }));
 
