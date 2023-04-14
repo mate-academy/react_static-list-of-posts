@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  return comments.length > 0
+  return comments.length
     ? (
       <div className="CommentList">
         {comments.map((comment) => (
