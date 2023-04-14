@@ -2,16 +2,16 @@ import React from 'react';
 import './App.scss';
 import { Post } from './types/Post';
 import postsFromServer from './api/posts';
-import { Users } from './types/User';
+import { User } from './types/User';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUserById(userId: number): Users | null {
-  const userName = usersFromServer.find((user) => user.id === userId) || null;
+function getUserById(id: number): User | null {
+  const user = usersFromServer.find((userId) => userId.id === id) || null;
 
-  return userName;
+  return user;
 }
 
 function getCommentsById(postId: number): Comment[] {
