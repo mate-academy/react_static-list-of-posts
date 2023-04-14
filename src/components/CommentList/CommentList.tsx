@@ -7,9 +7,8 @@ type Comments = {
   comments: Comment[];
 };
 
-export const CommentList: React.FC<Comments> = ({ comments }) => (
-
-  (comments.length === 0)
+export const CommentList: React.FC<Comments> = ({ comments }) => {
+  return !comments.length
     ? <b data-cy="NoCommentsMessage">No comments yet</b>
     : (
       <div className="CommentList">
@@ -17,5 +16,5 @@ export const CommentList: React.FC<Comments> = ({ comments }) => (
           <CommentInfo comment={comment} key={comment.id} />
         ))}
       </div>
-    )
-);
+    );
+};
