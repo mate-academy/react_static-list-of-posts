@@ -9,7 +9,7 @@ import usersFromServer from './api/users';
 import './App.scss';
 
 function getUser(UserId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === id);
+  const foundUser = usersFromServer.find(user => user.id === UserId);
 
   return foundUser || null;
 }
