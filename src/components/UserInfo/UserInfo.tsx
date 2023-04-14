@@ -4,11 +4,11 @@ import { User } from '../../types/User';
 
 import './UserInfo.scss';
 
-interface UserInfoProps {
+interface Props {
   user: User
 }
 
-export const UserInfo: React.FC<UserInfoProps> = ({ user }) => {
+export const UserInfo: React.FC<Props> = ({ user }) => {
   const { name, email } = user;
 
   return (

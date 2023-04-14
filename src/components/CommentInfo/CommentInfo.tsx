@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Comment } from '../../types/Comment';
 
-interface CommentInfoProps {
+interface Props {
   comment: Comment
 }
 
-export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const { name, body, email } = comment;
 
   return (
