@@ -8,10 +8,10 @@ import usersFromServer from './api/users';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 
-function getUserById(users: User[], postId: number): User | undefined {
+function getUserById(users: User[], postId: number): User | null {
   return users.find(user => (
     user.id === postId
-  ));
+  )) || null;
 }
 
 function getCommentsForPost(
@@ -25,7 +25,7 @@ function getCommentsForPost(
 const predaredPosts: Post[] = postsFromServer.map(
   post => ({
     ...post,
-    user: getUserById(usersFromServer, post.userId) || null,
+    user: getUserById(usersFromServer, post.userId),
     comments: getCommentsForPost(commentsFromServer, post.id),
   }),
 );
