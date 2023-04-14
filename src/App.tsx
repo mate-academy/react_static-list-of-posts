@@ -11,8 +11,7 @@ import { PreparedPost } from './types/PreparedPost';
 const preparedPosts: PreparedPost[] = postsFromServer.map((post) => ({
   ...post,
   user: usersFromServer
-    .find(({ id }) => id === post.userId)
-      || null,
+    .find(({ id }) => id === post.userId) || null,
   comments: commentsFromServer
     .filter(({ postId }) => postId === post.id),
 }));
