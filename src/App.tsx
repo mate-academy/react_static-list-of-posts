@@ -5,18 +5,18 @@ import './App.scss';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { Posts } from './types/Posts';
-import { Users } from './types/Users';
-import { Comments } from './types/Comments';
+import { Post } from './types/Post';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): Users | null {
-  const foundUser = usersFromServer.find((user) => user.id === userId);
+function getUserById(id: number): User | null {
+  const foundUser = usersFromServer.find((user) => user.id === id);
 
   return foundUser || null;
 }
 
-function getComments(postId: number): Comments[] {
+function getComments(postId: number): Comment[] {
   const comments = commentsFromServer
     .filter((comment) => {
       return comment.postId === postId;
@@ -25,9 +25,9 @@ function getComments(postId: number): Comments[] {
   return comments;
 }
 
-export const posts: Posts[] = postsFromServer.map((post) => ({
+export const posts: Post[] = postsFromServer.map((post) => ({
   ...post,
-  user: getUser(post.userId),
+  user: getUserById(post.id),
   comments: getComments(post.id),
 }));
 

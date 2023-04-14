@@ -1,9 +1,9 @@
 import React from 'react';
-import { Users } from '../../types/Users';
+import { User } from '../../types/User';
 import './UserInfo.scss';
 
 interface Props {
-  user: Users;
+  user: User;
 }
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
@@ -11,7 +11,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
 
   return (
     <a className="UserInfo" href={`mailto:${email}`}>
-      { name }
+      {name}
     </a>
   );
 };
