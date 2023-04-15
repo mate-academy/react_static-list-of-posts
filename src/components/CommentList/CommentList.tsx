@@ -7,11 +7,9 @@ interface Props {
 }
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  const isComments: boolean = comments.length > 0;
-
   return (
     <ul className="CommentList">
-      {isComments ? (
+      {comments.length > 0 ? (
         comments.map(comment => (
           <CommentInfo comment={comment} key={Math.random()} />
         ))
