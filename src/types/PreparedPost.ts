@@ -1,8 +1,8 @@
-import { Comments } from './Comments';
+import { Comment } from './Comment';
 import { Post } from './Post';
 import { User } from './User';
 
 export type PreparedPost = Post & {
-  comments: Comments[];
+  comments: Comment[];
   user: User | null;
 };
