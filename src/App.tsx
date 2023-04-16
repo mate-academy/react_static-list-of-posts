@@ -8,7 +8,7 @@ import { User } from './types/User';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(({ id }) => id === userId);
 
   return foundUser || null;
@@ -23,13 +23,13 @@ function getComments(idOfPost: number): Comment[] {
 
 export const preparedPosts: PreparedPost[] = postsFromServer.map((post) => ({
   ...post,
-  user: getUser(post.userId),
+  user: getUserById(post.userId),
   comments: getComments(post.id),
 }));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </section>
 );
