@@ -10,7 +10,7 @@ export const PostList: React.FC<Props> = ({ fullPost }) => (
   <div className="PostList">
 
     {fullPost.map(post => (
-      <PostInfo post={post} />
+      <PostInfo key={post.id} post={post} />
     ))}
 
   </div>

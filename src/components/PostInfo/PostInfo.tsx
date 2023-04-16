@@ -8,7 +8,9 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
-  const { title, user, body, comments} = post;
+  const {
+    title, user, body, comments,
+  } = post;
 
   return (
     <div className="PostInfo">
@@ -33,5 +35,5 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       <CommentList comments={comments} />
 
     </div>
-  )
+  );
 };
