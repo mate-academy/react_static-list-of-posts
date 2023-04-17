@@ -8,4 +8,4 @@ export type FullPost = {
   body: string,
   user: User | null,
   comments: Comment[],
-}
+};

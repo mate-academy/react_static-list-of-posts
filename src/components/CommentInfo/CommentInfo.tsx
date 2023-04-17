@@ -9,7 +9,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const {
     name,
     email,
-    body
+    body,
   } = comment;
 
   return (

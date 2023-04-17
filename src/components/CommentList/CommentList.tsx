@@ -12,7 +12,6 @@ export const CommentList: React.FC<Props> = ({ comments }) => (
       ? comments.map(comment => (
         <CommentInfo comment={comment} />
       ))
-      : <b data-cy="NoCommentsMessage">No comments yet</b>
-    }
+      : <b data-cy="NoCommentsMessage">No comments yet</b>}
   </>
 );
