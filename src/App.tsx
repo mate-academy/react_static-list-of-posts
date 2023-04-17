@@ -8,13 +8,13 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getUser(userId: number):User | null {
+function getUserById(userId: number):User | null {
   const foundUser = usersFromServer.find(({ id }) => (id === userId));
 
   return foundUser || null;
 }
 
-function getComments(id: number): Comment[] {
+function getCommentsById(id: number): Comment[] {
   const foundComments = commentsFromServer
     .filter(({ postId }) => postId === id);
 
@@ -24,8 +24,8 @@ function getComments(id: number): Comment[] {
 const preparedPosts: PreparedPost[] = postsFromServer.map(
   (post) => ({
     ...post,
-    user: getUser(post.userId),
-    comments: getComments(post.id),
+    user: getUserById(post.userId),
+    comments: getCommentsById(post.id),
   }),
 );
 
