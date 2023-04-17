@@ -1,10 +1,10 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
-import { FullPost } from '../../types/FullPost';
+import { PreparedPost } from '../../types/PreparedPost';
 import { CommentList } from '../CommentList/CommentList';
 
 type Props = {
-  post: FullPost;
+  post: PreparedPost;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
@@ -25,15 +25,12 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
       </div>
 
       <p className="PostInfo__body">
-
         {body}
-
       </p>
 
       <hr />
 
       <CommentList comments={comments} />
-
     </div>
   );
 };

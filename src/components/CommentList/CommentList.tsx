@@ -7,11 +7,11 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
-  <>
-    {comments.length !== 0
+  <ul>
+    {comments.length
       ? comments.map(comment => (
-        <CommentInfo comment={comment} />
+        <CommentInfo key={comment.id} comment={comment} />
       ))
       : <b data-cy="NoCommentsMessage">No comments yet</b>}
-  </>
+  </ul>
 );
