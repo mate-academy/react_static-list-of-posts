@@ -20,7 +20,7 @@ function getComment(id: number): Comment[] {
   return commentsFromServer.filter(({ postId }) => postId === id);
 }
 
-const preparedPost: PreparedPost[] = postsFromServer.map(post => ({
+const preparedPosts: PreparedPost[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
   comments: getComment(post.id),
@@ -28,8 +28,11 @@ const preparedPost: PreparedPost[] = postsFromServer.map(post => ({
 
 export const App: React.FC = () => (
   <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
-    <PostList preparedPost={preparedPost} />
+    <h1 className="App__title">
+      Static list of posts
+    </h1>
+
+    <PostList posts={preparedPosts} />
 
   </section>
 );
