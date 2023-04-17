@@ -12,13 +12,13 @@ const preparedPosts: PreparedPost[] = postsFromServer.map(
     user: usersFromServer
       .find((user) => user.id === post.userId) || null,
     comments: commentsFromServer
-      .filter((comment) => post.id === comment.postId),
+      .filter(({ postId }) => post.id === postId),
   }),
 );
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </section>
 );
