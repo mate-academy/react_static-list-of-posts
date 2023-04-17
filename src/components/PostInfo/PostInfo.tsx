@@ -5,7 +5,7 @@ import usersFromServer from '../../api/users';
 import commentsFromServer from '../../api/comments';
 import { UserInfo } from '../UserInfo';
 
-function filterCommets(comments: Comment[], postOfId: number) {
+function filterComments(comments: Comment[], postOfId: number) {
   return [...comments].filter(
     comment => comment.postId === postOfId,
   );
@@ -17,7 +17,7 @@ export const PostInfo: React.FC<Post> = ({
   userId,
   id,
 }) => {
-  const filteredComments = filterCommets(commentsFromServer, id);
+  const filteredComments = filterComments(commentsFromServer, id);
 
   return (
     <div className="PostInfo">
