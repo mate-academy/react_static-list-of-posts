@@ -17,7 +17,7 @@ export const PostInfo: React.FC<Post> = ({
   userId,
   id,
 }) => {
-  const filteredCommets = filterCommets(commentsFromServer, id);
+  const filteredComments = filterCommets(commentsFromServer, id);
 
   return (
     <div className="PostInfo">
@@ -42,7 +42,7 @@ export const PostInfo: React.FC<Post> = ({
       <hr />
 
       <CommentList
-        list={filteredCommets}
+        list={filteredComments}
         idOfPost={id}
         key={id}
       />
