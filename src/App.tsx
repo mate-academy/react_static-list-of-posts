@@ -12,22 +12,32 @@ import { User } from './types/User';
 import { PostList } from './components/PostList';
 import { Comment } from './types/Comment';
 
+function getComments(postId: number): Comment[] {
+  const foundComments = commentsFromServer.filter((comment) => {
+    return comment.postId === postId;
+  });
+
+  return foundComments;
+}
+
+function getUser(userId: number): User | null {
+  const foundUser = usersFromServer.find((user) => user.id === userId);
+
+  return foundUser || null;
+}
+
 const preparePosts = (
   posts: Post[],
-  comments: Comment[],
-  users: User[],
 ): FullPost[] => {
   return posts.map(post => ({
     ...post,
-    comments: comments.filter(comment => comment.postId === post.id),
-    user: users.find(user => user.id === post.userId) || null,
+    comments: getComments(post.id),
+    user: getUser(post.userId),
   }));
 };
 
 const preparedPosts = preparePosts(
   postsFromServer,
-  commentsFromServer,
-  usersFromServer,
 );
 
 export const App: React.FC = () => (
