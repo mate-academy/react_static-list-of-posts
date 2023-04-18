@@ -1,10 +1,10 @@
 import React from 'react';
-import { ArrangedPost } from '../../types/ArrangedPost';
+import { PreparedPost } from '../../types/PreparedPost';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type Props = {
-  post: ArrangedPost;
+  post: PreparedPost;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {

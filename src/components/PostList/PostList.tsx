@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrangedPost } from '../../types/ArrangedPost';
+import { PreparedPost } from '../../types/PreparedPost';
 import { PostInfo } from '../PostInfo';
 
 type Props = {
-  posts: ArrangedPost[];
+  posts: PreparedPost[];
 };
 
 export const PostList: React.FC<Props> = ({ posts }) => (
