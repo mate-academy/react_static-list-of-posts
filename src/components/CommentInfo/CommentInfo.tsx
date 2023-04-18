@@ -1,34 +1,28 @@
 import React from 'react';
-import commentsFromServer from '../../api/comments';
+// import commentsFromServer from '../../api/comments';
 
 type Props = {
-  postId: number,
+  name: string,
+  email: string,
+  body: string;
 };
 
-export const CommentInfo: React.FC<Props> = ({ postId }) => (
-  <>
-    {commentsFromServer.map(comment => comment.postId === postId
-    && (
-      <div className="CommentInfo">
-        <div className="CommentInfo__title">
-          <strong className="CommentInfo__name">
-            {comment.name}
-          </strong>
-
-          {' by '}
-
-          <a
-            className="CommentInfo__email"
-            href={`mailto:${comment.email}`}
-          >
-            {comment.email}
-          </a>
-        </div>
-
-        <div className="CommentInfo__body">
-          {comment.body}
-        </div>
-      </div>
-    ))}
-  </>
+export const CommentInfo: React.FC<Props> = ({ name, email, body }) => (
+  <div className="CommentInfo">
+    <div className="CommentInfo__title">
+      <strong className="CommentInfo__name">
+        {name}
+      </strong>
+      {' by '}
+      <a
+        className="CommentInfo__email"
+        href={`mailto:${email}`}
+      >
+        {email}
+      </a>
+    </div>
+    <div className="CommentInfo__body">
+      {body}
+    </div>
+  </div>
 );

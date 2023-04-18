@@ -1,7 +1,9 @@
+/* eslint-disable implicit-arrow-linebreak */
+
 import React from 'react';
 import commentsFromServer from '../../api/comments';
-import { CommentInfo } from '../CommentInfo/CommentInfo';
 import { Comment } from '../../types/Comment';
+import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Props = {
@@ -13,8 +15,9 @@ export const CommentList: React.FC<Props> = ({ postId }) => {
 
   return (
     <div className="CommentList">
-      {commentsFromServer.some(found)
-        ? <CommentInfo postId={postId} />
+      {commentsFromServer.filter(found).length > 0
+        ? commentsFromServer.filter(found).map(el =>
+          <CommentInfo name={el.name} email={el.email} body={el.body} />)
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   );
