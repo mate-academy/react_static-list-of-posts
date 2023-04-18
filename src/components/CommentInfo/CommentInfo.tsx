@@ -4,7 +4,7 @@ import React from 'react';
 type Props = {
   name: string,
   email: string,
-  body: string;
+  body: string,
 };
 
 export const CommentInfo: React.FC<Props> = ({ name, email, body }) => (

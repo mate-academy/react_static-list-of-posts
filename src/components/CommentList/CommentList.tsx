@@ -12,11 +12,12 @@ type Props = {
 
 export const CommentList: React.FC<Props> = ({ postId }) => {
   const found = (element: Comment) => element.postId === postId;
+  const filtered = commentsFromServer.filter(found);
 
   return (
     <div className="CommentList">
-      {commentsFromServer.filter(found).length > 0
-        ? commentsFromServer.filter(found).map(el =>
+      {filtered.length > 0
+        ? filtered.map(el =>
           <CommentInfo name={el.name} email={el.email} body={el.body} />)
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
