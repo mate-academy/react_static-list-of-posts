@@ -1,29 +1,41 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
-import { Posts } from '../../types/Posts';
+import { Post } from '../../types/Posts';
 import './PostInfo.scss';
 
-type InfoTypes = {
-  post: Posts;
+type Props = {
+  post: Post;
 };
 
-export const PostInfo: React.FC<InfoTypes> = ({ post }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    user,
+    body,
+    comments,
+  } = post;
 
-      <p>
-        {' Posted by  '}
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{title}</h3>
 
-        {post.user && <UserInfo user={post.user} />}
+        {user
+          && (
+            <p>
+              {' Posted by  '}
+
+              {user && <UserInfo user={user} />}
+            </p>
+          )}
+      </div>
+
+      <p className="PostInfo__body">
+        {body}
       </p>
+
+      <CommentList comments={comments} />
     </div>
-
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    <CommentList comments={post.comments} />
-  </div>
-);
+  );
+};

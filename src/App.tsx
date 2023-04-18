@@ -1,24 +1,24 @@
 import React from 'react';
 import { PostList } from './components/PostList/index';
-import { Users, Comments, Posts } from './types/index';
+import { Users, Comment, Post } from './types/index';
 import './App.scss';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-function getUser(userId: number): Users | null {
+function getUserById(userId: number): Users | null {
   return usersFromServer.find(user => userId === user.id) || null;
 }
 
-function getComment(postId: number): Comments[] {
+function getComment(postId: number): Comment[] {
   return commentsFromServer.filter(comment => postId === comment.postId);
 }
 
-const mutetedPosts: Posts[] = postsFromServer.map(post => {
+const mutetedPosts: Post[] = postsFromServer.map(post => {
   return {
     ...post,
-    user: getUser(post.userId),
+    user: getUserById(post.userId),
     comments: getComment(post.id),
   };
 });
@@ -26,6 +26,7 @@ const mutetedPosts: Posts[] = postsFromServer.map(post => {
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
+
     <PostList posts={mutetedPosts} />
   </section>
 );

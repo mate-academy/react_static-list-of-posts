@@ -1,13 +1,13 @@
 import React from 'react';
 import { CommentInfo } from '../CommentInfo';
-import { Comments } from '../../types/Comments';
+import { Comment } from '../../types/Comments';
 import './CommentList.scss';
 
-type CommentListTypes = {
-  comments: Comments[];
+type Props = {
+  comments: Comment[];
 };
 
-export const CommentList: React.FC<CommentListTypes> = ({ comments }) => {
+export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <div className="CommentList">
       {comments.length ? (
