@@ -43,7 +43,6 @@ export const PostInfo: React.FC<Post> = ({
 
       <CommentList
         list={filteredComments}
-        idOfPost={id}
         key={id}
       />
     </div>
