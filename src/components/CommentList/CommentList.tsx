@@ -1,5 +1,3 @@
-/* eslint-disable implicit-arrow-linebreak */
-
 import React from 'react';
 import commentsFromServer from '../../api/comments';
 import { Comment } from '../../types/Comment';
@@ -11,14 +9,23 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ postId }) => {
-  const found = (element: Comment) => element.postId === postId;
-  const filtered = commentsFromServer.filter(found);
+  const filteredComments = commentsFromServer.filter(
+    (element: Comment) => element.postId === postId,
+  );
 
   return (
     <div className="CommentList">
-      {filtered.length > 0
-        ? filtered.map(el =>
-          <CommentInfo name={el.name} email={el.email} body={el.body} />)
+      {filteredComments.length > 0
+        ? filteredComments.map(
+          el => (
+            <CommentInfo
+              key={el.id}
+              name={el.name}
+              email={el.email}
+              body={el.body}
+            />
+          ),
+        )
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   );

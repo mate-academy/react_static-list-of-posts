@@ -1,5 +1,4 @@
 import React from 'react';
-// import commentsFromServer from '../../api/comments';
 
 type Props = {
   name: string,
