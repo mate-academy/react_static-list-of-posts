@@ -1,5 +1,5 @@
 import React from 'react';
-import { Post } from '../../types/types';
+import { Post, Comment } from '../../types/types';
 import { CommentList } from '../CommentList';
 import usersFromServer from '../../api/users';
 import commentsFromServer from '../../api/comments';

@@ -5,16 +5,18 @@ import './CommentList.scss';
 
 type Props = {
   list: Comment[];
+  idOfPost: number;
+  key: number;
 };
 
-export const CommentList: React.FC<Props> = ({ list }) => {
+export const CommentList: React.FC<Props> = ({ list, idOfPost, key }) => {
   if (list.length > 0) {
     return (
       <ul className="CommentList">
         {list.map(
           comment => (
-            <li className="CommentItems" key={comment.id}>
-              <CommentInfo comment={comment} />
+            <li className="CommentItems" key={key}>
+              <CommentInfo comment={comment} idOfPost={idOfPost} />
             </li>
           ),
         )}
