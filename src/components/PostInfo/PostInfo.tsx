@@ -21,13 +21,19 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
           {title}
         </h3>
 
-        <p>
-          {' Posted by  '}
+        {author
+          ? (
+            <p>
+              {' Posted by  '}
 
-          <a className="UserInfo" href={`mailto:${author?.email || ''}`}>
-            {`${author?.name || 'Unknown user'}`}
-          </a>
-        </p>
+              <a className="UserInfo" href={`mailto:${author.email}`}>
+                {`${author.name}`}
+              </a>
+            </p>
+          )
+          : (
+            <span>Unknown user</span>
+          )}
       </div>
 
       <p className="PostInfo__body">

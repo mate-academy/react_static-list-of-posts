@@ -1,19 +1,24 @@
 import React from 'react';
 import './App.scss';
-import { PreparedPost } from './types/preparedPost';
-
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
+import { PreparedPost } from './types/preparedPost';
 import { PostList } from './components/PostList';
+
+const getUsersByID = (userId: number) => (
+  usersFromServer.find((user) => user.id === userId) || null
+);
+
+const getCommentsByID = (postId: number) => (
+  commentsFromServer.filter((comment) => comment.postId === postId)
+);
 
 const preparedPosts: PreparedPost[] = postsFromServer.map(
   (post) => ({
     ...post,
-    author: usersFromServer
-      .find(({ id }) => id === post.userId) || null,
-    comments: commentsFromServer
-      .filter(({ postId }) => postId === post.id),
+    author: getUsersByID(post.userId),
+    comments: getCommentsByID(post.id),
   }),
 );
 
