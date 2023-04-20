@@ -1,5 +1,5 @@
 import { Comment } from './Comments';
-import { Users } from './Users';
+import { User } from './Users';
 
 export interface Post {
   userId: number;
@@ -7,5 +7,5 @@ export interface Post {
   title: string;
   body: string;
   comments: Comment[];
-  user: Users | null;
+  user: User | null;
 }

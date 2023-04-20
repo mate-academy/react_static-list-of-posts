@@ -1,9 +1,9 @@
 import { Post } from './Posts';
-import { Users } from './Users';
+import { User } from './Users';
 import { Comment } from './Comments';
 
 export {
   Post,
-  Users,
+  User,
   Comment,
 };
