@@ -8,34 +8,45 @@ interface Props {
   post: Post;
 }
 
-export const PostInfo: React.FC<Props> = ({ post }) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">
-        {post.title}
-      </h3>
+export const PostInfo: React.FC<Props> = ({ post }) => {
+  const {
+    title,
+    body,
+    user,
+    comment,
+  } = post;
 
-      <p>
-        {' Posted by  '}
+  return (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">
+          {title}
+        </h3>
 
-        <a className="UserInfo" href={`mailto:${post.user?.email}`}>
-          {post.user?.name}
-        </a>
+        {user && (
+          <p>
+            {' Posted by  '}
+
+            <a className="UserInfo" href={`mailto:${user?.email}`}>
+              {user?.name}
+            </a>
+          </p>
+        )}
+      </div>
+
+      <p className="PostInfo__body">
+        {body}
       </p>
+
+      <hr />
+
+      {comment.length
+        ? <CommentList comments={comment} />
+        : (
+          <b data-cy="NoCommentsMessage">
+            No comments yet
+          </b>
+        )}
     </div>
-
-    <p className="PostInfo__body">
-      {post.body}
-    </p>
-
-    <hr />
-
-    {post.comment.length
-      ? <CommentList comments={post.comment} />
-      : (
-        <b data-cy="NoCommentsMessage">
-          No comments yet
-        </b>
-      )}
-  </div>
-);
+  );
+};
