@@ -7,11 +7,17 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PreparedPost } from './types/PreparedPost';
+import { User } from './types/User';
+
+function getUserById(userId: number): User | null {
+  const user = usersFromServer.find(({ id }) => id === userId);
+
+  return user || null;
+}
 
 const preparedPosts: PreparedPost[] = postsFromServer.map((post) => ({
   ...post,
-  user: usersFromServer
-    .find(({ id }) => id === post.userId) || null,
+  user: getUserById(post.userId),
   comments: commentsFromServer
     .filter(({ postId }) => postId === post.id),
 }));
