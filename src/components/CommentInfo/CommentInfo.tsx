@@ -4,7 +4,7 @@ import { Comment } from '../../types/Comment';
 type Props = {
   comment: Comment;
 };
-export const CommentInfo: React.FC<Props> = ({ comment }) => {
+export const CommentInfo: React.FC< Props > = ({ comment }) => {
   const {
     name,
     email,
