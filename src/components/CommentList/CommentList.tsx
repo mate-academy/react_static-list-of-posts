@@ -10,8 +10,8 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <ul className="CommentList">
       {comments.length > 0 ? (
-        comments.map(comment => (
-          <CommentInfo comment={comment} key={Math.random()} />
+        comments.map(({ id, ...comment }) => (
+          <CommentInfo comment={comment} key={id} />
         ))
       ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>
