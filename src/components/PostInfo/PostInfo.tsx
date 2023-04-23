@@ -27,7 +27,7 @@ export const PostInfo: React.FC<Prop> = ({ post }) => {
 
       <p className="PostInfo__body">{body}</p>
 
-      {comments ? (
+      {comments?.length ? (
         <CommentList comments={comments} />
       ) : (
         <>
