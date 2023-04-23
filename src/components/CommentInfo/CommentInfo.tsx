@@ -12,7 +12,9 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
   return (
     <li className="CommentInfo">
       <div className="CommentInfo__title">
-        <strong className="CommentInfo__name">{name}</strong>
+        <strong className="CommentInfo__name">
+          {name}
+        </strong>
 
         {' by '}
 
