@@ -10,10 +10,7 @@ type Prop = {
 
 export const PostInfo: React.FC<Prop> = ({ post }) => {
   const {
-    title,
-    body,
-    user,
-    comments,
+    title, body, user, comments,
   } = post;
 
   return (
@@ -21,11 +18,12 @@ export const PostInfo: React.FC<Prop> = ({ post }) => {
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
 
-        <p>
-          {' Posted by  '}
-
-          {user && <UserInfo user={user} />}
-        </p>
+        {user && (
+          <p>
+            {' Posted by  '}
+            <UserInfo user={user} />
+          </p>
+        )}
       </div>
 
       <p className="PostInfo__body">{body}</p>
