@@ -6,11 +6,17 @@ import usersFromServer from './api/users';
 import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
-const posts: Post[] = postsFromServer.map(post => ({
-  ...post,
-  user: usersFromServer.find(userFind => userFind.id === post.userId) || null,
-  comments: commentsFromServer.filter(comment => comment.postId === post.id),
-}));
+type InitialPosts = Omit<Post, 'user' | 'comments'>;
+
+function getInformativePosts(initialPosts: InitialPosts[]): Post[] {
+  return initialPosts.map(post => ({
+    ...post,
+    user: usersFromServer.find(userFind => userFind.id === post.userId) || null,
+    comments: commentsFromServer.filter(comment => comment.postId === post.id),
+  }));
+}
+
+const posts: Post[] = getInformativePosts(postsFromServer);
 
 export const App: React.FC = () => (
   <section className="App">
