@@ -4,11 +4,11 @@ import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
-type PostProp = {
+type Prop = {
   post: Post;
 };
 
-export const PostInfo: React.FC<PostProp> = ({ post }) => {
+export const PostInfo: React.FC<Prop> = ({ post }) => {
   const {
     title, body, user, comments,
   } = post;
