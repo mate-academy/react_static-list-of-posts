@@ -8,28 +8,33 @@ type PostInfoProp = {
 };
 
 export const PostInfo: React.FC<PostInfoProp> = ({ post }) => {
-  const { user } = post;
+  const {
+    user,
+    title,
+    comments,
+    body,
+  } = post;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
-        {user
-        && (
+        <h3 className="PostInfo__title">{title}</h3>
+        {user && (
           <p>
             {' Posted by ' }
+
             <UserInfo user={user} />
           </p>
         )}
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       <hr />
 
-      <CommentList comments={post.comments} />
+      <CommentList comments={comments} />
     </div>
   );
 };
