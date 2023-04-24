@@ -8,8 +8,8 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
-  const comments = post.comment.length
-    ? <CommentList comments={post.comment} />
+  const comments = post.comments.length
+    ? <CommentList comments={post.comments} />
     : <b data-cy="NoCommentsMessage">No comments yet</b>;
 
   return (
