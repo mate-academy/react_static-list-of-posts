@@ -7,7 +7,7 @@ type TypeCommentInfo = {
 
 export const CommentInfo: React.FC<TypeCommentInfo> = ({ comment }) => {
   const { name, email, body } = comment;
-  const mail = `mailto${email}`;
+  const mail = `mailto:${email}`;
 
   return (
     <div className="CommentInfo">
