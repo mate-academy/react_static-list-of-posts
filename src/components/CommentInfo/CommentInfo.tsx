@@ -22,7 +22,7 @@ export const CommentInfo: React.FC<TypeCommentInfo> = ({ comment }) => {
           className="CommentInfo__email"
           href={mail}
         >
-          {mail}
+          {email}
         </a>
       </div>
 
