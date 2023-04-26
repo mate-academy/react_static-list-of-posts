@@ -6,8 +6,11 @@ type TypeCommentList = {
   comments: Comments[],
 };
 
-export const CommentList: React.FC<TypeCommentList> = ({ comments }) => (
-  <div className="CommentList">
-    {comments.map(comment => <CommentInfo comment={comment} />)}
-  </div>
-);
+export const CommentList: React.FC<TypeCommentList> = ({ comments }) => {
+  return (
+    <div className="CommentList">
+      {comments
+        .map(comment => <CommentInfo comment={comment} key={comment.id} />)}
+    </div>
+  );
+};
