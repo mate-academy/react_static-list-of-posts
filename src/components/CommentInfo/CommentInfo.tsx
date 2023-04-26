@@ -30,5 +30,6 @@ export const CommentInfo: React.FC<TypeCommentInfo> = ({ comment }) => {
         {body}
       </div>
     </div>
+
   );
 };

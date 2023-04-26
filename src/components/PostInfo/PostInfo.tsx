@@ -16,7 +16,7 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => {
     body,
   } = post;
 
-  const PrintedComents = comments.length > 0
+  const printedComents = comments.length > 0
     ? <CommentList comments={comments} />
     : <b data-cy="NoCommentsMessage">No comments yet</b>;
 
@@ -36,7 +36,7 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => {
       <p className="PostInfo__body">
         {body}
       </p>
-      {PrintedComents}
+      {printedComents}
     </div>
   );
 };
