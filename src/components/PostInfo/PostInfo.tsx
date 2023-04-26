@@ -26,10 +26,9 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => {
         <h3 className="PostInfo__title">
           {title}
         </h3>
-
         <p>
-          {' Posted by  '}
-          {user && <UserInfo user={user} />}
+        {' Posted by  '}
+        {user && <UserInfo user={user} />}
         </p>
       </div>
 
