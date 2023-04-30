@@ -15,12 +15,10 @@ const getUserById = (userId: number): User | null => {
   return gotUser || null;
 };
 
-const getCommentById = (commentId: number): Comment[] | [] => {
-  const gotComment = commentsFromServer.filter(
+const getCommentById = (commentId: number): Comment[] => {
+  return commentsFromServer.filter(
     comment => comment.postId === commentId,
   );
-
-  return gotComment || [];
 };
 
 const allPosts: Post[] = postsFromServer.map(post => ({
