@@ -3,21 +3,20 @@ import { CommentInfoType } from '../../type/comment';
 
 export const CommentInfo: React.FC<CommentInfoType> = ({
   comment: {
-    id,
     name,
     email,
     body,
   },
 }) => (
-  <div className="CommentInfo" key={id}>
-    <div className="CommentInfo__title">
+  <>
+  <div className="CommentInfo__title">
       <strong className="CommentInfo__name">{name}</strong>
 
       {' by '}
 
       <a
         className="CommentInfo__email"
-        href={`mailto${email}`}
+        href={`mailto:${email}`}
       >
         {email}
       </a>
@@ -26,5 +25,5 @@ export const CommentInfo: React.FC<CommentInfoType> = ({
     <div className="CommentInfo__body">
       {body}
     </div>
-  </div>
+  </>
 );

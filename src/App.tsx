@@ -12,27 +12,27 @@ import { Post } from './type/post';
 import { Comment } from './type/comment';
 import { User } from './type/user';
 
-function searchUser(userId:number): User | null {
+function findUserById(userId:number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function searchComments(id: number): Comment[] | null {
+function findCommentsById(id: number): Comment[] | [] {
   const comments = commentsFromServer.filter(comment => comment.postId === id);
 
-  return comments.length > 0 ? comments : null;
+  return comments.length > 0 ? comments : [];
 }
 
-const allPost: Post[] = postsFromServer.map(post => ({
+const allPosts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: searchUser(post.userId),
-  comments: searchComments(post.id),
+  user: findUserById(post.userId),
+  comments: findCommentsById(post.id),
 }));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={allPost} />
+    <PostList posts={allPosts} />
   </section>
 );

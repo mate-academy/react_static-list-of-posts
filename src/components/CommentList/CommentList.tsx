@@ -6,7 +6,9 @@ import './CommentList.scss';
 export const CommentList: React.FC<CommentListType> = ({ comments }) => (
   <div className="CommentList">
     {comments.map(comment => (
-      <CommentInfo comment={comment} />
+      <div className="CommentInfo" key={comment.id}>
+        <CommentInfo comment={comment} />
+      </div>
     ))}
   </div>
 );
