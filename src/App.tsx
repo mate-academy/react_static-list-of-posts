@@ -8,14 +8,22 @@ import usersFromServer from './api/users';
 
 import { PreparedPost } from './types/PreparedPost';
 import { PostList } from './components/PostList';
+import { User } from './types/User';
+
+const correctUser = (userId: number): User | null => {
+  return usersFromServer.find(({ id }) => id === userId) || null;
+};
+
+const correctComments = (id: number): Comment[] => {
+  return commentsFromServer
+    .filter(({ postId }) => (postId === id));
+};
 
 const preparedPost: PreparedPost[] = postsFromServer.map(
   post => ({
     ...post,
-    user: usersFromServer
-      .find(({ id }) => id === post.userId) || null,
-    comments: commentsFromServer
-      .filter(({ postId }) => (postId === post.id)),
+    user: correctUser(post.userId),
+    comments: correctComments(post.id),
   }),
 );
 
