@@ -4,11 +4,11 @@ import { Post } from '../../types/Post';
 import './PostInfo.scss';
 import { UserInfo } from '../UserInfo/UserInfo';
 
-type TypePostInfo = {
+interface PostInfoProps {
   post: Post;
-};
+}
 
-export const PostInfo: React.FC<TypePostInfo> = ({ post }) => {
+export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   const {
     comments,
     user,
@@ -27,8 +27,8 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => {
           {title}
         </h3>
         <p>
-        {' Posted by  '}
-        {user && <UserInfo user={user} />}
+          {' Posted by  '}
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 

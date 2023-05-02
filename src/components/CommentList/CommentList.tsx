@@ -2,11 +2,11 @@ import React from 'react';
 import { CommentInfo } from '../CommentInfo';
 import { Comments } from '../../types/Comments';
 
-type TypeCommentList = {
+interface CommentListProps {
   comments: Comments[],
-};
+}
 
-export const CommentList: React.FC<TypeCommentList> = ({ comments }) => {
+export const CommentList: React.FC<CommentListProps> = ({ comments }) => {
   return (
     <div className="CommentList">
       {comments
