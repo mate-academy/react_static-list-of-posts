@@ -4,9 +4,9 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
-type PostInfoProps = {
+interface PostInfoProps {
   post: Post;
-};
+}
 
 export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   const {
