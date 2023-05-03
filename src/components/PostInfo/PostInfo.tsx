@@ -3,11 +3,11 @@ import { Post } from '../../Types/Post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
-type Props = {
+type PostInfoProps = {
   post: Post;
 };
 
-export const PostInfo: React.FC<Props> = ({ post }) => {
+export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   const comments = post.comments.length
     ? <CommentList comments={post.comments} />
     : <b data-cy="NoCommentsMessage">No comments yet</b>;
