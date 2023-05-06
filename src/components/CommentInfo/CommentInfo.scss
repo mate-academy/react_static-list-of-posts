@@ -1,1 +1,6 @@
-//
+.CommentInfo__by {
+  &::after,
+  &::before {
+    content: "\00a0";
+  }
+}
