@@ -20,7 +20,6 @@ function getComments(postId: number): Comment[] {
   const foundComments = commentsFromServer.filter((
     comment => comment.postId === postId));
 
-  // if there is no user with a given userId
   return foundComments;
 }
 
