@@ -1,12 +1,13 @@
 import React from 'react';
 import { Post } from '../../types/Post';
+import { UserInfo } from '../UserInfo';
 
 interface PostInfoProps {
   postInfo: Post
 }
 
 export const PostInfo: React.FC<PostInfoProps> = ({
-  postInfo: { title, body },
+  postInfo: { title, body, user },
 }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
@@ -15,9 +16,7 @@ export const PostInfo: React.FC<PostInfoProps> = ({
       <p>
         {' Posted by  '}
 
-        <a className="UserInfo" href="mailto:Sincere@april.biz">
-          Leanne Graham
-        </a>
+        {user ? <UserInfo userInfo={user} /> : undefined}
       </p>
     </div>
 
