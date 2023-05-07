@@ -18,7 +18,6 @@ export const PostInfo: React.FC<Props> = ({
 
       <p>
         {' Posted by  '}
-
         { user && <UserInfo user={user} />}
       </p>
     </div>
