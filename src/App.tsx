@@ -32,6 +32,7 @@ function getComments(postId: number): Comment[] | null {
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
+  comments: getComments(post.id),
 }));
 
 export const App: React.FC = () => (

@@ -1,10 +1,7 @@
 import React from 'react';
 import './PostInfo.scss';
-import { Comment } from '../../types/Comment';
 import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
-// import { CommentList } from '../CommentList';
-import commentsFromServer from '../../api/comments';
 import { CommentList } from '../CommentList';
 
 interface PostInfoProps {
@@ -13,7 +10,7 @@ interface PostInfoProps {
 
 export const PostInfo: React.FC<PostInfoProps> = ({
   postInfo: {
-    title, body, user, id,
+    title, body, user, comments,
   },
 }) => (
   <div className="PostInfo">
@@ -31,16 +28,9 @@ export const PostInfo: React.FC<PostInfoProps> = ({
       {body}
     </p>
 
-    {commentsFromServer.find((comment: Comment) => (
-      comment.postId === id
-    ))
+    { comments
       ? (
-        <CommentList commentList={
-          commentsFromServer.filter((comment: Comment) => (
-            comment.postId === id
-          ))
-        }
-        />
+        <CommentList commentList={comments} />
       )
       : (
         <>
