@@ -1,13 +1,19 @@
 import React from 'react';
+import { Comment } from '../../types/Comment';
 import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
+// import { CommentList } from '../CommentList';
+import commentsFromServer from '../../api/comments';
+import { CommentList } from '../CommentList';
 
 interface PostInfoProps {
   postInfo: Post
 }
 
 export const PostInfo: React.FC<PostInfoProps> = ({
-  postInfo: { title, body, user },
+  postInfo: {
+    title, body, user, id,
+  },
 }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
@@ -24,8 +30,24 @@ export const PostInfo: React.FC<PostInfoProps> = ({
       {body}
     </p>
 
-    <hr />
+    {commentsFromServer.find((comment: Comment) => (
+      comment.postId === id
+    ))
+      ? (
+        <CommentList commentList={
+          commentsFromServer.filter((comment: Comment) => (
+            comment.postId === id
+          ))
+        }
+        />
+      )
+      : (
+        <>
+          <hr />
 
-    <b data-cy="NoCommentsMessage">No comments yet</b>
+          <b data-cy="NoCommentsMessage">No comments yet</b>
+        </>
+      )}
+
   </div>
 );

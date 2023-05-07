@@ -15,7 +15,7 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-export const todos: Post[] = postsFromServer.map(post => ({
+export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
 }));
