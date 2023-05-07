@@ -1,5 +1,10 @@
 import React from 'react';
+import { Comment } from '../../types/Comment';
 
-export const CommentInfo: React.FC = () => (
+interface CommentInfoProps {
+  comment: Comment
+}
+
+export const CommentInfo: React.FC<CommentInfoProps> = () => (
   <>Put the comment here</>
 );
