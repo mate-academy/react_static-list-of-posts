@@ -1,5 +1,7 @@
 import React from 'react';
 
 export const UserInfo: React.FC = () => (
-  <>Put the user here</>
+  <a className="UserInfo" href="mailto:Sincere@april.biz">
+    Leanne Graham
+  </a>
 );
