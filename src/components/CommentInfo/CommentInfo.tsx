@@ -5,6 +5,25 @@ interface CommentInfoProps {
   comment: Comment
 }
 
-export const CommentInfo: React.FC<CommentInfoProps> = () => (
-  <>Put the comment here</>
+export const CommentInfo: React.FC<CommentInfoProps> = ({
+  comment: { name, email, body },
+}) => (
+  <div className="CommentInfo">
+    <div className="CommentInfo__title">
+      <strong className="CommentInfo__name">{name}</strong>
+
+      {' by '}
+
+      <a
+        className="CommentInfo__email"
+        href={email}
+      >
+        {email}
+      </a>
+    </div>
+
+    <div className="CommentInfo__body">
+      {body}
+    </div>
+  </div>
 );
