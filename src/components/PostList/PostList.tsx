@@ -1,5 +1,12 @@
 import React from 'react';
+import { Post } from '../../types/Post';
 
-export const PostList: React.FC = () => (
-  <>Put the list here</>
+interface PostListProps {
+  postList: Post[]
+}
+
+export const PostList: React.FC<PostListProps> = () => (
+  <div className="PostList">
+    abc
+  </div>
 );
