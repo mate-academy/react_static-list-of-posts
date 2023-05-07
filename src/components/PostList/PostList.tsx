@@ -9,7 +9,7 @@ interface PostListProps {
 export const PostList: React.FC<PostListProps> = ({ postList }) => (
   <div className="PostList">
     {postList.map(post => (
-      <PostInfo postInfo={post} />
+      <PostInfo key={post.id} postInfo={post} />
     ))}
   </div>
 );
