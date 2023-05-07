@@ -13,9 +13,9 @@ export const CommentInfo: React.FC<Props> = ({
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">
         {name}
-        {' by '}
+        {' '}
       </strong>
-
+      <span>{' by '}</span>
       <a
         className="CommentInfo__email"
         href={`mailto:${email}`}
