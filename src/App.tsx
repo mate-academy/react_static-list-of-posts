@@ -2,9 +2,24 @@ import React from 'react';
 
 import './App.scss';
 
-// import postsFromServer from './api/posts';
+import { Post } from './types/Post';
+import { User } from './types/User';
+
+import postsFromServer from './api/posts';
 // import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import usersFromServer from './api/users';
+
+function getUser(userId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  // if there is no user with a given userId
+  return foundUser || null;
+}
+
+export const todos: Post[] = postsFromServer.map(post => ({
+  ...post,
+  user: getUser(post.userId),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
