@@ -5,14 +5,19 @@ import usersFromServer from './api/users';
 import commentsFromServer from './api/comments';
 import { PreparedPost } from './types/PreparedPost';
 import { PostList } from './components/PostList';
+import { Post } from './types/Post';
+
+const findUser = (post: Post) => (usersFromServer
+  .find(({ id }) => id === post.userId) || null);
+
+const filterCommentsById = (post: Post) => (commentsFromServer
+  .filter(({ postId }) => postId === post.id));
 
 const preparedPosts: PreparedPost[] = postsFromServer.map(
   (post) => ({
     ...post,
-    user: usersFromServer
-      .find(({ id }) => id === post.userId) || null,
-    comments: commentsFromServer
-      .filter(({ postId }) => postId === post.id),
+    user: findUser(post),
+    comments: filterCommentsById(post),
   }),
 );
 
@@ -20,6 +25,6 @@ export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList preparedPosts={preparedPosts} />
+    <PostList posts={preparedPosts} />
   </section>
 );
