@@ -1,27 +1,31 @@
 import React from 'react';
-import { Comment } from '../../Types/Comment';
+import { Comments } from '../../Types/Comment';
 
-type CommentInfoProps = {
-  comment: Comment,
+interface CommentInfoProps {
+  comments: Comments,
+}
+
+export const CommentInfo: React.FC<CommentInfoProps> = ({ comments }) => {
+  const { name, email, body } = comments;
+
+  return (
+    <div className="CommentInfo">
+      <div className="CommentInfo__title">
+        <strong className="CommentInfo__name">{name}</strong>
+
+        {' by '}
+
+        <a
+          className="CommentInfo__email"
+          href={`mailto:${email}`}
+        >
+          {email}
+        </a>
+      </div>
+
+      <div className="CommentInfo__body">
+        {body}
+      </div>
+    </div>
+  );
 };
-
-export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => (
-  <div className="CommentInfo">
-    <div className="CommentInfo__title">
-      <strong className="CommentInfo__name">{comment.name}</strong>
-
-      {' by '}
-
-      <a
-        className="CommentInfo__email"
-        href={`mailto:${comment.email}`}
-      >
-        {comment.email}
-      </a>
-    </div>
-
-    <div className="CommentInfo__body">
-      {comment.body}
-    </div>
-  </div>
-);

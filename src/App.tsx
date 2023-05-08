@@ -1,7 +1,7 @@
 import React from 'react';
 import { Post } from './Types/Post';
 import { User } from './Types/User';
-import { Comment } from './Types/Comment';
+import { Comments } from './Types/Comment';
 import './App.scss';
 import { PostList } from './components/PostList';
 
@@ -15,7 +15,7 @@ function getUserById(userId: number): User | null {
   return foundUser || null;
 }
 
-function getCommentById(commentId: number): Comment[] {
+function getCommentById(commentId: number): Comments[] {
   return commentsFromServer.filter(comment => (
     comment.postId === commentId
   ));
