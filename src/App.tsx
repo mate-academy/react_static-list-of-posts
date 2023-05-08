@@ -11,13 +11,13 @@ import { User } from './types/User';
 import { Post } from './types/Post';
 import { Comment } from './types/Comment';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComments(id: number): Comment[] {
+function getCommentsById(id: number): Comment[] {
   return commentsFromServer.filter(
     (comment) => comment.postId === id,
   );
@@ -25,8 +25,8 @@ function getComments(id: number): Comment[] {
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
-  comments: getComments(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentsById(post.id),
 }));
 
 export const App: React.FC = () => (
