@@ -4,35 +4,35 @@ import React from 'react';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { User } from './components/types/User';
-import { Comment } from './components/types/Comment';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
 import { PostList } from './components/PostList/PostList';
-import { Post } from './components/types/Posts';
+import { Post } from './types/Posts';
 
-function getUserById(users: User[], postId: number): User | null {
-  return users.find(user => (
-    user.id === postId
-  )) || null;
+function getUserById(id: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === id);
+
+  return foundUser || null;
 }
 
-function getCommentsByPostId(comments: Comment[], postId: number) {
-  return comments.filter(comment => (
+function getCommentsByPostId(postId: number): Comment[] {
+  const foundComment = commentsFromServer.filter(comment => (
     comment.postId === postId
   ));
+
+  return foundComment;
 }
 
-const predaredPosts: Post[] = postsFromServer.map(
-  post => ({
-    ...post,
-    user: getUserById(usersFromServer, post.userId),
-    comments: getCommentsByPostId(commentsFromServer, post.id),
-  }),
-);
+export const posts: Post[] = postsFromServer.map(post => ({
+  ...post,
+  user: getUserById(post.userId),
+  comments: getCommentsByPostId(post.id),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList posts={predaredPosts} />
+    <PostList posts={posts} />
   </section>
 );
