@@ -8,15 +8,10 @@ interface CommentListProps {
   comments: Comment[];
 }
 
-export const CommentList: React.FC<CommentListProps> = ({ comments }) => {
-  return comments.length
-    ? (
-      <div className="CommentList">
-        {comments.map((comment) => (
-          <CommentInfo key={comment.id} comment={comment} />
-        ))}
-      </div>
-    ) : (
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    );
-};
+export const CommentList: React.FC<CommentListProps> = ({ comments }) => (
+  <div className="CommentList">
+    {comments.map((comment) => (
+      <CommentInfo key={comment.id} comment={comment} />
+    ))}
+  </div>
+);
