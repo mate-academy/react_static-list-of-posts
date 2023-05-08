@@ -9,22 +9,29 @@ interface PostInfoProps {
 }
 
 export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
-  const comments = post.comments
-    ? <CommentList comments={post.comments} />
+  const {
+    comments,
+    user,
+    title,
+    body,
+  } = post;
+
+  const commentSection = comments.length
+    ? <CommentList comments={comments} />
     : <b data-cy="NoCommentsMessage">No comments yet</b>;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
-        {post.user && <UserInfo user={post.user} /> }
+        <h3 className="PostInfo__title">{title}</h3>
+        {user && <UserInfo user={user} /> }
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
       <hr />
-      {comments}
+      {commentSection}
     </div>
   );
 };

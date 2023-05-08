@@ -3,7 +3,7 @@ import { CommentInfo } from '../CommentInfo';
 import { Comment } from '../../../types/Comment';
 import './CommentList.scss';
 
-export interface CommentListProps {
+interface CommentListProps {
   comments: Comment[];
 }
 

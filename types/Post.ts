@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { User } from './User';
 import { Comment } from './Comment';
 
 export interface Post {
@@ -6,6 +6,6 @@ export interface Post {
   id: number;
   title: string;
   body: string;
-  comments: Comment[] | null;
+  comments: Comment[];
   user: User | null;
 }

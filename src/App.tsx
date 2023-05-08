@@ -8,17 +8,20 @@ import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 import { Post } from '../types/Post';
 
+const getPostAuthorById = (postId: number) => {
+  return usersFromServer.find(user => user.id === postId) || null;
+};
+
+const getPostCommentsById = (postId: number) => {
+  return commentsFromServer
+    .filter(comment => comment.postId === postId);
+};
+
 const posts: Post[] = postsFromServer.map(post => {
-  const postAuthor = usersFromServer
-    .find(user => user.id === post.userId) || null;
-
-  const postComments = commentsFromServer
-    .filter(comment => comment.postId === post.id);
-
   return {
     ...post,
-    user: postAuthor,
-    comments: postComments.length ? postComments : null,
+    user: getPostAuthorById(post.userId),
+    comments: getPostCommentsById(post.id),
   };
 });
 
