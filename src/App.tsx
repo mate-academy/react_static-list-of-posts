@@ -12,7 +12,7 @@ function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
-};
+}
 
 function getCommentById(id: number): Comment[] {
   const foundComment = commentsFromServer.filter(
@@ -22,7 +22,7 @@ function getCommentById(id: number): Comment[] {
   return foundComment;
 }
 
- const posts: Posts[]  = postsFromServer.map(post => ({
+const posts: Posts[] = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getCommentById(post.id),
@@ -32,6 +32,6 @@ export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList posts={posts}/>
+    <PostList posts={posts} />
   </section>
 );

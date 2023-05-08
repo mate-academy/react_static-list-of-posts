@@ -4,7 +4,6 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 
-
 type Props = {
   post: Posts
 };
@@ -30,9 +29,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         {body}
       </p>
 
-      {comments.length 
-         ? <CommentList comments={comments} />
+      {comments.length
+        ? <CommentList comments={comments} />
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
-  )
+  );
 };
