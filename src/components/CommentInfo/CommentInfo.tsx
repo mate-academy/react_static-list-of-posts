@@ -2,11 +2,11 @@ import React from 'react';
 import { Comments } from '../../Types/Comment';
 
 interface CommentInfoProps {
-  comments: Comments,
+  comment: Comments,
 }
 
-export const CommentInfo: React.FC<CommentInfoProps> = ({ comments }) => {
-  const { name, email, body } = comments;
+export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
+  const { name, email, body } = comment;
 
   return (
     <div className="CommentInfo">
