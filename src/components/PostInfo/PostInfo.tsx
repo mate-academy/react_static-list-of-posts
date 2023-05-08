@@ -8,13 +8,6 @@ interface Props {
   post: PreparedPost;
 }
 
-const NoComments = () => (
-  <>
-    <hr />
-    <b data-cy="NoCommentsMessage">No comments yet</b>
-  </>
-);
-
 export const PostInfo: React.FC<Props> = ({
   post,
 }) => {
@@ -33,7 +26,7 @@ export const PostInfo: React.FC<Props> = ({
         <p>
           {' Posted by  '}
 
-          <UserInfo user={user} />
+          {user && <UserInfo user={user} />}
         </p>
       </div>
 
@@ -43,7 +36,12 @@ export const PostInfo: React.FC<Props> = ({
 
       {post.comments.length > 0
         ? (<CommentList comments={comments} />)
-        : (<NoComments />)}
+        : (
+          <>
+            <hr />
+            <b data-cy="NoCommentsMessage">No comments yet</b>
+          </>
+        )}
     </div>
   );
 };
