@@ -29,14 +29,12 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
         } = comment;
 
         return (
-          <div className="CommentInfo">
-            <CommentInfo
-              key={id}
-              name={name}
-              email={email}
-              body={body}
-            />
-          </div>
+          <CommentInfo
+            key={id}
+            name={name}
+            email={email}
+            body={body}
+          />
         );
       })}
     </div>
