@@ -1,14 +1,12 @@
 import React from 'react';
-
 import './PostInfo.scss';
-
 import { UserInfo } from '../UserInfo';
 import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
 
-type PostInfoProps = {
+interface PostInfoProps {
   post: Post;
-};
+}
 
 export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   const {

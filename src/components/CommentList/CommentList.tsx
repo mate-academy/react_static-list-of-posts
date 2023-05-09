@@ -1,7 +1,5 @@
 import React from 'react';
-
 import './CommentList.scss';
-
 import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
