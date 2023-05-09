@@ -2,11 +2,11 @@ import React from 'react';
 import { CommentInfo } from '../CommentInfo';
 import { Comment } from '../../types/Comment';
 
-interface CommentsProps {
+interface CommentListProps {
   comments: Comment[]
 }
 
-export const CommentList: React.FC<CommentsProps> = ({ comments }) => (
+export const CommentList: React.FC<CommentListProps> = ({ comments }) => (
   <div className="CommentList">
     {comments.map((comment) => (
       <CommentInfo comment={comment} key={comment.id} />
