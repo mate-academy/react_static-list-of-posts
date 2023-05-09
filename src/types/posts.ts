@@ -1,7 +1,7 @@
 import { User } from "./user";
-import { Comment } from "./commnet";
+import { Comment } from "./comment";
 
-export interface Posts {
+export interface Post {
   userId: number,
   id: number, 
   title: string, 

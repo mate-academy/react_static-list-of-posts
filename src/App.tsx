@@ -6,7 +6,7 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { User } from './types/user';
 import { Posts } from './types/posts';
-import { Comment } from './types/commnet';
+import { Comment } from './types/comment';
 
 function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
