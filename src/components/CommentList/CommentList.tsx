@@ -4,13 +4,12 @@ import { CommentInfo } from '../CommentInfo';
 import { Comment } from '../../types/Comment';
 import './CommentList.scss';
 
-interface CommentProps {
+interface CommentInfoProps {
   comment: Comment[],
 }
 
-export const CommentList: React.FC<CommentProps> = ({ comment }) => {
+export const CommentList: React.FC<CommentInfoProps> = ({ comment }) => {
   return (
-
     <div className="CommentList">
       {comment.map(comments => (
         <CommentInfo
@@ -19,6 +18,5 @@ export const CommentList: React.FC<CommentProps> = ({ comment }) => {
         />
       ))}
     </div>
-
   );
 };

@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Comment } from '../../types/Comment';
 
-interface CommentProps {
+interface CommentInfoProps {
   commentDetails: Comment;
 }
 
-export const CommentInfo: React.FC<CommentProps> = ({ commentDetails }) => {
+export const CommentInfo: React.FC<CommentInfoProps> = ({ commentDetails }) => {
   const { name, body, email } = commentDetails;
 
   const mail = `mailto:${email}`;
