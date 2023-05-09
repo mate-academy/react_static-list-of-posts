@@ -22,14 +22,13 @@ export const PostList: React.FC<Props> = ({ posts }) => (
       } = post;
 
       return (
-        <div className="PostInfo" key={id}>
-          <PostInfo
-            title={title}
-            body={body}
-            user={user}
-            comments={comments}
-          />
-        </div>
+        <PostInfo
+          key={id}
+          title={title}
+          body={body}
+          user={user}
+          comments={comments}
+        />
       );
     })}
   </div>

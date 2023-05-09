@@ -29,8 +29,9 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
         } = comment;
 
         return (
-          <div className="CommentInfo" key={id}>
+          <div className="CommentInfo">
             <CommentInfo
+              key={id}
               name={name}
               email={email}
               body={body}
