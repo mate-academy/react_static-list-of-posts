@@ -5,7 +5,7 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { User } from './types/user';
-import { Posts } from './types/posts';
+import { Post } from './types/posts';
 import { Comment } from './types/comment';
 
 function getUserById(userId: number): User | null {
@@ -22,7 +22,7 @@ function getCommentById(id: number): Comment[] {
   return foundComment;
 }
 
-const posts: Posts[] = postsFromServer.map(post => ({
+const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUserById(post.userId),
   comments: getCommentById(post.id),
