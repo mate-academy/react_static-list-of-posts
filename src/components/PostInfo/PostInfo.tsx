@@ -4,11 +4,11 @@ import { CommentList } from '../CommentList';
 import './PostInfo.scss';
 import { PostsData } from '../../types/PostsData';
 
-interface Props {
+interface PostInfoProps {
   post: PostsData,
 }
 
-export const PostInfo: React.FC<Props> = (props) => {
+export const PostInfo: React.FC<PostInfoProps> = (props) => {
   const { post } = props;
 
   return (
@@ -17,7 +17,7 @@ export const PostInfo: React.FC<Props> = (props) => {
         <h3 className="PostInfo__title">{post.title}</h3>
         <p>
           {' Posted by  '}
-          <UserInfo user={post.user} />
+          {post.user && <UserInfo user={post.user} />}
         </p>
         <p className="PostInfo__body">
           {post.body}

@@ -3,11 +3,11 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 import { Comment } from '../../types/Comment';
 
-interface Props {
+interface CommentListProps {
   comments: Comment[],
 }
 
-export const CommentList: React.FC<Props> = (props) => {
+export const CommentList: React.FC<CommentListProps> = (props) => {
   const { comments } = props;
 
   return (
