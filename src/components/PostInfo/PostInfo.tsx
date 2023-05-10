@@ -3,11 +3,11 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import { Post } from '../../types/Post';
 
-interface PropsPostInfo {
+interface PostInfoProps {
   post: Post;
 }
 
-export const PostInfo: React.FC<PropsPostInfo> = ({ post }) => {
+export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   const {
     title,
     body,
