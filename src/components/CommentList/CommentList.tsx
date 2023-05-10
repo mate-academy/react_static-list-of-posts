@@ -5,16 +5,16 @@ import { Comment } from '../../types/Comment';
 import './CommentList.scss';
 
 interface CommentInfoProps {
-  comment: Comment[],
+  comments: Comment[],
 }
 
-export const CommentList: React.FC<CommentInfoProps> = ({ comment }) => {
+export const CommentList: React.FC<CommentInfoProps> = ({ comments }) => {
   return (
     <div className="CommentList">
-      {comment.map(comments => (
+      {comments.map(comment => (
         <CommentInfo
-          commentDetails={comments}
-          key={comments.id}
+          comment={comment}
+          key={comment.id}
         />
       ))}
     </div>
