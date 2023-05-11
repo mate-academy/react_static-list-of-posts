@@ -20,7 +20,7 @@ function getUserById(userId: number): User | null {
 }
 
 function getCommentsById(postId: number) : Comment[] {
-  return commentsFromApi.filter(comment => comment.postId === postId) || null;
+  return commentsFromApi.filter((comment) => comment.postId === postId);
 }
 
 export const posts: Post[] = postFromApi.map(post => ({
