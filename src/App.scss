@@ -2,35 +2,8 @@ iframe {
   display: none;
 }
 
-.App__title {
-  text-align: center;
-}
-
-.PostInfo {
-  margin: 10px auto;
-  width: 90%;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: lightgray;
-  padding: 1em;
-
+.App {
   &__title {
-    margin: 0;
+    text-align: center;
   }
-
-  &__header {
-    margin-bottom: 1em;
-  }
-}
-
-.UserInfo {
-  font-weight: bold;
-}
-
-.CommentList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
 }
