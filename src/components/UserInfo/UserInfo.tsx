@@ -7,7 +7,7 @@ interface UserInfoProbs {
 }
 
 export const UserInfo: React.FC<UserInfoProbs> = (props) => (
-  <a className="UserInfo" href={`mailto:${props.user?.email}`}>
-    {props.user?.name}
+  <a className="UserInfo" href={`mailto:${props.user.email}`}>
+    {props.user.name}
   </a>
 );
