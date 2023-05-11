@@ -1,18 +1,18 @@
 import React from 'react';
 import './PostList.scss';
-import { PostsData } from '../../types/PostsData';
+import { Post } from '../../types/Post';
 import { PostInfo } from '../PostInfo';
 
 interface PostListProps {
-  postData: PostsData[];
+  posts: Post[];
 }
 
 export const PostList: React.FC<PostListProps> = (props) => {
-  const { postData } = props;
+  const { posts } = props;
 
   return (
     <div className="PostList">
-      {postData.map((post) => (
+      {posts.map((post) => (
         <PostInfo key={post.id} post={post} />
       ))}
     </div>

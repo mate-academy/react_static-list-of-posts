@@ -2,10 +2,10 @@ import React from 'react';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
-import { PostsData } from '../../types/PostsData';
+import { Post } from '../../types/Post';
 
 interface PostInfoProps {
-  post: PostsData,
+  post: Post,
 }
 
 export const PostInfo: React.FC<PostInfoProps> = (props) => {
