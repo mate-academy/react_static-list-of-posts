@@ -11,34 +11,57 @@ type Props = {
   users: User[],
 };
 
+function createPostsInfo(
+  posts: Post[],
+  comments:Comment[],
+  users: User[],
+) {
+  const postsInfo = posts.map(post => {
+    const user = users.find(
+      (person) => person.id === post.userId,
+    );
+    const postComments = comments.filter(
+      (item) => post.id === item.postId,
+    );
+
+    if (!user) {
+      return null;
+    }
+
+    return {
+      ...post,
+      user,
+      comments: postComments,
+    };
+  });
+
+  return postsInfo;
+}
+
 export const PostList: React.FC<Props> = ({
   posts,
   users,
   comments,
-}) => (
-  <div className="PostList">
-    {posts.map(postItem => {
-      const user = users.find(
-        person => person.id === postItem.userId,
-      );
+}) => {
+  const postsInfo = createPostsInfo(
+    posts,
+    comments,
+    users,
+  );
 
-      const postComments = comments.filter(item => postItem.id === item.postId);
+  return (
+    <div className="PostList">
+      {postsInfo.map(postInfoItem => {
+        if (!postInfoItem) {
+          return null;
+        }
 
-      if (!user) {
-        return null;
-      }
-
-      const postWithComments = {
-        ...postItem,
-        user,
-        comments: postComments,
-      };
-
-      return (
-        <div className="PostInfo" key={postItem.id}>
-          <PostInfo post={postWithComments} />
-        </div>
-      );
-    })}
-  </div>
-);
+        return (
+          <div className="PostInfo" key={postInfoItem.id}>
+            <PostInfo post={postInfoItem} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};

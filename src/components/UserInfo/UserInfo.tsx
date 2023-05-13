@@ -8,15 +8,20 @@ type Props = {
   user: User,
 };
 
-export const UserInfo: React.FC<Props> = ({ user }) => (
+export const UserInfo: React.FC<Props> = ({
+  user: {
+    email,
+    name,
+  },
+}) => (
   <p>
     {' Posted by  '}
 
     <a
       className="UserInfo"
-      href={`mailto:${user.email}`}
+      href={`mailto:${email}`}
     >
-      {user.name}
+      {name}
     </a>
   </p>
 );
