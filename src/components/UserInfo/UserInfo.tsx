@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface Props {
-  name: string | undefined,
-  email: string | undefined,
+  name: string,
+  email: string,
   id: number,
 }
 

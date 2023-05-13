@@ -31,7 +31,6 @@ export interface User {
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
-  // if there is no user with a given userId
   return foundUser || null;
 }
 
@@ -41,7 +40,6 @@ function getComment(postId: number): Comment[] | null {
     return comment.postId === postId;
   });
 
-  // if there is no user with a given userId
   return foundComment || null;
 }
 

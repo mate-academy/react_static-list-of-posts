@@ -23,11 +23,16 @@ export const PostInfo: React.FC<Todo> = ({
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{title}</h3>
       <p>
-        <UserInfo
-          name={user?.name}
-          email={user?.email}
-          id={id}
-        />
+        {user ? (
+          <UserInfo
+            name={user.name}
+            email={user.email}
+            id={id}
+          />
+        ) : (
+          'User did not found'
+        )}
+
       </p>
     </div>
     <p className="PostInfo__body">
