@@ -1,23 +1,66 @@
 import React from 'react';
-
 import './App.scss';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+import { PostList } from './components/PostList/PostList';
+import { Posts } from './types/Post';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+export interface Todo {
+  userId: number,
+  id: number,
+  title: string,
+  body: string,
+}
+
+export interface Comment {
+  postId: number,
+  id: number,
+  name: string,
+  email: string,
+  body: string,
+}
+
+export interface User {
+  id: number,
+  name: string,
+  username: string,
+  email: string,
+}
+
+function getUser(userId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  // if there is no user with a given userId
+  return foundUser || null;
+}
+
+function getComment(postId: number): Comment[] | null {
+  const foundComment
+  = commentsFromServer.filter((comment) => {
+    return comment.postId === postId;
+  });
+
+  // if there is no user with a given userId
+  return foundComment || null;
+}
+
+export const wholePost: Posts[] = postsFromServer.map(todo => ({
+  ...todo,
+  user: getUser(todo.userId),
+  comments: getComment(todo.id),
+}));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
+    <PostList posts={wholePost} />
 
     <div className="PostList">
       <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
-
           <p>
-            {' Posted by  '}
-
             <a className="UserInfo" href="mailto:Sincere@april.biz">
               Leanne Graham
             </a>
