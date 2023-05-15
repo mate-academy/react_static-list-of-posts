@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PostInfo } from '../PostInfo';
-import { PostInfoType } from '../../types/PostInfo';
+import { PostInfoType } from '../../types/PostInfoType';
 
 type Props = {
   postsList: PostInfoType[];
