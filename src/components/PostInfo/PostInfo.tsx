@@ -5,11 +5,11 @@ import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
 interface PostInfoProps {
-  postInfo: Post
+  post: Post
 }
 
 export const PostInfo: React.FC<PostInfoProps> = ({
-  postInfo: {
+  post: {
     title, body, user, comments,
   },
 }) => (
@@ -20,7 +20,7 @@ export const PostInfo: React.FC<PostInfoProps> = ({
       <p>
         {' Posted by  '}
 
-        {user ? <UserInfo userInfo={user} /> : undefined}
+        {user ? <UserInfo user={user} /> : undefined}
       </p>
     </div>
 
@@ -28,9 +28,9 @@ export const PostInfo: React.FC<PostInfoProps> = ({
       {body}
     </p>
 
-    { comments
+    { comments.length
       ? (
-        <CommentList commentList={comments} />
+        <CommentList comments={comments} />
       )
       : (
         <>

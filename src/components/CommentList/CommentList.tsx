@@ -4,14 +4,14 @@ import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
 interface CommentListProps {
-  commentList: Comment[]
+  comments: Comment[]
 }
 
 export const CommentList: React.FC<CommentListProps> = ({
-  commentList,
+  comments,
 }) => (
   <div className="CommentList">
-    {commentList.map(comment => (
+    {comments.map(comment => (
       <CommentInfo key={comment.id} comment={comment} />
     ))}
   </div>

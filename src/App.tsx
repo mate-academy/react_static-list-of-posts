@@ -11,27 +11,23 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
 }
 
-function getComments(postId: number): Comment[] | null {
+function getComments(postId: number): Comment[] {
   const comments = commentsFromServer.filter(comment => (
     comment.postId === postId
   ));
 
-  if (comments.length > 0) {
-    return comments;
-  }
-
-  return null;
+  return comments;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
+  user: getUserById(post.userId),
   comments: getComments(post.id),
 }));
 
@@ -39,6 +35,6 @@ export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <PostList postList={posts} />
+    <PostList posts={posts} />
   </section>
 );
