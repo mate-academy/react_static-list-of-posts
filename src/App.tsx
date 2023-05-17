@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import "./App.scss";
+import './App.scss';
 
-import postsFromServer from "./api/posts";
-import commentsFromServer from "./api/comments";
-import usersFromServer from "./api/users";
-import { PostList } from "./components/PostList";
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+import { PostList } from './components/PostList';
 
 export const App: React.FC = () => (
   <section className="App">

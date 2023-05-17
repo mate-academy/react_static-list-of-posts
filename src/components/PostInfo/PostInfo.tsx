@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import './PostInfo.scss';
-import { Post } from "../../types/post";
-import { findUserByPost } from "../../helpers/findUserByPost";
-import { User } from "../../types/user";
-import { CommentList } from "../CommentList";
-import { findComments } from "../../helpers/findComments";
-import { Comment } from "../../types/comment";
+import { Post } from '../../types/post';
+import { findUserByPost } from '../../helpers/findUserByPost';
+import { User } from '../../types/user';
+import { CommentList } from '../CommentList';
+import { findComments } from '../../helpers/findComments';
+import { Comment } from '../../types/comment';
 
 interface Props {
   post: Post;
@@ -27,7 +27,7 @@ export const PostInfo: React.FC<Props> = ({ post, users, comments }) => {
 
         {user && (
           <p>
-            {" Posted by  "}
+            {' Posted by  '}
 
             <a className="UserInfo" href={`mailto:${email}`}>
               {name}
@@ -40,7 +40,7 @@ export const PostInfo: React.FC<Props> = ({ post, users, comments }) => {
 
       <hr />
 
-      {!!postComments.length ? (
+      {postComments.length ? (
         <CommentList comments={postComments} />
       ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>

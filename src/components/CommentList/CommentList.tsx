@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import './CommentList.scss';
-import { Comment } from "../../types/comment";
-import { CommentInfo } from "../CommentInfo";
+import { Comment } from '../../types/comment';
+import { CommentInfo } from '../CommentInfo';
 
 interface Props {
   comments: Comment[];
