@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import './App.scss';
+import "./App.scss";
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import postsFromServer from "./api/posts";
+import commentsFromServer from "./api/comments";
+import usersFromServer from "./api/users";
+import { PostList } from "./components/PostList";
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    <div className="PostList">
+    {/* <div className="PostList">
       <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
@@ -104,6 +105,12 @@ export const App: React.FC = () => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
+
+    <PostList
+      posts={postsFromServer}
+      users={usersFromServer}
+      comments={commentsFromServer}
+    />
   </section>
 );
