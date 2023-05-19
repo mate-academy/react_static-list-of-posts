@@ -5,28 +5,28 @@ import './App.scss';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { PostStructure } from './types/PostStructure';
+import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 
-function getUser(id: number): User | null {
+const getUserById = (id: number): User | null => {
   const foundUser = usersFromServer.find(user => user.id === id);
 
   return foundUser || null;
-}
+};
 
-function getComment(id: number): Comment[] {
-  const comentContent
+const getCommentId = (id: number): Comment[] => {
+  const coments
     = commentsFromServer.filter((comment) => (comment.postId === id));
 
-  return comentContent;
-}
+  return coments;
+};
 
-const Posts: PostStructure[] = postsFromServer.map((post) => ({
+const Posts: Post[] = postsFromServer.map((post) => ({
   ...post,
-  user: getUser(post.userId),
-  comments: getComment(post.id),
+  user: getUserById(post.userId),
+  comments: getCommentId(post.id),
 }));
 
 export const App: React.FC = () => (

@@ -1,11 +1,11 @@
 import React from 'react';
-import { PostStructure } from '../../types/PostStructure';
+import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
-import { CommentList } from '../CommentList';
+import { CommentInfo } from '../CommentInfo';
 import './PostInfo.scss';
 
 type Props = {
-  post: PostStructure;
+  post: Post;
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
@@ -30,7 +30,13 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
       <hr />
 
-      <CommentList comments={comments} />
+      {comments.length === 0 ? (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      ) : (
+        comments.map(comment => (
+          <CommentInfo key={comment.id} comment={comment} />
+        ))
+      )}
     </div>
   );
 };
