@@ -20,8 +20,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       {post.body}
     </p>
     <hr />
-    {post.comment
-      ? <CommentList comments={post.comment} />
+    {post.comments && post.comments.length
+      ? <CommentList comments={post.comments} />
       : <b data-cy="NoCommentsMessage">No comments yet</b> }
   </div>
 );
