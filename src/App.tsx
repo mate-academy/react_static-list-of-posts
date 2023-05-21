@@ -1,6 +1,11 @@
 import React from 'react';
 
 import './App.scss';
+import './components/PostList/PostList.scss';
+import './components/PostInfo/PostInfo.scss';
+import './components/CommentList/CommentList.scss';
+import './components/CommentInfo/CommentInfo.scss';
+import './components/UserInfo/UserInfo.scss';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
@@ -16,12 +21,12 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-function getComments(postId: number): Comment[] {
+function getComments(postId: number): Comment[] | [] {
   const foundComments = commentsFromServer.filter(
     comment => comment.postId === postId,
   );
 
-  return foundComments;
+  return foundComments || [];
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
