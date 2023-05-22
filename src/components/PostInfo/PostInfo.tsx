@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './PostInfo.scss1';
+import './PostInfo.scss';
 import { Post } from '../../types/Post';
 
 import { UserInfo } from '../UserInfo';
@@ -45,10 +45,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         ? (
           <CommentList comments={comments} />
         ) : (
-          <>
-
-            <b data-cy="NoCommentsMessage">No comments yet</b>
-          </>
+          <b data-cy="NoCommentsMessage">No comments yet</b>
         )}
     </div>
   );
