@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { PostList } from './components/PostList';
 import { Post } from './types/Post';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
 
 import './App.scss';
 
@@ -8,13 +10,13 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-const getUserById = (userId: number) => (
+const getUserById = (userId: number): User | null => (
   usersFromServer.find((user) => (
     user.id === userId
   )) || null
 );
 
-const getCommentsById = (postId: number) => (
+const getCommentsById = (postId: number): Comment[] => (
   commentsFromServer.filter((comment) => (
     comment.postId === postId
   ))
