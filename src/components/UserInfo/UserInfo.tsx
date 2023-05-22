@@ -1,5 +1,18 @@
-import React from 'react';
+import { FC } from 'react';
+import { User } from '../../types/User';
 
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
-);
+import './UserInfo.scss';
+
+interface Props {
+  user: User;
+}
+
+export const UserInfo: FC<Props> = ({ user }) => {
+  const { name, email } = user;
+
+  return (
+    <a className="UserInfo" href={`mailto:${email}`}>
+      {name}
+    </a>
+  );
+};
