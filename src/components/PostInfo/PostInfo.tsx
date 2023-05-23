@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserInfo } from '../UserInfo/';
+import { UserInfo } from '../UserInfo';
 // import { CommentList } from '../CommentList/';
 
 export const PostInfo: React.FC = () => (

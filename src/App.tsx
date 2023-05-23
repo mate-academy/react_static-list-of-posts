@@ -5,7 +5,7 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { PostList } from './components/PostList/';
+import { PostList } from './components/PostList';
 import { User, Post, Comment } from './types/Types';
 
 function getUser(userId: number): User | null {
@@ -15,7 +15,8 @@ function getUser(userId: number): User | null {
 }
 
 function getComments(postId: number): Comment[] {
-  const foundComment = commentsFromServer.filter(comment => comment.id === postId);
+  const foundComment = commentsFromServer.filter(comment => (
+    comment.id === postId));
 
   return foundComment;
 }
@@ -30,6 +31,6 @@ export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
 
-    {/* <PostList posts={posts}/> */}
+    <PostList posts={posts}/>
   </section>
 );
