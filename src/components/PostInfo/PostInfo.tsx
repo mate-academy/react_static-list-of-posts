@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
 import './PostInfo.scss';
@@ -14,14 +13,9 @@ export const PostInfo: React.FC <PostInfoProps> = ({ post }) => {
     title, body, user, comments,
   } = post;
 
-  const postInfoClasses = classNames(
-    'PostInfo',
-    'PostInfo__header',
-  );
-
   return (
     <>
-      <div className={postInfoClasses}>
+      <div className="PostInfo PostInfo__header">
         <p className="PostInfo__title">
           {title}
         </p>
@@ -33,7 +27,9 @@ export const PostInfo: React.FC <PostInfoProps> = ({ post }) => {
           {body}
         </p>
 
-        {comments && <CommentList comments={comments} />}
+        { (!comments || comments.length === 0)
+          ? <b data-cy="NoCommentsMessage">No comments yet</b>
+          : <CommentList comments={comments} />}
       </div>
     </>
   );
