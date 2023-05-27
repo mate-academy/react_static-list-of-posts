@@ -27,15 +27,13 @@ const separatedEachPostDepensies = (): UserPost[] => {
     return null;
   }
 
-  for (let i = 0; i < postsFromServer.length; i += 1) {
-    totalPosts.push({
-      user: findUserById(postsFromServer[i].userId),
-      postId: postsFromServer[i].id,
-      title: postsFromServer[i].title,
-      body: postsFromServer[i].body,
-      commentsList: findComments(postsFromServer[i].id),
-    });
-  }
+  return postsFromServer.map(postFromServer => ({
+      user: findUserById(postFromServer.userId),
+      postId: postFromServer.id,
+      title: postFromServer.title,
+      body: postFromServer.body,
+      commentsList: findComments(postFromServer.id)
+  }))
 
   return totalPosts;
 };
