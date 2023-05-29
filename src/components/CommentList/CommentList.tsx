@@ -9,7 +9,7 @@ type Props = {
 };
 
 export const CommentList: React.FC<Props> = ({ comment }) => (
-  <div className="CommentList">
+  <ul className="CommentList" style={{ listStyleType: 'none' }}>
     <CommentInfo comment={comment} />
-  </div>
+  </ul>
 );
