@@ -7,6 +7,12 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    {posts.map(post => <PostInfo key={post.id} post={post} />)}
+    <ul style={{ listStyleType: 'none' }}>
+      {posts.map(post => (
+        <li key={post.id}>
+          <PostInfo post={post} />
+        </li>
+      ))}
+    </ul>
   </div>
 );

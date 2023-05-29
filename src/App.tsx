@@ -1,6 +1,5 @@
 import './App.scss';
 
-// eslint-disable-next-line import/no-duplicates
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
@@ -15,9 +14,9 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-function getComment(postId: number): Comment | null {
+function getComment(id: number): Comment | null {
   const foundComment = commentsFromServer.find(
-    comment => comment.id === postId,
+    comment => comment.postId === id,
   );
 
   return foundComment || null;
@@ -26,7 +25,7 @@ function getComment(postId: number): Comment | null {
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
-  comment: getComment(post.userId),
+  comment: getComment(post.id),
 }));
 
 export const App: React.FC = () => (
