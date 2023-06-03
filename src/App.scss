@@ -1,3 +1,15 @@
+@import "./components/PostList/PostList.scss";
+@import "./components/CommentInfo/CommentInfo.scss";
+@import "./components/PostInfo/PostInfo.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(220, 237, 252);
+}
+
 iframe {
   display: none;
 }
@@ -19,7 +31,11 @@ iframe {
   }
 
   &__header {
-    margin-bottom: 1em;
+    margin: 5px;
+  }
+
+  &__body {
+    margin: 5px;
   }
 }
 
@@ -32,5 +48,5 @@ iframe {
   flex-direction: column;
   gap: 0.7em;
   background-color: #eee;
-  padding: 1em;
+  padding: 0.3em;
 }
