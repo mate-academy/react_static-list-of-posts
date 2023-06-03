@@ -8,12 +8,10 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ posts }) => {
   return (
-    <>
+    <div className="PostList">
       {posts.map(post => (
-        <div className="PostList">
-          <PostInfo key={post.id} post={post} />
-        </div>
+        <PostInfo key={post.id} post={post} />
       ))}
-    </>
+    </div>
   );
 };
