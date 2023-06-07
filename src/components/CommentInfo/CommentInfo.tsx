@@ -12,7 +12,7 @@ export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
   } = comment;
 
   return (
-    <div className="CommentInfo">
+    <div className="CommentInfo box mb-2">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{name}</strong>
 

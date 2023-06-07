@@ -7,7 +7,7 @@ interface PostListProps {
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
-    <div className="PostList">
+    <div className="PostList box has-background-light is-rounded">
       {posts.map(post => (
         <PostInfo post={post} key={post.id} />
       ))}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.scss';
+import 'bulma';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
@@ -15,8 +15,10 @@ const fullPostData = prepareApiData({
 });
 
 export const App: React.FC = () => (
-  <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+  <section className="App container">
+    <h1 className="App__title title has-text-centered">
+      Static list of posts
+    </h1>
     <PostList posts={fullPostData} />
   </section>
 );

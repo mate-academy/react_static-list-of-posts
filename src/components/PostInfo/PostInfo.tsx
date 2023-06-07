@@ -15,14 +15,14 @@ export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   } = post;
 
   return (
-    <div className="PostInfo">
+    <div className="PostInfo box has-background-white is-rounded">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{title}</h3>
+        <h3 className="PostInfo__title title is-4">{title}</h3>
 
         {user && <UserInfo user={user} />}
       </div>
 
-      <p className="PostInfo__body">
+      <p className="PostInfo__body mb-3">
         {body}
       </p>
 
