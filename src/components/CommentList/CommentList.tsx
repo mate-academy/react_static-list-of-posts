@@ -12,6 +12,7 @@ export const CommentList: React.FC<CommentListProps> = ({ comments }) => {
   return (isHaveComments
     ? (
       <div className="CommentList">
+        <hr />
         <b className="is-size-5">{`${commentsAmmount} Comments :`}</b>
         {comments.map(comment => (
           <CommentInfo comment={comment} key={comment.id} />

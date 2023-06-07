@@ -1,6 +1,7 @@
 import React from 'react';
 
 import 'bulma';
+import './App.scss';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
