@@ -1,1 +1,23 @@
-//
+.PostInfo {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid #bbe1fa;
+  border-radius: 4px;
+  padding: 1em;
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+
+  &__no-comments {
+    padding: 10px 0;
+    border-top: 2px solid #bbe1fa;
+    border-radius: 2px;
+    font-weight: bold;
+  }
+}
