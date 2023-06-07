@@ -1,1 +1,44 @@
-//
+.PostInfo {
+  margin: 20px auto;
+  margin-bottom: 30px;
+  width: 90%;
+  border: 1px solid #064f4f;
+  border-radius: 20px;
+  background-color: #11897b;
+  padding: 1em;
+  color: #fff;
+
+  &__title {
+    width: fit-content;
+    margin: 0;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 20px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__header {
+    padding: 0 20px;
+    margin-bottom: 1em;
+  }
+
+  &__body {
+    padding: 0 20px;
+    width: fit-content;
+    color :#fff;
+    font-size: 18px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__NoCommentsMessage {
+    padding: 0 20px;
+    color :#ffffff;
+  }
+}
