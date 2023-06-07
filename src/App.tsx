@@ -11,7 +11,7 @@ import { Comment } from './types/Comment';
 
 interface FullPostData extends Post {
   user?: User;
-  comments?: Comment[];
+  comments: Comment[];
 }
 
 interface PreparePostData {
@@ -46,6 +46,63 @@ const fullPostData = prepareApiData({
   comments: commentsFromServer,
 });
 
+interface CommentInfoProps {
+  postComment: Comment;
+}
+
+const CommentInfo: React.FC<CommentInfoProps> = ({ postComment }) => {
+  const {
+    name,
+    email,
+    body,
+  } = postComment;
+
+  return (
+    <div className="CommentInfo">
+      <div className="CommentInfo__title">
+        <strong className="CommentInfo__name">{name}</strong>
+
+        {' by '}
+
+        <a
+          className="CommentInfo__email"
+          href={`mailto:${email}`}
+        >
+          Telly_Lynch@karl.co.uk
+        </a>
+      </div>
+
+      <div className="CommentInfo__body">
+        {body}
+      </div>
+    </div>
+  );
+};
+
+interface CommentListProps {
+  commentList: Comment[];
+}
+
+const CommentList: React.FC<CommentListProps> = ({ commentList }) => {
+  const isHaveComments = commentList.length > 0;
+
+  return (isHaveComments
+    ? (
+      <div className="CommentList">
+        {commentList.map(comment => (
+          <CommentInfo postComment={comment} key={comment.id} />
+        ))}
+      </div>
+    ) : (
+      <>
+        <hr />
+
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      </>
+    )
+  );
+};
+
 interface UserInfoProps {
   postUser: User;
 }
@@ -74,27 +131,24 @@ interface PostInfoProps {
 const PostInfo: React.FC<PostInfoProps> = ({ postinfo }) => {
   const {
     user,
+    title,
+    body,
     comments,
   } = postinfo;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">qui est esse</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
         {user && <UserInfo postUser={user} />}
       </div>
 
       <p className="PostInfo__body">
-        est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae
-        ea dolores neque fugiat blanditiis voluptate porro vel nihil
-        molestiae ut reiciendis qui aperiam non debitis possimus qui neque
-        nisi nulla
+        {body}
       </p>
 
-      <hr />
-
-      <b data-cy="NoCommentsMessage">No comments yet</b>
+      <CommentList commentList={comments} />
     </div>
   );
 };
