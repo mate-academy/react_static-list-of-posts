@@ -1,5 +1,22 @@
-import React from 'react';
+import { User } from '../../types/User';
 
-export const UserInfo: React.FC = () => (
-  <>Put the user here</>
-);
+interface UserInfoProps {
+  postUser: User;
+}
+
+export const UserInfo: React.FC<UserInfoProps> = ({ postUser }) => {
+  const {
+    name,
+    email,
+  } = postUser;
+
+  return (
+    <p>
+      {' Posted by  '}
+
+      <a className="UserInfo" href={`mailto:${email}`}>
+        {name}
+      </a>
+    </p>
+  );
+};
