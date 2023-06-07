@@ -11,9 +11,8 @@ import { Post } from './types/Post';
 
 const fullPosts: Post[] = postsFromServer.map(post => {
   const user = usersFromServer.find(person => post.userId === person.id);
-  const comments = commentsFromServer.filter(
-    comment => comment.postId === post.id,
-  );
+  const comments = commentsFromServer
+    .filter(comment => comment.postId === post.id);
 
   return {
     ...post,
@@ -24,7 +23,9 @@ const fullPosts: Post[] = postsFromServer.map(post => {
 
 export const App: React.FC = () => (
   <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+    <h1 className="App__title">
+      Static list of posts
+    </h1>
 
     <div className="PostList">
       <PostList posts={fullPosts} />
