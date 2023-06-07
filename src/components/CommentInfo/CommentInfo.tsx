@@ -2,15 +2,15 @@ import React from 'react';
 import { Comments } from '../../types/Comments';
 
 type Props = {
-  comments: Comments;
+  comment: Comments;
 };
 
-export const CommentInfo: React.FC<Props> = ({ comments }) => {
+export const CommentInfo: React.FC<Props> = ({ comment }) => {
   const {
     name,
     email,
     body,
-  } = comments;
+  } = comment;
 
   return (
     <>
@@ -22,7 +22,7 @@ export const CommentInfo: React.FC<Props> = ({ comments }) => {
             className="CommentInfo__email"
             href={`mailto:${email}`}
           >
-            Telly_Lynch@karl.co.uk
+            {email}
           </a>
         </div>
 
