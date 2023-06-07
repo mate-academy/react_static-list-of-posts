@@ -5,21 +5,13 @@ import './App.scss';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
-import { FullPostInfo } from './types/FullPostInfo';
 import { PostList } from './components/PostList';
+import { preparePosts } from './helpers';
 
-const posts: FullPostInfo[] = postsFromServer.map(post => {
-  const user = usersFromServer.find(owner => owner.id === post.userId) || null;
-  const comments = commentsFromServer
-    .filter(comment => (
-      comment.postId === post.id
-    ));
-
-  return {
-    ...post,
-    user,
-    comments,
-  };
+const posts = preparePosts({
+  posts: postsFromServer,
+  comments: commentsFromServer,
+  users: usersFromServer,
 });
 
 export const App: React.FC = () => (

@@ -3,6 +3,6 @@ import { Post } from './post';
 import { Comment } from './comment';
 
 export interface FullPostInfo extends Post {
-  user: User | null;
+  user: User;
   comments: Comment[];
 }

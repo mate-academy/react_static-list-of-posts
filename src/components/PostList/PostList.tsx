@@ -8,14 +8,12 @@ interface Props {
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    {posts.map(post => {
-      return (
-        <PostInfo
-          key={post.id}
-          post={post}
-        />
-      );
-    })}
+    {posts.map(post => (
+      <PostInfo
+        key={post.id}
+        post={post}
+      />
+    ))}
 
   </div>
 
