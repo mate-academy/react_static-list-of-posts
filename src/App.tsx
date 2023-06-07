@@ -2,9 +2,49 @@ import React from 'react';
 
 import './App.scss';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+import { Post } from './types/Post';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
+
+interface FullPostData extends Post {
+  user?: User;
+  comments?: Comment[];
+}
+
+interface PreparePostData {
+  users: User[];
+  posts: Post[];
+  comments: Comment[];
+}
+
+const prepareApiData = (
+  args: PreparePostData,
+): FullPostData[] => {
+  const { users, posts, comments } = args;
+
+  return posts.map(post => {
+    const postUser = users.find(checkUser => post.userId === checkUser.id);
+
+    const postComments = comments.filter(comment => (
+      comment.postId === post.id
+    ));
+
+    return {
+      ...post,
+      user: postUser,
+      comments: postComments,
+    };
+  });
+};
+
+// const fullPostData = prepareApiData({
+//   users: usersFromServer,
+//   posts: postsFromServer,
+//   comments: commentsFromServer,
+// });
 
 export const App: React.FC = () => (
   <section className="App">
