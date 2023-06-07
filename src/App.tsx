@@ -46,25 +46,43 @@ const fullPostData = prepareApiData({
   comments: commentsFromServer,
 });
 
+interface UserInfoProps {
+  postUser: User;
+}
+
+const UserInfo: React.FC<UserInfoProps> = ({ postUser }) => {
+  const {
+    name,
+    email,
+  } = postUser;
+
+  return (
+    <p>
+      {' Posted by  '}
+
+      <a className="UserInfo" href={`mailto:${email}`}>
+        {name}
+      </a>
+    </p>
+  );
+};
+
 interface PostInfoProps {
   postinfo: FullPostData;
 }
 
 const PostInfo: React.FC<PostInfoProps> = ({ postinfo }) => {
-  console.log(postinfo);
+  const {
+    user,
+    comments,
+  } = postinfo;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">qui est esse</h3>
 
-        <p>
-          {' Posted by  '}
-
-          <a className="UserInfo" href="mailto:Sincere@april.biz">
-            Leanne Graham
-          </a>
-        </p>
+        {user && <UserInfo postUser={user} />}
       </div>
 
       <p className="PostInfo__body">
@@ -93,7 +111,7 @@ const PostList: React.FC<PostListProps> = ({ posts }) => {
       ))}
     </div>
   );
-}
+};
 
 export const App: React.FC = () => (
   <section className="App">
