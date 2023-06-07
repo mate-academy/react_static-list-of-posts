@@ -1,15 +1,15 @@
 import { Comment } from '../../types/Comment';
 
 interface CommentInfoProps {
-  postComment: Comment;
+  comment: Comment;
 }
 
-export const CommentInfo: React.FC<CommentInfoProps> = ({ postComment }) => {
+export const CommentInfo: React.FC<CommentInfoProps> = ({ comment }) => {
   const {
     name,
     email,
     body,
-  } = postComment;
+  } = comment;
 
   return (
     <div className="CommentInfo">
@@ -22,7 +22,7 @@ export const CommentInfo: React.FC<CommentInfoProps> = ({ postComment }) => {
           className="CommentInfo__email"
           href={`mailto:${email}`}
         >
-          Telly_Lynch@karl.co.uk
+          {email}
         </a>
       </div>
 
