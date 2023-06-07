@@ -1,1 +1,16 @@
-//
+.PostInfo {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid #f8d213;
+  border-radius: 8px;
+  background-color: rgb(248, 240, 121);
+  padding: 1em;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}
