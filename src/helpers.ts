@@ -12,7 +12,7 @@ export const findUserByPostId = (userId: number): User | null => {
   return foundUser || null;
 };
 
-export const findCommentById = (postId: number): Comment[] | null => {
+export const findCommentById = (postId: number): Comment[] => {
   const foundComments = commentsFromServer
     .filter(comment => comment.postId === postId);
 

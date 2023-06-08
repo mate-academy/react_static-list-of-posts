@@ -7,5 +7,5 @@ export interface PostPrepared {
   title: string,
   body: string,
   user: User | null,
-  comments: Comment[] | null,
+  comments: Comment[],
 }
