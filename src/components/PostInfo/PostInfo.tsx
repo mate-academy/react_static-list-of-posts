@@ -7,16 +7,16 @@ import { UserInfo } from '../UserInfo';
 import './PostInfo.scss';
 
 interface Props {
-  postInfo: Post;
+  post: Post;
 }
 
-export const PostInfo: React.FC<Props> = ({ postInfo }) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     title,
     body,
     user,
     comments,
-  } = postInfo;
+  } = post;
 
   return (
     <div className="PostInfo">
@@ -25,13 +25,7 @@ export const PostInfo: React.FC<Props> = ({ postInfo }) => {
           {title}
         </h3>
 
-        {user && (
-          <p>
-            {' Posted by '}
-
-            <UserInfo user={user} />
-          </p>
-        )}
+        {user && <UserInfo user={user} />}
       </div>
 
       <p className="PostInfo__body">
