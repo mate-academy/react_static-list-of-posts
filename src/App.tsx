@@ -12,7 +12,7 @@ import { Comment } from './types/Comment';
 
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function findUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
@@ -27,7 +27,7 @@ function getComments(postId: number): Comment[] {
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
+  user: findUser(post.userId),
   comments: getComments(post.id),
 }));
 
