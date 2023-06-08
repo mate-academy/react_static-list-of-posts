@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-export default [
+export const postsFromServer = [
   {
     userId: 1,
     id: 1,
