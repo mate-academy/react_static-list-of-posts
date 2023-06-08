@@ -1,1 +1,12 @@
-//
+.UserInfo {
+  margin-top: 20px;
+  width: fit-content;
+  font-weight: bold;
+  text-align: center;
+  color: #86e6e8;
+  transition: hover 1s;
+
+  &:hover {
+    color: #054646;
+  }
+}
