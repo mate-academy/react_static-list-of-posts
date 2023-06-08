@@ -8,19 +8,26 @@ import usersFromServer from './api/users';
 
 import { CompletePost } from './types/CompletePost';
 import { PostList } from './components/PostList';
+import { User } from './types/User';
+import { Comments } from './types/Comments';
+
+const findUser = (userId: number): User | null => (
+  usersFromServer.find(user => (
+    user.id === userId
+  )) || null
+);
+
+const getComments = (postId: number): Comments[] => (
+  commentsFromServer.filter((comment) => (
+    comment.postId === postId
+  ))
+);
 
 const completePosts: CompletePost[] = postsFromServer.map(post => {
-  const user = usersFromServer.find(
-    serverUser => serverUser.id === post.userId,
-  );
-  const comments = commentsFromServer.filter(comment => (
-    comment.postId === post.id
-  ));
-
   return {
     ...post,
-    user,
-    comments,
+    user: findUser(post.userId),
+    comments: getComments(post.id),
   };
 });
 

@@ -3,6 +3,6 @@ import { User } from './User';
 import { Comments } from './Comments';
 
 export interface CompletePost extends Posts {
-  user?: User,
+  user: User | null,
   comments: Comments[],
 }
