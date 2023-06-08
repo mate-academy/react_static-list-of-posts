@@ -3,12 +3,12 @@ import { PostWithComments } from '../../types/PostWithComments';
 import { PostInfo } from '../PostInfo';
 
 type Props = {
-  postList: PostWithComments[];
+  posts: PostWithComments[];
 };
 
-export const PostList: React.FC<Props> = ({ postList }) => (
+export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    {postList.map((post: PostWithComments) => (
+    {posts.map((post: PostWithComments) => (
       <PostInfo key={post.id} post={post} />
     ))}
   </div>
