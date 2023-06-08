@@ -10,33 +10,32 @@ interface Props {
 }
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
-  if (!post.user) {
-    throw new Error('The author of the post was not found');
-  }
+  const {
+    title,
+    user,
+    userId,
+    body,
+    comments,
+  } = post;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
-        <p>
-          {' Posted by  '}
-
-          <UserInfo key={post.userId} user={(post.user)} />
-        </p>
+        {user && <UserInfo key={userId} user={(user)} />}
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       <hr />
 
-      {(post.comments && post.comments?.length > 0)
-        ? <CommentList comments={post.comments} />
+      {(comments && comments?.length > 0)
+        ? <CommentList comments={comments} />
         : <b data-cy="NoCommentsMessage">No comments yet</b>}
 
     </div>
-
   );
 };
