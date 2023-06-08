@@ -39,7 +39,6 @@ export const PostInfo: React.FC<Props> = ({
     ) : (
       <>
         <hr />
-
         <b data-cy="NoCommentsMessage">No comments yet</b>
       </>
     )}
