@@ -7,6 +7,7 @@ import { Comment } from './types/Comments';
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
+import './App.scss';
 
 const getUserById = (userId: number): User | null => (
   usersFromServer.find((user) => (
