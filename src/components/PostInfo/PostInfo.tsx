@@ -2,11 +2,11 @@ import { FullPostData } from '../../types/FullPostData';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
-interface PostInfoProps {
+interface Props {
   post: FullPostData;
 }
 
-export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
+export const PostInfo: React.FC<Props> = ({ post }) => {
   const {
     user,
     title,

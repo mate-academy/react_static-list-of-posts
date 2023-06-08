@@ -9,7 +9,7 @@ import usersFromServer from './api/users';
 import { prepareApiData } from './apiPrepare';
 import { PostList } from './components/PostList';
 
-const fullPostData = prepareApiData({
+const posts = prepareApiData({
   users: usersFromServer,
   posts: postsFromServer,
   comments: commentsFromServer,
@@ -20,6 +20,6 @@ export const App: React.FC = () => (
     <h1 className="App__title title has-text-centered">
       Static list of posts
     </h1>
-    <PostList posts={fullPostData} />
+    <PostList posts={posts} />
   </section>
 );

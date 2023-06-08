@@ -1,11 +1,11 @@
 import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
-interface CommentListProps {
+interface Props {
   comments: Comment[];
 }
 
-export const CommentList: React.FC<CommentListProps> = ({ comments }) => {
+export const CommentList: React.FC<Props> = ({ comments }) => {
   const isHaveComments = comments.length > 0;
   const commentsAmmount = comments.length;
 
