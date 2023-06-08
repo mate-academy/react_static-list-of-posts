@@ -6,10 +6,10 @@ interface Props {
 }
 
 export const CommentList: React.FC<Props> = ({ comments }) => {
-  const isHaveComments = comments.length > 0;
+  const hasComments = comments.length > 0;
   const commentsAmmount = comments.length;
 
-  return (isHaveComments
+  return (hasComments
     ? (
       <div className="CommentList">
         <hr />
