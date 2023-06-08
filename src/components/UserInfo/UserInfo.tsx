@@ -8,13 +8,14 @@ interface Props {
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
   const {
+    username,
     name,
     email,
   } = user;
 
   return (
     <p>
-      {' Posted by  '}
+      {` Posted by ${username}`}
 
       <a className="UserInfo" href={`mailto:${email}`}>
         {name}
