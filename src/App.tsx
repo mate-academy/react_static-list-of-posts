@@ -8,11 +8,20 @@ import usersFromServer from './api/users';
 
 import { PostList } from './components/PostList';
 import { Post } from './types/Post';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
+
+const findUser = (userId: number): User | null => (
+  usersFromServer.find(person => userId === person.id) || null
+);
+
+const getAllCommets = (postId: number): Comment[] => (
+  commentsFromServer.filter(comment => (postId === comment.postId))
+);
 
 const fullPosts: Post[] = postsFromServer.map(post => {
-  const user = usersFromServer.find(person => post.userId === person.id);
-  const comments = commentsFromServer
-    .filter(comment => comment.postId === post.id);
+  const user = findUser(post.userId);
+  const comments = getAllCommets(post.id);
 
   return {
     ...post,
@@ -27,8 +36,6 @@ export const App: React.FC = () => (
       Static list of posts
     </h1>
 
-    <div className="PostList">
-      <PostList posts={fullPosts} />
-    </div>
+    <PostList posts={fullPosts} />
   </section>
 );

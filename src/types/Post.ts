@@ -1,8 +1,11 @@
-import { Comments } from './Comments';
-import { Posts } from './Posts';
-import { Users } from './Users';
+import { Comment } from './Comment';
+import { User } from './User';
 
-export interface Post extends Posts {
-  user?: Users;
-  comments: Comments[];
+export interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+  user: User | null;
+  comments: Comment[];
 }
