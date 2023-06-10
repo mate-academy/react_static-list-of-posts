@@ -7,6 +7,7 @@ import usersFromServer from './api/users';
 
 import { User } from './types/User';
 import { Post } from './types/Post';
+import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
 function getUser(userId: number): User | null {
