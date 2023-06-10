@@ -1,7 +1,7 @@
 import './App.scss';
 
 import { PostInfoData } from './types/PostInfoData';
-import { User } from './types/user';
+import { User } from './types/User';
 import { Comment } from './types/Comment';
 
 import postsFromServer from './api/posts';
