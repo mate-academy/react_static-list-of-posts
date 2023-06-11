@@ -15,21 +15,6 @@ export const PostInfo: React.FC<Props> = ({
     body,
   },
 }) => {
-  let content: JSX.Element;
-
-  if (comments.length) {
-    content = (
-      <CommentList comments={comments} />
-    );
-  } else {
-    content = (
-      <>
-        <hr />
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </>
-    );
-  }
-
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -42,7 +27,12 @@ export const PostInfo: React.FC<Props> = ({
         {body}
       </p>
 
-      {content}
+      {comments.length === 0 && <hr />}
+      {
+        comments.length
+          ? <CommentList comments={comments} />
+          : <b data-cy="NoCommentsMessage">No comments yet</b>
+      }
     </div>
   );
 };
