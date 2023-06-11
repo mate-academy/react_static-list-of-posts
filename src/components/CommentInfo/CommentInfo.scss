@@ -1,1 +1,12 @@
-//
+.CommentInfo {
+  &__email {
+    color: #3282b8;
+  }
+
+  &__body {
+    margin-top: 5px;
+    padding-left: 1em;
+    border-left: solid 2px #bbe1fa;
+    border-radius: 2px;
+  }
+}
