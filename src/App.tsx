@@ -10,18 +10,18 @@ import { User } from './types/User';
 import { Comment } from './types/Comment';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function getUser(userId: number): User | undefined {
   const foundUser = usersFromServer
     .find(user => user.id === userId);
 
-  return foundUser || null;
+  return foundUser;
 }
 
-function getComments(postId: number): Comment[] | null {
+function getComments(postId: number): Comment[] {
   const foundComments = commentsFromServer
     .filter(comment => comment.postId === postId);
 
-  return foundComments.length > 0 ? foundComments : null;
+  return foundComments;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
