@@ -3,22 +3,10 @@ import React from 'react';
 import './App.scss';
 
 import postsFromServer from './api/posts';
-import commentsFromServer from './api/comments';
-import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 import { Post } from './types/Post';
-
-function findUser(userId: number) {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
-}
-
-function getComments(postId: number) {
-  return commentsFromServer.filter(comment => (
-    comment.postId === postId
-  ));
-}
+import { findUser } from './functions/findUser';
+import { getComments } from './functions/getComments';
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
