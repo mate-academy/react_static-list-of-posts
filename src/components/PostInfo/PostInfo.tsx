@@ -1,6 +1,5 @@
 import React from 'react';
 import './PostInfo.scss';
-
 import { FullPost } from '../../types/FullPost';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
@@ -25,7 +24,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         </h3>
 
         {user && <UserInfo user={user} />}
-
       </div>
 
       <p className="PostInfo__body">
