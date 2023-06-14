@@ -12,9 +12,8 @@ import { Post } from './types/Post';
 import { User } from './types/User';
 import { Comment } from './types/Comment';
 
-function getUser(userId: number): User {
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  return usersFromServer.find(user => user.id === userId)!;
+function getUser(userId: number): User | null {
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getComments(postId: number): Comment[] | null {
