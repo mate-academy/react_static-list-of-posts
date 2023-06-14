@@ -8,7 +8,7 @@ import { Post } from '../../types/Post';
 import './PostInfo.scss';
 
 type Props = {
-  post: Post,
+  post: Omit<Post, 'id' | 'userId'>;
 };
 
 export const PostInfo: React.FC<Props> = ({
@@ -25,9 +25,7 @@ export const PostInfo: React.FC<Props> = ({
         {title}
       </h3>
       {user && (
-        <p>
-          <UserInfo user={user} />
-        </p>
+        <UserInfo user={user} />
       )}
     </div>
     <p className="PostInfo__body">

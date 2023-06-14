@@ -20,11 +20,11 @@ function getComments(postId: number): Comment[] | null {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
-const posts: Post[] = postsFromServer.map(post => ({
+const posts: Post[] | null = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
   comments: getComments(post.id),
-}));
+})) || null;
 
 export const App: React.FC = () => (
   <PostList posts={posts} />
