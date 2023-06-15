@@ -5,16 +5,21 @@ import { Comments } from '../../types/Comments';
 
 type Props = {
   comments: Comments[];
-  commentId: number;
+  userId: number;
 };
 
-export const CommentList: React.FC<Props> = ({ comments, commentId }) => (
-  <div className="CommentList">
-    {
-      comments.map(comment => (
-        comment.id === commentId ? <CommentInfo {...comment} key={commentId} />
-          : <b data-cy="NoCommentsMessage">No comments yet</b>
-      ))
-    }
-  </div>
-);
+export const CommentList: React.FC<Props> = ({ comments, userId }) => {
+  const userComents = comments.filter(comment => comment.postId === userId);
+
+  return (
+    <div className="CommentList">
+      {
+        userComents.length > 0
+          ? userComents.map(comment => (
+            <CommentInfo {...comment} key={comment.id} />
+          ))
+          : 'No Comments Message'
+      }
+    </div>
+  );
+};
