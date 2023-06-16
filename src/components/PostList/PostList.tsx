@@ -6,20 +6,28 @@ import { Post } from '../../types/Post';
 import './PostList.scss';
 
 type Props = {
-  posts: Post[] | null;
+  posts: Post[];
 };
 
 export const PostList: React.FC<Props> = ({ posts }) => (
   <div className="PostList">
-    {posts && posts.length > 0
-      ? (posts.map(post => (
+    {posts.length > 0
+      ? (posts.map((
+        {
+          id,
+          title,
+          body,
+          user,
+          comments,
+        },
+      ) => (
         <PostInfo
-          key={post.id}
+          key={id}
           post={{
-            title: post.title,
-            body: post.body,
-            user: post.user,
-            comments: post.comments,
+            title,
+            body,
+            user,
+            comments,
           }}
         />
       )))

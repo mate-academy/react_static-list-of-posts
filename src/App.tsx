@@ -16,15 +16,15 @@ function getUser(userId: number): User | null {
   return usersFromServer.find(user => user.id === userId) || null;
 }
 
-function getComments(postId: number): Comment[] | null {
+function getComments(postId: number): Comment[] {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
-const posts: Post[] | null = postsFromServer.map(post => ({
+const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
   comments: getComments(post.id),
-})) || null;
+}));
 
 export const App: React.FC = () => (
   <PostList posts={posts} />
