@@ -17,7 +17,7 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-function getComments(postId: number): Comment[] | string {
+function getComments(postId: number): Comment[] {
   const foundComments: Comment[] = [];
   let i: number;
 
@@ -27,11 +27,7 @@ function getComments(postId: number): Comment[] | string {
     }
   }
 
-  if (foundComments.length > 0) {
-    return foundComments;
-  }
-
-  return 'No comments yet';
+  return foundComments;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({

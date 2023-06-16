@@ -4,12 +4,12 @@ import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
 type Props = {
-  comments: Comment[] | string
+  comments: Comment[]
 };
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <>
-    {typeof comments === 'string' ? (
+    {comments.length === 0 ? (
       <>
         <hr />
         <b data-cy="NoCommentsMessage">No comments yet</b>
