@@ -6,7 +6,6 @@ type Props = {
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
-
   if (!user) {
     return null;
   }
@@ -14,7 +13,7 @@ export const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <p>
       {' Posted by  '}
-      
+
       <a
         className="UserInfo"
         href={`mailto:${user.email}`}
