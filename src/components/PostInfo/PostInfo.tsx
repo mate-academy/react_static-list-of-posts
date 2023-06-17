@@ -17,7 +17,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
 
   const user = usersFromServer.find(
     (foundUser) => foundUser.id === post.userId,
-  );
+  ) || null;
 
   return (
     <div className="PostInfo">
@@ -25,10 +25,8 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <h3 className="PostInfo__title">
           {post.title}
         </h3>
-        <p>
-          {' Posted by  '}
-          <UserInfo user={user} />
-        </p>
+
+        <UserInfo user={user} />
       </div>
 
       <p className="PostInfo__body">
