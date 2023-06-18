@@ -18,14 +18,9 @@ function getUser(userId: number): User | null {
 }
 
 function getComments(postId: number): Comment[] {
-  const foundComments: Comment[] = [];
-  let i: number;
-
-  for (i = 0; i < commentsFromServer.length; i += 1) {
-    if (commentsFromServer[i].postId === postId) {
-      foundComments.push(commentsFromServer[i]);
-    }
-  }
+  const foundComments: Comment[] = commentsFromServer.filter(
+    coment => coment.postId === postId,
+  );
 
   return foundComments;
 }

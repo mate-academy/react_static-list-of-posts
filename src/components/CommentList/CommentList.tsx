@@ -9,7 +9,7 @@ type Props = {
 
 export const CommentList: React.FC<Props> = ({ comments }) => (
   <>
-    {comments.length === 0 ? (
+    {!comments.length ? (
       <>
         <hr />
         <b data-cy="NoCommentsMessage">No comments yet</b>
