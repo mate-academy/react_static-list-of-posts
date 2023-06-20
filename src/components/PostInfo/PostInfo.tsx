@@ -6,6 +6,7 @@ import './PostInfo.scss';
 
 // Types
 import { Comment } from '../../types/Comment';
+import { User } from '../../types/User';
 
 // Components
 import { UserInfo } from '../UserInfo';
@@ -13,8 +14,7 @@ import { CommentList } from '../CommentList';
 
 type Props = {
   title: string;
-  userEmail: string | undefined;
-  userName: string | undefined;
+  user: User | null;
   body: string;
   comments: Comment[];
 };
@@ -22,8 +22,7 @@ type Props = {
 // Component
 export const PostInfo: React.FC<Props> = ({
   title,
-  userEmail,
-  userName,
+  user,
   body,
   comments,
 }) => (
@@ -34,8 +33,7 @@ export const PostInfo: React.FC<Props> = ({
       </h3>
 
       <UserInfo
-        userName={userName}
-        userEmail={userEmail}
+        user={user}
       />
     </div>
 

@@ -29,8 +29,7 @@ export const PostList: React.FC<Props> = ({ posts }) => (
     {posts.map((post: Post) => (
       <PostInfo
         title={post.title}
-        userEmail={post.user?.email}
-        userName={post.user?.name}
+        user={post.user}
         body={post.body}
         comments={getComments(post.id)}
         key={post.id}
