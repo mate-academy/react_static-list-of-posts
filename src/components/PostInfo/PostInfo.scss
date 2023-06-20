@@ -8,6 +8,12 @@
 
   &__title {
     margin: 0;
+    &--p {
+      display: inline;
+      & > span{
+      margin-left: 6px;
+    }
+    }
   }
 
   &__header {
