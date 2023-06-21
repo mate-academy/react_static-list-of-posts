@@ -1,15 +1,16 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import './PostInfo.scss';
 
-import { Users } from '../../types/Users';
-import { Comments } from '../../types/Comments';
-import { Posts } from '../../types/Posts';
+import { User } from '../../types/User';
+import { Comment } from '../../types/Comment';
+import { Post } from '../../types/Post';
 
 type Props = {
-  post: Posts
-  users: Users[];
-  comments: Comments[];
+  post: Post
+  users: User[];
+  comments: Comment[];
   userId: number;
 };
 
@@ -23,9 +24,9 @@ export const PostInfo: React.FC<Props> = ({
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{post.title}</h3>
 
-      <p>
+      <div>
         <UserInfo user={users[userId - 1]} />
-      </p>
+      </div>
     </div>
 
     <p className="PostInfo__body">
@@ -33,6 +34,6 @@ export const PostInfo: React.FC<Props> = ({
     </p>
 
     <hr />
-    <CommentList comments={comments} id={post.id} />
+    <CommentList comments={comments} postId={post.id} />
   </div>
 );

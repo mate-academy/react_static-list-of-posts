@@ -1,15 +1,16 @@
 import React from 'react';
 import { CommentInfo } from '../CommentInfo';
 
-import { Comments } from '../../types/Comments';
+import { Comment } from '../../types/Comment';
+import './CommentList.scss';
 
 type Props = {
-  comments: Comments[];
-  id: number;
+  comments: Comment[];
+  postId: number;
 };
 
-export const CommentList: React.FC<Props> = ({ comments, id }) => {
-  const userComents = comments.filter(comment => comment.postId === id);
+export const CommentList: React.FC<Props> = ({ comments, postId }) => {
+  const userComents = comments.filter(comment => comment.postId === postId);
 
   return (
     <div className="CommentList">
@@ -18,7 +19,7 @@ export const CommentList: React.FC<Props> = ({ comments, id }) => {
           ? userComents.map(comment => (
             <CommentInfo {...comment} key={comment.id} />
           ))
-          : 'No Comments Message'
+          : 'No comments available for this post.'
       }
     </div>
   );
