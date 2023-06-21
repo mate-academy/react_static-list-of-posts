@@ -9,9 +9,11 @@ type CommentListItem = {
 };
 
 export const CommentList: React.FC<CommentListItem> = ({ comments }) => (
-  <div className="CommentList">
-    {comments.map(comment => (
-      <CommentInfo comment={comment} key={comment.id} />
-    ))}
-  </div>
+  <>
+    <div className="CommentList">
+      {comments.map(comment => (
+        <CommentInfo comment={comment} key={comment.id} />
+      ))}
+    </div>
+  </>
 );

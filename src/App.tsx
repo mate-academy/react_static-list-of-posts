@@ -25,8 +25,8 @@ function getUser(userId: number): User | null {
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.id),
-  comment: getComments(post.userId),
+  user: getUser(post.userId),
+  comment: getComments(post.id),
 }));
 
 export const App: React.FC = () => (
