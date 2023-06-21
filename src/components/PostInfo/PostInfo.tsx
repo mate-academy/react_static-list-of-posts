@@ -8,14 +8,14 @@ import { Posts } from '../../types/Posts';
 
 type Props = {
   post: Posts
-  user: Users;
+  users: Users[];
   comments: Comments[];
   userId: number;
 };
 
 export const PostInfo: React.FC<Props> = ({
   post,
-  user,
+  users,
   comments,
   userId,
 }) => (
@@ -24,7 +24,7 @@ export const PostInfo: React.FC<Props> = ({
       <h3 className="PostInfo__title">{post.title}</h3>
 
       <p>
-        <UserInfo {...user} />
+        <UserInfo user={users[userId - 1]} />
       </p>
     </div>
 
@@ -33,6 +33,6 @@ export const PostInfo: React.FC<Props> = ({
     </p>
 
     <hr />
-    <CommentList comments={comments} userId={userId} />
+    <CommentList comments={comments} id={post.id} />
   </div>
 );

@@ -5,11 +5,11 @@ import { Comments } from '../../types/Comments';
 
 type Props = {
   comments: Comments[];
-  userId: number;
+  id: number;
 };
 
-export const CommentList: React.FC<Props> = ({ comments, userId }) => {
-  const userComents = comments.filter(comment => comment.postId === userId);
+export const CommentList: React.FC<Props> = ({ comments, id }) => {
+  const userComents = comments.filter(comment => comment.postId === id);
 
   return (
     <div className="CommentList">

@@ -2,7 +2,11 @@ import React from 'react';
 
 import { Comments } from '../../types/Comments';
 
-export const CommentInfo: React.FC<Comments> = ({ name, email, body }) => (
+export const CommentInfo: React.FC<Comments> = ({
+  name,
+  email,
+  body,
+}) => (
   <div className="CommentInfo">
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">

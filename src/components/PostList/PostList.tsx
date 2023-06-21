@@ -20,7 +20,7 @@ export const PostList: React.FC<Props> = ({ posts, comments, users }) => (
           key={post.id}
           comments={comments}
           userId={post.userId}
-          user={users[post.userId]}
+          users={users}
         />
       ))
     }
