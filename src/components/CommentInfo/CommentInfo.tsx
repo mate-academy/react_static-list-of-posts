@@ -9,11 +9,11 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
     <>
       <div className="CommentInfo">
         <div className="CommentInfo__title">
-          <h1
+          <h2
             className="CommentInfo__name"
           >
             {comment.name}
-          </h1>
+          </h2>
           <span>{' by '}</span>
           <a
             className="CommentInfo__email"
