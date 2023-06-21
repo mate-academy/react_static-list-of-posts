@@ -19,7 +19,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
           {name}
         </strong>
 
-        {' by '}
+        <span>by</span>
 
         <a
           className="CommentInfo__email"
