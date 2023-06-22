@@ -1,1 +1,9 @@
-//
+$background-color: lightgray;
+
+.CommentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  background-color: $background-color;
+  padding: 1em;
+}

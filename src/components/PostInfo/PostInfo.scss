@@ -1,1 +1,20 @@
-//
+$borer-color: #000;
+$background-color: lightgray;
+
+.PostInfo {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid $borer-color;
+  border-radius: 8px;
+  background-color: $background-color;
+  padding: 1em;
+  list-style: none;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}
