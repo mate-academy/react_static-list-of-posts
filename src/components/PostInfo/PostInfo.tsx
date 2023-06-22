@@ -1,12 +1,10 @@
 import React from 'react';
 
-// Styles
 import './PostInfo.scss';
 
-// Types
 import { Comment } from '../../Types/comment';
 import { User } from '../../Types/user';
-// Components
+
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
 
@@ -17,7 +15,6 @@ type Props = {
   comments: Comment[];
 };
 
-// Component
 export const PostInfo: React.FC<Props> = ({
   title,
   user,

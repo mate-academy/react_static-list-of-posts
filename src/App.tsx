@@ -8,7 +8,7 @@ import { Post } from './Types/post';
 import { User } from './Types/user';
 import { PostList } from './components/PostList';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
@@ -16,7 +16,7 @@ function getUser(userId: number): User | null {
 
 export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
-  user: getUser(post.userId),
+  user: getUserById(post.userId),
 }));
 
 export const App: React.FC = () => (

@@ -7,7 +7,7 @@ import { Comment } from '../../Types/comment';
 
 import { PostInfo } from '../PostInfo';
 
-function getCommit(postId: number): Comment[] {
+function getComments(postId: number): Comment[] {
   return commentsFromServer.filter(comment => comment.postId === postId);
 }
 
@@ -22,7 +22,7 @@ export const PostList: React.FC<Props> = ({ posts }) => (
         title={post.title}
         user={post.user}
         body={post.body}
-        comments={getCommit(post.id)}
+        comments={getComments(post.id)}
         key={post.id}
       />
     ))}
