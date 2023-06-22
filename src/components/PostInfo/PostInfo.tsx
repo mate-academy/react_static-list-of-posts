@@ -34,13 +34,9 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <p className="PostInfo__body">
           {`${body}`}
         </p>
-
-        {
-          comments?.length
-            ? (<CommentList comments={comments} />)
-            : (<b data-cy="NoCommentsMessage">No comments yet</b>)
-        }
-
+        {comments?.length
+          ? (<CommentList comments={comments} />)
+          : (<b data-cy="NoCommentsMessage">No comments yet</b>)}
       </div>
     </>
   );

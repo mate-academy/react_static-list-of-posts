@@ -1,1 +1,1 @@
-export * from './CommentInfo';
+export { CommentInfo } from './CommentInfo';
