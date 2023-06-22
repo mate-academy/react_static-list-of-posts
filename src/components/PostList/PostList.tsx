@@ -1,9 +1,7 @@
 import React from 'react';
 
-// Data
 import commentsFromServer from '../../api/comments';
 
-// Types
 import { Post } from '../../Types/post';
 import { Comment } from '../../Types/comment';
 
