@@ -17,6 +17,12 @@ type Props = {
 export const PostInfo: React.FC<Props> = ({ comments, users, post }) => {
   const commentsForThisPost: Comment[] = comments
     .filter((comment: Comment) => comment.postId === post.id);
+  const nobody = {
+    id: -1,
+    name: 'Without autor',
+    username: 'Without autor',
+    email: 'Without autor',
+  };
 
   return (
     <div className="PostInfo">
@@ -26,7 +32,9 @@ export const PostInfo: React.FC<Props> = ({ comments, users, post }) => {
         <p>
           {' Posted by  '}
 
-          <UserInfo user={users.find((u: User) => u.id === post.userId)} />
+          <UserInfo
+            user={users.find((u: User) => u.id === post.userId) || nobody}
+          />
         </p>
       </div>
 
