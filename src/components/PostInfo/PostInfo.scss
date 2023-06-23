@@ -1,1 +1,19 @@
-//
+$post-border-color: #000;
+$post-bg-color: lightgray;
+
+.PostInfo {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid $post-border-color;
+  border-radius: 8px;
+  background-color: $post-bg-color;
+  padding: 1em;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: 1em;
+  }
+}
