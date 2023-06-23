@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { CommentType } from '../../Types/CommentType';
 
 type Props = {

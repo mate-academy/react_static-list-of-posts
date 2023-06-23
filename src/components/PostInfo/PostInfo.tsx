@@ -1,8 +1,11 @@
 import React from 'react';
+
 import { PostType } from '../../Types/PostType';
+
 import { CommentList } from '../CommentList';
-import './PostInfo.scss';
 import { UserInfo } from '../UserInfo';
+
+import './PostInfo.scss';
 
 type Props = {
   post: PostType,

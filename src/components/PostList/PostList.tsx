@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { PostType } from '../../Types/PostType';
 import { PostInfo } from '../PostInfo';
 
