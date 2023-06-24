@@ -14,10 +14,10 @@ function getUserInfo(userID: number): User {
   const foundUser = usersFromServer.find(user => user.id === userID);
 
   return foundUser || {
-    id: 1,
+    id: userID,
     name: 'Nazar',
     username: 'Demon',
-    email: 'demonzone@gmail.com',
+    email: 'number1',
   };
 }
 
@@ -34,7 +34,7 @@ const postsArr: Post[] = postsFromServer
   .map((post) => {
     return {
       ...post,
-      user: getUserInfo(post.id),
+      user: getUserInfo(post.userId),
       comments: getCommentsToPost(post.id),
     };
   });
