@@ -8,7 +8,7 @@ type Props = {
   title: string,
   user: User,
   body: string,
-  comments: Comment[] | null,
+  comments: Comment[] | [],
 };
 
 export const PostInfo: React.FC<Props> = ({
@@ -22,7 +22,9 @@ export const PostInfo: React.FC<Props> = ({
       <h3 className="PostInfo__title">{title}</h3>
 
       <p>
-        {' Posted by  '}
+        Posted by
+
+        {' '}
 
         <a className="UserInfo" href={`mailto:${user.email}`}>
           {user.name}
@@ -35,7 +37,7 @@ export const PostInfo: React.FC<Props> = ({
     </p>
 
     <hr />
-    {comments
+    {comments.length !== 0
       ? <CommentList comments={comments} />
       : <b data-cy="NoCommentsMessage">No comments yet</b>}
   </div>

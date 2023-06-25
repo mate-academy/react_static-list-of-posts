@@ -13,21 +13,18 @@ import { PostList } from './components/PostList';
 function getUserInfo(userID: number): User {
   const foundUser = usersFromServer.find(user => user.id === userID);
 
-  return foundUser || {
-    id: userID,
-    name: 'Nazar',
-    username: 'Demon',
-    email: 'number1',
-  };
+  if (foundUser) {
+    return foundUser;
+  }
+
+  throw new Error('User was not found');
 }
 
-function getCommentsToPost(postId: number): Comment[] | null {
+function getCommentsToPost(postId: number): Comment[] | [] {
   const foundComments = commentsFromServer
     .filter(comm => comm.postId === postId);
 
-  return foundComments.length === 0
-    ? null
-    : foundComments;
+  return foundComments;
 }
 
 const postsArr: Post[] = postsFromServer

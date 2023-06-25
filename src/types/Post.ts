@@ -1,11 +1,11 @@
 import { Comment } from './Comment';
 import { User } from './User';
 
-export type Post = {
+export interface Post {
   userId: number,
   id: number,
   title: string,
   body: string,
   user: User,
-  comments: Comment[] | null,
-};
+  comments: Comment[] | [],
+}
