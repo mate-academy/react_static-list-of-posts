@@ -2,22 +2,8 @@ import React from 'react';
 
 import './App.scss';
 
-import postsFromServer from './api/posts';
-import usersFromServer from './api/users';
-import { User } from './types/User';
-import { Post } from './types/Post';
+import { posts } from './components/Posts/posts';
 import { PostList } from './components/PostList/PostList';
-
-function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  return foundUser || null;
-}
-
-export const posts: Post[] = postsFromServer.map(post => ({
-  ...post,
-  user: getUser(post.userId),
-}));
 
 export const App: React.FC = () => (
   <section className="App">
