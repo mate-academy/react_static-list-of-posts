@@ -13,30 +13,26 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
     body,
   } = comment;
 
-  const emailHref = `mailto:${email}`;
-
   return (
-    <>
-      <div className="CommentInfo">
-        <div className="CommentInfo__title">
-          <strong className="CommentInfo__name">
-            odio adipisci rerum aut animi
-          </strong>
+    <li className="CommentInfo">
+      <div className="CommentInfo__title">
+        <strong className="CommentInfo__name">
+          odio adipisci rerum aut animi
+        </strong>
 
-          {` by ${name}`}
+        {` by ${name}`}
 
-          <a
-            className="CommentInfo__email"
-            href={emailHref}
-          >
-            {email}
-          </a>
-        </div>
-
-        <div className="CommentInfo__body">
-          {body}
-        </div>
+        <a
+          className="CommentInfo__email"
+          href={`mailto:${email}`}
+        >
+          {email}
+        </a>
       </div>
-    </>
+
+      <div className="CommentInfo__body">
+        {body}
+      </div>
+    </li>
   );
 };
