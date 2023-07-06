@@ -1,7 +1,5 @@
-.CommentList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
+.CommentInfo {
+  &__title-by {
+    padding: 0 3px;
+  }
 }
