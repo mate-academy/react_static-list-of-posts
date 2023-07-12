@@ -19,10 +19,10 @@ function getComments(postId: number): Comment[] {
   return comments;
 }
 
-export const posts:Post[] = postsFromServer.map(post => (
+export const posts:Post[] = postsFromServer.map(currentPost => (
   {
-    ...post,
-    user: getUser(post.userId),
-    comments: getComments(post.id),
+    ...currentPost,
+    user: getUser(currentPost.userId),
+    comments: getComments(currentPost.id),
   }
 ));
