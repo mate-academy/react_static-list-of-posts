@@ -1,5 +1,14 @@
 import React from 'react';
+import { Comment } from '../../types/comment';
+import { CommentInfo } from '../CommentInfo';
+import './CommentList.scss';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
+type TypeComments = {
+  comment: Comment;
+};
+
+export const CommentList: React.FC<TypeComments> = ({ comment }) => (
+  <div className="CommentInfo">
+    <CommentInfo comment={comment} />
+  </div>
 );
