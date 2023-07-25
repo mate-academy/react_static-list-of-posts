@@ -1,4 +1,3 @@
-import React from 'react';
 import { CommentInfo } from '../CommentInfo';
 import { Comment } from '../../types/Comment';
 
@@ -6,7 +5,7 @@ type CommentListProps = {
   comments: Comment[];
 };
 
-export const CommentList: React.FC<CommentListProps> = ({ comments }) => {
+export const CommentList = ({ comments }: CommentListProps) => {
   if (comments.length === 0) {
     return <b data-cy="NoCommentsMessage">No comments yet</b>;
   }

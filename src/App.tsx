@@ -6,60 +6,28 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
-import { User } from './types/User';
-import { Comment } from './types/Comment';
 import { Post } from './types/Post';
+import { Comment } from './types/Comment';
+import { User } from './types/User';
 
-export const App: React.FC = () => {
-  const posts = postsFromServer.map(post => {
-    const user: User | undefined
-      = usersFromServer.find(u => u.id === post.userId);
-
-    return {
-      id: post.id,
-      body: post.body,
-      title: post.title,
-      user,
-    };
-  });
-
-  const comments = commentsFromServer.map(comment => {
-    const postFromServer = postsFromServer.find(p => p.id === comment.postId);
-
-    if (postFromServer) {
-      const user: User | undefined
-      = usersFromServer.find(u => u.id === postFromServer.userId);
-
-      const post = {
-        id: postFromServer.id,
-        body: postFromServer.body,
-        title: postFromServer.title,
-        user,
-      };
-
-      return {
-        id: comment.id,
-        email: comment.email,
-        name: comment.name,
-        body: comment.body,
-        post,
-      };
-    }
-
-    return {
-      id: comment.id,
-      email: comment.email,
-      name: comment.name,
-      body: comment.body,
-      post: undefined,
-    };
-  });
-
-  return (
-    <section className="App">
-      <h1 className="App__title">Static list of posts</h1>
-
-      <PostList posts={posts as Post[]} comments={comments as Comment[]} />
-    </section>
-  );
+const getComments = (postId: number): Comment[] => {
+  return commentsFromServer.filter(comment => postId === comment.postId);
 };
+
+const getUser = (userId: number): User | undefined => {
+  return usersFromServer.find(user => user.id === userId);
+};
+
+const posts: Post[] = postsFromServer.map(post => ({
+  ...post,
+  comments: getComments(post.id),
+  user: getUser(post.userId),
+}));
+
+export const App: React.FC = () => (
+  <section className="App">
+    <h1 className="App__title">Static list of posts</h1>
+
+    <PostList posts={posts} />
+  </section>
+);

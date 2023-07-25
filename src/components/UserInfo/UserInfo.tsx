@@ -1,17 +1,10 @@
-import React from 'react';
 import { User } from '../../types/User';
 
 type UserProps = {
-  user: User | undefined;
+  user: User;
 };
 
-export const UserInfo: React.FC<UserProps> = ({ user }) => {
-  if (!user) {
-    return <></>;
-  }
-
-  const { email, name } = user;
-
+export const UserInfo = ({ user: { email, name } }: UserProps) => {
   return (
     <p>
       {' Posted by  '}
