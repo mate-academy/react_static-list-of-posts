@@ -10,7 +10,7 @@ type TypePostInfo = {
 
 export const PostInfo: React.FC<TypePostInfo> = ({ post }) => (
   <>
-    <div className="PostInfo">
+    <div className="PostInfo" key={post.id}>
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
           {post.title}
@@ -27,7 +27,7 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => (
         {post.body}
       </p>
 
-      {post.comment?.length === 0
+      {!post.comment?.length
         ? (
           <>
             <hr />
