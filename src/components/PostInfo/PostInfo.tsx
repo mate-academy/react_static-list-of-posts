@@ -19,9 +19,7 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => (
         <p>
           {' Posted by  '}
 
-          {post.user === null
-            ? ''
-            : <UserInfo user={post.user} />}
+          {post.user && <UserInfo user={post.user} />}
         </p>
       </div>
 
@@ -29,7 +27,7 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => (
         {post.body}
       </p>
 
-      {!post.comment
+      {post.comment?.length === 0
         ? (
           <>
             <hr />
@@ -37,11 +35,7 @@ export const PostInfo: React.FC<TypePostInfo> = ({ post }) => (
           </>
         )
         : (
-          <div className="CommentList">
-            {post.comment.map((comment) => (
-              <CommentList comment={comment} key={comment.id} />
-            ))}
-          </div>
+          <CommentList post={post} />
         )}
     </div>
   </>

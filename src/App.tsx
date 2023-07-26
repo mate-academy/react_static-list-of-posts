@@ -17,20 +17,12 @@ function getUser(userId: number): User | null {
   return foundUser || null;
 }
 
-function getComments(id: number): Comment[] | null {
-  const foundComments: Comment[] = [];
+function getComments(id: number): Comment[] {
+  const foundComment = commentsFromServer.filter(
+    (comment) => comment.postId === id,
+  );
 
-  commentsFromServer.forEach((comment) => {
-    if (comment.postId === id) {
-      foundComments.push(comment);
-    }
-  });
-
-  if (foundComments.length === 0) {
-    return null;
-  }
-
-  return foundComments || null;
+  return foundComment;
 }
 
 export const posts: Post[] = postsFromServer.map((post) => ({
