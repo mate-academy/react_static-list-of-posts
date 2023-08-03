@@ -28,9 +28,6 @@ export const posts: Posts[] = postsFromServer.map(post => ({
   comments: getComments(post.id),
 }));
 
-// connect each post with user
-// now assign comments to each post
-
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>

@@ -19,7 +19,7 @@ export const CommentInfo: React.FC<Props> = (
 
       <a
         className="CommentInfo__email"
-        href="mailto:Telly_Lynch@karl.co.uk"
+        href={`mailto:${email}`}
       >
         {email}
       </a>
