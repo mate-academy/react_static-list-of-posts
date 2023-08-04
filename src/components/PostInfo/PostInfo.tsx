@@ -1,12 +1,12 @@
 import React from 'react';
 import { UserInfo } from '../UserInfo';
-import { Posts } from '../../types/Posts';
+import { Post } from '../../types/Post';
 import { CommentList } from '../CommentList';
 import comments from '../../api/comments';
 import filterCommentsByPost from '../../utils/filterCommentsByPost';
 
 type Props = {
-  post: Posts
+  post: Post
 };
 
 export const PostInfo: React.FC<Props> = (

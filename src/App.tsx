@@ -7,7 +7,7 @@ import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
 import { User } from './types/User';
-import { Posts } from './types/Posts';
+import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
 function getUser(userId: number): User | null {
@@ -22,7 +22,7 @@ function getComments(postId: number) {
   );
 }
 
-export const posts: Posts[] = postsFromServer.map(post => ({
+export const posts: Post[] = postsFromServer.map(post => ({
   ...post,
   user: getUser(post.userId),
   comments: getComments(post.id),
