@@ -7,5 +7,5 @@ export interface Post {
   title: string;
   body: string;
   user: User | null;
-  comments: Comments[] | null;
+  comments: Comments[];
 }
