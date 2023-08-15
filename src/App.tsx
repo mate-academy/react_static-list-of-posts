@@ -23,7 +23,7 @@ function getComment(postId: number): Comments[] | null {
   const foundedComment = commentsFromServer.filter(comment => (
     comment.postId === postId));
 
-  return foundedComment.length > 0 ? foundedComment : null;
+  return foundedComment.length ? foundedComment : null;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
