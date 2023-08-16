@@ -13,8 +13,7 @@ import { Comments } from './type/Comments';
 import { User } from './type/User';
 
 function getUser(userId: number): User | null {
-  const foundedUser = usersFromServer.find(user => (
-    user.id === userId));
+  const foundedUser = usersFromServer.find(user => (user.id === userId));
 
   return foundedUser || null;
 }
