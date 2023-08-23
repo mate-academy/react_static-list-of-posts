@@ -52,7 +52,10 @@ describe('PostInfo', () => {
     });
 
     it('should have a correct title', () => {
-      cy.get('.PostInfo__title').should('have.text', 'et ea vero quia laudantium autem');
+      cy.get('.PostInfo__title').should(
+        'have.text',
+        'et ea vero quia laudantium autem',
+      );
     });
 
     it('should have a user', () => {
@@ -61,8 +64,15 @@ describe('PostInfo', () => {
 
     it('should contain all comments', () => {
       cy.get('.CommentInfo').should('have.length', 3);
-      cy.get('.CommentInfo__name').eq(0).should('have.text', 'esse autem dolorum');
-      cy.get('.CommentInfo__name').eq(2).should('have.text', 'culpa eius tempora sit consequatur neque iure deserunt');
+      cy.get('.CommentInfo__name')
+        .eq(0)
+        .should('have.text', 'esse autem dolorum');
+      cy.get('.CommentInfo__name')
+        .eq(2)
+        .should(
+          'have.text',
+          'culpa eius tempora sit consequatur neque iure deserunt',
+        );
     });
 
     it('should not show NoCommentsMessage', () => {
@@ -130,10 +140,15 @@ describe('PostInfo', () => {
 
       mount(<PostInfo post={otherPost} />);
 
-      cy.get('.PostInfo__title').should('have.text', 'ea molestias quasi exercitationem repellat qui ipsa sit aut');
+      cy.get('.PostInfo__title').should(
+        'have.text',
+        'ea molestias quasi exercitationem repellat qui ipsa sit aut',
+      );
       cy.get('.UserInfo').should('contain', 'Leanne Graham');
       cy.get('.CommentInfo').should('have.length', 2);
-      cy.get('.CommentInfo__name').eq(0).should('have.text', 'id labore ex et quam laborum');
+      cy.get('.CommentInfo__name')
+        .eq(0)
+        .should('have.text', 'id labore ex et quam laborum');
     });
   });
 });
