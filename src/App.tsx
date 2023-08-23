@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import "./App.scss";
-import { User } from "./types/User";
-import { Comment } from "./types/Comment";
-import { Post } from "./types/Post";
-import { PostList } from "./components/PostList";
+import './App.scss';
+import { User } from './types/User';
+import { Comment } from './types/Comment';
+import { Post } from './types/Post';
+import { PostList } from './components/PostList';
 
-import postsFromServer from "./api/posts";
-import commentsFromServer from "./api/comments";
-import usersFromServer from "./api/users";
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
 
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find((user) => user.id === userId);
@@ -18,7 +18,7 @@ function getUser(userId: number): User | null {
 
 function getComments(id: number): Comment[] {
   const foundComments = commentsFromServer.filter(
-    (comment) => comment.postId === id
+    (comment) => comment.postId === id,
   );
 
   return foundComments;

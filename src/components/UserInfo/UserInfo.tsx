@@ -1,6 +1,6 @@
-import React from "react";
-import "./UserInfo.scss";
-import { User } from "../../types/User";
+import React from 'react';
+import './UserInfo.scss';
+import { User } from '../../types/User';
 
 type Props = {
   user: User;
@@ -8,7 +8,7 @@ type Props = {
 
 export const UserInfo: React.FC<Props> = ({ user }) => (
   <p>
-    {" Posted by  "}
+    {' Posted by  '}
     <a className="UserInfo" href={user.email}>
       {user.name}
     </a>
