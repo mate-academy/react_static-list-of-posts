@@ -1,7 +1,7 @@
 import React from 'react';
 import { Post } from '../../types/Post';
-import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
 type PostProps = {
   post: Post;
@@ -14,8 +14,9 @@ export const PostInfo: React.FC<PostProps> = ({ post }) => (
         {post.title}
       </h3>
 
-      {post.user
-        && <UserInfo user={post.user} key={post.userId} />}
+      {post.user && (
+        <UserInfo user={post.user} key={post.userId} />
+      )}
     </div>
 
     <p className="PostInfo__body">
