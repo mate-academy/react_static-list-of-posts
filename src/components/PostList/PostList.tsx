@@ -9,8 +9,5 @@ type PostListProps = {
 export const PostList: React.FC<PostListProps> = ({ posts }) => (
   <div className="PostList">
     {posts.map(post => <PostInfo key={post.id} post={post} />)}
-
-    return null;
-
   </div>
 );
