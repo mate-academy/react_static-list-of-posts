@@ -1,9 +1,11 @@
 import { Comment } from './Comment';
-import { Post } from './Post';
 import { User } from './User';
 
 export interface PostData {
-  comments: Comment[],
-  post: Post,
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
   user: User | null,
+  comments: Comment[],
 }

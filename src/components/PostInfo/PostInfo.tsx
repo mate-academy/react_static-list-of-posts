@@ -4,13 +4,13 @@ import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
 type PostProp = {
-  post: PostData
+  post: PostData,
 };
 
 export const PostInfo: React.FC<PostProp> = ({ post }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.post.title}</h3>
+      <h3 className="PostInfo__title">{post.title}</h3>
 
       <p>
         {' Posted by  '}
@@ -21,7 +21,7 @@ export const PostInfo: React.FC<PostProp> = ({ post }) => (
     </div>
 
     <p className="PostInfo__body">
-      {post.post.body}
+      {post.body}
     </p>
 
     <hr />

@@ -21,8 +21,8 @@ export const getPostData = function getPostData(id: number): PostData {
   });
 
   return {
+    ...post,
     comments: postComments,
-    post,
     user,
   };
 };
