@@ -1,5 +1,5 @@
-// PostList.tsx
 import React from 'react';
+
 import { Post } from '../../types/Post';
 import { PostInfo } from '../PostInfo/PostInfo';
 
