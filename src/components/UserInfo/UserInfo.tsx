@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const UserInfo = ({ user }: Props) => (
-  <a className="UserInfo" href={`mailto:${user.email}`}>
+  <a className="userInfo" href={`mailto:${user.email}`}>
     {user.name}
   </a>
 );
