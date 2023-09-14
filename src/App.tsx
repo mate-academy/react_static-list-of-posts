@@ -11,9 +11,7 @@ import { Post } from './types/Post';
 import './App.scss';
 
 function getComments(id:number): Comment[] {
-  const comments = commentsFromServer.filter(comment => id === comment.postId);
-
-  return comments;
+  return commentsFromServer.filter(comment => id === comment.postId);
 }
 
 function getUser(id:number): User | null {
