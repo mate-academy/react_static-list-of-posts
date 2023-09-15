@@ -11,8 +11,6 @@ type Props = {
 
 export const CommentList = ({ comments }: Props) => (
   <div className="commentList">
-    {comments.map(comment =>
-      <CommentInfo comment={comment} key={comment.id} />;
-    )}
+    {comments.map(comment => <CommentInfo comment={comment} key={comment.id} />)}
   </div>
 );
