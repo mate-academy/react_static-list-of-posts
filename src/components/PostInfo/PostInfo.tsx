@@ -10,15 +10,15 @@ type Props = {
 };
 
 export const PostInfo = ({ post }: Props) => (
-  <div className="PostInfo">
-    <div className="PostInfo__header">
-      <h3 className="PostInfo__title">{post.title}</h3>
+  <div className="postInfo">
+    <div className="postInfo__header">
+      <h3 className="postInfo__title">{post.title}</h3>
       <p>
         {'Posted by  '}
         {post.user && <UserInfo user={post.user} />}
       </p>
     </div>
-    <p className="PostInfo__body">
+    <p className="postInfo__body">
       {post.body}
     </p>
     <hr />
