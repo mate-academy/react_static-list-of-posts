@@ -8,7 +8,7 @@ import usersFromServer from './api/users';
 import { PostList } from './components/PostList';
 import { Posts } from './types/Posts';
 import { Users } from './types/Users';
-import { Comment } from './types/Comments';
+import { Comment } from './types/Comment';
 
 function getUser(userId: number): Users | null {
   const foundUsers = usersFromServer.filter(user => user.id === userId);

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './CommentList.scss';
 
-import { Comment } from '../../types/Comments';
+import { Comment } from '../../types/Comment';
 import { CommentInfo } from '../CommentInfo';
 
 type CommentsProps = {
