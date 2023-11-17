@@ -11,9 +11,10 @@ import { Users } from './types/Users';
 import { Comment } from './types/Comment';
 
 function getUser(userId: number): Users | null {
-  const foundUsers = usersFromServer.filter(user => user.id === userId);
+  const foundUser = usersFromServer.find(user => user.id
+    === userId);
 
-  return foundUsers.length > 0 ? foundUsers[0] : null;
+  return foundUser || null;
 }
 
 function getComment(postId: number): Comment[] {
