@@ -9,9 +9,7 @@ type CommentsProp = {
 export const CommentList: React.FC<CommentsProp> = ({ comments }) => {
   return (
     <div className="CommentList">
-      {comments.map(comment => {
-        return (<CommentInfo key={comment.id} comment={comment} />);
-      })}
+      {comments.map(comment => <CommentInfo key={comment.id} comment={comment} />)}
     </div>
   );
 };
