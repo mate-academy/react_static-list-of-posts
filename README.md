@@ -12,9 +12,4 @@ This task is similar to [Static List of TODOs](https://github.com/mate-academy/r
 - `List` components should take an array of corresponding objects and render one `Info` component per object;
 - `Info` components should take one object and render its data.
 
-## Instructions
-
-- Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
-- Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Open one more terminal and run tests with `npm test` to ensure your solution is correct.
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/) and add it to the PR description.
+[DEMO LINK](https://spojrzenie.github.io/react_static-list-of-posts/)
