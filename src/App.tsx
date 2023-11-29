@@ -7,14 +7,32 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
+import { User, Comment } from './types';
+
+function getUserById(userId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  if (foundUser) {
+    return foundUser;
+  }
+
+  return null;
+}
+
+function getCommentsById(postId: number): Comment[] {
+  const foundComments = commentsFromServer.filter(comment => (
+    comment.postId === postId
+  ));
+
+  return foundComments;
+}
+
 const posts = postsFromServer
   .map(post => (
     {
       ...post,
-      user: usersFromServer.find(user => user.id === post.userId) || null,
-      comments: commentsFromServer.filter(comment => (
-        comment.postId === post.id
-      )),
+      user: getUserById(post.userId),
+      comments: getCommentsById(post.id),
     }
   ));
 
