@@ -4,3 +4,7 @@ export interface User {
   username: string;
   email: string;
 }
+
+export interface UserProps {
+  user: User;
+}

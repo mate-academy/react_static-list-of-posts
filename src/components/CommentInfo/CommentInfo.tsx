@@ -1,12 +1,8 @@
-import React from 'react';
+import { FC } from 'react';
 
-import { Comment } from '../../types';
+import { CommentProps } from '../../types';
 
-type Props = {
-  comment: Comment;
-};
-
-export const CommentInfo: React.FC<Props> = ({ comment }) => (
+export const CommentInfo: FC<CommentProps> = ({ comment }) => (
   <>
     <div className="CommentInfo">
       <div className="CommentInfo__title">

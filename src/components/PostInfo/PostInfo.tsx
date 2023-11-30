@@ -1,14 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 import { CommentList } from '../CommentList';
 
-import { Post } from '../../types';
+import { PostPorps } from '../../types';
 import { UserInfo } from '../UserInfo';
 
-type Props = {
-  post: Post,
-};
-
-export const PostInfo: React.FC<Props> = ({ post }) => (
+export const PostInfo: FC<PostPorps> = ({ post }) => (
   <div className="PostInfo">
     <div className="PostInfo__header">
       <h3 className="PostInfo__title">{post.title}</h3>

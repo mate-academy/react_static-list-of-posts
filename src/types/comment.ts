@@ -5,3 +5,11 @@ export interface Comment {
   email: string;
   body: string;
 }
+
+export interface CommentsProps {
+  comments: Comment[];
+}
+
+export interface CommentProps {
+  comment: Comment;
+}

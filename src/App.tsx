@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { PostList } from './components/PostList';
 
 import './App.scss';
@@ -10,21 +10,13 @@ import usersFromServer from './api/users';
 import { User, Comment } from './types';
 
 function getUserById(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  if (foundUser) {
-    return foundUser;
-  }
-
-  return null;
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommentsById(postId: number): Comment[] {
-  const foundComments = commentsFromServer.filter(comment => (
+  return commentsFromServer.filter(comment => (
     comment.postId === postId
   ));
-
-  return foundComments;
 }
 
 const posts = postsFromServer
@@ -36,7 +28,7 @@ const posts = postsFromServer
     }
   ));
 
-export const App: React.FC = () => (
+export const App: FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
     <PostList

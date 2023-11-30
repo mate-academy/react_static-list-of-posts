@@ -9,3 +9,11 @@ export interface Post {
   user: User | null;
   comments: Comment[];
 }
+
+export interface PostsProps {
+  posts: Post[],
+}
+
+export interface PostPorps {
+  post: Post,
+}

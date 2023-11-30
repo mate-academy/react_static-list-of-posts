@@ -1,12 +1,8 @@
-import React from 'react';
-import { Post } from '../../types';
+import { FC } from 'react';
+import { PostsProps } from '../../types';
 import { PostInfo } from '../PostInfo';
 
-type Props = {
-  posts: Post[],
-};
-
-export const PostList: React.FC<Props> = ({ posts }) => (
+export const PostList: FC<PostsProps> = ({ posts }) => (
   <div className="PostList">
     {
       posts.map(post => (

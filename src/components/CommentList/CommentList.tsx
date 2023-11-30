@@ -1,13 +1,9 @@
-import React from 'react';
+import { FC } from 'react';
 
-import { Comment } from '../../types';
+import { CommentsProps } from '../../types';
 import { CommentInfo } from '../CommentInfo';
 
-type Props = {
-  comments: Comment[];
-};
-
-export const CommentList: React.FC<Props> = ({ comments }) => (
+export const CommentList: FC<CommentsProps> = ({ comments }) => (
   <div className="CommentList">
     {comments.map(comment => (
       <CommentInfo key={comment.id} comment={comment} />
