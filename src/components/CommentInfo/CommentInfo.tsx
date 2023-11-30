@@ -1,5 +1,5 @@
-import React from 'react';
+// import React from 'react';
 
-export const CommentInfo: React.FC = () => (
+export const CommentInfo = () => (
   <>Put the comment here</>
 );
