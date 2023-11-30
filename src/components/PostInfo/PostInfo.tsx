@@ -7,28 +7,33 @@ import './PostInfo.scss';
 export interface PostInfoProps {
   post: Post,
 }
-export const PostInfo: React.FC<PostInfoProps> = ({ post }) => (
+export const PostInfo: React.FC<PostInfoProps> = ({
+  post: {
+    title, body, user, comments,
+  },
+}) => (
+
   <>
     <div className="PostInfo">
       <div className="PostInfo__header">
-        <h3 className="PostInfo__title">{post.title}</h3>
+        <h3 className="PostInfo__title">{title}</h3>
 
         <p>
           {' Posted by  '}
 
-          {post.user && <UserInfo user={post.user} key={post.user.id} />}
+          {user && <UserInfo user={user} key={user.id} />}
         </p>
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
 
       <hr />
 
-      {post.comments.length === 0
-      && <b data-cy="NoCommentsMessage">No comments yet</b>}
-      {post.comments && <CommentList comments={post.comments} key={post.id} />}
+      {comments.length > 0
+        ? <CommentList comments={comments} />
+        : <b data-cy="NoCommentsMessage">No comments yet</b>}
     </div>
   </>
 );
