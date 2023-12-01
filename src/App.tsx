@@ -6,8 +6,8 @@ import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
 
-import { Post } from './types/post';
-import { User } from './types/user';
+import { Post } from './types/Post';
+import { User } from './types/User';
 
 import { PostList } from './components/PostList';
 
@@ -19,11 +19,11 @@ function getUser(userId: number): User | null {
 }
 
 function getComment(postId: number) {
-  const filteredcomment = commentsFromServer.filter(
+  const filteredComment = commentsFromServer.filter(
     comment => comment.postId === postId,
   );
 
-  return filteredcomment || [];
+  return filteredComment;
 }
 
 export const posts: Post[] = postsFromServer.map(post => ({
