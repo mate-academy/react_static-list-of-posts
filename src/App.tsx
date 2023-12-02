@@ -2,18 +2,42 @@ import React from 'react';
 
 import './App.scss';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
+
+import { Post } from './types/Post';
+import { Comment } from './types/Comment';
+import { User } from './types/User';
+import { PostList } from './components/PostList';
+
+function getUser(userId: number): User | null {
+  const foundUser = usersFromServer.find(user => user.id === userId);
+
+  return foundUser || null;
+}
+
+function getCommentsByPostId(id: number): Comment[] | null {
+  const foundComment = commentsFromServer
+    .filter(comment => comment.postId === id);
+
+  return foundComment || null;
+}
+
+export const posts: Post[] = postsFromServer.map(post => ({
+  user: getUser(post.userId),
+  comments: getCommentsByPostId(post.id),
+  ...post,
+}));
 
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-
-    <div className="PostList">
+    <PostList posts={posts} />
+    {/* <div className="PostList">
       <div className="PostInfo">
         <div className="PostInfo__header">
-          <h3 className="PostInfo__title">qui est esse</h3>
+          <h3 className="PostInfo__title">POST TESTOWY</h3>
 
           <p>
             {' Posted by  '}
@@ -104,6 +128,6 @@ export const App: React.FC = () => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
   </section>
 );
