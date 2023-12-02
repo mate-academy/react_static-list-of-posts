@@ -33,6 +33,9 @@ export const PostInfo = ({ post }: Props) => {
       <p className="PostInfo__body">
         {body}
       </p>
+
+      <hr />
+
       <CommentList comments={comments} />
     </div>
   );
