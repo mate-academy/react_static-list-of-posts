@@ -1,20 +1,16 @@
-// import React from 'react';
-import Users from '../../api/users';
-import { Post } from '../../types/post';
+import { User } from '../../types/user';
+import './UserInfo.scss';
 
-type PostType = {
-  user: Post,
+type UserType = {
+  user: User,
 };
 
-export const UserInfo = ({ user }: PostType) => {
-  const person = Users.find(per => per.id === user.userId);
-
+export const UserInfo = ({ user }: UserType) => {
   return (
     <p>
-      {' Posted by  '}
-
-      <a className="UserInfo" href={`mailto:${person?.email}`}>
-        {person?.name}
+      {' Posted by '}
+      <a className="UserInfo" href={`mailto:${user.email}`}>
+        {user.name}
       </a>
     </p>
   );

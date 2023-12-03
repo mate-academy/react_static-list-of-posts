@@ -1,23 +1,17 @@
-// import { Post } from '../../types/post';
-// import comments from '../../api/comments';
-// import { CommentInfo } from '../CommentInfo';
-// import comment from '../../types/comment';
+import { CommentInfo } from '../CommentInfo/CommentInfo';
+import { Comment } from '../../types/comment';
+import './CommentList.scss';
 
-// type PostType = {
-//   post: Post;
-// };
+type CommentType = {
+  comments: Comment[];
+};
 
-// type CommentsType = {
-//   commentsToPost: comment[]
-// };
-
-// export const CommentList = ({ post }: PostType) => {
-//   const commentsToPost: CommentsType = comments.filter(comment => comment.postId === post.id);
-
-//   return (
-//     {commentsToPost.map(com => {
-//       <CommentInfo />
-//     })}
-
-//   );
-// };
+export const CommentList = ({ comments }: CommentType) => {
+  return (
+    <div className="CommentList">
+      {comments.map(comment => {
+        return (<CommentInfo key={comment.id} comment={comment} />);
+      })}
+    </div>
+  );
+};
