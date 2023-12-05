@@ -1,13 +1,8 @@
 import React from 'react';
-import { Post } from '../../types/Post';
+import { PostInfoProps } from '../../types';
 import { UserInfo } from '../UserInfo';
-import { CommentList } from '../CommentList';
 
-type Props = {
-  post: Post;
-};
-
-export const PostInfo: React.FC<Props> = ({ post }) => (
+export const PostInfo: React.FC<PostInfoProps> = ({ post }) => (
   <>
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -19,9 +14,6 @@ export const PostInfo: React.FC<Props> = ({ post }) => (
       <p className="PostInfo__body">{post.body}</p>
 
       <hr />
-      {post.comments.length === 0
-        ? (<b data-cy="NoCommentsMessage">No comments yet</b>)
-        : (<CommentList key={post.id} comments={post.comments} />)}
     </div>
   </>
 );

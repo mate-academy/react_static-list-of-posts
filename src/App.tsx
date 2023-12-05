@@ -1,13 +1,12 @@
 import React from 'react';
 
 import './App.scss';
-import { User } from './types/User';
-import { Post } from './types/Post';
-import { Comment } from './types/Comment';
+import { User, Post, Comment } from './types';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
 import usersFromServer from './api/users';
+
 import { PostList } from './components/PostList';
 
 function getUser(userId: number): User | null {
