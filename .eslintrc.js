@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   extends: ['@mate-academy/eslint-config-react-typescript', 'plugin:cypress/recommended'],
   settings: {
