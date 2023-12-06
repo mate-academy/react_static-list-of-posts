@@ -1,5 +1,5 @@
-import { User } from '../types/User';
-import { Comments } from '../types/Comment';
+import { User } from './User';
+import { Comments } from './Comment';
 
 export interface Post {
   userId: number,
