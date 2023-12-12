@@ -1,6 +1,9 @@
 import React from 'react';
 
 import './App.scss';
+import './Comments.scss';
+import './Post.scss';
+import './User.scss';
 
 import postsFromServer from './api/posts';
 import commentsFromServer from './api/comments';
