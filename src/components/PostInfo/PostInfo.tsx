@@ -1,9 +1,8 @@
 import React from 'react';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
-import { Comment } from '../../types/Comment';
-import { Post } from '../../types/Post';
-import { User } from '../../types/User';
+import { Comment, Post, User } from '../../types';
+import './PostInfo.scss';
 
 type Props = {
   post: Post,
@@ -12,6 +11,11 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post, user, comments }) => {
+  const {
+    title,
+    body,
+  } = post;
+
   const noComments = comments.length < 1;
   const commentList = noComments
     ? <b data-cy="NoCommentsMessage">No comments yet</b>
@@ -21,7 +25,7 @@ export const PostInfo: React.FC<Props> = ({ post, user, comments }) => {
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">
-          {post.title}
+          {title}
         </h3>
 
         <p>
@@ -32,8 +36,10 @@ export const PostInfo: React.FC<Props> = ({ post, user, comments }) => {
       </div>
 
       <p className="PostInfo__body">
-        {post.body}
+        {body}
       </p>
+
+      <hr />
 
       {commentList}
     </div>
