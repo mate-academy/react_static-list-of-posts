@@ -1,5 +1,29 @@
 import React from 'react';
+import { User } from '../../types/users';
+import { Post } from '../../types/posts';
+import { Comment } from '../../types/comments';
+import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
-export const PostInfo: React.FC = () => (
-  <>Put the post here</>
-);
+interface PostInfoProps {
+  user: User | undefined;
+  post: Post;
+  postComments: Comment[];
+}
+
+export const PostInfo: React.FC<PostInfoProps>
+  = ({ user, post, postComments }) => (
+    <div className="PostInfo">
+      <div className="PostInfo__header">
+        <h3 className="PostInfo__title">{post.title}</h3>
+
+        <UserInfo user={user} />
+
+      </div>
+
+      <p className="PostInfo__body">
+        {post.body}
+      </p>
+      <CommentList commentsFromServer={postComments} />
+    </div>
+  );
