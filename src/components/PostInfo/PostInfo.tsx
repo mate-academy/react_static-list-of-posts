@@ -8,11 +8,11 @@ import { UserInfo } from '../UserInfo';
 interface PostInfoProps {
   user: User | undefined;
   post: Post;
-  postcomments: Comment[];
+  postComments: Comment[];
 }
 
 export const PostInfo: React.FC<PostInfoProps>
-  = ({ user, post, postcomments }) => (
+  = ({ user, post, postComments }) => (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{post.title}</h3>
@@ -24,6 +24,6 @@ export const PostInfo: React.FC<PostInfoProps>
       <p className="PostInfo__body">
         {post.body}
       </p>
-      <CommentList commentsFromServer={postcomments} />
+      <CommentList commentsFromServer={postComments} />
     </div>
   );

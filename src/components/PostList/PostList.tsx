@@ -16,7 +16,7 @@ export const PostList: React.FC<PostListProps> = ({ postsFromServer }) => (
         .filter((comment) => comment.postId === post.id);
 
       return (
-        <PostInfo post={post} user={user} postcomments={postcomments} />
+        <PostInfo post={post} user={user} postComments={postcomments} />
       );
     })}
   </>

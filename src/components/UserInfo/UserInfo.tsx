@@ -9,8 +9,7 @@ export const UserInfo: React.FC<UserInfoProps> = ({ user }) => (
   <p>
     {`Posted by ${user?.email}`}
     <a className="UserInfo" href={`mailto:${user?.email}`}>
-     {user?.name}
+      {user?.name}
     </a>
   </p>
 );
-
