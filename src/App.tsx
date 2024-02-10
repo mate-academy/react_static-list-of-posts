@@ -5,7 +5,8 @@ import './App.scss';
 import postsFromServer from './api/posts';
 import { PostList } from './components/PostList';
 import { Posts } from './types/Posts';
-import { getUser, getComment } from './components/Helpers/helpers';
+// eslint-disable-next-line import/extensions
+import { getUser, getComment } from './components/Helpers/helpers.jsx';
 
 export const preparedPosts: Posts[] = postsFromServer.map((post) => ({
   ...post,
