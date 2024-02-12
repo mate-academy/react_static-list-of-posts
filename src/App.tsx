@@ -6,7 +6,7 @@ import postsFromServer from './api/posts';
 import { PostList } from './components/PostList';
 import { Posts } from './types/Posts';
 // eslint-disable-next-line import/extensions
-import { getUser, getComment } from './components/Helpers/helpers.jsx';
+import { getUser, getComment } from './components/Helpers/Helpers.jsx';
 
 export const preparedPosts: Posts[] = postsFromServer.map((post) => ({
   ...post,

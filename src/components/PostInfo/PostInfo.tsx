@@ -21,7 +21,7 @@ export const PostInfo: React.FC<Props> = ({
       return (<b data-cy="NoCommentsMessage">No comments yet</b>);
     }
 
-    return (<CommentList comments={comments} />);
+    return <CommentList comments={comments} />;
   };
 
   return (
