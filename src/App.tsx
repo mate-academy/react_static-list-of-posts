@@ -25,10 +25,9 @@ export const App: React.FC = () => (
         </div>
 
         <p className="PostInfo__body">
-          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae
-          ea dolores neque fugiat blanditiis voluptate porro vel nihil
-          molestiae ut reiciendis qui aperiam non debitis possimus qui neque
-          nisi nulla
+          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea
+          dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut
+          reiciendis qui aperiam non debitis possimus qui neque nisi nulla
         </p>
 
         <hr />
@@ -38,9 +37,7 @@ export const App: React.FC = () => (
 
       <div className="PostInfo">
         <div className="PostInfo__header">
-          <h3 className="PostInfo__title">
-            doloremque illum aliquid sunt
-          </h3>
+          <h3 className="PostInfo__title">doloremque illum aliquid sunt</h3>
 
           <p>
             {' Posted by  '}
