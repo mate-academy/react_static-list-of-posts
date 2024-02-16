@@ -1,5 +1,3 @@
 import React from 'react';
 
-export const CommentList: React.FC = () => (
-  <>Put the list here</>
-);
+export const CommentList: React.FC = () => <>Put the list here</>;
