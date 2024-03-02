@@ -1,7 +1,7 @@
 import React from 'react';
 import { Comment } from '../../types/comment';
 
-export const CommentInfo: React.FC<Props> = ({ comment }: Props) => (
+export const CommentInfo: React.FC<Props> = ({ comment }) => (
   <div className="CommentInfo" key={comment.id}>
     <div className="CommentInfo__title">
       <strong className="CommentInfo__name">{comment.name}</strong>

@@ -3,10 +3,10 @@ import './CommentList.scss';
 import { Comment } from '../../types/comment';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 
-export const CommentList: React.FC<Props> = ({ comments }: Props) => {
+export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <>
-      {comments.length < 0 ? (
+      {comments.length > 0 ? (
         <div className="CommentList">
           {comments.map(comment => (
             <CommentInfo comment={comment} />
