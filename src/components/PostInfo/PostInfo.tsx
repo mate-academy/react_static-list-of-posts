@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Post } from '../../types/post';
 import { UserInfo } from '../UserInfo/UserInfo';
 
