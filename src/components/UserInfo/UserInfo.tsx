@@ -1,24 +1,23 @@
 import React from 'react';
+
 import './UserInfo.scss';
 
 import { User } from '../../types/user';
 
 type Props = {
-  user: User | undefined;
+  user: User;
 };
 
 export const UserInfo: React.FC<Props> = ({ user }) => {
-  if (user) {
-    return (
-      <p>
-        {' Posted by  '}
+  const { name, email } = user;
 
-        <a className="UserInfo" href={`mailto:${user.email}`}>
-          {user.name}
-        </a>
-      </p>
-    );
-  }
+  return (
+    <p>
+      {' Posted by  '}
 
-  return <p>{' Posted by  '}</p>;
+      <a className="UserInfo" href={`mailto:${email}`}>
+        {name}
+      </a>
+    </p>
+  );
 };
