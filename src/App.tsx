@@ -13,7 +13,7 @@ import { Comment } from './types/comment';
 function getUser(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
-  return foundUser || null;git
+  return foundUser || null;
 }
 
 function getComment(postId: number): Comment[] {
