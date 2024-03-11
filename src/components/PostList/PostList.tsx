@@ -10,9 +10,8 @@ export const PostList: React.FC<PostsListProps> = ({ posts }) => {
   return (
     <div className="PostList">
       {posts.map((post) => {
-        return <PostInfo post={post} />;
+        return <PostInfo key={post.id} post={post} />;
       })}
-      ;
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import React from "react";
 import { Post } from "../../Types/Post";
 import { UserInfo } from "../UserInfo/UserInfo";
-import { getUser } from "../../userHelper";
-import { getPostComments } from "../../postHelper";
 import { CommentList } from "../CommentList";
 
 interface PostInfoProps {
@@ -10,18 +8,15 @@ interface PostInfoProps {
 }
 
 export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
-  const user = getUser(post.userId);
-  const postComments = getPostComments(post.id);
-
   return (
-    <div key={post.id} className="PostInfo">
+    <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{post.title}</h3>
 
         <p>
           {" Posted by  "}
 
-          {user && <UserInfo user={user} />}
+          {post.user && <UserInfo user={post.user} />}
         </p>
       </div>
 
@@ -29,10 +24,10 @@ export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
 
       <hr />
 
-      {postComments.length === 0 ? (
+      {post.comments.length === 0 ? (
         <b data-cy="NoCommentsMessage">No comments yet</b>
       ) : (
-        <CommentList comments={postComments} />
+        <CommentList comments={post.comments} />
       )}
     </div>
   );
