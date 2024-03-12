@@ -1,6 +1,6 @@
-import React from "react";
-import { Post } from "../../Types/Post";
-import { PostInfo } from "../PostInfo/PostInfo";
+import React from 'react';
+import { Post } from '../../Types/Post';
+import { PostInfo } from '../PostInfo/PostInfo';
 
 interface PostsListProps {
   posts: Post[];

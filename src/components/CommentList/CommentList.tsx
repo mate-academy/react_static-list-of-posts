@@ -1,6 +1,6 @@
-import React from "react";
-import { CommentInfo } from "../CommentInfo";
-import { Comment } from "../../Types/Comment";
+import React from 'react';
+import { CommentInfo } from '../CommentInfo';
+import { Comment } from '../../Types/Comment';
 
 interface CommentListProps {
   comments: Comment[];

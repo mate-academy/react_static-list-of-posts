@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import "./App.scss";
-import { PostList } from "./components/PostList/PostList";
-import postsFromServer from "./api/posts";
-import { getUser } from "./userHelper";
-import { getComment } from "./postHelper";
-import { Post } from "./Types/Post";
+import './App.scss';
+import { PostList } from './components/PostList/PostList';
+import postsFromServer from './api/posts';
+import { getUser } from './userHelper';
+import { getComment } from './postHelper';
+import { Post } from './Types/Post';
 
 export const posts: Post[] = postsFromServer.map((post) => ({
   ...post,
