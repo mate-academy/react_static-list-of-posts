@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 
 import React from 'react';
-import { mount } from '@cypress/react';
+import { mount } from '@cypress/react18';
 import { UserInfo } from './UserInfo';
 
 describe('UserInfo', () => {

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 
 import React from 'react';
-import { mount } from '@cypress/react';
+import { mount } from '@cypress/react18';
 import { CommentInfo } from './CommentInfo';
 
 describe('CommentInfo component', () => {
@@ -18,8 +18,7 @@ describe('CommentInfo component', () => {
   });
 
   it('should show a name', () => {
-    cy.get('.CommentInfo__name')
-      .should('have.text', 'Comment name');
+    cy.get('.CommentInfo__name').should('have.text', 'Comment name');
   });
 
   it('should show an email', () => {
@@ -29,7 +28,6 @@ describe('CommentInfo component', () => {
   });
 
   it('should show a body', () => {
-    cy.get('.CommentInfo__body')
-      .should('have.text', 'Some comment text');
+    cy.get('.CommentInfo__body').should('have.text', 'Some comment text');
   });
 });

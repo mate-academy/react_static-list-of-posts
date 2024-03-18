@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
-
 describe('Page', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('/');
   });
 
