@@ -10,7 +10,6 @@ import { Post } from './types/Post';
 import { IDGenericFunc } from './types/IDGenericFunc';
 import { PostList } from './components/PostList';
 
-
 function getSmthById<T extends IDGenericFunc>(array: T[], id: number) {
   return array.find(ele => ele.id === id) || null;
 }
@@ -21,12 +20,14 @@ function getPostList() {
     user: getSmthById<User>(usersFromServer, post.userId),
     comments: [],
   }));
+
   commentsFromServer.forEach(comment => {
     const post = getSmthById<Post>(posts, comment.postId);
     const resultComment = {
       ...comment,
       post,
     };
+
     post?.comments.push(resultComment);
   });
 
@@ -38,6 +39,6 @@ const postList: Post[] = getPostList();
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
-    <PostList posts={postList}/>
+    <PostList posts={postList} />
   </section>
 );
