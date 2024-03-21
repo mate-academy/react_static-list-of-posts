@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/types/User.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1711029702065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711029710015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,6 @@\n-export interfa\n+export interface User {\n+  id: ,\n+    name: 'Leanne Graham',\n+    username: 'Bret',\n+    email:\n+}\n"
+                },
+                {
+                    "date": 1711029715961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export interface User {\n-  id: ,\n-    name: 'Leanne Graham',\n+  id: number,\n+    name: string,\n     username: 'Bret',\n     email:\n }\n"
+                },
+                {
+                    "date": 1711029723513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+export interface User {\n+  id: number,\n+    name: string,\n+    username: string,\n+    email: string\n+}\n"
+                },
+                {
+                    "date": 1711029728574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,6 @@\n export interface User {\n-  id: number,\n-    name: string,\n-    username: string,\n-    email: string\n+  id: number;\n+  name: string;\n+  username: string;\n+  email: string;\n }\n-export interface User {\n-  id: number,\n-    name: string,\n-    username: 'Bret',\n-    email:\n-}\n"
+                },
+                {
+                    "date": 1711037773755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export interface User {\n+export y User {\n   id: number;\n   name: string;\n   username: string;\n   email: string;\n"
+                }
+            ],
+            "date": 1711029702065,
+            "name": "Commit-0",
+            "content": "export interfa\n"
+        }
+    ]
+}

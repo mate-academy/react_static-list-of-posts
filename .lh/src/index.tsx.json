@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1711019066189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711039106592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { createRoot } from 'react-dom/client';\n+import { App } from './App';\n+import React from 'react';\n+\n+createRoot(document.getElementById('root') as HTMLElement).render(<App posts={{\n+  userId: 0,\n+  id: 0,\n+  title: '',\n+  body: ''\n+}} />);\n"
+                },
+                {
+                    "date": 1711039115038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,5 @@\n import { createRoot } from 'react-dom/client';\n import { App } from './App';\n import React from 'react';\n \n-createRoot(document.getElementById('root') as HTMLElement).render(<App posts={{\n-  userId: 0,\n-  id: 0,\n-  title: '',\n-  body: ''\n-}} />);\n-import { createRoot } from 'react-dom/client';\n-import { App } from './App';\n-import React from 'react';\n-\n createRoot(document.getElementById('root') as HTMLElement).render(<App />);\n"
+                },
+                {
+                    "date": 1711039998938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import { createRoot } from 'react-dom/client';\n import { App } from './App';\n import React from 'react';\n \n-createRoot(document.getElementById('root') as HTMLElement).render(<App posts={{\n+createRoot(document.getElementById('root') as HTMLElement).render(<App\n+  posts={{\n   userId: 0,\n   id: 0,\n   title: '',\n   body: ''\n"
+                },
+                {
+                    "date": 1711040020098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,9 @@\n import { App } from './App';\n import React from 'react';\n \n createRoot(document.getElementById('root') as HTMLElement).render(\n-  <App\n-  posts={{\n+  <Appposts={{\n   userId: 0,\n   id: 0,\n   title: '',\n   body: ''\n"
+                }
+            ],
+            "date": 1711019066189,
+            "name": "Commit-0",
+            "content": "import { createRoot } from 'react-dom/client';\nimport { App } from './App';\nimport React from 'react';\n\ncreateRoot(document.getElementById('root') as HTMLElement).render(<App />);\n"
+        }
+    ]
+}

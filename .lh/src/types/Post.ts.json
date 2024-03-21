@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/types/Post.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1711029791680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711029797695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface Post {\n   userId: number;\n-    id: 1,\n+  id: number;\n     title:\n       'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',\n     body: 'quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut\n }\n"
+                },
+                {
+                    "date": 1711029809620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,5 @@\n   id: number;\n   title: string;\n \n   body: string;\n+}\n"
+                }
+            ],
+            "date": 1711029791680,
+            "name": "Commit-0",
+            "content": "export interface Post {\n  userId: 1,\n    id: 1,\n    title:\n      'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',\n    body: 'quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut \n}\n"
+        }
+    ]
+}
