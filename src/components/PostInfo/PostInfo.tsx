@@ -20,9 +20,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         </p>
       </div>
 
-      <p className="PostInfo__body">
-        {post.body}
-      </p>
+      <p className="PostInfo__body">{post.body}</p>
 
       <hr />
       {post.comments.length === 0 ? (
