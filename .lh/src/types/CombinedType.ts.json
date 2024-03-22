@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/types/CombinedType.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1711091422583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711091434503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n import { Post } from './Post';\n import { User } from './User';\n \n export type CombinedType = Post & {\n-  user: User ;\n-  comments: Comment[];\n+  user: User | null;\n+  comments: Comment[] | ;\n };\n"
+                },
+                {
+                    "date": 1711091472413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n import { Post } from './Post';\n import { User } from './User';\n \n export type CombinedType = Post & {\n-  user: User | null;\n+  user: User | undefined;\n   comments: Comment[] | [];\n };\n"
+                }
+            ],
+            "date": 1711091422583,
+            "name": "Commit-0",
+            "content": "import { Comment } from './Comment';\nimport { Post } from './Post';\nimport { User } from './User';\n\nexport type CombinedType = Post & {\n  user: User ;\n  comments: Comment[];\n};\n"
+        }
+    ]
+}

@@ -12,7 +12,6 @@ export const CommentList: React.FC<Props> = ({ comments }) => {
       {comments.map(comment => (
         <CommentInfo key={comment.id} comment={comment} />
       ))}
-      ;
     </div>
   );
 };
