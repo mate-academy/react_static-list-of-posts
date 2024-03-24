@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/UserInfo/UserInfo.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1711189211890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711189226766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\n-type UserInfoProps {\n+type  UserInfoProps {\n   user: User;\n }\n \n export const UserInfo: React.FC = () => <>Put the user here</>;\n"
+                },
+                {
+                    "date": 1711189373407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,8 @@\n   user: User;\n };\n \n export const UserInfo: React.FC<UserInfoProps> = ({ user }) => {\n-  return ()\n+  return (\n+    \n+  )\n };\n"
+                }
+            ],
+            "date": 1711189211890,
+            "name": "Commit-0",
+            "content": "import React from 'react';\n\n\nexport const UserInfo: React.FC = () => <>Put the user here</>;\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/App.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1711191090310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711191423662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,5 @@\n .UserInfo {\n   font-weight: bold;\n }\n \n-.CommentList {\n-  display: flex;\n-  flex-direction: column;\n-  gap: 0.7em;\n-  background-color: #eee;\n-  padding: 1em;\n-}\n+\n"
+                },
+                {
+                    "date": 1711307517899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,30 @@\n .App__title {\n   text-align: center;\n }\n \n+.PostInfo {\n+  margin: 10px auto;\n+  width: 90%;\n+  border: 1px solid #000;\n+  border-radius: 8px;\n+  background-color: lightgray;\n+  padding: 1em;\n \n-.UserInfo {\n-  font-weight: bold;\n+  &__title {\n+    margin: 0;\n+  }\n+\n+  &__header {\n+    margin-bottom: 1em;\n+  }\n }\n \n \n+\n+.CommentList {\n+  display: flex;\n+  flex-direction: column;\n+  gap: 0.7em;\n+  background-color: #eee;\n+  padding: 1em;\n+}\n"
+                },
+                {
+                    "date": 1711307548989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+iframe {\n+  display: none;\n+}\n+\n+.App__title {\n+  text-align: center;\n+}\n+\n+\n+\n+\n+\n+.CommentList {\n+  display: flex;\n+  flex-direction: column;\n+  gap: 0.7em;\n+  background-color: #eee;\n+  padding: 1em;\n+}\n"
+                },
+                {
+                    "date": 1711307556082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,38 +16,4 @@\n   gap: 0.7em;\n   background-color: #eee;\n   padding: 1em;\n }\n-iframe {\n-  display: none;\n-}\n-\n-.App__title {\n-  text-align: center;\n-}\n-\n-.PostInfo {\n-  margin: 10px auto;\n-  width: 90%;\n-  border: 1px solid #000;\n-  border-radius: 8px;\n-  background-color: lightgray;\n-  padding: 1em;\n-\n-  &__title {\n-    margin: 0;\n-  }\n-\n-  &__header {\n-    margin-bottom: 1em;\n-  }\n-}\n-\n-\n-\n-.CommentList {\n-  display: flex;\n-  flex-direction: column;\n-  gap: 0.7em;\n-  background-color: #eee;\n-  padding: 1em;\n-}\n"
+                },
+                {
+                    "date": 1711307586875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,4 @@\n \n \n \n \n-.CommentList {\n-  display: flex;\n-  flex-direction: column;\n-  gap: 0.7em;\n-  background-color: #eee;\n-  padding: 1em;\n-}\n"
+                }
+            ],
+            "date": 1711191090310,
+            "name": "Commit-0",
+            "content": "iframe {\n  display: none;\n}\n\n.App__title {\n  text-align: center;\n}\n\n\n.UserInfo {\n  font-weight: bold;\n}\n\n.CommentList {\n  display: flex;\n  flex-direction: column;\n  gap: 0.7em;\n  background-color: #eee;\n  padding: 1em;\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/CommentList/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1711189841009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1711189841009,
+            "name": "Commit-0",
+            "content": "export * from './CommentList';\n\nexport interface Comment {\n  postId: number;\n  id: number;\n  name: string;\n  email: string;\n  body: string;\n}\n"
+        }
+    ]
+}

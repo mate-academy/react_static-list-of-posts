@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/components/CommentInfo/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1711188753618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711188759702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,5 @@\n export * from './CommentInfo';\n \n+e\n+xport\n+interface\n"
+                },
+                {
+                    "date": 1711188788866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n export * from './CommentInfo';\n \n e\n xport\n-interface\n+interface \n"
+                },
+                {
+                    "date": 1711188795240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n export * from './CommentInfo';\n \n e\n xport\n-interface \n+interface Comment {\n+  \n+}\n"
+                },
+                {
+                    "date": 1711188802908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,5 @@\n export * from './CommentInfo';\n \n-e\n-xport\n-interface Comment {\n-  \n+export interface Comment {\n+\n }\n"
+                },
+                {
+                    "date": 1711188814866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,11 @@\n export * from './CommentInfo';\n \n export interface Comment {\n-\n+  {\n+    postId: 1,\n+    id: 1,\n+    name: 'id labore ex et quam laborum',\n+    email: 'Eliseo@gardner.biz',\n+    body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium',\n+  },\n }\n"
+                },
+                {
+                    "date": 1711188822836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export * from './CommentInfo';\n \n export interface Comment {\n   {\n-    postId: 1,\n+    postId: \n     id: 1,\n     name: 'id labore ex et quam laborum',\n     email: 'Eliseo@gardner.biz',\n     body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium',\n"
+                },
+                {
+                    "date": 1711188830374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n export * from './CommentInfo';\n \n export interface Comment {\n   {\n-    postId: \n-    id: 1,\n+  postId: number,\n+    id: 1\n     name: 'id labore ex et quam laborum',\n     email: 'Eliseo@gardner.biz',\n     body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium',\n   },\n"
+                },
+                {
+                    "date": 1711188839248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export interface Comment {\n   {\n   postId: number,\n     id: number,\n-    name: string\n+    name: string,\n     email: 'Eliseo@gardner.biz',\n     body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium',\n   },\n }\n"
+                },
+                {
+                    "date": 1711188844726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n   {\n   postId: number,\n     id: number,\n     name: string,\n-    email: string.\n+    email: string\n     body: 'laudantium enim quasi est quidem magnam voluptate ipsam eos\\ntempora quo necessitatibus\\ndolor quam autem quasi\\nreiciendis et nam sapiente accusantium',\n   },\n }\n"
+                }
+            ],
+            "date": 1711188753618,
+            "name": "Commit-0",
+            "content": "export * from './CommentInfo';\n\n"
+        }
+    ]
+}
