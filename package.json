@@ -11,6 +11,8 @@
     "bulma": "^0.9.4",
     "classnames": "^2.5.1",
     "react": "^18.2.0",
+    "react-awesome-button": "^7.0.5",
+    "react-button": "^1.2.1",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
   },
