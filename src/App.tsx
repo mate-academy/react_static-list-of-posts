@@ -31,13 +31,27 @@ const preparePosts = () => {
   });
 };
 
+const addUsersToPosts = (posts: Post[]): Post[] => {
+  return posts.map(post => {
+    const postUser: User | undefined = usersFromServer.find(
+      user => user.id === post.userId,
+    );
+
+    return {
+      ...post,
+      user: postUser || { id: 0, name: '', email: '', username: '' },
+    };
+  });
+};
+
 export const App: React.FC = () => {
-  const posts: Post[] = preparePosts();
+  const preparedPosts: Post[] = preparePosts();
+  const postsWithUsers: Post[] = addUsersToPosts(preparedPosts);
 
   return (
     <section className="App">
       <h1 className="App__title">Static list of posts</h1>
-      <PostList posts={posts} />
+      <PostList posts={postsWithUsers} />
     </section>
   );
 };
