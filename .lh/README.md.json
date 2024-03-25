@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1711188626014,
@@ -12,6 +12,18 @@
                 {
                     "date": 1711189090540,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n This task is similar to [Static List of TODOs](https://github.com/mate-academy/react_static-list-of-todos#react-static-list-of-todos), but you should do everything yourself:\n \n <!-- - don't change classes in the given markup (tests use them); -->\n-- create all required types in `./src/types/`;\n+<!-- - create all required types in `./src/types/`; -->\n - prepare `posts` by adding a `user` and `comments` to each `post` (each comment has a `postId`);\n - split the `App` into components based on given CSS blocks;\n   - styles from `App.scss` should be moved to separate files, as well. E.g.: `PostList.scss`;\n - `List` components should take an array of corresponding objects and render one `Info` component per object;\n"
+                },
+                {
+                    "date": 1711370233731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n > [React + Typescript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript)\n \n This task is similar to [Static List of TODOs](https://github.com/mate-academy/react_static-list-of-todos#react-static-list-of-todos), but you should do everything yourself:\n \n-<!-- - don't change classes in the given markup (tests use them); -->\n-<!-- - create all required types in `./src/types/`; -->\n+- don't change classes in the given markup (tests use them); -->\n+<!-- - create all required types in `./src/types/`;\n - prepare `posts` by adding a `user` and `comments` to each `post` (each comment has a `postId`);\n - split the `App` into components based on given CSS blocks;\n   - styles from `App.scss` should be moved to separate files, as well. E.g.: `PostList.scss`;\n - `List` components should take an array of corresponding objects and render one `Info` component per object;\n"
+                },
+                {
+                    "date": 1711370239982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n This task is similar to [Static List of TODOs](https://github.com/mate-academy/react_static-list-of-todos#react-static-list-of-todos), but you should do everything yourself:\n \n - don't change classes in the given markup (tests use them); -->\n-<!-- - create all required types in `./src/types/`;\n+- create all required types in `./src/types/`;\n - prepare `posts` by adding a `user` and `comments` to each `post` (each comment has a `postId`);\n - split the `App` into components based on given CSS blocks;\n   - styles from `App.scss` should be moved to separate files, as well. E.g.: `PostList.scss`;\n - `List` components should take an array of corresponding objects and render one `Info` component per object;\n"
+                },
+                {
+                    "date": 1711384158219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n - Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.\n - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).\n - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).\n - Open one more terminal and run tests with `npm test` to ensure your solution is correct.\n-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_static-list-of-posts/) and add it to the PR description.\n+- Replace `<your_account>` with your Github username in the [DEMO LINK](https://marinatea.github.io/react_static-list-of-posts/) and add it to the PR description.\n"
                 }
             ],
             "date": 1711188626014,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1711189778418,
@@ -12,6 +12,46 @@
                 {
                     "date": 1711189794097,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n export * from './PostList';\n \n+\n"
+                },
+                {
+                    "date": 1711370528524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,2 @@\n export * from './PostList';\n-\n-\n+import \n"
+                },
+                {
+                    "date": 1711370536340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n export * from './PostList';\n-import \n+import\n+{ Po}\n"
+                },
+                {
+                    "date": 1711370543280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,2 @@\n+export * from './PostList';\n+import { Post } \n"
+                },
+                {
+                    "date": 1711370554015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,2 @@\n export * from './PostList';\n-import { Post } \n-export * from './PostList';\n-import\n-{ Po}\n+import { Post } from '../PostInfo'\n"
+                },
+                {
+                    "date": 1711370559326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+export * from './PostList';\n+import { Post } from '../PostInfo/index';\n+\n"
+                },
+                {
+                    "date": 1711370566247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+export * from './PostList';\n+import { Post } from '../PostInfo/index';\n+\n+export type Post\n"
+                },
+                {
+                    "date": 1711370571873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+export * from './PostList';\n+import { Post } from '../PostInfo/index';\n+\n+export type PostList = Post[];\n"
+                },
+                {
+                    "date": 1711371716485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,4 @@\n-export * from './PostList';\n+\n import { Post } from '../PostInfo/index';\n \n export type PostList = Post[];\n-export * from './PostList';\n-import { Post } from '../PostInfo/index';\n-\n-export type Post\n-export * from './PostList';\n-import { Post } from '../PostInfo/index';\n-\n-export * from './PostList';\n-import { Post } from '../PostInfo'\n"
+                },
+                {
+                    "date": 1711371738715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+\n+import { Post } from '../PostInfo/index';\n+\n+export type PostList = Post[];\n"
+                },
+                {
+                    "date": 1711378060746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,1 @@\n-\n-import { Post } from '../PostInfo/index';\n-\n-export type PostList = Post[];\n-\n-import { Post } from '../PostInfo/index';\n-\n-export type PostList = Post[];\n+export * from './PostList';\n"
                 }
             ],
             "date": 1711189778418,
