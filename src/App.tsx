@@ -10,7 +10,7 @@ import { User } from './components/User';
 import { Comment } from './components/Comment';
 import { Post } from './components/Post';
 
-function getUser(userId: number): User | null {
+function getUserById(userId: number): User | null {
   const foundUser = usersFromServer.find(user => user.id === userId);
 
   return foundUser || null;
