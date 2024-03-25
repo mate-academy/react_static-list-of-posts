@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/CommentInfo/CommentInfo.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1711030249820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711031755812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import React from 'react';\n+\n+export const CommentInfo: React.FC = () => {\n+  return (\n+    <div className=\"CommentInfo\">\n+    <div className=\"CommentInfo__title\">\n+      <strong className=\"CommentInfo__name\">{comment}</strong>\n+\n+      {' by '}\n+\n+      <a\n+        className=\"CommentInfo__email\"\n+        href=\"mailto:Telly_Lynch@karl.co.uk\"\n+      >\n+        Telly_Lynch@karl.co.uk\n+      </a>\n+    </div>\n+\n+    <div className=\"CommentInfo__body\">\n+      dolorum voluptas laboriosam quisquam ab totam beatae et aut\n+      aliquid optio assumenda voluptas velit itaque quidem voluptatem\n+      tempore cupiditate in itaque sit molestiae minus dolores magni\n+    </div>\n+  </div>\n+  )\n+}\n"
+                },
+                {
+                    "date": 1711031773296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n import React from 'react';\n+import { Comment } from '../../types/Comment';\n \n+type Props = {\n+  comment: Comment;\n+}\n export const CommentInfo: React.FC = () => {\n   return (\n     <div className=\"CommentInfo\">\n     <div className=\"CommentInfo__title\">\n-      <strong className=\"CommentInfo__name\">{comment}</strong>\n+      <strong className=\"CommentInfo__name\">{comment.name}</strong>\n \n       {' by '}\n \n       <a\n@@ -23,8 +27,4 @@\n     </div>\n   </div>\n   )\n }\n-import React from 'react';\n-\n-export const CommentInfo: React.FC = () => {\n-}\n"
+                },
+                {
+                    "date": 1711031781007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n type Props = {\n   comment: Comment;\n }\n-export const CommentInfo: React.FC<Props> = () => {\n+export const CommentInfo: React.FC<Props> = ({comment}) => {\n   return (\n     <div className=\"CommentInfo\">\n     <div className=\"CommentInfo__title\">\n       <strong className=\"CommentInfo__name\">{comment.name}</strong>\n"
+                },
+                {
+                    "date": 1711031827203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,24 +8,24 @@\n export const CommentInfo: React.FC<Props> = ({comment}) => {\n   return (\n     <div className=\"CommentInfo\">\n     <div className=\"CommentInfo__title\">\n-      <strong className=\"CommentInfo__name\">{comment.name}</strong>\n+      <strong className=\"CommentInfo__name\">\n+        {comment.name}\n+      </strong>\n \n       {' by '}\n \n       <a\n         className=\"CommentInfo__email\"\n-        href=\"mailto:Telly_Lynch@karl.co.uk\"\n+        href={`mailto:${comment.email}`}\n       >\n-        Telly_Lynch@karl.co.uk\n+        {comment.email}\n       </a>\n     </div>\n \n     <div className=\"CommentInfo__body\">\n-      dolorum voluptas laboriosam quisquam ab totam beatae et aut\n-      aliquid optio assumenda voluptas velit itaque quidem voluptatem\n-      tempore cupiditate in itaque sit molestiae minus dolores magni\n+      {comment.body}\n     </div>\n   </div>\n   )\n }\n"
+                }
+            ],
+            "date": 1711030249820,
+            "name": "Commit-0",
+            "content": "import React from 'react';\n\nexport const CommentInfo: React.FC = () => {\n}\n"
+        }
+    ]
+}

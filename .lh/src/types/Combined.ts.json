@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/types/Combined.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1711037679207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711037688381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-import \n+import { Comment } from \"./Comment\";\n+import {}\n"
+                },
+                {
+                    "date": 1711037696045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import { Comment } from \"./Comment\";\n+import { Post } from \"./Post\";\n+import {}\n"
+                },
+                {
+                    "date": 1711037705367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { Comment } from \"./Comment\";\n import { Post } from \"./Post\";\n-import {}\n-import { Comment } from \"./Comment\";\n-import {}\n+import { User } from \"./User\";\n+\n+\n"
+                },
+                {
+                    "date": 1711037710408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { Comment } from \"./Comment\";\n import { Post } from \"./Post\";\n import { User } from \"./User\";\n \n-\n+export im\n"
+                },
+                {
+                    "date": 1711037715984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { Comment } from \"./Comment\";\n import { Post } from \"./Post\";\n import { User } from \"./User\";\n \n-export im\n+export interface \n"
+                },
+                {
+                    "date": 1711037723484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import { Comment } from \"./Comment\";\n import { Post } from \"./Post\";\n import { User } from \"./User\";\n \n-export interface CombinedType\n+export interface CombinedType = \n"
+                }
+            ],
+            "date": 1711037679207,
+            "name": "Commit-0",
+            "content": "import \n"
+        }
+    ]
+}

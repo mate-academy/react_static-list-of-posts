@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/CommentList/CommentList.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1711030176338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711030186481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\n \n export const CommentList: React.FC = () => {\n   return (\n-    <div className=\"CommentList\">\n+  <div className=\"CommentList\">\n     <div className=\"CommentInfo\">\n       <div className=\"CommentInfo__title\">\n         <strong className=\"CommentInfo__name\">pariatur omnis in</strong>\n \n"
+                },
+                {
+                    "date": 1711030229493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,29 +2,10 @@\n \n export const CommentList: React.FC = () => {\n   return (\n     <div className=\"CommentList\">\n-      <div className=\"CommentInfo\">\n-        <div className=\"CommentInfo__title\">\n-          <strong className=\"CommentInfo__name\">pariatur omnis in</strong>\n \n-          {' by '}\n \n-          <a\n-            className=\"CommentInfo__email\"\n-            href=\"mailto:Telly_Lynch@karl.co.uk\"\n-          >\n-            Telly_Lynch@karl.co.uk\n-          </a>\n-        </div>\n-\n-        <div className=\"CommentInfo__body\">\n-          dolorum voluptas laboriosam quisquam ab totam beatae et aut\n-          aliquid optio assumenda voluptas velit itaque quidem voluptatem\n-          tempore cupiditate in itaque sit molestiae minus dolores magni\n-        </div>\n-      </div>\n-\n       <div className=\"CommentInfo\">\n         <div className=\"CommentInfo__title\">\n           <strong className=\"CommentInfo__name\">\n             odio adipisci rerum aut animi\n"
+                }
+            ],
+            "date": 1711030176338,
+            "name": "Commit-0",
+            "content": "import React from 'react';\n\nexport const CommentList: React.FC = () => {\n}\n"
+        }
+    ]
+}

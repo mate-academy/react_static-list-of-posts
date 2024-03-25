@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/components/PostInfo/PostInfo.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1711029969949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711029974974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,29 @@\n import React from 'react';\n \n export const PostInfo: React.FC = () => {\n-return};\n+  return (\n+    <div className=\"PostInfo\">\n+    <div className=\"PostInfo__header\">\n+      <h3 className=\"PostInfo__title\">qui est esse</h3>\n+\n+      <p>\n+        {' Posted by  '}\n+\n+        <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n+          Leanne Graham\n+        </a>\n+      </p>\n+    </div>\n+\n+    <p className=\"PostInfo__body\">\n+      est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea\n+      dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut\n+      reiciendis qui aperiam non debitis possimus qui neque nisi nulla\n+    </p>\n+\n+    <hr />\n+\n+    <b data-cy=\"NoCommentsMessage\">No comments yet</b>\n+  </div>\n+  )\n+};\n"
+                },
+                {
+                    "date": 1711029992852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,11 +8,9 @@\n \n       <p>\n         {' Posted by  '}\n \n-        <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-          Leanne Graham\n-        </a>\n+        \n       </p>\n     </div>\n \n     <p className=\"PostInfo__body\">\n"
+                },
+                {
+                    "date": 1711029998749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\n-\n+import \n export const PostInfo: React.FC = () => {\n   return (\n     <div className=\"PostInfo\">\n     <div className=\"PostInfo__header\">\n@@ -8,9 +8,9 @@\n \n       <p>\n         {' Posted by  '}\n \n-        \n+        <UserInfo />\n       </p>\n     </div>\n \n     <p className=\"PostInfo__body\">\n"
+                },
+                {
+                    "date": 1711030004408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import React from 'react';\n-import \n+import {\n+  UserInfo\n+} from '../UserInfo';\n export const PostInfo: React.FC = () => {\n   return (\n     <div className=\"PostInfo\">\n     <div className=\"PostInfo__header\">\n"
+                },
+                {
+                    "date": 1711030098150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   UserInfo\n } from '../UserInfo';\n export const PostInfo: React.FC = () => {\n   return (\n-    <div className=\"PostInfo\">\n+  <div className=\"PostInfo\">\n     <div className=\"PostInfo__header\">\n       <h3 className=\"PostInfo__title\">qui est esse</h3>\n \n       <p>\n"
+                },
+                {
+                    "date": 1711030924047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import React from 'react';\n import {\n-  UserInfo\n-} from '../UserInfo';\n+  UserInfo} from '../UserInfo';\n export const PostInfo: React.FC = () => {\n   return (\n   <div className=\"PostInfo\">\n     <div className=\"PostInfo__header\">\n"
+                },
+                {
+                    "date": 1711030964386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\n-import {\n-  UserInfo} from '../UserInfo';\n-export const PostInfo: React.FC = () => {\n+import { UserInfo } from '../UserInfo';\n+\n+export const PostInfo: React.FC< = () => {\n   return (\n   <div className=\"PostInfo\">\n     <div className=\"PostInfo__header\">\n       <h3 className=\"PostInfo__title\">qui est esse</h3>\n"
+                },
+                {
+                    "date": 1711030971031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n import React from 'react';\n import { UserInfo } from '../UserInfo';\n \n-export const PostInfo: React.FC< = () => {\n+type Props = {\n+  postsFromServer: Post;\n+}\n+\n+export const PostInfo: React.FC<Props> = () => {\n   return (\n   <div className=\"PostInfo\">\n     <div className=\"PostInfo__header\">\n       <h3 className=\"PostInfo__title\">qui est esse</h3>\n"
+                },
+                {
+                    "date": 1711030976875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n type Props = {\n   postsFromServer: Post;\n }\n \n-export const PostInfo: React.FC<Props> = ({}) => {\n+export const PostInfo: React.FC<Props> = ({ pos}) => {\n   return (\n   <div className=\"PostInfo\">\n     <div className=\"PostInfo__header\">\n       <h3 className=\"PostInfo__title\">qui est esse</h3>\n"
+                },
+                {
+                    "date": 1711030983394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import React from 'react';\n+import { UserInfo } from '../UserInfo';\n+\n+type Props = {\n+  postsFromServer: Post;\n+}\n+\n+export const PostInfo: React.FC<Props> = ({ postsFromServer }) => {\n+  return (\n+  <div className=\"PostInfo\">\n+    <div className=\"PostInfo__header\">\n+      <h3 className=\"PostInfo__title\">posts</h3>\n+\n+      <p>\n+        {' Posted by  '}\n+\n+        <UserInfo />\n+      </p>\n+    </div>\n+\n+    <p className=\"PostInfo__body\">\n+      est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea\n+      dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut\n+      reiciendis qui aperiam non debitis possimus qui neque nisi nulla\n+    </p>\n+\n+    <hr />\n+\n+    <b data-cy=\"NoCommentsMessage\">No comments yet</b>\n+  </div>\n+  )\n+};\n"
+                }
+            ],
+            "date": 1711029969949,
+            "name": "Commit-0",
+            "content": "import React from 'react';\n\nexport const PostInfo: React.FC = () => {\nreturn};\n"
+        }
+    ]
+}

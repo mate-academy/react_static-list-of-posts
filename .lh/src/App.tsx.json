@@ -1,0 +1,82 @@
+{
+    "sourceFile": "src/App.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1711029879604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711029893003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,98 +9,7 @@\n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n     <PostList />\n-    <div className=\"PostList\">\n-      <div className=\"PostInfo\">\n-        <div className=\"PostInfo__header\">\n-          <h3 className=\"PostInfo__title\">qui est esse</h3>\n-\n-          <p>\n-            {' Posted by  '}\n-\n-            <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n-              Leanne Graham\n-            </a>\n-          </p>\n-        </div>\n-\n-        <p className=\"PostInfo__body\">\n-          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea\n-          dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut\n-          reiciendis qui aperiam non debitis possimus qui neque nisi nulla\n-        </p>\n-\n-        <hr />\n-\n-        <b data-cy=\"NoCommentsMessage\">No comments yet</b>\n-      </div>\n-\n-      <div className=\"PostInfo\">\n-        <div className=\"PostInfo__header\">\n-          <h3 className=\"PostInfo__title\">doloremque illum aliquid sunt</h3>\n-\n-          <p>\n-            {' Posted by  '}\n-\n-            <a className=\"UserInfo\" href=\"mailto:Julianne.OConner@kory.org\">\n-              Patricia Lebsack\n-            </a>\n-          </p>\n-        </div>\n-\n-        <p className=\"PostInfo__body\">\n-          deserunt eos nobis asperiores et hic est debitis repellat molestiae\n-          optio nihil ratione ut eos beatae quibusdam distinctio maiores earum\n-          voluptates et aut adipisci ea maiores voluptas maxime\n-        </p>\n-\n-        <div className=\"CommentList\">\n-          <div className=\"CommentInfo\">\n-            <div className=\"CommentInfo__title\">\n-              <strong className=\"CommentInfo__name\">pariatur omnis in</strong>\n-\n-              {' by '}\n-\n-              <a\n-                className=\"CommentInfo__email\"\n-                href=\"mailto:Telly_Lynch@karl.co.uk\"\n-              >\n-                Telly_Lynch@karl.co.uk\n-              </a>\n-            </div>\n-\n-            <div className=\"CommentInfo__body\">\n-              dolorum voluptas laboriosam quisquam ab totam beatae et aut\n-              aliquid optio assumenda voluptas velit itaque quidem voluptatem\n-              tempore cupiditate in itaque sit molestiae minus dolores magni\n-            </div>\n-          </div>\n-\n-          <div className=\"CommentInfo\">\n-            <div className=\"CommentInfo__title\">\n-              <strong className=\"CommentInfo__name\">\n-                odio adipisci rerum aut animi\n-              </strong>\n-\n-              {' by '}\n-\n-              <a\n-                className=\"CommentInfo__email\"\n-                href=\"mailto:Nikita@garfield.biz\"\n-              >\n-                Nikita@garfield.biz\n-              </a>\n-            </div>\n-\n-            <div className=\"CommentInfo__body\">\n-              quia molestiae reprehenderit quasi aspernatur aut expedita\n-              occaecati aliquam eveniet laudantium omnis quibusdam delectus\n-              saepe quia accusamus maiores nam est cum et ducimus et vero\n-              voluptates excepturi deleniti ratione\n-            </div>\n-          </div>\n-        </div>\n-      </div>\n-    </div>\n+    \n   </section>\n );\n"
+                },
+                {
+                    "date": 1711029918400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\n-\n+import\n import './App.scss';\n \n // import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n@@ -9,7 +9,6 @@\n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n     <PostList />\n-    \n   </section>\n );\n"
+                },
+                {
+                    "date": 1711030429708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\n-import\n+import { PostList } from './components/PostList';\n import './App.scss';\n \n-// import postsFromServer from './api/posts';\n+import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n export const App: React.FC = () => (\n"
+                },
+                {
+                    "date": 1711030436252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n \n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n-    <PostList />\n+    <PostList postsFromServeer/>\n   </section>\n );\n"
+                },
+                {
+                    "date": 1711030442357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n \n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n-    <PostList postsFromServeer/>\n+    <PostList postsFromServer={postsFromServer/>\n   </section>\n );\n"
+                },
+                {
+                    "date": 1711030456592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\n import { PostList } from './components/PostList';\n import './App.scss';\n-\n+import \n import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n"
+                },
+                {
+                    "date": 1711030468150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import React from 'react';\n import { PostList } from './components/PostList';\n import './App.scss';\n-import \n+import { Post }\n import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n-    <PostList postsFromServer={postsFromServer/>\n+    <PostList postsFromServer={postsFromServer} />\n   </section>\n );\n"
+                },
+                {
+                    "date": 1711030474467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react';\n import { PostList } from './components/PostList';\n import './App.scss';\n-import { Post }\n+import { Post\n+ } from './types/Post';\n import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n"
+                },
+                {
+                    "date": 1711030481849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react';\n+import './App.scss';\n import { PostList } from './components/PostList';\n-import './App.scss';\n-import { Post\n- } from './types/Post';\n+import { Post } from './types/Post';\n+\n+\n import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n"
+                },
+                {
+                    "date": 1711030489305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,16 @@\n import React from 'react';\n import './App.scss';\n+\n import { PostList } from './components/PostList';\n+\n import { Post } from './types/Post';\n \n-\n import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n+\n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n     <PostList postsFromServer={postsFromServer} />\n"
+                },
+                {
+                    "date": 1711030494677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n+type \n \n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n"
+                },
+                {
+                    "date": 1711030501289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n import postsFromServer from './api/posts';\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n-type \n+type Props = {\n+  post: \n+}\n \n export const App: React.FC = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n"
+                },
+                {
+                    "date": 1711030507499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,12 @@\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n type Props = {\n-  post: \n+  post: Post;\n }\n \n-export const App: React.FC = () => (\n+export const App: React.FC<Props> = () => (\n   <section className=\"App\">\n     <h1 className=\"App__title\">Static list of posts</h1>\n     <PostList postsFromServer={postsFromServer} />\n   </section>\n"
+                },
+                {
+                    "date": 1711030674062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n type Props = {\n-  post: Post;\n+  postsFromServer: Post;\n }\n \n export const App: React.FC<Props> = () => (\n   <section className=\"App\">\n"
+                },
+                {
+                    "date": 1711030701861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n // import commentsFromServer from './api/comments';\n // import usersFromServer from './api/users';\n \n type Props = {\n-  postsFromServer: Post[];\n+  postsFromServer: Post;\n }\n \n export const App: React.FC<Props> = () => (\n   <section className=\"App\">\n"
+                },
+                {
+                    "date": 1711030811178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import React from 'react';\n+import './App.scss';\n+\n+import { PostList } from './components/PostList';\n+\n+import { Post } from './types/Post';\n+\n+import postsFromServer from './api/posts';\n+// import commentsFromServer from './api/comments';\n+// import usersFromServer from './api/users';\n+\n+type Props = {\n+  postsFromServer: Post;\n+}\n+\n+export const App: React.FC<Props> = () => (\n+  <section className=\"App\">\n+    <h1 className=\"App__title\">Static list of posts</h1>\n+    <PostList postsFromServer={postsFromServer as } />\n+  </section>\n+);\n"
+                }
+            ],
+            "date": 1711029879604,
+            "name": "Commit-0",
+            "content": "import React from 'react';\n\nimport './App.scss';\n\n// import postsFromServer from './api/posts';\n// import commentsFromServer from './api/comments';\n// import usersFromServer from './api/users';\n\nexport const App: React.FC = () => (\n  <section className=\"App\">\n    <h1 className=\"App__title\">Static list of posts</h1>\n    <PostList />\n    <div className=\"PostList\">\n      <div className=\"PostInfo\">\n        <div className=\"PostInfo__header\">\n          <h3 className=\"PostInfo__title\">qui est esse</h3>\n\n          <p>\n            {' Posted by  '}\n\n            <a className=\"UserInfo\" href=\"mailto:Sincere@april.biz\">\n              Leanne Graham\n            </a>\n          </p>\n        </div>\n\n        <p className=\"PostInfo__body\">\n          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea\n          dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut\n          reiciendis qui aperiam non debitis possimus qui neque nisi nulla\n        </p>\n\n        <hr />\n\n        <b data-cy=\"NoCommentsMessage\">No comments yet</b>\n      </div>\n\n      <div className=\"PostInfo\">\n        <div className=\"PostInfo__header\">\n          <h3 className=\"PostInfo__title\">doloremque illum aliquid sunt</h3>\n\n          <p>\n            {' Posted by  '}\n\n            <a className=\"UserInfo\" href=\"mailto:Julianne.OConner@kory.org\">\n              Patricia Lebsack\n            </a>\n          </p>\n        </div>\n\n        <p className=\"PostInfo__body\">\n          deserunt eos nobis asperiores et hic est debitis repellat molestiae\n          optio nihil ratione ut eos beatae quibusdam distinctio maiores earum\n          voluptates et aut adipisci ea maiores voluptas maxime\n        </p>\n\n        <div className=\"CommentList\">\n          <div className=\"CommentInfo\">\n            <div className=\"CommentInfo__title\">\n              <strong className=\"CommentInfo__name\">pariatur omnis in</strong>\n\n              {' by '}\n\n              <a\n                className=\"CommentInfo__email\"\n                href=\"mailto:Telly_Lynch@karl.co.uk\"\n              >\n                Telly_Lynch@karl.co.uk\n              </a>\n            </div>\n\n            <div className=\"CommentInfo__body\">\n              dolorum voluptas laboriosam quisquam ab totam beatae et aut\n              aliquid optio assumenda voluptas velit itaque quidem voluptatem\n              tempore cupiditate in itaque sit molestiae minus dolores magni\n            </div>\n          </div>\n\n          <div className=\"CommentInfo\">\n            <div className=\"CommentInfo__title\">\n              <strong className=\"CommentInfo__name\">\n                odio adipisci rerum aut animi\n              </strong>\n\n              {' by '}\n\n              <a\n                className=\"CommentInfo__email\"\n                href=\"mailto:Nikita@garfield.biz\"\n              >\n                Nikita@garfield.biz\n              </a>\n            </div>\n\n            <div className=\"CommentInfo__body\">\n              quia molestiae reprehenderit quasi aspernatur aut expedita\n              occaecati aliquam eveniet laudantium omnis quibusdam delectus\n              saepe quia accusamus maiores nam est cum et ducimus et vero\n              voluptates excepturi deleniti ratione\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </section>\n);\n"
+        }
+    ]
+}

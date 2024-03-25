@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/types/Comment.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1711029745866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711029753741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+export interface Commment {\n+  postId: 1,\n+    id: 1,\n+    name: 'id labore ex et quam laborum',\n+    email: 'Eliseo@gardner.biz',\n+    body:\n+}\n"
+                },
+                {
+                    "date": 1711029760480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n export interface Commment {\n-  postId: 1,\n-    id: 1,\n+  postId: number;\n+    id: numberl\n     name: 'id labore ex et quam laborum',\n     email: 'Eliseo@gardner.biz',\n     body:\n }\n-export \n"
+                },
+                {
+                    "date": 1711029765499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface Commment {\n   postId: number;\n-    id: numberl\n-    name: 'id labore ex et quam laborum',\n+  id: number;\n+    name: '\n     email: 'Eliseo@gardner.biz',\n     body:\n }\n"
+                },
+                {
+                    "date": 1711029772919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+export interface Commment {\n+  postId: number;\n+  id: number;\n+  name: string;\n+  email: string;\n+    body:\n+}\n"
+                },
+                {
+                    "date": 1711031424896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export interface Commment {\n+export interface Comment {\n   postId: number;\n   id: number;\n   name: string;\n   email: string;\n"
+                },
+                {
+                    "date": 1711037753612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,7 @@\n-export interface Comment {\n+export yp Comment {\n   postId: number;\n   id: number;\n   name: string;\n   email: string;\n-    body:\n+  body: string;\n }\n-export interface Commment {\n-  postId: number;\n-  id: number;\n-    name: '\n-    email: 'Eliseo@gardner.biz',\n-    body:\n-}\n"
+                },
+                {
+                    "date": 1711037761475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export yp Comment {\n+export type Comment = {\n   postId: number;\n   id: number;\n   name: string;\n   email: string;\n"
+                }
+            ],
+            "date": 1711029745866,
+            "name": "Commit-0",
+            "content": "export \n"
+        }
+    ]
+}
