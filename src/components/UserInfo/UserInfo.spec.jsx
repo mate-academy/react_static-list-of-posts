@@ -14,7 +14,6 @@ describe('UserInfo', () => {
     };
 
     mount(<UserInfo user={user1} />);
-
     cy.get('.UserInfo').should('have.text', 'Leanne Graham');
   });
 
@@ -27,7 +26,6 @@ describe('UserInfo', () => {
     };
 
     mount(<UserInfo user={user1} />);
-
     cy.get('.UserInfo').should('have.attr', 'href', 'mailto:Sincere@april.biz');
   });
 
@@ -40,7 +38,6 @@ describe('UserInfo', () => {
     };
 
     mount(<UserInfo user={user2} />);
-
     cy.get('.UserInfo')
       .should('have.text', 'Ervin Howell')
       .should('have.attr', 'href', 'mailto:Shanna@melissa.tv');
