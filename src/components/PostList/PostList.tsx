@@ -1,7 +1,6 @@
 import React from 'react';
 import { PostInfo } from '../PostInfo';
 import { Post } from '../../types/Post';
-import './PostList.scss';
 
 export const PostList: React.FC<{ posts: Post[] }> = ({ posts }) => {
   return (
