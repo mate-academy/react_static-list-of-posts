@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/UserInfo/UserInfo.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1711191098358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711191130757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,2 @@\n // add styles here\n-.PostInfo {\n-  margin: 10px auto;\n-  width: 90%;\n-  border: 1px solid #000;\n-  border-radius: 8px;\n-  background-color: lightgray;\n-  padding: 1em;\n \n-  &__title {\n-    margin: 0;\n-  }\n-\n-  &__header {\n-    margin-bottom: 1em;\n-  }\n-}\n"
+                },
+                {
+                    "date": 1711307521715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n // add styles here\n-\n+.UserInfo {\n+  font-weight: bold;\n+}\n"
+                }
+            ],
+            "date": 1711191098358,
+            "name": "Commit-0",
+            "content": "// add styles here\n.PostInfo {\n  margin: 10px auto;\n  width: 90%;\n  border: 1px solid #000;\n  border-radius: 8px;\n  background-color: lightgray;\n  padding: 1em;\n\n  &__title {\n    margin: 0;\n  }\n\n  &__header {\n    margin-bottom: 1em;\n  }\n}\n"
+        }
+    ]
+}

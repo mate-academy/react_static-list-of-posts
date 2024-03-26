@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/UserInfo/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1711189029752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1711189035950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export * from './UserInfo';\n \n-export default [\n+export interface [\n   {\n     id: 1,\n     name: 'Leanne Graham',\n     username: 'Bret',\n"
+                },
+                {
+                    "date": 1711189042045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+export * from './UserInfo';\n+\n+export interface User \n+  {\n+    id: 1,\n+    name: 'Leanne Graham',\n+    username: 'Bret',\n+    email: 'Sincere@april.biz',\n+  },\n"
+                },
+                {
+                    "date": 1711189049524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,8 @@\n export * from './UserInfo';\n \n-export interface User \n-  {\n+export interface User {\n     id: 1,\n     name: 'Leanne Graham',\n     username: 'Bret',\n     email: 'Sincere@april.biz',\n-  },\n-export * from './UserInfo';\n-\n-export interface [\n-  {\n-    id: 1,\n-    name: 'Leanne Graham',\n-    username: 'Bret',\n-    email: 'Sincere@april.biz',\n-  },\n+  }\n"
+                },
+                {
+                    "date": 1711189060004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export * from './UserInfo';\n \n export interface User {\n-    id: 1,\n-    name: 'Leanne Graham',\n+    id: number\n+    name: string\n     username: 'Bret',\n     email: 'Sincere@april.biz',\n   }\n"
+                },
+                {
+                    "date": 1711189071331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \n export interface User {\n     id: number\n     name: string\n-    username: 'Bret',\n-    email: 'Sincere@april.biz',\n+    username: string\n+    email: string\n   }\n"
+                }
+            ],
+            "date": 1711189029752,
+            "name": "Commit-0",
+            "content": "export * from './UserInfo';\n\nexport default [\n  {\n    id: 1,\n    name: 'Leanne Graham',\n    username: 'Bret',\n    email: 'Sincere@april.biz',\n  },\n"
+        }
+    ]
+}
