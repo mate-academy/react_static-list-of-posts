@@ -1,21 +1,16 @@
 import React from 'react';
 import { Post } from '../../types/Post';
-import { CommentInfo } from '../CommentInfo/CommentInfo';
+import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
-export const CommentList: React.FC<{ comments: Post['comment'] }> = ({
+export const CommentList: React.FC<{ comments: Post['comments'] }> = ({
   comments,
 }) => {
-  return comments ? (
+  return (
     <div className="CommentList">
-      {comments.map(comment => (
+      {comments?.map(comment => (
         <CommentInfo key={comment.id} comment={comment} />
       ))}
     </div>
-  ) : (
-    <>
-      <hr />
-      <b data-cy="NoCommentsMessage">No comments yet</b>
-    </>
   );
 };
