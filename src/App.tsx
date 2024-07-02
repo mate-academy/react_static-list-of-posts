@@ -18,6 +18,7 @@ function getComments(postId: number): Comment[] | null {
   const foundComments = commentsFromServer.filter(
     comment => comment.postId === postId,
   );
+
   return foundComments.length > 0 ? foundComments : null;
 }
 
