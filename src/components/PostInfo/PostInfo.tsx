@@ -2,6 +2,7 @@ import React from 'react';
 import { Post } from '../../types/Post';
 import { UserInfo } from '../UserInfo';
 import { CommentList } from '../CommentList';
+import './PostInfo.scss';
 
 type Props = {
   post: Post;
