@@ -17,13 +17,12 @@ const noComments: JSX.Element = (
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const { user, title, body, comments } = post;
-  const postetByText = `Posted by ${(<UserInfo user={user} />)}`;
 
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{title}</h3>
-        <p>{postetByText}</p>
+        <p>Posted by {user && <UserInfo user={user} />}</p>
       </div>
       <p className="PostInfo__body">{body}</p>
       {comments?.length === 0 ? (

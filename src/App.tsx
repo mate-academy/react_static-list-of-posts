@@ -11,15 +11,13 @@ import { Comment } from './types/comments';
 import { User } from './types/User';
 
 const getPostComments = (postId: number): Comment[] => {
-  const foundComments = commentsFromServer.filter(com => com.postId === postId);
-
-  return foundComments;
+  return commentsFromServer.filter(com => com.postId === postId);
 };
 
-const getPostUser = (userId: number): User => {
-  const foundUser = usersFromServer.find(user => user.id === userId)!;
+const getPostUser = (userId: number): User | null => {
+  const foundUser = usersFromServer.find(user => user.id === userId);
 
-  return foundUser;
+  return foundUser || null;
 };
 
 const postsList: Post[] = postsFromServer.map(post => ({

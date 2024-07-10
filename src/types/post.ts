@@ -7,5 +7,5 @@ export type Post = {
   title: string;
   body: string;
   comments: Comment[];
-  user: User;
+  user: User | null;
 };
