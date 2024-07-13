@@ -15,6 +15,7 @@ const noComments: JSX.Element = (
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
   const { user, title, body, comments } = post;
+
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
