@@ -3,6 +3,7 @@
 import React from 'react';
 import { mount } from '@cypress/react18';
 import { CommentInfo } from './CommentInfo';
+import './CommentInfo.scss';
 
 describe('CommentInfo component', () => {
   beforeEach(() => {
