@@ -1,5 +1,6 @@
 import React from 'react';
 import { Comment } from '../../types/Comment';
+import './CommentInfo.scss';
 
 export const CommentInfo: React.FC<{ commentInfoComment: Comment }> = ({
   commentInfoComment: { name, email, body },

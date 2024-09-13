@@ -2,6 +2,7 @@ import React from 'react';
 import { Post } from '../../types/Post';
 import './PostInfo.scss';
 import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
 export const PostInfo: React.FC<{ postInfoPost: Post }> = ({
   postInfoPost: { title, user, body, comments },
@@ -14,9 +15,7 @@ export const PostInfo: React.FC<{ postInfoPost: Post }> = ({
         <p>
           {' Posted by  '}
 
-          <a className="UserInfo" href="mailto:Sincere@april.biz">
-            {user?.name}
-          </a>
+          {user?.name && <UserInfo userInfoUser={user} />}
         </p>
       </div>
 
