@@ -1,5 +1,6 @@
 import React from 'react';
 import { Post } from '../../types/Post';
+import './PostInfo.scss';
 
 export const PostInfo: React.FC<{ post: Post }> = ({ post }) => {
   return (
