@@ -4,8 +4,8 @@ import './PostInfo.scss';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
 
-export const PostInfo: React.FC<{ postInfoPost: Post }> = ({
-  postInfoPost: { title, user, body, comments },
+export const PostInfo: React.FC<{ post: Post }> = ({
+  post: { title, user, body, comments },
 }) => {
   return (
     <div className="PostInfo">
@@ -15,7 +15,7 @@ export const PostInfo: React.FC<{ postInfoPost: Post }> = ({
         <p>
           {' Posted by  '}
 
-          {user?.name && <UserInfo userInfoUser={user} />}
+          {user?.name && <UserInfo user={user} />}
         </p>
       </div>
 
@@ -23,8 +23,8 @@ export const PostInfo: React.FC<{ postInfoPost: Post }> = ({
 
       <hr />
 
-      {comments ? (
-        <CommentList commentListComments={comments} />
+      {comments && comments.length > 0 ? (
+        <CommentList comments={comments} />
       ) : (
         <b data-cy="NoCommentsMessage">No comments yet</b>
       )}
