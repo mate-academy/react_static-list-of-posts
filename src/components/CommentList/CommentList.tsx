@@ -1,5 +1,6 @@
 import React from 'react';
 import { Comment } from '../../types/Comment';
+import './CommentList.scss';
 
 export const CommentList: React.FC<{ commentListComments: Comment[] }> = ({
   commentListComments,
