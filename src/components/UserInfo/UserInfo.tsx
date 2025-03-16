@@ -1,3 +1,19 @@
 import React from 'react';
+import './UserInfo.scss';
+import { User } from '../../types/User';
 
-export const UserInfo: React.FC = () => <>Put the user here</>;
+type UserDataProp = {
+  userData: User | null;
+};
+
+export const UserInfo: React.FC<UserDataProp> = ({ userData }) => {
+  if (!userData) {
+    return <span className="UserInfo">Unknown User</span>;
+  }
+
+  return (
+    <a className="UserInfo" href={`mailto:${userData.email}`}>
+      {userData.name}
+    </a>
+  );
+};
