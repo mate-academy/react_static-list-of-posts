@@ -1,106 +1,69 @@
 import React from 'react';
 
 import './App.scss';
+import { PostList } from './components/PostList';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+import postsFromServer from './api/posts';
+import commentsFromServer from './api/comments';
+import usersFromServer from './api/users';
 
-export const App: React.FC = () => (
-  <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+import { Post } from './types/Post';
+import { Comment } from './types/Comment';
+import { User } from './types/User';
 
-    <div className="PostList">
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">qui est esse</h3>
+function mergeDatabases(posts: Post[], comments: Comment[], users: User[]) {
+  const usersMap = new Map();
 
-          <p>
-            {' Posted by  '}
+  users.forEach(user => {
+    usersMap.set(user.id, user);
+  });
 
-            <a className="UserInfo" href="mailto:Sincere@april.biz">
-              Leanne Graham
-            </a>
-          </p>
-        </div>
+  // Tworzymy mapę komentarzy pogrupowanych po postId
+  const commentsMap = new Map();
 
-        <p className="PostInfo__body">
-          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea
-          dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut
-          reiciendis qui aperiam non debitis possimus qui neque nisi nulla
-        </p>
+  comments.forEach(comment => {
+    if (!commentsMap.has(comment.postId)) {
+      commentsMap.set(comment.postId, []);
+    }
 
-        <hr />
+    commentsMap.get(comment.postId).push(comment);
+  });
 
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </div>
+  const mergedPosts = posts.map(post => {
+    const userData = usersMap.get(post.userId) || {};
+    const postComments = commentsMap.get(post.id) || [];
 
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">doloremque illum aliquid sunt</h3>
+    return {
+      ...post,
+      user: {
+        id: userData.id,
+        name: userData.name,
+        username: userData.username,
+        email: userData.email,
+      },
+      comments: postComments.map((comment: Comment) => ({
+        id: comment.id,
+        name: comment.name,
+        email: comment.email,
+        body: comment.body,
+      })),
+    };
+  });
 
-          <p>
-            {' Posted by  '}
+  return mergedPosts;
+}
 
-            <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
-              Patricia Lebsack
-            </a>
-          </p>
-        </div>
+export const App: React.FC = () => {
+  const mergedPosts = mergeDatabases(
+    postsFromServer,
+    commentsFromServer,
+    usersFromServer,
+  );
 
-        <p className="PostInfo__body">
-          deserunt eos nobis asperiores et hic est debitis repellat molestiae
-          optio nihil ratione ut eos beatae quibusdam distinctio maiores earum
-          voluptates et aut adipisci ea maiores voluptas maxime
-        </p>
-
-        <div className="CommentList">
-          <div className="CommentInfo">
-            <div className="CommentInfo__title">
-              <strong className="CommentInfo__name">pariatur omnis in</strong>
-
-              {' by '}
-
-              <a
-                className="CommentInfo__email"
-                href="mailto:Telly_Lynch@karl.co.uk"
-              >
-                Telly_Lynch@karl.co.uk
-              </a>
-            </div>
-
-            <div className="CommentInfo__body">
-              dolorum voluptas laboriosam quisquam ab totam beatae et aut
-              aliquid optio assumenda voluptas velit itaque quidem voluptatem
-              tempore cupiditate in itaque sit molestiae minus dolores magni
-            </div>
-          </div>
-
-          <div className="CommentInfo">
-            <div className="CommentInfo__title">
-              <strong className="CommentInfo__name">
-                odio adipisci rerum aut animi
-              </strong>
-
-              {' by '}
-
-              <a
-                className="CommentInfo__email"
-                href="mailto:Nikita@garfield.biz"
-              >
-                Nikita@garfield.biz
-              </a>
-            </div>
-
-            <div className="CommentInfo__body">
-              quia molestiae reprehenderit quasi aspernatur aut expedita
-              occaecati aliquam eveniet laudantium omnis quibusdam delectus
-              saepe quia accusamus maiores nam est cum et ducimus et vero
-              voluptates excepturi deleniti ratione
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
+  return (
+    <section className="App">
+      <h1 className="App__title">Static list of posts</h1>
+      <PostList posts={mergedPosts} />
+    </section>
+  );
+};
