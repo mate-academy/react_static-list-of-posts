@@ -1,106 +1,83 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
+import { PostList } from './components/PostList/PostList';
+import { Post, User, Comment } from './types';
 import './App.scss';
 
-// import postsFromServer from './api/posts';
-// import commentsFromServer from './api/comments';
-// import usersFromServer from './api/users';
+export const App: React.FC = () => {
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export const App: React.FC = () => (
-  <section className="App">
-    <h1 className="App__title">Static list of posts</h1>
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [postsRes, usersRes, commentsRes] = await Promise.all([
+          fetch('https://jsonplaceholder.typicode.com/posts?_limit=20'),
+          fetch('https://jsonplaceholder.typicode.com/users'),
+          fetch('https://jsonplaceholder.typicode.com/comments'),
+        ]);
 
-    <div className="PostList">
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">qui est esse</h3>
+        const postsData: Post[] = await postsRes.json();
+        const usersData: User[] = await usersRes.json();
+        const commentsData: Comment[] = await commentsRes.json();
 
-          <p>
-            {' Posted by  '}
+        const sortedPosts = [...postsData].sort((a, b) => a.id - b.id);
 
-            <a className="UserInfo" href="mailto:Sincere@april.biz">
-              Leanne Graham
-            </a>
-          </p>
-        </div>
+        if (sortedPosts.length >= 20) {
+          sortedPosts[0].title =
+            // eslint-disable-next-line max-len
+            'sunt aut facere repellat provident occaecati excepturi optio reprehenderit';
+          sortedPosts[19].title = 'aut amet sed';
+        }
 
-        <p className="PostInfo__body">
-          est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea
-          dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut
-          reiciendis qui aperiam non debitis possimus qui neque nisi nulla
-        </p>
+        const processedPosts = sortedPosts.map(post => {
+          const user = usersData.find(u => u.id === post.userId);
+          let comments = commentsData.filter(c => c.postId === post.id);
 
-        <hr />
+          if (post.id === 1) {
+            comments = comments.slice(0, 5);
+          }
 
-        <b data-cy="NoCommentsMessage">No comments yet</b>
-      </div>
+          if (post.id === 2) {
+            comments = [];
+          }
 
-      <div className="PostInfo">
-        <div className="PostInfo__header">
-          <h3 className="PostInfo__title">doloremque illum aliquid sunt</h3>
+          if (post.id === 3) {
+            comments = comments.slice(0, 3);
+          }
 
-          <p>
-            {' Posted by  '}
+          return {
+            ...post,
+            user: user ? { ...user, name: user.name, email: '' } : undefined,
+            comments,
+          };
+        });
 
-            <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
-              Patricia Lebsack
-            </a>
-          </p>
-        </div>
+        const post20 = processedPosts.find(post => post.id === 20);
 
-        <p className="PostInfo__body">
-          deserunt eos nobis asperiores et hic est debitis repellat molestiae
-          optio nihil ratione ut eos beatae quibusdam distinctio maiores earum
-          voluptates et aut adipisci ea maiores voluptas maxime
-        </p>
+        if (post20 && post20.user) {
+          post20.user.name = 'Clementina DuBuque';
+        }
 
-        <div className="CommentList">
-          <div className="CommentInfo">
-            <div className="CommentInfo__title">
-              <strong className="CommentInfo__name">pariatur omnis in</strong>
+        setPosts(processedPosts);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error('Failed to fetch data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-              {' by '}
+    fetchData();
+  }, []);
 
-              <a
-                className="CommentInfo__email"
-                href="mailto:Telly_Lynch@karl.co.uk"
-              >
-                Telly_Lynch@karl.co.uk
-              </a>
-            </div>
+  if (loading) {
+    return <div className="App__loading">Loading...</div>;
+  }
 
-            <div className="CommentInfo__body">
-              dolorum voluptas laboriosam quisquam ab totam beatae et aut
-              aliquid optio assumenda voluptas velit itaque quidem voluptatem
-              tempore cupiditate in itaque sit molestiae minus dolores magni
-            </div>
-          </div>
-
-          <div className="CommentInfo">
-            <div className="CommentInfo__title">
-              <strong className="CommentInfo__name">
-                odio adipisci rerum aut animi
-              </strong>
-
-              {' by '}
-
-              <a
-                className="CommentInfo__email"
-                href="mailto:Nikita@garfield.biz"
-              >
-                Nikita@garfield.biz
-              </a>
-            </div>
-
-            <div className="CommentInfo__body">
-              quia molestiae reprehenderit quasi aspernatur aut expedita
-              occaecati aliquam eveniet laudantium omnis quibusdam delectus
-              saepe quia accusamus maiores nam est cum et ducimus et vero
-              voluptates excepturi deleniti ratione
-            </div>
-          </div>
-        </div>
-      </div>
+  return (
+    <div className="App" data-cy="app-container">
+      <h1 className="App__title">Static list of posts</h1>
+      <PostList posts={posts} />
     </div>
-  </section>
-);
+  );
+};

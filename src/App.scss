@@ -1,36 +1,22 @@
-iframe {
-  display: none;
-}
-
-.App__title {
-  text-align: center;
-}
-
-.PostInfo {
-  margin: 10px auto;
-  width: 90%;
-  border: 1px solid #000;
-  border-radius: 8px;
-  background-color: lightgray;
-  padding: 1em;
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 
   &__title {
-    margin: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
   }
 
-  &__header {
-    margin-bottom: 1em;
+  &__loading,
+  &__error {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
   }
-}
 
-.UserInfo {
-  font-weight: bold;
-}
-
-.CommentList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7em;
-  background-color: #eee;
-  padding: 1em;
+  &__error {
+    color: #d32f2f;
+  }
 }

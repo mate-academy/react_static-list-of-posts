@@ -1,10 +1,21 @@
 {
   "extends": "@mate-academy/students-ts-config",
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "compilerOptions": {
+    "jsx": "react-jsx",
     "sourceMap": false,
     "types": ["node", "cypress"]
+  },
+  "lint": {
+    "compilerOptions": {
+      "target": "es6",
+      "module": "esnext",
+      "jsx": "react-jsx",
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true
+    }
   }
 }

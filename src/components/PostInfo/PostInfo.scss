@@ -1,1 +1,57 @@
-// add styles here
+.PostInfo {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  &__header {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin: 0 0 5px;
+    color: #333;
+  }
+
+  &__body {
+    margin: 10px 0;
+    color: #666;
+  }
+
+  &__comments {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+}
+
+.UserInfo {
+  font-size: 14px;
+  color: #555;
+
+  &__name {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__email {
+    display: none;
+  }
+}
+
+.CommentInfo {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+
+  &__name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__body {
+    margin: 0;
+    font-size: 14px;
+  }
+}
