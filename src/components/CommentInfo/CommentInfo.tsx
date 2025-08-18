@@ -7,7 +7,7 @@ type Props = {
 
 export const CommentInfo: React.FC<Props> = ({ comment }) => {
   return (
-    <div className="CommentInfo" key={comment.id}>
+    <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{comment.name}</strong>
 

@@ -3,6 +3,6 @@ import { User } from './User';
 import { Comment } from './Comment';
 
 export type PreparedPost = Post & {
-  foundUser: User | null;
-  foundComments: Comment[];
+  user: User | null;
+  comments: Comment[];
 };

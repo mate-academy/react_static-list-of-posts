@@ -9,16 +9,16 @@ type Props = {
 };
 
 export const PostInfo: React.FC<Props> = ({ post }) => {
-  const comments = post.foundComments || [];
+  const comments = post.comments || [];
 
   return (
-    <div className="PostInfo" key={post.id}>
+    <div className="PostInfo">
       <div className="PostInfo__header">
         <h3 className="PostInfo__title">{post.title}</h3>
 
         <p>
           {' Posted by  '}
-          <UserInfo user={post.foundUser} />
+          <UserInfo user={post.user} />
         </p>
       </div>
 
