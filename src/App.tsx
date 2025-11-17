@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import React from 'react';
 
 import './App.scss';
@@ -16,11 +17,21 @@ const preparePosts = (
   users: User[],
   comments: Comment[],
 ): PreparedPost[] =>
-  posts.map(post => ({
-    ...post,
-    user: users.find(user => user.id === post.userId) as User,
-    comments: comments.filter(comment => comment.postId === post.id),
-  }));
+  posts
+    .map<PreparedPost | null>(post => {
+      const user = users.find(person => person.id === post.userId);
+
+      if (!user) {
+        return null;
+      }
+
+      return {
+        ...post,
+        user,
+        comments: comments.filter(comment => comment.postId === post.id),
+      };
+    })
+    .filter((post): post is PreparedPost => post !== null);
 
 const preparedPosts: PreparedPost[] = preparePosts(
   postsFromServer,
