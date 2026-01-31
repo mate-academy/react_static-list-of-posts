@@ -1,3 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { PostInfo } from '../PostInfo';
+import { type Post } from '../../types/Post';
+import './PostList.css';
 
-export const PostList: React.FC = () => <>Put the list here</>;
+type Props = {
+  posts: Post[];
+};
+
+export const PostList: React.FC<Props> = ({ posts }) => (
+  <div className="PostList">
+    {posts.map(post => (
+      <Fragment key={post.id}>
+        <PostInfo post={post} />
+      </Fragment>
+    ))}
+  </div>
+);
