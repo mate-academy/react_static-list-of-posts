@@ -8,10 +8,8 @@ type Props = {
 export const UserInfo: React.FC<Props> = ({ user }) => {
   return (
     <p>
-      {' Posted by  '}
-
-      {user !== null && (
-        <a className="UserInfo" href="mailto:Julianne.OConner@kory.org">
+      Posted by {user !== null && (
+        <a className="UserInfo" href={`mailto:` + user.email}>
           {user.name}
         </a>
       )}
