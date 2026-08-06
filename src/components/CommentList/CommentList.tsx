@@ -6,7 +6,6 @@ import './CommentList.scss';
 type Props = {
   comments: Comment[];
 };
-
 export const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <div className="CommentList">
