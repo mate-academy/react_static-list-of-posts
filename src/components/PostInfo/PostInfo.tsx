@@ -2,6 +2,7 @@ import React from 'react';
 import { Post } from '../../types/types';
 import { CommentList } from '../CommentList';
 import { UserInfo } from '../UserInfo';
+import './PostInfo.scss';
 
 type Props = {
   post: Post;
@@ -14,9 +15,7 @@ export const PostInfo: React.FC<Props> = ({ post }) => {
         <h3 className="PostInfo__title">{post.title}</h3>
         {post.user && (
           <p>
-            {' Posted by '}
-
-            <UserInfo user={post.user} />
+            Posted by <UserInfo user={post.user} />
           </p>
         )}
       </div>

@@ -4,6 +4,8 @@ import React from 'react';
 import { Post } from '../../types/types';
 //components
 import { PostInfo } from '../PostInfo';
+//styles
+import './PostList.scss';
 
 type Props = {
   posts: Post[];
@@ -11,10 +13,10 @@ type Props = {
 
 export const PostList: React.FC<Props> = ({ posts }) => {
   return (
-    <>
+    <div className="PostList">
       {posts.map(post => (
         <PostInfo post={post} key={post.id} />
       ))}
-    </>
+    </div>
   );
 };
