@@ -14,7 +14,7 @@ export const CommentInfo: React.FC<Props> = ({ comment }) => {
 
         <p>
           <a className="CommentInfo__email" href={`mailto:${comment.email}`}>
-            {`by ${comment.email}`}
+            {comment.email}
           </a>
         </p>
       </div>
