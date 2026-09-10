@@ -1,4 +1,7 @@
 import React from 'react';
+import { preparedPost } from './components/PostList';
+
+console.log(preparedPost);
 
 import './App.scss';
 
