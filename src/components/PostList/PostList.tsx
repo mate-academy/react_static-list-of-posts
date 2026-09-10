@@ -1,7 +1,8 @@
 import React from 'react';
-import { type Comment, type User } from '../../types';
+import { type Comment } from '../../types/Comment';
+import { type User } from '../../types/User';
 import /* array */ comments from '../../api/comments';
-import /* array */ posts from '../../api/posts';
+import /* array */ postsFromApi from '../../api/posts';
 import /* array */ users from '../../api/users';
 import { PostInfo } from '../PostInfo';
 
@@ -14,7 +15,7 @@ export interface PreparedPostTypes {
   body: string;
 }
 
-export const preparedPost: PreparedPostTypes[] = [...posts].map(post => {
+export const preparedPost: PreparedPostTypes[] = [...postsFromApi].map(post => {
   const postComments: Comment[] = [];
 
   for (const comment of comments) {
@@ -40,12 +41,16 @@ export const preparedPost: PreparedPostTypes[] = [...posts].map(post => {
   return postObj;
 });
 
-export const PostList: React.FC = () => {
+type PostListProps = {
+  posts: PreparedPostTypes[];
+};
+
+export const PostList: React.FC<PostListProps> = ({ posts }) => {
   return (
     <div className="PostList">
-      {preparedPost.map(post => {
-        return <PostInfo post={post} key={post.id} />;
-      })}
+      {posts.map(post => (
+        <PostInfo post={post} key={post.id} />
+      ))}
     </div>
   );
 };
