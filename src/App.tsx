@@ -1,4 +1,9 @@
 import React from 'react';
+import { PostList } from './components/PostList';
+import { preparedPost } from './components/PostList';
+// import { preparedPost } from './components/PostList';
+
+// console.log(preparedPost);
 
 import './App.scss';
 
@@ -9,8 +14,11 @@ import './App.scss';
 export const App: React.FC = () => (
   <section className="App">
     <h1 className="App__title">Static list of posts</h1>
+    <PostList posts={preparedPost} />
+  </section>
+);
 
-    <div className="PostList">
+/* <div className="PostList">
       <div className="PostInfo">
         <div className="PostInfo__header">
           <h3 className="PostInfo__title">qui est esse</h3>
@@ -101,6 +109,4 @@ export const App: React.FC = () => (
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </div> */
