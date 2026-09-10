@@ -11,6 +11,7 @@ export interface PreparedPostTypes {
   title: string;
   user: User | undefined;
   userId: number;
+  body: string;
 }
 
 export const preparedPost: PreparedPostTypes[] = [...posts].map(post => {

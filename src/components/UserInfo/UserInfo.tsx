@@ -1,3 +1,12 @@
 import React from 'react';
+import { type User } from '../../types';
 
-export const UserInfo: React.FC = () => <>Put the user here</>;
+type UserInfoProps = {
+  user: User;
+};
+
+export const UserInfo: React.FC<UserInfoProps> = ({ user }) => (
+  <a className="UserInfo" href={`mailto:${user.email}`}>
+    {user.name}
+  </a>
+);

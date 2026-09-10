@@ -1,7 +1,13 @@
 import React from 'react';
 import { type PreparedPostTypes } from '../PostList/PostList';
+import { CommentList } from '../CommentList';
+import { UserInfo } from '../UserInfo';
 
-export const PostInfo: React.FC = ({ post }: PreparedPostTypes) => {
+type PostInfoProps = {
+  post: PreparedPostTypes;
+};
+
+export const PostInfo: React.FC<PostInfoProps> = ({ post }) => {
   return (
     <div className="PostInfo">
       <div className="PostInfo__header">
@@ -10,21 +16,19 @@ export const PostInfo: React.FC = ({ post }: PreparedPostTypes) => {
         <p>
           {' Posted by '}
 
-          <a className="UserInfo" href="mailto:Sincere@april.biz">
-            {post.user.name}
-          </a>
+          {post.user && <UserInfo user={post.user} />}
         </p>
       </div>
 
-      <p className="PostInfo__body">
-        est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea
-        dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut
-        reiciendis qui aperiam non debitis possimus qui neque nisi nulla
-      </p>
+      <p className="PostInfo__body">{post.body}</p>
 
       <hr />
 
-      <b data-cy="NoCommentsMessage">{post.comments.body}</b>
+      {post.comments.length ? (
+        <CommentList comments={post.comments} />
+      ) : (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      )}
     </div>
   );
 };
