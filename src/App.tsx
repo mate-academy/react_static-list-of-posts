@@ -10,8 +10,8 @@ import { Comment } from './types/Comment';
 import { Post } from './types/Post';
 import { PostList } from './components/PostList';
 
-function getUserById(postId: number): User | null {
-  return usersFromServer.find(user => user.id === postId) || null;
+function getUserById(userId: number): User | null {
+  return usersFromServer.find(user => user.id === userId) || null;
 }
 
 function getCommentsByPostId(postId: number): Comment[] {
