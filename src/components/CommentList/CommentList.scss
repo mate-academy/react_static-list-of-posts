@@ -1,1 +1,9 @@
-// add styles here
+.CommentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+
+  padding: 1em;
+
+  background-color: #eee;
+}
