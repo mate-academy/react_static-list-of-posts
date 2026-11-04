@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Post } from '../../types/post';
 import { PostInfo } from '../PostInfo/PostInfo';
 

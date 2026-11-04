@@ -1,14 +1,12 @@
-import React from 'react';
 
 import { Comment } from '../../types/comment';
 
 export const CommentInfo: React.FC<{ comment: Comment }> = props => (
-  <>
     <div className="CommentInfo">
       <div className="CommentInfo__title">
         <strong className="CommentInfo__name">{props.comment.name}</strong>
 
-        {' by '}
+        {` by `}
 
         <a
           className="CommentInfo__email"
@@ -20,5 +18,4 @@ export const CommentInfo: React.FC<{ comment: Comment }> = props => (
 
       <div className="CommentInfo__body">{props.comment.body}</div>
     </div>
-  </>
 );
