@@ -1,4 +1,3 @@
-
 import { Comment } from '../../types/comment';
 import { CommentInfo } from '../CommentInfo/CommentInfo';
 

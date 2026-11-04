@@ -1,4 +1,3 @@
-
 import { Post } from '../../types/post';
 import { PostInfo } from '../PostInfo/PostInfo';
 
