@@ -17,16 +17,15 @@ export const PostInfo: React.FC<{ post: Post }> = props => (
         </p>
       </div>
 
-      <p className="PostInfo__body">
-        {props.post.body}
-      </p>
+      <p className="PostInfo__body">{props.post.body}</p>
 
       <hr />
 
-      {props.post.comments.length === 0
-        ? <b data-cy="NoCommentsMessage">No comments yet</b>
-        : <CommentList comments={props.post.comments} />
-      }
+      {props.post.comments.length === 0 ? (
+        <b data-cy="NoCommentsMessage">No comments yet</b>
+      ) : (
+        <CommentList comments={props.post.comments} />
+      )}
     </div>
   </>
 );

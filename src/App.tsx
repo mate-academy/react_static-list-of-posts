@@ -11,7 +11,8 @@ import { PostList } from './components/PostList/PostList';
 export const App: React.FC = () => {
   const posts = postsFromServer.map(post => {
     const user = usersFromServer.find(
-      currentUser => currentUser.id === post.userId);
+      currentUser => currentUser.id === post.userId,
+    );
 
     const comments = commentsFromServer.filter(comment => {
       return comment.postId === post.id;
